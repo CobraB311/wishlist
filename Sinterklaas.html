@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄🎁 Eindejaarswenslijst van Jonas</title>
+    <style>
+        /* CSS GEÏNSPIREERD DOOR JOUW CODE - DYNAMISCHE ACHTERGROND */
+        
+        /* BODY STYLING MET GRADIËNT ANIMATIE */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            overflow: auto;
+            
+            /* Feestelijke lineaire gradiënt: Rood, Geel, Blauw (Kleuren van de lijst) */
+            background: linear-gradient(315deg, #C0392B 3%, #F1C40F 38%, #2980B9 68%, #C0392B 98%);
+            animation: gradient 20s ease infinite; 
+            background-size: 400% 400%;
+            background-attachment: fixed;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+        
+        /* GOLVEN STYLING */
+        .wave {
+            background: rgb(255 255 255 / 25%); /* Transparant wit */
+            border-radius: 1000% 1000% 0 0;
+            position: fixed;
+            width: 200%;
+            height: 12em;
+            animation: wave 10s -3s linear infinite;
+            transform: translate3d(0, 0, 0);
+            opacity: 0.8;
+            bottom: 0;
+            left: 0;
+            z-index: -1; /* Zorgt ervoor dat de golven achter de content zitten */
+        }
+
+        .wave:nth-of-type(2) {
+            bottom: -1.25em;
+            animation: wave 18s linear reverse infinite;
+            opacity: 0.8;
+        }
+
+        .wave:nth-of-type(3) {
+            bottom: -2.5em;
+            animation: wave 20s -1s reverse infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes wave {
+            2% {
+                transform: translateX(1);
+            }
+
+            25% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(1);
+            }
+        }
+
+        
+        /* CONTAINER STYLING - vaste achtergrond voor leesbaarheid */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparant wit */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+            border: 3px solid #FF9900; 
+            position: relative; 
+        }
+        
+        /* REST VAN DE OUDE STYLING (ONGEWIJZIGD) */
+        h1 {
+            color: #C0392B; 
+            text-align: center;
+            border-bottom: 3px solid #FF9900; 
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.8em; 
+            text-shadow: 1px 1px #F1C40F; 
+        }
+        h2 {
+            color: #2980B9; 
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* Styling voor een wens item */
+        .wens-item {
+            display: flex;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #E67E22; 
+            border-radius: 8px;
+            background-color: #f8f8f8; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+        }
+        .wens-item:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .item-image {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            margin-right: 25px;
+            overflow: hidden;
+            border-radius: 5px;
+            background-color: #ffffff; 
+            border: 1px solid #C0392B; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item-image img {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+        }
+        .item-details {
+            flex-grow: 1;
+        }
+        .item-details h2 { 
+            color: #C0392B; 
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.5em;
+            text-align: left;
+        }
+        .item-details p {
+            margin-top: 0;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .item-details .prijs {
+            font-weight: bold;
+            color: #27AE60; 
+            font-size: 1.3em;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .winkel-links p {
+            font-size: 0.9em;
+            margin-bottom: 3px;
+        }
+        .winkel-links a {
+            color: #E67E22; 
+            text-decoration: none;
+            font-weight: bold;
+            padding: 2px 0;
+            transition: color 0.1s;
+        }
+        .winkel-links a:hover {
+            text-decoration: underline;
+            color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎄🎁 De Grote Eindejaarswenslijst van Jonas! 🎁🎄</h1>
+
+        <h2>Wat ik graag wil hebben!</h2>
+        
+        <div class="wens-item">
+            <div class="item-image">
+                <img src="https://www.lego.com/cdn/cs/set/assets/blt0a5a76e48f4ee7c6/31134_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO Space Shuttle 31134">
+            </div>
+            <div class="item-details">
+                <h2>LEGO® Creator 3-in-1 Space Shuttle</h2>
+                <p><strong>Item nummer:</strong> 31134</p>
+                <p><strong>Beschrijving:</strong> Met deze set bouw je 3 modellen in 1! Een Space Shuttle, een stoer ruimteschip of een coole astronaut. Perfect voor urenlang speelplezier in de ruimte!</p>
+                
+                <p class="prijs">Vanaf: € 7,99</p>
+                
+                <div class="winkel-links">
+                    <p><strong>Verkrijgbaar bij:</strong></p>
+                    <p><a href="https://www.bol.com/be/nl/p/lego-creator-3in1-space-shuttle-ruimteschip-set-31134/9300000132639040/" target="_blank">Bol.com</a> (Vanaf: € 7,99)</p>
+                    <p><a href="https://amzn.eu/d/hzt6NJi" target="_blank">Amazon.nl</a> (Vanaf: € 7,99)</p>
+                    <p><a href="https://amzn.eu/d/cO8lNMz" target="_blank">Amazon.com.be</a> (Vanaf: € 8,99) *Let op prijs kan verschillen*</p>
+                    <p><a href="https://www.lego.com/nl-be/product/space-shuttle-31134" target="_blank">LEGO® Shop</a> (€ 9,99)</p>
+                    <p><a href="https://www.dreamland.be/nl/producten/31134-lego-space-shuttle/01704112" target="_blank">DreamLand</a> (€ 9,95)</p>
+                    <p><a href="https://www.suprabazar.be/lego-creator-31134-space-shuttle-30734427" target="_blank">SupraBazar</a> (€ 9,98)</p>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="wens-item">
+            <div class="item-image">
+                <img src="https://www.lego.com/cdn/cs/set/assets/blt1bafb60f4145842b/76312_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO The Hulk Truck vs. Thanos 76312">
+            </div>
+            <div class="item-details">
+                <h2>LEGO® ǀ Marvel De Hulk truck vs. Thanos</h2>
+                <p><strong>Item nummer:</strong> 76312</p>
+                <p><strong>Beschrijving:</strong> Epische confrontatie met Hulks supergrote, groene monstertruck tegen Thanos! De set bevat een truck met mega-ophanging en minifiguren van Hulk met helm en Thanos met zijn Tesseract en Infinity Gauntlet.</p>
+                
+                <p class="prijs">Vanaf: € 20,79</p>
+                
+                <div class="winkel-links">
+                    <p><strong>Verkrijgbaar bij:</strong></p>
+                    <p><a href="https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" target="_blank">Bol.com</a> (Vanaf: € 20,99)</p>
+                    <p><a href="https://amzn.eu/d/90UC8Ac" target="_blank">Amazon.nl</a> (Vanaf: € 20,79)</p>
+                    <p><a href="https://amzn.eu/d/8uIshy7" target="_blank">Amazon.com.be</a> (Vanaf: € 21,50) *Let op prijs kan verschillen*</p>
+                    <p><a href="https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312" target="_blank">LEGO® Shop</a> (€ 29,99)</p>
+                    <p><a href="https://www.dreamland.be/nl/producten/76312-lego-marvel-de-hulk-truck-vs-thanos/01704112" target="_blank">DreamLand</a> (ca. € 29,99)</p>
+                    <p><a href="https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622" target="_blank">SupraBazar</a> (ca. € 29,99)</p>
+                    </div>
+            </div>
+        </div>
+        
+        <div class="wens-item">
+            <div class="item-image">
+                <img src="https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO Classic Creatieve Etensvriendjes 11039">
+            </div>
+            <div class="item-details">
+                <h2>LEGO® Classic Creatieve Etensvriendjes</h2>
+                <p><strong>Item nummer:</strong> 11039</p>
+                <p><strong>Beschrijving:</strong> Een creatieve set met 150 stenen om vrolijke etensvriendjes te bouwen, zoals een burger, ijsje, avocado of taco. Ideaal voor fantasierijk en vrij bouwen.</p>
+                
+                <p class="prijs">Vanaf: € 7,95</p>
+                
+                <div class="winkel-links">
+                    <p><strong>Verkrijgbaar bij:</strong></p>
+                    <p><a href="https://www.lego.com/nl-be/product/creative-food-friends-11039" target="_blank">LEGO® Shop BE</a> (€ 9,99)</p>
+                    <p><a href="https://www.bol.com/be/nl/p/lego-classic-creatieve-etensvriendjes-11039/9300000187249559/" target="_blank">Bol.com</a> (Vanaf: € 20,99)</p>
+                    <p><a href="https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023" target="_blank">DreamLand</a> (ca. € 9,99)</p>
+                    <p><a href="https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370" target="_blank">SupraBazar</a> (ca. € 9,98)</p>
+                    <p><a href="https://www.mediamarkt.nl/nl/product/_lego-classic-11039-creatieve-etensvriendjes-lego-bouwset-veelkleurig-151872750.html" target="_blank">MediaMarkt NL</a> (ca. € 9,99)</p>
+                    <p><a href="https://www.intertoys.nl/lego-classic-creatieve-etensvriendjes-11039" target="_blank">Intertoys NL</a> (ca. € 9,99)</p>
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+
+</body>
+</html>

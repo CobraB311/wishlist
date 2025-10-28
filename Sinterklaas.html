@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎄🎁 Eindejaarswenslijst van Jonas (Tabs Verticaal Links)</title>
+    <title>🎄🎁 Eindejaarswenslijst van Jonas (Externe JSON)</title>
     <style>
         /* BASE STYLING & ANIMATIE */
         body {
@@ -154,25 +154,7 @@
             display: block; 
         }
         
-        /* OVERZICHT & ITEM STYLING (ONGEWIJZIGD) */
-        /* ... (De rest van de styling van .overview-grid, .wens-item, etc. is behouden) ... */
-
-        .wens-item {
-            display: flex;
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #E67E22; 
-            border-radius: 8px;
-            background-color: #f8f8f8; 
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s;
-            /* Scroll marge is voor de vaste header links, maar scrollen is nu verticaal */
-            scroll-margin-top: 20px; 
-        }
-
-        /* De rest van de styling is van de vorige (correcte) versie */
-        /* ... */
-        
+        /* OVERZICHT & ITEM STYLING */
         .overview-grid {
             display: flex;
             justify-content: space-around;
@@ -212,6 +194,18 @@
             color: #C0392B;
             margin-top: 10px;
             font-size: 1.1em;
+        }
+        
+        .wens-item {
+            display: flex;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #E67E22; 
+            border-radius: 8px;
+            background-color: #f8f8f8; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+            scroll-margin-top: 20px; 
         }
         .wens-item:hover {
             transform: translateY(-5px); 
@@ -332,96 +326,15 @@
             
             <div id="set-overview" class="tab-content active">
                 <h2>Klik op een foto om direct naar het artikel te springen:</h2>
-                <div class="overview-grid">
-                    
-                    <a href="#set-31134" class="overview-item" onclick="switchToDetail('set-31134')">
-                        <img src="https://www.lego.com/cdn/cs/set/assets/blt0a5a76e48f4ee7c6/31134_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO Space Shuttle 31134">
-                        <p>31134 - Space Shuttle</p>
-                    </a>
-                    
-                    <a href="#set-76312" class="overview-item" onclick="switchToDetail('set-76312')">
-                        <img src="https://www.lego.com/cdn/cs/set/assets/blt1bafb60f4145842b/76312_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO The Hulk Truck vs. Thanos 76312">
-                        <p>76312 - Hulk Truck</p>
-                    </a>
-                    
-                    <a href="#set-11039" class="overview-item" onclick="switchToDetail('set-11039')">
-                        <img src="https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO Classic Creatieve Etensvriendjes 11039">
-                        <p>11039 - Etensvriendjes</p>
-                    </a>
-                    
+                <div id="overview-grid-container" class="overview-grid">
+                    <p id="loading-message">Laden van wensenlijst...</p>
                 </div>
             </div>
             
             <div id="main-content" class="tab-content">
                 <h2>Wat ik graag wil hebben!</h2>
-                
-                <div class="wens-item" id="set-31134">
-                    <div class="item-image">
-                        <img src="https://www.lego.com/cdn/cs/set/assets/blt0a5a76e48f4ee7c6/31134_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO Space Shuttle 31134">
+                <div id="main-content-list">
                     </div>
-                    <div class="item-details">
-                        <h2>LEGO® Creator 3-in-1 Space Shuttle</h2>
-                        <p><strong>Item nummer:</strong> 31134</p>
-                        <p><strong>Beschrijving:</strong> Met deze set bouw je 3 modellen in 1! Een Space Shuttle, een stoer ruimteschip of een coole astronaut. Perfect voor urenlang speelplezier in de ruimte!</p>
-                        
-                        <p class="prijs">Vanaf: € 7,99</p>
-                        
-                        <div class="winkel-links">
-                            <p><strong>Verkrijgbaar bij:</strong></p>
-                            <p><a href="https://www.bol.com/be/nl/p/lego-creator-3in1-space-shuttle-ruimteschip-set-31134/9300000132639040/" target="_blank">Bol.com</a> (Vanaf: **€ 7,99**)</p>
-                            <p><a href="https://amzn.eu/d/hzt6NJi" target="_blank">Amazon.nl</a> (Vanaf: **€ 7,99**)</p>
-                            <p><a href="https://amzn.eu/d/cO8lNMz" target="_blank">Amazon.com.be</a> (Vanaf: **€ 7,99**) *Let op prijs kan verschillen*</p>
-                            <p><a href="https://www.lego.com/nl-be/product/space-shuttle-31134" target="_blank">LEGO® Shop</a> (**€ 9,99**)</p>
-                            <p><a href="https://www.dreamland.be/nl/producten/31134-lego-space-shuttle/01704112" target="_blank">DreamLand</a> (**€ 9,95**)</p>
-                            <p><a href="https://www.suprabazar.be/lego-creator-31134-space-shuttle-30734427" target="_blank">SupraBazar</a> (**€ 9,98**)</p>
-                            </div>
-                    </div>
-                </div>
-                
-                <div class="wens-item" id="set-76312">
-                    <div class="item-image">
-                        <img src="https://www.lego.com/cdn/cs/set/assets/blt1bafb60f4145842b/76312_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO The Hulk Truck vs. Thanos 76312">
-                    </div>
-                    <div class="item-details">
-                        <h2>LEGO® ǀ Marvel De Hulk truck vs. Thanos</h2>
-                        <p><strong>Item nummer:</strong> 76312</p>
-                        <p><strong>Beschrijving:</strong> Epische confrontatie met Hulks supergrote, groene monstertruck tegen Thanos! De set bevat een truck met mega-ophanging en minifiguren van Hulk met helm en Thanos met zijn Tesseract en Infinity Gauntlet.</p>
-                        
-                        <p class="prijs">Vanaf: € 19,90</p>
-                        
-                        <div class="winkel-links">
-                            <p><strong>Verkrijgbaar bij:</strong></p>
-                            <p><a href="https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" target="_blank">Bol.com</a> (Vanaf: **€ 20,99**)</p>
-                            <p><a href="https://amzn.eu/d/90UC8Ac" target="_blank">Amazon.nl</a> (Vanaf: **€ 20,79**)</p>
-                            <p><a href="https://amzn.eu/d/8uIshy7" target="_blank">Amazon.com.be</a> (Vanaf: **€ 21,50**) *Let op prijs kan verschillen*</p>
-                            <p><a href="https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312" target="_blank">LEGO® Shop</a> (**€ 29,99**)</p>
-                            <p><a href="https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817" target="_blank">DreamLand</a> (ca. **€ 29,99**)</p>
-                            <p><a href="https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622" target="_blank">SupraBazar</a> (ca. **€ 29,99**)</p>
-                            </div>
-                    </div>
-                </div>
-                
-                <div class="wens-item" id="set-11039">
-                    <div class="item-image">
-                        <img src="https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1" alt="LEGO Classic Creatieve Etensvriendjes 11039">
-                    </div>
-                    <div class="item-details">
-                        <h2>LEGO® Classic Creatieve Etensvriendjes</h2>
-                        <p><strong>Item nummer:</strong> 11039</p>
-                        <p><strong>Beschrijving:</strong> Een creatieve set met 150 stenen om vrolijke etensvriendjes te bouwen, zoals een burger, ijsje, avocado of taco. Ideaal voor fantasierijk en vrij bouwen.</p>
-                        
-                        <p class="prijs">Vanaf: € 7,52</p>
-                        
-                        <div class="winkel-links">
-                            <p><strong>Verkrijgbaar bij:</strong></p>
-                            <p><a href="https://www.lego.com/nl-be/product/creative-food-friends-11039" target="_blank">LEGO® Shop BE</a> (**€ 9,99**)</p>
-                            <p><a href="https://www.bol.com/be/nl/p/lego-classic-creatieve-etensvriendjes-11039/9300000187249559/" target="_blank">Bol.com</a> (Vanaf: **€ 7,95**)</p>
-                            <p><a href="https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023" target="_blank">DreamLand</a> (ca. **€ 9,99**)</p>
-                            <p><a href="https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370" target="_blank">SupraBazar</a> (ca. **€ 9,98**)</p>
-                            <p><a href="https://www.mediamarkt.nl/nl/product/_lego-classic-11039-creatieve-etensvriendjes-lego-bouwset-veelkleurig-151872750.html" target="_blank">MediaMarkt NL</a> (ca. **€ 9,99**)</p>
-                            </div>
-                    </div>
-                </div>
             </div>
             
         </div>
@@ -433,52 +346,169 @@
     <div class="wave"></div>
 
     <script>
+        // Functie om de volledige HTML-inhoud te genereren met de ingeladen data
+        function generateWishlistContent(data) {
+            const overviewContainer = document.getElementById('overview-grid-container');
+            const mainContentContainer = document.getElementById('main-content-list');
+            const loadingMessage = document.getElementById('loading-message');
+
+            // Verwijder het laadbericht
+            if (loadingMessage) {
+                loadingMessage.remove();
+            }
+
+            // Maak de containers leeg voor het geval er al content was
+            overviewContainer.innerHTML = '';
+            mainContentContainer.innerHTML = '';
+
+            for (const item of data.items) {
+                // 1. Overzicht Item genereren
+                const overviewItem = document.createElement('a');
+                overviewItem.className = 'overview-item';
+                overviewItem.href = `#${item.id}`;
+                overviewItem.onclick = (e) => {
+                    e.preventDefault(); 
+                    switchToDetail(item.id);
+                };
+                
+                const overviewImage = document.createElement('img');
+                overviewImage.src = item.afbeelding_url;
+                overviewImage.alt = item.naam;
+                
+                const overviewText = document.createElement('p');
+                // Toont nummer en (meestal) laatste woord van de naam
+                const naamKort = item.naam.replace('LEGO®', '').trim().split(' ').slice(-2).join(' ');
+                overviewText.textContent = `${item.nummer} - ${naamKort}`; 
+                
+                overviewItem.appendChild(overviewImage);
+                overviewItem.appendChild(overviewText);
+                overviewContainer.appendChild(overviewItem);
+
+                // 2. Hoofdlijst Item genereren
+                const wensItem = document.createElement('div');
+                wensItem.className = 'wens-item';
+                wensItem.id = item.id;
+
+                // Afbeelding sectie
+                const itemImageDiv = document.createElement('div');
+                itemImageDiv.className = 'item-image';
+                const itemImage = document.createElement('img');
+                itemImage.src = item.afbeelding_url;
+                itemImage.alt = item.naam;
+                itemImageDiv.appendChild(itemImage);
+                wensItem.appendChild(itemImageDiv);
+
+                // Details sectie
+                const itemDetailsDiv = document.createElement('div');
+                itemDetailsDiv.className = 'item-details';
+
+                const title = document.createElement('h2');
+                title.textContent = item.naam;
+                itemDetailsDiv.appendChild(title);
+
+                const nummer = document.createElement('p');
+                nummer.innerHTML = `<strong>Item nummer:</strong> ${item.nummer}`;
+                itemDetailsDiv.appendChild(nummer);
+
+                const beschrijving = document.createElement('p');
+                beschrijving.innerHTML = `<strong>Beschrijving:</strong> ${item.beschrijving}`;
+                itemDetailsDiv.appendChild(beschrijving);
+                
+                // Prijs berekenen (laagste prijs)
+                const prijzen = item.winkels.map(w => parseFloat(w.prijs.replace('€ ', '').replace(',', '.')));
+                const laagstePrijs = Math.min(...prijzen);
+                const prijsElement = document.createElement('p');
+                prijsElement.className = 'prijs';
+                // Formatteer de prijs terug naar een Nederlandse notatie
+                prijsElement.textContent = `Vanaf: € ${laagstePrijs.toFixed(2).replace('.', ',')}`; 
+                itemDetailsDiv.appendChild(prijsElement);
+
+                // Winkel Links sectie
+                const winkelLinksDiv = document.createElement('div');
+                winkelLinksDiv.className = 'winkel-links';
+                const winkelTitel = document.createElement('p');
+                winkelTitel.innerHTML = '<strong>Verkrijgbaar bij:</strong>';
+                winkelLinksDiv.appendChild(winkelTitel);
+                
+                // Winkels toevoegen
+                for (const winkel of item.winkels) {
+                    const winkelParagraaf = document.createElement('p');
+                    const winkelLink = document.createElement('a');
+                    winkelLink.href = winkel.link;
+                    winkelLink.target = '_blank';
+                    winkelLink.textContent = `${winkel.naam} (${winkel.prijs})`; // Gebruik de originele prijsnotatie
+                    winkelParagraaf.appendChild(winkelLink);
+                    winkelLinksDiv.appendChild(winkelParagraaf);
+                }
+
+                itemDetailsDiv.appendChild(winkelLinksDiv);
+                wensItem.appendChild(itemDetailsDiv);
+                mainContentContainer.appendChild(wensItem);
+            }
+
+             // Zorg ervoor dat de "Overzicht" tab de enige actieve is bij het laden
+            document.getElementById('main-content').classList.remove("active");
+            document.getElementById('set-overview').classList.add("active");
+            
+            document.getElementById('btn-overview').classList.add("active");
+            document.getElementById('btn-main').classList.remove("active");
+        }
+
+        // Functie om de JSON-data in te laden
+        async function loadWishlistData() {
+            try {
+                // Relatieve pad naar het JSON-bestand
+                const response = await fetch('wenslijst-jonas.json'); 
+                
+                if (!response.ok) {
+                    throw new Error(`Fout bij laden van JSON: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                generateWishlistContent(data);
+                
+            } catch (error) {
+                console.error("Fout bij het inladen of verwerken van de wensenlijst:", error);
+                const overviewContainer = document.getElementById('overview-grid-container');
+                overviewContainer.innerHTML = `<p style="color: red; font-weight: bold;">Fout: Kon wensenlijst niet laden. Zorg ervoor dat 'wenslijst-jonas.json' in dezelfde map staat.</p>`;
+            }
+        }
+        
+        // De tab-wissel functionaliteit (ONGEDAAN GEMAAKT)
         function openTab(evt, tabId) {
-            // Verberg beide contentblokken
             document.getElementById('set-overview').classList.remove("active");
             document.getElementById('main-content').classList.remove("active");
             
-            // Toon de gevraagde tab-content
             document.getElementById(tabId).classList.add("active");
 
-            // Deactiveer alle tab-knoppen
             var tablinks = document.getElementsByClassName("tab-button");
             for (var i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
 
-            // Activeer de juiste knop
             evt.currentTarget.classList.add("active");
             
-            // Scroll gedrag is nu minder kritiek, maar terug naar boven is nog steeds goed
             if (tabId === 'set-overview') {
-                 window.scrollTo(0, 0);
+                 window.scrollTo({ top: 0, behavior: 'smooth' }); 
             }
         }
         
+        // Functie om naar de detailtab te wisselen en naar het item te scrollen (ONGEDAAN GEMAAKT)
         function switchToDetail(itemId) {
-            // 1. Schakel de contentweergave om naar de detailpagina
             document.getElementById('set-overview').classList.remove("active");
             document.getElementById('main-content').classList.add("active");
             
-            // 2. Schakel de actieve tab om naar "Alle Wensen"
             document.getElementById('btn-overview').classList.remove("active");
             document.getElementById('btn-main').classList.add("active");
 
-            // De <a> tag in de HTML (met href="#itemId") handelt de scroll af.
+            const itemElement = document.getElementById(itemId);
+            if (itemElement) {
+                itemElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
         
-        // Zorg ervoor dat de "Overzicht" tab de enige actieve is bij het laden
-        document.addEventListener("DOMContentLoaded", function() {
-            // Zorg ervoor dat de Alle Wensen (main-content) verborgen is bij start
-            document.getElementById('main-content').classList.remove("active");
-            // Zorg ervoor dat Overzicht (set-overview) getoond wordt
-            document.getElementById('set-overview').classList.add("active");
-            
-            // Zorg ervoor dat de Overzicht knop actief is
-            document.getElementById('btn-overview').classList.add("active");
-            document.getElementById('btn-main').classList.remove("active");
-        });
+        // Initialisatie: Start met het inladen van de JSON-data
+        document.addEventListener("DOMContentLoaded", loadWishlistData);
     </script>
 
 </body>

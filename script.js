@@ -102,7 +102,6 @@ function generateWishlistContent(data) {
             leftColumn.appendChild(itemImageDiv);
 
             // Prijs (onder afbeelding)
-            // Zoek naar de laagste prijs om weer te geven
             const prijzen = item.winkels.map(w => parseFloat(w.prijs.replace('€ ', '').replace(',', '.')));
             const laagstePrijs = Math.min(...prijzen);
             const prijsElement = document.createElement('p');
@@ -200,8 +199,7 @@ Vriendelijke groet,
 // Functie om de JSON-data in te laden (Cache uitgeschakeld)
 async function loadWishlistData() {
     try {
-        // Gebruik 'wishlist.json' in dezelfde map of de lokale server
-        // BELANGRIJK: U moet een lokale webserver gebruiken om dit te laten werken (bijv. Live Server in VS Code)
+        // BELANGRIJK: De JSON-file is 'wishlist.json' in deze setup
         const response = await fetch('wishlist.json', { cache: 'no-store' });
         
         if (!response.ok) {

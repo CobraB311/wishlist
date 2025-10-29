@@ -3,215 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wenslijst - Jonas & Milan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4; /* Lichtgrijze achtergrond */
-            color: #333;
-        }
+    <title>🎄🎁 De Grote Wenslijst van Jonas & Milan (Meerdere Personen)</title>
 
-        /* Header */
-        header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #ffffff; /* Witte achtergrond voor header */
-            border-bottom: 2px solid #ccc;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        /* Hoofd Layout: Flexbox container voor Verticale Tabs */
-        .app-container {
-            display: flex;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 4px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* ----------------------- */
-        /* Verticale Tabs (Menu) */
-        /* ----------------------- */
-        .tab-menu {
-            display: flex;
-            flex-direction: column;
-            width: 150px; /* Kleinere vaste breedte */
-            border-right: 1px solid #ccc;
-            padding-right: 20px;
-            flex-shrink: 0;
-        }
-
-        .tab-button {
-            background-color: #f0f0f0; /* Grijsachtige kleur */
-            color: #333;
-            padding: 10px 15px;
-            margin-bottom: 5px;
-            border: 1px solid #ddd;
-            text-align: left;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.2s, color 0.2s;
-            border-radius: 0; /* Geen afgeronde hoeken */
-        }
-
-        .tab-button:hover:not(.active) {
-            background-color: #ddd;
-        }
-
-        .tab-button.active {
-            background-color: #333; /* Zwart/Donkergrijs actieve kleur */
-            color: white;
-            border-color: #333;
-        }
-
-        /* ----------------------- */
-        /* Inhoudsgebied */
-        /* ----------------------- */
-        .tab-content-container {
-            flex-grow: 1;
-            padding-left: 30px;
-        }
-
-        /* Item Weergave */
-        .wishlist-item {
-            display: flex;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            margin-bottom: 20px;
-            padding: 15px;
-            overflow: hidden;
-        }
-
-        .item-image-container {
-            width: 120px; /* Kleinere afbeelding */
-            height: 120px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-        }
-
-        .item-image-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .item-details {
-            flex-grow: 1;
-        }
-
-        .item-details h3 {
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-size: 1.2em;
-        }
-
-        .item-details p {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .item-details .winkel-links {
-            margin-top: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .item-details .winkel-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 5px 8px;
-            background-color: #e6e6e6; /* Lichtere knopkleur */
-            color: #333;
-            border: 1px solid #ccc;
-            text-decoration: none;
-            font-size: 0.8em;
-            font-weight: normal;
-            transition: background-color 0.2s;
-        }
-
-        .item-details .winkel-link:hover {
-            background-color: #d4d4d4;
-        }
-
-        .item-details .winkel-link strong {
-            margin-left: 5px;
-            font-weight: bold;
-            color: #008000; /* Groene prijs */
-        }
-        
-        /* Responsive aanpassingen voor mobiel */
-        @media (max-width: 768px) {
-            .app-container {
-                flex-direction: column;
-                margin: 10px;
-                padding: 10px;
-            }
-
-            .tab-menu {
-                width: 100%;
-                flex-direction: row;
-                border-right: none;
-                border-bottom: 1px solid #ccc;
-                padding-right: 0;
-                margin-bottom: 15px;
-                overflow-x: auto;
-            }
-
-            .tab-button {
-                flex-shrink: 0;
-                margin-right: 5px;
-                margin-bottom: 0;
-            }
-
-            .tab-content-container {
-                padding-left: 0;
-            }
-
-            .wishlist-item {
-                flex-direction: column;
-            }
-
-            .item-image-container {
-                width: 100%;
-                height: auto;
-                padding: 0;
-                margin: 0 0 10px 0;
-                border-bottom: 1px solid #eee;
-            }
-        }
-    </style>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
-    <header>
-        <h1 id="wishlist-title">Wenslijst</h1>
-        <p id="email-info">E-mail voor contact:</p>
-    </header>
-
-    <div class="app-container">
-        <div class="tab-menu" id="tab-menu">
+    <div class="fixed-header">
+        <div class="header-content">
+        <div id="dynamic-tab-nav" class="tab-nav">
             </div>
-
-        <div class="tab-content-container" id="tab-content">
-            <p>Selecteer een persoon om de wenslijst te bekijken.</p>
         </div>
     </div>
+    
+    <div class="page-wrapper">
+        
+        <div class="title-container">
+            <h1 id="main-title">🎄🎁 De Grote Eindejaarswenslijst! 🎁🎄</h1>
+        </div>
+
+        <div class="container">
+            
+            <div id="overview-content" class="tab-content active">
+                <h2>Klik op een foto om direct naar het artikel te springen:</h2>
+                <div id="overview-grid-container" class="overview-grid">
+                    <p id="loading-message">Laden van wensenlijst...</p>
+                </div>
+            </div>
+            
+            <div id="person-lists-container">
+                </div>
+            
+        </div>
+        
+    </div>
+
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
 
     <script src="script.js"></script> 
+
 </body>
 </html>

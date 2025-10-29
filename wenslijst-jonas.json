@@ -43,6 +43,8 @@
           "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
           "winkels": [
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-etensvriendjes-11039/9300000187249559/", "prijs": "€ 7,95" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/7eh6klT", "prijs": "€ 7,95" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4CN89uw", "prijs": "€ 7,95" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023", "prijs": "€ 9,99" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-food-friends-11039", "prijs": "€ 9,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370", "prijs": "€ 9,98" }
@@ -60,9 +62,9 @@
           "beschrijving": "Een must-have voor snelheidsfans! Deze PLAYMOBIL-set brengt droomauto's tot leven. De sportwagen heeft een afneembaar dak en bevat een Playmobil-coureur. Perfect voor supersnel speelplezier of als cool pronkstuk in de collectie.",
           "afbeelding_url": "https://media.playmobil.com/i/playmobil/71859_product_box_front?w=810&sm=aspect&aspect=10:7&locale=nl-BE,nl,en,*&fmt=auto&strip=true&qlt=80&unsharp=0,1,0.9,1&fmt.jpeg.interlaced=true", 
           "winkels": [
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playmobil-x-porsche-carrera-gt/9300000225695650/", "prijs": "€ 22,99" },
-            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71859-playmobil-porsche-carrera-gt/01876543", "prijs": "€ 24,99" },
-            { "naam": "Playmobil Shop BE", "link": "https://www.playmobil.com/nl-be/playmobil-x-porsche-carrera-gt/71859.html", "prijs": "€ 19,99" }
+            { "naam": "Playmobil Shop BE", "link": "https://www.playmobil.com/nl-be/playmobil-x-porsche-carrera-gt/71859.html", "prijs": "€ 19,99" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/playmobil-cars-71859-playmobil-x-porsche-carrera-gt-32085260", "prijs": "€ 19,99" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playmobil-x-porsche-carrera-gt/9300000225695650/", "prijs": "€ 22,99" }
           ]
         }
       ]

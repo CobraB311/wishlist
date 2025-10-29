@@ -1,6 +1,7 @@
 {
   "wenslijst_titel": "De Grote Eindejaarswenslijst!",
   "datum": "2025-10-29",
+  "email_melding": "bernaertruben@hotmail.com", 
   "personen": [
     {
       "naam": "Jonas",
@@ -18,7 +19,8 @@
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/31134-lego-space-shuttle/01704112", "prijs": "€ 9,95" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/space-shuttle-31134", "prijs": "€ 9,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-creator-31134-space-shuttle-30734427", "prijs": "€ 9,98" }
-          ]
+          ],
+          "gekocht_status": "Nee"
         },
         {
           "id": "set-76312",
@@ -33,7 +35,8 @@
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817", "prijs": "€ 29,99" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312", "prijs": "€ 29,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622", "prijs": "€ 29,99" }
-          ]
+          ],
+          "gekocht_status": "Nee"
         },
         {
           "id": "set-11039",
@@ -48,7 +51,8 @@
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023", "prijs": "€ 9,99" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-food-friends-11039", "prijs": "€ 9,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370", "prijs": "€ 9,98" }
-          ]
+          ],
+          "gekocht_status": "Nee"
         }
       ]
     },
@@ -65,7 +69,8 @@
             { "naam": "Playmobil Shop BE", "link": "https://www.playmobil.com/nl-be/playmobil-x-porsche-carrera-gt/71859.html", "prijs": "€ 19,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/playmobil-cars-71859-playmobil-x-porsche-carrera-gt-32085260", "prijs": "€ 19,99" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playmobil-x-porsche-carrera-gt/9300000225695650/", "prijs": "€ 22,99" }
-          ]
+          ],
+          "gekocht_status": "Nee"
         }
       ]
     }

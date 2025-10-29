@@ -1,5 +1,5 @@
 {
-  "wenslijst_titel": "De Grote Eindejaarswenslijst! (Alle prijzen zijn een indicatie)",
+  "wenslijst_titel": "De Grote Eindejaarswenslijst!",
   "datum": "2025-10-29",
   "personen": [
     {
@@ -32,7 +32,7 @@
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/", "prijs": "€ 21,14" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817", "prijs": "€ 29,99" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312", "prijs": "€ 29,99" },
-            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622", "prijs": "€ 21,14" }
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622", "prijs": "€ 21,14 (prijsindicatie)" }
           ]
         },
         {
@@ -72,7 +72,7 @@
           "afbeelding_url": "https://www.dreamland.be/media/cache/default_gallery_main_webp/media/image/02257006/02257006_001.1344d7a1.webp", 
           "winkels": [
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/8vUwMZV", "prijs": "€ 10,99" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/1ApoeJ4", "prijs": "€ 12,99" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/1ApoeJ4", "prijs": "€ 12,99 (prijsindicatie)" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", "prijs": "€ 9,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/hot-wheels-formule-1-5-f1-auto-s-32065562", "prijs": "€ 13,99" }
           ]

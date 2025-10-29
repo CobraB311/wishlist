@@ -63,6 +63,17 @@
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71827-lego-ninjago-zane-s-strijdmecha/01831504", "prijs": "€ 9,95" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/zane-s-battle-mech-71827", "prijs": "€ 9,99" }
           ]
+        },
+        {
+          "id": "set-hotwheels-f1-5pack",
+          "naam": "Hot Wheels Formule 1 Race Cars 5-Pack",
+          "nummer": "JGF58",
+          "beschrijving": "Een exclusieve set van 5 Hot Wheels F1-racewagens op schaal 1:64 van legendarische teams (McLaren, BWT Alpine, Visa Cash App RB, KICK Sauber en MoneyGram Haas). Must-have voor verzamelaars en jonge snelheidsduivels.",
+          "afbeelding_url": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", 
+          "winkels": [
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", "prijs": "€ 9,99" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/hot-wheels-formule-1-5-f1-auto-s-32065562", "prijs": "€ 13,99" }
+          ]
         }
       ]
     },

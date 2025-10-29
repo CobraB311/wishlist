@@ -5,32 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wenslijst - Jonas & Milan</title>
     <style>
-        :root {
-            --primary-color: #007bff; /* Een mooie blauwe kleur */
-            --secondary-color: #6c757d;
-            --background-color: #f8f9fa;
-            --card-background: #ffffff;
-            --border-color: #dee2e6;
-            --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
-            color: #343a40;
+            background-color: #f4f4f4; /* Lichtgrijze achtergrond */
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #ffffff; /* Witte achtergrond voor header */
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin: 0;
         }
 
         /* Hoofd Layout: Flexbox container voor Verticale Tabs */
         .app-container {
             display: flex;
             max-width: 1200px;
-            margin: 30px auto;
+            margin: 0 auto;
             padding: 20px;
-            background: var(--card-background);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-            border-radius: 12px;
+            background: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         /* ----------------------- */
@@ -39,34 +45,33 @@
         .tab-menu {
             display: flex;
             flex-direction: column;
-            width: 220px; /* Vaste breedte voor het menu */
-            border-right: 1px solid var(--border-color);
+            width: 150px; /* Kleinere vaste breedte */
+            border-right: 1px solid #ccc;
             padding-right: 20px;
-            flex-shrink: 0; /* Zorgt ervoor dat het menu niet krimpt */
+            flex-shrink: 0;
         }
 
         .tab-button {
-            background-color: transparent;
-            color: var(--secondary-color);
-            padding: 12px 15px;
-            margin-bottom: 8px;
-            border: none;
+            background-color: #f0f0f0; /* Grijsachtige kleur */
+            color: #333;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
             text-align: left;
             cursor: pointer;
-            font-size: 1.1em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border-radius: 8px;
+            font-size: 1em;
+            transition: background-color 0.2s, color 0.2s;
+            border-radius: 0; /* Geen afgeronde hoeken */
         }
 
         .tab-button:hover:not(.active) {
-            background-color: #e9ecef;
+            background-color: #ddd;
         }
 
         .tab-button.active {
-            background-color: var(--primary-color);
+            background-color: #333; /* Zwart/Donkergrijs actieve kleur */
             color: white;
-            box-shadow: var(--shadow-light);
+            border-color: #333;
         }
 
         /* ----------------------- */
@@ -77,95 +82,76 @@
             padding-left: 30px;
         }
 
-        header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            color: var(--primary-color);
-            font-size: 2.5em;
-            margin: 0;
-        }
-
+        /* Item Weergave */
         .wishlist-item {
             display: flex;
-            background: var(--card-background);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 25px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
             overflow: hidden;
-            transition: transform 0.2s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .item-image-container {
-            width: 150px;
-            height: 150px;
+            width: 120px; /* Kleinere afbeelding */
+            height: 120px;
             flex-shrink: 0;
-            background-color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
+            margin-right: 15px;
         }
 
         .item-image-container img {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
-            border-radius: 4px;
         }
 
         .item-details {
-            padding: 15px 20px;
             flex-grow: 1;
         }
 
         .item-details h3 {
             margin-top: 0;
             margin-bottom: 5px;
-            color: #343a40;
-            font-size: 1.3em;
+            font-size: 1.2em;
         }
 
         .item-details p {
             font-size: 0.9em;
-            color: var(--secondary-color);
+            color: #666;
             margin-bottom: 10px;
         }
 
         .item-details .winkel-links {
-            margin-top: 15px;
+            margin-top: 10px;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
         .item-details .winkel-link {
             display: inline-flex;
             align-items: center;
-            padding: 6px 10px;
-            background-color: #e9f5ff; /* Lichtblauwe achtergrond */
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-            border-radius: 5px;
+            padding: 5px 8px;
+            background-color: #e6e6e6; /* Lichtere knopkleur */
+            color: #333;
+            border: 1px solid #ccc;
             text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            transition: background-color 0.2s, color 0.2s;
+            font-size: 0.8em;
+            font-weight: normal;
+            transition: background-color 0.2s;
         }
 
         .item-details .winkel-link:hover {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: #d4d4d4;
         }
 
         .item-details .winkel-link strong {
             margin-left: 5px;
-            font-weight: 700;
+            font-weight: bold;
+            color: #008000; /* Groene prijs */
         }
         
         /* Responsive aanpassingen voor mobiel */
@@ -180,15 +166,15 @@
                 width: 100%;
                 flex-direction: row;
                 border-right: none;
-                border-bottom: 1px solid var(--border-color);
+                border-bottom: 1px solid #ccc;
                 padding-right: 0;
                 margin-bottom: 15px;
-                overflow-x: auto; /* Scrollen indien te veel tabs */
+                overflow-x: auto;
             }
 
             .tab-button {
                 flex-shrink: 0;
-                margin-right: 8px;
+                margin-right: 5px;
                 margin-bottom: 0;
             }
 
@@ -202,9 +188,10 @@
 
             .item-image-container {
                 width: 100%;
-                height: 200px;
-                padding: 15px 0;
-                border-bottom: 1px solid var(--border-color);
+                height: auto;
+                padding: 0;
+                margin: 0 0 10px 0;
+                border-bottom: 1px solid #eee;
             }
         }
     </style>

@@ -1,14 +1,14 @@
-/* --- 1. GLOBALE STIJL EN ANTESET --- */
-
-/* BASE STYLING & ANIMATIE (HERSTELD) */
+/* BASE STYLING & ANIMATIE */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     color: #333;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; /* Belangrijk om horizontale scrollbars door de golven te voorkomen */
+    min-height: 100vh;
+    scroll-behavior: smooth; 
     
-    /* Achtergrond animatie */
+    /* Gradient Kleuren */
     background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
     animation: gradient 15s ease infinite; 
     background-size: 400% 400%;
@@ -21,269 +21,7 @@ body {
     100% { background-position: 0% 0%; }
 }
 
-/* De wrapper zorgt ervoor dat de content naast de vaste header komt */
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-left: 200px; /* Ruimte voor de vaste verticale header */
-}
-
-.title-container {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
-    margin: 0 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-#main-title {
-    color: #a00;
-    font-size: 2.2em;
-    margin: 0;
-}
-
-/* De container voor de wensenlijsten */
-.container {
-    flex-grow: 1;
-    max-width: 1400px;
-    margin: 20px auto 100px auto; /* 100px marge onderaan voor de waves */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    position: relative;
-    z-index: 10;
-}
-
-h2 {
-    color: #3C84CE; /* Blauw voor titels */
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 30px;
-}
-
-
-/* --- 2. VERTICALE TAB NAVIGATIE --- */
-
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px; /* Breedte van de navigatiebalk */
-    height: 100%;
-    background-color: #3C84CE; /* Blauwe achtergrond van de balk */
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 20; /* Zorg dat deze boven de content blijft */
-    overflow-y: auto;
-    padding-top: 20px; /* Ruimte bovenaan */
-}
-
-.tab-nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.tab-button {
-    background-color: #3C84CE;
-    color: white;
-    padding: 15px 10px;
-    text-align: left;
-    border: none;
-    border-bottom: 1px solid #5a9ce0;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s, color 0.3s;
-    outline: none;
-}
-
-.tab-button:hover {
-    background-color: #2a72b0;
-}
-
-.tab-button.active {
-    background-color: white;
-    color: #3C84CE;
-    font-weight: bold;
-    border-left: 5px solid #a00; /* Rode accentlijn */
-}
-
-/* Verberg alle tab-content standaard */
-.tab-content {
-    display: none;
-    padding: 10px;
-}
-
-/* Toon de actieve tab-content */
-.tab-content.active {
-    display: block;
-}
-
-
-/* --- 3. OVERZICHT (GRID) STYLING --- */
-
-.overview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.overview-person-header {
-    grid-column: 1 / -1; 
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #a00;
-    margin-top: 20px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #f0f0f0;
-}
-
-.overview-item {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.overview-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.overview-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-    border-radius: 4px;
-    margin-bottom: 5px;
-}
-
-.overview-item p {
-    color: #333;
-    font-size: 0.9em;
-    font-weight: 500;
-    margin: 0;
-    padding-top: 5px;
-}
-
-
-/* --- 4. INDIVIDUELE LIJST ITEM STYLING --- */
-
-.wens-item {
-    display: flex;
-    gap: 20px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.left-column {
-    flex-basis: 250px;
-    flex-shrink: 0;
-    text-align: center;
-}
-
-.item-image-container {
-    width: 250px;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-}
-
-.item-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 4px;
-}
-
-.item-price-under-image {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #058405; /* Groen voor de laagste prijs */
-    margin: 10px 0 0 0;
-}
-
-.item-details {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.item-details h2 {
-    color: #a00; /* Rood voor de itemtitel */
-    margin-top: 0;
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.item-text-info p {
-    margin: 5px 0;
-}
-
-.item-action-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px dashed #ccc;
-}
-
-.winkel-links {
-    flex-grow: 1;
-}
-
-.winkel-links p {
-    margin: 2px 0;
-}
-
-.winkel-links a {
-    color: #3C84CE;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.winkel-links a:hover {
-    text-decoration: underline;
-}
-
-.claim-button {
-    background-color: #a00;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.claim-button:hover {
-    background-color: #7d0000;
-}
-
-
-/* --- 5. GOLVEN STYLING (HERSTELD) --- */
-
+/* GOLVEN STYLING */
 .wave {
     background: rgb(255 255 255 / 25%);
     border-radius: 1000% 1000% 0 0;
@@ -310,6 +48,7 @@ h2 {
     opacity: 0.9;
 }
 
+/* Opgeloste WAVE ANIMATIE */
 @keyframes wave {
     0% { transform: translateX(0); }
     25% { transform: translateX(-25%); }
@@ -318,65 +57,447 @@ h2 {
     100% { transform: translateX(0); }
 }
 
+/* VASTE HEADER - VERTICALE TABS */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; 
+    height: 100%; 
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); 
+}
+ 
+.header-content {
+    width: 100%; 
+    padding: 20px 10px;
+}
+ 
+/* TITEL CONTAINER */
+.title-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 30px 0 30px;
+    background-color: transparent; 
+}
 
-/* --- 6. RESPONSIVE DESIGN --- */
+/* HEADER STYLING - TITEL */
+h1 {
+    color: #FF1919; 
+    text-align: center;
+    border-bottom: 3px solid #3C84CE; 
+    padding-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 0; 
+    font-size: 2.8em; 
+    text-shadow: 1px 1px #30EEE2; 
+}
 
-@media (max-width: 900px) {
-    /* Verticale navigatie wordt horizontaal bovenaan */
+/* CONTAINER STYLING */
+.page-wrapper {
+    margin-left: 200px; 
+    padding-top: 50px; 
+    padding-bottom: 50px;
+    min-height: calc(100vh - 100px);
+}
+ 
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    border: 3px solid #65005E; 
+    position: relative; 
+}
+ 
+/* TAB NAVIGATIE STYLING - VERTICAAL */
+.tab-nav {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: none; 
+    padding-top: 20px;
+}
+
+.tab-button {
+    background-color: #30EEE2;
+    color: #65005E;
+    border: 3px solid #3C84CE;
+    border-right: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 8px 0 0 8px; 
+    margin: 10px 0; 
+    transition: background-color 0.3s, transform 0.2s;
+    outline: none;
+    width: 100%;
+    text-align: left;
+}
+ 
+.tab-button:hover {
+    background-color: #A9D5E7; 
+}
+ 
+.tab-button.active {
+    background-color: #FFFFFF;
+    color: #FF1919;
+    border-top: 3px solid #FF1919;
+    border-bottom: 3px solid #FF1919;
+    border-left: 3px solid #FF1919;
+    border-right: 3px solid #FFFFFF; 
+    transform: translateX(3px); 
+    z-index: 2;
+    margin-right: -3px; 
+    position: relative;
+}
+ 
+/* TAB CONTENT STYLING */
+.tab-content {
+    display: none; 
+    padding-top: 20px;
+}
+ 
+.tab-content.active {
+    display: block; 
+}
+ 
+/* OVERZICHT & ITEM STYLING */
+.overview-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+ 
+/* STYLING VOOR TITEL IN OVERZICHT */
+.overview-person-header {
+    width: 100%;
+    text-align: center;
+    color: #FF1919;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    padding: 5px 0;
+    border-bottom: 2px solid #FF1919;
+}
+
+
+.overview-item {
+    width: 30%; 
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none; 
+    display: block;
+}
+ 
+.overview-item:hover {
+    transform: scale(1.05);
+    background-color: #f0f0ff; 
+}
+
+.overview-item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border: 3px solid #3C84CE;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FFFFFF;
+}
+ 
+.overview-item p {
+    font-weight: bold;
+    color: #65005E;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+ 
+/* VERBETERDE DETAIL LAYOUT */
+.wens-item {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #3C84CE; 
+    border-radius: 8px;
+    background-color: #f8f8f8; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    scroll-margin-top: 20px; 
+}
+.wens-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+ 
+.left-column {
+    flex-shrink: 0;
+    width: 170px; 
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-image-container { 
+    width: 170px; 
+    height: 170px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #ffffff; 
+    border: 1px solid #65005E; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-image-container img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+}
+ 
+/* STIJL VOOR DE PRIJS ONDER DE FOTO */
+.item-price-under-image { 
+    font-weight: bold;
+    color: #27AE60; 
+    font-size: 1.2em; 
+    margin-top: 10px;
+    text-align: center;
+}
+
+.item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+/* Container voor titel, nummer, beschrijving */
+.item-text-info {
+    padding-bottom: 10px;
+}
+ 
+.item-details h2 { 
+    color: #65005E; 
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.8em; 
+    text-align: left;
+}
+ 
+.item-details p {
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Groepering voor links en knop */
+.item-action-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 15px; 
+    padding-top: 10px;
+    border-top: 1px dashed #3C84CE;
+}
+
+.winkel-links {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+.winkel-links p {
+    font-size: 0.9em;
+    margin-bottom: 3px;
+}
+.winkel-links a {
+    color: #3C84CE; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 0;
+    transition: color 0.1s;
+}
+.winkel-links a:hover {
+    text-decoration: underline;
+    color: #1A5C92;
+}
+ 
+/* STIJL VOOR DE CLAIM KNOP PER ITEM */
+.claim-button {
+    display: block; 
+    padding: 10px 15px;
+    background-color: #3C84CE; 
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    white-space: nowrap; 
+}
+
+.claim-button:hover {
+    background-color: #1A5C92;
+}
+
+
+/* Nieuwe CSS voor duidelijke scheiding tussen personen */
+.person-section {
+    border-top: 4px dashed #FF1919;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+.person-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #FF1919;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+/* ======================================= */
+/* MEDIA QUERIES (RESPONSIVE AANPASSINGEN) */
+/* ======================================= */
+
+/* --- Tablet (768px) en kleiner --- */
+@media (max-width: 768px) {
     .fixed-header {
-        position: static;
+        position: relative;
         width: 100%;
         height: auto;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding-top: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-    
+    .header-content {
+         padding: 10px 30px;
+    }
     .page-wrapper {
-        padding-left: 0; /* Geen ruimte meer nodig voor de sidebar */
+        margin-left: 0;
+        padding: 20px 10px 20px 10px; /* Minder padding op tablet */
     }
-
     .tab-nav {
-        flex-direction: row;
-        overflow-x: auto;
+        flex-direction: row; 
+        justify-content: flex-start; 
+        overflow-x: auto; 
         white-space: nowrap;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 3px solid #3C84CE; 
+        padding-bottom: 5px;
+        /* Verwijder de box-shadow die nodig was voor fixed-position */
+        background: none;
+        box-shadow: none;
+    }
+    .tab-button {
+        margin: 0 5px;
+        border-radius: 8px 8px 0 0;
+        border-bottom: none;
+        border-right: 3px solid #3C84CE; 
+        width: auto; 
+    }
+    .tab-button.active {
+        transform: translateY(2px);
+        margin-bottom: -3px;
+        border-right: 3px solid #FF1919; 
+    }
+    .title-container {
+        padding: 0 10px 10px 10px;
     }
 
-    .tab-button {
-        flex-shrink: 0;
-        border-bottom: none;
-        border-right: 1px solid #5a9ce0;
-        padding: 10px 15px;
+    /* AANGEPAST: Overview grid 2 kolommen */
+    .overview-item {
+        width: 45%; 
     }
     
-    .tab-button.active {
-        border-left: none;
-        border-bottom: 5px solid #a00; /* Rode accentlijn onderaan */
+    /* AANGEPAST: Lettertypes verkleinen */
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 { /* Voor "Klik op een foto..." */
+        font-size: 1.5em;
+    }
+    .person-section h2 {
+        font-size: 1.5em;
+    }
+    .item-details h2 {
+        font-size: 1.6em;
     }
 
-    /* Wensitem layout aanpassen voor mobiel */
+    /* Pas de wens-item layout aan voor mobiel */
     .wens-item {
         flex-direction: column;
-        gap: 15px;
     }
-
     .left-column {
-        flex-basis: auto;
         width: 100%;
+        margin-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
     }
-    
     .item-image-container {
         width: 100%;
         height: auto;
-        max-height: 250px;
+        max-height: 200px;
+        margin-bottom: 5px;
     }
-    
+    .item-price-under-image {
+        text-align: left;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        /* Zorg dat het niet te breed is */
+        display: inline-block;
+    }
     .item-action-area {
         flex-direction: column;
         align-items: stretch;
     }
-    
     .claim-button {
         margin-top: 15px;
+        white-space: normal;
+    }
+    .winkel-links {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* --- Kleine Telefoon (480px) en kleiner --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px; /* Minder padding op de container */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Nog kleinere hoofdtitel */
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+    .person-section h2 {
+        font-size: 1.3em;
+    }
+
+    /* AANGEPAST: Overview grid 1 kolom */
+    .overview-item {
+        width: 90%; /* Bijna 100% voor 1 kolom */
+        margin: 10px auto;
+    }
+    
+    .item-details h2 {
+        font-size: 1.3em; /* Kleinere item titels */
+    }
+    
+    .claim-button {
+        padding: 12px;
+        font-size: 0.9em;
     }
 }

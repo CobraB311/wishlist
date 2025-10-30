@@ -69,18 +69,12 @@ function generateWishlistContent(data) {
     listsContainer.innerHTML = '';
     tabNav.innerHTML = ''; 
 
-    // --- 1. INVENTARIS TAB AANMAKEN ---
+    // --- 1. INVENTARIS TAB CONTENT AANMAKEN ---
     generateInventoryContent(listsContainer, data.inventaris_links);
 
-    // INVENTARIS KNOP
-    const inventoryButton = document.createElement('button');
-    inventoryButton.id = 'btn-inventory';
-    inventoryButton.className = 'tab-button';
-    inventoryButton.textContent = '📦 Inventaris Overzicht';
-    inventoryButton.onclick = (e) => openTab(e, 'inventory-content');
-    tabNav.appendChild(inventoryButton);
-    
-    // OVERZICHT KNOP 
+    // --- 2. TABS/KNOPPEN AANMAKEN EN IN DE JUISTE VOLGORDE ZETTEN ---
+
+    // OVERZICHT KNOP (Bovenaan)
     const overviewButton = document.createElement('button');
     overviewButton.id = 'btn-overview';
     overviewButton.className = 'tab-button active';
@@ -171,7 +165,6 @@ function generateWishlistContent(data) {
             prijsElement.className = 'item-price-under-image';
             
             // Samengevatte prijs toont de tekst "(Indicatie)"
-            // HIER IS DE CORRECTIE VAN 'laagstePriest' NAAR 'laagstePrijs'
             prijsElement.textContent = `Vanaf: € ${laagstePrijs.toFixed(2).replace('.', ',')} (Indicatie)`; 
             
             leftColumn.appendChild(prijsElement);
@@ -257,6 +250,15 @@ Vriendelijke groet,
             listSection.appendChild(wensItem);
         }
     }
+
+    // INVENTARIS KNOP (Onderaan)
+    const inventoryButton = document.createElement('button');
+    inventoryButton.id = 'btn-inventory';
+    inventoryButton.className = 'tab-button';
+    inventoryButton.textContent = '📦 Inventaris Overzicht';
+    inventoryButton.onclick = (e) => openTab(e, 'inventory-content');
+    tabNav.appendChild(inventoryButton);
+    
     
     // Zorgt ervoor dat het overzicht standaard actief is
     document.getElementById('overview-content').classList.add("active");

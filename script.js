@@ -2,7 +2,7 @@
 const recipientEmail = 'bernaertruben@hotmail.com'; 
 
 // NIEUWE FUNCTIE: Genereer de inventaris-content
-function generateInventoryContent(listsContainer, inventarisData) {
+function generateInventoryContent(listsContainer, inventarisLinks) {
     const inventoryWrapper = document.createElement('div');
     inventoryWrapper.id = 'inventory-content';
     inventoryWrapper.className = 'tab-content';
@@ -17,31 +17,37 @@ function generateInventoryContent(listsContainer, inventarisData) {
     description.innerHTML = 'Dit zijn overzichten van het speelgoed dat onze kinderen al hebben. Hierdoor kan dubbel werk vermeden worden bij het zoeken naar nieuwe cadeaus.';
     inventoryWrapper.appendChild(description);
     
-    // Inventaris Links
-    const linkSectionTitle = document.createElement('h3');
-    linkSectionTitle.textContent = 'Huidige Overzichten:';
-    linkSectionTitle.style.marginTop = '30px';
-    inventoryWrapper.appendChild(linkSectionTitle);
+    if (inventarisLinks && inventarisLinks.length > 0) {
+        const linkSectionTitle = document.createElement('h3');
+        linkSectionTitle.textContent = 'Huidige Overzichten:';
+        linkSectionTitle.style.marginTop = '30px';
+        inventoryWrapper.appendChild(linkSectionTitle);
+        
+        const linksList = document.createElement('ul');
+        linksList.style.listStyleType = 'none';
+        linksList.style.paddingLeft = '0';
+        
+        // LOOP DOOR LINKS UIT DE JSON
+        inventarisLinks.forEach(linkData => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = linkData.url;
+            link.target = '_blank';
+            link.textContent = `➡️ ${linkData.naam}`;
+            link.style.fontSize = '1.1em';
+            link.style.color = '#3C84CE'; // Blauw
+            link.style.fontWeight = 'bold';
+            listItem.appendChild(link);
+            linksList.appendChild(listItem);
+        });
+        
+        inventoryWrapper.appendChild(linksList);
+    } else {
+        const noLinks = document.createElement('p');
+        noLinks.textContent = 'Geen inventaris links gevonden in de JSON.';
+        inventoryWrapper.appendChild(noLinks);
+    }
     
-    const linksList = document.createElement('ul');
-    linksList.style.listStyleType = 'none';
-    linksList.style.paddingLeft = '0';
-    
-    inventarisData.forEach(item => {
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.href = item.link_url;
-        link.target = '_blank';
-        // Gebruikt nu de titel en beschrijving uit de JSON
-        link.textContent = `➡️ ${item.titel} (${item.beschrijving})`;
-        link.style.fontSize = '1.1em';
-        link.style.color = '#1E8449'; 
-        link.style.fontWeight = 'bold';
-        listItem.appendChild(link);
-        linksList.appendChild(listItem);
-    });
-    
-    inventoryWrapper.appendChild(linksList);
     listsContainer.appendChild(inventoryWrapper);
 }
 
@@ -63,9 +69,8 @@ function generateWishlistContent(data) {
     listsContainer.innerHTML = '';
     tabNav.innerHTML = ''; 
 
-    // --- 1. INVENTARIS TAB TOEVOEGEN ---
-    // Genereer de content. Deze moet in de listsContainer komen te staan.
-    generateInventoryContent(listsContainer, data.inventaris || []); 
+    // --- 1. INVENTARIS TAB AANMAKEN ---
+    generateInventoryContent(listsContainer, data.inventaris_links);
 
     // INVENTARIS KNOP
     const inventoryButton = document.createElement('button');
@@ -75,7 +80,7 @@ function generateWishlistContent(data) {
     inventoryButton.onclick = (e) => openTab(e, 'inventory-content');
     tabNav.appendChild(inventoryButton);
     
-    // OVERZICHT KNOP (Blijft actief na laden)
+    // OVERZICHT KNOP 
     const overviewButton = document.createElement('button');
     overviewButton.id = 'btn-overview';
     overviewButton.className = 'tab-button active';
@@ -159,14 +164,15 @@ function generateWishlistContent(data) {
             leftColumn.appendChild(itemImageDiv);
 
             // Prijs (onder afbeelding - Samengevatte prijs)
-            // Stript "(prijsindicatie)" om de laagste prijs te berekenen
+            // Gebruik de schone prijs om de laagste prijs te berekenen
             const prijzen = item.winkels.map(w => parseFloat(w.prijs.replace('€ ', '').replace(',', '.').replace('(prijsindicatie)', '').trim()));
             const laagstePrijs = Math.min(...prijzen);
             const prijsElement = document.createElement('p');
             prijsElement.className = 'item-price-under-image';
             
-            // Samengevatte prijs toont de tekst "(Indicatie)", zoals gevraagd
-            prijsElement.textContent = `Vanaf: € ${laagstePriest.toFixed(2).replace('.', ',')} (Indicatie)`; 
+            // Samengevatte prijs toont de tekst "(Indicatie)"
+            // HIER IS DE CORRECTIE VAN 'laagstePriest' NAAR 'laagstePrijs'
+            prijsElement.textContent = `Vanaf: € ${laagstePrijs.toFixed(2).replace('.', ',')} (Indicatie)`; 
             
             leftColumn.appendChild(prijsElement);
             
@@ -256,13 +262,14 @@ Vriendelijke groet,
     document.getElementById('overview-content').classList.add("active");
     document.getElementById('btn-overview').classList.add("active");
     
-    data.personen.forEach(p => {
-        document.getElementById(`${p.naam.toLowerCase()}-content`).classList.remove("active");
-    });
-    
-    // Zorg ervoor dat de nieuwe inventaris-tab inactief is bij het laden
+    // Zorg ervoor dat de andere tabs inactief zijn
     document.getElementById('inventory-content').classList.remove("active");
     document.getElementById('btn-inventory').classList.remove("active");
+    
+    data.personen.forEach(p => {
+        document.getElementById(`${p.naam.toLowerCase()}-content`).classList.remove("active");
+        document.getElementById(`btn-${p.naam.toLowerCase()}`).classList.remove("active");
+    });
 }
 
 // Functie om de JSON-data in te laden (Cache uitgeschakeld)
@@ -286,14 +293,13 @@ async function loadWishlistData() {
 
 // De tab-wissel functionaliteit
 function openTab(evt, tabId) {
-    // Haal alle tab-content elementen op
-    const overviewContent = document.getElementById('overview-content');
-    const inventoryContent = document.getElementById('inventory-content');
+    // Haal alle tab-content elementen op (Overview, Inventaris, en alle personen)
+    const allTabContent = [document.getElementById('overview-content'), document.getElementById('inventory-content')];
     const allPersonTabs = document.getElementById('person-lists-container').children;
 
-    if(overviewContent) overviewContent.classList.remove("active");
-    if(inventoryContent) inventoryContent.classList.remove("active");
-    
+    for (const content of allTabContent) {
+        if(content) content.classList.remove("active");
+    }
     for (const tab of allPersonTabs) {
         tab.classList.remove("active");
     }

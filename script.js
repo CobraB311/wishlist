@@ -1,21 +1,20 @@
 // E-MAILADRES VAN DE BEHEERDER/ONTVANGER (OPGESLAGEN INFORMATIE)
 const recipientEmail = 'bernaertruben@hotmail.com'; 
 
-// Functie om de inventaris-content te vullen
-function populateInventoryContent(inventoryData) {
-    const inventoryWrapper = document.getElementById('inventory-content');
-    if (!inventoryWrapper) return; // Zorgt ervoor dat de functie stopt als de container niet bestaat
-
-    inventoryWrapper.innerHTML = ''; // Maak de container leeg
-
+// NIEUWE FUNCTIE: Genereer de inventaris-content
+function generateInventoryContent(listsContainer, inventarisData) {
+    const inventoryWrapper = document.createElement('div');
+    inventoryWrapper.id = 'inventory-content';
+    inventoryWrapper.className = 'tab-content';
+    
     // Titel
     const title = document.createElement('h2');
-    title.textContent = inventoryData.title; 
+    title.textContent = '🏠 Onze Speelgoed Inventaris';
     inventoryWrapper.appendChild(title);
     
     // Beschrijving
     const description = document.createElement('p');
-    description.innerHTML = inventoryData.description; 
+    description.innerHTML = 'Dit zijn overzichten van het speelgoed dat onze kinderen al hebben. Hierdoor kan dubbel werk vermeden worden bij het zoeken naar nieuwe cadeaus.';
     inventoryWrapper.appendChild(description);
     
     // Inventaris Links
@@ -28,21 +27,22 @@ function populateInventoryContent(inventoryData) {
     linksList.style.listStyleType = 'none';
     linksList.style.paddingLeft = '0';
     
-    // Links uit JSON verwerken
-    for (const linkItem of inventoryData.links) {
+    inventarisData.forEach(item => {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
-        link.href = linkItem.url; 
+        link.href = item.link_url;
         link.target = '_blank';
-        link.textContent = `➡️ ${linkItem.text}`; 
+        // Gebruikt nu de titel en beschrijving uit de JSON
+        link.textContent = `➡️ ${item.titel} (${item.beschrijving})`;
         link.style.fontSize = '1.1em';
         link.style.color = '#1E8449'; 
         link.style.fontWeight = 'bold';
         listItem.appendChild(link);
         linksList.appendChild(listItem);
-    }
+    });
     
     inventoryWrapper.appendChild(linksList);
+    listsContainer.appendChild(inventoryWrapper);
 }
 
 
@@ -63,19 +63,17 @@ function generateWishlistContent(data) {
     listsContainer.innerHTML = '';
     tabNav.innerHTML = ''; 
 
-    // --- 1. NIEUWE INVENTARIS TAB BUTTON & CONTENT VULLEN ---
-    
-    // INVENTARIS KNOP (staat nu bovenaan de navigatie)
+    // --- 1. INVENTARIS TAB TOEVOEGEN ---
+    // Genereer de content. Deze moet in de listsContainer komen te staan.
+    generateInventoryContent(listsContainer, data.inventaris || []); 
+
+    // INVENTARIS KNOP
     const inventoryButton = document.createElement('button');
     inventoryButton.id = 'btn-inventory';
     inventoryButton.className = 'tab-button';
     inventoryButton.textContent = '📦 Inventaris Overzicht';
     inventoryButton.onclick = (e) => openTab(e, 'inventory-content');
     tabNav.appendChild(inventoryButton);
-
-    // VUL DE CONTENT
-    populateInventoryContent(data.inventaris);
-    // --------------------------------------------------------
     
     // OVERZICHT KNOP (Blijft actief na laden)
     const overviewButton = document.createElement('button');
@@ -161,13 +159,14 @@ function generateWishlistContent(data) {
             leftColumn.appendChild(itemImageDiv);
 
             // Prijs (onder afbeelding - Samengevatte prijs)
+            // Stript "(prijsindicatie)" om de laagste prijs te berekenen
             const prijzen = item.winkels.map(w => parseFloat(w.prijs.replace('€ ', '').replace(',', '.').replace('(prijsindicatie)', '').trim()));
             const laagstePrijs = Math.min(...prijzen);
             const prijsElement = document.createElement('p');
             prijsElement.className = 'item-price-under-image';
             
-            // Samengevatte prijs toont de tekst "(Indicatie)" (zoals gevraagd)
-            prijsElement.textContent = `Vanaf: € ${laagstePrijs.toFixed(2).replace('.', ',')} (Indicatie)`; 
+            // Samengevatte prijs toont de tekst "(Indicatie)", zoals gevraagd
+            prijsElement.textContent = `Vanaf: € ${laagstePriest.toFixed(2).replace('.', ',')} (Indicatie)`; 
             
             leftColumn.appendChild(prijsElement);
             
@@ -213,7 +212,7 @@ function generateWishlistContent(data) {
                 winkelLink.href = winkel.link;
                 winkelLink.target = '_blank';
                 
-                // CORRECTIE: Verwijder "(prijsindicatie)" uit de individuele prijs (zoals gevraagd in de vorige stap)
+                // CORRECTIE: Verwijder "(prijsindicatie)" uit de individuele prijs
                 const cleanPrice = winkel.prijs.replace('(prijsindicatie)', '').trim(); 
                 winkelLink.textContent = `${winkel.naam} (${cleanPrice})`; 
                 
@@ -253,18 +252,17 @@ Vriendelijke groet,
         }
     }
     
-    // Zorgt ervoor dat alle tabs deactiveerd zijn behalve Overzicht bij het laden
+    // Zorgt ervoor dat het overzicht standaard actief is
     document.getElementById('overview-content').classList.add("active");
     document.getElementById('btn-overview').classList.add("active");
+    
+    data.personen.forEach(p => {
+        document.getElementById(`${p.naam.toLowerCase()}-content`).classList.remove("active");
+    });
     
     // Zorg ervoor dat de nieuwe inventaris-tab inactief is bij het laden
     document.getElementById('inventory-content').classList.remove("active");
     document.getElementById('btn-inventory').classList.remove("active");
-
-    data.personen.forEach(p => {
-        const personContent = document.getElementById(`${p.naam.toLowerCase()}-content`);
-        if (personContent) personContent.classList.remove("active");
-    });
 }
 
 // Functie om de JSON-data in te laden (Cache uitgeschakeld)
@@ -288,13 +286,14 @@ async function loadWishlistData() {
 
 // De tab-wissel functionaliteit
 function openTab(evt, tabId) {
-    // Haal alle content elementen op
-    const allTabContent = document.querySelectorAll('.container > .tab-content'); // Selecteert alle content direct in de container
-    
-    for (const content of allTabContent) {
-        content.classList.remove("active");
-    }
+    // Haal alle tab-content elementen op
+    const overviewContent = document.getElementById('overview-content');
+    const inventoryContent = document.getElementById('inventory-content');
     const allPersonTabs = document.getElementById('person-lists-container').children;
+
+    if(overviewContent) overviewContent.classList.remove("active");
+    if(inventoryContent) inventoryContent.classList.remove("active");
+    
     for (const tab of allPersonTabs) {
         tab.classList.remove("active");
     }
@@ -316,14 +315,13 @@ function openTab(evt, tabId) {
 // Functie om naar de detailtab te wisselen en naar het item te scrollen
 function switchToDetail(persoonId, itemId) {
     // Deactiveer alle tabs
-    const allTabContent = document.querySelectorAll('.container > .tab-content');
-    for (const content of allTabContent) {
-        content.classList.remove("active");
-    }
+    document.getElementById('overview-content').classList.remove("active");
     const allPersonTabs = document.getElementById('person-lists-container').children;
     for (const tab of allPersonTabs) {
         tab.classList.remove("active");
     }
+    const inventoryContent = document.getElementById('inventory-content');
+    if(inventoryContent) inventoryContent.classList.remove("active");
 
     // Activeer de persoon's tab
     document.getElementById(`${persoonId}-content`).classList.add("active");
@@ -343,4 +341,5 @@ function switchToDetail(persoonId, itemId) {
     }
 }
 
-// Initialisatie: Start
+// Initialisatie: Start met het inladen van de JSON-data
+document.addEventListener("DOMContentLoaded", loadWishlistData);

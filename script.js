@@ -31,7 +31,7 @@ function generateWishlistContent(data) {
         const persoonNaam = persoon.naam;
         const persoonId = persoonNaam.toLowerCase();
         
-        // 1. MAAK TAB KNOP
+        // 1. MAAK TAB KNOP (Verticaal links)
         const personButton = document.createElement('button');
         personButton.id = `btn-${persoonId}`;
         personButton.className = 'tab-button';
@@ -48,7 +48,6 @@ function generateWishlistContent(data) {
         const listSection = document.createElement('div');
         listSection.className = 'person-section';
         
-        // VOEG NU DE TITEL ALTIJD TOE
         const listTitle = document.createElement('h2');
         listTitle.textContent = `Wensenlijst van ${persoonNaam}`;
         listSection.appendChild(listTitle);
@@ -102,13 +101,13 @@ function generateWishlistContent(data) {
             itemImageDiv.appendChild(itemImage);
             leftColumn.appendChild(itemImageDiv);
 
-            // Prijs (onder afbeelding)
-            const prijzen = item.winkels.map(w => parseFloat(w.prijs.replace('€ ', '').replace(',', '.')));
+            // Prijs (onder afbeelding - Samengevatte prijs)
+            const prijzen = item.winkels.map(w => parseFloat(w.prijs.replace('€ ', '').replace(',', '.').replace('(prijsindicatie)', '').trim()));
             const laagstePrijs = Math.min(...prijzen);
             const prijsElement = document.createElement('p');
             prijsElement.className = 'item-price-under-image';
             
-            // WIJZIGING: Toevoeging van "(Indicatie)"
+            // Samengevatte prijs toont de tekst "(Indicatie)", zoals gevraagd in de vorige stap
             prijsElement.textContent = `Vanaf: € ${laagstePrijs.toFixed(2).replace('.', ',')} (Indicatie)`; 
             
             leftColumn.appendChild(prijsElement);
@@ -154,7 +153,12 @@ function generateWishlistContent(data) {
                 const winkelLink = document.createElement('a');
                 winkelLink.href = winkel.link;
                 winkelLink.target = '_blank';
-                winkelLink.textContent = `${winkel.naam} (${winkel.prijs})`; 
+                
+                // --- CORRECTIE HIER: VERWIJDERT "(prijsindicatie)" ---
+                const cleanPrice = winkel.prijs.replace('(prijsindicatie)', '').trim(); 
+                winkelLink.textContent = `${winkel.naam} (${cleanPrice})`; 
+                // --------------------------------------------------------
+                
                 winkelParagraaf.appendChild(winkelLink);
                 winkelLinksDiv.appendChild(winkelParagraaf);
             }
@@ -203,7 +207,6 @@ Vriendelijke groet,
 // Functie om de JSON-data in te laden (Cache uitgeschakeld)
 async function loadWishlistData() {
     try {
-        // BELANGRIJK: De JSON-file is 'wishlist.json' in deze setup
         const response = await fetch('wishlist.json', { cache: 'no-store' });
         
         if (!response.ok) {

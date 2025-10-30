@@ -1,6 +1,50 @@
 // E-MAILADRES VAN DE BEHEERDER/ONTVANGER (OPGESLAGEN INFORMATIE)
 const recipientEmail = 'bernaertruben@hotmail.com'; 
 
+// NIEUWE FUNCTIE: Genereer de inventaris-content
+function generateInventoryContent(listsContainer) {
+    const inventoryWrapper = document.createElement('div');
+    inventoryWrapper.id = 'inventory-content';
+    inventoryWrapper.className = 'tab-content';
+    
+    // Titel
+    const title = document.createElement('h2');
+    title.textContent = '🏠 Onze Speelgoed Inventaris';
+    inventoryWrapper.appendChild(title);
+    
+    // Beschrijving
+    const description = document.createElement('p');
+    description.innerHTML = 'Dit zijn overzichten van het speelgoed dat onze kinderen al hebben. Hierdoor kan dubbel werk vermeden worden bij het zoeken naar nieuwe cadeaus.';
+    inventoryWrapper.appendChild(description);
+    
+    // Inventaris Links
+    const linkSectionTitle = document.createElement('h3');
+    linkSectionTitle.textContent = 'Huidige Overzichten:';
+    linkSectionTitle.style.marginTop = '30px';
+    inventoryWrapper.appendChild(linkSectionTitle);
+    
+    const linksList = document.createElement('ul');
+    linksList.style.listStyleType = 'none';
+    linksList.style.paddingLeft = '0';
+    
+    // EERSTE LINK (LEGO/DUPLO)
+    const legoListItem = document.createElement('li');
+    const legoLink = document.createElement('a');
+    legoLink.href = 'https://photos.app.goo.gl/qd9eLbo6VPKxKYts6';
+    legoLink.target = '_blank';
+    legoLink.textContent = '➡️ LEGO/DUPLO Collectie (Google Foto\'s)';
+    legoLink.style.fontSize = '1.1em';
+    legoLink.style.color = '#1E8449'; /* Groen */
+    legoLink.style.fontWeight = 'bold';
+    legoListItem.appendChild(legoLink);
+    linksList.appendChild(legoListItem);
+    
+    inventoryWrapper.appendChild(linksList);
+    
+    listsContainer.appendChild(inventoryWrapper);
+}
+
+
 // Functie om de volledige HTML-inhoud te genereren met de ingeladen data
 function generateWishlistContent(data) {
     document.getElementById('main-title').textContent = `🎄🎁 ${data.wenslijst_titel} 🎁🎄`;
@@ -18,11 +62,24 @@ function generateWishlistContent(data) {
     listsContainer.innerHTML = '';
     tabNav.innerHTML = ''; 
 
-    // OVERZICHT KNOP
+    // --- 1. NIEUWE INVENTARIS TAB ---
+    // De content container moet voor de knop gemaakt worden
+    generateInventoryContent(listsContainer);
+
+    // INVENTARIS KNOP
+    const inventoryButton = document.createElement('button');
+    inventoryButton.id = 'btn-inventory';
+    inventoryButton.className = 'tab-button';
+    inventoryButton.textContent = '📦 Inventaris Overzicht';
+    inventoryButton.onclick = (e) => openTab(e, 'inventory-content');
+    tabNav.appendChild(inventoryButton);
+    // ---------------------------------
+    
+    // OVERZICHT KNOP (Blijft actief na laden)
     const overviewButton = document.createElement('button');
     overviewButton.id = 'btn-overview';
     overviewButton.className = 'tab-button active';
-    overviewButton.textContent = '⭐ Overzicht Foto\'s';
+    overviewButton.textContent = '⭐ Wensen Overzicht Foto\'s';
     overviewButton.onclick = (e) => openTab(e, 'overview-content');
     tabNav.appendChild(overviewButton);
     
@@ -107,7 +164,7 @@ function generateWishlistContent(data) {
             const prijsElement = document.createElement('p');
             prijsElement.className = 'item-price-under-image';
             
-            // Samengevatte prijs toont de tekst "(Indicatie)", zoals gevraagd in de vorige stap
+            // Samengevatte prijs toont de tekst "(Indicatie)"
             prijsElement.textContent = `Vanaf: € ${laagstePrijs.toFixed(2).replace('.', ',')} (Indicatie)`; 
             
             leftColumn.appendChild(prijsElement);
@@ -154,10 +211,9 @@ function generateWishlistContent(data) {
                 winkelLink.href = winkel.link;
                 winkelLink.target = '_blank';
                 
-                // --- CORRECTIE HIER: VERWIJDERT "(prijsindicatie)" ---
+                // CORRECTIE: Verwijder "(prijsindicatie)" uit de individuele prijs
                 const cleanPrice = winkel.prijs.replace('(prijsindicatie)', '').trim(); 
                 winkelLink.textContent = `${winkel.naam} (${cleanPrice})`; 
-                // --------------------------------------------------------
                 
                 winkelParagraaf.appendChild(winkelLink);
                 winkelLinksDiv.appendChild(winkelParagraaf);
@@ -202,6 +258,10 @@ Vriendelijke groet,
     data.personen.forEach(p => {
         document.getElementById(`${p.naam.toLowerCase()}-content`).classList.remove("active");
     });
+
+    // Zorg ervoor dat de nieuwe inventaris-tab inactief is bij het laden
+    document.getElementById('inventory-content').classList.remove("active");
+    document.getElementById('btn-inventory').classList.remove("active");
 }
 
 // Functie om de JSON-data in te laden (Cache uitgeschakeld)
@@ -225,13 +285,20 @@ async function loadWishlistData() {
 
 // De tab-wissel functionaliteit
 function openTab(evt, tabId) {
-    document.getElementById('overview-content').classList.remove("active");
+    // Haal alle tab-content elementen op
+    const allTabContent = [document.getElementById('overview-content'), document.getElementById('inventory-content')];
     const allPersonTabs = document.getElementById('person-lists-container').children;
+
+    for (const content of allTabContent) {
+        if(content) content.classList.remove("active");
+    }
     for (const tab of allPersonTabs) {
         tab.classList.remove("active");
     }
     
-    document.getElementById(tabId).classList.add("active");
+    // Activeer de gevraagde tab
+    const requestedTab = document.getElementById(tabId);
+    if(requestedTab) requestedTab.classList.add("active");
 
     var tablinks = document.getElementsByClassName("tab-button");
     for (var i = 0; i < tablinks.length; i++) {
@@ -245,20 +312,25 @@ function openTab(evt, tabId) {
 
 // Functie om naar de detailtab te wisselen en naar het item te scrollen
 function switchToDetail(persoonId, itemId) {
+    // Deactiveer alle tabs
     document.getElementById('overview-content').classList.remove("active");
     const allPersonTabs = document.getElementById('person-lists-container').children;
     for (const tab of allPersonTabs) {
         tab.classList.remove("active");
     }
+    const inventoryContent = document.getElementById('inventory-content');
+    if(inventoryContent) inventoryContent.classList.remove("active");
 
+    // Activeer de persoon's tab
     document.getElementById(`${persoonId}-content`).classList.add("active");
     
-    document.getElementById('btn-overview').classList.remove("active");
-    
+    // Deactiveer alle tab-knoppen
     var tablinks = document.getElementsByClassName("tab-button");
     for (var i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
+
+    // Activeer de juiste tab-knop
     document.getElementById(`btn-${persoonId}`).classList.add("active");
 
     const itemElement = document.getElementById(itemId);

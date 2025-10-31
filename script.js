@@ -1,7 +1,7 @@
 // E-MAILADRES VAN DE BEHEERDER/ONTVANGER (OPGESLAGEN INFORMATIE)
 const recipientEmail = 'bernaertruben@hotmail.com'; 
 
-// NIEUWE FUNCTIE: Genereer de inventaris-content
+// FUNCTIE: Genereer de inventaris-content
 function generateInventoryContent(listsContainer, inventarisLinks) {
     const inventoryWrapper = document.createElement('div');
     inventoryWrapper.id = 'inventory-content';
@@ -27,7 +27,6 @@ function generateInventoryContent(listsContainer, inventarisLinks) {
         linksList.style.listStyleType = 'none';
         linksList.style.paddingLeft = '0';
         
-        // LOOP DOOR LINKS UIT DE JSON
         inventarisLinks.forEach(linkData => {
             const listItem = document.createElement('li');
             const link = document.createElement('a');
@@ -76,12 +75,13 @@ function generateItemCard(item, persoonNaam, claimedItemsSet) {
     const image = document.createElement('img');
     image.src = item.afbeelding_url;
     image.alt = item.naam;
-    image.loading = 'lazy'; // Verbetering voor performance
+    image.loading = 'lazy'; 
     imageContainer.appendChild(image);
     leftColumn.appendChild(imageContainer);
     
-    // Prijs onder de afbeelding (zichtbaar op mobiel/tablet)
+    // Prijs onder de afbeelding 
     if (item.winkels && item.winkels.length > 0) {
+        // Zoek de laagste prijs
         const lowestPrice = item.winkels.reduce((min, w) => {
             const prijsNum = parseFloat(w.prijs.replace(/[^0-9,.]/g, '').replace(',', '.'));
             return (min === null || prijsNum < min) ? prijsNum : min;
@@ -205,27 +205,23 @@ function openTab(evt, tabName) {
 
 // Functie om naar de detailtab te wisselen en naar het item te scrollen
 function switchToDetail(persoonId, itemId) {
-    // Deactiveer alle tabs
-    document.getElementById('overview-content').classList.remove("active");
-    const allPersonTabs = document.getElementById('person-lists-container').children;
-    for (const tab of allPersonTabs) {
-        tab.classList.remove("active");
+    // Verberg alle tab-content
+    var i, tabcontent;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
     }
-    const inventoryContent = document.getElementById('inventory-content');
-    if(inventoryContent) inventoryContent.classList.remove("active");
 
-    // Activeer de persoon's tab
-    document.getElementById(`${persoonId}-content`).classList.add("active");
-    
     // Deactiveer alle tab-knoppen
     var tablinks = document.getElementsByClassName("tab-button");
     for (var i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
 
-    // Activeer de juiste tab-knop
+    // Activeer de persoon's tab en knop
+    document.getElementById(`${persoonId}-content`).classList.add("active");
     document.getElementById(`btn-${persoonId}`).classList.add("active");
-
+    
     const itemElement = document.getElementById(itemId);
     if (itemElement) {
         itemElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -239,13 +235,23 @@ function initializeWishlist(data, claimedItemsSet) {
     const tabNav = document.getElementById('dynamic-tab-nav');
     
     // Hoofdtitel aanpassen
-    document.getElementById('main-title').textContent = data.wenslijst_titel || 'De Grote Wenslijst';
+    document.getElementById('main-title').textContent = `🎄🎁 ${data.wenslijst_titel || 'De Grote Wenslijst'} 🎁🎄`;
 
+    // Activeer de eerste knop: Overzicht (wordt later vooraan geplaatst)
+    const overviewButton = document.createElement('button');
+    overviewButton.className = 'tab-button active';
+    overviewButton.id = 'btn-overview';
+    overviewButton.textContent = 'Overzicht';
+    overviewButton.onclick = (e) => openTab(e, 'overview-content');
+    
+    // Voeg de Overzichtsknop toe aan het begin van de navigatie
+    tabNav.appendChild(overviewButton); 
+    
     // Wensenlijsten genereren
     data.personen.forEach(persoon => {
         const persoonId = persoon.naam.toLowerCase().replace(/[^a-z0-9]/g, '');
         
-        // 1. Maak de Tab-knop (Verticaal Menu)
+        // 1. Maak de Tab-knop
         const tabButton = document.createElement('button');
         tabButton.className = 'tab-button';
         tabButton.id = `btn-${persoonId}`;
@@ -286,15 +292,7 @@ function initializeWishlist(data, claimedItemsSet) {
         
         generateInventoryContent(personListsContainer, data.inventaris_links);
     }
-    
-    // Activeer de eerste knop: Overzicht
-    const overviewButton = document.createElement('button');
-    overviewButton.className = 'tab-button active';
-    overviewButton.id = 'btn-overview';
-    overviewButton.textContent = 'Overzicht';
-    overviewButton.onclick = (e) => openTab(e, 'overview-content');
-    tabNav.prepend(overviewButton); // Zet de overzichtsknop vooraan
-    
+
     document.getElementById('loading-message').style.display = 'none'; // Verberg de laadmelding
 }
 
@@ -321,7 +319,7 @@ function generateOverviewCard(item, persoonId, persoonNaam, claimedItemsSet) {
     
     const caption = document.createElement('p');
     caption.innerHTML = `**${item.naam}**<br>(${persoonNaam})`;
-    caption.style.fontWeight = 'bold'; // Zorgt voor duidelijke scheiding
+    caption.style.fontWeight = 'bold'; 
     
     // Voeg 'GEKOCHT' label toe aan het overzicht
     if (isClaimed) {

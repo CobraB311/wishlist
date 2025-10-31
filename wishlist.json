@@ -133,6 +133,19 @@
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/playmobil-cars-71859-playmobil-x-porsche-carrera-gt-32085260", "prijs": "€ 19,99" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playmobil-x-porsche-carrera-gt/9300000225695650/", "prijs": "€ 22,99" }
           ]
+        },
+        {
+          "id": "smoby-tefal-keuken-9300000162221385",
+          "naam": "Smoby - Tefal Evolutieve Keuken - Speelgoedkeuken",
+          "nummer": "9300000162221385",
+          "beschrijving": "Een moderne, evolutieve speelkeuken van Smoby Tefal die meegroeit met uw kind. Met elektronische geluidsmodule, hittegevoelige pasta, snijdbare wortel en pannenkoekenflipfunctie.",
+          "afbeelding_url": "https://media.s-bol.com/9wL7rx32xLZx/yPBVNDg/550x515.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/smoby-tefal-evolutieve-keuken-speelgoedkeuken/9300000162221385/?referrer=socialshare_pdp_www", "prijs": "€ 99,99" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/smoby-tefal-evolutieve-keuken/01809992", "prijs": "€ 99,99" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/4VV1YQ3", "prijs": "€ 99,99" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/h9V24TG", "prijs": "€ 89,95" }
+          ]
         }
       ]
     }

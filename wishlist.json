@@ -135,6 +135,17 @@
       "naam": "Milan",
       "items": [
         {
+          "id": "deao-magnetron-b0bv2lfll7",
+          "naam": "deAO Magnetron Oven Speelgoed Koken Speelset",
+          "nummer": "B0BV2LFLL7",
+          "beschrijving": "Microgolf oven speelgoed kookspeelset met realistisch licht, geluid en neppe etenswaren. Met automatische rotatie, elektronische timing en LED-verlichting. De 'voedingsmiddelen' veranderen van kleur.",
+          "afbeelding_url": "https://m.media-amazon.com/images/I/71hW9vS41eL._AC_SL1500_.jpg",
+          "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/5O5IAOf", "prijs": "€ 29,99" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/aiICtXn", "prijs": "€ 32,99" }
+          ]
+        },
+        {
           "id": "set-milan-71859",
           "naam": "PLAYMOBIL X Porsche Carrera GT",
           "nummer": "71859",

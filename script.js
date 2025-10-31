@@ -1,18 +1,77 @@
 // E-MAILADRES VAN DE BEHEERDER/ONTVANGER (OPGESLAGEN INFORMATIE)
 const recipientEmail = 'bernaertruben@hotmail.com'; 
 
-// FUNCTIE: Genereer de inventaris-content
+// --- FUNCTIES VOOR TAB-NAVIGATIE EN SCROLLEN ---
+
+// Functie om naar de detailtab te wisselen en naar het item te scrollen
+function switchToDetail(persoonId, itemId) {
+    // Deactiveer alle tabs
+    document.getElementById('overview-content').classList.remove("active");
+    const allPersonTabs = document.getElementById('person-lists-container').children;
+    for (const tab of allPersonTabs) {
+        tab.classList.remove("active");
+    }
+    const inventoryContent = document.getElementById('inventory-content');
+    if(inventoryContent) inventoryContent.classList.remove("active");
+
+    // Activeer de persoon's tab
+    document.getElementById(`${persoonId}-content`).classList.add("active");
+    
+    // Deactiveer alle tab-knoppen
+    var tablinks = document.getElementsByClassName("tab-button");
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // Activeer de juiste tab-knop
+    document.getElementById(`btn-${persoonId}`).classList.add("active");
+
+    const itemElement = document.getElementById(itemId);
+    if (itemElement) {
+        // Scroll het item in beeld
+        itemElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// Functie om een tab te openen (de tab-knop functionaliteit)
+function openTab(evt, tabName) {
+    // Deactiveer alle inhoud
+    document.getElementById('overview-content').classList.remove("active");
+    const allPersonTabs = document.getElementById('person-lists-container').children;
+    for (const tab of allPersonTabs) {
+        tab.classList.remove("active");
+    }
+    const inventoryContent = document.getElementById('inventory-content');
+    if(inventoryContent) inventoryContent.classList.remove("active");
+    
+    // Activeer de gevraagde inhoud
+    document.getElementById(tabName).classList.add("active");
+
+    // Deactiveer alle knoppen
+    var tablinks = document.getElementsByClassName("tab-button");
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // Activeer de geklikte knop
+    evt.currentTarget.classList.add("active");
+    
+    // Scroll naar de bovenkant van de pagina (of de content wrapper) bij het wisselen van tab
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+}
+
+// NIEUWE FUNCTIE: Genereer de inventaris-content
 function generateInventoryContent(listsContainer, inventarisLinks) {
+    // Maak de content div
     const inventoryWrapper = document.createElement('div');
     inventoryWrapper.id = 'inventory-content';
     inventoryWrapper.className = 'tab-content';
     
-    // Titel
+    // Inhoud
     const title = document.createElement('h2');
     title.textContent = '🏠 Onze Speelgoed Inventaris';
     inventoryWrapper.appendChild(title);
     
-    // Beschrijving
     const description = document.createElement('p');
     description.innerHTML = 'Dit zijn overzichten van het speelgoed dat onze kinderen al hebben. Hierdoor kan dubbel werk vermeden worden bij het zoeken naar nieuwe cadeaus.';
     inventoryWrapper.appendChild(description);
@@ -27,346 +86,296 @@ function generateInventoryContent(listsContainer, inventarisLinks) {
         linksList.style.listStyleType = 'none';
         linksList.style.paddingLeft = '0';
         
+        // LOOP DOOR LINKS UIT DE JSON
         inventarisLinks.forEach(linkData => {
+            // Dit is de plek om op kapotte links te controleren, hoewel dit technisch 
+            // gezien client-side lastig is zonder serverside hulp (zoals fetch/HEAD-requests).
+            // We controleren nu alleen de aanwezigheid van de URL.
             const listItem = document.createElement('li');
             const link = document.createElement('a');
-            link.href = linkData.url;
-            link.textContent = linkData.naam;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.style.fontSize = '1.1em';
-            link.style.fontWeight = 'bold';
-            link.style.display = 'block';
-            link.style.padding = '5px 0';
+            
+            // Controleer of de URL leeg is (eenvoudige "kapotte" link check)
+            if (!linkData.url || linkData.url.trim() === "") {
+                link.textContent = `❌ ${linkData.naam} (Link ontbreekt of is gebroken)`;
+                link.style.color = 'red';
+            } else {
+                link.href = linkData.url;
+                link.target = '_blank';
+                link.textContent = `➡️ ${linkData.naam}`;
+            }
 
-            const icon = document.createElement('span');
-            icon.textContent = '🔗 ';
-            listItem.appendChild(icon);
+            link.style.fontSize = '1.1em';
+            link.style.color = linkData.url && linkData.url.trim() !== "" ? '#3C84CE' : 'red';
+            link.style.fontWeight = 'bold';
             listItem.appendChild(link);
             linksList.appendChild(listItem);
         });
+        
         inventoryWrapper.appendChild(linksList);
+    } else {
+        const noLinks = document.createElement('p');
+        noLinks.textContent = 'Geen inventaris links gevonden in de JSON.';
+        inventoryWrapper.appendChild(noLinks);
     }
     
+    // Voeg de inhoud toe aan de container
     listsContainer.appendChild(inventoryWrapper);
 }
 
-// Functie om een wens-item kaart te genereren
-function generateItemCard(item, persoonNaam, claimedItemsSet) {
-    // Hoofdcontainer
-    const itemWrapper = document.createElement('div');
-    itemWrapper.id = item.id;
-    itemWrapper.className = 'wens-item';
-    
-    // *** LOGICA VOOR GEKOCHT/GECLAIMD: Check de Set ***
-    const isClaimed = claimedItemsSet.has(item.id);
-    if (isClaimed) {
-        itemWrapper.classList.add('claimed-item');
-    }
-    // *** EINDE LOGICA ***
 
-    // Linker kolom: Afbeelding
-    const leftColumn = document.createElement('div');
-    leftColumn.className = 'left-column';
+// Functie om de volledige HTML-inhoud te genereren met de ingeladen data
+function generateWishlistContent(data) {
+    document.getElementById('main-title').textContent = `🎄🎁 ${data.wenslijst_titel} 🎁🎄`;
 
-    const imageContainer = document.createElement('div');
-    imageContainer.className = 'item-image-container';
-
-    const image = document.createElement('img');
-    image.src = item.afbeelding_url;
-    image.alt = item.naam;
-    image.loading = 'lazy'; 
-    imageContainer.appendChild(image);
-    leftColumn.appendChild(imageContainer);
-    
-    // Prijs onder de afbeelding 
-    if (item.winkels && item.winkels.length > 0) {
-        // Zoek de laagste prijs
-        const lowestPrice = item.winkels.reduce((min, w) => {
-            const prijsNum = parseFloat(w.prijs.replace(/[^0-9,.]/g, '').replace(',', '.'));
-            return (min === null || prijsNum < min) ? prijsNum : min;
-        }, null);
-        
-        if (lowestPrice !== null) {
-            const priceUnderImage = document.createElement('p');
-            priceUnderImage.className = 'item-price-under-image';
-            priceUnderImage.textContent = `Vanaf ${new Intl.NumberFormat('nl-BE', { style: 'currency', currency: 'EUR' }).format(lowestPrice)}`;
-            leftColumn.appendChild(priceUnderImage);
-        }
-    }
-    
-    itemWrapper.appendChild(leftColumn);
-
-
-    // Rechter kolom: Details en Acties
-    const rightColumn = document.createElement('div');
-    rightColumn.className = 'right-column';
-
-    const itemDetails = document.createElement('div');
-    itemDetails.className = 'item-details';
-
-    // Titel
-    const title = document.createElement('h3');
-    title.textContent = item.naam;
-    itemDetails.appendChild(title);
-
-    // Beschrijving
-    const description = document.createElement('p');
-    description.textContent = item.beschrijving;
-    itemDetails.appendChild(description);
-
-    rightColumn.appendChild(itemDetails);
-
-
-    // Actiegebied (Knoppen en Links)
-    const itemActionArea = document.createElement('div');
-    itemActionArea.className = 'item-action-area';
-
-
-    // Winkel Links
-    const winkelLinksContainer = document.createElement('div');
-    winkelLinksContainer.className = 'winkel-links';
-    
-    if (item.winkels && item.winkels.length > 0) {
-        const linksTitle = document.createElement('h4');
-        linksTitle.textContent = 'Verkrijgbaar bij:';
-        winkelLinksContainer.appendChild(linksTitle);
-
-        const linksList = document.createElement('ul');
-        item.winkels.forEach(winkel => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = winkel.link;
-            link.textContent = `${winkel.naam} (${winkel.prijs})`;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            listItem.appendChild(link);
-            linksList.appendChild(listItem);
-        });
-        winkelLinksContainer.appendChild(linksList);
-    } else {
-        const info = document.createElement('p');
-        info.textContent = 'Geen winkellinks beschikbaar. Gelieve zelf te zoeken.';
-        winkelLinksContainer.appendChild(info);
-    }
-    
-    
-    // Claim Knop
-    const claimButton = document.createElement('a');
-    
-    // *** LOGICA VOOR GEKOCHT/GECLAIMD ***
-    if (isClaimed) {
-        claimButton.textContent = '✅ Gekocht!';
-        claimButton.className = 'claim-button bought-button';
-        claimButton.href = 'javascript:void(0);'; // Maak de knop inactief
-    } else {
-        claimButton.textContent = '🎁 Claim dit cadeau!';
-        claimButton.className = 'claim-button';
-        // Mailto body met instructie om claimed_items.json bij te werken
-        claimButton.href = `mailto:${recipientEmail}?subject=Cadeau Claim: ${persoonNaam} - ${item.naam}&body=Hallo Ruben,%0D%0AIk wil graag claimen dat ik het volgende cadeau voor ${persoonNaam} koop:%0D%0AItem: ${item.naam}%0D%0AID: ${item.id}%0D%0A%0D%0AZou je dit item als 'gekocht' willen markeren in de aparte claimed_items.json lijst (door ID ${item.id} toe te voegen)?`;
-        claimButton.setAttribute('target', '_blank');
-    }
-    // *** EINDE LOGICA ***
-    
-
-    itemActionArea.appendChild(winkelLinksContainer);
-    itemActionArea.appendChild(claimButton);
-
-    rightColumn.appendChild(itemActionArea);
-    itemWrapper.appendChild(rightColumn);
-
-    return itemWrapper;
-}
-
-
-// Functie om de tab-content te tonen/verbergen
-function openTab(evt, tabName) {
-    // Verberg alle tab-content
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
-    }
-
-    // Deactiveer alle tab-knoppen
-    tablinks = document.getElementsByClassName("tab-button");
-    for (var i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-    }
-
-    // Toon de huidige tab
-    document.getElementById(tabName).classList.add("active");
-    
-    // Activeer de knop
-    evt.currentTarget.classList.add("active");
-    
-    window.scrollTo({ top: 0, behavior: 'smooth' }); 
-}
-
-// Functie om naar de detailtab te wisselen en naar het item te scrollen
-function switchToDetail(persoonId, itemId) {
-    // Verberg alle tab-content
-    var i, tabcontent;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
-    }
-
-    // Deactiveer alle tab-knoppen
-    var tablinks = document.getElementsByClassName("tab-button");
-    for (var i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-    }
-
-    // Activeer de persoon's tab en knop
-    document.getElementById(`${persoonId}-content`).classList.add("active");
-    document.getElementById(`btn-${persoonId}`).classList.add("active");
-    
-    const itemElement = document.getElementById(itemId);
-    if (itemElement) {
-        itemElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
-
-// Initialisatie: Start...
-function initializeWishlist(data, claimedItemsSet) {
-    const personListsContainer = document.getElementById('person-lists-container');
-    const overviewGridContainer = document.getElementById('overview-grid-container');
     const tabNav = document.getElementById('dynamic-tab-nav');
-    
-    // Hoofdtitel aanpassen
-    document.getElementById('main-title').textContent = `🎄🎁 ${data.wenslijst_titel || 'De Grote Wenslijst'} 🎁🎄`;
+    const overviewContainer = document.getElementById('overview-grid-container');
+    const listsContainer = document.getElementById('person-lists-container');
+    const loadingMessage = document.getElementById('loading-message');
 
-    // Activeer de eerste knop: Overzicht (wordt later vooraan geplaatst)
+    if (loadingMessage) {
+        loadingMessage.remove();
+    }
+
+    // Wis alle oude inhoud
+    overviewContainer.innerHTML = '';
+    listsContainer.innerHTML = '';
+    tabNav.innerHTML = ''; 
+
+    // --- 1. OVERZICHT KNOP (Bovenaan) ---
     const overviewButton = document.createElement('button');
-    overviewButton.className = 'tab-button active';
     overviewButton.id = 'btn-overview';
-    overviewButton.textContent = 'Overzicht';
+    overviewButton.className = 'tab-button active';
+    overviewButton.textContent = '⭐ Wensen Overzicht Foto\'s';
     overviewButton.onclick = (e) => openTab(e, 'overview-content');
+    tabNav.appendChild(overviewButton);
     
-    // Voeg de Overzichtsknop toe aan het begin van de navigatie
-    tabNav.appendChild(overviewButton); 
-    
-    // Wensenlijsten genereren
-    data.personen.forEach(persoon => {
-        const persoonId = persoon.naam.toLowerCase().replace(/[^a-z0-9]/g, '');
+    // --- 2. INDIVIDUELE PERSOONS KNOPPEN EN LIJSTEN ---
+    for (let i = 0; i < data.personen.length; i++) {
+        const persoon = data.personen[i];
         
-        // 1. Maak de Tab-knop
-        const tabButton = document.createElement('button');
-        tabButton.className = 'tab-button';
-        tabButton.id = `btn-${persoonId}`;
-        tabButton.textContent = persoon.naam;
-        tabButton.onclick = (e) => openTab(e, `${persoonId}-content`);
-        tabNav.appendChild(tabButton);
+        // Dynamische telling
+        const aantalArtikelen = persoon.items.length;
+        const persoonNaamMetTelling = `${persoon.naam} (${aantalArtikelen} artikelen)`;
+        
+        const persoonNaam = persoon.naam;
+        const persoonId = persoonNaam.toLowerCase();
+        
+        // MAAK TAB KNOP
+        const personButton = document.createElement('button');
+        personButton.id = `btn-${persoonId}`;
+        personButton.className = 'tab-button';
+        personButton.textContent = `${persoonNaamMetTelling}`; 
+        personButton.onclick = (e) => openTab(e, `${persoonId}-content`);
+        tabNav.appendChild(personButton);
 
-        // 2. Maak de Tab-Content voor de persoon
-        const contentWrapper = document.createElement('div');
-        contentWrapper.id = `${persoonId}-content`;
-        contentWrapper.className = 'tab-content';
+        // MAAK DE INDIVIDUELE LIJST CONTAINER
+        const personContentWrapper = document.createElement('div');
+        personContentWrapper.id = `${persoonId}-content`;
+        personContentWrapper.className = 'tab-content';
+        listsContainer.appendChild(personContentWrapper);
+
+        const listSection = document.createElement('div');
+        listSection.className = 'person-section';
         
         const listTitle = document.createElement('h2');
-        listTitle.textContent = `Wensenlijst van ${persoon.naam}`;
-        contentWrapper.appendChild(listTitle);
-
-        persoon.items.forEach(item => {
-            // Voeg de item-kaart toe aan de persoonlijke lijst
-            const itemCard = generateItemCard(item, persoon.naam, claimedItemsSet);
-            contentWrapper.appendChild(itemCard);
-
-            // Voeg de item-kaart toe aan het Overzicht
-            const overviewItem = generateOverviewCard(item, persoonId, persoon.naam, claimedItemsSet);
-            overviewGridContainer.appendChild(overviewItem);
-        });
-
-        personListsContainer.appendChild(contentWrapper);
-    });
-    
-    // 3. Maak de Inventaris-knop en -content
-    if (data.inventaris_links && data.inventaris_links.length > 0) {
-        const inventoryButton = document.createElement('button');
-        inventoryButton.className = 'tab-button';
-        inventoryButton.id = 'btn-inventory';
-        inventoryButton.textContent = 'Inventaris';
-        inventoryButton.onclick = (e) => openTab(e, 'inventory-content');
-        tabNav.appendChild(inventoryButton);
+        listTitle.textContent = `Wensenlijst van ${persoonNaamMetTelling}`;
+        listSection.appendChild(listTitle);
         
-        generateInventoryContent(personListsContainer, data.inventaris_links);
-    }
+        personContentWrapper.appendChild(listSection);
+        
+        // MAAK OVERZICHT TITEL VOOR DE PERSOON
+        const overviewPersonHeader = document.createElement('div');
+        overviewPersonHeader.className = 'overview-person-header';
+        overviewPersonHeader.textContent = `Wensen van ${persoonNaamMetTelling}`;
+        overviewContainer.appendChild(overviewPersonHeader);
+        
+        // VOEG ITEMS TOE AAN OVERZICHT EN INDIVIDUELE LIJST
+        for (const item of persoon.items) {
+            // --- OVERZICHT ITEM ---
+            const overviewItem = document.createElement('a');
+            overviewItem.className = 'overview-item';
+            overviewItem.href = `#${item.id}`;
+            overviewItem.onclick = (e) => {
+                e.preventDefault(); 
+                switchToDetail(persoonId, item.id);
+            };
+            const overviewImage = document.createElement('img');
+            overviewImage.src = item.afbeelding_url;
+            overviewImage.alt = item.naam;
+            const overviewText = document.createElement('p');
+            // Naam inkorten voor de overzichtstegel
+            const naamKort = item.naam.replace('LEGO®', '').replace('PLAYMOBIL', '').trim().split(' ').slice(-2).join(' ');
+            overviewText.textContent = `${item.nummer} - ${naamKort}`;
+            overviewItem.appendChild(overviewImage);
+            overviewItem.appendChild(overviewText);
+            overviewContainer.appendChild(overviewItem);
 
-    document.getElementById('loading-message').style.display = 'none'; // Verberg de laadmelding
-}
+            // --- HOOFDLIJST ITEM ---
+            const wensItem = document.createElement('div');
+            wensItem.className = 'wens-item';
+            wensItem.id = item.id;
+            
+            // Linkerkolom: Afbeelding en prijs onder afbeelding (mobiel)
+            const leftColumn = document.createElement('div');
+            leftColumn.className = 'left-column';
+            const itemImageContainer = document.createElement('div');
+            itemImageContainer.className = 'item-image-container';
+            const itemImage = document.createElement('img');
+            itemImage.src = item.afbeelding_url;
+            itemImage.alt = item.naam;
+            itemImageContainer.appendChild(itemImage);
+            leftColumn.appendChild(itemImageContainer);
 
+            // Prijs onder afbeelding (zichtbaar op mobiel)
+            const mobilePrice = document.createElement('div');
+            mobilePrice.className = 'item-price-under-image';
+            // We pakken hier de eerste prijs om te tonen
+            if (item.winkels && item.winkels.length > 0) {
+                 // Verwijder "(prijsindicatie)" uit de prijs
+                const cleanPrice = item.winkels[0].prijs.replace('(prijsindicatie)', '').trim();
+                mobilePrice.textContent = `Prijs vanaf: ${cleanPrice}`;
+            }
+            leftColumn.appendChild(mobilePrice);
+            wensItem.appendChild(leftColumn);
+            
+            // Rechterkolom: Tekst en acties
+            const rightColumn = document.createElement('div');
+            rightColumn.className = 'right-column';
 
-// Functie om de kaartjes voor het overzicht te maken
-function generateOverviewCard(item, persoonId, persoonNaam, claimedItemsSet) {
-    const overviewItem = document.createElement('div');
-    overviewItem.className = 'overview-item';
-    
-    // *** LOGICA VOOR GEKOCHT/GECLAIMD: Check de Set ***
-    const isClaimed = claimedItemsSet.has(item.id);
-    if (isClaimed) {
-        overviewItem.classList.add('claimed-item-overview');
-    }
-    // *** EINDE LOGICA ***
-    
-    overviewItem.onclick = () => switchToDetail(persoonId, item.id);
+            const itemName = document.createElement('h3');
+            itemName.textContent = item.naam;
+            rightColumn.appendChild(itemName);
 
-    const image = document.createElement('img');
-    image.src = item.afbeelding_url;
-    image.alt = item.naam;
-    image.loading = 'lazy';
-    overviewItem.appendChild(image);
-    
-    const caption = document.createElement('p');
-    caption.innerHTML = `**${item.naam}**<br>(${persoonNaam})`;
-    caption.style.fontWeight = 'bold'; 
-    
-    // Voeg 'GEKOCHT' label toe aan het overzicht
-    if (isClaimed) {
-        const boughtLabel = document.createElement('span');
-        boughtLabel.textContent = '✅ GEKOCHT!';
-        boughtLabel.className = 'bought-label-overview';
-        overviewItem.appendChild(boughtLabel);
-    }
-    
-    overviewItem.appendChild(caption);
-    return overviewItem;
-}
+            const itemNumber = document.createElement('p');
+            itemNumber.className = 'item-nummer';
+            itemNumber.textContent = `Artikelnummer: ${item.nummer}`;
+            rightColumn.appendChild(itemNumber);
+            
+            const itemDescription = document.createElement('p');
+            itemDescription.textContent = item.beschrijving;
+            rightColumn.appendChild(itemDescription);
 
-// Data laden en initialiseren
-Promise.all([
-    // 1. Fetch de wensenlijst
-    fetch('wishlist.json').then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status} for wishlist.json`);
+            // Actiegebied (Winkels & Claim knop)
+            const itemActionArea = document.createElement('div');
+            itemActionArea.className = 'item-action-area';
+
+            // Winkel Links
+            const winkelLinksDiv = document.createElement('div');
+            winkelLinksDiv.className = 'winkel-links';
+            
+            const winkelTitle = document.createElement('h4');
+            winkelTitle.textContent = 'Beschikbaar bij:';
+            winkelLinksDiv.appendChild(winkelTitle);
+
+            if (item.winkels && item.winkels.length > 0) {
+                // Sorteer de winkels op prijs (laagste eerst)
+                item.winkels.sort((a, b) => {
+                    const priceA = parseFloat(a.prijs.replace('€', '').replace(',', '.').replace('(prijsindicatie)', '').trim());
+                    const priceB = parseFloat(b.prijs.replace('€', '').replace(',', '.').replace('(prijsindicatie)', '').trim());
+                    return priceA - priceB;
+                });
+
+                item.winkels.forEach(winkel => {
+                    // CONTROLE OP KAPOTTE LINK (leeg of niet aanwezig)
+                    if (winkel.link && winkel.link.trim() !== "") {
+                        const winkelParagraaf = document.createElement('p');
+                        const winkelLink = document.createElement('a');
+                        winkelLink.href = winkel.link;
+                        winkelLink.target = '_blank';
+                        
+                        // Verwijder "(prijsindicatie)" uit de individuele prijs
+                        const cleanPrice = winkel.prijs.replace('(prijsindicatie)', '').trim();
+                        winkelLink.textContent = `${winkel.naam} (${cleanPrice})`;
+                        
+                        winkelParagraaf.appendChild(winkelLink);
+                        winkelLinksDiv.appendChild(winkelParagraaf);
+                    } else {
+                        // Toon melding voor de kapotte link
+                        const winkelParagraaf = document.createElement('p');
+                        const winkelSpan = document.createElement('span');
+                        winkelSpan.textContent = `❌ ${winkel.naam} (${winkel.prijs}) - Link ontbreekt of is gebroken`;
+                        winkelSpan.style.color = 'red';
+                        winkelParagraaf.appendChild(winkelSpan);
+                        winkelLinksDiv.appendChild(winkelParagraaf);
+                    }
+                });
+            } else {
+                const noLinks = document.createElement('p');
+                noLinks.textContent = 'Geen winkel(s) gevonden.';
+                winkelLinksDiv.appendChild(noLinks);
+            }
+            itemActionArea.appendChild(winkelLinksDiv);
+
+            // CLAIM/E-MAILKNOP
+            const claimButton = document.createElement('a');
+            claimButton.className = 'claim-button';
+            // Gebruik het OPGESLAGEN e-mailadres
+            const mailSubject = encodeURIComponent(`[GEKOCHT] ${item.naam} - ${item.nummer} voor ${persoonNaam}`);
+            const mailBody = encodeURIComponent(`Hallo,
+
+Ik heb zojuist het volgende item van de wensenlijst gekocht/geclaimd:
+Item: ${item.naam}
+Nummer: ${item.nummer}
+Voor: ${persoonNaam}
+Link: ${window.location.href}#${item.id}
+
+Opmerking: [OPTIONEEL: Voeg hier een bericht toe]
+
+Graag deze wens markeren als GEKOCHT.
+
+Vriendelijke groet,
+[Jouw Naam]`);
+            claimButton.href = `mailto:${recipientEmail}?subject=${mailSubject}&body=${mailBody}`;
+            claimButton.textContent = '🎁 CLAIM DIT CADEAU (Stuur E-mail)';
+            itemActionArea.appendChild(claimButton);
+
+            rightColumn.appendChild(itemActionArea);
+            wensItem.appendChild(rightColumn);
+            listSection.appendChild(wensItem);
         }
-        return response.json();
-    }),
-    // 2. Fetch de claimed items (kan 404 zijn als het bestand nog niet bestaat)
-    fetch('claimed_items.json')
+    }
+    
+    // --- 3. INVENTARIS KNOP EN CONTENT ---
+    
+    // INVENTARIS KNOP (Onderaan)
+    const inventoryButton = document.createElement('button');
+    inventoryButton.id = 'btn-inventory';
+    inventoryButton.className = 'tab-button';
+    inventoryButton.textContent = '🏠 Onze Inventaris (Links)'; 
+    inventoryButton.onclick = (e) => openTab(e, 'inventory-content');
+    tabNav.appendChild(inventoryButton);
+    
+    // INVENTARIS CONTENT AANMAKEN (Dit is de tab inhoud)
+    generateInventoryContent(listsContainer, data.inventaris_links);
+
+    // Update van de laatste update datum
+    document.getElementById('last-update-text').textContent = `Laatste update: ${data.datum}`;
+}
+
+
+// --- INITIALISATIE ---
+
+// Functie om de JSON te laden en de pagina op te bouwen
+function loadWishlist() {
+    fetch('wishlist.json')
         .then(response => {
-            if (response.ok) {
-                return response.json();
+            if (!response.ok) {
+                // Als de JSON-file niet gevonden wordt, toon dan een foutbericht
+                throw new Error('Kon wishlist.json niet laden: ' + response.statusText);
             }
-            // Als claimed_items.json niet bestaat (404), stuur dan een lege lijst
-            if (response.status === 404) {
-                console.warn('claimed_items.json niet gevonden, start met lege claimlijst.');
-                return { claimed_items: [] };
-            }
-            throw new Error(`HTTP error! status: ${response.status} for claimed_items.json`);
+            return response.json();
+        })
+        .then(data => {
+            generateWishlistContent(data);
         })
         .catch(error => {
-             // Als de fetch faalt (netwerk, CORS), start met lege lijst
-            console.error("Fout bij het laden van claimed_items.json, start met lege claimlijst:", error);
-            return { claimed_items: [] };
-        })
-])
-.then(([wishlistData, claimedData]) => {
-    // Maak een Set voor snelle lookups van claimed ID's
-    const claimedItemsSet = new Set(claimedData.claimed_items || []);
-    initializeWishlist(wishlistData, claimedItemsSet);
-})
-.catch(error => {
-    console.error("Fout bij het laden van de wensenlijsten:", error);
-    document.getElementById('loading-message').textContent = 'Fout bij het laden van de wensenlijst. Controleer de console voor details.';
-});
+            console.error("Fout bij laden van wensenlijst:", error);
+            const container = document.getElementById('overview-grid-container');
+            if (container) {
+                container.innerHTML = '<p style="color: red; font-weight: bold;">Fout: Kon de wensenlijst niet laden. Controleer of het bestand "wishlist.json" correct is en op de juiste locatie staat.</p>';
+            }
+        });
+}
+
+// Start het laadproces wanneer de pagina geladen is
+window.onload = loadWishlist;

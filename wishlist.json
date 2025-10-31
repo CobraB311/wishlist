@@ -82,9 +82,27 @@
           "naam": "Mattel Games - UNO Flip! Kaartspel",
           "nummer": "0887961751062",
           "beschrijving": "Het klassieke kaartspel dat je kent, maar nu met een spannende twist! Een dubbelzijdig deck en een speciale 'FLIP'-kaart geven het klassieke spel een competitief voordeel.",
-          "afbeelding_url": "https://cdn.juguetilandia.com/images/articulos/1911147693m00.jpg",
+          "afbeelding_url": "https://media.s-bol.com/xO8v1O86P9yP/550x550.jpg",
           "winkels": [
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/uno-flip-mattel-games-kaartspel/9200000104061452/", "prijs": "€ 9,88" }
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/uno-flip-mattel-games-kaartspel/9200000104061452/", "prijs": "€ 9,88" },
+            { "naam": "Amazon.nl", "link": "https://www.amazon.nl/Mattel-Games-Kaartspel-GDR44-Nederlandstalig/dp/B07JKB2H59/", "prijs": "€ 9,88" },
+            { "naam": "Amazon.com.be", "link": "https://www.amazon.com.be/Mattel-Games-GDR44-kaartspel-meerkleurig/dp/B07JKB2H59/", "prijs": "€ 9,88" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/uno-flip/01562699", "prijs": "€ 11,99" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/gezelschapsspel-uno-flip-gdr44-30752156", "prijs": "€ 11,95" }
+          ]
+        },
+        {
+          "id": "pp-spraypen-9300000152577305",
+          "naam": "Paw Patrol Spray Pen Set Deluxe",
+          "nummer": "8005125152763",
+          "beschrijving": "Knutselset voor kinderen. 10 Spray Pennen, 4 stiften, 6 sjablonen en 10 vellen papier.",
+          "afbeelding_url": "https://media.s-bol.com/x2vY839w5v1j/1200x1174.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-spray-pen-set-deluxe/9300000152577305/", "prijs": "€ 14,99" },
+            { "naam": "Amazon.nl", "link": "https://www.amazon.nl/Paw-Patrol-Spray-Pen-Deluxe/dp/B0B97W6G4X", "prijs": "€ 14,99" },
+            { "naam": "Amazon.com.be", "link": "https://www.amazon.com.be/Clementoni-15276-Paw-Patrol-Airbrush/dp/B08PP68426/", "prijs": "€ 15,95" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/tekenset-spraypen-paw-patrol-deluxe/01799298", "prijs": "€ 14,99" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/paw-patrol-spray-pen-deluxe-set-10st-31780826", "prijs": "€ 14,95" }
           ]
         }
       ]

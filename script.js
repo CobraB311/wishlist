@@ -84,14 +84,21 @@ function generateWishlistContent(data) {
     
     for (let i = 0; i < data.personen.length; i++) {
         const persoon = data.personen[i];
-        const persoonNaam = persoon.naam;
+        
+        // TEL HET AANTAL ARTIKELEN DYNAMISCH HIER
+        const aantalArtikelen = persoon.items.length;
+        // Bepaal de dynamische naam inclusief het aantal
+        const persoonNaamMetTelling = `${persoon.naam} (${aantalArtikelen} artikelen)`;
+        
+        const persoonNaam = persoon.naam; // Gebruik de originele naam voor ID's en functies
         const persoonId = persoonNaam.toLowerCase();
         
         // 1. MAAK TAB KNOP (Verticaal links)
         const personButton = document.createElement('button');
         personButton.id = `btn-${persoonId}`;
         personButton.className = 'tab-button';
-        personButton.textContent = `Alle Wensen ${persoonNaam}`;
+        // Gebruik de naam met telling voor de knoptekst
+        personButton.textContent = `${persoonNaamMetTelling}`; 
         personButton.onclick = (e) => openTab(e, `${persoonId}-content`);
         tabNav.appendChild(personButton);
 
@@ -105,7 +112,8 @@ function generateWishlistContent(data) {
         listSection.className = 'person-section';
         
         const listTitle = document.createElement('h2');
-        listTitle.textContent = `Wensenlijst van ${persoonNaam}`;
+        // Gebruik de naam met telling voor de titel bovenaan de lijst
+        listTitle.textContent = `Wensenlijst van ${persoonNaamMetTelling}`;
         listSection.appendChild(listTitle);
         
         personContentWrapper.appendChild(listSection);
@@ -113,7 +121,8 @@ function generateWishlistContent(data) {
         // 3. MAAK OVERZICHT TITEL VOOR DE PERSOON
         const overviewPersonHeader = document.createElement('div');
         overviewPersonHeader.className = 'overview-person-header';
-        overviewPersonHeader.textContent = `Wensen van ${persoonNaam}`;
+        // Gebruik de naam met telling voor het overzicht
+        overviewPersonHeader.textContent = `Wensen van ${persoonNaamMetTelling}`;
         overviewContainer.appendChild(overviewPersonHeader);
         
         // 4. VOEG ITEMS TOE AAN OVERZICHT EN INDIVIDUELE LIJST
@@ -269,8 +278,10 @@ Vriendelijke groet,
     document.getElementById('btn-inventory').classList.remove("active");
     
     data.personen.forEach(p => {
-        document.getElementById(`${p.naam.toLowerCase()}-content`).classList.remove("active");
-        document.getElementById(`btn-${p.naam.toLowerCase()}`).classList.remove("active");
+        // We moeten nu de oorspronkelijke naam zonder telling gebruiken om de DOM elementen te vinden
+        const persoonId = p.naam.toLowerCase();
+        document.getElementById(`${persoonId}-content`).classList.remove("active");
+        document.getElementById(`btn-${persoonId}`).classList.remove("active");
     });
 }
 

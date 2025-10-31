@@ -116,6 +116,18 @@
             { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/monster-tm-1-64-marvel-spiderman-vs-venom/01792881", "prijs": "€ 12,95" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/monster-jam-1-64-marvel-2-pack-spiderman-vs-venom-31984019", "prijs": "€ 12,99" }
           ]
+        },
+        {
+          "id": "hasbro-marvel-armored-up-avengers-9300000225966594",
+          "naam": "Hasbro Marvel actiefiguren Iron Man & Friends - Armored Up Avengers Pack",
+          "nummer": "G1255",
+          "beschrijving": "Set van 6 actiefiguren (3-inch) geïnspireerd op de Disney Jr. serie 'Iron Man and his Awesome Friends'. Bevat Iron Man, Ironheart, Iron Hulk, Captain America: Sam Wilson, Gamma en Ultron.",
+          "afbeelding_url": "https://media.s-bol.com/yNDQDDJgwLq6/vgJ5VRg/550x460.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1DOZ5fR", "prijs": "" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/i2vcTRC", "prijs": "" }
+          ]
         }
       ]
     },

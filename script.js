@@ -373,7 +373,7 @@ function createOverviewGridItem(persoonNaam, item, isPurchased) {
 }
 
 
-// Functie om de totale content op te bouwen
+// UPDATE FUNCTIE: Functie om de totale content op te bouwen (NU MET TITELS IN OVERVIEW)
 function generateWishlistContent(data, purchasedItemIds) { 
     // Hoofdtitel aanpassen
     document.getElementById('main-title').textContent = `🎄🎁 ${data.wenslijst_titel} 🎁🎄`;
@@ -383,21 +383,35 @@ function generateWishlistContent(data, purchasedItemIds) {
     
     const listsContainer = document.getElementById('person-lists-container');
     const overviewGrid = document.getElementById('overview-grid-container');
-
+    
+    // Leeg de overview grid zodat we hem opnieuw kunnen opbouwen met titels
+    overviewGrid.innerHTML = '';
+    
     // Genereer navigatie tabs. De tab-nav moet nu de claims kennen.
     generateTabNav(data.personen, data.inventaris_links, purchasedItemIds); 
     
     data.personen.forEach(persoon => {
-        // Maak de tab-inhoud voor de persoon aan. Geef purchasedItemIds mee
+        // 1. Maak de tab-inhoud voor de persoon aan. Geef purchasedItemIds mee
         const personContent = createPersonTab(persoon, purchasedItemIds); 
         listsContainer.appendChild(personContent);
 
-        // Voeg items toe aan de Overview Grid
+        // 2. Voeg een titel toe aan de Overview Grid voor de opsplitsing
+        const personTitle = document.createElement('h3');
+        personTitle.textContent = `Wensen van ${persoon.naam}`;
+        personTitle.className = 'overview-person-title'; // Nieuwe CSS klasse voor styling
+        overviewGrid.appendChild(personTitle);
+
+        // 3. Maak een sub-container voor de items van deze persoon (voor grid layout)
+        const personGridSection = document.createElement('div');
+        personGridSection.className = 'person-grid-section';
+        overviewGrid.appendChild(personGridSection);
+        
+        // 4. Voeg items toe aan de Overview Grid
         persoon.items.forEach(item => {
             const isPurchased = purchasedItemIds.has(item.id);
             // Geef de status mee aan de functie die de overview grid items maakt
             const overviewItem = createOverviewGridItem(persoon.naam, item, isPurchased); 
-            overviewGrid.appendChild(overviewItem);
+            personGridSection.appendChild(overviewItem);
         });
     });
 

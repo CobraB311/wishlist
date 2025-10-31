@@ -158,6 +158,17 @@
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/4VV1YQ3", "prijs": "€ 99,99" },
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/h9V24TG", "prijs": "€ 89,95" }
           ]
+        },
+        {
+          "id": "marvel-spidey-rhino-wrecker",
+          "naam": "Marvel Spidey and his Amazing Friends - Rhino Wrecker ('Rhino' auto)",
+          "nummer": "F93485X0",
+          "beschrijving": "Het specifieke 'Rhino' voertuig ('Rhino Wrecker') met figuur uit de serie Spidey and his Amazing Friends. **LET OP: Dit moet specifiek het 'Rhino' voertuig zijn.**",
+          "afbeelding_url": "https://media.s-bol.com/olQ89Y9MR35L/W6LNG5v/1200x604.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rhino-wrecker/9300000166567115/", "prijs": "€ 19,99" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/spidey-en-zijn-geweldige-vriendjes-spidey-vehicle/02222943", "prijs": "€ 19,95" }
+          ]
         }
       ]
     }

@@ -6,6 +6,46 @@
       "naam": "Jonas",
       "items": [
         {
+          "id": "hasbro-marvel-armored-up-avengers-9300000225966594",
+          "naam": "Hasbro Marvel actiefiguren Iron Man & Friends - Armored Up Avengers Pack",
+          "nummer": "G1255",
+          "beschrijving": "Set van 6 actiefiguren (3-inch) geïnspireerd op de Disney Jr. serie 'Iron Man and his Awesome Friends'. Bevat Iron Man, Ironheart, Iron Hulk, Captain America: Sam Wilson, Gamma en Ultron.",
+          "afbeelding_url": "https://media.s-bol.com/yNDQDDJgwLq6/vgJ5VRg/550x460.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1DOZ5fR", "prijs": "€ 26,19" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/i2vcTRC", "prijs": "€ 25,99" }
+          ]
+        },
+        {
+          "id": "set-hotwheels-f1-5pack",
+          "naam": "Hot Wheels Formule 1 Race Cars 5-Pack",
+          "nummer": "JGF58",
+          "beschrijving": "Een exclusieve set van 5 Hot Wheels F1-racewagens op schaal 1:64 van legendarische teams (McLaren, BWT Alpine, Visa Cash App RB, KICK Sauber en MoneyGram Haas). Must-have voor verzamelaars en jonge snelheidsduivels.",
+          "afbeelding_url": "https://www.dreamland.be/media/cache/default_gallery_main_webp/media/image/02257006/02257006_001.1344d7a1.webp",
+          "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/8vUwMZV", "prijs": "€ 10,99" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/1ApoeJ4", "prijs": "€ 12,99" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", "prijs": "€ 9,99" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/hot-wheels-formule-1-5-f1-auto-s-32065562", "prijs": "€ 13,99" }
+          ]
+        },
+        {
+          "id": "set-11039",
+          "naam": "LEGO® Classic Creatieve Etensvriendjes",
+          "nummer": "11039",
+          "beschrijving": "Een creatieve set met 150 stenen om vrolijke etensvriendjes te bouwen, zoals een burger, ijsje, avocado of taco. Ideaal voor fantasierijk en vrij bouwen.",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/7eh6klT", "prijs": "€ 7,95" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4CN89uw", "prijs": "€ 7,95" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-etensvriendjes-11039/9300000187249559/", "prijs": "€ 8,95" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023", "prijs": "€ 9,95" },
+            { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-food-friends-11039", "prijs": "€ 9,99" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370", "prijs": "€ 9,98" }
+          ]
+        },
+        {
           "id": "set-31134",
           "naam": "LEGO® Creator 3-in-1 Space Shuttle",
           "nummer": "31134",
@@ -36,21 +76,6 @@
           ]
         },
         {
-          "id": "set-11039",
-          "naam": "LEGO® Classic Creatieve Etensvriendjes",
-          "nummer": "11039",
-          "beschrijving": "Een creatieve set met 150 stenen om vrolijke etensvriendjes te bouwen, zoals een burger, ijsje, avocado of taco. Ideaal voor fantasierijk en vrij bouwen.",
-          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-          "winkels": [
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/7eh6klT", "prijs": "€ 7,95" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4CN89uw", "prijs": "€ 7,95" },
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-etensvriendjes-11039/9300000187249559/", "prijs": "€ 8,95" },
-            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023", "prijs": "€ 9,95" },
-            { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-food-friends-11039", "prijs": "€ 9,99" },
-            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370", "prijs": "€ 9,98" }
-          ]
-        },
-        {
           "id": "set-71827",
           "naam": "LEGO® Ninjago Zane's Strijdmecha",
           "nummer": "71827",
@@ -62,19 +87,6 @@
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-zane-s-strijdmecha-set-71827/9300000187249668/", "prijs": "€ 8,99" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71827-lego-ninjago-zane-s-strijdmecha/01831504", "prijs": "€ 9,95" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/zane-s-battle-mech-71827", "prijs": "€ 9,99" }
-          ]
-        },
-        {
-          "id": "set-hotwheels-f1-5pack",
-          "naam": "Hot Wheels Formule 1 Race Cars 5-Pack",
-          "nummer": "JGF58",
-          "beschrijving": "Een exclusieve set van 5 Hot Wheels F1-racewagens op schaal 1:64 van legendarische teams (McLaren, BWT Alpine, Visa Cash App RB, KICK Sauber en MoneyGram Haas). Must-have voor verzamelaars en jonge snelheidsduivels.",
-          "afbeelding_url": "https://www.dreamland.be/media/cache/default_gallery_main_webp/media/image/02257006/02257006_001.1344d7a1.webp",
-          "winkels": [
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/8vUwMZV", "prijs": "€ 10,99" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/1ApoeJ4", "prijs": "€ 12,99" },
-            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", "prijs": "€ 9,99" },
-            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/hot-wheels-formule-1-5-f1-auto-s-32065562", "prijs": "€ 13,99" }
           ]
         },
         {
@@ -92,18 +104,6 @@
           ]
         },
         {
-          "id": "pp-spraypen-9300000152577305",
-          "naam": "Paw Patrol Spray Pen Set Deluxe",
-          "nummer": "8005125152763",
-          "beschrijving": "Knutselset voor kinderen. 10 Spray Pennen, 4 stiften, 6 sjablonen en 10 vellen papier.",
-          "afbeelding_url": "https://media.s-bol.com/mz3nxBlB0gQp/kRP2ApX/550x477.jpg",
-          "winkels": [
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-spray-pen-set-deluxe/9300000152577305/", "prijs": "€ 14,99" },
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0UQEZSa", "prijs": "€ 14,99" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/6F2Sdq3", "prijs": "€ 15,95" }
-          ]
-        },
-        {
           "id": "monster-jam-spiderman-vs-venom-9300000178192365",
           "naam": "Monster Jam - Marvel Venom vs. The Amazing Spider-Man",
           "nummer": "778988350130",
@@ -118,15 +118,15 @@
           ]
         },
         {
-          "id": "hasbro-marvel-armored-up-avengers-9300000225966594",
-          "naam": "Hasbro Marvel actiefiguren Iron Man & Friends - Armored Up Avengers Pack",
-          "nummer": "G1255",
-          "beschrijving": "Set van 6 actiefiguren (3-inch) geïnspireerd op de Disney Jr. serie 'Iron Man and his Awesome Friends'. Bevat Iron Man, Ironheart, Iron Hulk, Captain America: Sam Wilson, Gamma en Ultron.",
-          "afbeelding_url": "https://media.s-bol.com/yNDQDDJgwLq6/vgJ5VRg/550x460.jpg",
+          "id": "pp-spraypen-9300000152577305",
+          "naam": "Paw Patrol Spray Pen Set Deluxe",
+          "nummer": "8005125152763",
+          "beschrijving": "Knutselset voor kinderen. 10 Spray Pennen, 4 stiften, 6 sjablonen en 10 vellen papier.",
+          "afbeelding_url": "https://media.s-bol.com/mz3nxBlB0gQp/kRP2ApX/550x477.jpg",
           "winkels": [
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" },
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1DOZ5fR", "prijs": "€ 26,19" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/i2vcTRC", "prijs": "€ 25,99" }
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-spray-pen-set-deluxe/9300000152577305/", "prijs": "€ 14,99" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0UQEZSa", "prijs": "€ 14,99" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/6F2Sdq3", "prijs": "€ 15,95" }
           ]
         }
       ]
@@ -134,6 +134,17 @@
     {
       "naam": "Milan",
       "items": [
+        {
+          "id": "deao-magnetron-b0bv2lfll7",
+          "naam": "deAO Magnetron Oven Speelgoed Koken Speelset",
+          "nummer": "B0BV2LFLL7",
+          "beschrijving": "Microgolf oven speelgoed kookspeelset met realistisch licht, geluid en neppe etenswaren. Met automatische rotatie, elektronische timing en LED-verlichting. De 'voedingsmiddelen' veranderen van kleur.",
+          "afbeelding_url": "https://m.media-amazon.com/images/I/71hW9vS41eL._AC_SL1500_.jpg",
+          "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/5O5IAOf", "prijs": "€ 29,99" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/aiICtXn", "prijs": "€ 32,99" }
+          ]
+        },
         {
           "id": "set-duplo-10443",
           "naam": "LEGO® DUPLO® Stad Voor het Eerst op het Vliegveld",
@@ -150,14 +161,14 @@
           ]
         },
         {
-          "id": "deao-magnetron-b0bv2lfll7",
-          "naam": "deAO Magnetron Oven Speelgoed Koken Speelset",
-          "nummer": "B0BV2LFLL7",
-          "beschrijving": "Microgolf oven speelgoed kookspeelset met realistisch licht, geluid en neppe etenswaren. Met automatische rotatie, elektronische timing en LED-verlichting. De 'voedingsmiddelen' veranderen van kleur.",
-          "afbeelding_url": "https://m.media-amazon.com/images/I/71hW9vS41eL._AC_SL1500_.jpg",
+          "id": "marvel-spidey-rhino-wrecker",
+          "naam": "Marvel Spidey and his Amazing Friends - Rhino Wrecker ('Rhino' auto)",
+          "nummer": "F93485X0",
+          "beschrijving": "Het specifieke 'Rhino' voertuig ('Rhino Wrecker') met figuur uit de serie Spidey and his Amazing Friends. **LET OP: Dit moet specifiek het 'Rhino' voertuig zijn.**",
+          "afbeelding_url": "https://media.s-bol.com/olQ89Y9MR35L/W6LNG5v/1200x604.jpg",
           "winkels": [
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/5O5IAOf", "prijs": "€ 29,99" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/aiICtXn", "prijs": "€ 32,99" }
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rhino-wrecker/9300000166567115/", "prijs": "€ 19,99" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/spidey-en-zijn-geweldige-vriendjes-spidey-vehicle/02222943", "prijs": "€ 19,95" }
           ]
         },
         {
@@ -183,17 +194,6 @@
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/smoby-tefal-evolutieve-keuken/01809992", "prijs": "€ 99,99" },
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/4VV1YQ3", "prijs": "€ 99,99" },
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/h9V24TG", "prijs": "€ 89,95" }
-          ]
-        },
-        {
-          "id": "marvel-spidey-rhino-wrecker",
-          "naam": "Marvel Spidey and his Amazing Friends - Rhino Wrecker ('Rhino' auto)",
-          "nummer": "F93485X0",
-          "beschrijving": "Het specifieke 'Rhino' voertuig ('Rhino Wrecker') met figuur uit de serie Spidey and his Amazing Friends. **LET OP: Dit moet specifiek het 'Rhino' voertuig zijn.**",
-          "afbeelding_url": "https://media.s-bol.com/olQ89Y9MR35L/W6LNG5v/1200x604.jpg",
-          "winkels": [
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rhino-wrecker/9300000166567115/", "prijs": "€ 19,99" },
-            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/spidey-en-zijn-geweldige-vriendjes-spidey-vehicle/02222943", "prijs": "€ 19,95" }
           ]
         }
       ]

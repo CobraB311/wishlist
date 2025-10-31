@@ -76,6 +76,16 @@
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", "prijs": "€ 9,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/hot-wheels-formule-1-5-f1-auto-s-32065562", "prijs": "€ 13,99" }
           ]
+        },
+        {
+          "id": "uno-flip-9200000104061452",
+          "naam": "Mattel Games - UNO Flip! Kaartspel",
+          "nummer": "0887961751062",
+          "beschrijving": "Het klassieke kaartspel dat je kent, maar nu met een spannende twist! Een dubbelzijdig deck en een speciale 'FLIP'-kaart geven het klassieke spel een competitief voordeel.",
+          "afbeelding_url": "https://cdn.juguetilandia.com/images/articulos/1911147693m00.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/uno-flip-mattel-games-kaartspel/9200000104061452/", "prijs": "€ 9,88" }
+          ]
         }
       ]
     },
@@ -97,7 +107,6 @@
       ]
     }
   ],
-  
   "inventaris_links": [
     {
       "naam": "LEGO/DUPLO Collectie (Google Foto's)",

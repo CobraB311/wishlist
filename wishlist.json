@@ -1,6 +1,6 @@
 {
   "wenslijst_titel": "De Grote Eindejaarswenslijst!",
-  "datum": "2025-10-29",
+  "datum": "2025-10-31",
   "personen": [
     {
       "naam": "Jonas",
@@ -101,6 +101,20 @@
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-spray-pen-set-deluxe/9300000152577305/", "prijs": "€ 14,99" },
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0UQEZSa", "prijs": "€ 14,99" },
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/6F2Sdq3", "prijs": "€ 15,95" }
+          ]
+        },
+        {
+          "id": "monster-jam-spiderman-vs-venom-9300000178192365",
+          "naam": "Monster Jam - Marvel Venom vs. The Amazing Spider-Man",
+          "nummer": "778988350130",
+          "beschrijving": "Set van twee Monster Jam-trucks (schaal 1:64) met de iconische Marvel-personages Venom en The Amazing Spider-Man. Perfect voor actievolle races en stunts.",
+          "afbeelding_url": "https://media.s-bol.com/g9NWgz5xA0VG/jRAoXLy/550x388.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/monster-jam-marvel-venom-vs-the-amazing-spider-man-monsterjamtrucks-schaal-1-64/9300000178192365/", "prijs": "€ 14,99" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/73JWcIq", "prijs": "€ 14,99" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/1kb42uN", "prijs": "€ 14,99" },
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/monster-tm-1-64-marvel-spiderman-vs-venom/01792881", "prijs": "€ 12,95" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/monster-jam-1-64-marvel-2-pack-spiderman-vs-venom", "prijs": "€ 12,99" }
           ]
         }
       ]

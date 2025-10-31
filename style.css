@@ -4,7 +4,7 @@ body {
     color: #333;
     margin: 0; 
     padding: 0; 
-    overflow-x: hidden; /* Belangrijk om horizontale scrollbars door de golven te voorkomen */
+    overflow-x: hidden;
     min-height: 100vh;
     scroll-behavior: smooth; 
     
@@ -32,7 +32,7 @@ body {
     transform: translate3d(0, 0, 0);
     opacity: 0.8;
     bottom: 0;
-    left: 0;
+    left: -50%;
     z-index: -1;
 }
 
@@ -44,393 +44,476 @@ body {
 
 .wave:nth-of-type(3) {
     bottom: -2.5em;
-    animation: wave 20s -1s reverse infinite;
-    opacity: 0.9;
+    animation: wave 20s -1s linear infinite;
+    opacity: 0.8;
 }
 
-/* Opgeloste WAVE ANIMATIE */
 @keyframes wave {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-25%); }
-    50% { transform: translateX(-50%); }
-    75% { transform: translateX(-25%); }
-    100% { transform: translateX(0); }
+    0% { transform: translateX(0) }
+    100% { transform: translateX(50%) }
 }
 
-/* VASTE HEADER - VERTICALE TABS */
+/* --- HOOFD LAYOUT & HEADER (Verticale Navigatie) --- */
+
 .fixed-header {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 200px; 
-    height: 100%; 
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); 
+    left: 0; 
+    height: 100%;
+    width: 220px; 
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding-top: 20px;
+    box-sizing: border-box;
 }
- 
+
 .header-content {
-    width: 100%; 
-    padding: 20px 10px;
-}
- 
-/* TITEL CONTAINER */
-.title-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px 30px 0 30px;
-    background-color: transparent; 
+    padding: 10px 0;
 }
 
-/* HEADER STYLING - TITEL */
-h1 {
-    color: #FF1919; 
-    text-align: center;
-    border-bottom: 3px solid #3C84CE; 
-    padding-bottom: 15px;
-    margin-top: 0;
-    margin-bottom: 0; 
-    font-size: 2.8em; 
-    text-shadow: 1px 1px #30EEE2; 
-}
-
-/* CONTAINER STYLING */
-.page-wrapper {
-    margin-left: 200px; 
-    padding-top: 50px; 
-    padding-bottom: 50px;
-    min-height: calc(100vh - 100px);
-}
- 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 15px; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
-    border: 3px solid #65005E; 
-    position: relative; 
-}
- 
-/* TAB NAVIGATIE STYLING - VERTICAAL */
 .tab-nav {
     display: flex;
     flex-direction: column; 
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: none; 
-    padding-top: 20px;
 }
 
 .tab-button {
-    background-color: #30EEE2;
-    color: #65005E;
-    border: 3px solid #3C84CE;
-    border-right: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 8px 0 0 8px; 
-    margin: 10px 0; 
-    transition: background-color 0.3s, transform 0.2s;
-    outline: none;
-    width: 100%;
+    background-color: #f1f1f1;
+    color: #444;
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
     text-align: left;
-}
- 
-.tab-button:hover {
-    background-color: #A9D5E7; 
-}
- 
-.tab-button.active {
-    background-color: #FFFFFF;
-    color: #FF1919;
-    border-top: 3px solid #FF1919;
-    border-bottom: 3px solid #FF1919;
-    border-left: 3px solid #FF1919;
-    border-right: 3px solid #FFFFFF; 
-    transform: translateX(3px); 
-    z-index: 2;
-    margin-right: -3px; 
-    position: relative;
-}
- 
-/* TAB CONTENT STYLING */
-.tab-content {
-    display: none; 
-    padding-top: 20px;
-}
- 
-.tab-content.active {
-    display: block; 
-}
- 
-/* OVERZICHT & ITEM STYLING */
-.overview-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px 0;
-}
- 
-/* STYLING VOOR TITEL IN OVERZICHT */
-.overview-person-header {
-    width: 100%;
-    text-align: center;
-    color: #FF1919;
-    font-size: 1.6em;
-    font-weight: bold;
-    margin: 20px 0 10px;
-    padding: 5px 0;
-    border-bottom: 2px solid #FF1919;
-}
-
-
-.overview-item {
-    width: 30%; 
-    margin-bottom: 20px;
-    text-align: center;
     cursor: pointer;
-    transition: transform 0.2s;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1em;
+    font-weight: 500;
+    white-space: nowrap; 
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #4CAF50; 
+    color: white;
+    font-weight: bold;
+}
+
+.page-wrapper {
+    margin-left: 220px; 
+    padding: 20px;
+    padding-top: 40px; 
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.last-update {
+    color: #eee;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* --- TAB CONTENT --- */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
     display: block;
 }
- 
-.overview-item:hover {
-    transform: scale(1.05);
-    background-color: #f0f0ff; 
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.overview-item img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border: 3px solid #3C84CE;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #FFFFFF;
+h2 {
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
 }
- 
-.overview-item p {
-    font-weight: bold;
-    color: #65005E;
-    margin-top: 10px;
-    font-size: 1.1em;
-}
- 
-/* VERBETERDE DETAIL LAYOUT */
+
+/* --- WENS ITEM DETAIL VIEW --- */
 .wens-item {
     display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #3C84CE; 
-    border-radius: 8px;
-    background-color: #f8f8f8; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
-    scroll-margin-top: 20px; 
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-.wens-item:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
- 
+
 .left-column {
-    flex-shrink: 0;
-    width: 170px; 
-    margin-right: 25px;
+    width: 30%;
+    margin-right: 20px;
+    border-right: 1px solid #eee;
+    padding-right: 20px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.item-image-container { 
-    width: 170px; 
-    height: 170px;
+.item-image-container {
+    width: 100%;
+    height: 180px; 
     overflow: hidden;
-    border-radius: 5px;
-    background-color: #ffffff; 
-    border: 1px solid #65005E; 
+    border-radius: 6px;
+    margin-bottom: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
 }
+
 .item-image-container img {
-    max-width: 95%;
-    max-height: 95%;
-    object-fit: contain;
-}
- 
-/* STIJL VOOR DE PRIJS ONDER DE FOTO */
-.item-price-under-image { 
-    font-weight: bold;
-    color: #27AE60; 
-    font-size: 1.2em; 
-    margin-top: 10px;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: transform 0.3s ease;
 }
 
-.item-details {
-    flex-grow: 1;
+.item-image-container img:hover {
+    transform: scale(1.05);
+}
+
+.item-price-under-image {
+    display: none; 
+}
+
+.right-column {
+    width: 70%;
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
+    flex-direction: column;
 }
 
-/* Container voor titel, nummer, beschrijving */
-.item-text-info {
-    padding-bottom: 10px;
-}
- 
-.item-details h2 { 
-    color: #65005E; 
+.item-name {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #333;
     margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1.8em; 
-    text-align: left;
-}
- 
-.item-details p {
-    margin-top: 0;
-    margin-bottom: 5px;
-    line-height: 1.4;
+    margin-bottom: 10px;
 }
 
-/* Groepering voor links en knop */
+.item-number {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.item-description {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
 .item-action-area {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 15px; 
-    padding-top: 10px;
-    border-top: 1px dashed #3C84CE;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
 }
 
 .winkel-links {
-    flex-grow: 1;
-    margin-right: 20px;
-}
-.winkel-links p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
     font-size: 0.9em;
-    margin-bottom: 3px;
 }
+
 .winkel-links a {
-    color: #3C84CE; 
     text-decoration: none;
-    font-weight: bold;
-    padding: 2px 0;
-    transition: color 0.1s;
-}
-.winkel-links a:hover {
-    text-decoration: underline;
-    color: #1A5C92;
-}
- 
-/* STIJL VOOR DE CLAIM KNOP PER ITEM */
-.claim-button {
-    display: block; 
-    padding: 10px 15px;
-    background-color: #3C84CE; 
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.2s;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
     white-space: nowrap; 
+    font-weight: bold;
+}
+
+.winkel-links a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.claim-button {
+    background-color: #FF5722; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    white-space: nowrap;
 }
 
 .claim-button:hover {
-    background-color: #1A5C92;
+    background-color: #E64A19;
 }
 
-
-/* Nieuwe CSS voor duidelijke scheiding tussen personen */
-.person-section {
-    border-top: 4px dashed #FF1919;
-    padding-top: 30px;
-    margin-top: 40px;
+/* --- OVERVIEW GRID --- */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding-top: 10px;
 }
-.person-section h2 {
-    text-align: center;
-    font-size: 2em;
-    color: #FF1919;
-    background-color: #ecf0f1;
+
+.overview-grid-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+}
+
+.overview-grid-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.overview-grid-item img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.overview-grid-item-name {
     padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 30px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #444;
+    font-weight: 500;
 }
 
-/* ======================================= */
-/* MEDIA QUERIES (RESPONSIVE AANPASSINGEN) */
-/* ======================================= */
+/* --- INVENTARIS LINKS --- */
+.inventaris-link-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
 
-/* --- Tablet (768px) en kleiner --- */
-@media (max-width: 768px) {
+.inventaris-link-item a {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.inventaris-link-item a:hover {
+    color: #0056b3;
+}
+
+
+/* ###################################################################### */
+/* ######################### NIEUWE STIJLEN GEKOCHT ######################### */
+/* ###################################################################### */
+
+/* 1. Visuele effecten voor Gekochte items in DETAIL en OVERZICHT */
+
+/* Detail Item Container: Achtergrond en tekststijl */
+.wens-item.purchased {
+    /* Lichte grijze achtergrond om gekochte items te markeren */
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    opacity: 0.8;
+}
+
+/* Detail Tekst: Uitgrijzen en Doorstrepen */
+.wens-item.purchased .item-name {
+    color: #888;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+/* Afbeelding: Uitgrijzen en iets minder opaciteit (Detail & Overview) */
+.item-image-container.purchased img, 
+.overview-grid-item.purchased img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease; 
+}
+
+/* 2. 'Gekocht' Knop in Detail View (vervangt de Claim knop) */
+.purchased-button {
+    background-color: #888; /* Grijs */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: default;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+    pointer-events: none; /* Zorgt ervoor dat er ECHT niet op geklikt kan worden */
+}
+
+/* 3. 'GEKOCHT' Stempel op Overview Card */
+.overview-grid-item {
+    position: relative; 
+}
+
+.purchased-stamp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    background-color: rgba(255, 0, 0, 0.75); 
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    z-index: 10;
+    pointer-events: none;
+    letter-spacing: 1px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 4. Percentage op de Verticale Tab Button */
+.tab-button {
+    position: relative;
+    padding-right: 45px; 
+}
+
+.completion-percentage {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: #5cb85c; 
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    line-height: 1;
+    min-width: 30px; 
+    text-align: center;
+}
+
+/* Maak de percentage groener/meer zichtbaar als het 100% is */
+.completion-percentage.complete {
+    background-color: #4CAF50;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* --- Tablet (1024px) --- */
+@media (max-width: 1024px) {
     .fixed-header {
-        position: relative;
-        width: 100%;
-        height: auto;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    .header-content {
-         padding: 10px 30px;
+        width: 180px;
     }
     .page-wrapper {
-        margin-left: 0;
-        padding: 20px 10px 20px 10px; /* Minder padding op tablet */
+        margin-left: 180px;
     }
-    .tab-nav {
-        flex-direction: row; 
-        justify-content: flex-start; 
+    .overview-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* --- Mobiel (768px) --- */
+@media (max-width: 768px) {
+    
+    /* Verticaal menu wordt Horizontaal Menu */
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: auto; 
+        padding-top: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
         overflow-x: auto; 
         white-space: nowrap;
-        border-bottom: 3px solid #3C84CE; 
-        padding-bottom: 5px;
-        /* Verwijder de box-shadow die nodig was voor fixed-position */
-        background: none;
-        box-shadow: none;
-    }
-    .tab-button {
-        margin: 0 5px;
-        border-radius: 8px 8px 0 0;
-        border-bottom: none;
-        border-right: 3px solid #3C84CE; 
-        width: auto; 
-    }
-    .tab-button.active {
-        transform: translateY(2px);
-        margin-bottom: -3px;
-        border-right: 3px solid #FF1919; 
-    }
-    .title-container {
-        padding: 0 10px 10px 10px;
+        padding: 5px 10px;
     }
 
-    /* AANGEPAST: Overview grid 2 kolommen */
-    .overview-item {
-        width: 45%; 
+    .tab-nav {
+        flex-direction: row; 
+    }
+
+    .tab-button {
+        display: inline-block;
+        border-bottom: none;
+        border-right: 1px solid #ddd;
+        flex-shrink: 0; 
+        padding: 10px 15px;
     }
     
-    /* AANGEPAST: Lettertypes verkleinen */
-    h1 {
-        font-size: 2.2em;
-    }
-    h2 { /* Voor "Klik op een foto..." */
-        font-size: 1.5em;
-    }
-    .person-section h2 {
-        font-size: 1.5em;
-    }
-    .item-details h2 {
-        font-size: 1.6em;
+    /* Zorg dat de percentage badge ook werkt op mobiel */
+    .completion-percentage {
+        position: static;
+        transform: none;
+        margin-left: 5px;
+        display: inline-block;
     }
 
-    /* Pas de wens-item layout aan voor mobiel */
+    .page-wrapper {
+        margin-left: 0; 
+        padding: 20px;
+        padding-top: 80px; 
+    }
+    
+    .title-container {
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        color: #333; 
+        text-shadow: none;
+    }
+    
+    /* Detail Items passen zich aan voor mobiel */
     .wens-item {
         flex-direction: column;
     }
@@ -439,6 +522,7 @@ h1 {
         margin-right: 0;
         border-right: none;
         border-bottom: 1px solid #eee;
+        padding-right: 0;
         padding-bottom: 15px;
         margin-bottom: 15px;
     }
@@ -449,11 +533,10 @@ h1 {
         margin-bottom: 5px;
     }
     .item-price-under-image {
+        display: block; 
         text-align: left;
         margin-top: 5px;
         margin-bottom: 15px;
-        /* Zorg dat het niet te breed is */
-        display: inline-block;
     }
     .item-action-area {
         flex-direction: column;
@@ -463,41 +546,27 @@ h1 {
         margin-top: 15px;
         white-space: normal;
     }
+    .purchased-button {
+         margin-top: 15px;
+    }
     .winkel-links {
         margin-right: 0;
         margin-bottom: 10px;
+        justify-content: space-around; 
     }
 }
 
 /* --- Kleine Telefoon (480px) en kleiner --- */
 @media (max-width: 480px) {
     .container {
-        padding: 15px; /* Minder padding op de container */
+        padding: 15px; 
     }
 
     h1 {
-        font-size: 1.8em; /* Nog kleinere hoofdtitel */
-    }
-
-    h2 {
-        font-size: 1.3em;
-    }
-    .person-section h2 {
-        font-size: 1.3em;
-    }
-
-    /* AANGEPAST: Overview grid 1 kolom */
-    .overview-item {
-        width: 90%; /* Bijna 100% voor 1 kolom */
-        margin: 10px auto;
+        font-size: 1.8em; 
     }
     
-    .item-details h2 {
-        font-size: 1.3em; /* Kleinere item titels */
-    }
-    
-    .claim-button {
-        padding: 12px;
-        font-size: 0.9em;
+    .overview-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
 }

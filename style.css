@@ -239,7 +239,7 @@ h2 {
 .item-action-area {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end; /* Links en knop onderaan uitlijnen */
     padding-top: 15px;
     border-top: 1px solid #f0f0f0;
 }
@@ -249,6 +249,8 @@ h2 {
     gap: 10px;
     align-items: center;
     font-size: 0.9em;
+    flex-wrap: wrap; /* BELANGRIJKE FIX: Laat links naar de volgende regel springen */
+    max-width: 60%; /* Zodat ze de claim knop niet wegdrukken */
 }
 
 .winkel-links a {
@@ -284,7 +286,23 @@ h2 {
 }
 
 /* --- OVERVIEW GRID --- */
-.overview-grid {
+
+/* Verander de overview grid om plaats te maken voor de titels */
+#overview-grid-container {
+    display: block; /* Nu geen grid meer, maar een block container */
+}
+
+.overview-person-title {
+    font-size: 1.3em;
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.person-grid-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
@@ -347,28 +365,21 @@ h2 {
 }
 
 
-/* ###################################################################### */
 /* ######################### NIEUWE STIJLEN GEKOCHT ######################### */
-/* ###################################################################### */
 
 /* 1. Visuele effecten voor Gekochte items in DETAIL en OVERZICHT */
-
-/* Detail Item Container: Achtergrond en tekststijl */
 .wens-item.purchased {
-    /* Lichte grijze achtergrond om gekochte items te markeren */
     background-color: #f7f7f7;
     border: 1px solid #e0e0e0;
     opacity: 0.8;
 }
 
-/* Detail Tekst: Uitgrijzen en Doorstrepen */
 .wens-item.purchased .item-name {
     color: #888;
     text-decoration: line-through;
     font-style: italic;
 }
 
-/* Afbeelding: Uitgrijzen en iets minder opaciteit (Detail & Overview) */
 .item-image-container.purchased img, 
 .overview-grid-item.purchased img {
     filter: grayscale(100%);
@@ -378,7 +389,7 @@ h2 {
 
 /* 2. 'Gekocht' Knop in Detail View (vervangt de Claim knop) */
 .purchased-button {
-    background-color: #888; /* Grijs */
+    background-color: #888; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -388,14 +399,11 @@ h2 {
     text-transform: uppercase;
     font-size: 1em;
     text-align: center;
-    pointer-events: none; /* Zorgt ervoor dat er ECHT niet op geklikt kan worden */
+    pointer-events: none;
+    white-space: nowrap; /* Zorg dat de knop niet breekt */
 }
 
 /* 3. 'GEKOCHT' Stempel op Overview Card */
-.overview-grid-item {
-    position: relative; 
-}
-
 .purchased-stamp {
     position: absolute;
     top: 50%;
@@ -436,7 +444,6 @@ h2 {
     text-align: center;
 }
 
-/* Maak de percentage groener/meer zichtbaar als het 100% is */
 .completion-percentage.complete {
     background-color: #4CAF50;
 }
@@ -452,8 +459,11 @@ h2 {
     .page-wrapper {
         margin-left: 180px;
     }
-    .overview-grid {
+    .person-grid-section {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .winkel-links {
+        max-width: 50%; /* Meer beperking op kleinere schermen */
     }
 }
 
@@ -538,21 +548,27 @@ h2 {
         margin-top: 5px;
         margin-bottom: 15px;
     }
+    
+    .right-column {
+        width: 100%;
+    }
+    
     .item-action-area {
         flex-direction: column;
         align-items: stretch;
     }
-    .claim-button {
-        margin-top: 15px;
-        white-space: normal;
-    }
-    .purchased-button {
-         margin-top: 15px;
-    }
+    
     .winkel-links {
-        margin-right: 0;
-        margin-bottom: 10px;
+        /* Op mobiel de volle breedte gebruiken */
+        max-width: 100%; 
         justify-content: space-around; 
+        margin-bottom: 15px; 
+    }
+    
+    .claim-button, .purchased-button {
+        margin-top: 10px;
+        width: 100%;
+        white-space: normal;
     }
 }
 
@@ -566,7 +582,7 @@ h2 {
         font-size: 1.8em; 
     }
     
-    .overview-grid {
+    .person-grid-section {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
 }

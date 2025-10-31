@@ -4,7 +4,7 @@ body {
     color: #333;
     margin: 0; 
     padding: 0; 
-    overflow-x: hidden; /* Belangrijk om horizontale scrollbars door de golven te voorkomen */
+    overflow-x: hidden; 
     min-height: 100vh;
     scroll-behavior: smooth; 
     
@@ -33,404 +33,369 @@ body {
     opacity: 0.8;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
 }
-
 .wave:nth-of-type(2) {
     bottom: -1.25em;
     animation: wave 18s linear reverse infinite;
     opacity: 0.8;
 }
-
 .wave:nth-of-type(3) {
     bottom: -2.5em;
-    animation: wave 20s -1s reverse infinite;
+    animation: wave 20s -1s linear infinite;
     opacity: 0.9;
 }
-
-/* Opgeloste WAVE ANIMATIE */
 @keyframes wave {
     0% { transform: translateX(0); }
-    25% { transform: translateX(-25%); }
-    50% { transform: translateX(-50%); }
-    75% { transform: translateX(-25%); }
-    100% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
 }
 
-/* VASTE HEADER - VERTICALE TABS */
+/* LAYOUT EN CONTAINERS */
+.page-wrapper {
+    min-height: 100vh;
+    padding-top: 80px; /* Ruimte voor fixed header */
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Boven de golven */
+    background-color: #ffffff; /* Witte achtergrond voor de inhoud */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 100px); 
+}
+
+/* TITEL */
+.title-container {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: -80px; /* Compensatie voor page-wrapper padding */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #444;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* TABS (Horizontaal, Vast) */
 .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px; 
-    height: 100%; 
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); 
-}
- 
-.header-content {
-    width: 100%; 
-    padding: 20px 10px;
-}
- 
-/* TITEL CONTAINER */
-.title-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px 30px 0 30px;
-    background-color: transparent; 
-}
-
-/* HEADER STYLING - TITEL */
-h1 {
-    color: #FF1919; 
-    text-align: center;
-    border-bottom: 3px solid #3C84CE; 
-    padding-bottom: 15px;
-    margin-top: 0;
-    margin-bottom: 0; 
-    font-size: 2.8em; 
-    text-shadow: 1px 1px #30EEE2; 
-}
-
-/* CONTAINER STYLING */
-.page-wrapper {
-    margin-left: 200px; 
-    padding-top: 50px; 
-    padding-bottom: 50px;
-    min-height: calc(100vh - 100px);
-}
- 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 15px; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
-    border: 3px solid #65005E; 
-    position: relative; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
- 
-/* TAB NAVIGATIE STYLING - VERTICAAL */
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .tab-nav {
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: none; 
-    padding-top: 20px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    border-bottom: 1px solid #ddd;
+}
+.tab-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .tab-button {
-    background-color: #30EEE2;
-    color: #65005E;
-    border: 3px solid #3C84CE;
-    border-right: none;
-    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    padding: 15px 20px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
-    border-radius: 8px 0 0 8px; 
-    margin: 10px 0; 
-    transition: background-color 0.3s, transform 0.2s;
-    outline: none;
-    width: 100%;
-    text-align: left;
+    color: #555;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
 }
- 
-.tab-button:hover {
-    background-color: #A9D5E7; 
+
+.tab-button:hover:not(.active) {
+    background-color: #f8f8f8;
+    color: #333;
 }
- 
+
 .tab-button.active {
-    background-color: #FFFFFF;
-    color: #FF1919;
-    border-top: 3px solid #FF1919;
-    border-bottom: 3px solid #FF1919;
-    border-left: 3px solid #FF1919;
-    border-right: 3px solid #FFFFFF; 
-    transform: translateX(3px); 
-    z-index: 2;
-    margin-right: -3px; 
-    position: relative;
+    color: #cf2e68; /* Roze/rood accent */
+    border-bottom: 3px solid #cf2e68;
+    background-color: #fff;
 }
- 
-/* TAB CONTENT STYLING */
+
 .tab-content {
-    display: none; 
+    display: none;
     padding-top: 20px;
+    animation: fadeIn 0.5s;
 }
- 
+
 .tab-content.active {
-    display: block; 
-}
- 
-/* OVERZICHT & ITEM STYLING */
-.overview-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px 0;
-}
- 
-/* STYLING VOOR TITEL IN OVERZICHT */
-.overview-person-header {
-    width: 100%;
-    text-align: center;
-    color: #FF1919;
-    font-size: 1.6em;
-    font-weight: bold;
-    margin: 20px 0 10px;
-    padding: 5px 0;
-    border-bottom: 2px solid #FF1919;
-}
-
-
-.overview-item {
-    width: 30%; 
-    margin-bottom: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none; 
     display: block;
 }
- 
-.overview-item:hover {
-    transform: scale(1.05);
-    background-color: #f0f0ff; 
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.overview-item img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border: 3px solid #3C84CE;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #FFFFFF;
-}
- 
-.overview-item p {
-    font-weight: bold;
-    color: #65005E;
-    margin-top: 10px;
-    font-size: 1.1em;
-}
- 
-/* VERBETERDE DETAIL LAYOUT */
+/* WENS ITEM CARDS (Lijst per persoon) */
 .wens-item {
     display: flex;
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #3C84CE; 
+    border: 1px solid #eee;
     border-radius: 8px;
-    background-color: #f8f8f8; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
-    scroll-margin-top: 20px; 
-}
-.wens-item:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
- 
-.left-column {
-    flex-shrink: 0;
-    width: 170px; 
-    margin-right: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #fefefe;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    align-items: flex-start;
 }
 
-.item-image-container { 
-    width: 170px; 
-    height: 170px;
+.wens-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+    flex-shrink: 0;
+    width: 250px;
+    margin-right: 25px;
+}
+
+.item-image-container {
+    width: 100%;
+    height: 250px;
     overflow: hidden;
-    border-radius: 5px;
-    background-color: #ffffff; 
-    border: 1px solid #65005E; 
+    border-radius: 4px;
+    background-color: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .item-image-container img {
-    max-width: 95%;
-    max-height: 95%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-}
- 
-/* STIJL VOOR DE PRIJS ONDER DE FOTO */
-.item-price-under-image { 
-    font-weight: bold;
-    color: #27AE60; 
-    font-size: 1.2em; 
-    margin-top: 10px;
-    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
 }
 
-.item-details {
+.item-price-under-image {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #008000; /* Groene prijs */
+    margin-top: 10px;
+}
+
+.right-column {
     flex-grow: 1;
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Container voor titel, nummer, beschrijving */
-.item-text-info {
-    padding-bottom: 10px;
-}
- 
-.item-details h2 { 
-    color: #65005E; 
+.item-details h3 {
     margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1.8em; 
-    text-align: left;
+    color: #cf2e68;
+    font-size: 1.5em;
 }
- 
+
 .item-details p {
-    margin-top: 0;
-    margin-bottom: 5px;
-    line-height: 1.4;
+    color: #555;
+    line-height: 1.6;
 }
 
-/* Groepering voor links en knop */
+/* ACTIE GEBIED (Links en Knop) */
 .item-action-area {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 15px; 
-    padding-top: 10px;
-    border-top: 1px dashed #3C84CE;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
 }
 
-.winkel-links {
-    flex-grow: 1;
-    margin-right: 20px;
+.winkel-links h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
 }
-.winkel-links p {
-    font-size: 0.9em;
-    margin-bottom: 3px;
+
+.winkel-links ul {
+    list-style: none;
+    padding: 0;
 }
+
+.winkel-links li {
+    margin-bottom: 5px;
+}
+
 .winkel-links a {
-    color: #3C84CE; 
+    color: #007bff;
     text-decoration: none;
-    font-weight: bold;
-    padding: 2px 0;
-    transition: color 0.1s;
+    transition: color 0.2s;
 }
+
 .winkel-links a:hover {
+    color: #0056b3;
     text-decoration: underline;
-    color: #1A5C92;
 }
- 
-/* STIJL VOOR DE CLAIM KNOP PER ITEM */
+
 .claim-button {
-    display: block; 
-    padding: 10px 15px;
-    background-color: #3C84CE; 
+    background-color: #cf2e68; /* Roze/rood accent */
     color: white;
-    text-align: center;
+    padding: 10px 20px;
     text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-    white-space: nowrap; 
-}
-
-.claim-button:hover {
-    background-color: #1A5C92;
-}
-
-
-/* Nieuwe CSS voor duidelijke scheiding tussen personen */
-.person-section {
-    border-top: 4px dashed #FF1919;
-    padding-top: 30px;
-    margin-top: 40px;
-}
-.person-section h2 {
     text-align: center;
-    font-size: 2em;
-    color: #FF1919;
-    background-color: #ecf0f1;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 30px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
 }
 
-/* ======================================= */
-/* MEDIA QUERIES (RESPONSIVE AANPASSINGEN) */
-/* ======================================= */
+.claim-button:hover:not(.bought-button) {
+    background-color: #a82453;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 
-/* --- Tablet (768px) en kleiner --- */
+/* OVERZICHT GRID */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.overview-item {
+    background-color: #fefefe;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.overview-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.overview-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: block;
+}
+
+.overview-item p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    line-height: 1.3;
+}
+
+/* --- CLAIMED ITEM STYLING (NIEUW) --- */
+.wens-item.claimed-item {
+    background-color: #f0fff0; /* Zeer lichtgroen voor gekochte items */
+    border: 2px solid #5cb85c;
+    opacity: 0.9; 
+    position: relative;
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.3);
+}
+
+.wens-item.claimed-item:hover {
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.3);
+}
+
+/* Tekst doorstrepen voor de hoofdtitel en beschrijving */
+.wens-item.claimed-item h3,
+.wens-item.claimed-item p:not(.item-price-under-image) {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Styling voor de 'Gekocht' knop */
+.claim-button.bought-button {
+    background-color: #5cb85c; /* Groen */
+    pointer-events: none; 
+    text-decoration: none; 
+    opacity: 1; 
+    cursor: default;
+}
+
+.claim-button.bought-button:hover {
+    background-color: #5cb85c; 
+    cursor: default;
+}
+
+/* Styling voor de grijswaarden/waas op de afbeelding (nieuwe wens) */
+.wens-item.claimed-item .item-image-container img {
+    /* Grayscale en iets donkerder om de waas te creëren */
+    filter: grayscale(100%) brightness(0.9); 
+    transition: filter 0.3s ease;
+}
+
+/* Label in het Overzicht */
+.overview-item.claimed-item-overview {
+    opacity: 0.5; 
+    position: relative;
+}
+
+.bought-label-overview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #5cb85c;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #5cb85c;
+    z-index: 10;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+
+/* MEDIA QUERIES (Aanpassen voor mobiele apparaten) */
 @media (max-width: 768px) {
-    .fixed-header {
-        position: relative;
-        width: 100%;
-        height: auto;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    .header-content {
-         padding: 10px 30px;
-    }
-    .page-wrapper {
-        margin-left: 0;
-        padding: 20px 10px 20px 10px; /* Minder padding op tablet */
-    }
-    .tab-nav {
-        flex-direction: row; 
-        justify-content: flex-start; 
-        overflow-x: auto; 
-        white-space: nowrap;
-        border-bottom: 3px solid #3C84CE; 
-        padding-bottom: 5px;
-        /* Verwijder de box-shadow die nodig was voor fixed-position */
-        background: none;
-        box-shadow: none;
-    }
-    .tab-button {
-        margin: 0 5px;
-        border-radius: 8px 8px 0 0;
-        border-bottom: none;
-        border-right: 3px solid #3C84CE; 
-        width: auto; 
-    }
-    .tab-button.active {
-        transform: translateY(2px);
-        margin-bottom: -3px;
-        border-right: 3px solid #FF1919; 
-    }
-    .title-container {
-        padding: 0 10px 10px 10px;
+    .container {
+        padding: 15px;
     }
 
-    /* AANGEPAST: Overview grid 2 kolommen */
-    .overview-item {
-        width: 45%; 
-    }
-    
-    /* AANGEPAST: Lettertypes verkleinen */
     h1 {
-        font-size: 2.2em;
-    }
-    h2 { /* Voor "Klik op een foto..." */
-        font-size: 1.5em;
-    }
-    .person-section h2 {
-        font-size: 1.5em;
-    }
-    .item-details h2 {
-        font-size: 1.6em;
+        font-size: 2em; 
     }
 
-    /* Pas de wens-item layout aan voor mobiel */
+    /* Pas flex-layout aan voor mobiel */
     .wens-item {
         flex-direction: column;
     }
@@ -452,7 +417,6 @@ h1 {
         text-align: left;
         margin-top: 5px;
         margin-bottom: 15px;
-        /* Zorg dat het niet te breed is */
         display: inline-block;
     }
     .item-action-area {
@@ -469,35 +433,17 @@ h1 {
     }
 }
 
-/* --- Kleine Telefoon (480px) en kleiner --- */
 @media (max-width: 480px) {
     .container {
-        padding: 15px; /* Minder padding op de container */
+        padding: 10px; 
     }
 
     h1 {
-        font-size: 1.8em; /* Nog kleinere hoofdtitel */
+        font-size: 1.8em; 
     }
 
-    h2 {
-        font-size: 1.3em;
-    }
-    .person-section h2 {
-        font-size: 1.3em;
-    }
-
-    /* AANGEPAST: Overview grid 1 kolom */
-    .overview-item {
-        width: 90%; /* Bijna 100% voor 1 kolom */
-        margin: 10px auto;
-    }
-    
-    .item-details h2 {
-        font-size: 1.3em; /* Kleinere item titels */
-    }
-    
-    .claim-button {
-        padding: 12px;
-        font-size: 0.9em;
+    .tab-button {
+        padding: 12px 15px; 
+        font-size: 1em;
     }
 }

@@ -122,7 +122,7 @@
           "naam": "LEGO® DREAMZzz™ Z-Blobs Robot- en Voertuigavonturen",
           "nummer": "71487",
           "beschrijving": "Geef de fantasie een boost met dit 20-in-1 bouwpakket. Bouw de Z-Blob-Mech en verander deze vervolgens in 19 verschillende modellen, waaronder een helikopter, raceauto, turbojet of schorpioen. Inclusief de Mateo minifiguur.",
-          "afbeelding_url": "https://www.dreamland.be/media/cache/default_gallery_main_webp/media/image/01830798/01830798_001.webp",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltadac963a19085368/71487_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
           "winkels": [
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/4LC1mm1", "prijs": "€ 7,95" },
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/alH13AS", "prijs": "€ 7,95" },
@@ -142,6 +142,8 @@
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/3ba25Oe", "prijs": "€ 83,00" },
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/dJmm2BK", "prijs": "€ 83,00" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-transportvoertuig-met-sportauto-s-60408/9300000173010363/?referrer=socialshare_pdp_www", "prijs": "€ 99,99" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60408-lego-transportvoertuig-met-sportauto-s/01773873", "prijs": "Onbekend" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60408-transportvoertuig-met-sportauto-s-31952189", "prijs": "Onbekend" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/sportscar-transporter-with-cars-60408", "prijs": "€ 99,99" }
           ]
         },
@@ -150,9 +152,13 @@
           "naam": "LEGO® City Ruimteverkenner en Buitenaards Leven",
           "nummer": "60431",
           "beschrijving": "Een robuuste ruimteverkenner met 6 banden en een geveerde cabine. De set bevat een buitenaards minibeestje, een geiser-omgeving en minifiguren van een astronaut en een alien.",
-          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt06f40660f983a54b/60431_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltce61d1895f84560a/60431.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
           "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/aTQOtQf", "prijs": "Onbekend" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/6zgYU7T", "prijs": "Onbekend" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-ruimteverkenner-en-buitenaards-leven-60431/9300000157956227/?cid=1761920424219-5169819592543&bltgh=4849adc1-f469-46a6-afd2-843522eb3529.ProductList_Middle.0.ProductImage", "prijs": "€ 31,99" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60431-lego-ruimteverkenner-en-buitenaards-leven/01756166", "prijs": "Onbekend" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60431-ruimteverkenner-en-buitenaards-leven-31452247", "prijs": "Onbekend" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/en-sa/product/space-explorer-rover-and-alien-life-60431", "prijs": "Onbekend" }
           ]
         },
@@ -163,6 +169,8 @@
           "beschrijving": "Een groot brandweervliegtuig met dubbele propeller en waterlanceerfunctie, een brandweerbuggy, een bosbrandscène en 3 minifiguren van brandweerlieden.",
           "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt56637e19f727c9b0/60413_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
           "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/exhmPup", "prijs": "Onbekend" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/52rXj5J", "prijs": "Onbekend" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-brandweervliegtuig-60413/9300000157956269/?referrer=socialshare_pdp_www", "prijs": "€ 54,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60413-brandweervliegtuig-31452041", "prijs": "Onbekend" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60413-lego-brandweervliegtuig/01756081", "prijs": "Onbekend" },
@@ -174,8 +182,10 @@
           "naam": "LEGO® City Jungleonderzoekers Off-road Truck",
           "nummer": "60426",
           "beschrijving": "Robuuste 4x4-truck voor jungle-expedities met een fotocamera, 2 minifiguren, een luipaard en een babykikker. Geschikt voor avonturen in de wildernis.",
-          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt3ce407e324c431d1/60426_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blte03ad4735c05c6e2/60426_boxprod_v39_sha.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
           "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/9trPzxn", "prijs": "Onbekend" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/5N3gcWj", "prijs": "Onbekend" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-jungleonderzoekers-off-road-truck-60426/9300000173010417/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60426-jungelonderzoekers-offroad-truck-31952221", "prijs": "Onbekend" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60426-lego-jungleonderzoekers-offroad-truck/01773941", "prijs": "€ 29,95" },
@@ -187,12 +197,14 @@
           "naam": "LEGO® City Politiegevangeniseiland",
           "nummer": "60419",
           "beschrijving": "Een speelset met een gevangenisgebouw op een eiland met een politiebureau, helikopterplatform en een motorboot. Inclusief 3 boeven en 4 politie-minifiguren.",
-          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blteb51a029c0f913d0/60419_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt6167317f1251ce57/60419.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
           "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/2lroOMW", "prijs": "Onbekend" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/6sgfB5L", "prijs": "Onbekend" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-60419-city-politiegevangeniseiland-politie-speelgoed/9300000157956174/?referrer=socialshare_pdp_www", "prijs": "€ 99,99" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60419-lego-politiegevangeniseiland/01756128", "prijs": "€ 99,95" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60419-politiegevangeniseiland-31452122", "prijs": "€ 89,98" },
-            { "naam": "LEGO® Shop BE", "link": "https://www.2ttoys.nl/en-hr/pages/lego-60419-politiebureau-op-het-gevangeniseiland", "prijs": "Onbekend" }
+            { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/police-prison-island-60419", "prijs": "€ 99,99" }
           ]
         },
         {
@@ -200,8 +212,10 @@
           "naam": "LEGO® City Helikopter, Brandweerauto en Onderzeeër Remix",
           "nummer": "60462",
           "beschrijving": "Een 'remix'-set met een combinatie van een helikopter, brandweerauto en onderzeeër. Deze set is onderdeel van de City thema's en bevat 3 minifiguren.",
-          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltc2d421d09e3e29f8/60462_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blte095151019c43ebc/60462_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
           "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/dk9Jz4l", "prijs": "Onbekend" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/dqdqags", "prijs": "Onbekend" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-helikopter-brandweerauto-en-onderzeeer-remix-60462/9300000187249661/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60462-helikopter-brandweerauto-en-onderzeeer-remix-32031068", "prijs": "Onbekend" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-nl/product/helicopter-fire-truck-submarine-remix-60462", "prijs": "€ 59,99" }
@@ -212,8 +226,10 @@
           "naam": "LEGO® NINJAGO® Rontu de Meesterdraak",
           "nummer": "71842",
           "beschrijving": "Een drakenmodel met een flexibel lijf, staart, hoofd en poten. Inclusief minifiguur van Arin met een grijphaak en een Wolfmasker Strijder.",
-          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt56653063f274ef6f/71842_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt0d46978e3533fc6a/71842_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
           "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/8bf3VDu", "prijs": "Onbekend" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/iNqT6xk", "prijs": "Onbekend" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-rontu-de-meesterdraak-speelgoedset-71842/9300000227400202/?referrer=socialshare_pdp_www", "prijs": "€ 14,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-ninjago-71842-rontu-de-meesterdraak-32075202", "prijs": "Onbekend" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-nl/product/rontu-the-master-dragon-71842", "prijs": "Onbekend" }
@@ -224,10 +240,13 @@
           "naam": "LEGO® NINJAGO® Arins Ninjaterreinbuggy",
           "nummer": "71811",
           "beschrijving": "Een terreinbuggy met beweegbare wielen en een interieur met ruimte voor 2 minifiguren. Inclusief minifiguren van Arin, Climber Cole en een Wolfmasker Strijder.",
-          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt901ed44b1c85d852/71811_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blta644e39fb159ad3b/71811_alt1.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
           "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/3robKjL", "prijs": "Onbekend" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0FeMcdi", "prijs": "Onbekend" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-arins-ninjaterreinbuggy-71811/9300000168719117/?referrer=socialshare_pdp_www", "prijs": "€ 44,99" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71811-lego-arins-ninjaterreinbuggy/01769814", "prijs": "Onbekend" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-ninjago-71811-arins-ninjagoterrein-buggy-31758497", "prijs": "€ 44,98" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-nl/product/arins-ninja-off-road-buggy-car-71811", "prijs": "Onbekend" }
           ]
         },
@@ -257,6 +276,7 @@
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/6IuGiPq", "prijs": "€ 9,99" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-zane-s-strijdmecha-set-71827/9300000187249668/", "prijs": "€ 8,99" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71827-lego-ninjago-zane-s-strijdmecha/01831504", "prijs": "€ 9,95" },
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-ninjago-71827-zane-s-strijdmecha-32031076", "prijs": "Onbekend" },
             { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/zane-s-battle-mech-71827", "prijs": "€ 9,99" }
           ]
         },

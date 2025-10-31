@@ -135,6 +135,21 @@
       "naam": "Milan",
       "items": [
         {
+          "id": "set-duplo-10443",
+          "naam": "LEGO® DUPLO® Stad Voor het Eerst op het Vliegveld",
+          "nummer": "10443",
+          "beschrijving": "Help peuters zelfvertrouwen op te bouwen tijdens nieuwe ervaringen. Met dit leuke cadeau kunnen ze doen alsof ze inpakken en inchecken voor een mooie reis. De set heeft een beweegbaar vliegtuig (met afneembaar dak), een bagagescanner en een emotiewiel, en bevat twee figuren en een teddybeer.",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltb49efe2336153e8d/10443_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "winkels": [
+            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-duplo-town-10443-voor-het-eerst-op-het-vliegveld-32074492", "prijs": "€ 19,49" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/fu9LvH2", "prijs": "€ 21,00" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/2pW6eJK", "prijs": "€ 21,99" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-duplo-stad-voor-het-eerst-op-het-vliegveld-10443/9300000227400159/", "prijs": "€ 23,99" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/10443-lego-voor-het-eerst-op-het-vliegveld/01854794", "prijs": "€ 29,99" },
+            { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/first-time-at-the-airport-10443", "prijs": "€ 29,99" }
+          ]
+        },
+        {
           "id": "deao-magnetron-b0bv2lfll7",
           "naam": "deAO Magnetron Oven Speelgoed Koken Speelset",
           "nummer": "B0BV2LFLL7",

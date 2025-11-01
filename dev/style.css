@@ -21,457 +21,464 @@ body {
     100% { background-position: 0% 0%; }
 }
 
-/* GOLVEN STYLING (Driedubbel Gelaagd Effect) */
-
-/* Animatiedefinitie voor de golfbeweging */
-@keyframes wave {
-    0% { transform: translate3d(-90px, 0, 0); }
-    100% { transform: translate3d(85px, 0, 0); }
-}
-
-/* Algemene Wave Container Stijl */
+/* GOLVEN STYLING */
 .wave {
+    background: rgb(255 255 255 / 25%);
     border-radius: 1000% 1000% 0 0;
     position: fixed;
     width: 200%;
     height: 12em;
+    animation: wave 10s -3s linear infinite;
     transform: translate3d(0, 0, 0);
+    opacity: 0.8;
     bottom: 0;
-    left: 0;
+    left: -50%;
+    z-index: -10; /* Zorg ervoor dat de golven achter de content blijven */
 }
 
-/* LAAG 1 (Dichtstbij, snelst) */
-.wave1 {
-    background: rgb(255 255 255 / 40%); /* Meest helder */
+/* De animatie die de golven doet bewegen */
+@keyframes wave {
+    0% { transform: translateX(0) translateZ(0) scaleY(1); }
+    50% { transform: translateX(-25%) translateZ(0) scaleY(0.5); }
+    100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+}
+
+.wave:nth-child(2) {
     animation: wave 10s linear infinite;
-    z-index: -10; /* Z-INDEX CORRECTIE */
+    opacity: 0.7;
+    height: 10em;
+    bottom: 10px;
+    z-index: -9;
 }
 
-/* LAAG 2 (Midden) */
-.wave2 {
-    background: rgb(255 255 255 / 25%);
-    animation: wave 12s linear infinite; /* Langzamer */
-    animation-delay: -2s; /* Start met een vertraging */
-    z-index: -11; /* Z-INDEX CORRECTIE */
+.wave:nth-child(3) {
+    animation: wave 10s -1s linear infinite;
+    opacity: 0.5;
+    height: 8em;
+    bottom: 20px;
+    z-index: -8;
 }
 
-/* LAAG 3 (Verst weg, langzaamst) */
-.wave3 {
-    background: rgb(255 255 255 / 10%); /* Meest subtiel */
-    animation: wave 14s linear infinite; /* Nog langzamer */
-    animation-delay: -5s;
-    z-index: -12; /* Z-INDEX CORRECTIE */
+
+/* GLOBAL CONTAINERS & WRAPPERS */
+.page-wrapper {
+    margin-left: 200px; /* Ruimte voor de verticale navigatie */
+    padding: 30px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: #ffffffd0; /* Half-transparante achtergrond voor de content */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* VASTE HEADER (VERTIKALE NAVIGATIE) */
+.container {
+    padding-top: 10px; 
+    padding-bottom: 50px;
+}
+
+/* TITEL & HEADER */
+.title-container {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-family: 'Georgia', serif; 
+    font-size: 2.5em;
+    color: #333;
+    margin: 0 0 5px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.last-update {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+h2 {
+    color: #4a4a4a;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* VERTICALE TAB NAVIGATIE */
 .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%; 
-    width: 180px; 
-    background: #fff;
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-    overflow-y: auto; 
-    padding-top: 10px; 
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-content {
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: flex-start;
+    padding-top: 20px;
 }
 
 .tab-nav {
     display: flex;
-    flex-direction: column; 
-    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    flex-grow: 1; /* Neemt de beschikbare ruimte in */
 }
 
 .tab-button {
-    background-color: #f1f1f1;
-    color: #333;
-    display: block;
-    padding: 15px 15px; 
+    background-color: #fff;
+    color: #555;
     border: none;
+    padding: 15px 20px;
     text-align: left;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+    font-size: 1.1em;
+    transition: background-color 0.3s, color 0.3s, border-left 0.3s;
     border-left: 5px solid transparent;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
 }
 
 .tab-button:hover:not(.active) {
-    background-color: #ddd;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 .tab-button.active {
-    background-color: #e8f5e9; 
-    color: #4CAF50;
+    background-color: #e0e0e0;
+    color: #d90000;
     font-weight: bold;
-    border-left: 5px solid #4CAF50; 
+    border-left: 5px solid #d90000;
 }
-
-/* STYLING VOOR HET HERSTELDE PERCENTAGE LABEL */
-.percentage-bought {
-    font-size: 0.75em;
-    font-weight: normal;
-    background-color: #4CAF50;
-    color: white;
-    padding: 3px 8px;
-    border-radius: 12px;
-    margin-left: 10px;
-    flex-shrink: 0;
-}
-
-/* Wanneer de tab actief is, percentage een lichtere achtergrond geven */
-.tab-button.active .percentage-bought {
-    background-color: #a5d6a7; 
-}
-
-
-/* ALGEMENE LAYOUT (INHOUD) */
-
-.page-wrapper {
-    margin-left: 180px; 
-    padding: 20px 20px 80px 20px; 
-    position: relative;
-}
-
-.container {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.title-container {
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #4CAF50;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.last-update {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 30px;
-}
-
-/* TAB INHOUD (WENSENLIJSTEN EN OVERZICHT) */
 
 .tab-content {
     display: none;
-    padding: 6px 0px;
-    border-top: none;
+    animation: fadeIn 0.5s;
 }
 
 .tab-content.active {
     display: block;
 }
 
-/* OVERVIEW GRID (GALERIJ) - GESPLITST PER PERSOON */
-
-.overview-person-section {
-    margin-bottom: 40px;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
+/* ANIMATIE */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.overview-person-section h3 {
-    font-size: 1.8em;
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-.overview-grid-inner {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 20px;
-    padding-bottom: 20px;
-}
-
-.overview-grid-item {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-align: center;
+/* OVERZICHT (GRID) */
+.overview-grid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 250px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
 }
 
-.overview-grid-item:hover {
+.overview-item-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+    width: 220px; /* Vaste breedte voor mooie kolommen */
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.overview-item-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-.overview-grid-item img {
+.overview-item-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.overview-item-image img {
     max-width: 100%;
-    max-height: 120px; 
-    height: auto;
+    max-height: 100%;
     object-fit: contain;
-    border-radius: 4px;
-    margin-bottom: 10px;
 }
 
-.overview-caption {
-    font-size: 0.9em;
+.overview-item-info {
+    padding: 10px;
+}
+
+.overview-item-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
     color: #333;
-    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.overview-person {
-    font-weight: normal;
-    color: #777;
-    display: block; 
-    margin-top: 3px;
-    font-size: 0.85em;
+.overview-item-info p {
+    margin: 0;
+    font-weight: bold;
+    color: #d90000;
+    font-size: 1.1em;
 }
 
 /* WENSENLIJST DETAIL ITEMS */
-
-.wens-lijst {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding-top: 15px;
-}
-
 .wens-item {
     display: flex;
-    background-color: #fff;
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    position: relative;
     border: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: background-color 0.3s;
-}
-
-.wens-item.purchased {
-    background-color: #fcfcfc;
-}
-
-/* AANGEPAST: Grijze filter op de afbeelding van gekochte items */
-.wens-item.purchased .item-image-container img {
-    filter: grayscale(100%);
-    opacity: 0.5; 
-    transition: filter 0.3s, opacity 0.3s;
-}
-
-.wens-item.highlight {
-    box-shadow: 0 0 10px 3px #90ee90; 
-    transition: box-shadow 0.5s;
 }
 
 .left-column {
-    width: 200px;
-    flex-shrink: 0;
-    margin-right: 20px;
+    width: 30%;
     padding-right: 20px;
+    margin-right: 20px;
     border-right: 1px solid #eee;
-    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-column {
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.item-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.item-beschrijving {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.item-nummer {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 15px;
 }
 
 .item-image-container {
     width: 100%;
     height: 180px; 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f9f9f9;
     margin-bottom: 10px;
 }
 
 .item-image-container img {
     max-width: 100%;
     max-height: 100%;
-    height: auto;
     object-fit: contain;
-    border-radius: 4px;
 }
 
 .item-price-under-image {
-    display: block; 
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #4CAF50;
-    margin-top: 0;
+    display: none; /* Prijs onder de afbeelding alleen op mobiel */
 }
 
-.right-column {
-    flex-grow: 1;
+.item-action-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
 }
 
-.right-column h3 {
-    margin-top: 0;
-    color: #333;
-    font-size: 1.5em;
-    text-decoration: none;
-}
-
-.wens-item.purchased .right-column h3 {
-    text-decoration: line-through;
-    color: #999;
-}
-
-.item-description {
-    color: #555;
-    font-size: 0.95em;
-    margin-bottom: 10px;
-}
-
-.item-nummer {
-    font-size: 0.8em;
-    color: #999;
-    margin-bottom: 15px;
-}
-
-/* WINKEL LINKS */
 .winkel-links {
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
+    max-width: 60%;
+    flex-wrap: wrap;
 }
 
 .winkel-link-button {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #007BFF;
+    background-color: #6c757d;
     color: white;
+    padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9em;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.winkel-link-button.bol {
+    background-color: #0076a8;
+}
+
+.winkel-link-button.amazon {
+    background-color: #ff9900;
+}
+
+.winkel-link-button.dreamland {
+    background-color: #00874c; 
 }
 
 .winkel-link-button:hover {
-    background-color: #0056b3;
+    opacity: 0.9;
 }
 
-/* ACTIE AREA */
-.item-action-area {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; 
-    padding-top: 15px;
-    border-top: 1px dashed #eee;
-}
-
-.claim-button {
-    background-color: #FFC107;
-    color: #333;
-    border: none;
+.item-claim-button {
+    background-color: #d90000;
+    color: white;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
+    white-space: nowrap;
 }
 
-.claim-button:hover {
-    background-color: #e0b400;
+.item-claim-button:hover {
+    background-color: #a30000;
 }
 
-.purchased-note {
-    color: #4CAF50;
+/* GEKOCHT STATUS */
+.status-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #38a169; /* Groen */
+    color: white;
+    padding: 5px 15px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
     font-weight: bold;
-    font-size: 1.1em;
-}
-
-/* INVENTARIS LINKS (Voor de Inventaris Tab) */
-.inventory-link-section {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    border-left: 5px solid #4CAF50;
-}
-
-.inventaris-link-item a {
-    font-size: 1.1em;
-    color: #007BFF;
-    text-decoration: none;
-    line-height: 1.8;
-    display: block;
-}
-
-.inventaris-link-item a:hover {
-    text-decoration: underline;
-}
-
-/* FOOTER */
-.footer-note {
-    margin-left: 180px; 
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 0.8em;
-    color: #fff;
-    position: relative;
+    font-size: 0.9em;
     z-index: 10;
 }
 
-/* MEDIA QUERIES (RESPONSIVE) */
+.wens-item.claimed {
+    opacity: 0.7;
+    background-color: #f0fff4; /* Lichtgroene achtergrond */
+    border-color: #c6f6d5;
+}
 
-@media (max-width: 900px) {
-    /* Schakel over naar mobiele layout */
-    
+.wens-item.claimed .item-claim-button {
+    display: none;
+}
+
+/* INVENTARIS LINKS */
+.inventory-links {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.inventory-links a {
+    display: block;
+    margin-bottom: 8px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+
+.inventory-links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* FOOTER NOTE */
+.footer-note {
+    position: fixed;
+    bottom: 0;
+    left: 200px; /* Zorg dat de footer onder de content staat */
+    width: calc(100% - 200px);
+    text-align: center;
+    padding: 10px;
+    background-color: #00000020;
+    color: #fff;
+    font-size: 0.8em;
+    z-index: 5;
+}
+
+.footer-note p {
+    margin: 0;
+}
+
+.footer-note strong {
+    color: #ffe082;
+}
+
+
+/* --- RESPONSIVE LAYOUT VOOR SCHERMEN KLEINER DAN 900PX (Tablet/Mobiel) --- */
+@media screen and (max-width: 900px) {
+    /* Hoofdstructuur */
     .fixed-header {
-        position: static; 
+        position: static; /* Header scrollt mee */
         width: 100%;
-        height: auto;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        padding: 0;
-    }
-    
-    .header-content {
-        height: auto;
+        left: 0;
+        top: 0;
+        z-index: 99; 
     }
     
     .tab-nav {
-        flex-direction: row; 
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        border-bottom: 1px solid #ddd;
+        flex-direction: row; /* Tabs horizontaal */
+        overflow-x: auto; /* Zorgt voor scrollen indien te veel tabs */
+        overflow-y: hidden;
+        white-space: nowrap; /* Zorgt dat de knoppen niet breken */
+        padding: 0 5px; 
     }
     
     .tab-button {
-        flex-shrink: 0;
-        border-left: none;
-        border-bottom: 3px solid transparent;
-        justify-content: flex-start;
-        padding: 15px 10px;
+        flex-grow: 1;
+        min-width: 120px;
+        margin: 5px;
+        padding: 10px 10px; 
     }
     
-    .tab-button.active {
-        border-left: none;
-        border-bottom: 3px solid #4CAF50;
-        background-color: #fff;
-    }
-
-    .percentage-bought {
-        margin-left: 5px;
-        order: 2; 
-    }
-
     .page-wrapper {
-        margin-left: 0; 
-        padding: 10px;
+        margin-left: 0; /* Geen ruimte voor de verticale balk */
+        padding-top: 15px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .footer-note {
+        position: static;
+        width: 100%;
+        left: 0;
+        margin-top: 20px;
+        background-color: #00000080;
     }
     
     .title-container {
@@ -497,12 +504,23 @@ h1 {
         padding-bottom: 15px;
         margin-bottom: 15px;
     }
+
+    /* OPLOSSING VOOR TE GROTE AFBEELDING */
     .item-image-container {
         width: 100%;
         height: auto;
-        max-height: 200px;
+        max-height: 250px; /* Beperk de verticale grootte van de container */
         margin-bottom: 5px;
+        overflow: hidden; 
     }
+    
+    .item-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Zorgt dat de afbeelding past zonder te vervormen */
+    }
+    /* EINDE OPLOSSING */
+
     .item-price-under-image {
         display: block; 
         text-align: left;
@@ -519,29 +537,19 @@ h1 {
         align-items: stretch;
     }
     
-    .claim-button {
-        width: 100%;
-        order: 2;
-    }
-    
-    .purchased-note {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    
     .winkel-links {
+        /* Op mobiel de volle breedte gebruiken */
         max-width: 100%; 
         justify-content: space-around; 
         margin-bottom: 15px;
-        gap: 8px;
+    }
+
+    .overview-item-card {
+        width: calc(50% - 10px); /* Twee kolommen met 20px gap */
+        max-width: none;
     }
     
-    .footer-note {
-        margin-left: 0;
-    }
-    
-    /* Zorg dat de grid goed schaalt op mobiel */
-    .overview-grid-inner {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .overview-item-image {
+        height: 120px;
     }
 }

@@ -51,7 +51,6 @@ function openTab(evt, tabId) {
     }
     
     // Scroll naar de bovenkant van de pagina (na de fixed header)
-    const headerHeight = document.querySelector('.fixed-header').offsetHeight;
     if (window.innerWidth <= 900) {
         // Op mobiel: scroll naar de bovenkant van de .page-wrapper
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -253,7 +252,6 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
 
 // Functie om een individueel wens-item element te creëren
 function createWishItemElement(persoonNaam, item, isPurchased) {
-    // ... (Deze functie blijft ongewijzigd) ...
     const wensItem = document.createElement('div');
     wensItem.id = item.id;
     wensItem.className = 'wens-item';
@@ -328,7 +326,7 @@ function createWishItemElement(persoonNaam, item, isPurchased) {
         sortedWinkels.forEach(winkel => {
             if (!winkel.link || winkel.link.trim() === '' || !winkel.link.startsWith('http')) {
                 hasBrokenLink = true;
-                console.error(`Kapotte link gevonden voor item ${item.naam} (${winkel.naam})`);
+                // De console.error is al aanwezig, we hoeven het hier niet nog eens te loggen.
             }
         });
         
@@ -480,9 +478,6 @@ function loadWishlist() {
         // 4. Genereer de content
         const purchasedItemIds = new Set(claimsData.purchased_items || []);
         generateWishlistContent(wishlistData, purchasedItemIds);
-        
-        // Activeer de Overview tab bij het starten (dubbelcheck, al in generateWishlistContent)
-        // openTab(null, 'overview-content');
         
     })
     .catch(error => {

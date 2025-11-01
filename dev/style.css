@@ -22,14 +22,11 @@ body {
 }
 
 /* GOLVEN STYLING (Driedubbel Gelaagd Effect) */
-
-/* Animatiedefinitie voor de golfbeweging */
 @keyframes wave {
     0% { transform: translate3d(-90px, 0, 0); }
     100% { transform: translate3d(85px, 0, 0); }
 }
 
-/* Algemene Wave Container Stijl */
 .wave {
     border-radius: 1000% 1000% 0 0;
     position: fixed;
@@ -40,27 +37,24 @@ body {
     left: 0;
 }
 
-/* LAAG 1 (Dichtstbij, snelst) */
 .wave1 {
-    background: rgb(255 255 255 / 40%); /* Meest helder */
+    background: rgb(255 255 255 / 40%); 
     animation: wave 10s linear infinite;
-    z-index: -10; /* Z-INDEX CORRECTIE */
+    z-index: -10; 
 }
 
-/* LAAG 2 (Midden) */
 .wave2 {
     background: rgb(255 255 255 / 25%);
-    animation: wave 12s linear infinite; /* Langzamer */
-    animation-delay: -2s; /* Start met een vertraging */
-    z-index: -11; /* Z-INDEX CORRECTIE */
+    animation: wave 12s linear infinite; 
+    animation-delay: -2s; 
+    z-index: -11; 
 }
 
-/* LAAG 3 (Verst weg, langzaamst) */
 .wave3 {
-    background: rgb(255 255 255 / 10%); /* Meest subtiel */
-    animation: wave 14s linear infinite; /* Nog langzamer */
+    background: rgb(255 255 255 / 10%); 
+    animation: wave 14s linear infinite; 
     animation-delay: -5s;
-    z-index: -12; /* Z-INDEX CORRECTIE */
+    z-index: -12; 
 }
 
 /* VASTE HEADER (VERTIKALE NAVIGATIE) */
@@ -116,7 +110,6 @@ body {
     border-left: 5px solid #4CAF50; 
 }
 
-/* STYLING VOOR HET HERSTELDE PERCENTAGE LABEL */
 .percentage-bought {
     font-size: 0.75em;
     font-weight: normal;
@@ -128,7 +121,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Wanneer de tab actief is, percentage een lichtere achtergrond geven */
 .tab-button.active .percentage-bought {
     background-color: #a5d6a7; 
 }
@@ -140,6 +132,8 @@ body {
     margin-left: 180px; 
     padding: 20px 20px 80px 20px; 
     position: relative;
+    box-sizing: border-box; /* Belangrijk voor padding/width berekeningen */
+    min-height: 100vh; /* Zonder banner, moet de volledige hoogte vullen */
 }
 
 .container {
@@ -151,6 +145,11 @@ body {
 
 .title-container {
     margin-bottom: 20px;
+    text-align: center;
+    padding: 20px 0; /* Terug naar normale padding */
+    background-color: #fff; /* Terug naar normale achtergrond */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Terug naar normale schaduw */
 }
 
 h1 {
@@ -162,7 +161,7 @@ h1 {
 .last-update {
     font-size: 0.9em;
     color: #777;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Terug naar normale marge */
 }
 
 /* TAB INHOUD (WENSENLIJSTEN EN OVERZICHT) */
@@ -177,7 +176,7 @@ h1 {
     display: block;
 }
 
-/* OVERVIEW GRID (GALERIJ) - GESPLITST PER PERSOON */
+/* OVERVIEW GRID (GALERIJ) */
 
 .overview-person-section {
     margin-bottom: 40px;
@@ -265,7 +264,6 @@ h1 {
     background-color: #fcfcfc;
 }
 
-/* AANGEPAST: Grijze filter op de afbeelding van gekochte items */
 .wens-item.purchased .item-image-container img {
     filter: grayscale(100%);
     opacity: 0.5; 
@@ -472,6 +470,7 @@ h1 {
     .page-wrapper {
         margin-left: 0; 
         padding: 10px;
+        min-height: 100vh; /* Volledige hoogte, geen banner meer bovenaan */
     }
     
     .title-container {
@@ -502,16 +501,14 @@ h1 {
         height: auto;
         max-height: 200px;
         margin-bottom: 5px;
-        /* NIEUW: Zorgt dat de container niet uitloopt en de afbeelding erin past */
         overflow: hidden; 
     }
-    /* FIX VOOR TE GROTE AFBEELDING */
+
     .item-image-container img {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Zorgt dat de afbeelding past binnen de 200px max-height */
+        object-fit: contain; 
     }
-    /* EINDE FIX */
     
     .item-price-under-image {
         display: block; 
@@ -550,7 +547,6 @@ h1 {
         margin-left: 0;
     }
     
-    /* Zorg dat de grid goed schaalt op mobiel */
     .overview-grid-inner {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }

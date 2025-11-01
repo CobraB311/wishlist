@@ -205,5 +205,16 @@
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/bumba-mijn-eerste-autosleutels/02254128", "prijs": "€ 13,99" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/bumba-activity-center-mijn-eerste-autosleutels/9300000229826529/?referrer=socialshare_pdp_www", "prijs": "€ 19,95" }
           ]
+        },
+        {
+          "id": "little-dutch-koffertjes-forest-friends-9300000181455728",
+          "naam": "Little Dutch Koffertjes Forest Friends (set van 2)",
+          "nummer": "9300000181455728",
+          "beschrijving": "Set van twee kinderkoffertjes in het Forest Friends-thema, met vos illustraties. Perfect voor het opbergen van kleine schatten of om speelgoed mee te nemen op reis. Met metalen greep en slotje.",
+          "afbeelding_url": "https://media.s-bol.com/3xxBm18nAlnr/gJ71Jjl/550x365.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/little-dutch-koffertjes-forest-friends-fsc/9300000181455728/?referrer=socialshare_pdp_www", "prijs": "€ 17,95" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/little-dutch-kofferset-2-in-1-forest-friends-fsc/01811315", "prijs": "€ 17,95" }
+          ]
         }
       ]

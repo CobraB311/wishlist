@@ -330,7 +330,7 @@ h2 {
     color: white;
     padding: 8px 15px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5ppx;
     font-size: 0.9em;
     transition: background-color 0.3s;
     font-weight: bold;

@@ -95,13 +95,16 @@ body {
     background-color: #f1f1f1;
     color: #333;
     display: block;
-    padding: 15px 20px;
+    padding: 15px 15px; /* Iets minder padding rechts om ruimte te maken voor percentage */
     border: none;
     text-align: left;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
     border-left: 5px solid transparent;
+    display: flex; /* Zorgt dat de naam en percentage netjes naast elkaar staan */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .tab-button:hover:not(.active) {
@@ -113,6 +116,23 @@ body {
     color: #4CAF50;
     font-weight: bold;
     border-left: 5px solid #4CAF50; /* Groene balk aan de zijkant */
+}
+
+/* STYLING VOOR HET HERSTELDE PERCENTAGE LABEL */
+.percentage-bought {
+    font-size: 0.75em;
+    font-weight: normal;
+    background-color: #4CAF50;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+/* Wanneer de tab actief is, percentage een lichtere achtergrond geven */
+.tab-button.active .percentage-bought {
+    background-color: #a5d6a7; 
 }
 
 
@@ -159,14 +179,27 @@ h1 {
     display: block;
 }
 
-/* OVERVIEW GRID (GALERIJ) */
+/* OVERVIEW GRID (GALERIJ) - GESPLITST PER PERSOON */
 
-.overview-grid {
+.overview-person-section {
+    margin-bottom: 40px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.overview-person-section h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.overview-grid-inner {
     display: grid;
     /* 3 kolommen voor desktop, met automatische aanpassing */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px;
-    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .overview-grid-item {
@@ -205,14 +238,15 @@ h1 {
 }
 
 .overview-person {
+    /* Wordt nu niet meer gebruikt in de caption, maar laten we hem staan */
     font-weight: normal;
     color: #777;
-    display: block; /* Op nieuwe lijn voor netheid */
+    display: block; 
     margin-top: 3px;
     font-size: 0.85em;
 }
 
-/* WENSENLIJST DETAIL ITEMS */
+/* WENSENLIJST DETAIL ITEMS (ONGEWIJZIGD) */
 
 .wens-lijst {
     display: flex;
@@ -357,9 +391,9 @@ h1 {
     font-size: 1.1em;
 }
 
-/* INVENTARIS LINKS (Hersteld voor overzichtspagina) */
+/* INVENTARIS LINKS (Voor de Inventaris Tab) */
 .inventory-link-section {
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 20px;
     background-color: #f7f7f7;
     border-radius: 8px;
@@ -418,12 +452,21 @@ h1 {
         flex-shrink: 0;
         border-left: none;
         border-bottom: 3px solid transparent;
+        /* Geef meer ruimte aan de tab naam op mobiel */
+        justify-content: flex-start;
+        padding: 15px 10px;
     }
     
     .tab-button.active {
         border-left: none;
         border-bottom: 3px solid #4CAF50;
         background-color: #fff;
+    }
+
+    .percentage-bought {
+         /* Op mobiel kleiner, en rechts uitlijnen van de naam */
+        margin-left: 5px;
+        order: 2; /* Zorgt dat het percentage na de naam komt */
     }
 
     .page-wrapper {
@@ -496,5 +539,10 @@ h1 {
     
     .footer-note {
         margin-left: 0;
+    }
+    
+    /* Zorg dat de grid goed schaalt op mobiel */
+    .overview-grid-inner {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }

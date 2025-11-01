@@ -1,6 +1,6 @@
 /* BASE STYLING & ANIMATIE */
 body {
-    font-family: -apple-system, BlinkMacMacSystemFont, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     color: #333;
     margin: 0; 
     padding: 0; 
@@ -21,19 +21,47 @@ body {
     100% { background-position: 0% 0%; }
 }
 
-/* GOLVEN STYLING */
+/* GOLVEN STYLING (Driedubbel Gelaagd Effect) */
+
+/* Animatiedefinitie voor de golfbeweging */
+@keyframes wave {
+    0% { transform: translate3d(-90px, 0, 0); }
+    100% { transform: translate3d(85px, 0, 0); }
+}
+
+/* Algemene Wave Container Stijl */
 .wave {
-    background: rgb(255 255 255 / 25%);
     border-radius: 1000% 1000% 0 0;
     position: fixed;
     width: 200%;
     height: 12em;
-    animation: wave 10s -3s linear infinite;
     transform: translate3d(0, 0, 0);
-    opacity: 0.8;
     bottom: 0;
     left: 0;
     z-index: -1;
+}
+
+/* LAAG 1 (Dichtstbij, snelst) */
+.wave1 {
+    background: rgb(255 255 255 / 40%); /* Meest helder */
+    animation: wave 10s linear infinite;
+    z-index: 0; /* Z-index 0, het dichtst bij de kijker */
+}
+
+/* LAAG 2 (Midden) */
+.wave2 {
+    background: rgb(255 255 255 / 25%);
+    animation: wave 12s linear infinite; /* Langzamer */
+    animation-delay: -2s; /* Start met een vertraging */
+    z-index: -1;
+}
+
+/* LAAG 3 (Verst weg, langzaamst) */
+.wave3 {
+    background: rgb(255 255 255 / 10%); /* Meest subtiel */
+    animation: wave 14s linear infinite; /* Nog langzamer */
+    animation-delay: -5s;
+    z-index: -2;
 }
 
 /* VASTE HEADER (VERTIKALE NAVIGATIE) */
@@ -61,7 +89,6 @@ body {
     display: flex;
     flex-direction: column; /* Zorgt ervoor dat de knoppen verticaal staan */
     width: 100%;
-    /* margin-top: 20px; */ /* Indien nodig, voeg toe om ruimte boven de knoppen te creëren */
 }
 
 .tab-button {

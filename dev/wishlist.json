@@ -425,7 +425,8 @@
           "beschrijving": "Materiaal: beuken, gekleurd gelakt",
           "afbeelding_url": "https://m.media-amazon.com/images/I/91dZtEWCTHL._AC_SY450_.jpg",
           "winkels": [
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bCXpbqu", "prijs": "€ 22,05" }
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bCXpbqu", "prijs": "€ 22,05" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/hgujTO8", "prijs": "€ 20,29" }
           ]
         },
         {
@@ -477,7 +478,8 @@
           "beschrijving": "Mechanisch speelgoedbroodrooster in Bosch-design van Theo Klein. Zodra je op de knop drukt, gaat het speelgoedbrood omlaag en schiet het later automatisch omhoog met een mechanisch geluid, net als een echte. Wordt geleverd met twee sneetjes speelgoedbrood. Geschikt voor kinderen vanaf 3 jaar.",
           "afbeelding_url": "https://www.dreamland.be/media/image/01473193/01473193_003.jpg",
           "winkels": [
-            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/bosch-broodrooster/01473193", "prijs": "€ 11,95" }
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/bosch-broodrooster/01473193", "prijs": "€ 11,95" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/73rngWD", "prijs": "€ 12,49" }
           ]
         },
         {

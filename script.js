@@ -105,7 +105,7 @@ function createWishItemElement(persoonNaam, item, isPurchased) {
     wensItem.className = 'wens-item';
 
     if (isPurchased) {
-        wensItem.classList.add('purchased'); // Voor de detail achtergrond/strikethrough
+        wensItem.classList.add('purchased'); // Essentieel voor de strikethrough/styling
     }
 
     // --- LEFT COLUMN (IMAGE, PRICE) ---
@@ -176,6 +176,7 @@ function createWishItemElement(persoonNaam, item, isPurchased) {
     actionArea.className = 'item-action-area';
 
     if (isPurchased) {
+        // Correcte weergave voor gekochte items
         const purchasedMessage = document.createElement('p');
         purchasedMessage.className = 'purchased-message';
         purchasedMessage.textContent = '🎉 Dit cadeau is al GECLAIMD/GEKOCHT! Dankjewel! 🎉';
@@ -194,7 +195,7 @@ function createWishItemElement(persoonNaam, item, isPurchased) {
     return wensItem;
 }
 
-// NIEUWE FUNCTIE: Genereer de inventaris-content
+// Functie: Genereer de inventaris-content
 function generateInventoryContent(listsContainer, inventarisLinks) {
     const inventoryWrapper = document.createElement('div');
     inventoryWrapper.id = 'inventory-content';
@@ -256,13 +257,12 @@ function generateWishlistContent(data, purchasedItemIds) {
     const tabNav = document.getElementById('dynamic-tab-nav');
     const listsContainer = document.getElementById('person-lists-container');
     const overviewGrid = document.getElementById('overview-grid-container');
-    // Zorg ervoor dat de overzichtspagina wordt geleegd voordat we nieuwe elementen toevoegen
-    overviewGrid.innerHTML = ''; 
+    overviewGrid.innerHTML = ''; // Leeg het laadbericht
 
     // 1. MAAK DE OVERZICHT TAB KNOP
     const overviewButton = document.createElement('button');
     overviewButton.id = 'btn-overview';
-    overviewButton.className = 'tab-button active'; // De overzichtsknop is standaard actief
+    overviewButton.className = 'tab-button'; // BELANGRIJK: GEEN 'active' hier! Active wordt bij initialisatie onderaan ingesteld.
     overviewButton.textContent = 'Alle Wensen (Overzicht)'; 
     overviewButton.onclick = (e) => openTab(e, 'overview-content');
     tabNav.appendChild(overviewButton);
@@ -274,7 +274,7 @@ function generateWishlistContent(data, purchasedItemIds) {
         const persoonId = persoonNaam.toLowerCase().replace(/\s/g, '-');
         const listContainer = document.createElement('div');
         listContainer.id = `${persoonId}-content`;
-        listContainer.className = 'tab-content'; // BELANGRIJK: Zorg dat deze NIET de 'active' klasse heeft
+        listContainer.className = 'tab-content'; // Zorg dat deze NIET de 'active' klasse heeft
 
         // BEREKEN HET AANTAL ITEMS
         const itemCount = person.items.length; 
@@ -283,8 +283,10 @@ function generateWishlistContent(data, purchasedItemIds) {
         const button = document.createElement('button');
         button.id = `btn-${persoonId}`;
         button.className = 'tab-button';
-        // AANPASSING: Voeg de item-teller toe aan de knoptekst
+        
+        // >> ENIGE VEREISTE AANPASSING: Voeg de item-teller toe aan de knoptekst <<
         button.textContent = `${persoonNaam} (${itemCount} items)`; 
+        
         button.onclick = (e) => openTab(e, `${persoonId}-content`);
         tabNav.appendChild(button);
 
@@ -315,9 +317,6 @@ function generateWishlistContent(data, purchasedItemIds) {
     
     // INVENTARIS CONTENT AANMAKEN (Dit is de tab inhoud)
     generateInventoryContent(listsContainer, data.inventaris_links);
-    
-    // Zorg ervoor dat de overview-content expliciet actief is na het laden van ALLE tabs
-    document.getElementById('overview-content').classList.add("active"); 
 }
 
 
@@ -339,28 +338,22 @@ function loadWishlist() {
         fetch('claims.json')
             .then(res => {
                 if (!res.ok) {
-                    // Als de file niet gevonden wordt (404), val terug op leeg
                     console.warn("claims.json niet gevonden of kon niet geladen worden. Start met lege claims.");
                     return { purchased_items: [] }; 
                 }
-                // Controleer op JSON syntax error
                 return res.json();
             })
             .catch(error => {
-                // Als er een andere fout is (netwerk, JSON parse), val terug op leeg
                 console.error("Fout bij laden van claims.json:", error.message);
                 return { purchased_items: [] }; 
             })
     ])
     .then(([wishlistData, claimsData]) => {
-        // Maak een Set voor snelle lookups van gekochte items
         const purchasedItemIds = new Set(claimsData.purchased_items || []);
         
-        // Genereer de volledige inhoud
         generateWishlistContent(wishlistData, purchasedItemIds); 
         
-        // Extra beveiliging: zorg ervoor dat de Overview-knop actief wordt gemaakt bij start.
-        // Dit is essentieel om te zorgen dat de verticale navigatie correct start.
+        // >> FIX: Zorg dat de Overzichtsknop de 'active' klasse krijgt na het genereren van alle knoppen <<
         const overviewButton = document.getElementById('btn-overview');
         if (overviewButton) {
             overviewButton.classList.add('active');

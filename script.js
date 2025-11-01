@@ -262,11 +262,11 @@ function createWishItemElement(persoonNaam, item, isPurchased) {
         boughtText.textContent = 'Status: 🎁 GEKOCHT';
         leftColumn.appendChild(boughtText);
     } else {
-         leftColumn.appendChild(priceUnderImage);
+        leftColumn.appendChild(priceUnderImage);
     }
     
     leftColumn.appendChild(imgContainer);
-   
+    
     wensItem.appendChild(leftColumn);
     
     // --- RIGHT COLUMN (DESCRIPTION, ACTIONS) ---
@@ -373,7 +373,7 @@ function createOverviewGridItem(persoonNaam, item, isPurchased) {
 }
 
 
-// UPDATE FUNCTIE: Functie om de totale content op te bouwen (NU MET TITELS IN OVERVIEW)
+// ** GEFIXTE FUNCTIE: Functie om de totale content op te bouwen (met titels in overview) **
 function generateWishlistContent(data, purchasedItemIds) { 
     // Hoofdtitel aanpassen
     document.getElementById('main-title').textContent = `🎄🎁 ${data.wenslijst_titel} 🎁🎄`;
@@ -382,10 +382,21 @@ function generateWishlistContent(data, purchasedItemIds) {
     document.getElementById('loading-message').style.display = 'none';
     
     const listsContainer = document.getElementById('person-lists-container');
-    const overviewGrid = document.getElementById('overview-grid-container');
+    const overviewContent = document.getElementById('overview-content'); 
+    const overviewGridContainer = document.getElementById('overview-grid-container'); 
     
-    // Leeg de overview grid zodat we hem opnieuw kunnen opbouwen met titels
-    overviewGrid.innerHTML = '';
+    // Verberg de oorspronkelijke (lege) grid container in de HTML, we bouwen een nieuwe structuur
+    overviewGridContainer.style.display = 'none'; 
+    
+    // Maak een container voor de dynamische overzichtsindeling met titels
+    let dynamicOverviewContent = document.getElementById('dynamic-overview-content');
+    if (!dynamicOverviewContent) {
+        dynamicOverviewContent = document.createElement('div');
+        dynamicOverviewContent.id = 'dynamic-overview-content';
+        // Plaats de nieuwe container direct in overview-content
+        overviewContent.appendChild(dynamicOverviewContent); 
+    }
+    dynamicOverviewContent.innerHTML = ''; // Leeg de nieuwe container
     
     // Genereer navigatie tabs. De tab-nav moet nu de claims kennen.
     generateTabNav(data.personen, data.inventaris_links, purchasedItemIds); 
@@ -395,18 +406,18 @@ function generateWishlistContent(data, purchasedItemIds) {
         const personContent = createPersonTab(persoon, purchasedItemIds); 
         listsContainer.appendChild(personContent);
 
-        // 2. Voeg een titel toe aan de Overview Grid voor de opsplitsing
+        // 2. Voeg een titel toe aan de OVERVIEW CONTENT
         const personTitle = document.createElement('h3');
         personTitle.textContent = `Wensen van ${persoon.naam}`;
-        personTitle.className = 'overview-person-title'; // Nieuwe CSS klasse voor styling
-        overviewGrid.appendChild(personTitle);
+        personTitle.className = 'overview-person-title';
+        dynamicOverviewContent.appendChild(personTitle); 
 
-        // 3. Maak een sub-container voor de items van deze persoon (voor grid layout)
+        // 3. Maak een sub-container voor de items van deze persoon (DEZE KRIJGT NU DE GRID STYLING)
         const personGridSection = document.createElement('div');
-        personGridSection.className = 'person-grid-section';
-        overviewGrid.appendChild(personGridSection);
+        personGridSection.className = 'overview-grid'; // HERGEBRUIK DE BESTAANDE GRID CLASS
+        dynamicOverviewContent.appendChild(personGridSection);
         
-        // 4. Voeg items toe aan de Overview Grid
+        // 4. Voeg items toe aan de nieuwe Grid
         persoon.items.forEach(item => {
             const isPurchased = purchasedItemIds.has(item.id);
             // Geef de status mee aan de functie die de overview grid items maakt

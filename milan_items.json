@@ -49,6 +49,41 @@
           ]
         },
         {
+          "id": "playmobil-politie-commandocentrum-71873",
+          "naam": "PLAYMOBIL City Action - Politie Commandocentrum",
+          "nummer": "71873",
+          "beschrijving": "De vernieuwde Playmobil politiecentrale. Met een cel, controlekamer, wapenkast en helikopterplatform. Inclusief 3 Playmobil figuren (2 agenten, 1 gangster).",
+          "afbeelding_url": "https://media.playmobil.com/i/playmobil/71873_product_box_front?w=810&sm=aspect&aspect=10:7&locale=nl-BE,nl,en,*&fmt=auto&strip=true&qlt=80&unsharp=0,1,0.9,1&fmt.jpeg.interlaced=true",
+          "winkels": [
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71873-playmobil-politie-commandocentrum/02256184", "prijs": "€ 79,99" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/politie-commandocentrum/9300000225695679/?referrer=socialshare_pdp_www", "prijs": "€ 89,99" },
+            { "naam": "Playmobil Direct", "link": "https://www.playmobil.com/nl-nl/politie-commandocentrum/71873.html", "prijs": "€ 109,99" }
+          ]
+        },
+        {
+          "id": "playmobil-achtervolging-politie-pick-up-71875",
+          "naam": "PLAYMOBIL Action Heroes - Achtervolging met politie-pick-up",
+          "nummer": "71875",
+          "beschrijving": "Spannende achtervolgingsset met politie pick-up (met licht en geluid) en een ontsnappende boef op een motor. Inclusief spijkermat en 2 figuren. Het politievoertuig heeft een afneembare laadruimte.",
+          "afbeelding_url": "https://media.playmobil.com/i/playmobil/71875_product_box_front?w=810&sm=aspect&aspect=10:7&locale=nl-BE,nl,en,*&fmt=auto&strip=true&qlt=80&unsharp=0,1,0.9,1&fmt.jpeg.interlaced=true",
+          "winkels": [
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71875-playmobil-achtervolging-met-politie-ophaaldienst/02255941", "prijs": "€ 49,99" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playmobil-action-heroes-achtervolging-met-politie-pick-politie-met-licht-en-geluidseffecten-avontuurlijk-speelgoed-boordevol-actie-voor-kinderen-vanaf-4-jaar-71875/9300000225695669/?referrer=socialshare_pdp_www", "prijs": "€ 54,99" },
+            { "naam": "Playmobil Direct", "link": "https://www.playmobil.com/nl-be/achtervolging-met-politie-ophaaldienst/71875.html", "prijs": "€ 54,99" }
+          ]
+        },
+        {
+          "id": "spiderman-spidey-portemonnee-9300000177459400",
+          "naam": "Spiderman Spidey Portemonnee voor kinderen",
+          "nummer": "9300000177459400",
+          "beschrijving": "Mooie, robuuste portemonnee van Spidey and his Amazing Friends. Ideaal voor het bewaren van zakgeld. Sluit met klittenband.",
+          "afbeelding_url": "https://media.s-bol.com/DLJ69KMQ55AA/W6rM4Rg/550x352.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/spiderman-spidey-portemonnee-voor-kinderen-portemonnee-jongens/9300000177459400/?referrer=socialshare_pdp_www", "prijs": "€ 10,95" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/6EuVJg3", "prijs": "€ 14,03" }
+          ]
+        },
+        {
           "id": "smoby-tefal-keuken-9300000162221385",
           "naam": "Smoby - Tefal Evolutieve Keuken - Speelgoedkeuken",
           "nummer": "9300000162221385",

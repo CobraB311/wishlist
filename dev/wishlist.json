@@ -439,6 +439,16 @@
           "winkels": [
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0Dr2fEt", "prijs": "€ 9,16" }
           ]
+        },
+        {
+          "id": "erzi-groenten-blikje-B000NBC5AE",
+          "naam": "Erzi Houten Groenten in Blikje (Mais, Wortels, Erwten)",
+          "nummer": "18441",
+          "beschrijving": "Set van 3 verschillende houten groenten in een metalen blikje (mais, wortels en erwten). Perfecte aanvulling voor de speelwinkel of speelkeuken van Milan.",
+          "afbeelding_url": "https://m.media-amazon.com/images/I/81NI6ladOrL._AC_SL1500_.jpg",
+          "winkels": [
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/hffjgGP", "prijs": "€ 6,71" }
+          ]
         }
       ]
     }

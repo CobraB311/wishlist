@@ -31,21 +31,44 @@ function openTab(evt, tabId) {
     }
 
     // Activeer de gevraagde tab
-    document.getElementById(tabId).classList.add("active");
-    
+    const targetTab = document.getElementById(tabId);
+    if (targetTab) {
+        targetTab.classList.add("active");
+    } else {
+        console.error(`Tab content met ID ${tabId} niet gevonden.`);
+    }
+
     // Activeer de juiste tab-knop
-    evt.currentTarget.classList.add("active");
+    if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add("active");
+    } else {
+         // Als dit aangeroepen wordt zonder event (bv. bij initialisatie), zoek de knop op ID
+         const buttonId = `btn-${tabId.replace('-content', '')}`;
+         const button = document.getElementById(buttonId);
+         if (button) {
+             button.classList.add('active');
+         }
+    }
     
-    // Scroll naar de bovenkant van de pagina
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll naar de bovenkant van de pagina (na de fixed header)
+    const headerHeight = document.querySelector('.fixed-header').offsetHeight;
+    if (window.innerWidth <= 900) {
+        // Op mobiel: scroll naar de bovenkant van de .page-wrapper
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        // Op desktop (met verticale nav): scroll naar de bovenkant van de inhoud
+         const pageWrapperTop = document.querySelector('.page-wrapper').offsetTop;
+         window.scrollTo({ 
+            top: pageWrapperTop, 
+            behavior: 'smooth' 
+         });
+    }
 }
 
 
-// --- FUNCTIE VOOR HET GENEREREN VAN DE WENSENLIJST CONTENT (ONGECORRIGEERD) ---
+// --- FUNCTIE VOOR HET GENEREREN VAN DE WENSENLIJST CONTENT ---
 
-// (De rest van generateWishlistContent en createWishItemElement blijft hier ongewijzigd)
 function generateWishlistContent(wishlistData, purchasedItemIds) {
-    // ... (deze functie blijft grotendeels hetzelfde, maar is niet volledig weergegeven)
     
     // Bijwerken Hoofdtitel en Datum
     document.getElementById('main-title').innerHTML = `&#127873;&#127873; ${wishlistData.wenslijst_titel} &#127873;&#127873;`;
@@ -59,7 +82,7 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
     
     // Overview knop (altijd aanwezig)
     const overviewButton = document.createElement('button');
-    overviewButton.className = 'tab-button active';
+    overviewButton.className = 'tab-button'; // Start ZONDER active class
     overviewButton.id = 'btn-overview';
     overviewButton.textContent = 'Overzicht';
     overviewButton.onclick = (e) => openTab(e, 'overview-content');
@@ -93,9 +116,13 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
         personList.className = 'wens-lijst';
         personContent.appendChild(personList);
         
-        // Items sorteren op prijs (laag naar hoog), en on-sale items eerst
+        // Items sorteren op prijs (laag naar hoog)
         const sortedItems = [...persoon.items].sort((a, b) => {
-             // Extract prices (assuming price is always the lowest listed price)
+             // Zorg ervoor dat items met een lege winkellijst achteraan komen
+             if (!a.winkels || a.winkels.length === 0) return 1;
+             if (!b.winkels || b.winkels.length === 0) return -1;
+             
+             // Extract prices (assuming price is always the lowest listed price in the first element after sorting)
              const priceA = parseFloat(a.winkels[0].prijs.replace('€', '').replace(',', '.').trim());
              const priceB = parseFloat(b.winkels[0].prijs.replace('€', '').replace(',', '.').trim());
 
@@ -120,12 +147,14 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
         });
     });
     
-    // 3. INVENTARIS LINKS
+    // 3. INVENTARIS LINKS TOEVOEGEN AAN OVERZICHTS PAGINA
+    const overviewContentDiv = document.getElementById('overview-content');
     if (wishlistData.inventaris_links && wishlistData.inventaris_links.length > 0) {
+        
         // Maak de link-sectie in de Overview tab
         const inventoryWrapper = document.createElement('div');
         inventoryWrapper.className = 'inventory-link-section';
-        document.getElementById('overview-content').appendChild(inventoryWrapper);
+        overviewContentDiv.appendChild(inventoryWrapper); // Voeg toe AAN de overview-content
         
         const linkSectionTitle = document.createElement('h2');
         linkSectionTitle.textContent = 'Inventaris Overzichten:';
@@ -157,6 +186,9 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
     // Sorteer allItems (niet-gekochte) items voor de grid op alfabetische naam
     allItems.sort((a, b) => a.item.naam.localeCompare(b.item.naam));
     
+    // Zorg dat de grid container leeg is voordat we hem vullen
+    overviewGridContainer.innerHTML = ''; 
+    
     allItems.forEach(({ item, persoonNaam }) => {
         const gridItem = document.createElement('div');
         gridItem.className = 'overview-grid-item';
@@ -168,15 +200,15 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
              const naamKort = persoonNaam.toLowerCase().replace(/\s/g, '');
              const personButton = document.getElementById(`btn-${naamKort}`);
              if (personButton) {
-                // Simuleer klik om de tab te openen
+                // Simuleer klik om de tab te openen, gebruik 'e' als mock-event
                 openTab({ currentTarget: personButton }, `${naamKort}-list`); 
              }
-             // Scroll naar het item (nodig om op de juiste plaats te komen)
+             // Scroll naar het item 
              setTimeout(() => {
                 const targetItem = document.getElementById(item.id);
                 if (targetItem) {
-                    // Pas de scrollpositie aan zodat het item onder de fixed header komt
-                    const offset = 80; // hoogte van de fixed-header + wat padding
+                    // Bereken de offset op basis van de scrollpositie en de header
+                    const offset = 30; // Extra padding
                     const bodyRect = document.body.getBoundingClientRect().top;
                     const elementRect = targetItem.getBoundingClientRect().top;
                     const elementPosition = elementRect - bodyRect;
@@ -213,11 +245,15 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
     if (loadingMessage) {
         loadingMessage.remove();
     }
+
+    // Activeer de Overview tab bij het starten
+    openTab(null, 'overview-content');
 }
 
 
 // Functie om een individueel wens-item element te creëren
 function createWishItemElement(persoonNaam, item, isPurchased) {
+    // ... (Deze functie blijft ongewijzigd) ...
     const wensItem = document.createElement('div');
     wensItem.id = item.id;
     wensItem.className = 'wens-item';
@@ -287,6 +323,23 @@ function createWishItemElement(persoonNaam, item, isPurchased) {
             return priceA - priceB;
         });
         
+        // CONTROLE OP KAPOTTE LINKS (opgeslagen instructie)
+        let hasBrokenLink = false;
+        sortedWinkels.forEach(winkel => {
+            if (!winkel.link || winkel.link.trim() === '' || !winkel.link.startsWith('http')) {
+                hasBrokenLink = true;
+                console.error(`Kapotte link gevonden voor item ${item.naam} (${winkel.naam})`);
+            }
+        });
+        
+        if (hasBrokenLink) {
+            // Voeg een waarschuwing toe aan de gebruiker op de site
+            const warning = document.createElement('p');
+            warning.textContent = 'Waarschuwing: Er is een ongeldige link gevonden voor dit item. Controleer de JSON.';
+            warning.style.color = 'red';
+            rightColumn.appendChild(warning);
+        }
+
         sortedWinkels.forEach(winkel => {
             const link = document.createElement('a');
             link.href = winkel.link;
@@ -339,6 +392,8 @@ function loadWishlist() {
             })
             .catch(error => {
                 console.error("Fout bij laden van wishlist_data.json:", error.message);
+                // Toon een foutmelding op de pagina als de kritieke file faalt
+                document.getElementById('overview-grid-container').innerHTML = `<p style="color: red; font-weight: bold;">Fout: Hoofdconfiguratie (wishlist_data.json) kon niet geladen worden. ${error.message}</p>`;
                 throw error; // Propagate error
             }),
         fetch('claims.json')
@@ -373,27 +428,37 @@ function loadWishlist() {
                         }
                         return res.json();
                     })
+                    .catch(error => {
+                        console.error(`Fout bij laden van items voor ${person.naam}: ${error.message}`);
+                        // Laat het item fetch falen, de promise.all zal dit opvangen
+                        throw error;
+                    })
             );
             personNames.push(person.naam);
             personIndices[person.naam] = index; // Onthoud de volgorde
         });
 
-        // 2b. Fetch inventaris links
-        fileFetches.push(
-            fetch(mainData.inventaris_links_file)
+        // 2b. Fetch inventaris links (niet-kritiek, kan leeg zijn)
+        let inventoryFetch = Promise.resolve([]); // Default leeg array
+        if (mainData.inventaris_links_file) {
+             inventoryFetch = fetch(mainData.inventaris_links_file)
                 .then(res => {
                     if (!res.ok) {
-                         // Als de links file niet gevonden wordt, val terug op leeg
                          console.warn("inventory_links.json niet gevonden. Start met lege links.");
                          return [];
                     }
                     return res.json();
                 })
-        );
-        
+                .catch(error => {
+                     console.error("Fout bij laden van inventory_links.json:", error.message);
+                     return []; // Ga verder zonder inventaris links
+                });
+        }
+        fileFetches.push(inventoryFetch);
+
         // 3. Wacht op alle afzonderlijke bestanden en herstructureer de data
         return Promise.all(fileFetches).then(results => {
-            // Het laatste resultaat is de inventaris links
+            // Het laatste resultaat is de inventaris links (of een leeg array)
             const inventoryLinks = results.pop(); 
             const personItemLists = results; // De overige zijn de item lijsten
 
@@ -416,20 +481,13 @@ function loadWishlist() {
         const purchasedItemIds = new Set(claimsData.purchased_items || []);
         generateWishlistContent(wishlistData, purchasedItemIds);
         
-        // Extra beveiliging: zorg ervoor dat de Overview-knop actief wordt gemaakt bij start.
-        // Dit is essentieel om te zorgen dat de verticale navigatie correct start.
-        const overviewButton = document.getElementById('btn-overview');
-        if (overviewButton) {
-            overviewButton.classList.add('active');
-        }
+        // Activeer de Overview tab bij het starten (dubbelcheck, al in generateWishlistContent)
+        // openTab(null, 'overview-content');
         
     })
     .catch(error => {
-        console.error("Fout bij laden van data:", error);
-        const container = document.getElementById('overview-grid-container');
-        if (container) {
-            container.innerHTML = '<p style="color: red; font-weight: bold;">Fout: Kon de wensenlijst niet laden. Controleer of de JSON-bestanden correct zijn en op de juiste locatie staan.</p>';
-        }
+        // De kritieke foutafhandeling gebeurt reeds in stap 1.
+        console.error("Onverwachte fout in laadproces:", error);
     });
 }
 

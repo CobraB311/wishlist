@@ -38,14 +38,13 @@ body {
     transform: translate3d(0, 0, 0);
     bottom: 0;
     left: 0;
-    /* De Z-index wordt per golf gedefinieerd om de lagen te creëren */
 }
 
 /* LAAG 1 (Dichtstbij, snelst) */
 .wave1 {
     background: rgb(255 255 255 / 40%); /* Meest helder */
     animation: wave 10s linear infinite;
-    z-index: -10; /* CORRECTIE: Zorgt dat de golf ACHTER alle content zit */
+    z-index: -10; /* Zorgt dat de golf ACHTER alle content zit */
 }
 
 /* LAAG 2 (Midden) */
@@ -69,17 +68,16 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%; /* Maak de header de volledige hoogte voor verticale navigatie */
-    width: 180px; /* Vaste breedte voor het menu */
+    height: 100%; 
+    width: 180px; 
     background: #fff;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     z-index: 1000;
-    overflow-y: auto; /* Zodat het menu kan scrollen bij veel items */
-    padding-top: 10px; /* Top padding voor esthetiek */
+    overflow-y: auto; 
+    padding-top: 10px; 
 }
 
 .header-content {
-    /* Flex om de knoppen verticaal te centreren in de beschikbare ruimte */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -87,7 +85,7 @@ body {
 
 .tab-nav {
     display: flex;
-    flex-direction: column; /* Zorgt ervoor dat de knoppen verticaal staan */
+    flex-direction: column; 
     width: 100%;
 }
 
@@ -95,14 +93,14 @@ body {
     background-color: #f1f1f1;
     color: #333;
     display: block;
-    padding: 15px 15px; /* Iets minder padding rechts om ruimte te maken voor percentage */
+    padding: 15px 15px; 
     border: none;
     text-align: left;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
     border-left: 5px solid transparent;
-    display: flex; /* Zorgt dat de naam en percentage netjes naast elkaar staan */
+    display: flex; 
     justify-content: space-between;
     align-items: center;
 }
@@ -115,7 +113,7 @@ body {
     background-color: #e8f5e9; 
     color: #4CAF50;
     font-weight: bold;
-    border-left: 5px solid #4CAF50; /* Groene balk aan de zijkant */
+    border-left: 5px solid #4CAF50; 
 }
 
 /* STYLING VOOR HET HERSTELDE PERCENTAGE LABEL */
@@ -139,8 +137,8 @@ body {
 /* ALGEMENE LAYOUT (INHOUD) */
 
 .page-wrapper {
-    margin-left: 180px; /* Ruimte aan de linkerkant creëren voor de vaste navigatie */
-    padding: 20px 20px 80px 20px; /* Top, Right, Bottom, Left */
+    margin-left: 180px; 
+    padding: 20px 20px 80px 20px; 
     position: relative;
 }
 
@@ -196,7 +194,6 @@ h1 {
 
 .overview-grid-inner {
     display: grid;
-    /* 3 kolommen voor desktop, met automatische aanpassing */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px;
     padding-bottom: 20px;
@@ -224,7 +221,7 @@ h1 {
 
 .overview-grid-item img {
     max-width: 100%;
-    max-height: 120px; /* Beperk de hoogte voor een uniforme galerij */
+    max-height: 120px; 
     height: auto;
     object-fit: contain;
     border-radius: 4px;
@@ -238,7 +235,6 @@ h1 {
 }
 
 .overview-person {
-    /* Wordt nu niet meer gebruikt in de caption, maar laten we hem staan */
     font-weight: normal;
     color: #777;
     display: block; 
@@ -246,7 +242,7 @@ h1 {
     font-size: 0.85em;
 }
 
-/* WENSENLIJST DETAIL ITEMS (ONGEWIJZIGD) */
+/* WENSENLIJST DETAIL ITEMS */
 
 .wens-lijst {
     display: flex;
@@ -267,11 +263,18 @@ h1 {
 
 .wens-item.purchased {
     background-color: #fcfcfc;
-    opacity: 0.7;
+    /* Opacity op de hele box is verwijderd, de lichte achtergrond blijft */
+}
+
+/* NIEUWE REGEL: Grijze filter op de afbeelding van gekochte items */
+.wens-item.purchased .item-image-container img {
+    filter: grayscale(100%);
+    opacity: 0.5; 
+    transition: filter 0.3s, opacity 0.3s;
 }
 
 .wens-item.highlight {
-    box-shadow: 0 0 10px 3px #90ee90; /* Zachte groene gloed */
+    box-shadow: 0 0 10px 3px #90ee90; 
     transition: box-shadow 0.5s;
 }
 
@@ -286,7 +289,7 @@ h1 {
 
 .item-image-container {
     width: 100%;
-    height: 180px; /* Vaste hoogte voor uniforme uitlijning */
+    height: 180px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,7 +305,7 @@ h1 {
 }
 
 .item-price-under-image {
-    display: block; /* Zichtbaar op desktop onder de afbeelding */
+    display: block; 
     font-size: 1.1em;
     font-weight: bold;
     color: #4CAF50;
@@ -364,7 +367,7 @@ h1 {
 .item-action-area {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Rechts uitlijnen op desktop */
+    justify-content: flex-end; 
     padding-top: 15px;
     border-top: 1px dashed #eee;
 }
@@ -414,7 +417,7 @@ h1 {
 
 /* FOOTER */
 .footer-note {
-    margin-left: 180px; /* Zelfde offset als .page-wrapper */
+    margin-left: 180px; 
     padding: 10px 20px;
     text-align: center;
     font-size: 0.8em;
@@ -429,7 +432,7 @@ h1 {
     /* Schakel over naar mobiele layout */
     
     .fixed-header {
-        position: static; /* Header niet meer vast op mobiel */
+        position: static; 
         width: 100%;
         height: auto;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -441,7 +444,7 @@ h1 {
     }
     
     .tab-nav {
-        flex-direction: row; /* Knoppen terug horizontaal op mobiel */
+        flex-direction: row; 
         overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
@@ -452,7 +455,6 @@ h1 {
         flex-shrink: 0;
         border-left: none;
         border-bottom: 3px solid transparent;
-        /* Geef meer ruimte aan de tab naam op mobiel */
         justify-content: flex-start;
         padding: 15px 10px;
     }
@@ -464,13 +466,12 @@ h1 {
     }
 
     .percentage-bought {
-         /* Op mobiel kleiner, en rechts uitlijnen van de naam */
         margin-left: 5px;
-        order: 2; /* Zorgt dat het percentage na de naam komt */
+        order: 2; 
     }
 
     .page-wrapper {
-        margin-left: 0; /* Volledige breedte op mobiel */
+        margin-left: 0; 
         padding: 10px;
     }
     
@@ -530,7 +531,6 @@ h1 {
     }
     
     .winkel-links {
-        /* Op mobiel de volle breedte gebruiken */
         max-width: 100%; 
         justify-content: space-around; 
         margin-bottom: 15px;

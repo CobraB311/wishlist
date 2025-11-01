@@ -24,9 +24,10 @@
           "beschrijving": "Een exclusieve set van 5 Hot Wheels F1-racewagens op schaal 1:64 van legendarische teams (McLaren, BWT Alpine, Visa Cash App RB, KICK Sauber en MoneyGram Haas). Must-have voor verzamelaars en jonge snelheidsduivels.",
           "afbeelding_url": "https://www.dreamland.be/media/cache/default_gallery_main_webp/media/image/02257006/02257006_001.1344d7a1.webp",
           "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/hot-wheels-formula-1-race-team-5-car-pack/9300000222631510/", "prijs": "€ 8,99" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", "prijs": "€ 9,99" },
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/8vUwMZV", "prijs": "€ 10,99" },
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/1ApoeJ4", "prijs": "€ 12,99" },
-            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", "prijs": "€ 9,99" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/hot-wheels-formule-1-5-f1-auto-s-32065562", "prijs": "€ 13,99" }
           ]
         },
@@ -330,6 +331,9 @@
           "beschrijving": "Werk samen met Rocky voor spannende reddingsavonturen! Vuilniswagen (ruim 17 cm) met superslank ontwerp, beweegbare recyclerarmen, en licht- en geluidseffecten.",
           "afbeelding_url": "https://media.s-bol.com/77R3JlXr1ljy/rAmQGw/550x565.jpg",
           "winkels": [
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/dAqj4WW", "prijs": "€ 14,31" },
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/paw-patrol-the-mighty-movie-voertuig-met-pup-rocky/01726992", "prijs": "€ 19,49" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/igLvCdp", "prijs": "€ 22,97" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-mighty-movie-vuilniswagen-met-rocky-actiefiguur-licht-en-geluid/9300000145001045/?referrer=socialshare_pdp_www", "prijs": "€ 26,99" }
           ]
         }

@@ -330,5 +330,25 @@
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/igLvCdp", "prijs": "€ 22,97" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-mighty-movie-vuilniswagen-met-rocky-actiefiguur-licht-en-geluid/9300000145001045/?referrer=socialshare_pdp_www", "prijs": "€ 26,99" }
           ]
+        },
+        {
+          "id": "paw-patrol-stempels-9300000114581267",
+          "naam": "PAW Patrol Stempels (Set van 6)",
+          "nummer": "9300000114581267",
+          "beschrijving": "Set van 6 zelfinktende stempels met populaire Paw Patrol figuren. Ideaal om creatieve tekeningen en knutselwerkjes op te fleuren.",
+          "afbeelding_url": "https://media.s-bol.com/K90WrVv0WQ2n/pYmG1p/970x1200.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-stempels/9300000114581267/?referrer=socialshare_pdp_www", "prijs": "€ 7,99" }
+          ]
+        },
+        {
+          "id": "carioca-stempelstift-superwashable-9200000055975554",
+          "naam": "Carioca Stempelstift Superwashable (12 Stiften)",
+          "nummer": "9200000055975554",
+          "beschrijving": "Set van 12 super uitwasbare viltstiften met een stempel aan de achterkant van elke stift. Inclusief verschillende leuke figuurtjes. Perfect voor creatief speelplezier zonder vlekken.",
+          "afbeelding_url": "https://media.s-bol.com/JYn940kKOXQg/NxWM1Ev/550x418.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/carioca-stempelstift-superwashable-12-stiften/9200000055975554/?referrer=socialshare_pdp_www", "prijs": "€ 8,95" }
+          ]
         }
       ]

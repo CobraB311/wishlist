@@ -38,14 +38,14 @@ body {
     transform: translate3d(0, 0, 0);
     bottom: 0;
     left: 0;
-    z-index: -1;
+    /* De Z-index wordt per golf gedefinieerd om de lagen te creëren */
 }
 
 /* LAAG 1 (Dichtstbij, snelst) */
 .wave1 {
     background: rgb(255 255 255 / 40%); /* Meest helder */
     animation: wave 10s linear infinite;
-    z-index: 0; /* Z-index 0, het dichtst bij de kijker */
+    z-index: -10; /* CORRECTIE: Zorgt dat de golf ACHTER alle content zit */
 }
 
 /* LAAG 2 (Midden) */
@@ -53,7 +53,7 @@ body {
     background: rgb(255 255 255 / 25%);
     animation: wave 12s linear infinite; /* Langzamer */
     animation-delay: -2s; /* Start met een vertraging */
-    z-index: -1;
+    z-index: -11; /* Nog verder naar achteren */
 }
 
 /* LAAG 3 (Verst weg, langzaamst) */
@@ -61,7 +61,7 @@ body {
     background: rgb(255 255 255 / 10%); /* Meest subtiel */
     animation: wave 14s linear infinite; /* Nog langzamer */
     animation-delay: -5s;
-    z-index: -2;
+    z-index: -12; /* Het verst naar achteren */
 }
 
 /* VASTE HEADER (VERTIKALE NAVIGATIE) */

@@ -8,7 +8,7 @@ function claimItem(persoonNaam, itemName, itemId) {
     
     const subject = `BEVESTIGING: Cadeau Gekocht voor ${persoonNaam} - ${itemName}`;
     
-    // De NIEUWE, VEREENVOUDIGDE mail body:
+    // De VEREENVOUDIGDE mail body:
     const body = `Beste wensenlijstbeheerder,\n\nIk heb het volgende cadeau gekocht van de wensenlijst:\n\nPersoon: ${persoonNaam}\nItem: ${itemName}\nID: ${itemId}\n\nBedankt voor het bijhouden van deze lijst!\n\nMet vriendelijke groeten,\n[Uw Naam]`;
     
     // Gebruik window.location.href om de mailto link te openen
@@ -97,8 +97,8 @@ function calculatePurchasePercentage(items, purchasedItemIds) {
 function generateWishlistContent(wishlistData, purchasedItemIds) {
     
     // Bijwerken Hoofdtitel en Datum
-    // HIER WORDEN DE EMOJI'S TOEGEVOEGD AAN DE JSON TITEL
-    document.getElementById('main-title').innerHTML = `&#127873;&#127873; ${wishlistData.wenslijst_titel} &#127873;&#127873;`;
+    // HIER IS DE CORRECTIE: 🎄=&#127876; en 🎁=&#127873;
+    document.getElementById('main-title').innerHTML = `&#127876;&#127873; ${wishlistData.wenslijst_titel} &#127873;&#127876;`;
     document.getElementById('last-update-text').textContent = `Laatste update: ${wishlistData.datum}`;
 
     const dynamicTabNav = document.getElementById('dynamic-tab-nav');

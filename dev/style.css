@@ -132,36 +132,39 @@ body {
     margin-left: 180px; 
     padding: 20px 20px 80px 20px; 
     position: relative;
-    box-sizing: border-box; /* Belangrijk voor padding/width berekeningen */
-    min-height: 100vh; /* Zonder banner, moet de volledige hoogte vullen */
+    box-sizing: border-box; 
+    min-height: 100vh; 
 }
 
-.container {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
+/* AANGEPAST: title-container styling */
 .title-container {
     margin-bottom: 20px;
     text-align: center;
-    padding: 20px 0; /* Terug naar normale padding */
-    background-color: #fff; /* Terug naar normale achtergrond */
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.85); /* Licht transparant wit */
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Terug naar normale schaduw */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); 
 }
 
+/* AANGEPAST: h1 styling */
 h1 {
     font-size: 2.5em;
-    color: #4CAF50;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #b71c1c; /* Diep rood voor feestelijk tintje */
+    text-shadow: none; /* Geen schaduw meer voor strakkere look */
 }
 
 .last-update {
     font-size: 0.9em;
-    color: #777;
-    margin-bottom: 30px; /* Terug naar normale marge */
+    color: #555; 
+    margin-bottom: 30px; 
+}
+
+/* AANGEPAST: container styling */
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Iets meer dekkend wit */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* TAB INHOUD (WENSENLIJSTEN EN OVERZICHT) */
@@ -470,7 +473,7 @@ h1 {
     .page-wrapper {
         margin-left: 0; 
         padding: 10px;
-        min-height: 100vh; /* Volledige hoogte, geen banner meer bovenaan */
+        min-height: 100vh; 
     }
     
     .title-container {
@@ -479,8 +482,8 @@ h1 {
     
     h1 {
         font-size: 2em;
-        color: #333; 
-        text-shadow: none;
+        color: #b71c1c; /* Ook op mobiel rood */
+        text-shadow: none; 
     }
     
     /* Detail Items passen zich aan voor mobiel */
@@ -550,4 +553,3 @@ h1 {
     .overview-grid-inner {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-}

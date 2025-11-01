@@ -376,22 +376,10 @@
           ]
         },
         {
-          "id": "set-milan-71859",
-          "naam": "PLAYMOBIL X Porsche Carrera GT",
-          "nummer": "71859",
-          "beschrijving": "Een must-have voor snelheidsfans! Deze PLAYMOBIL-set brengt droomauto's tot leven. De sportwagen heeft een afneembaar dak en bevat een Playmobil-coureur. Perfect voor supersnel speelplezier of als cool pronkstuk in de collectie.",
-          "afbeelding_url": "https://media.playmobil.com/i/playmobil/71859_product_box_front?w=810&sm=aspect&aspect=10:7&locale=nl-BE,nl,en,*&fmt=auto&strip=true&qlt=80&unsharp=0,1,0.9,1&fmt.jpeg.interlaced=true",
-          "winkels": [
-            { "naam": "Playmobil Shop BE", "link": "https://www.playmobil.com/nl-be/playmobil-x-porsche-carrera-gt/71859.html", "prijs": "€ 19,99" },
-            { "naam": "SupraBazar", "link": "https://www.suprabazar.be/playmobil-cars-71859-playmobil-x-porsche-carrera-gt-32085260", "prijs": "€ 19,99" },
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playmobil-x-porsche-carrera-gt/9300000225695650/", "prijs": "€ 22,99" }
-          ]
-        },
-        {
-          "id": "smoby-tefal-keuken-9300000162221385",
-          "naam": "Smoby - Tefal Evolutieve Keuken - Speelgoedkeuken",
-          "nummer": "9300000162221385",
-          "beschrijving": "Een moderne, evolutieve speelkeuken van Smoby Tefal die meegroeit met uw kind. Met elektronische geluidsmodule, hittegevoelige pasta, snijdbare wortel en pannenkoekenflipfunctie.",
+          "id": "smoby-tefal-evolutieve-keuken-9300000162221385",
+          "naam": "Smoby Tefal Evolutieve Keuken (Met waterfunctie)",
+          "nummer": "311054",
+          "beschrijving": "Grote keuken met 34 accessoires, elektronische geluidsmodule, hittegevoelige pasta, snijdbare wortel en pannenkoekenflipfunctie.",
           "afbeelding_url": "https://media.s-bol.com/9wL7rx32xLZx/yPBVNDg/550x515.jpg",
           "winkels": [
             { "naam": "Amazon.nl", "link": "https://amzn.eu/d/4VV1YQ3", "prijs": "€ 99,99" },
@@ -411,32 +399,6 @@
           ]
         }
       ]
-    }
-  ],
-  "inventaris_links": [
-    {
-      "naam": "LEGO/DUPLO Collectie (Google Foto's)",
-      "url": "https://photos.app.goo.gl/qd9eLbo6VPKxKYts6"
-    },
-    {
-      "naam": "Mattel",
-      "url": "https://photos.app.goo.gl/eBfxZGvJrKetJS9c9"
-    },
-    {
-      "naam": "Pokémon Battle Figures & Pluche",
-      "url": "https://photos.app.goo.gl/4XTUtRCfDkrZG5eG9"
-    },
-    {
-      "naam": "Disney Cars - Mattel Collection",
-      "url": "https://photos.app.goo.gl/3eiVHnfaQJhQyejo7"
-    },
-    {
-      "naam": "Disney Cars Mini Racers - Mattel Collection",
-      "url": "https://photos.app.goo.gl/8sTBHVBNXPUUjZVT6"
-    },
-    {
-      "naam": "Cadeau's in stock",
-      "url": "https://photos.app.goo.gl/UqKxdh8KNGxmNnzs5"
     }
   ]
 }

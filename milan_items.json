@@ -168,5 +168,27 @@
           "winkels": [
             { "naam": "HEMA", "link": "https://www.hema.com/nl-be/vrije-tijd/knutselen-handwerken/knutselen/stempelset-cijfers-15900239.html", "prijs": "€ 3,39" }
           ]
+        },
+        {
+          "id": "stitch-stempel-set-met-kinderklei-9300000238168541",
+          "naam": "Stitch Stempel Set met Kinderklei (15x)",
+          "nummer": "9300000238168541",
+          "beschrijving": "Lilo & Stitch stempelset met 15 onderdelen, inclusief 6 stempels, 6 potjes klei en 3 kleigereedschappen. Stimuleert de creativiteit en fijne motoriek.",
+          "afbeelding_url": "https://media.s-bol.com/g4vxYWqgnjA6/r0gj4OB/550x323.jpg",
+          "winkels": [
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/stitch-stempel-set-met-kinderklei/02462311", "prijs": "€ 12,95" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/stitch-stempel-set-met-kinderklei-stamp-set-15x-lilo-en-stitch/9300000238168541/?referrer=socialshare_pdp_www", "prijs": "€ 14,99" }
+          ]
+        },
+        {
+          "id": "bumba-activity-center-autosleutels-9300000229826529",
+          "naam": "Bumba Activity Center - Mijn Eerste Autosleutels",
+          "nummer": "9300000229826529",
+          "beschrijving": "Activity center in de vorm van autosleutels met licht en geluid van Bumba en zijn vriendjes. Geschikt voor de allerkleinsten om de zintuigen en fijne motoriek te stimuleren.",
+          "afbeelding_url": "https://media.s-bol.com/q0B1g4M2BNWr/o2EM5BK/550x786.jpg",
+          "winkels": [
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/bumba-mijn-eerste-autosleutels/02254128", "prijs": "€ 13,99" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/bumba-activity-center-mijn-eerste-autosleutels/9300000229826529/?referrer=socialshare_pdp_www", "prijs": "€ 19,95" }
+          ]
         }
       ]

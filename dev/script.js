@@ -1,12 +1,15 @@
 // E-MAILADRES VAN DE BEHEERDER/ONTVANGER (OPGESLAGEN INFORMATIE)
-const recipientEmail = 'bernaertruben@hotmail.com'; 
+const recipientEmail = 'bernaertruben@hotmail.com'; // Gebruikt opgeslagen e-mailadres
 
 // --- FUNCTIES VOOR CLAIMING ---
 
-// Functie om de gebruiker een e-mail te laten sturen voor het claimen
+// Functie om de gebruiker een e-mail te laten sturen voor het melden van de aankoop
 function claimItem(persoonNaam, itemName, itemId) {
-    const subject = `Claim: Cadeau voor ${persoonNaam} - ${itemName}`;
-    const body = `Beste wensenlijstbeheerder,\n\nIk wil graag het volgende cadeau claimen:\n\nPersoon: ${persoonNaam}\nItem: ${itemName}\nID: ${itemId}\n\nGelieve mij te laten weten of dit item nog beschikbaar is. Bedankt!\n\nMet vriendelijke groeten,`;
+    
+    const subject = `BEVESTIGING: Cadeau Gekocht voor ${persoonNaam} - ${itemName}`;
+    
+    // De NIEUWE, VEREENVOUDIGDE mail body:
+    const body = `Beste wensenlijstbeheerder,\n\nIk heb het volgende cadeau gekocht van de wensenlijst:\n\nPersoon: ${persoonNaam}\nItem: ${itemName}\nID: ${itemId}\n\nBedankt voor het bijhouden van deze lijst!\n\nMet vriendelijke groeten,\n[Uw Naam]`;
     
     // Gebruik window.location.href om de mailto link te openen
     window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -40,7 +43,7 @@ function openTab(evt, tabId) {
 
     // Activeer de juiste tab-knop
     if (evt && evt.currentTarget) {
-        evt.currentTarget.classList.add("active");
+        evt.currentTarget.classList.add('active');
     } else {
          // Als dit aangeroepen wordt zonder event (bv. bij initialisatie), zoek de knop op ID
          const buttonId = `btn-${tabId.replace('-content', '').replace('-list', '')}`;
@@ -94,6 +97,7 @@ function calculatePurchasePercentage(items, purchasedItemIds) {
 function generateWishlistContent(wishlistData, purchasedItemIds) {
     
     // Bijwerken Hoofdtitel en Datum
+    // HIER WORDEN DE EMOJI'S TOEGEVOEGD AAN DE JSON TITEL
     document.getElementById('main-title').innerHTML = `&#127873;&#127873; ${wishlistData.wenslijst_titel} &#127873;&#127873;`;
     document.getElementById('last-update-text').textContent = `Laatste update: ${wishlistData.datum}`;
 
@@ -262,10 +266,6 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
                     if (targetItem) {
                         // Bereken de offset op basis van de scrollpositie en de header
                         const offset = 30; // Extra padding
-                        const pageWrapper = document.querySelector('.page-wrapper');
-                        
-                        // We scrollen nu binnen het venster, niet binnen de pageWrapper.
-                        // offsetTop geeft de positie ten opzichte van de top van het document.
                         const targetPosition = targetItem.getBoundingClientRect().top + window.scrollY - offset;
 
                         window.scrollTo({

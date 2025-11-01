@@ -374,7 +374,6 @@ function createOverviewGridItem(persoonNaam, item, isPurchased) {
 
 
 // UPDATE FUNCTIE: Functie om de totale content op te bouwen (NU MET TITELS IN OVERVIEW)
-// Functie verwacht nu de inventaris links als aparte parameter, maar we injecteren het voor de zekerheid in de 'data'
 function generateWishlistContent(data, purchasedItemIds) { 
     // Hoofdtitel aanpassen
     document.getElementById('main-title').textContent = `🎄🎁 ${data.wenslijst_titel} 🎁🎄`;
@@ -389,7 +388,6 @@ function generateWishlistContent(data, purchasedItemIds) {
     overviewGrid.innerHTML = '';
     
     // Genereer navigatie tabs. De tab-nav moet nu de claims kennen.
-    // data.inventaris_links is nu ingevuld met de data uit inventory.json
     generateTabNav(data.personen, data.inventaris_links, purchasedItemIds); 
     
     data.personen.forEach(persoon => {
@@ -422,55 +420,38 @@ function generateWishlistContent(data, purchasedItemIds) {
 }
 
 
-// --- INITIALISATIE (NU MET CLAIMS.JSON EN INVENTORY.JSON) ---
+// --- INITIALISATIE (NU MET CLAIMS.JSON) ---
 
 // UPDATE FUNCTIE: Functie om de JSON te laden en de pagina op te bouwen
 function loadWishlist() {
-    // Haal wishlist.json, claims.json en inventory.json tegelijk op
+    // Haal zowel wishlist.json als claims.json tegelijk op
     Promise.all([
-        // 1. Fetch wishlist.json
         fetch('wishlist.json').then(res => {
             if (!res.ok) throw new Error('Kon wishlist.json niet laden: ' + res.statusText);
             return res.json();
         }),
-        
-        // 2. Fetch claims.json (optioneel)
+        // claims.json is optioneel, als het faalt, gebruiken we een lege claims lijst
         fetch('claims.json')
             .then(res => {
                 if (!res.ok) {
+                    // Als de file niet gevonden wordt (404), val terug op leeg
                     console.warn("claims.json niet gevonden of kon niet geladen worden. Start met lege claims.");
                     return { purchased_items: [] }; 
                 }
+                // Controleer op JSON syntax error
                 return res.json();
             })
             .catch(error => {
+                // Als er een andere fout is (netwerk, JSON parse), val terug op leeg
                 console.error("Fout bij laden van claims.json:", error.message);
                 return { purchased_items: [] }; 
-            }),
-            
-        // 3. Fetch inventory.json (optioneel)
-        fetch('inventory.json')
-            .then(res => {
-                if (!res.ok) {
-                    console.warn("inventory.json niet gevonden of kon niet geladen worden. Start met lege inventaris.");
-                    return { inventaris_links: [] }; 
-                }
-                return res.json();
             })
-            .catch(error => {
-                console.error("Fout bij laden van inventory.json:", error.message);
-                return { inventaris_links: [] };
-            })
-            
     ])
-    .then(([wishlistData, claimsData, inventoryData]) => {
+    .then(([wishlistData, claimsData]) => {
         // Maak een Set voor snelle lookups van gekochte items
         const purchasedItemIds = new Set(claimsData.purchased_items || []);
         
-        // Voeg de inventaris links toe aan de wishlistData structuur (nodig voor generateWishlistContent)
-        wishlistData.inventaris_links = inventoryData.inventaris_links || [];
-        
-        generateWishlistContent(wishlistData, purchasedItemIds); // Geef de gecombineerde data mee
+        generateWishlistContent(wishlistData, purchasedItemIds); // Geef de claims mee
     })
     .catch(error => {
         console.error("Fout bij laden van data:", error);

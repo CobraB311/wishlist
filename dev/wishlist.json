@@ -411,20 +411,20 @@
           ]
         },
         {
-          "id": "erzi-snijset-mes-snijplank-B079VT2C5Y",
-          "naam": "Erzi Houten Snijset (Mes en Snijplank)",
-          "nummer": "B079VT2C5Y",
-          "beschrijving": "Set van houten speeleten van Erzi, bestaande uit een snijplank en een houten mes. Stimuleert de fijne motoriek.",
+          "id": "erzi-ERZI28218",
+          "naam": "Erzi party-assortiment voor kinderen, meerkleurig",
+          "nummer": "ERZI28218",
+          "beschrijving": "Materiaal: beuken, gekleurd gelakt",
           "afbeelding_url": "https://m.media-amazon.com/images/I/91dZtEWCTHL._AC_SY450_.jpg",
           "winkels": [
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bCXpbqu", "prijs": "€ 22,05" }
           ]
         },
         {
-          "id": "erzi-broodmandje-B09HS79DCB",
-          "naam": "Erzi Broodmandje met 8 houten delen",
-          "nummer": "B09HS79DCB",
-          "beschrijving": "Houten broodmandje van Erzi, gevuld met 8 verschillende houten broodjes. Ideaal voor de speelkeuken of de winkel. Stimuleert rollenspel en de fijne motoriek.",
+          "id": "erzi-17171",
+          "naam": "Erzi Houten pasta in doos",
+          "nummer": "17171",
+          "beschrijving": "12 schuin gesneden houten pasta in een kleurrijke bedrukte doos om te spelen.",
           "afbeelding_url": "https://m.media-amazon.com/images/I/81sgJ-VmTyL._AC_SL1500_.jpg",
           "winkels": [
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/ipnMEZM", "prijs": "€ 6,71" }
@@ -448,6 +448,56 @@
           "afbeelding_url": "https://m.media-amazon.com/images/I/81NI6ladOrL._AC_SL1500_.jpg",
           "winkels": [
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/hffjgGP", "prijs": "€ 6,71" }
+          ]
+        },
+        {
+          "id": "dreamland-kookpotten-keukenaccessoires-01611687",
+          "naam": "Kookpotten en keukenaccessoires 13 delig",
+          "nummer": "01611687",
+          "beschrijving": "13-delige kookpotten speelset om meteen de keuken in te duiken. Pannen, deksels en kookaccessoires voor eindeloos veel culinaire speelpret. Geschikt vanaf 3 jaar.",
+          "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
+          "winkels": [
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687", "prijs": "€ 19,99" }
+          ]
+        },
+        {
+          "id": "klein-bosch-broodrooster-01473193",
+          "naam": "Klein Bosch Broodrooster (Speelgoed)",
+          "nummer": "01473193",
+          "beschrijving": "Mechanisch speelgoedbroodrooster in Bosch-design van Theo Klein. Zodra je op de knop drukt, gaat het speelgoedbrood omlaag en schiet het later automatisch omhoog met een mechanisch geluid, net als een echte. Wordt geleverd met twee sneetjes speelgoedbrood. Geschikt voor kinderen vanaf 3 jaar.",
+          "afbeelding_url": "https://www.dreamland.be/media/image/01473193/01473193_003.jpg",
+          "winkels": [
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/bosch-broodrooster/01473193", "prijs": "€ 11,95" }
+          ]
+        },
+        {
+          "id": "joustra-stempelset-dieren-alfabet-02050614",
+          "naam": "Joustra Stempelset Dieren en Alfabet",
+          "nummer": "02050614",
+          "beschrijving": "Creatieve set met stempels van alle letters van het alfabet en diverse leuke diertjes. De stempels hebben verschillende kleuren en de inkt is gemakkelijk afwasbaar. Kies een stempel uit en ga aan de slag. Geschikt vanaf 3 jaar.",
+          "afbeelding_url": "https://www.dreamland.be/media/image/02050614/02050614_001.jpg",
+          "winkels": [
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/joustra-stempelset-dieren-en-alfabet/02050614", "prijs": "€ 18,95" }
+          ]
+        },
+        {
+          "id": "friteuse-dreamland-00970785",
+          "naam": "Friteuse (Speelgoed) met geluid en timer",
+          "nummer": "00970785",
+          "beschrijving": "Friteuse met realistische geluiden en timer functie. Inclusief frietjes voor extra speelplezier. Opgepast: niet geschikt voor kinderen onder de 3 jaar (verstikkingsgevaar). Materiaal: Plastic. Kleur: Rood. Werkt op: 3 x AA-E batterijen (niet inbegrepen).",
+          "afbeelding_url": "https://www.dreamland.be/media/image/00970785/00970785_001.jpg",
+          "winkels": [
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/friteuse/00970785", "prijs": "€ 24,99 (Online tijdelijk uitverkocht)" }
+          ]
+        },
+        {
+          "id": "stempelset-cijfers-hema-15900239",
+          "naam": "Stempelset Cijfers (9 stempels)",
+          "nummer": "15900239",
+          "beschrijving": "Met deze stempelset met cijfers kunnen kinderen vertrouwd raken met cijfers en rekenen. De set bevat 9 stempels, ideaal voor creatief leren en spelenderwijs kennismaken met getallen. Waarschuwing: Niet geschikt voor kinderen jonger dan 3 jaar (Kleine onderdelen, verstikkingsgevaar).",
+          "afbeelding_url": "https://www.hema.com/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwa2284737/product/15900239_01_001.jpg?sw=1095&sh=1242&sm=fit&sfrm=png&bgcolor=F5F5F5",
+          "winkels": [
+            { "naam": "HEMA", "link": "https://www.hema.com/nl-be/vrije-tijd/knutselen-handwerken/knutselen/stempelset-cijfers-15900239.html", "prijs": "€ 3,39" }
           ]
         }
       ]

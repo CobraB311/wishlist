@@ -419,6 +419,16 @@
           "winkels": [
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bCXpbqu", "prijs": "€ 22,05" }
           ]
+        },
+        {
+          "id": "erzi-broodmandje-B09HS79DCB",
+          "naam": "Erzi Broodmandje met 8 houten delen",
+          "nummer": "B09HS79DCB",
+          "beschrijving": "Houten broodmandje van Erzi, gevuld met 8 verschillende houten broodjes. Ideaal voor de speelkeuken of de winkel. Stimuleert rollenspel en de fijne motoriek.",
+          "afbeelding_url": "https://m.media-amazon.com/images/I/81sgJ-VmTyL._AC_SL1500_.jpg",
+          "winkels": [
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/ipnMEZM", "prijs": "€ 6,71" }
+          ]
         }
       ]
     }

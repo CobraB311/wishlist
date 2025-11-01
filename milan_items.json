@@ -175,16 +175,6 @@
           ]
         },
         {
-          "id": "joustra-stempelset-dieren-alfabet-02050614",
-          "naam": "Joustra Stempelset Dieren en Alfabet",
-          "nummer": "02050614",
-          "beschrijving": "Creatieve set met stempels van alle letters van het alfabet en diverse leuke diertjes. De stempels hebben verschillende kleuren en de inkt is gemakkelijk afwasbaar. Kies een stempel uit en ga aan de slag. Geschikt vanaf 3 jaar.",
-          "afbeelding_url": "https://www.dreamland.be/media/image/02050614/02050614_001.jpg",
-          "winkels": [
-            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/joustra-stempelset-dieren-en-alfabet/02050614", "prijs": "€ 18,95" }
-          ]
-        },
-        {
           "id": "friteuse-dreamland-00970785",
           "naam": "Friteuse (Speelgoed) met geluid en timer",
           "nummer": "00970785",
@@ -192,16 +182,6 @@
           "afbeelding_url": "https://www.dreamland.be/media/image/00970785/00970785_001.jpg",
           "winkels": [
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/friteuse/00970785", "prijs": "€ 24,99" }
-          ]
-        },
-        {
-          "id": "stempelset-cijfers-hema-15900239",
-          "naam": "Stempelset Cijfers (9 stempels)",
-          "nummer": "15900239",
-          "beschrijving": "Met deze stempelset met cijfers kunnen kinderen vertrouwd raken met cijfers en rekenen. De set bevat 9 stempels, ideaal voor creatief leren en spelenderwijs kennismaken met getallen. Waarschuwing: Niet geschikt voor kinderen jonger dan 3 jaar (Kleine onderdelen, verstikkingsgevaar).",
-          "afbeelding_url": "https://www.hema.com/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwa2284737/product/15900239_01_001.jpg?sw=1095&sh=1242&sm=fit&sfrm=png&bgcolor=F5F5F5",
-          "winkels": [
-            { "naam": "HEMA", "link": "https://www.hema.com/nl-be/vrije-tijd/knutselen-handwerken/knutselen/stempelset-cijfers-15900239.html", "prijs": "€ 3,39" }
           ]
         },
         {
@@ -224,6 +204,17 @@
           "winkels": [
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/bumba-mijn-eerste-autosleutels/02254128", "prijs": "€ 13,99" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/bumba-activity-center-mijn-eerste-autosleutels/9300000229826529/?referrer=socialshare_pdp_www", "prijs": "€ 19,95" }
+          ]
+        },
+        {
+          "id": "little-dutch-koffertjes-forest-friends-9300000181455728",
+          "naam": "Little Dutch Koffertjes Forest Friends (set van 2)",
+          "nummer": "9300000181455728",
+          "beschrijving": "Set van twee kinderkoffertjes in het Forest Friends-thema, met vos illustraties. Perfect voor het opbergen van kleine schatten of om speelgoed mee te nemen op reis. Met metalen greep en slotje.",
+          "afbeelding_url": "https://media.s-bol.com/3xxBm18nAlnr/gJ71Jjl/550x365.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/little-dutch-koffertjes-forest-friends-fsc/9300000181455728/?referrer=socialshare_pdp_www", "prijs": "€ 17,95" },
+            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/little-dutch-kofferset-2-in-1-forest-friends-fsc/01811315", "prijs": "€ 17,95" }
           ]
         }
       ]

@@ -4,7 +4,7 @@ body {
     color: #333;
     margin: 0; 
     padding: 0; 
-    overflow-x: hidden;
+    overflow-x: hidden; /* Belangrijk om horizontale scrollbars door de golven te voorkomen */
     min-height: 100vh;
     scroll-behavior: smooth; 
     
@@ -32,112 +32,102 @@ body {
     transform: translate3d(0, 0, 0);
     opacity: 0.8;
     bottom: 0;
-    left: -50%;
+    left: 0;
     z-index: -1;
 }
 
-.wave:nth-of-type(2) {
-    bottom: -1.25em;
-    animation: wave 18s linear reverse infinite;
-    opacity: 0.8;
-}
-
-.wave:nth-of-type(3) {
-    bottom: -2.5em;
-    animation: wave 20s -1s linear infinite;
-    opacity: 0.8;
-}
-
 @keyframes wave {
-    0% { transform: translateX(0) }
-    100% { transform: translateX(50%) }
+    0% { transform: translateX(0) translateZ(0) scaleY(1); }
+    50% { transform: translateX(-25%) translateZ(0) scaleY(0.8); }
+    100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
 }
 
-/* --- HOOFD LAYOUT & HEADER (Verticale Navigatie) --- */
-
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0; 
-    height: 100%;
-    width: 220px; 
-    background-color: #fff;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-    padding-top: 20px;
-    box-sizing: border-box;
-}
-
-.header-content {
-    padding: 10px 0;
-}
-
-.tab-nav {
-    display: flex;
-    flex-direction: column; 
-}
-
-.tab-button {
-    background-color: #f1f1f1;
-    color: #444;
-    padding: 12px 15px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 1em;
-    font-weight: 500;
-    white-space: nowrap; 
-}
-
-.tab-button:hover:not(.active) {
-    background-color: #ddd;
-}
-
-.tab-button.active {
-    background-color: #4CAF50; 
-    color: white;
-    font-weight: bold;
-}
-
+/* GLOBALE LAYOUT */
 .page-wrapper {
-    margin-left: 220px; 
+    padding-top: 80px; /* Ruimte voor de fixed header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    padding-top: 40px; 
-    min-height: 100vh;
-    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-height: calc(100vh - 100px); /* Zorg dat de container minstens de pagina vult */
 }
 
 .title-container {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 h1 {
     font-size: 2.5em;
-    color: #fff; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    margin: 0;
-    padding-bottom: 10px;
+    color: #fff; /* Wit op de gradient */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0 0 10px 0;
+    padding-top: 20px;
 }
 
 .last-update {
-    color: #eee;
     font-style: italic;
-    margin-top: 5px;
+    color: #ddd;
+    margin-bottom: 0;
 }
 
-.container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+/* --- VERTICAL TAB NAVIGATIE STYLING --- */
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Witte achtergrond voor de nav */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* --- TAB CONTENT --- */
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.tab-nav {
+    display: flex; /* Horizontale nav op desktop */
+    flex-wrap: wrap;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: #555;
+    transition: color 0.3s, border-bottom 0.3s;
+    margin-right: 5px;
+    margin-bottom: -2px; /* Om de lijn te overlappen */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-button:hover,
+.tab-button.active {
+    color: #3182CE; /* Blauw */
+    border-bottom: 2px solid #3182CE;
+    font-weight: 600;
+}
+
+/* --- CONTENT CONTAINERS --- */
+
 .tab-content {
     display: none;
+    padding-top: 20px;
     animation: fadeIn 0.5s;
 }
 
@@ -150,367 +140,234 @@ h1 {
     to { opacity: 1; }
 }
 
-h2 {
-    color: #333;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-}
-
-/* --- WENS ITEM DETAIL VIEW --- */
-.wens-item {
-    display: flex;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.left-column {
-    width: 30%;
-    margin-right: 20px;
-    border-right: 1px solid #eee;
-    padding-right: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.item-image-container {
-    width: 100%;
-    height: 180px; 
-    overflow: hidden;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f8f8;
-}
-
-.item-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
-    transition: transform 0.3s ease;
-}
-
-.item-image-container img:hover {
-    transform: scale(1.05);
-}
-
-.item-price-under-image {
-    display: none; 
-}
-
-.right-column {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-}
-
-.item-name {
-    font-size: 1.6em;
-    font-weight: bold;
-    color: #333;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.item-number {
-    font-style: italic;
-    color: #666;
-    margin-bottom: 15px;
-    font-size: 0.9em;
-}
-
-.item-description {
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-    flex-grow: 1; 
-}
-
-.item-action-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end; /* Links en knop onderaan uitlijnen */
-    padding-top: 15px;
-    border-top: 1px solid #f0f0f0;
-}
-
-.winkel-links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-size: 0.9em;
-    flex-wrap: wrap; /* BELANGRIJKE FIX: Laat links naar de volgende regel springen */
-    max-width: 60%; /* Zodat ze de claim knop niet wegdrukken */
-}
-
-.winkel-links a {
-    text-decoration: none;
-    background-color: #f1f1f1;
-    color: #333;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-    white-space: nowrap; 
-    font-weight: bold;
-}
-
-.winkel-links a:hover {
-    background-color: #ddd;
-    color: #000;
-}
-
-.claim-button {
-    background-color: #FF5722; 
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    white-space: nowrap;
-}
-
-.claim-button:hover {
-    background-color: #E64A19;
-}
-
-/* --- OVERVIEW GRID --- */
-
-/* Verander de overview grid om plaats te maken voor de titels */
-#overview-grid-container {
-    display: block; /* Nu geen grid meer, maar een block container */
-}
-
-.overview-person-title {
-    font-size: 1.3em;
-    color: #555;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    padding-left: 5px;
-}
-
-.person-grid-section {
+/* --- OVERVIEW GRID STYLING (ALLE ITEMS) --- */
+/* LET OP: DEZE WORDT NU DYNAMISCH HERGEBRUIKT VOOR SECTIES IN HET NIEUWE SCRIPT */
+.overview-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
-    padding-top: 10px;
+    padding: 20px 0;
 }
 
 .overview-grid-item {
-    background-color: #fff;
+    text-align: center;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    padding-bottom: 10px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; 
+    position: relative; /* Voor de gekocht stempel */
 }
 
 .overview-grid-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .overview-grid-item img {
     width: 100%;
-    height: 150px; 
-    object-fit: cover;
-    display: block;
+    height: 150px; /* Vaste hoogte voor uniformiteit */
+    object-fit: contain; /* Zorgt dat de afbeelding past */
+    background-color: #fff;
     border-bottom: 1px solid #eee;
+    transition: filter 0.3s, opacity 0.3s;
 }
 
 .overview-grid-item-name {
-    padding: 10px;
-    font-size: 0.9em;
-    text-align: center;
-    color: #444;
     font-weight: 500;
+    font-size: 0.9em;
+    color: #333;
+    padding: 10px 5px 0 5px;
+    margin: 0;
 }
 
-/* --- INVENTARIS LINKS --- */
-.inventaris-link-item {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+
+/* --- DETAIL VIEW STYLING (WENS-ITEM) --- */
+
+.wens-item {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
 }
 
-.inventaris-link-item a {
-    font-weight: bold;
-    color: #007bff;
+.wens-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+    width: 30%;
+    margin-right: 30px;
+    flex-shrink: 0;
+    border-right: 1px solid #eee;
+    padding-right: 30px;
+}
+
+.right-column {
+    width: 70%;
+}
+
+.item-image-container {
+    width: 100%;
+    height: 250px; 
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.item-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.item-price-under-image {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0 0 0;
+    display: none; /* Standaard verbergen op desktop */
+}
+
+.item-name {
+    font-size: 1.6em;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.item-number {
+    font-size: 0.9em;
+    color: #777;
+    margin: -5px 0 15px 0;
+}
+
+.item-description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Behoudt opmaak/enters */
+}
+
+.item-action-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.winkel-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.95em;
+    margin-right: 20px;
+    flex-grow: 1; /* Neemt de beschikbare ruimte in */
+}
+
+.winkel-links a {
+    color: #3182CE;
     text-decoration: none;
     transition: color 0.2s;
 }
 
-.inventaris-link-item a:hover {
-    color: #0056b3;
+.winkel-links a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
 }
 
-
-/* ######################### NIEUWE STIJLEN GEKOCHT ######################### */
-
-/* 1. Visuele effecten voor Gekochte items in DETAIL en OVERZICHT */
-.wens-item.purchased {
-    background-color: #f7f7f7;
-    border: 1px solid #e0e0e0;
-    opacity: 0.8;
-}
-
-.wens-item.purchased .item-name {
-    color: #888;
-    text-decoration: line-through;
-    font-style: italic;
-}
-
-.item-image-container.purchased img, 
-.overview-grid-item.purchased img {
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.3s ease; 
-}
-
-/* 2. 'Gekocht' Knop in Detail View (vervangt de Claim knop) */
-.purchased-button {
-    background-color: #888; 
+.claim-button {
+    background-color: #4CAF50; /* Groen */
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    cursor: default;
-    font-weight: bold;
-    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 1em;
-    text-align: center;
-    pointer-events: none;
-    white-space: nowrap; /* Zorg dat de knop niet breekt */
-}
-
-/* 3. 'GEKOCHT' Stempel op Overview Card */
-.purchased-stamp {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-10deg);
-    background-color: rgba(255, 0, 0, 0.75); 
-    color: white;
-    padding: 5px 15px;
+    margin: 4px 2px;
+    cursor: pointer;
     border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.2em;
-    z-index: 10;
-    pointer-events: none;
-    letter-spacing: 1px;
-    border: 3px solid white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Zorgt dat de tekst op één lijn blijft */
 }
 
-/* 4. Percentage op de Verticale Tab Button */
-.tab-button {
-    position: relative;
-    padding-right: 45px; 
+.claim-button:hover {
+    background-color: #45a049;
 }
 
-.completion-percentage {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8em;
-    font-weight: bold;
-    background-color: #5cb85c; 
-    color: white;
-    padding: 2px 6px;
-    border-radius: 3px;
-    line-height: 1;
-    min-width: 30px; 
+/* --- FOOTER --- */
+
+.footer-note {
     text-align: center;
+    padding: 20px 0;
+    color: #ddd;
+    font-size: 0.8em;
+    margin-top: 40px; /* Ruimte tussen de container en de footer */
 }
 
-.completion-percentage.complete {
-    background-color: #4CAF50;
+.footer-note a {
+    color: #fff;
+    text-decoration: none;
 }
 
+.footer-note a:hover {
+    text-decoration: underline;
+}
 
-/* --- MEDIA QUERIES --- */
+/* --- RESPONSIVE DESIGN --- */
 
-/* --- Tablet (1024px) --- */
+/* Grote Tablet (1024px) en kleiner */
 @media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
     .fixed-header {
-        width: 180px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
-    .page-wrapper {
-        margin-left: 180px;
+    .tab-button {
+        font-size: 0.9em;
+        padding: 8px 12px;
     }
-    .person-grid-section {
+    .overview-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-    .winkel-links {
-        max-width: 50%; /* Meer beperking op kleinere schermen */
+        gap: 15px;
     }
 }
 
-/* --- Mobiel (768px) --- */
+/* Mobiel (768px) en kleiner */
 @media (max-width: 768px) {
-    
-    /* Verticaal menu wordt Horizontaal Menu */
-    .fixed-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        height: auto; 
-        padding-top: 10px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .page-wrapper {
+        padding-top: 100px; /* Meer ruimte voor de header op mobiel */
     }
-
+    
     .header-content {
-        overflow-x: auto; 
-        white-space: nowrap;
-        padding: 5px 10px;
+        padding: 10px;
     }
 
     .tab-nav {
-        flex-direction: row; 
-    }
-
-    .tab-button {
-        display: inline-block;
+        flex-direction: row; /* Blijf horizontaal op mobiel */
+        overflow-x: auto; /* Scrollen als er te veel tabs zijn */
+        white-space: nowrap;
         border-bottom: none;
-        border-right: 1px solid #ddd;
-        flex-shrink: 0; 
-        padding: 10px 15px;
     }
     
-    /* Zorg dat de percentage badge ook werkt op mobiel */
-    .completion-percentage {
-        position: static;
-        transform: none;
-        margin-left: 5px;
-        display: inline-block;
+    .tab-button {
+        flex-shrink: 0; /* Belangrijk voor scrollen */
+        border-bottom: 2px solid transparent;
+        margin-bottom: 0;
     }
 
-    .page-wrapper {
-        margin-left: 0; 
-        padding: 20px;
-        padding-top: 80px; 
+    .tab-button.active {
+        border-bottom: 2px solid #3182CE;
     }
     
     .title-container {
@@ -543,10 +400,12 @@ h2 {
         margin-bottom: 5px;
     }
     .item-price-under-image {
-        display: block; 
+        display: block; /* Nu wel tonen op mobiel */
         text-align: left;
         margin-top: 5px;
         margin-bottom: 15px;
+        /* Zorg dat het niet te breed is */
+        display: inline-block;
     }
     
     .right-column {
@@ -557,32 +416,129 @@ h2 {
         flex-direction: column;
         align-items: stretch;
     }
-    
-    .winkel-links {
-        /* Op mobiel de volle breedte gebruiken */
-        max-width: 100%; 
-        justify-content: space-around; 
-        margin-bottom: 15px; 
-    }
-    
-    .claim-button, .purchased-button {
-        margin-top: 10px;
-        width: 100%;
+    .claim-button {
+        margin-top: 15px;
         white-space: normal;
+    }
+    .winkel-links {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
 
 /* --- Kleine Telefoon (480px) en kleiner --- */
 @media (max-width: 480px) {
     .container {
-        padding: 15px; 
+        padding: 15px; /* Minder padding op de container */
     }
 
     h1 {
-        font-size: 1.8em; 
+        font-size: 1.8em; /* Nog kleinere hoofdtitel */
     }
-    
-    .person-grid-section {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    }
+}
+
+
+/* --- NIEUWE EN GEFIXTE STIJLEN --- */
+
+/* --- STIJLEN VOOR NIEUWE FUNCTIES (PERCENTAGE & GEKOCHT STATUS) --- */
+
+/* Styling voor de completion percentage badge op de navigatie knop */
+.completion-percentage {
+    background-color: #3182CE; /* Blauwe achtergrond */
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    white-space: nowrap; /* Zorgt dat het percentage niet breekt */
+}
+
+.completion-percentage.complete {
+    background-color: #2F9E44; /* Groen als 100% compleet */
+}
+
+/* --- FIX VOOR OVERZICHTS LAY-OUT MET TITELS --- */
+
+/* Stijl voor de sectie titels in het overzicht */
+.overview-person-title {
+    /* De h3 moet de hele breedte innemen buiten de grid */
+    grid-column: 1 / -1; 
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee;
+    font-size: 1.4em;
+    color: #333;
+}
+
+/* De overview-grid class wordt nu op de personGridSection geplaatst (zie script fix) */
+/* Herhaal de grid layout voor de dynamisch aangemaakte secties */
+#dynamic-overview-content .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px; /* Ruimte na de sectie */
+}
+
+/* --- STIJL GEKOCHTE ITEMS IN DETAIL VIEW --- */
+
+/* De gekochte detail weergave herstellen: lichte opaciteit en rand */
+.wens-item.purchased {
+    border: 2px solid #ccc; 
+    opacity: 0.85; 
+    background-color: #f9f9f9;
+}
+
+/* Zorgt ervoor dat de naam in de detailweergave ook doorgestreept wordt */
+.wens-item.purchased .item-name {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Grijsfilter voor de afbeelding van een gekocht item */
+.item-image-container.purchased img {
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+/* Stijl voor de 'GEKOCHT' knop in detailweergave */
+.purchased-button {
+    background-color: #ccc;
+    color: #444;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: default;
+    border-radius: 5px;
+    text-transform: uppercase;
+    flex-grow: 1; 
+}
+
+/* --- STIJL GEKOCHTE ITEMS IN OVERVIEW VIEW --- */
+
+/* Grayscale op de afbeelding in het overzicht bij 'purchased' */
+.overview-grid-item.purchased img {
+    filter: grayscale(70%);
+}
+
+.purchased-stamp {
+    position: absolute;
+    top: 15px;
+    right: -25px; /* iets verder om de hoek */
+    background-color: #e74c3c; /* Rood */
+    color: white;
+    font-weight: bold;
+    padding: 5px 30px; /* grotere padding */
+    transform: rotate(45deg);
+    font-size: 0.9em;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Zorg dat de inventaris links goed uitlijnen */
+.inventaris-link-item a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
 }

@@ -1,6 +1,6 @@
 {
   "wenslijst_titel": "De Grote Eindejaarswenslijst!",
-  "datum": "2025-10-31",
+  "datum": "2025-11-01",
   "personen": [
     {
       "naam": "Jonas",
@@ -407,7 +407,11 @@
           "beschrijving": "Mixen en bouwen! Deze cementwagen met echt werkende wielen, een ronddraaiende mengtrommel die kan kantelen en een mini-opbergruimte is een must voor fans van de PAW Patrol-serie. Geschikt vanaf 3 jaar.",
           "afbeelding_url": "https://media.s-bol.com/8DqrDDXJ4Jyo/J6QOOQv/550x552.jpg",
           "winkels": [
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/rubble-crew-mix-s-cementwagen-met-speelfiguur-en-beweegbare-onderdelen/9300000180340275/?referrer=socialshare_pdp_www", "prijs": "€ 14,79 (prijsindicatie)" }
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/9u7HZHT", "prijs": "€ 13,21" },
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/rubble-crew-voertuig-mix/01758528", "prijs": "€ 13,49" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/gCDjcg2", "prijs": "€ 14,69" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/rubble-crew-mix-s-cementwagen-met-speelfiguur-en-beweegbare-onderdelen/9300000180340275/?referrer=socialshare_pdp_www", "prijs": "€ 14,79" },
+            { "naam": "Supra Bazar", "link": "https://www.suprabazar.be/rubble-crew-voertuig-met-mix-31755151", "prijs": "€ 15,99" }
           ]
         },
         {
@@ -427,7 +431,8 @@
           "beschrijving": "12 schuin gesneden houten pasta in een kleurrijke bedrukte doos om te spelen.",
           "afbeelding_url": "https://m.media-amazon.com/images/I/81sgJ-VmTyL._AC_SL1500_.jpg",
           "winkels": [
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/ipnMEZM", "prijs": "€ 6,71" }
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/ipnMEZM", "prijs": "€ 6,71" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1GKJse9", "prijs": "€ 9,61" }
           ]
         },
         {
@@ -447,7 +452,8 @@
           "beschrijving": "Set van 3 verschillende houten groenten in een metalen blikje (mais, wortels en erwten). Perfecte aanvulling voor de speelwinkel of speelkeuken van Milan.",
           "afbeelding_url": "https://m.media-amazon.com/images/I/81NI6ladOrL._AC_SL1500_.jpg",
           "winkels": [
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/hffjgGP", "prijs": "€ 6,71" }
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/hffjgGP", "prijs": "€ 6,71" },
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/41QGDNP", "prijs": "€ 8,47" }
           ]
         },
         {

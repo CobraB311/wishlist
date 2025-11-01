@@ -44,7 +44,7 @@ body {
 .wave1 {
     background: rgb(255 255 255 / 40%); /* Meest helder */
     animation: wave 10s linear infinite;
-    z-index: -10; /* Zorgt dat de golf ACHTER alle content zit */
+    z-index: -10; /* Z-INDEX CORRECTIE */
 }
 
 /* LAAG 2 (Midden) */
@@ -52,7 +52,7 @@ body {
     background: rgb(255 255 255 / 25%);
     animation: wave 12s linear infinite; /* Langzamer */
     animation-delay: -2s; /* Start met een vertraging */
-    z-index: -11; /* Nog verder naar achteren */
+    z-index: -11; /* Z-INDEX CORRECTIE */
 }
 
 /* LAAG 3 (Verst weg, langzaamst) */
@@ -60,7 +60,7 @@ body {
     background: rgb(255 255 255 / 10%); /* Meest subtiel */
     animation: wave 14s linear infinite; /* Nog langzamer */
     animation-delay: -5s;
-    z-index: -12; /* Het verst naar achteren */
+    z-index: -12; /* Z-INDEX CORRECTIE */
 }
 
 /* VASTE HEADER (VERTIKALE NAVIGATIE) */
@@ -263,10 +263,9 @@ h1 {
 
 .wens-item.purchased {
     background-color: #fcfcfc;
-    /* Opacity op de hele box is verwijderd, de lichte achtergrond blijft */
 }
 
-/* NIEUWE REGEL: Grijze filter op de afbeelding van gekochte items */
+/* AANGEPAST: Grijze filter op de afbeelding van gekochte items */
 .wens-item.purchased .item-image-container img {
     filter: grayscale(100%);
     opacity: 0.5; 

@@ -360,5 +360,15 @@
           "winkels": [
             { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/joustra-stempelset-dieren-en-alfabet/02050614", "prijs": "€ 18,95" }
           ]
+        },
+        {
+          "id": "stempelset-cijfers-hema-15900239",
+          "naam": "Stempelset Cijfers (9 stempels)",
+          "nummer": "15900239",
+          "beschrijving": "Met deze stempelset met cijfers kunnen kinderen vertrouwd raken met cijfers en rekenen. De set bevat 9 stempels, ideaal voor creatief leren en spelenderwijs kennismaken met getallen. Waarschuwing: Niet geschikt voor kinderen jonger dan 3 jaar (Kleine onderdelen, verstikkingsgevaar).",
+          "afbeelding_url": "https://www.hema.com/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwa2284737/product/15900239_01_001.jpg?sw=1095&sh=1242&sm=fit&sfrm=png&bgcolor=F5F5F5",
+          "winkels": [
+            { "naam": "HEMA", "link": "https://www.hema.com/nl-be/vrije-tijd/knutselen-handwerken/knutselen/stempelset-cijfers-15900239.html", "prijs": "€ 3,39" }
+          ]
         }
       ]

@@ -346,11 +346,19 @@ function generateTabNavigation(wishlistData) {
                     </button>`;
     });
 
-    // 🆕 Voeg de Gezamenlijke tab toe (zonder percentage, tenzij u later een teller wilt)
+    // 🆕 BIJGEWERKT: Voeg de Gezamenlijke tab toe MET percentage
     if (wishlistData.gezamenlijke_items && wishlistData.gezamenlijke_items.items.length > 0) {
+        const sharedData = wishlistData.gezamenlijke_items;
         const tabId = 'gezamenlijk-list-content';
+
+        // Bereken percentage gekocht voor de badge
+        const totalItems = sharedData.items.length;
+        const purchasedCount = sharedData.items.filter(item => item.isPurchased).length;
+        const percentage = totalItems > 0 ? Math.round((purchasedCount / totalItems) * 100) : 0;
+        
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">
                         Gezamenlijk
+                        <span class="percentage-bought">${purchasedCount}/${totalItems} (${percentage}%)</span>
                     </button>`;
     }
 
@@ -393,12 +401,12 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
     // We moeten eerst de lijsten genereren 
     generatePersonLists(wishlistData, purchasedItemIds);
     
-    // 🆕 Nu de Gezamenlijke lijst genereren (gebruik de nieuwe functie)
+    // Nu de Gezamenlijke lijst genereren (gebruik de nieuwe functie)
     if (wishlistData.gezamenlijke_items && wishlistData.gezamenlijke_items.items.length > 0) {
          generateSharedList(wishlistData.gezamenlijke_items, purchasedItemIds);
     }
     
-    // Daarna de navigatie
+    // Daarna de navigatie (nu met percentage voor Gezamenlijk)
     generateTabNavigation(wishlistData);
     
     // En als laatste het overzicht.
@@ -421,7 +429,7 @@ const handleErrors = (response) => {
     return response;
 }
 
-// De hoofdfunctie die alle data laadt (BIJGEWERKT VOOR GEZAMENLIJK)
+// De hoofdfunctie die alle data laadt
 function loadWishlist() {
     // 1. Laad de hoofdwenslijst data (wishlist_data.json)
     return fetch('wishlist_data.json')

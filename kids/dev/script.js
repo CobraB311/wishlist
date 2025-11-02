@@ -20,26 +20,32 @@ function claimItem(persoonNaam, itemName, itemId) {
 
 // Functie om een tab te openen (de tab-knop krijgt .active, de tab-inhoud krijgt .active)
 function openTab(evt, tabId) {
-    // Deactiveer alle tabs
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
+    
+    // 1. Deactiveer alle tabs en knoppen (Gebruik querySelectorAll voor robuustheid)
+    document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+    document.querySelectorAll(".tab-button").forEach(el => el.classList.remove("active"));
+    
+    // 2. Activeer de tab-inhoud
+    const tabContent = document.getElementById(tabId);
+    if (tabContent) {
+        tabContent.classList.add("active");
     }
     
-    // Deactiveer alle tab links/knoppen
-    tablinks = document.getElementsByClassName("tab-button");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-    }
-    
-    // Activeer de huidige tab en voeg de "active" class toe aan de knop die de tab opende
-    document.getElementById(tabId).classList.add("active");
+    // 3. Activeer de bijbehorende tab-knop (met fix voor scrollToItem)
+    let targetButton;
     if (evt && evt.currentTarget) {
-        evt.currentTarget.classList.add("active");
+        // De knop is direct geklikt
+        targetButton = evt.currentTarget;
+    } else {
+        // De functie wordt aangeroepen vanuit scrollToItem. Zoek de knop op basis van de tabId.
+        targetButton = document.querySelector(`.tab-button[onclick*="'${tabId}'"]`);
     }
-    
-    // Scroll naar de top van de pagina-inhoud (onder de header)
+
+    if (targetButton) {
+        targetButton.classList.add("active");
+    }
+
+    // 4. Scroll naar de top van de pagina-inhoud
     const pageWrapper = document.querySelector('.page-wrapper');
     if (pageWrapper) {
         pageWrapper.scrollTop = 0;
@@ -50,12 +56,9 @@ function openTab(evt, tabId) {
 function scrollToItem(persoonNaam, itemId) {
     // 1. Open de juiste tab (de wensenlijst van de persoon)
     const tabId = persoonNaam.toLowerCase() + '-list-content';
-    const tabButton = document.querySelector(`.tab-button[onclick*='${tabId}']`);
     
-    // Check of de tab knop bestaat en roep openTab aan
-    if (tabButton) {
-        openTab(null, tabId); 
-    }
+    // Roep openTab aan zonder event (evt = null). De nieuwe openTab zal de juiste knop vinden.
+    openTab(null, tabId); 
     
     // 2. Wacht even tot de browser de tab heeft geopend (belangrijk!)
     setTimeout(() => {
@@ -170,7 +173,7 @@ function generatePersonLists(wishlistData, purchasedItemIds) {
                                 <span class="item-price-under-image">${item.winkels.length > 0 ? item.winkels[0].prijs : 'Prijs Onbekend'}</span>
                             </div>
                             <div class="right-column">
-                                <h3><a href="${item.winkels.length > 0 ? item.winkels[0].link : '#'}" target="_blank">${item.naam}</a></h3>
+                                <h3>${item.naam}</h3>
                                 <p class="item-description">${item.beschrijving}</p>
                                 <div class="winkel-links">${winkelsHtml}</div>
                                 <p class="item-nummer">Artikelnummer: ${item.nummer}</p>
@@ -219,16 +222,19 @@ function generateTabNavigation(wishlistData) {
         const purchasedCount = person.items.filter(item => item.isPurchased).length;
         const percentage = totalItems > 0 ? Math.round((purchasedCount / totalItems) * 100) : 0;
         
-        // De tab-knop met de percentage badge
+        // FIX: De tab-knop met de percentage EN aantal badge
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">
                         ${person.naam}
-                        <span class="percentage-bought">${percentage}% gekocht</span>
+                        <span class="percentage-bought">${purchasedCount}/${totalItems} (${percentage}%) gekocht</span>
                     </button>`;
     });
 
     navHtml += `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris Links</button>`;
     
     tabNav.innerHTML = navHtml;
+    
+    // Zorg ervoor dat de eerste tab geopend is bij de start
+    openTab(null, 'overview-content');
 }
 
 
@@ -250,9 +256,17 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
 
     // Genereer HTML elementen in de juiste volgorde
     updatePageTitle(wishlistData);
-    generateTabNavigation(wishlistData);
+    
+    // We moeten eerst de lijsten genereren om de percentages correct te berekenen, 
+    // daarna de navigatie, en als laatste het overzicht.
     generatePersonLists(wishlistData, purchasedItemIds);
-    generateOverviewGrid(wishlistData); // Moet na de lists gegenereerd worden voor scroll functionaliteit
+    generateTabNavigation(wishlistData);
+    generateOverviewGrid(wishlistData); 
+    
+    // FIX: Inventaris Links toevoegen indien aanwezig
+    if (wishlistData.inventaris_links && wishlistData.inventaris_links.length > 0) {
+        generateInventoryLinks(wishlistData.inventaris_links);
+    }
 }
 
 
@@ -334,7 +348,7 @@ function loadWishlist() {
                         naam: personNames[index],
                         items: items // Dit zijn de items die geladen zijn uit de data_file
                     })),
-                    inventaris_links: inventoryLinks
+                    inventaris_links: inventoryLinks // Hier voegen we de geladen links toe
                 };
 
                 return [reconstructedWishlist, claimsData];
@@ -345,7 +359,7 @@ function loadWishlist() {
         // 4. Genereer de content
         const purchasedItemIds = new Set(claimsData.purchased_items || []);
         
-        // >>> BELANGRIJKE NIEUWE REGEL: DYNAMISCHE TITEL INSTELLEN
+        // DYNAMISCHE TITEL INSTELLEN
         updateHtmlTitle(wishlistData); 
         
         generateWishlistContent(wishlistData, purchasedItemIds);

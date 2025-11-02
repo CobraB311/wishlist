@@ -12,5 +12,30 @@
         "prijs": "€ 34,95" 
       }
     ]
+  },
+  {
+    "id": "KT_001",
+    "naam": "JBL Draadloze In-Ear Hoofdtelefoon TUNE 235BT (Zwart)",
+    "prijs": 40.32,
+    "beschrijving": "Draadloze in-ear hoofdtelefoon met Bluetooth, 3-knops afstandsbediening met microfoon en platte kabel. Ideaal voor onderweg.",
+    "afbeelding_url": "https://mm.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf217e305/JBL_Tune-235BT-boxside-black.png?sw=537&sfrm=png",
+    "winkel_links": [
+        {
+            "winkel_naam": "JBL",
+            "url": "https://mm.jbl.com/in-ear-headphones/TUNE235BT.html"
+        },
+        {
+            "winkel_naam": "Bol.com",
+            "url": "https://www.bol.com/be/nl/p/jbl-tune-235bt-lifestyle-headphones-wireless-in-ear-with-3-button-mic-remote-flat-cable-black/9300000232598803/?referrer=socialshare_pdp_www"
+        },
+        {
+            "winkel_naam": "Amazon.be",
+            "url": "https://amzn.eu/d/chVTweG"
+        },
+        {
+            "winkel_naam": "Fnac.be",
+            "url": "https://www.nl.fnac.be/JBL-Draadloze-Bluetooth-In-Ear-hoofdtelefoon-Tune-235Zwart/a21819843?oref=00000000-0000-0000-0000-000000000000&Origin=AWINBE329213&sv1=affiliate&sv_campaign_id=329213&awc=12648_1762097746_48a9239824cc5fbbcfba37ada32bbb7b"
+        }
+    ]
   }
 ]

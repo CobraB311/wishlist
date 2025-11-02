@@ -26,538 +26,335 @@ function openTab(evt, tabId) {
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].classList.remove("active");
     }
-
-    // Deactiveer alle tab-knoppen
+    
+    // Deactiveer alle tab links/knoppen
     tablinks = document.getElementsByClassName("tab-button");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
-
-    // Activeer de gevraagde tab
-    const targetTab = document.getElementById(tabId);
-    if (targetTab) {
-        targetTab.classList.add("active");
-    } else {
-        console.error(`Tab content met ID ${tabId} niet gevonden.`);
-    }
-
-    // Activeer de juiste tab-knop
+    
+    // Activeer de huidige tab en voeg de "active" class toe aan de knop die de tab opende
+    document.getElementById(tabId).classList.add("active");
     if (evt && evt.currentTarget) {
-        evt.currentTarget.classList.add('active');
-    } else {
-         // Als dit aangeroepen wordt zonder event (bv. bij initialisatie), zoek de knop op ID
-         const buttonId = `btn-${tabId.replace('-content', '').replace('-list', '')}`;
-         const button = document.getElementById(buttonId);
-         if (button) {
-             button.classList.add('active');
-         }
+        evt.currentTarget.classList.add("active");
     }
     
-    // Scroll naar de bovenkant van de pagina (na de fixed header)
-    if (window.innerWidth <= 900) {
-        // Op mobiel: scroll naar de bovenkant van de .page-wrapper
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-        // Op desktop (met verticale nav): scroll naar de bovenkant van de inhoud
-         const pageWrapperTop = document.querySelector('.page-wrapper').offsetTop;
-         window.scrollTo({ 
-            top: pageWrapperTop, 
-            behavior: 'smooth' 
-         });
+    // Scroll naar de top van de pagina-inhoud (onder de header)
+    const pageWrapper = document.querySelector('.page-wrapper');
+    if (pageWrapper) {
+        pageWrapper.scrollTop = 0;
     }
 }
 
-/**
- * Berekent het percentage gekochte items en geeft een HTML-string terug.
- * @param {Array} items - Alle items van een persoon.
- * @param {Set} purchasedItemIds - Set van gekochte item ID's.
- * @returns {string} HTML-string met het percentage.
- */
-function calculatePurchasePercentage(items, purchasedItemIds) {
-    if (!items || items.length === 0) {
-        return '';
-    }
-    const totalItems = items.length;
-    let purchasedCount = 0;
+// Functie om te scrollen naar een item na een klik in het overzicht
+function scrollToItem(persoonNaam, itemId) {
+    // 1. Open de juiste tab (de wensenlijst van de persoon)
+    const tabId = persoonNaam.toLowerCase() + '-list-content';
+    const tabButton = document.querySelector(`.tab-button[onclick*='${tabId}']`);
     
-    items.forEach(item => {
-        if (purchasedItemIds.has(item.id)) {
-            purchasedCount++;
+    // Check of de tab knop bestaat en roep openTab aan
+    if (tabButton) {
+        openTab(null, tabId); 
+    }
+    
+    // 2. Wacht even tot de browser de tab heeft geopend (belangrijk!)
+    setTimeout(() => {
+        const itemElement = document.getElementById(itemId);
+        if (itemElement) {
+            // Verwijder eerst eventuele highlight classes
+            document.querySelectorAll('.wens-item').forEach(el => el.classList.remove('highlight'));
+            
+            // Voeg highlight toe en scroll ernaartoe
+            itemElement.classList.add('highlight');
+            itemElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Verwijder de highlight na een paar seconden
+            setTimeout(() => {
+                itemElement.classList.remove('highlight');
+            }, 3000); 
         }
+    }, 100); 
+}
+
+
+// --- DYNAMISCHE TITEL FUNCTIE ---
+
+// Functie om de HTML titel dynamisch in te stellen op basis van de geladen data
+function updateHtmlTitle(wishlistData) {
+    // Haal de namen uit de 'personen' array
+    const names = wishlistData.personen.map(p => p.naam);
+    
+    // Maak de lijst van namen: "Jonas & Milan" of "Kitty & Ruben"
+    const namesString = names.join(' & ');
+    
+    // Gebruik de titel uit de JSON, met de dynamische namen
+    const newTitle = `🎄🎁 De Grote Wenslijst van ${namesString} 🎁🎄`;
+    
+    // Update de <title> tag van de pagina
+    document.title = newTitle;
+}
+
+
+// --- FUNCTIES VOOR HET GENEREREN VAN HTML CONTENT ---
+
+// Functie om de overzichtskaartjes te genereren
+function generateOverviewGrid(wishlistData) {
+    const gridContainer = document.getElementById('overview-grid-container');
+    let overviewHtml = '';
+
+    wishlistData.personen.forEach(person => {
+        // Een sectie per persoon (voor het geval de overzichtspagina wordt gegroepeerd)
+        overviewHtml += `<div class="overview-person-section">
+                            <h3>Wensenlijst van ${person.naam}</h3>
+                            <div class="overview-grid-inner">`;
+        
+        person.items.forEach(item => {
+            // Gebruik de eerste winkelprijs als er winkels zijn
+            const prijs = item.winkels && item.winkels.length > 0 ? item.winkels[0].prijs : 'Prijs Onbekend';
+            
+            // Voeg de onClick toe om naar het item te scrollen
+            overviewHtml += `<div class="overview-grid-item" onclick="scrollToItem('${person.naam}', '${item.id}')">
+                                <img src="${item.afbeelding_url}" alt="${item.naam}">
+                                <div class="overview-caption">
+                                    ${item.naam}
+                                    <span class="overview-person">(${person.naam})</span>
+                                </div>
+                                <span class="item-price-under-image">${prijs}</span>
+                            </div>`;
+        });
+        
+        overviewHtml += `</div></div>`; // Sluit grid-inner en section
     });
 
-    const percentage = Math.round((purchasedCount / totalItems) * 100);
-    
-    return `<span class="percentage-bought">${purchasedCount}/${totalItems} (${percentage}%)</span>`;
+    gridContainer.innerHTML = overviewHtml;
 }
 
 
-// --- FUNCTIE VOOR HET GENEREREN VAN DE WENSENLIJST CONTENT ---
-
-function generateWishlistContent(wishlistData, purchasedItemIds) {
-    
-    // Bijwerken Hoofdtitel en Datum
-    // HIER IS DE CORRECTIE: 🎄=&#127876; en 🎁=&#127873;
-    document.getElementById('main-title').innerHTML = `&#127876;&#127873; ${wishlistData.wenslijst_titel} &#127873;&#127876;`;
-    document.getElementById('last-update-text').textContent = `Laatste update: ${wishlistData.datum}`;
-
-    const dynamicTabNav = document.getElementById('dynamic-tab-nav');
-    const overviewGridContainer = document.getElementById('overview-grid-container');
+// Functie om de volledige wensenlijsten (tabs) te genereren
+function generatePersonLists(wishlistData, purchasedItemIds) {
     const personListsContainer = document.getElementById('person-lists-container');
-    
-    // 1. OVERVIEW TAB
-    
-    // Overview knop (altijd aanwezig)
-    const overviewButton = document.createElement('button');
-    overviewButton.className = 'tab-button'; // Start ZONDER active class
-    overviewButton.id = 'btn-overview';
-    overviewButton.textContent = 'Overzicht';
-    overviewButton.onclick = (e) => openTab(e, 'overview-content');
-    dynamicTabNav.appendChild(overviewButton);
-    
-    // Array om alle items te verzamelen voor de Overview-pagina
-    const allItemsByPerson = {}; 
-    
-    // 2. PERSONEN EN HUN ITEMS
-    
-    wishlistData.personen.forEach(persoon => {
-        const naamKort = persoon.naam.toLowerCase().replace(/\s/g, ''); // kitty, ruben
-        const tabId = `${naamKort}-list`;
+    let listsHtml = '';
+
+    wishlistData.personen.forEach(person => {
+        const tabId = person.naam.toLowerCase() + '-list-content';
+
+        // Maak de content container voor elke persoon
+        listsHtml += `<div id="${tabId}" class="tab-content">
+                        <h2>Wensenlijst van ${person.naam}</h2>
+                        <div class="wens-lijst">`;
         
-        // Items sorteren op prijs (laag naar hoog)
-        const sortedItems = [...persoon.items].sort((a, b) => {
-             // Zorg ervoor dat items met een lege winkellijst achteraan komen
-             if (!a.winkels || a.winkels.length === 0) return 1;
-             if (!b.winkels || b.winkels.length === 0) return -1;
-             
-             // Extract prices (assuming price is always the lowest listed price in the first element after sorting)
-             const priceA = parseFloat(a.winkels[0].prijs.replace('€', '').replace(',', '.').trim());
-             const priceB = parseFloat(b.winkels[0].prijs.replace('€', '').replace(',', '.').trim());
-
-             // Sort by price
-             if (priceA < priceB) return -1;
-             if (priceA > priceB) return 1;
-             return 0;
-        });
-
-        // 2a. Maak de Tab-knop voor de persoon (inclusief percentage!)
-        const personButton = document.createElement('button');
-        personButton.className = 'tab-button';
-        personButton.id = `btn-${naamKort}`;
-        personButton.innerHTML = `${persoon.naam} ${calculatePurchasePercentage(sortedItems, purchasedItemIds)}`;
-        personButton.onclick = (e) => openTab(e, tabId);
-        dynamicTabNav.appendChild(personButton);
-
-        // 2b. Maak de Tab-Inhoud voor de persoon
-        const personContent = document.createElement('div');
-        personContent.id = tabId;
-        personContent.className = 'tab-content'; // Start inactief
-        personListsContainer.appendChild(personContent);
-
-        // Voeg de lijst van items toe aan de persoon zijn tab
-        const personList = document.createElement('div');
-        personList.className = 'wens-lijst';
-        personContent.appendChild(personList);
-        
-        // Array om items voor de grid te verzamelen
-        allItemsByPerson[persoon.naam] = [];
-
-        sortedItems.forEach(item => {
+        person.items.forEach(item => {
             const isPurchased = purchasedItemIds.has(item.id);
-            const wensItem = createWishItemElement(persoon.naam, item, isPurchased);
-            personList.appendChild(wensItem);
+            const itemClass = isPurchased ? 'wens-item purchased' : 'wens-item';
             
-            // Verzamel item voor de overview grid (alleen niet-gekochte)
-            if (!isPurchased) {
-                 allItemsByPerson[persoon.naam].push({
-                    item: item, 
-                    persoonNaam: persoon.naam 
-                 });
+            // Links genereren
+            let winkelsHtml = '';
+            item.winkels.forEach(winkel => {
+                winkelsHtml += `<a href="${winkel.link}" target="_blank" class="winkel-link-button">${winkel.naam} (${winkel.prijs})</a>`;
+            });
+
+            // Claim actie gebied genereren
+            let actionAreaHtml = '';
+            if (isPurchased) {
+                actionAreaHtml = `<span class="purchased-note">🎁 Dit cadeau is reeds gekocht!</span>`;
+            } else {
+                actionAreaHtml = `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Cadeau Kopen & Claimen</button>`;
             }
+
+            // Volledig item
+            listsHtml += `<div id="${item.id}" class="${itemClass}">
+                            <div class="left-column">
+                                <div class="item-image-container">
+                                    <img src="${item.afbeelding_url}" alt="${item.naam}">
+                                </div>
+                                <span class="item-price-under-image">${item.winkels.length > 0 ? item.winkels[0].prijs : 'Prijs Onbekend'}</span>
+                            </div>
+                            <div class="right-column">
+                                <h3><a href="${item.winkels.length > 0 ? item.winkels[0].link : '#'}" target="_blank">${item.naam}</a></h3>
+                                <p class="item-description">${item.beschrijving}</p>
+                                <div class="winkel-links">${winkelsHtml}</div>
+                                <p class="item-nummer">Artikelnummer: ${item.nummer}</p>
+                                <div class="item-action-area">
+                                    ${actionAreaHtml}
+                                </div>
+                            </div>
+                        </div>`;
         });
+        
+        listsHtml += `</div></div>`; // Sluit wens-lijst en tab-content
     });
-    
-    // 3. INVENTARIS OVERZICHT (ALS APARTE TAB)
-    
-    if (wishlistData.inventaris_links && wishlistData.inventaris_links.length > 0) {
-        // 3a. Inventaris Tab-knop
-        const inventoryButton = document.createElement('button');
-        inventoryButton.className = 'tab-button';
-        inventoryButton.id = 'btn-inventory';
-        inventoryButton.textContent = 'Inventaris Overzicht';
-        inventoryButton.onclick = (e) => openTab(e, 'inventory-content');
-        dynamicTabNav.appendChild(inventoryButton);
 
-        // 3b. Inventaris Tab-Inhoud
-        const inventoryContent = document.createElement('div');
-        inventoryContent.id = 'inventory-content';
-        inventoryContent.className = 'tab-content';
-        personListsContainer.appendChild(inventoryContent); // Gebruik personListsContainer om de content onder de main overview te plaatsen
-
-        const inventoryWrapper = document.createElement('div');
-        inventoryWrapper.className = 'inventory-link-section';
-        inventoryContent.appendChild(inventoryWrapper); 
-        
-        const linkSectionTitle = document.createElement('h2');
-        linkSectionTitle.textContent = 'Links naar de Huidige Inventaris:';
-        inventoryWrapper.appendChild(linkSectionTitle);
-        
-        const linksList = document.createElement('ul');
-        linksList.style.listStyleType = 'none';
-        linksList.style.paddingLeft = '0';
-        
-        // LOOP DOOR LINKS UIT DE JSON
-        wishlistData.inventaris_links.forEach(linkData => {
-            const listItem = document.createElement('li');
-            listItem.className = 'inventaris-link-item';
-            const link = document.createElement('a');
-            link.href = linkData.url;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.textContent = linkData.naam;
-            link.title = `Bekijk de ${linkData.naam}`;
-            listItem.appendChild(link);
-            linksList.appendChild(listItem);
-        });
-        inventoryWrapper.appendChild(linksList);
-    }
-    
-    // 4. OVERVIEW GRID VULLEN (NU GESPLITST PER PERSOON)
-    
-    // Zorg dat de grid container leeg is voordat we hem vullen
-    overviewGridContainer.innerHTML = ''; 
-    
-    // Lus door elke persoon om een aparte sectie in de overview te maken
-    wishlistData.personen.forEach(persoon => {
-        const items = allItemsByPerson[persoon.naam] || [];
-        if (items.length === 0) return; // Sla over als er geen niet-gekochte items zijn
-
-        const personSection = document.createElement('div');
-        personSection.className = 'overview-person-section';
-        
-        const sectionTitle = document.createElement('h3');
-        sectionTitle.textContent = `Nog niet gekochte wensen van ${persoon.naam}:`;
-        sectionTitle.id = `overview-${persoon.naam.toLowerCase().replace(/\s/g, '')}`;
-        personSection.appendChild(sectionTitle);
-        
-        const personGrid = document.createElement('div');
-        personGrid.className = 'overview-grid-inner'; // Gebruik een sub-grid
-
-        // Sorteer items voor de grid op alfabetische naam
-        items.sort((a, b) => a.item.naam.localeCompare(b.item.naam));
-        
-        items.forEach(({ item, persoonNaam }) => {
-            const gridItem = document.createElement('div');
-            gridItem.className = 'overview-grid-item';
-            gridItem.setAttribute('data-item-id', item.id);
-            
-            // Navigatie naar het detail item
-            gridItem.onclick = () => {
-                 // Open de juiste tab
-                 const naamKort = persoonNaam.toLowerCase().replace(/\s/g, '');
-                 const personButton = document.getElementById(`btn-${naamKort}`);
-                 if (personButton) {
-                    // Simuleer klik om de tab te openen, gebruik 'e' als mock-event
-                    openTab({ currentTarget: personButton }, `${naamKort}-list`); 
-                 }
-                 // Scroll naar het item 
-                 setTimeout(() => {
-                    const targetItem = document.getElementById(item.id);
-                    if (targetItem) {
-                        // Bereken de offset op basis van de scrollpositie en de header
-                        const offset = 30; // Extra padding
-                        const targetPosition = targetItem.getBoundingClientRect().top + window.scrollY - offset;
-
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Visuele feedback op het gescrollde item
-                        targetItem.classList.add('highlight');
-                        setTimeout(() => targetItem.classList.remove('highlight'), 2000); 
-                    }
-                 }, 100); // Korte vertraging zodat de tab-wissel eerst plaatsvindt
-            };
-            
-            const img = document.createElement('img');
-            img.src = item.afbeelding_url;
-            img.alt = item.naam;
-            img.loading = 'lazy';
-            gridItem.appendChild(img);
-            
-            const caption = document.createElement('p');
-            caption.className = 'overview-caption';
-            caption.innerHTML = `${item.naam}`; // De persoon staat in de titel erboven
-            gridItem.appendChild(caption);
-            
-            personGrid.appendChild(gridItem);
-        });
-        
-        personSection.appendChild(personGrid);
-        overviewGridContainer.appendChild(personSection);
-    });
-    
-    // Laadbericht verwijderen wanneer de content klaar is
-    const loadingMessage = document.getElementById('loading-message');
-    if (loadingMessage) {
-        loadingMessage.remove();
-    }
-
-    // Activeer de Overview tab bij het starten
-    openTab(null, 'overview-content');
+    personListsContainer.innerHTML = listsHtml;
 }
 
 
-// Functie om een individueel wens-item element te creëren
-function createWishItemElement(persoonNaam, item, isPurchased) {
-    const wensItem = document.createElement('div');
-    wensItem.id = item.id;
-    wensItem.className = 'wens-item';
-    if (isPurchased) {
-        wensItem.classList.add('purchased'); // Voor de detail achtergrond/strikethrough
-    }
+// Functie om de inventaris links te genereren
+function generateInventoryLinks(inventoryLinks) {
+    const inventarisHtml = `<div id="inventory-content" class="tab-content">
+                                <h2>Inventaris/Collectie Overzicht</h2>
+                                <p>Dit overzicht toont wat reeds aanwezig is in de collectie om dubbele aankopen te vermijden.</p>
+                                <div class="inventory-link-section">`;
 
-    // --- LEFT COLUMN (IMAGE, PRICE) ---
-    const leftColumn = document.createElement('div');
-    leftColumn.className = 'left-column';
+    let linksHtml = '';
+    inventoryLinks.forEach(link => {
+        linksHtml += `<div class="inventaris-link-item"><a href="${link.url}" target="_blank">🔗 ${link.naam}</a></div>`;
+    });
 
-    const itemImageContainer = document.createElement('div');
-    itemImageContainer.className = 'item-image-container';
-
-    const img = document.createElement('img');
-    img.src = item.afbeelding_url;
-    img.alt = item.naam;
-    img.loading = 'lazy';
-    itemImageContainer.appendChild(img);
+    const endHtml = `</div></div>`;
     
-    leftColumn.appendChild(itemImageContainer);
-
-    // Toon de beste prijs onder de afbeelding (voor desktop en mobiel)
-    if (item.winkels && item.winkels.length > 0) {
-        const lowestPrice = item.winkels.sort((a, b) => {
-            // Check for valid price format before attempting to parse
-            const parsePrice = (priceStr) => {
-                try {
-                    return parseFloat(priceStr.replace('€', '').replace(',', '.').trim());
-                } catch (e) {
-                    return Infinity; // Zet ongeldige prijzen achteraan
-                }
-            };
-
-            const priceA = parsePrice(a.prijs);
-            const priceB = parsePrice(b.prijs);
-            return priceA - priceB;
-        })[0];
-        
-        const priceElement = document.createElement('p');
-        priceElement.className = 'item-price-under-image';
-        priceElement.innerHTML = `Vanaf: <span class="price-value">${lowestPrice.prijs}</span>`;
-        leftColumn.appendChild(priceElement);
-    }
-    
-    wensItem.appendChild(leftColumn);
-
-    // --- RIGHT COLUMN (DETAILS, LINKS, ACTION) ---
-    const rightColumn = document.createElement('div');
-    rightColumn.className = 'right-column';
-
-    // Titel en Beschrijving
-    const title = document.createElement('h3');
-    title.textContent = item.naam;
-    rightColumn.appendChild(title);
-
-    const description = document.createElement('p');
-    description.className = 'item-description';
-    description.textContent = item.beschrijving;
-    rightColumn.appendChild(description);
-
-    const nummer = document.createElement('p');
-    nummer.className = 'item-nummer';
-    nummer.textContent = `Artikelnr: ${item.nummer}`;
-    rightColumn.appendChild(nummer);
-    
-    // Winkel Links
-    const winkelLinksContainer = document.createElement('div');
-    winkelLinksContainer.className = 'winkel-links';
-
-    if (item.winkels) {
-        // Sorteer de winkel links op prijs
-        const sortedWinkels = item.winkels.sort((a, b) => {
-            const parsePrice = (priceStr) => {
-                 try {
-                    return parseFloat(priceStr.replace('€', '').replace(',', '.').trim());
-                 } catch (e) {
-                    return Infinity;
-                 }
-            };
-            const priceA = parsePrice(a.prijs);
-            const priceB = parsePrice(b.prijs);
-            return priceA - priceB;
-        });
-        
-        // CONTROLE OP KAPOTTE LINKS (opgeslagen instructie)
-        let hasBrokenLink = false;
-        sortedWinkels.forEach(winkel => {
-            if (!winkel.link || winkel.link.trim() === '' || !winkel.link.startsWith('http')) {
-                hasBrokenLink = true;
-                // Dit wordt gelogd in de console, maar de waarschuwing wordt hieronder getoond.
-            }
-        });
-        
-        if (hasBrokenLink) {
-            // Voeg een waarschuwing toe aan de gebruiker op de site
-            const warning = document.createElement('p');
-            warning.textContent = 'Waarschuwing: Er is een ongeldige link gevonden voor dit item. Controleer de JSON.';
-            warning.style.color = 'red';
-            warning.style.fontSize = '0.9em';
-            rightColumn.appendChild(warning);
-        }
-
-        sortedWinkels.forEach(winkel => {
-            const link = document.createElement('a');
-            link.href = winkel.link;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.className = 'winkel-link-button';
-            link.textContent = `${winkel.naam}: ${winkel.prijs}`;
-            winkelLinksContainer.appendChild(link);
-        });
-    }
-
-    rightColumn.appendChild(winkelLinksContainer);
-    
-    // Actie Area (Claim Button)
-    const actionArea = document.createElement('div');
-    actionArea.className = 'item-action-area';
-
-    if (isPurchased) {
-        const purchasedText = document.createElement('p');
-        purchasedText.className = 'purchased-note';
-        purchasedText.textContent = 'Gekocht! Bedankt. \u2764\uFE0F'; // Hartje
-        actionArea.appendChild(purchasedText);
-    } else {
-        const claimButton = document.createElement('button');
-        claimButton.className = 'claim-button';
-        claimButton.textContent = 'Claim dit cadeau!';
-        claimButton.onclick = () => claimItem(persoonNaam, item.naam, item.id);
-        actionArea.appendChild(claimButton);
-    }
-
-    rightColumn.appendChild(actionArea);
-    
-    wensItem.appendChild(rightColumn);
-
-    return wensItem;
+    document.getElementById('person-lists-container').innerHTML += inventarisHtml + linksHtml + endHtml;
 }
 
 
-// --- HOOFDFUNCTIE OM DATA TE LADEN ---
+// Functie om de navigatieknoppen (tabs) te genereren
+function generateTabNavigation(wishlistData) {
+    const tabNav = document.getElementById('dynamic-tab-nav');
+    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')">Overzicht (Galerij)</button>`;
+    
+    wishlistData.personen.forEach(person => {
+        const tabId = person.naam.toLowerCase() + '-list-content';
+        
+        // Bereken percentage gekocht voor de badge
+        const totalItems = person.items.length;
+        const purchasedCount = person.items.filter(item => item.isPurchased).length;
+        const percentage = totalItems > 0 ? Math.round((purchasedCount / totalItems) * 100) : 0;
+        
+        // De tab-knop met de percentage badge
+        navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">
+                        ${person.naam}
+                        <span class="percentage-bought">${percentage}% gekocht</span>
+                    </button>`;
+    });
 
+    navHtml += `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris Links</button>`;
+    
+    tabNav.innerHTML = navHtml;
+}
+
+
+// Functie om de hoofdtitel en datum bij te werken
+function updatePageTitle(wishlistData) {
+    document.getElementById('main-title').innerHTML = `🎄🎁 ${wishlistData.wenslijst_titel} 🎁🎄`;
+    document.getElementById('last-update-text').textContent = `Laatste update: ${wishlistData.datum}`;
+}
+
+
+// De hoofdgenerator functie
+function generateWishlistContent(wishlistData, purchasedItemIds) {
+    // Voeg de 'isPurchased' status toe aan de item objecten
+    wishlistData.personen.forEach(person => {
+        person.items.forEach(item => {
+            item.isPurchased = purchasedItemIds.has(item.id);
+        });
+    });
+
+    // Genereer HTML elementen in de juiste volgorde
+    updatePageTitle(wishlistData);
+    generateTabNavigation(wishlistData);
+    generatePersonLists(wishlistData, purchasedItemIds);
+    generateOverviewGrid(wishlistData); // Moet na de lists gegenereerd worden voor scroll functionaliteit
+}
+
+
+// --- HOOFD LAAD LOGICA ---
+
+// Foutafhandeling voor fetch
+const handleErrors = (response) => {
+    if (!response.ok) {
+        throw Error(`${response.statusText} (${response.url})`);
+    }
+    return response;
+}
+
+// De hoofdfunctie die alle data laadt
 function loadWishlist() {
-    // 1. Haal de hoofd-configuratie en de claims op
-    Promise.all([
-        fetch('wishlist_data.json')
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('Kon wishlist_data.json niet laden. Controleer de bestandsnaam.');
-                }
-                return res.json();
-            })
-            .catch(error => {
-                console.error("Fout bij laden van wishlist_data.json:", error.message);
-                // Toon een foutmelding op de pagina als de kritieke file faalt
-                document.getElementById('overview-grid-container').innerHTML = `<p style="color: red; font-weight: bold;">Fout: Hoofdconfiguratie (wishlist_data.json) kon niet geladen worden. ${error.message}</p>`;
-                throw error; // Propagate error
-            }),
-        fetch('claims.json')
-            .then(res => {
-                if (!res.ok) {
-                    // Als de claims file niet gevonden wordt (404), val terug op leeg
-                    console.warn("claims.json niet gevonden of kon niet geladen worden. Start met lege claims.");
-                    return { purchased_items: [] }; 
-                }
-                return res.json();
-            })
-            .catch(error => {
-                // Als er een andere fout is (netwerk, JSON parse), val terug op leeg
-                console.error("Fout bij laden van claims.json:", error.message);
-                return { purchased_items: [] }; 
-            })
-    ])
-    .then(([mainData, claimsData]) => {
-        // 2. Definieer de fetches voor de afzonderlijke databestanden
-        const fileFetches = [];
-        const personNames = [];
-        const personIndices = {}; // Index om de namen later correct te koppelen
-
-        // 2a. Fetch item lijsten voor elke persoon
-        mainData.personen.forEach((person, index) => {
-            fileFetches.push(
-                fetch(person.data_file)
-                    .then(res => {
-                        if (!res.ok) {
-                             throw new Error(`Kon de items voor ${person.naam} niet laden: ${person.data_file}`);
-                        }
-                        return res.json();
-                    })
-                    .catch(error => {
-                        console.error(`Fout bij laden van items voor ${person.naam}: ${error.message}`);
-                        // Laat het item fetch falen, de promise.all zal dit opvangen
-                        throw error;
-                    })
-            );
-            personNames.push(person.naam);
-            personIndices[person.naam] = index; // Onthoud de volgorde
-        });
-
-        // 2b. Fetch inventaris links (niet-kritiek, kan leeg zijn)
-        let inventoryFetch = Promise.resolve([]); // Default leeg array
-        if (mainData.inventaris_links_file) {
-             inventoryFetch = fetch(mainData.inventaris_links_file)
-                .then(res => {
-                    if (!res.ok) {
-                         console.warn("inventory_links.json niet gevonden. Start met lege links.");
-                         return [];
-                    }
-                    return res.json();
-                })
-                .catch(error => {
-                     console.error("Fout bij laden van inventory_links.json:", error.message);
-                     return []; // Ga verder zonder inventaris links
-                });
+    // 1. Laad de hoofdwenslijst data (wishlist_data.json)
+    return fetch('wishlist_data.json')
+    .then(handleErrors)
+    .then(response => response.json())
+    .then(mainData => {
+        // Controleer of de JSON de minimale structuur heeft
+        if (!mainData.personen || !mainData.wenslijst_titel) {
+             throw new Error("wishlist_data.json is onjuist geformatteerd.");
         }
-        fileFetches.push(inventoryFetch);
+        
+        // Definieer de bestanden die geladen moeten worden
+        const personFiles = mainData.personen.map(p => p.data_file);
+        const personNames = mainData.personen.map(p => p.naam);
+        
+        // claims.json is verplicht
+        const claimsFetch = fetch('claims.json')
+            .then(handleErrors)
+            .then(response => response.json())
+            .catch(() => ({ purchased_items: [] })); // Ga door als claims.json niet bestaat
+        
+        // 2. Wacht op claims.json
+        return claimsFetch.then(claimsData => {
+            const fileFetches = [];
+            
+            // Laad de individuele item lijsten van de personen
+            personFiles.forEach((file) => {
+                const personFetch = fetch(file)
+                    .then(handleErrors)
+                    .then(response => response.json())
+                    .catch(error => {
+                        console.error(`Fout bij het laden van ${file}:`, error);
+                        // Bij een fout, retourneer een lege lijst, zodat de app niet crasht
+                        return []; 
+                    });
+                fileFetches.push(personFetch);
+            });
 
-        // 3. Wacht op alle afzonderlijke bestanden en herstructureer de data
-        return Promise.all(fileFetches).then(results => {
-            // Het laatste resultaat is de inventaris links (of een leeg array)
-            const inventoryLinks = results.pop(); 
-            const personItemLists = results; // De overige zijn de item lijsten
+            // Laad de inventaris links (indien gespecificeerd)
+            let inventoryFetch;
+            if (mainData.inventaris_links_file) {
+                inventoryFetch = fetch(mainData.inventaris_links_file)
+                    .then(handleErrors)
+                    .then(response => response.json())
+                    .catch(error => {
+                        console.warn(`Kon inventaris links niet laden (${mainData.inventaris_links_file}):`, error);
+                        return [];
+                    });
+            } else {
+                inventoryFetch = Promise.resolve([]);
+            }
+            fileFetches.push(inventoryFetch);
 
-            // Herstructureer naar de oorspronkelijke wishlistData structuur voor compatibiliteit
-            const reconstructedWishlist = {
-                wenslijst_titel: mainData.wenslijst_titel,
-                datum: mainData.datum,
-                personen: personItemLists.map((items, index) => ({
-                    naam: personNames[index],
-                    items: items // Dit zijn de items die geladen zijn uit de data_file
-                })),
-                inventaris_links: inventoryLinks
-            };
+            // 3. Wacht op alle afzonderlijke bestanden en herstructureer de data
+            return Promise.all(fileFetches).then(results => {
+                // Het laatste resultaat is de inventaris links (of een leeg array)
+                const inventoryLinks = results.pop(); 
+                const personItemLists = results; // De overige zijn de item lijsten
 
-            return [reconstructedWishlist, claimsData];
+                // Herstructureer naar de oorspronkelijke wishlistData structuur voor compatibiliteit
+                const reconstructedWishlist = {
+                    wenslijst_titel: mainData.wenslijst_titel,
+                    datum: mainData.datum,
+                    personen: personItemLists.map((items, index) => ({
+                        naam: personNames[index],
+                        items: items // Dit zijn de items die geladen zijn uit de data_file
+                    })),
+                    inventaris_links: inventoryLinks
+                };
+
+                return [reconstructedWishlist, claimsData];
+            });
         });
     })
     .then(([wishlistData, claimsData]) => {
         // 4. Genereer de content
         const purchasedItemIds = new Set(claimsData.purchased_items || []);
+        
+        // >>> BELANGRIJKE NIEUWE REGEL: DYNAMISCHE TITEL INSTELLEN
+        updateHtmlTitle(wishlistData); 
+        
         generateWishlistContent(wishlistData, purchasedItemIds);
         
     })
     .catch(error => {
         // De kritieke foutafhandeling gebeurt reeds in stap 1.
         console.error("Onverwachte fout in laadproces:", error);
+        document.getElementById('loading-message').textContent = `Fout bij het laden van de wensenlijst. Controleer de console voor details. (${error.message})`;
     });
 }
 

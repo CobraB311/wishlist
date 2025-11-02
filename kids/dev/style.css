@@ -69,19 +69,12 @@ body {
     z-index: 1000;
     overflow-y: auto;
     padding-top: 10px;
-    
-    /* Nodig voor absolute positionering van de boom */
-    position: relative;
 }
 
 .header-content {
     display: flex;
     flex-direction: column;
     height: 100%;
-    position: relative; /* Zorgt dat de navigatie boven de boom blijft */
-    z-index: 10;
-    background-color: #fff; /* Bedekt de boom achter de knoppen */
-    min-height: min-content; /* Zorgt dat het niet de volledige hoogte inneemt */
 }
 
 .tab-nav {
@@ -618,105 +611,3 @@ h1 {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
-
-/* --- KERSTBOOM EN SNEEUW DECORATIE (ALLEEN DESKTOP) --- */
-
-/* ROOT VARIABELEN */
-:root {
-	--main-bg: #fff; /* Aangepast naar wit/sidebar kleur */
-	--trunk-bg-1: #5e2100;
-	--trunk-bg-2: #783e00;
-	--leaves-bottom-bg-1: #0f980f;
-	--leaves-bottom-bg-2: #3fc83f;
-	--leaves-middle-bg-1: #1fa81f;
-	--leaves-middle-bg-2: #4fd84f;
-	--leaves-top-bg-1: #2fb82f;
-	--leaves-top-bg-2: #5fe85f;
-	--star-bg: #ffdd00;
-	--shine-bg: #ffeb69;
-	--snow-bg: #f2f2f2;
-	--tree-width: 200px;
-	--tree-height: 400px;
-	--tree-rotate: -15deg;
-	--trunk-width: 30px;
-	--trunk-height: 400px;
-	--trunk-angle: 4.3deg;
-	--leaves-translate: 15px;
-	--leaves-bottom-width: 100px;
-	--leaves-bottom-height: 320px;
-	--leaves-bottom-angle: 18.2deg;
-	--leaves-middle-width: 80px;
-	--leaves-middle-height: 220px;
-	--leaves-middle-angle: 21.4deg;
-	--leaves-top-width: 60px;
-	--leaves-top-height: 140px;
-	--leaves-top-angle: 25.5deg;
-	--star-size: 20px;
-}
-
-.ts-3d {
-	transform-style: preserve-3d;
-}
-
-/* WIKKEL VOOR KERSTBOOM: Gecentreerd onderaan in de sidebar */
-.tree-background-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Dekt de hele sidebar */
-    overflow: hidden;
-    pointer-events: none; /* Negeer muiskliks op de boom */
-    z-index: 1; /* Zorg dat dit onder de navigatie ligt (die z-index 1000 heeft) */
-    
-	background-color: var(--main-bg);
-	display: flex;
-	align-items: flex-end; /* Lijn de boom onderaan uit */
-	justify-content: center;
-    padding-bottom: 20px; /* Geef de boom een beetje ruimte van de bodem */
-}
-
-
-.tree {
-	width: var(--tree-width);
-	height: var(--tree-height);
-	position: relative;
-	transform-style: preserve-3d;
-	transform: rotateX(var(--tree-rotate));
-}
-
-.trunk,
-.leaves-bottom,
-.leaves-middle,
-.leaves-top {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	animation: 10s tree-rotate linear infinite;
-}
-
-.trunk div {
-	border-top: none;
-	border-left: solid var(--trunk-width) transparent;
-	border-right: solid var(--trunk-width) transparent;
-	position: absolute;
-	bottom: 0;
-	left: calc(50% - var(--trunk-width));
-	transform-origin: bottom;
-}
-
-.trunk div:nth-child(1) {
-	border-bottom: solid var(--trunk-height) var(--trunk-bg-1);
-	transform: rotateX(var(--trunk-angle)) translateY(2px) translateZ(var(--trunk-width));
-}
-
-.trunk div:nth-child(2) {
-	border-bottom: solid var(--trunk-height) var(--trunk-bg-2);
-	transform: rotateY(90deg) rotateX(calc(var(--trunk-angle) * -1)) translateY(2px) translateZ(calc(var(--trunk-width) * -1));
-}
-
-.trunk div:nth-child(3) {
-	border-bottom: solid var(--trunk-height) var(--trunk-bg-1);
-	transform: rotateX(calc(var(--trunk-

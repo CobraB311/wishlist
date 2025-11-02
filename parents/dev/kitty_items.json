@@ -1,14 +1,16 @@
 [
-        {
-          "id": "hasbro-marvel-armored-up-avengers-9300000225966594",
-          "naam": "Hasbro Marvel actiefiguren Iron Man & Friends - Armored Up Avengers Pack",
-          "nummer": "G1255",
-          "beschrijving": "Set van 6 actiefiguren (3-inch) geïnspireerd op de Disney Jr. serie 'Iron Man and his Awesome Friends'. Bevat Iron Man, Ironheart, Iron Hulk, Captain America: Sam Wilson, Gamma en Ultron.",
-          "afbeelding_url": "https://media.s-bol.com/yNDQDDJgwLq6/vgJ5VRg/550x460.jpg",
-          "winkels": [
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1DOZ5fR", "prijs": "€ 26,19" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/i2vcTRC", "prijs": "€ 25,99" },
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" }
-          ]
-        }
-      ]
+  {
+    "id": "cavos-groentesnijder-9300000140574262",
+    "naam": "Cavos Groentesnijder / Mandoline - Multifunctioneel (BPA-vrij)",
+    "nummer": "KIT001",
+    "beschrijving": "Multifunctionele groentesnijder, mandoline, uiensnijder, frietsnijder en rasp. Vlijmscherp, BPA-vrij en met opvangbak. Ideaal voor het snel bereiden van salades en groenteschotels.",
+    "afbeelding_url": "https://media.s-bol.com/q98AWAPwRkw0/rJZjmW/550x553.jpg",
+    "winkels": [
+      { 
+        "naam": "Bol.com", 
+        "link": "https://www.bol.com/be/nl/p/cavos-groentesnijder-mandoline-multifunctioneel-uiensnijder-frietsnijder-rasp-vlijmscherp-bpa-vrij/9300000140574262/?referrer=socialshare_pdp_www", 
+        "prijs": "€ 34,95" 
+      }
+    ]
+  }
+]

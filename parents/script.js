@@ -121,7 +121,7 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
     // 2. PERSONEN EN HUN ITEMS
     
     wishlistData.personen.forEach(persoon => {
-        const naamKort = persoon.naam.toLowerCase().replace(/\s/g, ''); // jonas, milan
+        const naamKort = persoon.naam.toLowerCase().replace(/\s/g, ''); // kitty, ruben
         const tabId = `${naamKort}-list`;
         
         // Items sorteren op prijs (laag naar hoog)

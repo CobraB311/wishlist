@@ -216,5 +216,19 @@
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/little-dutch-koffertjes-forest-friends-fsc/9300000181455728/?referrer=socialshare_pdp_www", "prijs": "€ 17,95" },
             { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/little-dutch-kofferset-2-in-1-forest-friends-fsc/01811315", "prijs": "€ 17,95" }
           ]
-        }
+        },
+        {
+            "naam": "WOWOW Kinderhesje Zippy (Oranje)",
+            "beschrijving": "Een feloranje reflecterend hesje voor kinderen. Ideaal om veilig in het verkeer te zijn, vooral tijdens de schemering of in het donker. Maat S.",
+            "afbeelding_url": "https://media.s-bol.com/38KBMqG1W43p/vgR316m/538x840.jpg",
+            "nummer": "9300000237288626",
+            "id": "milan-hesje-s",
+            "winkels": [
+              {
+                "naam": "Bol.com",
+                "prijs": "€ 14,95",
+                "link": "https://www.bol.com/be/nl/p/wowow-kinderhesje-zippy-orange-s/9300000237288626/?referrer=socialshare_pdp_www"
+              }
+            ]
+          }
       ]

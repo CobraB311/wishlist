@@ -54,7 +54,7 @@ function openTab(evt, tabId) {
 
 // Functie om te scrollen naar een item na een klik in het overzicht
 function scrollToItem(persoonNaam, itemId) {
-    // 1. Open de juiste tab (de wensenlijst van de persoon)
+    // 1. Open de juiste tab (de wensenlijst van de persoon of "gezamenlijk")
     const tabId = persoonNaam.toLowerCase() + '-list-content';
     
     // Roep openTab aan zonder event (evt = null). De nieuwe openTab zal de juiste knop vinden.
@@ -105,25 +105,23 @@ function generateOverviewGrid(wishlistData) {
     const gridContainer = document.getElementById('overview-grid-container');
     let overviewHtml = '';
 
+    // Eerst de individuele lijsten
     wishlistData.personen.forEach(person => {
-        // Een sectie per persoon (voor het geval de overzichtspagina wordt gegroepeerd)
         overviewHtml += `<div class="overview-person-section">
                             <h3>Wensenlijst van ${person.naam}</h3>
                             <div class="overview-grid-inner">`;
         
         person.items.forEach(item => {
-            // Gebruik de eerste winkelprijs als er winkels zijn
             const prijs = item.winkels && item.winkels.length > 0 ? item.winkels[0].prijs : 'Prijs Onbekend';
             const isPurchased = item.isPurchased; 
             const itemClass = isPurchased ? 'overview-grid-item purchased' : 'overview-grid-item';
             
-            // NIEUW: Overlay HTML toevoegen voor het overzicht
             let purchasedOverlayHtml = '';
             if (isPurchased) {
                 purchasedOverlayHtml = `<span class="purchased-overlay">GEKOCHT</span>`;
             }
 
-            // Voeg de onClick toe om naar het item te scrollen
+            // Gebruik person.naam voor de scrolltoItem
             overviewHtml += `<div class="${itemClass}" onclick="scrollToItem('${person.naam}', '${item.id}')">
                                 <div class="overview-image-wrapper">
                                     ${purchasedOverlayHtml}
@@ -137,8 +135,43 @@ function generateOverviewGrid(wishlistData) {
                             </div>`;
         });
         
-        overviewHtml += `</div></div>`; // Sluit grid-inner en section
+        overviewHtml += `</div></div>`; 
     });
+    
+    // 🆕 Gezamenlijke items toevoegen aan het overzicht
+    if (wishlistData.gezamenlijke_items && wishlistData.gezamenlijke_items.items.length > 0) {
+        const sharedName = wishlistData.gezamenlijke_items.naam; // "Gezamenlijk"
+        overviewHtml += `<div class="overview-person-section">
+                            <h3>Wensenlijst: ${sharedName}</h3>
+                            <div class="overview-grid-inner">`;
+                            
+        wishlistData.gezamenlijke_items.items.forEach(item => {
+            const prijs = item.winkels && item.winkels.length > 0 ? item.winkels[0].prijs : 'Prijs Onbekend';
+            const isPurchased = item.isPurchased; 
+            const itemClass = isPurchased ? 'overview-grid-item purchased' : 'overview-grid-item';
+            
+            let purchasedOverlayHtml = '';
+            if (isPurchased) {
+                purchasedOverlayHtml = `<span class="purchased-overlay">GEKOCHT</span>`;
+            }
+
+            // De scrollToItem functie gebruikt hier de naam "Gezamenlijk"
+            overviewHtml += `<div class="${itemClass}" onclick="scrollToItem('${sharedName}', '${item.id}')">
+                                <div class="overview-image-wrapper">
+                                    ${purchasedOverlayHtml}
+                                    <img src="${item.afbeelding_url}" alt="${item.naam}">
+                                </div>
+                                <div class="overview-caption">
+                                    ${item.naam}
+                                    <span class="overview-person">(${sharedName})</span>
+                                </div>
+                                <span class="item-price-under-image">${prijs}</span>
+                            </div>`;
+        });
+        
+        overviewHtml += `</div></div>`; 
+    }
+
 
     gridContainer.innerHTML = overviewHtml;
 }
@@ -208,6 +241,71 @@ function generatePersonLists(wishlistData, purchasedItemIds) {
     personListsContainer.innerHTML = listsHtml;
 }
 
+// 🆕 NIEUWE FUNCTIE: Genereer de gezamenlijke wensenlijst
+function generateSharedList(sharedData, purchasedItemIds) {
+    const personListsContainer = document.getElementById('person-lists-container');
+    let listsHtml = '';
+    
+    const personName = sharedData.naam; // Dit is "Gezamenlijk"
+    const tabId = personName.toLowerCase() + '-list-content';
+
+    // Maak de content container voor de gezamenlijke items
+    listsHtml += `<div id="${tabId}" class="tab-content">
+                    <h2>Wensenlijst: ${personName}</h2>
+                    <div class="wens-lijst">`;
+    
+    sharedData.items.forEach(item => {
+        const isPurchased = purchasedItemIds.has(item.id);
+        const itemClass = isPurchased ? 'wens-item purchased' : 'wens-item';
+        
+        // Links genereren
+        let winkelsHtml = '';
+        item.winkels.forEach(winkel => {
+            winkelsHtml += `<a href="${winkel.link}" target="_blank" class="winkel-link-button">${winkel.naam} (${winkel.prijs})</a>`;
+        });
+
+        // Claim actie gebied genereren
+        let actionAreaHtml = '';
+        if (isPurchased) {
+            actionAreaHtml = `<span class="purchased-note">🎁 Dit cadeau is reeds gekocht!</span>`;
+        } else {
+            // Belangrijk: De naam "Gezamenlijk" wordt hier gebruikt in de mail body
+            actionAreaHtml = `<button class="claim-button" onclick="claimItem('${personName}', '${item.naam}', '${item.id}')">Cadeau Kopen & Claimen</button>`;
+        }
+        
+        // Overlay HTML voor gekochte items
+        let purchasedOverlayHtml = '';
+        if (isPurchased) {
+            purchasedOverlayHtml = `<span class="purchased-overlay">GEKOCHT</span>`;
+        }
+
+        // Volledig item
+        listsHtml += `<div id="${item.id}" class="${itemClass}">
+                        <div class="left-column">
+                            <div class="item-image-container">
+                                ${purchasedOverlayHtml}
+                                <img src="${item.afbeelding_url}" alt="${item.naam}">
+                            </div>
+                            <span class="item-price-under-image">${item.winkels.length > 0 ? item.winkels[0].prijs : 'Prijs Onbekend'}</span>
+                        </div>
+                        <div class="right-column">
+                            <h3>${item.naam}</h3>
+                            <p class="item-description">${item.beschrijving}</p>
+                            <div class="winkel-links">${winkelsHtml}</div>
+                            <p class="item-nummer">Artikelnummer: ${item.nummer}</p>
+                            <div class="item-action-area">
+                                ${actionAreaHtml}
+                            </div>
+                        </div>
+                    </div>`;
+    });
+    
+    listsHtml += `</div></div>`; 
+
+    // Voeg de nieuwe lijst toe aan de container
+    personListsContainer.innerHTML += listsHtml;
+}
+
 
 // Functie om de inventaris links te genereren
 function generateInventoryLinks(inventoryLinks) {
@@ -232,6 +330,7 @@ function generateTabNavigation(wishlistData) {
     const tabNav = document.getElementById('dynamic-tab-nav');
     let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')">Overzicht (Galerij)</button>`;
     
+    // Voeg individuele personen toe
     wishlistData.personen.forEach(person => {
         const tabId = person.naam.toLowerCase() + '-list-content';
         
@@ -246,6 +345,22 @@ function generateTabNavigation(wishlistData) {
                         <span class="percentage-bought">${purchasedCount}/${totalItems} (${percentage}%)</span>
                     </button>`;
     });
+
+    // 🆕 BIJGEWERKT: Voeg de Gezamenlijke tab toe MET percentage
+    if (wishlistData.gezamenlijke_items && wishlistData.gezamenlijke_items.items.length > 0) {
+        const sharedData = wishlistData.gezamenlijke_items;
+        const tabId = 'gezamenlijk-list-content';
+
+        // Bereken percentage gekocht voor de badge
+        const totalItems = sharedData.items.length;
+        const purchasedCount = sharedData.items.filter(item => item.isPurchased).length;
+        const percentage = totalItems > 0 ? Math.round((purchasedCount / totalItems) * 100) : 0;
+        
+        navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">
+                        Gezamenlijk
+                        <span class="percentage-bought">${purchasedCount}/${totalItems} (${percentage}%)</span>
+                    </button>`;
+    }
 
     navHtml += `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris Links</button>`;
     
@@ -265,20 +380,36 @@ function updatePageTitle(wishlistData) {
 
 // De hoofdgenerator functie
 function generateWishlistContent(wishlistData, purchasedItemIds) {
-    // Voeg de 'isPurchased' status toe aan de item objecten
+    
+    // Voeg de 'isPurchased' status toe aan de item objecten van ALLE lijsten
     wishlistData.personen.forEach(person => {
         person.items.forEach(item => {
             item.isPurchased = purchasedItemIds.has(item.id);
         });
     });
 
+    // 🆕 Voeg de 'isPurchased' status toe aan de GEZAMENLIJKE items
+    if (wishlistData.gezamenlijke_items && wishlistData.gezamenlijke_items.items) {
+        wishlistData.gezamenlijke_items.items.forEach(item => {
+            item.isPurchased = purchasedItemIds.has(item.id);
+        });
+    }
+
     // Genereer HTML elementen in de juiste volgorde
     updatePageTitle(wishlistData);
     
-    // We moeten eerst de lijsten genereren om de percentages correct te berekenen, 
-    // daarna de navigatie, en als laatste het overzicht.
+    // We moeten eerst de lijsten genereren 
     generatePersonLists(wishlistData, purchasedItemIds);
+    
+    // Nu de Gezamenlijke lijst genereren (gebruik de nieuwe functie)
+    if (wishlistData.gezamenlijke_items && wishlistData.gezamenlijke_items.items.length > 0) {
+         generateSharedList(wishlistData.gezamenlijke_items, purchasedItemIds);
+    }
+    
+    // Daarna de navigatie (nu met percentage voor Gezamenlijk)
     generateTabNavigation(wishlistData);
+    
+    // En als laatste het overzicht.
     generateOverviewGrid(wishlistData); 
     
     // Inventaris Links toevoegen indien aanwezig
@@ -336,8 +467,23 @@ function loadWishlist() {
                     });
                 fileFetches.push(personFetch);
             });
-
-            // Laad de inventaris links (indien gespecificeerd)
+            
+            // 🆕 Laad de gezamenlijke items
+            let gezamenlijkFetch;
+            if (mainData.gezamenlijke_items_file) {
+                gezamenlijkFetch = fetch(mainData.gezamenlijke_items_file)
+                    .then(handleErrors)
+                    .then(response => response.json())
+                    .catch(error => {
+                        console.warn(`Kon gezamenlijke items niet laden (${mainData.gezamenlijke_items_file}):`, error);
+                        return [];
+                    });
+            } else {
+                gezamenlijkFetch = Promise.resolve([]);
+            }
+            fileFetches.push(gezamenlijkFetch); // Index -2
+            
+            // Laad de inventaris links
             let inventoryFetch;
             if (mainData.inventaris_links_file) {
                 inventoryFetch = fetch(mainData.inventaris_links_file)
@@ -350,23 +496,29 @@ function loadWishlist() {
             } else {
                 inventoryFetch = Promise.resolve([]);
             }
-            fileFetches.push(inventoryFetch);
+            fileFetches.push(inventoryFetch); // Index -1
 
             // 3. Wacht op alle afzonderlijke bestanden en herstructureer de data
             return Promise.all(fileFetches).then(results => {
-                // Het laatste resultaat is de inventaris links (of een leeg array)
+                // De laatste 2 resultaten zijn inventaris en gezamenlijke items
                 const inventoryLinks = results.pop(); 
+                const gezamenlijkeItems = results.pop(); 
                 const personItemLists = results; // De overige zijn de item lijsten
 
-                // Herstructureer naar de oorspronkelijke wishlistData structuur voor compatibiliteit
+                // Herstructureer naar de oorspronkelijke wishlistData structuur
                 const reconstructedWishlist = {
                     wenslijst_titel: mainData.wenslijst_titel,
                     datum: mainData.datum,
                     personen: personItemLists.map((items, index) => ({
                         naam: personNames[index],
-                        items: items // Dit zijn de items die geladen zijn uit de data_file
+                        items: items
                     })),
-                    inventaris_links: inventoryLinks // Hier voegen we de geladen links toe
+                    // 🆕 Voeg de gezamenlijke items toe
+                    gezamenlijke_items: {
+                        naam: "Gezamenlijk",
+                        items: gezamenlijkeItems
+                    },
+                    inventaris_links: inventoryLinks
                 };
 
                 return [reconstructedWishlist, claimsData];

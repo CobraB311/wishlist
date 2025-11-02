@@ -114,10 +114,21 @@ function generateOverviewGrid(wishlistData) {
         person.items.forEach(item => {
             // Gebruik de eerste winkelprijs als er winkels zijn
             const prijs = item.winkels && item.winkels.length > 0 ? item.winkels[0].prijs : 'Prijs Onbekend';
+            const isPurchased = item.isPurchased; 
+            const itemClass = isPurchased ? 'overview-grid-item purchased' : 'overview-grid-item';
             
+            // NIEUW: Overlay HTML toevoegen voor het overzicht
+            let purchasedOverlayHtml = '';
+            if (isPurchased) {
+                purchasedOverlayHtml = `<span class="purchased-overlay">GEKOCHT</span>`;
+            }
+
             // Voeg de onClick toe om naar het item te scrollen
-            overviewHtml += `<div class="overview-grid-item" onclick="scrollToItem('${person.naam}', '${item.id}')">
-                                <img src="${item.afbeelding_url}" alt="${item.naam}">
+            overviewHtml += `<div class="${itemClass}" onclick="scrollToItem('${person.naam}', '${item.id}')">
+                                <div class="overview-image-wrapper">
+                                    ${purchasedOverlayHtml}
+                                    <img src="${item.afbeelding_url}" alt="${item.naam}">
+                                </div>
                                 <div class="overview-caption">
                                     ${item.naam}
                                     <span class="overview-person">(${person.naam})</span>
@@ -164,7 +175,7 @@ function generatePersonLists(wishlistData, purchasedItemIds) {
                 actionAreaHtml = `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Cadeau Kopen & Claimen</button>`;
             }
             
-            // NIEUW: Overlay HTML voor gekochte items
+            // Overlay HTML voor gekochte items (detaillijst)
             let purchasedOverlayHtml = '';
             if (isPurchased) {
                 purchasedOverlayHtml = `<span class="purchased-overlay">GEKOCHT</span>`;
@@ -229,7 +240,7 @@ function generateTabNavigation(wishlistData) {
         const purchasedCount = person.items.filter(item => item.isPurchased).length;
         const percentage = totalItems > 0 ? Math.round((purchasedCount / totalItems) * 100) : 0;
         
-        // FIX: Tekst is ingekort: "gekocht" is verwijderd om overloop te voorkomen
+        // Tekst is ingekort om overloop te voorkomen
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">
                         ${person.naam}
                         <span class="percentage-bought">${purchasedCount}/${totalItems} (${percentage}%)</span>

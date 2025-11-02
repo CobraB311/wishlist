@@ -1,13 +1,16 @@
 [
-        {
-          "id": "deao-magnetron-b0bv2lfll7",
-          "naam": "deAO Magnetron Oven Speelgoed Koken Speelset",
-          "nummer": "B0BV2LFLL7",
-          "beschrijving": "Microgolf oven speelgoed kookspeelset met realistisch licht, geluid en neppe etenswaren. Met automatische rotatie, elektronische timing en LED-verlichting. De 'voedingsmiddelen' veranderen van kleur.",
-          "afbeelding_url": "https://m.media-amazon.com/images/I/71hW9vS41eL._AC_SL1500_.jpg",
-          "winkels": [
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/5O5IAOf", "prijs": "€ 29,99" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/aiICtXn", "prijs": "€ 32,99" }
-          ]
-        }
-      ]
+  {
+    "naam": "€10 PlayStation Store Tegoed",
+    "beschrijving": "Een digitale code voor de PlayStation Store, handig voor het kopen van kleine games, add-ons of in-game valuta. Altijd een goed cadeau.",
+    "afbeelding_url": "https://media.s-bol.com/7BJ3VWrr9kRr/M8EDNrQ/550x349.jpg",
+    "nummer": "9200000113877188",
+    "id": "ruben-psn10",
+    "winkels": [
+      {
+        "naam": "Bol.com",
+        "prijs": "€ 10,00",
+        "link": "https://www.bol.com/be/nl/p/10-euro-playstation-store-tegoed-psn-playstation-network-kaart/9200000113877188/?referrer=socialshare_pdp_www"
+      }
+    ]
+  }
+]

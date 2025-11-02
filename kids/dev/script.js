@@ -163,11 +163,18 @@ function generatePersonLists(wishlistData, purchasedItemIds) {
             } else {
                 actionAreaHtml = `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Cadeau Kopen & Claimen</button>`;
             }
+            
+            // NIEUW: Overlay HTML voor gekochte items
+            let purchasedOverlayHtml = '';
+            if (isPurchased) {
+                purchasedOverlayHtml = `<span class="purchased-overlay">GEKOCHT</span>`;
+            }
 
             // Volledig item
             listsHtml += `<div id="${item.id}" class="${itemClass}">
                             <div class="left-column">
                                 <div class="item-image-container">
+                                    ${purchasedOverlayHtml}
                                     <img src="${item.afbeelding_url}" alt="${item.naam}">
                                 </div>
                                 <span class="item-price-under-image">${item.winkels.length > 0 ? item.winkels[0].prijs : 'Prijs Onbekend'}</span>
@@ -222,10 +229,10 @@ function generateTabNavigation(wishlistData) {
         const purchasedCount = person.items.filter(item => item.isPurchased).length;
         const percentage = totalItems > 0 ? Math.round((purchasedCount / totalItems) * 100) : 0;
         
-        // FIX: De tab-knop met de percentage EN aantal badge
+        // FIX: Tekst is ingekort: "gekocht" is verwijderd om overloop te voorkomen
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">
                         ${person.naam}
-                        <span class="percentage-bought">${purchasedCount}/${totalItems} (${percentage}%) gekocht</span>
+                        <span class="percentage-bought">${purchasedCount}/${totalItems} (${percentage}%)</span>
                     </button>`;
     });
 
@@ -263,7 +270,7 @@ function generateWishlistContent(wishlistData, purchasedItemIds) {
     generateTabNavigation(wishlistData);
     generateOverviewGrid(wishlistData); 
     
-    // FIX: Inventaris Links toevoegen indien aanwezig
+    // Inventaris Links toevoegen indien aanwezig
     if (wishlistData.inventaris_links && wishlistData.inventaris_links.length > 0) {
         generateInventoryLinks(wishlistData.inventaris_links);
     }

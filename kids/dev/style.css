@@ -110,12 +110,13 @@ body {
     border-left: 5px solid #4CAF50; 
 }
 
+/* FIX: De badge is nu korter, de CSS is hier in orde */
 .percentage-bought {
     font-size: 0.75em;
     font-weight: normal;
     background-color: #4CAF50;
     color: white;
-    padding: 3px 8px;
+    padding: 3px 6px; /* Iets minder padding */
     border-radius: 12px;
     margin-left: 10px;
     flex-shrink: 0;
@@ -136,21 +137,21 @@ body {
     min-height: 100vh; 
 }
 
-/* AANGEPAST: title-container styling */
+/* title-container styling */
 .title-container {
     margin-bottom: 20px;
     text-align: center;
     padding: 20px 0;
-    background-color: rgba(255, 255, 255, 0.85); /* Licht transparant wit */
+    background-color: rgba(255, 255, 255, 0.85); 
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15); 
 }
 
-/* AANGEPAST: h1 styling */
+/* h1 styling */
 h1 {
     font-size: 2.5em;
-    color: #b71c1c; /* Diep rood voor feestelijk tintje */
-    text-shadow: none; /* Geen schaduw meer voor strakkere look */
+    color: #b71c1c; 
+    text-shadow: none; 
 }
 
 .last-update {
@@ -159,10 +160,10 @@ h1 {
     margin-bottom: 30px; 
 }
 
-/* AANGEPAST: container styling */
+/* container styling */
 .container {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Iets meer dekkend wit */
+    background-color: rgba(255, 255, 255, 0.9); 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
@@ -294,6 +295,25 @@ h1 {
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    position: relative; /* Belangrijk voor overlay */
+    overflow: hidden; /* Belangrijk voor overlay */
+}
+
+/* NIEUWE STYLING VOOR GEKOCHT OVERLAY */
+.purchased-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg); /* Centreer en roteer */
+    z-index: 5; 
+    background-color: rgba(255, 0, 0, 0.85); /* Half-transparant rood */
+    color: white;
+    padding: 5px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* Zodat het geen kliks blokkeert */
 }
 
 .item-image-container img {
@@ -482,7 +502,7 @@ h1 {
     
     h1 {
         font-size: 2em;
-        color: #b71c1c; /* Ook op mobiel rood */
+        color: #b71c1c; 
         text-shadow: none; 
     }
     
@@ -505,6 +525,12 @@ h1 {
         max-height: 200px;
         margin-bottom: 5px;
         overflow: hidden; 
+    }
+
+    /* Ook de overlay op mobiel goed positioneren */
+    .purchased-overlay {
+        font-size: 1.2em;
+        padding: 4px 15px;
     }
 
     .item-image-container img {

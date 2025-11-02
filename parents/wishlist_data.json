@@ -5,5 +5,6 @@
     { "naam": "Kitty", "data_file": "kitty_items.json" },
     { "naam": "Ruben", "data_file": "ruben_items.json" }
   ],
-  "inventaris_links_file": "inventory_links.json"
+  "inventaris_links_file": "inventory_links.json",
+  "gezamenlijke_items_file": "gezamenlijk_items.json"
 }

@@ -1,0 +1,557 @@
+/* BASE STYLING & ANIMATIE */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #333;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden;
+    min-height: 100vh;
+    scroll-behavior: smooth; 
+    
+    /* Gradient Kleuren */
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite; 
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* GOLVEN STYLING (Driedubbel Gelaagd Effect) */
+
+/* Animatiedefinitie voor de golfbeweging */
+@keyframes wave {
+    0% { transform: translate3d(-90px, 0, 0); }
+    100% { transform: translate3d(85px, 0, 0); }
+}
+
+/* Algemene Wave Container Stijl */
+.wave {
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    transform: translate3d(0, 0, 0);
+    bottom: 0;
+    left: 0;
+}
+
+/* LAAG 1 (Dichtstbij, snelst) */
+.wave1 {
+    background: rgb(255 255 255 / 40%); /* Meest helder */
+    animation: wave 10s linear infinite;
+    z-index: -10; /* Z-INDEX CORRECTIE */
+}
+
+/* LAAG 2 (Midden) */
+.wave2 {
+    background: rgb(255 255 255 / 25%);
+    animation: wave 12s linear infinite; /* Langzamer */
+    animation-delay: -2s; /* Start met een vertraging */
+    z-index: -11; /* Z-INDEX CORRECTIE */
+}
+
+/* LAAG 3 (Verst weg, langzaamst) */
+.wave3 {
+    background: rgb(255 255 255 / 10%); /* Meest subtiel */
+    animation: wave 14s linear infinite; /* Nog langzamer */
+    animation-delay: -5s;
+    z-index: -12; /* Z-INDEX CORRECTIE */
+}
+
+/* VASTE HEADER (VERTIKALE NAVIGATIE) */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 180px; 
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    overflow-y: auto; 
+    padding-top: 10px; 
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tab-nav {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+.tab-button {
+    background-color: #f1f1f1;
+    color: #333;
+    display: block;
+    padding: 15px 15px; 
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+    border-left: 5px solid transparent;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #e8f5e9; 
+    color: #4CAF50;
+    font-weight: bold;
+    border-left: 5px solid #4CAF50; 
+}
+
+/* STYLING VOOR HET HERSTELDE PERCENTAGE LABEL */
+.percentage-bought {
+    font-size: 0.75em;
+    font-weight: normal;
+    background-color: #4CAF50;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+/* Wanneer de tab actief is, percentage een lichtere achtergrond geven */
+.tab-button.active .percentage-bought {
+    background-color: #a5d6a7; 
+}
+
+
+/* ALGEMENE LAYOUT (INHOUD) */
+
+.page-wrapper {
+    margin-left: 180px; 
+    padding: 20px 20px 80px 20px; 
+    position: relative;
+}
+
+.container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.title-container {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.last-update {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* TAB INHOUD (WENSENLIJSTEN EN OVERZICHT) */
+
+.tab-content {
+    display: none;
+    padding: 6px 0px;
+    border-top: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* OVERVIEW GRID (GALERIJ) - GESPLITST PER PERSOON */
+
+.overview-person-section {
+    margin-bottom: 40px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.overview-person-section h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.overview-grid-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.overview-grid-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.overview-grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.overview-grid-item img {
+    max-width: 100%;
+    max-height: 120px; 
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.overview-caption {
+    font-size: 0.9em;
+    color: #333;
+    font-weight: 500;
+}
+
+.overview-person {
+    font-weight: normal;
+    color: #777;
+    display: block; 
+    margin-top: 3px;
+    font-size: 0.85em;
+}
+
+/* WENSENLIJST DETAIL ITEMS */
+
+.wens-lijst {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 15px;
+}
+
+.wens-item {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background-color 0.3s;
+}
+
+.wens-item.purchased {
+    background-color: #fcfcfc;
+}
+
+/* AANGEPAST: Grijze filter op de afbeelding van gekochte items */
+.wens-item.purchased .item-image-container img {
+    filter: grayscale(100%);
+    opacity: 0.5; 
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.wens-item.highlight {
+    box-shadow: 0 0 10px 3px #90ee90; 
+    transition: box-shadow 0.5s;
+}
+
+.left-column {
+    width: 200px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+    text-align: center;
+}
+
+.item-image-container {
+    width: 100%;
+    height: 180px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.item-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.item-price-under-image {
+    display: block; 
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+.right-column {
+    flex-grow: 1;
+}
+
+.right-column h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.wens-item.purchased .right-column h3 {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.item-description {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.item-nummer {
+    font-size: 0.8em;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+/* WINKEL LINKS */
+.winkel-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.winkel-link-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.winkel-link-button:hover {
+    background-color: #0056b3;
+}
+
+/* ACTIE AREA */
+.item-action-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    padding-top: 15px;
+    border-top: 1px dashed #eee;
+}
+
+.claim-button {
+    background-color: #FFC107;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.claim-button:hover {
+    background-color: #e0b400;
+}
+
+.purchased-note {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* INVENTARIS LINKS (Voor de Inventaris Tab) */
+.inventory-link-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    border-left: 5px solid #4CAF50;
+}
+
+.inventaris-link-item a {
+    font-size: 1.1em;
+    color: #007BFF;
+    text-decoration: none;
+    line-height: 1.8;
+    display: block;
+}
+
+.inventaris-link-item a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer-note {
+    margin-left: 180px; 
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+/* MEDIA QUERIES (RESPONSIVE) */
+
+@media (max-width: 900px) {
+    /* Schakel over naar mobiele layout */
+    
+    .fixed-header {
+        position: static; 
+        width: 100%;
+        height: auto;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 0;
+    }
+    
+    .header-content {
+        height: auto;
+    }
+    
+    .tab-nav {
+        flex-direction: row; 
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .tab-button {
+        flex-shrink: 0;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        justify-content: flex-start;
+        padding: 15px 10px;
+    }
+    
+    .tab-button.active {
+        border-left: none;
+        border-bottom: 3px solid #4CAF50;
+        background-color: #fff;
+    }
+
+    .percentage-bought {
+        margin-left: 5px;
+        order: 2; 
+    }
+
+    .page-wrapper {
+        margin-left: 0; 
+        padding: 10px;
+    }
+    
+    .title-container {
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        color: #333; 
+        text-shadow: none;
+    }
+    
+    /* Detail Items passen zich aan voor mobiel */
+    .wens-item {
+        flex-direction: column;
+    }
+    .left-column {
+        width: 100%;
+        margin-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-right: 0;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    .item-image-container {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        margin-bottom: 5px;
+        /* NIEUW: Zorgt dat de container niet uitloopt en de afbeelding erin past */
+        overflow: hidden; 
+    }
+    /* FIX VOOR TE GROTE AFBEELDING */
+    .item-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Zorgt dat de afbeelding past binnen de 200px max-height */
+    }
+    /* EINDE FIX */
+    
+    .item-price-under-image {
+        display: block; 
+        text-align: left;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    
+    .right-column {
+        width: 100%;
+    }
+    
+    .item-action-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .claim-button {
+        width: 100%;
+        order: 2;
+    }
+    
+    .purchased-note {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .winkel-links {
+        max-width: 100%; 
+        justify-content: space-around; 
+        margin-bottom: 15px;
+        gap: 8px;
+    }
+    
+    .footer-note {
+        margin-left: 0;
+    }
+    
+    /* Zorg dat de grid goed schaalt op mobiel */
+    .overview-grid-inner {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

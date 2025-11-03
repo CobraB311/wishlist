@@ -855,5 +855,17 @@
           "winkels": [
             { "naam": "HEMA", "link": "https://www.hema.com/nl-be/vrije-tijd/knutselen-handwerken/knutselen/stempelset-cijfers-15900239.html", "prijs": "€ 3,39" }
           ]
+        },
+        {
+          "id": "jumbo-ik-leer-lezen-9200000073981454",
+          "naam": "Jumbo - Ik Leer - Lezen - Educatief Spel - Vanaf 5 jaar",
+          "nummer": "9200000073981454",
+          "beschrijving": "Met 'ik leer lezen' leren kinderen spelenderwijs lezen en woordjes spellen. De woordjes zijn zorgvuldig gekozen, bestaan uit maximaal 5 letters en sluiten aan bij de woordenschat van een kind van 5 jaar. Bevat 15 kaarten met 90 opdrachten op 3 niveaus. Zelfcorrigerend door een speciaal lettersysteem. Wordt geleverd in een handige koffer.",
+          "afbeelding_url": "https://media.s-bol.com/Jg5mlWq2qJjD/g5LZMyG/1200x1111.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/jumbo-ik-leer-lezen/9200000073981454/?referrer=socialshare_pdp_www", "prijs": "€ 19,99" },
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/ik-leer-lezen-nl/01285222", "prijs": "€ 19,99" }, 
+            { "naam": "Multi Bazar", "link": "https://www.multibazar.be/nl/jumbo-ik-leer-lezen-700858", "prijs": "€ 22,95" }
+          ]
         }
       ]

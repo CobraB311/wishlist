@@ -26,6 +26,22 @@
           ]
         },
         {
+          "id": "lego-jurassic-world-kleine-eetster-t-rex-76967",
+          "naam": "LEGO Jurassic World Kleine eetster T-Rex dinoset",
+          "nummer": "76967",
+          "beschrijving": "Een coole LEGO set met een T-Rex-babyfiguur met beweegbare poten en kaken. Inclusief een hek, een voederplek en een wetenschapper-minifiguur. Stimuleert fantasierijk spel in de prehistorische wereld.",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltbcdd9feeb8d4dc00/76967_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1uVUsCF", "prijs": "€ 17,55" }, 
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/93SAcJo", "prijs": "€ 17,99" },
+            { "naam": "Multi Bazar", "link": "https://www.multibazar.be/nl/lego-jurassic-world-kleine-eetster-t-rex-76967-1011499", "prijs": "€ 21,99" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-jurassic-world-kleine-eetster-t-rex-dinoset-76967/9300000187249739/?referrer=socialshare_pdp_www", "prijs": "€ 22,99" },
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/76967-lego-t-rex-dinoset/01830996", "prijs": "€ 24,95" },
+            { "naam": "LEGO.com/nl-be", "link": "https://www.lego.com/nl-be/product/little-eatie-t-rex-76967", "prijs": "€ 24,99" },
+            { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/76967/Little-Eatie-T-rex.html", "prijs": "Check prijs" } // CORRECT VERWERKT
+          ]
+        },
+        {
         "id": "set-11039",
         "naam": "LEGO® Classic Creatieve Etensvriendjes",
         "nummer": "11039",

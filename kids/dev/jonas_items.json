@@ -896,5 +896,47 @@
             { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/play-doh-super-color-pack-787515", "prijs": "€ 19,99" },
             { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/afWDdKT", "prijs": "€ 12,99" }
           ]
-        }
-      ]
+        },
+        {
+        "id": "zootopia-nick-nibbles-9300000230854598",
+        "naam": "Zootopia 2 Figure Pack - Nick Wilde & Nibbles Maplestick",
+        "nummer": "9300000230854598",
+        "beschrijving": "Actiefigurenset van 2 figuren uit Zootopia 2 (Nick Wilde en Nibbles Maplestick). De figuren hebben beweegbare delen. Perfect voor het naspelen van filmscènes.",
+        "afbeelding_url": "https://media.s-bol.com/7ZBAoxyELAvA/GZXnP05/1103x1200.jpg",
+        "winkels": [
+            {
+                "naam": "Bol.com",
+                "link": "https://www.bol.com/be/nl/p/zootopia-2-figure-pack-nick-wilde-core-nibbles-maplestick/9300000230854598/?referrer=socialshare_pdp_www",
+                "prijs": "€ 14,99"
+            }
+        ]
+    },
+    {
+        "id": "zootopia-judy-benjamin-9300000233155873",
+        "naam": "Zootopia 2 Figure Pack - Judy Hopps & Benjamin Clawhauser",
+        "nummer": "9300000233155873",
+        "beschrijving": "Actiefigurenset van 2 figuren uit Zootopia 2 (Judy Hopps en Benjamin Clawhauser). De figuren hebben beweegbare delen. Perfect voor het naspelen van filmscènes.",
+        "afbeelding_url": "https://media.s-bol.com/Jp9EAR4rkDAJ/Y6YEXKY/954x1200.jpg",
+        "winkels": [
+            {
+                "naam": "Bol.com",
+                "link": "https://www.bol.com/be/nl/p/zootopia-2-figure-pack-judy-hopps-core-benjamin-clawhauser/9300000233155873/?referrer=socialshare_pdp_www",
+                "prijs": "€ 14,99"
+            }
+        ]
+    },
+    {
+        "id": "zootopia-gary-pawbert-9300000233155872",
+        "naam": "Zootopia 2 Figure Pack - Gary de Snake & Pawbert Pelter",
+        "nummer": "9300000233155872",
+        "beschrijving": "Actiefigurenset van 2 figuren uit Zootopia 2 (Gary de Snake en Pawbert Pelter). De figuren hebben beweegbare delen. Perfect voor het naspelen van filmscènes.",
+        "afbeelding_url": "https://media.s-bol.com/Jp9EP3QJAlRv/WnK6mvx/1146x1200.jpg",
+        "winkels": [
+            {
+                "naam": "Bol.com",
+                "link": "https://www.bol.com/be/nl/p/zootopia-2-figure-pack-gary-de-snake-pawbert-pelter/9300000233155872/?referrer=socialshare_pdp_www",
+                "prijs": "€ 14,99"
+            }
+        ]
+    }
+]

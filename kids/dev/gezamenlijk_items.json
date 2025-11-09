@@ -6,21 +6,29 @@
     "nummer": "9300000164831720",
     "id": "gezamenlijk-walkies-fox",
     "winkels": [
-      {
-        "naam": "Bol.com",
-        "prijs": "€ 62,64",
-        "link": "https://www.bol.com/be/nl/p/walki-talki-foxes/9300000164831720/?referrer=socialshare_pdp_www"
-      },
-      {
-        "naam": "The Zoo Family",
-        "prijs": "€ 54,95",
-        "link": "https://www.thezoofamily.com/collections/zoo-walkie-talkies/products/walki-talki-foxes"
-      },
-      {
-        "naam": "De Kinderplaneet",
-        "prijs": "€ 54,95",
-        "link": "https://www.dekinderplaneet.be/nl/the-zoo-family-zoo-walkie-talkie-vos-vos-888848?colour=611068"
-      }
+      { "naam": "Bol.com", "prijs": "€ 62,64", "link": "https://www.bol.com/be/nl/p/walki-talki-foxes/9300000164831720/?referrer=socialshare_pdp_www" },
+      { "naam": "The Zoo Family", "prijs": "€ 54,95", "link": "https://www.thezoofamily.com/collections/zoo-walkie-talkies/products/walki-talki-foxes" },
+      { "naam": "De Kinderplaneet", "prijs": "€ 54,95", "link": "https://www.dekinderplaneet.be/nl/the-zoo-family-zoo-walkie-talkie-vos-vos-888848?colour=611068" }
+    ]
+  },
+  {
+    "id": "mala-tekenpapier-rol-70461088",
+    "naam": "MÅLA Tekenpapierrol",
+    "nummer": "704.610.88",
+    "beschrijving": "Een rol tekenpapier van hoge kwaliteit (45 cm breed, 30 m lang). Perfect voor de MÅLA schildersezel. Het papier is chloorvrij gebleekt en voldoet aan de strengste veiligheidsnormen.",
+    "afbeelding_url": "https://www.ikea.com/be/en/images/products/mala-drawing-paper-roll__0992388_pe820358_s5.jpg?f=xl",
+    "winkels": [
+      { "naam": "IKEA BE", "link": "https://www.ikea.com/be/nl/p/mala-tekenpapierrol-70461088/", "prijs": "€ 5,00" }
+    ]
+  },
+  {
+    "id": "mala-papierrolhouder-70488969",
+    "naam": "MÅLA Papierrolhouder met Opbergvak",
+    "nummer": "704.889.69",
+    "beschrijving": "Een handige houder voor de MÅLA tekenpapierrol, met een snijkant om het papier netjes af te scheuren. De houder heeft ook een geïntegreerd opbergvak voor stiften, potloden en verfspullen.",
+    "afbeelding_url": "https://www.ikea.com/be/en/images/products/mala-paper-roll-holder-with-storage__0992387_pe820357_s5.jpg?f=xl",
+    "winkels": [
+      { "naam": "IKEA BE", "link": "https://www.ikea.com/be/nl/p/mala-papierrolhouder-met-opbergvak-70488969/", "prijs": "€ 7,99" }
     ]
   }
 ]

@@ -46,5 +46,15 @@
             "prijs": "€ 39,95"
         }
     ]
-  }
+  },
+  {
+  "id": "next-jurk-bloemen-su555474",
+  "naam": "Gebreide Jurk met Bloemenprint (Next)",
+  "nummer": "AM9613",
+  "beschrijving": "Mooie gebreide jurk met een all-over bloemenprint. Dit item is gemaakt van zachte, comfortabele stof. De jurk heeft een ronde hals en lange mouwen. Ideaal voor de wintermaanden.",
+  "afbeelding_url": "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/AM9613s.jpg",
+  "winkels": [
+    { "naam": "Next Direct BE", "link": "https://www.nextdirect.com/be/nl/style/su555474/am9613", "prijs": "€ 61,00" }
+  ]
+}
 ]

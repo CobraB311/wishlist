@@ -6,11 +6,7 @@
     "beschrijving": "Multifunctionele groentesnijder, mandoline, uiensnijder, frietsnijder en rasp. Vlijmscherp, BPA-vrij en met opvangbak. Ideaal voor het snel bereiden van salades en groenteschotels.",
     "afbeelding_url": "https://media.s-bol.com/q98AWAPwRkw0/rJZjmW/550x553.jpg",
     "winkels": [
-      { 
-        "naam": "Bol.com", 
-        "link": "https://www.bol.com/be/nl/p/cavos-groentesnijder-mandoline-multifunctioneel-uiensnijder-frietsnijder-rasp-vlijmscherp-bpa-vrij/9300000140574262/?referrer=socialshare_pdp_www", 
-        "prijs": "€ 34,95" 
-      }
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/cavos-groentesnijder-mandoline-multifunctioneel-uiensnijder-frietsnijder-rasp-vlijmscherp-bpa-vrij/9300000140574262/?referrer=socialshare_pdp_www", "prijs": "€ 34,95" }
     ]
   },
   {
@@ -20,41 +16,21 @@
     "beschrijving": "Draadloze in-ear hoofdtelefoon met Bluetooth, 3-knops afstandsbediening met microfoon en platte kabel. Ideaal voor onderweg.",
     "afbeelding_url": "https://mm.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf217e305/JBL_Tune-235BT-boxside-black.png?sw=537&sfrm=png",
     "winkels": [
-        {
-            "naam": "JBL (Productpagina)",
-            "link": "https://mm.jbl.com/in-ear-headphones/TUNE235BT.html",
-            "prijs": "Prijs onbekend" 
-        },
-        {
-            "naam": "Bol.com",
-            "link": "https://www.bol.com/be/nl/p/jbl-tune-235bt-lifestyle-headphones-wireless-in-ear-with-3-button-mic-remote-flat-cable-black/9300000232598803/?referrer=socialshare_pdp_www",
-            "prijs": "€ 39,99"
-        },
-        {
-            "naam": "Amazon.be",
-            "link": "https://amzn.eu/d/chVTweG",
-            "prijs": "€ 40,32"
-        },
-        {
-            "naam": "Fnac.be",
-            "link": "https://www.nl.fnac.be/JBL-Draadloze-Bluetooth-In-Ear-hoofdtelefoon-Tune-235Zwart/a21819843?oref=00000000-0000-0000-0000-000000000000&Origin=AWINBE329213&sv1=affiliate&sv_campaign_id=329213&awc=12648_1762097746_48a9239824cc5fbbcfba37ada32bbb7b",
-            "prijs": "€ 39,99"
-        },
-        {
-            "naam": "Amazon.nl",
-            "link": "https://amzn.eu/d/3tSU3VA",
-            "prijs": "€ 39,95"
-        }
+      { "naam": "JBL (Productpagina)", "link": "https://mm.jbl.com/in-ear-headphones/TUNE235BT.html", "prijs": "Prijs onbekend" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/jbl-tune-235bt-lifestyle-headphones-wireless-in-ear-with-3-button-mic-remote-flat-cable-black/9300000232598803/?referrer=socialshare_pdp_www", "prijs": "€ 39,99" },
+      { "naam": "Amazon.be", "link": "https://amzn.eu/d/chVTweG", "prijs": "€ 40,32" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/JBL-Draadloze-Bluetooth-In-Ear-hoofdtelefoon-Tune-235Zwart/a21819843?oref=00000000-0000-0000-0000-000000000000&Origin=AWINBE329213&sv1=affiliate&sv_campaign_id=329213&awc=12648_1762097746_48a9239824cc5fbbcfba37ada32bbb7b", "prijs": "€ 39,99" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/3tSU3VA", "prijs": "€ 39,95" }
     ]
   },
   {
-  "id": "next-jurk-bloemen-su555474",
-  "naam": "Gebreide Jurk met Bloemenprint (Next)",
-  "nummer": "AM9613",
-  "beschrijving": "Mooie gebreide jurk met een all-over bloemenprint. Dit item is gemaakt van zachte, comfortabele stof. De jurk heeft een ronde hals en lange mouwen. Ideaal voor de wintermaanden.",
-  "afbeelding_url": "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/AM9613s.jpg",
-  "winkels": [
-    { "naam": "Next Direct BE", "link": "https://www.nextdirect.com/be/nl/style/su555474/am9613", "prijs": "€ 61,00" }
-  ]
-}
+    "id": "next-jurk-bloemen-su555474",
+    "naam": "Gebreide Jurk met Bloemenprint (Next)",
+    "nummer": "AM9613",
+    "beschrijving": "Mooie gebreide jurk met een all-over bloemenprint. Dit item is gemaakt van zachte, comfortabele stof. De jurk heeft een ronde hals en lange mouwen. Ideaal voor de wintermaanden.",
+    "afbeelding_url": "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/AM9613s.jpg",
+    "winkels": [
+      { "naam": "Next Direct BE", "link": "https://www.nextdirect.com/be/nl/style/su555474/am9613", "prijs": "€ 61,00" }
+    ]
+  }
 ]

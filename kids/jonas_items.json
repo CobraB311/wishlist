@@ -312,6 +312,22 @@
         ]
     },
         {
+          "id": "set-11025",
+          "naam": "LEGO® Classic Blauwe Bouwplaat (32x32 noppen)",
+          "nummer": "11025",
+          "beschrijving": "Leg de basis voor creatief speelplezier met deze stevige, hoogwaardige blauwe bouwplaat (25x25 cm). Ideaal voor zeetaferelen, zwembaden en andere creaties. De plaat biedt 1024 noppen (32x32) voor een stevige grip.",
+          "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltb7492a9b370d5fea/11025_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+          "winkels": [
+            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/axchgma", "prijs": "€ 6,73" },
+            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/6YviMd4", "prijs": "€ 7,49" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-blauwe-bouwplaat-10714/9200000080799159/?referrer=socialshare_pdp_www", "prijs": "Vanaf € 7,99" },
+            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/11025-lego-blauwe-bouwplaat/01645620", "prijs": "€ 8,95" },
+            { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/blue-baseplate-11025", "prijs": "€ 8,99" },
+            { "naam": "Multi Bazar", "link": "https://www.multibazar.be/nl/lego-classic-11025-blauwe-bouwplaat-842255", "prijs": "€ 8,99" },
+            { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11025/Blue-Baseplate.html", "prijs": "Check prijs" }
+          ]
+        },
+        {
           "id": "uno-flip-9200000104061452",
           "naam": "Mattel Games - UNO Flip! Kaartspel",
           "nummer": "0887961751062",

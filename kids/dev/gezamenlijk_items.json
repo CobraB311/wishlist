@@ -30,5 +30,25 @@
     "winkels": [
       { "naam": "IKEA BE", "link": "https://www.ikea.com/be/nl/p/mala-papierrolhouder-met-opbergvak-70488969/", "prijs": "€ 7,99" }
     ]
+  },
+  {
+    "id": "gezamenlijk-switch-2-camera-10015282",
+    "naam": "Nintendo Switch 2 Camera (Zwart)",
+    "nummer": "10015282",
+    "beschrijving": "Een speciale camera-accessoire voor de Nintendo Switch 2. Voegt interactieve en augmented reality-elementen toe aan compatibele games. Geschikt voor gezamenlijk speelplezier.",
+    "afbeelding_url": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/aci0mjgv9eotdkytahjp",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/9KzkP7k", "prijs": "€ 51,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/nintendo-switch-2-camera-zwart/9300000228511546/?referrer=socialshare_pdp_www", "prijs": "€ 51,95" },
+      { "naam": "MediaMarkt.be", "link": "https://www.mediamarkt.be/nl/product/_nintendo-switch-2-camera-2179091.html", "prijs": "€ 54,55" },
+      { "naam": "Krefel.be", "link": "https://www.krefel.be/nl/p/43001270-nintendo-switch-2-camera", "prijs": "€ 54,55" },
+      { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/switch-2-camera-zwart/01871241", "prijs": "€ 54,99" },
+      { "naam": "Coolblue.be", "link": "https://www.coolblue.be/nl/product/963367/nintendo-switch-2-camera.html", "prijs": "€ 58,00" },
+      { "naam": "Alternate.be", "link": "https://www.alternate.be/Nintendo/Switch-2-camera-webcam/html/product/100126581", "prijs": "€ 59,90" },
+      { "naam": "Nintendo Store BE", "link": "https://store.nintendo.be/nl/nintendo-switch-2-camera-000000000010015282", "prijs": "€ 59,99" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Nintendo-Switch-2-Camera/a21424442", "prijs": "€ 59,99" },
+      { "naam": "Suprabazar.be", "link": "https://www.suprabazar.be/nintendo-switch-2-camera-32066186", "prijs": "€ 64,99" },
+      { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/2194642/nintendo-switch-2-camera.html", "prijs": "Check prijs" }
+    ]
   }
 ]

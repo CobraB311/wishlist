@@ -32,5 +32,18 @@
     "winkels": [
       { "naam": "Next Direct BE", "link": "https://www.nextdirect.com/be/nl/style/su555474/am9613", "prijs": "€ 61,00" }
     ]
+  },
+  {
+    "id": "dkny-be-delicious-edp-56494",
+    "naam": "DKNY Be Delicious Eau de Parfum (100 ml)",
+    "nummer": "56494",
+    "beschrijving": "Een frisse, bloemig-fruitige damesgeur, geïnspireerd op de stad New York. De geur opent met appelnoten en komkommer, en heeft een hart van magnolia en roos. Een levendige en energieke geur.",
+    "afbeelding_url": "https://media.iciparisxl.be/medias/zoom-side-56508-954x1192?context=bWFzdGVyfHByZC1pbWFnZXN8Mzg2MDd8aW1hZ2UvanBlZ3xhR1ZqTDJneU15ODVOREU1TXpNd05EZzJNekF5TDNwdmIyMHRjMmxrWlMwMU5qVXdPRjg1TlRSNE1URTVNZ3w4ZWM5NDUxNDAyMmEzYjE4NDA2M2FmNTM0NzNhMjU5NGFiN2MyMGNlNjYxZTBiNGZmOTc3MDQxNmQ4ZTVmMTUy",
+    "winkels": [
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/3BGH5YR", "prijs": "€ 49,70" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/dkny-be-delicious-100-ml-eau-de-parfum-damesparfum/9200000005228412/?referrer=socialshare_pdp_www", "prijs": "€ 56,99" },
+      { "naam": "ICI PARIS XL", "link": "https://www.iciparisxl.be/nl/dkny/be-delicious/eau-de-parfum/p/BP_56494?varSel=56508", "prijs": "€ 81,01" },
+      { "naam": "April Beauty", "link": "https://www.april-beauty.be/fr/dkny-be-delicious-2032275", "prijs": "€ 107,90" }
+    ]
   }
 ]

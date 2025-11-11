@@ -50,5 +50,21 @@
       { "naam": "Suprabazar.be", "link": "https://www.suprabazar.be/nintendo-switch-2-camera-32066186", "prijs": "€ 64,99" },
       { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/2194642/nintendo-switch-2-camera.html", "prijs": "Check prijs" }
     ]
+  },
+  {
+    "id": "gezamenlijk-joy-con-stuurset-10015099",
+    "naam": "Nintendo Switch 2 Joy-Con Stuurset (Set van Twee)",
+    "nummer": "10015099",
+    "beschrijving": "Een set van twee stuurwielen om Joy-Con controllers in te plaatsen. Ideaal voor racegames op de Nintendo Switch 2, zoals Mario Kart. Verbetert de speelervaring voor gezamenlijke games.",
+    "afbeelding_url": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_260,q_auto:eco:sensitive/pinas93ydeziyrq3m9dl",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0idescw", "prijs": "€ 19,49" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/nintendo-switch-2-joy-con-stuurset-zwart/9300000228511527/?referrer=socialshare_pdp_www", "prijs": "€ 19,89" },
+      { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/switch-2-joy-con-stuurwiel-duo-pack/01871227", "prijs": "€ 19,95" },
+      { "naam": "Nintendo Store BE", "link": "https://store.nintendo.be/nl/joy-con-2-stuurset-set-van-twee-000000000010015099", "prijs": "€ 19,99" },
+      { "naam": "MediaMarkt.be", "link": "https://www.mediamarkt.be/nl/product/_nintendo-switch-2-joy-con-2-racing-wielen-2179087.html", "prijs": "€ 19,99" },
+      { "naam": "Coolblue.be", "link": "https://www.coolblue.be/nl/product/963365/nintendo-switch-2-joy-con-stuurwielen.html", "prijs": "€ 19,99" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Paar-Joy-Con-2-Stuurwielen-Nintendo-Switch-2/a21424364", "prijs": "€ 20,09" }
+    ]
   }
 ]

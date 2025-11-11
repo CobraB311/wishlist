@@ -6,21 +6,77 @@
     "nummer": "9300000164831720",
     "id": "gezamenlijk-walkies-fox",
     "winkels": [
-      {
-        "naam": "Bol.com",
-        "prijs": "€ 62,64",
-        "link": "https://www.bol.com/be/nl/p/walki-talki-foxes/9300000164831720/?referrer=socialshare_pdp_www"
-      },
-      {
-        "naam": "The Zoo Family",
-        "prijs": "€ 54,95",
-        "link": "https://www.thezoofamily.com/collections/zoo-walkie-talkies/products/walki-talki-foxes"
-      },
-      {
-        "naam": "De Kinderplaneet",
-        "prijs": "€ 54,95",
-        "link": "https://www.dekinderplaneet.be/nl/the-zoo-family-zoo-walkie-talkie-vos-vos-888848?colour=611068"
-      }
+      { "naam": "Bol.com", "prijs": "€ 62,64", "link": "https://www.bol.com/be/nl/p/walki-talki-foxes/9300000164831720/?referrer=socialshare_pdp_www" },
+      { "naam": "The Zoo Family", "prijs": "€ 54,95", "link": "https://www.thezoofamily.com/collections/zoo-walkie-talkies/products/walki-talki-foxes" },
+      { "naam": "De Kinderplaneet", "prijs": "€ 54,95", "link": "https://www.dekinderplaneet.be/nl/the-zoo-family-zoo-walkie-talkie-vos-vos-888848?colour=611068" }
+    ]
+  },
+  {
+    "id": "mala-tekenpapier-rol-70461088",
+    "naam": "MÅLA Tekenpapierrol",
+    "nummer": "704.610.88",
+    "beschrijving": "Een rol tekenpapier van hoge kwaliteit (45 cm breed, 30 m lang). Perfect voor de MÅLA schildersezel. Het papier is chloorvrij gebleekt en voldoet aan de strengste veiligheidsnormen.",
+    "afbeelding_url": "https://www.ikea.com/be/nl/images/products/mala-rol-tekenpapier__0710263_pe727430_s5.jpg?f=xs",
+    "winkels": [
+      { "naam": "IKEA BE", "link": "https://www.ikea.com/be/nl/p/mala-tekenpapierrol-70461088/", "prijs": "€ 3,00" }
+    ]
+  },
+  {
+    "id": "mala-papierrolhouder-70488969",
+    "naam": "MÅLA Papierrolhouder met Opbergvak",
+    "nummer": "704.889.69",
+    "beschrijving": "Een handige houder voor de MÅLA tekenpapierrol, met een snijkant om het papier netjes af te scheuren. De houder heeft ook een geïntegreerd opbergvak voor stiften, potloden en verfspullen.",
+    "afbeelding_url": "https://www.ikea.com/be/nl/images/products/mala-papierrolhouder-met-opbergruimte__0958110_pe805249_s5.jpg?f=xs",
+    "winkels": [
+      { "naam": "IKEA BE", "link": "https://www.ikea.com/be/nl/p/mala-papierrolhouder-met-opbergvak-70488969/", "prijs": "€ 7,99" }
+    ]
+  },
+  {
+    "id": "gezamenlijk-switch-2-camera-10015282",
+    "naam": "Nintendo Switch 2 Camera (Zwart)",
+    "nummer": "10015282",
+    "beschrijving": "Een speciale camera-accessoire voor de Nintendo Switch 2. Voegt interactieve en augmented reality-elementen toe aan compatibele games. Geschikt voor gezamenlijk speelplezier.",
+    "afbeelding_url": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_260,q_auto:eco:sensitive/nonsgo4klpdukjumtods",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/9KzkP7k", "prijs": "€ 51,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/nintendo-switch-2-camera-zwart/9300000228511546/?referrer=socialshare_pdp_www", "prijs": "€ 51,95" },
+      { "naam": "MediaMarkt.be", "link": "https://www.mediamarkt.be/nl/product/_nintendo-switch-2-camera-2179091.html", "prijs": "€ 54,55" },
+      { "naam": "Krefel.be", "link": "https://www.krefel.be/nl/p/43001270-nintendo-switch-2-camera", "prijs": "€ 54,55" },
+      { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/switch-2-camera-zwart/01871241", "prijs": "€ 54,99" },
+      { "naam": "Coolblue.be", "link": "https://www.coolblue.be/nl/product/963367/nintendo-switch-2-camera.html", "prijs": "€ 58,00" },
+      { "naam": "Alternate.be", "link": "https://www.alternate.be/Nintendo/Switch-2-camera-webcam/html/product/100126581", "prijs": "€ 59,90" },
+      { "naam": "Nintendo Store BE", "link": "https://store.nintendo.be/nl/nintendo-switch-2-camera-000000000010015282", "prijs": "€ 59,99" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Nintendo-Switch-2-Camera/a21424442", "prijs": "€ 59,99" },
+      { "naam": "Suprabazar.be", "link": "https://www.suprabazar.be/nintendo-switch-2-camera-32066186", "prijs": "€ 64,99" },
+      { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/2194642/nintendo-switch-2-camera.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
+    "id": "gezamenlijk-joy-con-stuurset-10015099",
+    "naam": "Nintendo Switch 2 Joy-Con Stuurset (Set van Twee)",
+    "nummer": "10015099",
+    "beschrijving": "Een set van twee stuurwielen om Joy-Con controllers in te plaatsen. Ideaal voor racegames op de Nintendo Switch 2, zoals Mario Kart. Verbetert de speelervaring voor gezamenlijke games.",
+    "afbeelding_url": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_260,q_auto:eco:sensitive/pinas93ydeziyrq3m9dl",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0idescw", "prijs": "€ 19,49" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/nintendo-switch-2-joy-con-stuurset-zwart/9300000228511527/?referrer=socialshare_pdp_www", "prijs": "€ 19,89" },
+      { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/switch-2-joy-con-stuurwiel-duo-pack/01871227", "prijs": "€ 19,95" },
+      { "naam": "Nintendo Store BE", "link": "https://store.nintendo.be/nl/joy-con-2-stuurset-set-van-twee-000000000010015099", "prijs": "€ 19,99" },
+      { "naam": "MediaMarkt.be", "link": "https://www.mediamarkt.be/nl/product/_nintendo-switch-2-joy-con-2-racing-wielen-2179087.html", "prijs": "€ 19,99" },
+      { "naam": "Coolblue.be", "link": "https://www.coolblue.be/nl/product/963365/nintendo-switch-2-joy-con-stuurwielen.html", "prijs": "€ 19,99" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Paar-Joy-Con-2-Stuurwielen-Nintendo-Switch-2/a21424364", "prijs": "€ 20,09" }
+    ]
+  },
+  {
+    "id": "gezamenlijk-microsd-express-512gb",
+    "naam": "SanDisk microSDXC Express 512GB (Switch 2 Compatibel)",
+    "nummer": "9300000221571013",
+    "beschrijving": "Supersnelle 512 GB microSDXC Express-kaart, geoptimaliseerd voor de Nintendo Switch 2. Biedt extreem snelle lees- en schrijfsnelheden voor het laden van games en opslaan van data.",
+    "afbeelding_url": "https://media.s-bol.com/NwOMvgyRz6W6/nZ8J7wE/1200x882.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/sandisk-microsdxc-express-512gb-nintendo-switch-2-compatible/9300000221571013/?referrer=socialshare_pdp_www", "prijs": "€ 98,75" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/fs1HuqU", "prijs": "€ 98,90" },
+      { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/2231286/sandisk-microsd-express-512gb.html", "prijs": "Check prijs" }
     ]
   }
 ]

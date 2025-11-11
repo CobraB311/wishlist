@@ -19,5 +19,17 @@
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/exortus-oplaadbare-led-zaklamp-5000-lumen-duurzaam-en-waterdicht-26650-batterij-cob-verlichting-opbergdoos-holster/9300000231508644/?referrer=socialshare_pdp_www", "prijs": "€ 44,95" },
       { "naam": "Exortus (Direct)", "link": "https://www.exortus.nl/products/exortus%C2%AE-oplaadbare-led-zaklamp-5000-lumen-opbergdoos-pakket", "prijs": "€ 54,95" }
     ]
+  },
+  {
+    "id": "gezamenlijk-bad-boys-ride-or-die-4k",
+    "naam": "Bad Boys: Ride or Die (4K Ultra HD Blu-ray)",
+    "nummer": "9300000179634657",
+    "beschrijving": "Actiecomedy met Will Smith en Martin Lawrence. De Bad Boys zijn terug voor een laatste rit. Bevat de film in de hoogste beeldkwaliteit (4K Ultra HD) en Blu-ray. Geschikt voor gezamenlijke filmavonden.",
+    "afbeelding_url": "https://media.s-bol.com/Jk265mw1JX2v/yP7YOAR/936x1200.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/fsDuo1R", "prijs": "€ 15,11" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/bad-boys-ride-or-die/9300000179634657/?referrer=socialshare_pdp_www", "prijs": "€ 28,82" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a20793759/BAD-BOYS-RIDE-OR-DIE-NL-BLU-RAY4K-STB", "prijs": "€ 30,99" }
+    ]
   }
 ]

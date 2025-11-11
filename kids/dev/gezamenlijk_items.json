@@ -66,5 +66,17 @@
       { "naam": "Coolblue.be", "link": "https://www.coolblue.be/nl/product/963365/nintendo-switch-2-joy-con-stuurwielen.html", "prijs": "€ 19,99" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Paar-Joy-Con-2-Stuurwielen-Nintendo-Switch-2/a21424364", "prijs": "€ 20,09" }
     ]
+  },
+  {
+    "id": "gezamenlijk-microsd-express-512gb",
+    "naam": "SanDisk microSDXC Express 512GB (Switch 2 Compatibel)",
+    "nummer": "9300000221571013",
+    "beschrijving": "Supersnelle 512 GB microSDXC Express-kaart, geoptimaliseerd voor de Nintendo Switch 2. Biedt extreem snelle lees- en schrijfsnelheden voor het laden van games en opslaan van data.",
+    "afbeelding_url": "https://media.s-bol.com/NwOMvgyRz6W6/nZ8J7wE/1200x882.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/sandisk-microsdxc-express-512gb-nintendo-switch-2-compatible/9300000221571013/?referrer=socialshare_pdp_www", "prijs": "€ 98,75" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/fs1HuqU", "prijs": "€ 98,90" },
+      { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/2231286/sandisk-microsd-express-512gb.html", "prijs": "Check prijs" }
+    ]
   }
 ]

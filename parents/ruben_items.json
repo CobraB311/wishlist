@@ -31,5 +31,32 @@
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/bad-boys-ride-or-die/9300000179634657/?referrer=socialshare_pdp_www", "prijs": "€ 28,82" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a20793759/BAD-BOYS-RIDE-OR-DIE-NL-BLU-RAY4K-STB", "prijs": "€ 30,99" }
     ]
+  },
+  {
+    "id": "ruben-hue-smart-plug-8719514342347",
+    "naam": "Philips Hue Smart Plug (Slimme Stekker)",
+    "nummer": "8719514342347",
+    "beschrijving": "Slimme stekker met Belgische/Franse aansluiting. Voegt niet-slimme verlichting of apparaten toe aan het Philips Hue-systeem. Te bedienen via de Hue app, Bluetooth, of spraakassistenten zoals Google Assistant en HomeKit.",
+    "afbeelding_url": "https://www.assets.signify.com/is/image/Signify/8719514342347-929003050901-PIM?wid=1024&hei=768&qlt=82",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/philips-hue-smart-plug-slimme-stekker-belgie/9200000117474489/?referrer=socialshare_pdp_www", "prijs": "€ 28,00" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/a1xBHaD", "prijs": "€ 29,95" },
+      { "naam": "Vanden Borre", "link": "https://www.vandenborre.be/smart-schakelaar-stekker/philips-hue-smart-plug-be-fr", "prijs": "€ 34,39" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/HUE-SMART-PLUG-BE-FR/a13796636?oref=00000000-0000-0000-0000-000000000000&Origin=AWINBE329213&sv1=affiliate&sv_campaign_id=329213&awc=12648_1763136339_7d17762f0f6a28d5de280ec0d8986f71", "prijs": "€ 34,94" },
+      { "naam": "MediaMarkt.be", "link": "https://www.mediamarkt.be/nl/product/_philips-hue-slimme-stekker-34234700-1976607.html?utm_source=tweakers&utm_medium=psm-product%20feed&utm_term=1976607", "prijs": "€ 34,99" },
+      { "naam": "Philips Hue (Direct)", "link": "https://www.philips-hue.com/nl-be/p/hue-smart-stekker/8719514342347", "prijs": "€ 34,99" },
+      { "naam": "Brico.be", "link": "https://www.brico.be/nl/smart-home-domotica/slimme-elektra/slimme-schakelaars-stekkers/slimme-stekkers/philips-hue-slimme-stekker/10071892", "prijs": "€ 35,70" },
+      { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/1458604/philips-hue-smart-plug-be-fr.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
+    "id": "ruben-topgear-lamborghini-9300000247382699",
+    "naam": "TopGear Lamborghini Bookazine",
+    "nummer": "9300000247382699",
+    "beschrijving": "Een speciale uitgave van TopGear volledig gewijd aan Lamborghini. Perfect voor liefhebbers van snelle auto's en prachtige fotografie.",
+    "afbeelding_url": "https://media.s-bol.com/g0n98zgMP14G/76xME38/937x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 19,95", "link": "https://www.bol.com/be/nl/p/topgear-lamborghini-bookazine/9300000247382699/?referrer=socialshare_pdp_androidapp" }
+    ]
   }
 ]

@@ -48,5 +48,15 @@
       { "naam": "Brico.be", "link": "https://www.brico.be/nl/smart-home-domotica/slimme-elektra/slimme-schakelaars-stekkers/slimme-stekkers/philips-hue-slimme-stekker/10071892", "prijs": "€ 35,70" },
       { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/1458604/philips-hue-smart-plug-be-fr.html", "prijs": "Check prijs" }
     ]
+  },
+  {
+    "id": "ruben-topgear-lamborghini-9300000247382699",
+    "naam": "TopGear Lamborghini Bookazine",
+    "nummer": "9300000247382699",
+    "beschrijving": "Een speciale uitgave van TopGear volledig gewijd aan Lamborghini. Perfect voor liefhebbers van snelle auto's en prachtige fotografie.",
+    "afbeelding_url": "https://media.s-bol.com/g0n98zgMP14G/76xME38/937x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 19,95", "link": "https://www.bol.com/be/nl/p/topgear-lamborghini-bookazine/9300000247382699/?referrer=socialshare_pdp_androidapp" }
+    ]
   }
 ]

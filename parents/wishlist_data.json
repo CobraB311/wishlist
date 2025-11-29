@@ -1,6 +1,6 @@
 {
   "wenslijst_titel": "De Grote Eindejaarswenslijst!",
-  "datum": "2025-11-02",
+  "datum": "2025-11-29",
   "personen": [
     { "naam": "Kitty", "data_file": "kitty_items.json" },
     { "naam": "Ruben", "data_file": "ruben_items.json" }

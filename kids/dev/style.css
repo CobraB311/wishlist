@@ -6,6 +6,7 @@ body {
     background-attachment: fixed; min-height: 100vh;
 }
 
+/* De titels blijven in Impact, maar de tekst moet leesbaar zijn */
 h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color: #b71c1c; }
 
 /* BANNER */
@@ -29,19 +30,27 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .page-wrapper { margin-left: 240px; min-height: 100vh; }
 .content-padding { padding: 30px; }
 
-/* TABS & BUTTONS */
+/* TABS & BUTTONS - Lettertype aangepast voor leesbaarheid */
 .tab-button {
-    background: #f9f9f9; color: #666; border: none;
+    background: #f9f9f9; color: #444; border: none;
     border-bottom: 1px solid #eee; padding: 18px 15px; width: 100%;
-    text-align: left; font-weight: bold; cursor: pointer; font-family: 'Impact', sans-serif;
+    text-align: left; font-weight: 700; cursor: pointer; 
+    font-family: 'Segoe UI', sans-serif; /* Beter leesbaar dan Impact */
+    text-transform: uppercase; font-size: 0.9em;
 }
-.tab-button.active { color: #fff !important; }
+
+/* Standaard actieve kleur voor de 'Overzicht' tab bij laden */
+.tab-button.active { 
+    background-color: #333 !important; 
+    color: #fff !important; 
+    border-left: 8px solid #d4af37;
+}
 
 /* PAGINA MANAGEMENT */
-.tab-content { display: none; } /* Alles standaard verbergen */
-.tab-content.active { display: block; } /* Alleen actieve tab tonen */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
 
-/* OVERZICHT GRID (FOTO FIX) */
+/* OVERZICHT GRID - Fix voor stempel positionering */
 .overview-person-section { margin-bottom: 50px; }
 .overview-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -51,8 +60,15 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     background: #fff; border: 1px solid #ddd; padding: 10px;
     text-align: center; cursor: pointer; height: 160px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; /* Zorgt dat elementen binnenin relatief blijven */
 }
-.overview-image-wrapper { height: 90px; width: 100%; display: flex; align-items: center; justify-content: center; }
+
+/* CRUCIALE FIX VOOR DE STEMPEL: De wrapper moet relative zijn */
+.overview-image-wrapper { 
+    height: 90px; width: 100%; 
+    display: flex; align-items: center; justify-content: center; 
+    position: relative; /* De stempel plakt nu aan deze container */
+}
 .overview-image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .overview-caption { font-size: 0.8em; margin-top: 8px; font-weight: bold; }
 
@@ -62,18 +78,29 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     padding: 20px; margin-bottom: 20px; gap: 20px; position: relative;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-.left-column { width: 160px; flex-shrink: 0; text-align: center; }
-.item-image-container { height: 160px; display: flex; align-items: center; justify-content: center; position: relative; }
+.left-column { width: 160px; flex-shrink: 0; text-align: center; position: relative; }
+.item-image-container { 
+    height: 160px; display: flex; align-items: center; justify-content: center; 
+    position: relative; /* Belangrijk voor stempel in detail lijst */
+}
 .item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
 /* STEMPEL & GRIJS */
 .purchased-overlay {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg);
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%) rotate(-15deg);
     background: rgba(255,255,255,0.9); color: #b71c1c; border: 3px double #b71c1c;
     padding: 5px 10px; font-family: 'Impact', sans-serif; z-index: 10;
+    pointer-events: none;
     animation: stampAnimation 0.5s ease-out;
 }
-@keyframes stampAnimation { 0% { transform: translate(-50%, -50%) scale(5); opacity: 0; } 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } }
+
+@keyframes stampAnimation { 
+    0% { transform: translate(-50%, -50%) scale(5); opacity: 0; } 
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } 
+}
+
 .purchased img { filter: grayscale(1) opacity(0.4); }
 
 /* VONKEN */

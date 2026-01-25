@@ -1,6 +1,5 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 
-// 1. Vonken generator
 function createSparks() {
     const container = document.getElementById('snow-container');
     if (!container) return;
@@ -14,14 +13,12 @@ function createSparks() {
     }
 }
 
-// 2. Claim functie
 function claimItem(persoonNaam, itemName, itemId) {
     const subject = `CLAIM: ${itemName} voor ${persoonNaam}`;
     const body = `Ik heb dit cadeau gekocht: ${itemName} (ID: ${itemId})`;
     window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-// 3. Tab Logica
 function openTab(evt, tabId) {
     document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(btn => {
@@ -52,7 +49,6 @@ function openTab(evt, tabId) {
     window.scrollTo(0, 0);
 }
 
-// 4. Scroll functie
 function scrollToItem(persoonNaam, itemId) {
     const tabId = persoonNaam.toLowerCase() + '-list-content';
     openTab(null, tabId); 
@@ -62,7 +58,6 @@ function scrollToItem(persoonNaam, itemId) {
     }, 250);
 }
 
-// 5. Content Bouwer
 function generateWishlistContent(data, purchasedIds) {
     const container = document.getElementById('person-lists-container');
     const nav = document.getElementById('dynamic-tab-nav');
@@ -79,15 +74,25 @@ function generateWishlistContent(data, purchasedIds) {
         const tabId = person.naam.toLowerCase() + '-list-content';
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">${person.naam}</button>`;
         
+        // Deel voor de individuele lijst tabs
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2><div class="wens-lijst">`;
+        
+        // Deel voor de split op de overzichtspagina
+        overviewHtml += `<div class="overview-person-section"><h3>Lijst van ${person.naam}</h3><div class="overview-grid">`;
+
         person.items.forEach(item => {
             const isPurchased = purchasedIds.has(item.id);
-            const overlay = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+            const overlayHtml = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+            const statusClass = isPurchased ? 'purchased' : '';
             
+            // Lijst item
             listsHtml += `
-                <div id="${item.id}" class="wens-item">
+                <div id="${item.id}" class="wens-item ${statusClass}">
                     <div class="left-column">
-                        <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}"></div>
+                        <div class="item-image-container">
+                            ${overlayHtml}
+                            <img src="${item.afbeelding_url}">
+                        </div>
                         <span style="display:block; text-align:center; margin-top:5px; color:#d4af37; font-weight:bold;">${item.winkels?.[0]?.prijs || ''}</span>
                     </div>
                     <div class="right-column">
@@ -100,13 +105,18 @@ function generateWishlistContent(data, purchasedIds) {
                     </div>
                 </div>`;
             
+            // Grid item voor overzicht
             overviewHtml += `
-                <div class="overview-grid-item" onclick="scrollToItem('${person.naam}', '${item.id}')">
-                    <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>
+                <div class="overview-grid-item ${statusClass}" onclick="scrollToItem('${person.naam}', '${item.id}')">
+                    <div class="overview-image-wrapper">
+                        ${overlayHtml}
+                        <img src="${item.afbeelding_url}">
+                    </div>
                     <div class="overview-caption"><strong>${item.naam}</strong></div>
                 </div>`;
         });
         listsHtml += `</div></div>`;
+        overviewHtml += `</div></div>`; // Sluit grid en section
     });
 
     const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-section">${data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#d4af37; text-decoration:none; font-size:1.2em; font-weight:bold;">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
@@ -116,7 +126,6 @@ function generateWishlistContent(data, purchasedIds) {
     overview.innerHTML = overviewHtml;
 }
 
-// 6. De Hoofdfunctie
 async function loadWishlist() {
     createSparks();
     try {
@@ -138,11 +147,10 @@ async function loadWishlist() {
         
         generateWishlistContent(fullData, new Set(rClaims.purchased_items));
 
-        // FIX VOOR ERROR: Check of loading-message nog bestaat
         const msg = document.getElementById('loading-message');
         if (msg) msg.style.display = 'none';
 
-    } catch (e) { console.error("Dojo Error:", e); }
+    } catch (e) { console.error(e); }
 }
 
 window.onload = loadWishlist;

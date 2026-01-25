@@ -1,25 +1,18 @@
 /* NINJAGO LICHT THEMA */
 body {
-    font-family: 'Segoe UI', 'Kaiti', 'STKaiti', sans-serif;
-    color: #333;
-    margin: 0; padding: 0;
-    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; margin: 0; padding: 0;
+    background: linear-gradient(135deg, #fdfdfd 0%, #f0f0f0 100%);
     background-attachment: fixed; min-height: 100vh;
 }
 
-h1, h2, h3, .tab-button {
-    font-family: 'Impact', sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color: #b71c1c; }
 
 /* BANNER */
 .ninja-banner {
-    width: 100%;
-    height: 200px;
+    width: 100%; height: 200px;
     background: url('https://i1.sndcdn.com/visuals-001000838173-74Uowl-t1240x260.jpg') no-repeat center center;
-    background-size: cover;
-    border-bottom: 4px solid #d4af37;
+    background-size: cover; border-bottom: 4px solid #d4af37;
 }
 
 /* SIDEBAR */
@@ -28,96 +21,67 @@ h1, h2, h3, .tab-button {
     height: 100%; width: 240px;
     background: #ffffff; border-right: 4px solid #d4af37;
     display: flex; flex-direction: column; z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
-.snow-area {
-    flex-grow: 1; position: relative; overflow: hidden;
-    background: #fff;
-}
+.snow-area { flex-grow: 1; position: relative; overflow: hidden; background: #fff; }
 
-.page-wrapper { margin-left: 240px; padding: 0; }
-.content-padding { padding: 20px; }
+.page-wrapper { margin-left: 240px; min-height: 100vh; }
+.content-padding { padding: 30px; }
 
-/* TABS */
+/* TABS & BUTTONS */
 .tab-button {
     background: #f9f9f9; color: #666; border: none;
     border-bottom: 1px solid #eee; padding: 18px 15px; width: 100%;
-    text-align: left; font-weight: bold; cursor: pointer;
+    text-align: left; font-weight: bold; cursor: pointer; font-family: 'Impact', sans-serif;
 }
-.tab-button.active { color: #fff; }
+.tab-button.active { color: #fff !important; }
 
-/* OVERZICHT GRID (FIX VOOR GROTE FOTO'S) */
-.overview-person-section { margin-bottom: 40px; }
+/* PAGINA MANAGEMENT */
+.tab-content { display: none; } /* Alles standaard verbergen */
+.tab-content.active { display: block; } /* Alleen actieve tab tonen */
+
+/* OVERZICHT GRID (FOTO FIX) */
+.overview-person-section { margin-bottom: 50px; }
 .overview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 15px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px; margin-top: 15px;
 }
-
 .overview-grid-item {
-    background: #fff; border: 1px solid #ddd;
-    padding: 10px; text-align: center; cursor: pointer;
-    position: relative; overflow: hidden;
-    height: 180px; /* Vaste hoogte voor uniformiteit */
-    display: flex; flex-direction: column;
+    background: #fff; border: 1px solid #ddd; padding: 10px;
+    text-align: center; cursor: pointer; height: 160px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
-
-.overview-image-wrapper {
-    height: 100px; /* Forceert kleine foto's */
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 10px; position: relative;
-}
-
-.overview-image-wrapper img {
-    max-width: 100%; max-height: 100%;
-    object-fit: contain;
-}
-
-/* STEMPEL & EFFECTEN */
-.purchased-overlay {
-    position: absolute; top: 50%; left: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #b71c1c; border: 3px double #b71c1c;
-    padding: 5px 10px; font-family: 'Impact', sans-serif;
-    font-size: 1.2em; font-weight: bold; z-index: 10;
-    transform: translate(-50%, -50%) rotate(-15deg);
-    animation: stampAnimation 0.5s ease-out forwards;
-}
-
-@keyframes stampAnimation {
-    0% { transform: translate(-50%, -50%) rotate(20deg) scale(4); opacity: 0; }
-    100% { transform: translate(-50%, -50%) rotate(-15deg) scale(1); opacity: 1; }
-}
-
-.purchased img { filter: grayscale(1) opacity(0.5); }
-
-/* BEWEGENDE PUNTJES (VONKEN) */
-.snow {
-    position: absolute; 
-    background: #d4af37; /* Goudkleurige vonken */
-    width: 4px; height: 4px; border-radius: 50%;
-    opacity: 0.6;
-    animation: fireRise 6s infinite linear;
-}
-
-@keyframes fireRise {
-    0% { transform: translateY(100vh); opacity: 0; }
-    20% { opacity: 0.6; }
-    80% { opacity: 0.6; }
-    100% { transform: translateY(-10vh); opacity: 0; }
-}
+.overview-image-wrapper { height: 90px; width: 100%; display: flex; align-items: center; justify-content: center; }
+.overview-image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.overview-caption { font-size: 0.8em; margin-top: 8px; font-weight: bold; }
 
 /* DETAIL LIJST */
 .wens-item {
     display: flex; background: #fff; border: 1px solid #ddd;
     padding: 20px; margin-bottom: 20px; gap: 20px; position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-.left-column { width: 160px; flex-shrink: 0; }
-.item-image-container { height: 160px; display: flex; align-items: center; justify-content: center; position: relative;}
+.left-column { width: 160px; flex-shrink: 0; text-align: center; }
+.item-image-container { height: 160px; display: flex; align-items: center; justify-content: center; position: relative; }
 .item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-.claim-button {
-    background: #b71c1c; color: white; border: none;
-    padding: 10px 20px; font-weight: bold; cursor: pointer;
-    text-transform: uppercase;
+/* STEMPEL & GRIJS */
+.purchased-overlay {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg);
+    background: rgba(255,255,255,0.9); color: #b71c1c; border: 3px double #b71c1c;
+    padding: 5px 10px; font-family: 'Impact', sans-serif; z-index: 10;
+    animation: stampAnimation 0.5s ease-out;
+}
+@keyframes stampAnimation { 0% { transform: translate(-50%, -50%) scale(5); opacity: 0; } 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } }
+.purchased img { filter: grayscale(1) opacity(0.4); }
+
+/* VONKEN */
+.snow { position: absolute; background: #d4af37; width: 4px; height: 4px; border-radius: 50%; opacity: 0.5; animation: fireRise 6s infinite linear; }
+@keyframes fireRise { 0% { transform: translateY(100vh); } 100% { transform: translateY(-10vh); } }
+
+@media (max-width: 900px) {
+    .fixed-header { position: relative; width: 100%; height: auto; border-right: none; }
+    .page-wrapper { margin-left: 0; }
+    .wens-item { flex-direction: column; }
 }

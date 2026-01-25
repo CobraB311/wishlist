@@ -1,6 +1,6 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 
-// 1. Genereer vonken
+// 1. Vonken generator
 function createSparks() {
     const container = document.getElementById('snow-container');
     if (!container) return;
@@ -27,9 +27,9 @@ function openTab(evt, tabId) {
         targetBtn.classList.add("active");
         const name = targetBtn.innerText.toLowerCase();
         // Elementaire kleuren
-        if (name.includes('jonas')) targetBtn.style.backgroundColor = "#b71c1c";
-        else if (name.includes('milan')) targetBtn.style.backgroundColor = "#1976d2";
-        else if (name.includes('gezamenlijk')) targetBtn.style.backgroundColor = "#2e7d32";
+        if (name.includes('jonas')) targetBtn.style.borderLeft = "8px solid #b71c1c";
+        else if (name.includes('milan')) targetBtn.style.borderLeft = "8px solid #1976d2";
+        else if (name.includes('gezamenlijk')) targetBtn.style.borderLeft = "8px solid #2e7d32";
     }
 }
 
@@ -45,7 +45,7 @@ function scrollToItem(persoonNaam, itemId) {
 
 // 4. Content Generatie
 function generateWishlistContent(data, purchasedIds) {
-    const container = document.getElementById('person-lists-container');
+    const listContainer = document.getElementById('person-lists-container');
     const nav = document.getElementById('dynamic-tab-nav');
     const overview = document.getElementById('overview-grid-container');
     
@@ -83,28 +83,37 @@ function generateWishlistContent(data, purchasedIds) {
     });
 
     nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
-    container.innerHTML = listsHtml;
+    listContainer.innerHTML = listsHtml;
     overview.innerHTML = overviewHtml;
 }
 
-// 5. Hoofdfunctie
+// 5. Hoofdfunctie (FIX LIJN 107 HIER)
 async function loadWishlist() {
     createSparks();
-    const config = await fetch('wishlist_data.json').then(r => r.json());
-    const claims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
-    
-    const personData = await Promise.all(config.personen.map(async p => ({
-        naam: p.naam,
-        items: await fetch(p.data_file).then(r => r.json())
-    })));
+    try {
+        const config = await fetch('wishlist_data.json').then(r => r.json());
+        const claims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
+        
+        const personData = await Promise.all(config.personen.map(async p => ({
+            naam: p.naam,
+            items: await fetch(p.data_file).then(r => r.json())
+        })));
 
-    const gezamenlijk = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
-    const inventory = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
+        const gezamenlijk = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
+        const inventory = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
 
-    const data = { ...config, personen: personData, gezamenlijke_items: { naam: "Gezamenlijk", items: gezamenlijk }, inventaris_links: inventory };
-    generateWishlistContent(data, new Set(claims.purchased_items));
-    
-    document.getElementById('loading-message').style.display = 'none';
+        const data = { ...config, personen: personData, gezamenlijke_items: { naam: "Gezamenlijk", items: gezamenlijk }, inventaris_links: inventory };
+        generateWishlistContent(data, new Set(claims.purchased_items));
+        
+        // Fix voor lijn 107: Check of element bestaat voor het aanpassen
+        const loadingMsg = document.getElementById('loading-message');
+        if (loadingMsg) {
+            loadingMsg.style.display = 'none';
+        }
+
+    } catch (e) {
+        console.error("Fout bij laden:", e);
+    }
 }
 
 window.onload = loadWishlist;

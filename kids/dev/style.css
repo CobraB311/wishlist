@@ -1,13 +1,13 @@
 /* NINJAGO BASIS & FONT */
 body {
-    font-family: 'Segoe UI', 'Kaiti', 'STKaiti', 'FZKai-Z03S', 'Noto Sans TC', serif;
+    font-family: 'Segoe UI', 'Kaiti', 'STKaiti', sans-serif;
     color: #eee; margin: 0; padding: 0;
     background: linear-gradient(135deg, #050505 0%, #1a0000 100%);
     background-attachment: fixed; min-height: 100vh;
 }
 
 h1, h2, h3, .tab-button {
-    font-family: 'Impact', 'Kaiti', sans-serif;
+    font-family: 'Impact', sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -33,19 +33,26 @@ h1, h2, h3, .tab-button {
     background: #1a1a1a; color: #999; border: none;
     border-bottom: 1px solid #222; padding: 18px 15px; width: 100%;
     text-align: left; font-weight: bold; cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
-/* GEKOCHT OVERLAY (DE RODE STEMPEL) */
+/* DE GEKOCHT STEMPEL ANIMATIE */
 .purchased-overlay {
     position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(-15deg);
+    transform: translate(-50%, -50%) rotate(-15deg) scale(1);
     background-color: rgba(0, 0, 0, 0.8);
     color: #ff0000; border: 4px double #ff0000;
     padding: 10px 15px; font-family: 'Impact', sans-serif;
     font-size: 1.5em; font-weight: bold;
     text-shadow: 0 0 10px #ff0000; z-index: 10;
     pointer-events: none; white-space: nowrap;
+    animation: stampAnimation 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+}
+
+@keyframes stampAnimation {
+    0% { transform: translate(-50%, -50%) rotate(20deg) scale(3); opacity: 0; }
+    100% { transform: translate(-50%, -50%) rotate(-15deg) scale(1); opacity: 1; }
 }
 
 /* PRODUCT LAYOUT */
@@ -79,14 +86,6 @@ h1, h2, h3, .tab-button {
     padding: 10px 20px; font-weight: bold; cursor: pointer; margin-top: 10px;
 }
 
-/* INVENTARIS STYLING */
-.inventory-link-item { margin: 15px 0; }
-.inventory-link-item a { color: #d4af37; text-decoration: none; font-size: 1.2em; font-weight: bold; }
-.inventory-link-item a:hover { text-decoration: underline; color: #fff; }
-
-.tab-content { display: none; }
-.tab-content.active { display: block; }
-
 /* VONKEN */
 .snow {
     position: absolute; background: #ff4500; width: 3px; height: 3px; 
@@ -96,6 +95,9 @@ h1, h2, h3, .tab-button {
     0% { transform: translateY(100vh); }
     100% { transform: translateY(-10vh); }
 }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
 
 @media (max-width: 900px) {
     .fixed-header { position: relative; width: 100%; height: auto; border-right: none; }

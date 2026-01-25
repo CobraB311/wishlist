@@ -75,12 +75,17 @@ function generateWishlistContent(data, purchasedIds) {
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="winkel-links">
-                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" class="winkel-link-button">${w.naam}</a>`).join('')}
+                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" class="winkel-link-button" style="display:inline-block; padding:8px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px;">${w.naam}</a>`).join('')}
                         </div>
-                        ${!isPurchased ? `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Ik koop dit!</button>` : '<p>🎁 Reeds gekocht!</p>'}
+                        ${!isPurchased ? `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Ik koop dit!</button>` : '<p style="color:#ff0000; font-weight:bold;">🎁 Reeds gekocht!</p>'}
                     </div>
                 </div>`;
-            overviewHtml += `<div class="overview-grid-item" onclick="scrollToItem('${person.naam}', '${item.id}')"><img src="${item.afbeelding_url}"><br>${item.naam}</div>`;
+            
+            overviewHtml += `
+                <div class="overview-grid-item" onclick="scrollToItem('${person.naam}', '${item.id}')">
+                    <img src="${item.afbeelding_url}">
+                    <div class="overview-caption"><strong>${item.naam}</strong><br><small>(${person.naam})</small></div>
+                </div>`;
         });
         listsHtml += `</div></div>`;
     });
@@ -93,20 +98,24 @@ function generateWishlistContent(data, purchasedIds) {
 async function loadWishlist() {
     createSparks();
     try {
-        const config = await fetch('wishlist_data.json').then(r => r.json());
-        const claims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
+        const rData = await fetch('wishlist_data.json').then(r => r.json());
+        const rClaims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
         
-        const personData = await Promise.all(config.personen.map(async p => ({
+        const personData = await Promise.all(rData.personen.map(async p => ({
             naam: p.naam,
             items: await fetch(p.data_file).then(r => r.json())
         })));
 
-        const rGezam = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
-        const rInv = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
+        const rGezam = await fetch(rData.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
+        const rInv = await fetch(rData.inventaris_links_file).then(r => r.json()).catch(() => []);
 
-        const fullData = { ...config, personen: personData, gezamenlijke_items: { naam: "Gezamenlijk", items: rGezam }, inventaris_links: rInv };
+        const fullData = { ...rData, personen: personData, gezamenlijke_items: { naam: "Gezamenlijk", items: rGezam }, inventaris_links: rInv };
         
-        generateWishlistContent(fullData, new Set(claims.purchased_items));
+        // Verander de titel hier geforceerd
+        document.getElementById('main-title').innerText = "🥷 Verjaardagslijstjes 🥷";
+        document.getElementById('last-update-text').innerText = "Update: " + fullData.datum;
+        
+        generateWishlistContent(fullData, new Set(rClaims.purchased_items));
 
         const msg = document.getElementById('loading-message');
         if (msg) msg.style.display = 'none';

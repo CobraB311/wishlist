@@ -14,15 +14,12 @@ function createSparks() {
     }
 }
 
-// TAB WISSELEN - FIX VOOR KLIKKEN
 function openTab(evt, tabId) {
-    // 1. Verberg alle tab-content
     const contents = document.getElementsByClassName("tab-content");
     for (let i = 0; i < contents.length; i++) {
         contents[i].classList.remove("active");
     }
 
-    // 2. Reset alle knoppen
     const buttons = document.getElementsByClassName("tab-button");
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove("active");
@@ -30,22 +27,21 @@ function openTab(evt, tabId) {
         buttons[i].style.color = "";
     }
 
-    // 3. Toon de gekozen tab
     const selectedTab = document.getElementById(tabId);
     if (selectedTab) {
         selectedTab.classList.add("active");
     }
 
-    // 4. Stijl de actieve knop
     let targetBtn = evt ? evt.currentTarget : document.querySelector(`button[onclick*="${tabId}"]`);
     if (targetBtn) {
         targetBtn.classList.add("active");
         const name = targetBtn.innerText.toLowerCase();
+        
+        targetBtn.style.color = "#fff";
         if (name.includes('jonas')) targetBtn.style.backgroundColor = "#b71c1c";
         else if (name.includes('milan')) targetBtn.style.backgroundColor = "#1976d2";
         else if (name.includes('gezamenlijk')) targetBtn.style.backgroundColor = "#2e7d32";
         else targetBtn.style.backgroundColor = "#333";
-        targetBtn.style.color = "#fff";
     }
     window.scrollTo(0, 0);
 }
@@ -64,7 +60,7 @@ function generateWishlistContent(data, purchasedIds) {
     const nav = document.getElementById('dynamic-tab-nav');
     const overview = document.getElementById('overview-grid-container');
     
-    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')">Overzicht</button>`;
+    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333; color: #fff;">Overzicht</button>`;
     let listsHtml = '';
     let overviewHtml = '';
 
@@ -92,7 +88,7 @@ function generateWishlistContent(data, purchasedIds) {
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="winkel-links">
-                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px 12px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px;">${w.naam}</a>`).join('')}
+                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px 12px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px; border-radius:3px;">${w.naam}</a>`).join('')}
                         </div>
                         ${!isPurchased ? `<button style="background:#b71c1c; color:white; border:none; padding:10px; cursor:pointer;" onclick="window.location.href='mailto:${recipientEmail}'">Ik koop dit!</button>` : ''}
                     </div>
@@ -111,7 +107,6 @@ function generateWishlistContent(data, purchasedIds) {
     nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
     overview.innerHTML = overviewHtml;
     
-    // Inventaris toevoegen
     const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-section">${data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#b71c1c; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
     listContainer.innerHTML = listsHtml + invHtml;
 }

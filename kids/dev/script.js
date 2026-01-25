@@ -19,7 +19,7 @@ function claimItem(persoonNaam, itemName, itemId) {
     window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-// 3. Tab Logica - FIX: Gebruik robuuste selectie
+// 3. Tab Logica
 function openTab(evt, tabId) {
     document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(el => el.classList.remove("active"));
@@ -30,11 +30,11 @@ function openTab(evt, tabId) {
     let targetBtn = evt ? evt.currentTarget : document.querySelector(`.tab-button[onclick*="${tabId}"]`);
     if (targetBtn) {
         targetBtn.classList.add("active");
-        // Ninja kleur accenten
         const name = targetBtn.innerText.toLowerCase();
-        targetBtn.style.borderLeft = name.includes('jonas') ? "8px solid #b71c1c" : 
-                                     name.includes('milan') ? "8px solid #1976d2" : 
-                                     name.includes('gezamenlijk') ? "8px solid #2e7d32" : "";
+        // Ninja kleur accenten op de actieve tab
+        if (name.includes('jonas')) targetBtn.style.borderLeft = "8px solid #b71c1c";
+        else if (name.includes('milan')) targetBtn.style.borderLeft = "8px solid #1976d2";
+        else if (name.includes('gezamenlijk')) targetBtn.style.borderLeft = "8px solid #2e7d32";
     }
     window.scrollTo(0, 0);
 }
@@ -52,7 +52,7 @@ function scrollToItem(persoonNaam, itemId) {
     }, 200);
 }
 
-// 4. Content Bouwer - FIX: Exacte CSS klassen behouden
+// 4. Content Bouwer
 function generateWishlistContent(data, purchasedIds) {
     const container = document.getElementById('person-lists-container');
     const nav = document.getElementById('dynamic-tab-nav');
@@ -67,12 +67,10 @@ function generateWishlistContent(data, purchasedIds) {
 
     allGroups.forEach(person => {
         const tabId = person.naam.toLowerCase() + '-list-content';
-        
-        // Navigatie knop
         const bought = person.items.filter(i => purchasedIds.has(i.id)).length;
+        
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">${person.naam} <span class="percentage-bought">${bought}/${person.items.length}</span></button>`;
 
-        // Detail lijst
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensenlijst van ${person.naam}</h2><div class="wens-lijst">`;
         
         person.items.forEach(item => {
@@ -96,12 +94,11 @@ function generateWishlistContent(data, purchasedIds) {
                         </div>
                         <p class="item-nummer">ID: ${item.nummer}</p>
                         <div class="item-action-area">
-                            ${isPurchased ? '<span class="purchased-note">🎁 Gevonden!</span>' : `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Claimen</button>`}
+                            ${isPurchased ? '<span class="purchased-note">🎁 Reeds in bezit van de Ninja\'s!</span>' : `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Claimen</button>`}
                         </div>
                     </div>
                 </div>`;
             
-            // Overzicht grid
             overviewHtml += `
                 <div class="overview-grid-item ${isPurchased ? 'purchased' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
                     <div class="overview-image-wrapper">
@@ -117,6 +114,10 @@ function generateWishlistContent(data, purchasedIds) {
     nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
     container.innerHTML = listsHtml;
     overview.innerHTML = overviewHtml;
+
+    // Inventaris toevoegen
+    const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-link-section">${data.inventaris_links.map(l => `<div class="inventaris-link-item"><a href="${l.url}" target="_blank">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
+    container.innerHTML += invHtml;
 }
 
 // 5. De Hoofdfunctie
@@ -141,18 +142,14 @@ async function loadWishlist() {
             inventaris_links: rInv
         };
 
-        document.getElementById('main-title').innerText = `🥷 ${fullData.wenslijst_titel} 🥷`;
-        document.getElementById('last-update-text').innerText = `Update: ${fullData.datum}`;
+        document.getElementById('main-title').innerText = fullData.wenslijst_titel;
+        document.getElementById('last-update-text').innerText = `Laatste update: ${fullData.datum}`;
         
         generateWishlistContent(fullData, purchasedIds);
         
-        // Inventaris Tab
-        const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-link-section">${rInv.map(l => `<div class="inventaris-link-item"><a href="${l.url}" target="_blank">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
-        container.innerHTML += invHtml;
-
     } catch (e) {
-        console.error(e);
-        document.getElementById('loading-message').innerText = "Dojo laadfout!";
+        console.error("Fout bij laden:", e);
+        document.getElementById('loading-message').innerText = "Fout bij het betreden van de Dojo!";
     }
 }
 

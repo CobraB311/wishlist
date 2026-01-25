@@ -123,7 +123,8 @@ async function loadWishlist() {
         const fullData = { ...config, personen: pData, gezamenlijke_items: { naam: "Gezamenlijk", items: rGezam }, inventaris_links: rInv };
         generateWishlistContent(fullData, new Set(claims.purchased_items));
         
-        document.getElementById('loading-message').style.display = 'none';
+        const loadingMsg = document.getElementById('loading-message');
+        if (loadingMsg) loadingMsg.style.display = 'none';
     } catch (e) { console.error(e); }
 }
 

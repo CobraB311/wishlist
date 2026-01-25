@@ -6,17 +6,14 @@ body {
     background-attachment: fixed; min-height: 100vh;
 }
 
-/* De titels blijven in Impact, maar de tekst moet leesbaar zijn */
 h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color: #b71c1c; }
 
-/* BANNER */
 .ninja-banner {
     width: 100%; height: 200px;
     background: url('https://i1.sndcdn.com/visuals-001000838173-74Uowl-t1240x260.jpg') no-repeat center center;
     background-size: cover; border-bottom: 4px solid #d4af37;
 }
 
-/* SIDEBAR */
 .fixed-header {
     position: fixed; top: 0; left: 0;
     height: 100%; width: 240px;
@@ -26,32 +23,25 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 }
 
 .snow-area { flex-grow: 1; position: relative; overflow: hidden; background: #fff; }
-
 .page-wrapper { margin-left: 240px; min-height: 100vh; }
 .content-padding { padding: 30px; }
 
-/* TABS & BUTTONS - Lettertype aangepast voor leesbaarheid */
 .tab-button {
     background: #f9f9f9; color: #444; border: none;
     border-bottom: 1px solid #eee; padding: 18px 15px; width: 100%;
     text-align: left; font-weight: 700; cursor: pointer; 
-    font-family: 'Segoe UI', sans-serif; /* Beter leesbaar dan Impact */
-    text-transform: uppercase; font-size: 0.9em;
+    font-family: 'Segoe UI', sans-serif; text-transform: uppercase; font-size: 0.9em;
 }
 
-/* Standaard actieve kleur voor de 'Overzicht' tab bij laden */
 .tab-button.active { 
     background-color: #333 !important; 
     color: #fff !important; 
     border-left: 8px solid #d4af37;
 }
 
-/* PAGINA MANAGEMENT */
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
-/* OVERZICHT GRID - Fix voor stempel positionering */
-.overview-person-section { margin-bottom: 50px; }
 .overview-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 20px; margin-top: 15px;
@@ -60,35 +50,26 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     background: #fff; border: 1px solid #ddd; padding: 10px;
     text-align: center; cursor: pointer; height: 160px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    position: relative; /* Zorgt dat elementen binnenin relatief blijven */
+    position: relative;
 }
 
-/* CRUCIALE FIX VOOR DE STEMPEL: De wrapper moet relative zijn */
 .overview-image-wrapper { 
     height: 90px; width: 100%; 
     display: flex; align-items: center; justify-content: center; 
-    position: relative; /* De stempel plakt nu aan deze container */
+    position: relative;
 }
 .overview-image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
-.overview-caption { font-size: 0.8em; margin-top: 8px; font-weight: bold; }
 
-/* DETAIL LIJST */
 .wens-item {
     display: flex; background: #fff; border: 1px solid #ddd;
     padding: 20px; margin-bottom: 20px; gap: 20px; position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 .left-column { width: 160px; flex-shrink: 0; text-align: center; position: relative; }
-.item-image-container { 
-    height: 160px; display: flex; align-items: center; justify-content: center; 
-    position: relative; /* Belangrijk voor stempel in detail lijst */
-}
+.item-image-container { height: 160px; display: flex; align-items: center; justify-content: center; position: relative; }
 .item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-/* STEMPEL & GRIJS */
 .purchased-overlay {
-    position: absolute; 
-    top: 50%; left: 50%; 
+    position: absolute; top: 50%; left: 50%; 
     transform: translate(-50%, -50%) rotate(-15deg);
     background: rgba(255,255,255,0.9); color: #b71c1c; border: 3px double #b71c1c;
     padding: 5px 10px; font-family: 'Impact', sans-serif; z-index: 10;
@@ -103,7 +84,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 
 .purchased img { filter: grayscale(1) opacity(0.4); }
 
-/* VONKEN */
 .snow { position: absolute; background: #d4af37; width: 4px; height: 4px; border-radius: 50%; opacity: 0.5; animation: fireRise 6s infinite linear; }
 @keyframes fireRise { 0% { transform: translateY(100vh); } 100% { transform: translateY(-10vh); } }
 

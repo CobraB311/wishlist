@@ -1,5 +1,6 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 
+// 1. Vonken generator
 function createSparks() {
     const container = document.getElementById('snow-container');
     if (!container) return;
@@ -13,15 +14,24 @@ function createSparks() {
     }
 }
 
+// 2. Claim functie
 function claimItem(persoonNaam, itemName, itemId) {
     const subject = `CLAIM: ${itemName} voor ${persoonNaam}`;
     const body = `Ik heb dit cadeau gekocht: ${itemName} (ID: ${itemId})`;
     window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
+// 3. Tab Logica - Reset kleuren bij elke klik
 function openTab(evt, tabId) {
+    // Verberg alle content
     document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
-    document.querySelectorAll(".tab-button").forEach(el => el.classList.remove("active"));
+    
+    // Reset alle buttons (kleur en actieve status)
+    document.querySelectorAll(".tab-button").forEach(btn => {
+        btn.classList.remove("active");
+        btn.style.backgroundColor = ""; // WIS DE VORIGE KLEUR
+        btn.style.borderLeft = "";
+    });
     
     const targetTab = document.getElementById(tabId);
     if (targetTab) targetTab.classList.add("active");
@@ -30,13 +40,23 @@ function openTab(evt, tabId) {
     if (targetBtn) {
         targetBtn.classList.add("active");
         const name = targetBtn.innerText.toLowerCase();
-        if (name.includes('jonas')) targetBtn.style.backgroundColor = "#b71c1c";
-        else if (name.includes('milan')) targetBtn.style.backgroundColor = "#1976d2";
-        else if (name.includes('gezamenlijk')) targetBtn.style.backgroundColor = "#2e7d32";
+        
+        // PAS KLEUR ALLEEN TOE OP DE ACTIEVE TAB
+        if (name.includes('jonas')) {
+            targetBtn.style.backgroundColor = "#b71c1c"; // Kai Rood
+            targetBtn.style.borderLeft = "8px solid #d4af37";
+        } else if (name.includes('milan')) {
+            targetBtn.style.backgroundColor = "#1976d2"; // Jay Blauw
+            targetBtn.style.borderLeft = "8px solid #d4af37";
+        } else if (name.includes('gezamenlijk')) {
+            targetBtn.style.backgroundColor = "#2e7d32"; // Lloyd Groen
+            targetBtn.style.borderLeft = "8px solid #d4af37";
+        }
     }
     window.scrollTo(0, 0);
 }
 
+// 4. Scroll functie
 function scrollToItem(persoonNaam, itemId) {
     const tabId = persoonNaam.toLowerCase() + '-list-content';
     openTab(null, tabId); 
@@ -46,6 +66,7 @@ function scrollToItem(persoonNaam, itemId) {
     }, 250);
 }
 
+// 5. Content Generatie
 function generateWishlistContent(data, purchasedIds) {
     const container = document.getElementById('person-lists-container');
     const nav = document.getElementById('dynamic-tab-nav');
@@ -65,25 +86,33 @@ function generateWishlistContent(data, purchasedIds) {
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>${person.naam}</h2><div class="wens-lijst">`;
         person.items.forEach(item => {
             const isPurchased = purchasedIds.has(item.id);
+            const overlayHtml = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+            
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isPurchased ? 'purchased' : ''}">
                     <div class="left-column">
-                        <div class="item-image-container"><img src="${item.afbeelding_url}"></div>
+                        <div class="item-image-container">
+                            ${overlayHtml}
+                            <img src="${item.afbeelding_url}">
+                        </div>
                         <span class="item-price-under-image">${item.winkels?.[0]?.prijs || ''}</span>
                     </div>
                     <div class="right-column">
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="winkel-links">
-                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" class="winkel-link-button" style="display:inline-block; padding:8px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px;">${w.naam}</a>`).join('')}
+                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px;">${w.naam}</a>`).join('')}
                         </div>
-                        ${!isPurchased ? `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Ik koop dit!</button>` : '<p style="color:#ff0000; font-weight:bold;">🎁 Reeds gekocht!</p>'}
+                        ${!isPurchased ? `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
                 </div>`;
             
             overviewHtml += `
                 <div class="overview-grid-item" onclick="scrollToItem('${person.naam}', '${item.id}')">
-                    <img src="${item.afbeelding_url}">
+                    <div class="overview-image-wrapper">
+                        ${overlayHtml}
+                        <img src="${item.afbeelding_url}">
+                    </div>
                     <div class="overview-caption"><strong>${item.naam}</strong><br><small>(${person.naam})</small></div>
                 </div>`;
         });
@@ -111,8 +140,8 @@ async function loadWishlist() {
 
         const fullData = { ...rData, personen: personData, gezamenlijke_items: { naam: "Gezamenlijk", items: rGezam }, inventaris_links: rInv };
         
-        // Verander de titel hier geforceerd
-        document.getElementById('main-title').innerText = "🥷 Verjaardagslijstjes 🥷";
+        // TITEL ZONDER EMOJI OM RECHTHOEKEN TE VOORKOMEN
+        document.getElementById('main-title').innerText = "Verjaardagslijstjes";
         document.getElementById('last-update-text').innerText = "Update: " + fullData.datum;
         
         generateWishlistContent(fullData, new Set(rClaims.purchased_items));

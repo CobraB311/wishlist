@@ -1,6 +1,5 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 
-// 1. Vonken generator
 function createSparks() {
     const container = document.getElementById('snow-container');
     if (!container) return;
@@ -14,22 +13,17 @@ function createSparks() {
     }
 }
 
-// 2. Claim functie
 function claimItem(persoonNaam, itemName, itemId) {
     const subject = `CLAIM: ${itemName} voor ${persoonNaam}`;
     const body = `Ik heb dit cadeau gekocht: ${itemName} (ID: ${itemId})`;
     window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-// 3. Tab Logica - Reset kleuren bij elke klik
 function openTab(evt, tabId) {
-    // Verberg alle content
     document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
-    
-    // Reset alle buttons (kleur en actieve status)
     document.querySelectorAll(".tab-button").forEach(btn => {
         btn.classList.remove("active");
-        btn.style.backgroundColor = ""; // WIS DE VORIGE KLEUR
+        btn.style.backgroundColor = "";
         btn.style.borderLeft = "";
     });
     
@@ -40,23 +34,20 @@ function openTab(evt, tabId) {
     if (targetBtn) {
         targetBtn.classList.add("active");
         const name = targetBtn.innerText.toLowerCase();
-        
-        // PAS KLEUR ALLEEN TOE OP DE ACTIEVE TAB
         if (name.includes('jonas')) {
-            targetBtn.style.backgroundColor = "#b71c1c"; // Kai Rood
+            targetBtn.style.backgroundColor = "#b71c1c";
             targetBtn.style.borderLeft = "8px solid #d4af37";
         } else if (name.includes('milan')) {
-            targetBtn.style.backgroundColor = "#1976d2"; // Jay Blauw
+            targetBtn.style.backgroundColor = "#1976d2";
             targetBtn.style.borderLeft = "8px solid #d4af37";
         } else if (name.includes('gezamenlijk')) {
-            targetBtn.style.backgroundColor = "#2e7d32"; // Lloyd Groen
+            targetBtn.style.backgroundColor = "#2e7d32";
             targetBtn.style.borderLeft = "8px solid #d4af37";
         }
     }
     window.scrollTo(0, 0);
 }
 
-// 4. Scroll functie
 function scrollToItem(persoonNaam, itemId) {
     const tabId = persoonNaam.toLowerCase() + '-list-content';
     openTab(null, tabId); 
@@ -66,7 +57,6 @@ function scrollToItem(persoonNaam, itemId) {
     }, 250);
 }
 
-// 5. Content Generatie
 function generateWishlistContent(data, purchasedIds) {
     const container = document.getElementById('person-lists-container');
     const nav = document.getElementById('dynamic-tab-nav');
@@ -83,25 +73,22 @@ function generateWishlistContent(data, purchasedIds) {
         const tabId = person.naam.toLowerCase() + '-list-content';
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">${person.naam}</button>`;
         
-        listsHtml += `<div id="${tabId}" class="tab-content"><h2>${person.naam}</h2><div class="wens-lijst">`;
+        listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2><div class="wens-lijst">`;
         person.items.forEach(item => {
             const isPurchased = purchasedIds.has(item.id);
-            const overlayHtml = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+            const overlay = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
             
             listsHtml += `
-                <div id="${item.id}" class="wens-item ${isPurchased ? 'purchased' : ''}">
+                <div id="${item.id}" class="wens-item">
                     <div class="left-column">
-                        <div class="item-image-container">
-                            ${overlayHtml}
-                            <img src="${item.afbeelding_url}">
-                        </div>
-                        <span class="item-price-under-image">${item.winkels?.[0]?.prijs || ''}</span>
+                        <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}"></div>
+                        <span style="display:block; text-align:center; margin-top:5px; color:#d4af37; font-weight:bold;">${item.winkels?.[0]?.prijs || ''}</span>
                     </div>
                     <div class="right-column">
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="winkel-links">
-                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px;">${w.naam}</a>`).join('')}
+                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px 15px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px; border-radius:3px;">${w.naam}</a>`).join('')}
                         </div>
                         ${!isPurchased ? `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
@@ -109,18 +96,31 @@ function generateWishlistContent(data, purchasedIds) {
             
             overviewHtml += `
                 <div class="overview-grid-item" onclick="scrollToItem('${person.naam}', '${item.id}')">
-                    <div class="overview-image-wrapper">
-                        ${overlayHtml}
-                        <img src="${item.afbeelding_url}">
-                    </div>
-                    <div class="overview-caption"><strong>${item.naam}</strong><br><small>(${person.naam})</small></div>
+                    <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>
+                    <div class="overview-caption"><strong>${item.naam}</strong></div>
                 </div>`;
         });
         listsHtml += `</div></div>`;
     });
 
-    nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
-    container.innerHTML = listsHtml;
+    // VOEG INVENTARIS TOE AAN DE NAVIGATIE
+    navHtml += `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
+    
+    // MAAK DE INVENTARIS CONTENT
+    const invHtml = `
+        <div id="inventory-content" class="tab-content">
+            <h2>Inventaris</h2>
+            <div class="inventory-section">
+                ${data.inventaris_links.map(l => `
+                    <div class="inventory-link-item">
+                        <a href="${l.url}" target="_blank">📜 ${l.naam}</a>
+                    </div>
+                `).join('')}
+            </div>
+        </div>`;
+
+    nav.innerHTML = navHtml;
+    container.innerHTML = listsHtml + invHtml;
     overview.innerHTML = overviewHtml;
 }
 
@@ -140,15 +140,11 @@ async function loadWishlist() {
 
         const fullData = { ...rData, personen: personData, gezamenlijke_items: { naam: "Gezamenlijk", items: rGezam }, inventaris_links: rInv };
         
-        // TITEL ZONDER EMOJI OM RECHTHOEKEN TE VOORKOMEN
         document.getElementById('main-title').innerText = "Verjaardagslijstjes";
-        document.getElementById('last-update-text').innerText = "Update: " + fullData.datum;
+        document.getElementById('last-update-text').innerText = "Laatste update: " + fullData.datum;
         
         generateWishlistContent(fullData, new Set(rClaims.purchased_items));
-
-        const msg = document.getElementById('loading-message');
-        if (msg) msg.style.display = 'none';
-
+        document.getElementById('loading-message').style.display = 'none';
     } catch (e) { console.error(e); }
 }
 

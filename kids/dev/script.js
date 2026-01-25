@@ -21,10 +21,9 @@ function claimItem(persoonNaam, itemName, itemId) {
     window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-// 3. Tab Logica - Reset kleuren bij elke klik
+// 3. Tab Logica
 function openTab(evt, tabId) {
     document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
-    
     document.querySelectorAll(".tab-button").forEach(btn => {
         btn.classList.remove("active");
         btn.style.backgroundColor = ""; 
@@ -39,15 +38,14 @@ function openTab(evt, tabId) {
         targetBtn.classList.add("active");
         const name = targetBtn.innerText.toLowerCase();
         
-        // Elementaire kleuren toepassen
         if (name.includes('jonas')) {
-            targetBtn.style.backgroundColor = "#b71c1c"; // Kai Rood
+            targetBtn.style.backgroundColor = "#b71c1c";
             targetBtn.style.borderLeft = "8px solid #d4af37";
         } else if (name.includes('milan')) {
-            targetBtn.style.backgroundColor = "#1976d2"; // Jay Blauw
+            targetBtn.style.backgroundColor = "#1976d2";
             targetBtn.style.borderLeft = "8px solid #d4af37";
         } else if (name.includes('gezamenlijk')) {
-            targetBtn.style.backgroundColor = "#2e7d32"; // Lloyd Groen
+            targetBtn.style.backgroundColor = "#2e7d32";
             targetBtn.style.borderLeft = "8px solid #d4af37";
         }
     }
@@ -64,7 +62,7 @@ function scrollToItem(persoonNaam, itemId) {
     }, 250);
 }
 
-// 5. Content Generatie
+// 5. Content Bouwer
 function generateWishlistContent(data, purchasedIds) {
     const container = document.getElementById('person-lists-container');
     const nav = document.getElementById('dynamic-tab-nav');
@@ -81,57 +79,44 @@ function generateWishlistContent(data, purchasedIds) {
         const tabId = person.naam.toLowerCase() + '-list-content';
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">${person.naam}</button>`;
         
-        listsHtml += `<div id="${tabId}" class=\"tab-content\"><h2>Wensen van ${person.naam}</h2><div class=\"wens-lijst\">`;
+        listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2><div class="wens-lijst">`;
         person.items.forEach(item => {
             const isPurchased = purchasedIds.has(item.id);
-            const overlayHtml = isPurchased ? `<div class=\"purchased-overlay\">GEKOCHT</div>` : '';
+            const overlay = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
             
             listsHtml += `
-                <div id="${item.id}" class=\"wens-item\">
-                    <div class=\"left-column\">
-                        <div class=\"item-image-container\">
-                            ${overlayHtml}
-                            <img src="${item.afbeelding_url}">
-                        </div>
-                        <span style=\"display:block; text-align:center; margin-top:5px; color:#d4af37; font-weight:bold;\">${item.winkels?.[0]?.prijs || ''}</span>
+                <div id="${item.id}" class="wens-item">
+                    <div class="left-column">
+                        <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}"></div>
+                        <span style="display:block; text-align:center; margin-top:5px; color:#d4af37; font-weight:bold;">${item.winkels?.[0]?.prijs || ''}</span>
                     </div>
-                    <div class=\"right-column\">
+                    <div class="right-column">
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
-                        <div class=\"winkel-links\">
-                            ${item.winkels.map(w => `<a href="${w.link}" target=\"_blank\" style=\"display:inline-block; padding:8px 15px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px; border-radius:3px;\">${w.naam}</a>`).join('')}
+                        <div class="winkel-links">
+                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px 15px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px; border-radius:3px;">${w.naam}</a>`).join('')}
                         </div>
-                        ${!isPurchased ? `<button class=\"claim-button\" onclick=\"claimItem('${person.naam}', '${item.naam}', '${item.id}')\">Ik koop dit!</button>` : ''}
+                        ${!isPurchased ? `<button class="claim-button" onclick="claimItem('${person.naam}', '${item.naam}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
                 </div>`;
             
             overviewHtml += `
-                <div class=\"overview-grid-item\" onclick=\"scrollToItem('${person.naam}', '${item.id}')\">
-                    <div class=\"overview-image-wrapper\">
-                        ${overlayHtml}
-                        <img src="${item.afbeelding_url}">
-                    </div>
-                    <div class=\"overview-caption\"><strong>${item.naam}</strong></div>
+                <div class="overview-grid-item" onclick="scrollToItem('${person.naam}', '${item.id}')">
+                    <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>
+                    <div class="overview-caption"><strong>${item.naam}</strong></div>
                 </div>`;
         });
         listsHtml += `</div></div>`;
     });
 
-    // Inventaris toevoegen
-    navHtml += `<button class=\"tab-button\" onclick=\"openTab(event, 'inventory-content')\">Inventaris</button>`;
-    const invHtml = `
-        <div id=\"inventory-content\" class=\"tab-content\">
-            <h2>Inventaris</h2>
-            <div class=\"inventory-section\">
-                ${data.inventaris_links.map(l => `<div style=\"margin:15px 0;\"><a href=\"${l.url}\" target=\"_blank\" style=\"color:#d4af37; text-decoration:none; font-size:1.2em; font-weight:bold;\">📜 ${l.naam}</a></div>`).join('')}
-            </div>
-        </div>`;
-
-    nav.innerHTML = navHtml;
+    const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-section">${data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#d4af37; text-decoration:none; font-size:1.2em; font-weight:bold;">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
+    
+    nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
     container.innerHTML = listsHtml + invHtml;
     overview.innerHTML = overviewHtml;
 }
 
+// 6. De Hoofdfunctie
 async function loadWishlist() {
     createSparks();
     try {
@@ -153,13 +138,11 @@ async function loadWishlist() {
         
         generateWishlistContent(fullData, new Set(rClaims.purchased_items));
 
-        // FIX VOOR ERROR OP LIJN 148: Controleer eerst of het element bestaat
-        const loadingMsg = document.getElementById('loading-message');
-        if (loadingMsg) {
-            loadingMsg.style.display = 'none';
-        }
+        // FIX VOOR ERROR: Check of loading-message nog bestaat
+        const msg = document.getElementById('loading-message');
+        if (msg) msg.style.display = 'none';
 
-    } catch (e) { console.error(e); }
+    } catch (e) { console.error("Dojo Error:", e); }
 }
 
 window.onload = loadWishlist;

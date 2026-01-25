@@ -14,6 +14,13 @@ function createSparks() {
     }
 }
 
+// DE FIX: Deze functie bouwt de mail op
+function claimItem(persoonNaam, itemName, itemId) {
+    const subject = `CLAIM: ${itemName} voor ${persoonNaam}`;
+    const body = `Beste,\n\nIk heb het volgende cadeau gekocht van de lijst:\n\nItem: ${itemName}\nBestemd voor: ${persoonNaam}\nID: ${itemId}\n\nZou je dit item als gekocht willen markeren? Bedankt!`;
+    window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 function openTab(evt, tabId) {
     const contents = document.getElementsByClassName("tab-content");
     for (let i = 0; i < contents.length; i++) {
@@ -90,7 +97,7 @@ function generateWishlistContent(data, purchasedIds) {
                         <div class="winkel-links">
                             ${item.winkels.map(w => `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px 12px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px; border-radius:3px;">${w.naam}</a>`).join('')}
                         </div>
-                        ${!isPurchased ? `<button style="background:#b71c1c; color:white; border:none; padding:10px; cursor:pointer;" onclick="window.location.href='mailto:${recipientEmail}'">Ik koop dit!</button>` : ''}
+                        ${!isPurchased ? `<button style="background:#b71c1c; color:white; border:none; padding:10px 15px; cursor:pointer; font-weight:bold; margin-top:10px; text-transform:uppercase;" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
                 </div>`;
             

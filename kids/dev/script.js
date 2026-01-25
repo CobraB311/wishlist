@@ -4,7 +4,7 @@ function createSparks() {
     const container = document.getElementById('snow-container');
     if (!container) return;
     container.innerHTML = '';
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 40; i++) {
         const spark = document.createElement('div');
         spark.className = 'snow';
         spark.style.left = Math.random() * 100 + "%";
@@ -24,6 +24,7 @@ function openTab(evt, tabId) {
     document.querySelectorAll(".tab-button").forEach(btn => {
         btn.classList.remove("active");
         btn.style.backgroundColor = ""; 
+        btn.style.color = "";
         btn.style.borderLeft = "";
     });
     
@@ -35,6 +36,7 @@ function openTab(evt, tabId) {
         targetBtn.classList.add("active");
         const name = targetBtn.innerText.toLowerCase();
         
+        targetBtn.style.color = "#fff";
         if (name.includes('jonas')) {
             targetBtn.style.backgroundColor = "#b71c1c";
             targetBtn.style.borderLeft = "8px solid #d4af37";
@@ -44,6 +46,8 @@ function openTab(evt, tabId) {
         } else if (name.includes('gezamenlijk')) {
             targetBtn.style.backgroundColor = "#2e7d32";
             targetBtn.style.borderLeft = "8px solid #d4af37";
+        } else {
+            targetBtn.style.backgroundColor = "#333";
         }
     }
     window.scrollTo(0, 0);
@@ -74,10 +78,7 @@ function generateWishlistContent(data, purchasedIds) {
         const tabId = person.naam.toLowerCase() + '-list-content';
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">${person.naam}</button>`;
         
-        // Deel voor de individuele lijst tabs
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2><div class="wens-lijst">`;
-        
-        // Deel voor de split op de overzichtspagina
         overviewHtml += `<div class="overview-person-section"><h3>Lijst van ${person.naam}</h3><div class="overview-grid">`;
 
         person.items.forEach(item => {
@@ -85,15 +86,11 @@ function generateWishlistContent(data, purchasedIds) {
             const overlayHtml = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
             const statusClass = isPurchased ? 'purchased' : '';
             
-            // Lijst item
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${statusClass}">
                     <div class="left-column">
-                        <div class="item-image-container">
-                            ${overlayHtml}
-                            <img src="${item.afbeelding_url}">
-                        </div>
-                        <span style="display:block; text-align:center; margin-top:5px; color:#d4af37; font-weight:bold;">${item.winkels?.[0]?.prijs || ''}</span>
+                        <div class="item-image-container">${overlayHtml}<img src="${item.afbeelding_url}"></div>
+                        <span style="display:block; text-align:center; margin-top:5px; color:#b71c1c; font-weight:bold;">${item.winkels?.[0]?.prijs || ''}</span>
                     </div>
                     <div class="right-column">
                         <h3>${item.naam}</h3>
@@ -105,21 +102,17 @@ function generateWishlistContent(data, purchasedIds) {
                     </div>
                 </div>`;
             
-            // Grid item voor overzicht
             overviewHtml += `
                 <div class="overview-grid-item ${statusClass}" onclick="scrollToItem('${person.naam}', '${item.id}')">
-                    <div class="overview-image-wrapper">
-                        ${overlayHtml}
-                        <img src="${item.afbeelding_url}">
-                    </div>
+                    <div class="overview-image-wrapper">${overlayHtml}<img src="${item.afbeelding_url}"></div>
                     <div class="overview-caption"><strong>${item.naam}</strong></div>
                 </div>`;
         });
         listsHtml += `</div></div>`;
-        overviewHtml += `</div></div>`; // Sluit grid en section
+        overviewHtml += `</div></div>`;
     });
 
-    const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-section">${data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#d4af37; text-decoration:none; font-size:1.2em; font-weight:bold;">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
+    const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-section">${data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#b71c1c; text-decoration:none; font-size:1.2em; font-weight:bold;">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
     
     nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
     container.innerHTML = listsHtml + invHtml;
@@ -149,7 +142,6 @@ async function loadWishlist() {
 
         const msg = document.getElementById('loading-message');
         if (msg) msg.style.display = 'none';
-
     } catch (e) { console.error(e); }
 }
 

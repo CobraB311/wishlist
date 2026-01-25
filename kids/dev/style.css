@@ -1,67 +1,99 @@
-/* NINJAGO BASE STYLING */
+/* BASIS & THEMA */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    color: #eee;
+    font-family: 'Segoe UI', Impact, sans-serif;
+    color: #eeeeee;
     margin: 0; padding: 0;
     background: linear-gradient(135deg, #050505 0%, #1a0000 100%);
     background-attachment: fixed;
     min-height: 100vh;
 }
 
-/* HEADER & NAVIGATIE */
+/* SIDEBAR LAYOUT (Full Height Snow) */
 .fixed-header {
     position: fixed;
     top: 0; left: 0;
     height: 100%; width: 240px;
     background: #111;
     border-right: 4px solid #d4af37;
+    display: flex;
+    flex-direction: column; /* Zorgt dat de snow-area de rest vult */
     z-index: 1000;
+}
+
+.tab-nav { flex-shrink: 0; }
+
+.snow-area {
+    flex-grow: 1; /* Vult de rest van de zijbalk */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #111, #000);
 }
 
 .page-wrapper { margin-left: 240px; padding: 20px; }
 
+/* TABS & BUTTONS */
 .tab-button {
-    background: #1a1a1a; color: #999;
-    border: none; width: 100%;
-    padding: 15px; text-align: left;
-    font-weight: bold; cursor: pointer;
-    border-bottom: 1px solid #222;
+    background-color: #1a1a1a; color: #999;
+    border: none; border-bottom: 1px solid #222;
+    padding: 18px 15px; width: 100%;
+    text-align: left; font-weight: bold;
+    text-transform: uppercase; cursor: pointer;
+    transition: all 0.3s;
 }
 
-.tab-button.active { background: #333; color: #fff; border-left: 8px solid #d4af37; }
+.tab-button.active {
+    color: #fff;
+    border-left: 8px solid #d4af37;
+    background-color: #333;
+}
 
-/* ITEM LAYOUT (DE FIX VOOR DE GROTE FOTO'S) */
+/* WENS-ITEM LAYOUT (Foto Fix) */
 .wens-item {
-    display: flex;
-    background: #111;
+    display: flex; background: #111;
     border: 1px solid #333;
-    padding: 20px; margin-bottom: 20px;
+    padding: 20px; margin-bottom: 20px; gap: 20px;
 }
 
-.left-column { width: 180px; flex-shrink: 0; margin-right: 20px; text-align: center; }
-
+.left-column { width: 180px; flex-shrink: 0; text-align: center; }
 .item-image-container {
     width: 100%; height: 180px;
     display: flex; align-items: center; justify-content: center;
     background: #000; overflow: hidden;
 }
-
 .item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
-
 .right-column { flex-grow: 1; }
 
-/* VONKEN & BERGEN */
-.snow-area { height: 150px; background: #000; position: relative; overflow: hidden; }
-.snow { position: absolute; background: #ff4500; width: 3px; height: 3px; border-radius: 50%; animation: fall-and-sway 10s infinite linear; }
-
-@keyframes fall-and-sway {
-    0% { transform: translateY(110vh); }
-    100% { transform: translateY(-10vh); }
+/* DE RODE CLAIM KNOP */
+.claim-button {
+    background: #b71c1c; color: white;
+    border: 2px solid #d4af37;
+    padding: 10px 20px; font-weight: bold;
+    text-transform: uppercase; cursor: pointer;
+    margin-top: 15px;
 }
+.claim-button:hover { background: #ff0000; box-shadow: 0 0 10px #ff0000; }
+
+/* SNOW/FIRE ANIMATIE */
+.snow {
+    position: absolute; background: #ff4500;
+    width: 3px; height: 3px; border-radius: 50%;
+    animation: fireRise 8s infinite linear; opacity: 0.6;
+}
+@keyframes fireRise {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* OVERVIEW GRID */
+.overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; }
+.overview-grid-item { background: #1a1a1a; border: 1px solid #333; padding: 10px; cursor: pointer; text-align: center; }
+.overview-grid-item img { max-width: 100%; height: 120px; object-fit: contain; }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
 
 @media (max-width: 900px) {
     .fixed-header { position: relative; width: 100%; height: auto; border-right: none; }
     .page-wrapper { margin-left: 0; }
     .wens-item { flex-direction: column; }
-    .left-column { width: 100%; margin-bottom: 15px; }
 }

@@ -16,6 +16,19 @@
           ]
         },
         {
+          "id": "set-joy-con-2-purple-green",
+          "naam": "Joy-Con 2 Controllerset (Lichtpaars & Lichtgroen)",
+          "nummer": "10017928",
+          "beschrijving": "De vernieuwde Joy-Con 2 controllers voor de Nintendo Switch 2. Deze set in lichtpaars en lichtgroen biedt verbeterde precisie, haptische feedback en een ergonomisch ontwerp voor urenlang speelplezier.",
+          "afbeelding_url": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_600,q_auto:eco:sensitive/efq7vgaujfatsva9y2en",
+          "winkels": [
+            { "naam": "Nintendo Store", "link": "https://store.nintendo.be/nl/joy-con-2-controllerset-lichtpaarslichtgroen-000000000010017928", "prijs": "€ 89,99" },
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/nintendo-switch-2-joy-con-controller-paar-paars-groen/9300000256647967/", "prijs": "€ 89,99" },
+            { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/NINTENDO-JOY-CON-PAIR-PRPL-GREEN/a22538834", "prijs": "€ 89,99" },
+            { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/2308884/nintendo-joy-con-2-groen-paars-zwart.html", "prijs": "Check prijs" }
+          ]
+        },
+        {
           "id": "set-hotwheels-f1-5pack",
           "naam": "Hot Wheels Formule 1 Race Cars 5-Pack",
           "nummer": "JGF58",

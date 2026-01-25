@@ -1,9 +1,8 @@
 /* NINJAGO LICHT THEMA */
 body {
     font-family: 'Segoe UI', 'Kaiti', 'STKaiti', sans-serif;
-    color: #333; /* Donkere tekst voor leesbaarheid */
+    color: #333;
     margin: 0; padding: 0;
-    /* Lichtere achtergrond: Dojo-grijs naar wit */
     background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
     background-attachment: fixed; min-height: 100vh;
 }
@@ -14,7 +13,7 @@ h1, h2, h3, .tab-button {
     text-transform: uppercase;
 }
 
-/* BANNER BOVENAAN */
+/* BANNER */
 .ninja-banner {
     width: 100%;
     height: 200px;
@@ -23,22 +22,20 @@ h1, h2, h3, .tab-button {
     border-bottom: 4px solid #d4af37;
 }
 
-/* SIDEBAR LAYOUT */
+/* SIDEBAR */
 .fixed-header {
     position: fixed; top: 0; left: 0;
     height: 100%; width: 240px;
     background: #ffffff; border-right: 4px solid #d4af37;
     display: flex; flex-direction: column; z-index: 1000;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
-.tab-nav { flex-shrink: 0; }
 .snow-area {
     flex-grow: 1; position: relative; overflow: hidden;
-    background: #fff; /* Wit in plaats van zwart */
+    background: #fff;
 }
 
-.page-wrapper { margin-left: 240px; padding: 0; } /* Padding 0 voor banner */
+.page-wrapper { margin-left: 240px; padding: 0; }
 .content-padding { padding: 20px; }
 
 /* TABS */
@@ -46,62 +43,81 @@ h1, h2, h3, .tab-button {
     background: #f9f9f9; color: #666; border: none;
     border-bottom: 1px solid #eee; padding: 18px 15px; width: 100%;
     text-align: left; font-weight: bold; cursor: pointer;
-    transition: all 0.3s ease;
+}
+.tab-button.active { color: #fff; }
+
+/* OVERZICHT GRID (FIX VOOR GROTE FOTO'S) */
+.overview-person-section { margin-bottom: 40px; }
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
 }
 
-/* DE GEKOCHT STEMPEL */
+.overview-grid-item {
+    background: #fff; border: 1px solid #ddd;
+    padding: 10px; text-align: center; cursor: pointer;
+    position: relative; overflow: hidden;
+    height: 180px; /* Vaste hoogte voor uniformiteit */
+    display: flex; flex-direction: column;
+}
+
+.overview-image-wrapper {
+    height: 100px; /* Forceert kleine foto's */
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px; position: relative;
+}
+
+.overview-image-wrapper img {
+    max-width: 100%; max-height: 100%;
+    object-fit: contain;
+}
+
+/* STEMPEL & EFFECTEN */
 .purchased-overlay {
     position: absolute; top: 50%; left: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #b71c1c; border: 4px double #b71c1c;
-    padding: 10px 15px; font-family: 'Impact', sans-serif;
-    font-size: 1.5em; font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); z-index: 10;
-    pointer-events: none; white-space: nowrap;
-    animation: stampAnimation 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #b71c1c; border: 3px double #b71c1c;
+    padding: 5px 10px; font-family: 'Impact', sans-serif;
+    font-size: 1.2em; font-weight: bold; z-index: 10;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    animation: stampAnimation 0.5s ease-out forwards;
 }
 
-/* LICHTERE LOOK VOOR GEKOCHTE FOTO'S */
-.purchased img {
-    filter: sepia(0.5) brightness(0.8);
+@keyframes stampAnimation {
+    0% { transform: translate(-50%, -50%) rotate(20deg) scale(4); opacity: 0; }
+    100% { transform: translate(-50%, -50%) rotate(-15deg) scale(1); opacity: 1; }
+}
+
+.purchased img { filter: grayscale(1) opacity(0.5); }
+
+/* BEWEGENDE PUNTJES (VONKEN) */
+.snow {
+    position: absolute; 
+    background: #d4af37; /* Goudkleurige vonken */
+    width: 4px; height: 4px; border-radius: 50%;
     opacity: 0.6;
+    animation: fireRise 6s infinite linear;
 }
 
-/* PRODUCT LAYOUT */
+@keyframes fireRise {
+    0% { transform: translateY(100vh); opacity: 0; }
+    20% { opacity: 0.6; }
+    80% { opacity: 0.6; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* DETAIL LIJST */
 .wens-item {
-    display: flex; background: #ffffff; border: 1px solid #ddd;
+    display: flex; background: #fff; border: 1px solid #ddd;
     padding: 20px; margin-bottom: 20px; gap: 20px; position: relative;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-
-.left-column { width: 180px; flex-shrink: 0; position: relative; }
-.item-image-container {
-    width: 100%; height: 180px; display: flex; align-items: center; 
-    justify-content: center; background: #fff; overflow: hidden; position: relative;
-}
+.left-column { width: 160px; flex-shrink: 0; }
+.item-image-container { height: 160px; display: flex; align-items: center; justify-content: center; position: relative;}
 .item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-/* OVERVIEW GRID */
-.overview-person-section { margin-bottom: 40px; border-top: 2px solid #d4af37; padding-top: 20px; }
-.overview-person-section h3 { color: #b71c1c; margin-bottom: 15px; }
-
-.overview-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px;
-}
-.overview-grid-item {
-    background: #fff; border: 1px solid #eee; padding: 10px; text-align: center; 
-    cursor: pointer; position: relative; transition: all 0.3s;
-}
-.overview-grid-item:hover { border-color: #d4af37; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-
-/* VONKEN (nu goud/geel voor de witte achtergrond) */
-.snow {
-    position: absolute; background: #d4af37; width: 4px; height: 4px; 
-    border-radius: 50%; animation: fireRise 8s infinite linear; opacity: 0.4;
-}
-
-@media (max-width: 900px) {
-    .fixed-header { position: relative; width: 100%; height: auto; border-right: none; }
-    .page-wrapper { margin-left: 0; }
-    .wens-item { flex-direction: column; }
+.claim-button {
+    background: #b71c1c; color: white; border: none;
+    padding: 10px 20px; font-weight: bold; cursor: pointer;
+    text-transform: uppercase;
 }

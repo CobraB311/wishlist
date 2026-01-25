@@ -1,27 +1,28 @@
-/* NINJAGO BASIS */
+/* NINJAGO BASIS & FONT */
 body {
-    font-family: 'Segoe UI', Impact, sans-serif;
+    font-family: 'Segoe UI', 'Kaiti', 'STKaiti', 'FZKai-Z03S', 'Noto Sans TC', serif;
     color: #eee; margin: 0; padding: 0;
     background: linear-gradient(135deg, #050505 0%, #1a0000 100%);
     background-attachment: fixed; min-height: 100vh;
 }
 
+h1, h2, h3, .tab-button {
+    font-family: 'Impact', 'Kaiti', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 /* SIDEBAR LAYOUT */
 .fixed-header {
-    position: fixed;
-    top: 0; left: 0;
+    position: fixed; top: 0; left: 0;
     height: 100%; width: 240px;
-    background: #111;
-    border-right: 4px solid #d4af37;
-    display: flex; flex-direction: column;
-    z-index: 1000;
+    background: #111; border-right: 4px solid #d4af37;
+    display: flex; flex-direction: column; z-index: 1000;
 }
 
 .tab-nav { flex-shrink: 0; }
-
 .snow-area {
-    flex-grow: 1; 
-    position: relative; overflow: hidden;
+    flex-grow: 1; position: relative; overflow: hidden;
     background: linear-gradient(to bottom, #111, #000);
 }
 
@@ -29,86 +30,72 @@ body {
 
 /* TABS */
 .tab-button {
-    background: #1a1a1a; color: #999;
-    border: none; border-bottom: 1px solid #222;
-    padding: 18px 15px; width: 100%;
-    text-align: left; font-weight: bold;
-    text-transform: uppercase; cursor: pointer;
-    transition: background-color 0.3s, border-left 0.3s;
+    background: #1a1a1a; color: #999; border: none;
+    border-bottom: 1px solid #222; padding: 18px 15px; width: 100%;
+    text-align: left; font-weight: bold; cursor: pointer;
+    transition: all 0.3s;
 }
 
-/* GEKOCHT OVERLAY (DE MOOIE RODE VERSIE) */
+/* GEKOCHT OVERLAY (DE RODE STEMPEL) */
 .purchased-overlay {
-    position: absolute;
-    top: 50%; left: 50%;
+    position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%) rotate(-15deg);
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #ff0000;
-    border: 4px double #ff0000;
-    padding: 10px 20px;
-    font-family: 'Impact', sans-serif;
-    font-size: 1.4em;
-    font-weight: bold;
-    text-shadow: 0 0 10px #ff0000;
-    z-index: 10;
-    pointer-events: none;
-    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff0000; border: 4px double #ff0000;
+    padding: 10px 15px; font-family: 'Impact', sans-serif;
+    font-size: 1.5em; font-weight: bold;
+    text-shadow: 0 0 10px #ff0000; z-index: 10;
+    pointer-events: none; white-space: nowrap;
 }
 
 /* PRODUCT LAYOUT */
 .wens-item {
     display: flex; background: #111; border: 1px solid #333;
-    padding: 20px; margin-bottom: 20px; gap: 20px;
-    position: relative;
+    padding: 20px; margin-bottom: 20px; gap: 20px; position: relative;
 }
 
 .left-column { width: 180px; flex-shrink: 0; position: relative; }
 .item-image-container {
-    width: 100%; height: 180px;
-    display: flex; align-items: center; justify-content: center;
-    background: #000; overflow: hidden;
-    position: relative;
+    width: 100%; height: 180px; display: flex; align-items: center; 
+    justify-content: center; background: #000; overflow: hidden; position: relative;
 }
 .item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-.right-column { flex-grow: 1; }
-
 /* OVERVIEW GRID */
 .overview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px;
 }
-
 .overview-grid-item {
-    background: #111; border: 1px solid #333;
-    padding: 10px; text-align: center; cursor: pointer;
-    position: relative;
+    background: #111; border: 1px solid #333; padding: 10px; text-align: center; 
+    cursor: pointer; position: relative;
 }
-
-.overview-image-wrapper { height: 100px; position: relative; margin-bottom: 8px; }
+.overview-image-wrapper { height: 90px; position: relative; margin-bottom: 8px; }
 .overview-image-wrapper img { max-width: 100%; height: 100%; object-fit: contain; }
+.overview-caption { font-size: 0.8em; color: #ccc; }
 
 /* CLAIM KNOP */
 .claim-button {
     background: #b71c1c; color: white; border: 2px solid #d4af37;
-    padding: 10px 20px; font-weight: bold; cursor: pointer;
-    margin-top: 10px; text-transform: uppercase;
+    padding: 10px 20px; font-weight: bold; cursor: pointer; margin-top: 10px;
 }
+
+/* INVENTARIS STYLING */
+.inventory-link-item { margin: 15px 0; }
+.inventory-link-item a { color: #d4af37; text-decoration: none; font-size: 1.2em; font-weight: bold; }
+.inventory-link-item a:hover { text-decoration: underline; color: #fff; }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
 
 /* VONKEN */
 .snow {
-    position: absolute; background: #ff4500;
-    width: 3px; height: 3px; border-radius: 50%;
-    animation: fireRise 8s infinite linear; opacity: 0.6;
+    position: absolute; background: #ff4500; width: 3px; height: 3px; 
+    border-radius: 50%; animation: fireRise 8s infinite linear; opacity: 0.6;
 }
 @keyframes fireRise {
     0% { transform: translateY(100vh); }
     100% { transform: translateY(-10vh); }
 }
-
-.tab-content { display: none; }
-.tab-content.active { display: block; }
 
 @media (max-width: 900px) {
     .fixed-header { position: relative; width: 100%; height: auto; border-right: none; }

@@ -1,5 +1,15 @@
 [
         {
+          "id": "set-mario-tennis-fever-switch2",
+          "naam": "Mario Tennis Fever (Nintendo Switch 2)",
+          "nummer": "9300000240435887",
+          "beschrijving": "Stap de baan op met Mario en zijn vrienden in de meest spectaculaire tennisgame tot nu toe, exclusief voor de Nintendo Switch 2. Gebruik nieuwe Fever-moves en geniet van verbluffende graphics!",
+          "afbeelding_url": "https://media.s-bol.com/qB864oLvKDE2/Bg9v65k/741x1200.jpg",
+          "winkels": [
+            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/mario-tennis-fever-nintendo-switch-2/9300000240435887/", "prijs": "€ 69,99" }
+          ]
+        },
+        {
           "id": "set-hotwheels-f1-5pack",
           "naam": "Hot Wheels Formule 1 Race Cars 5-Pack",
           "nummer": "JGF58",

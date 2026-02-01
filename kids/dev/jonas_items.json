@@ -556,5 +556,27 @@
       { "naam": "Ravensburger BE", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/arts-craft/craft-kits/xoomy-pokmon-refill-dfinleen-20239", "prijs": "€ 9,99" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Ravensburger-Xoomy-Pokemon-navulling/a17052164", "prijs": "€ 15,99" }
     ]
+  },
+  {
+    "id": "sticker-book-zootopia-2",
+    "naam": "Ultimate Sticker Book Disney Zootopia 2",
+    "nummer": "9780241743140",
+    "beschrijving": "Beleef de avonturen van Judy Hopps en Nick Wilde opnieuw met dit ultieme stickerboek van Zootropolis 2! Bevat meer dan 60 herbruikbare stickers van de leukste personages uit de film en leuke achtergronden om ze op te plakken.",
+    "afbeelding_url": "https://media.s-bol.com/3DZYMR1Q73gO/Bg1vBrY/925x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ultimate-sticker-book-disney-zootopia-2-ultimate-sticker-book/9300000236098592/", "prijs": "€ 11,89" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-dekbedovertrek-fight",
+    "naam": "LEGO® NINJAGO® Dekbedovertrek - Fight (140x200 cm)",
+    "nummer": "NIN-2449-F",
+    "beschrijving": "Slaap als een echte ninja onder dit stoere LEGO NINJAGO dekbedovertrek! Gemaakt van 100% katoen voor optimaal comfort. Het overtrek is omkeerbaar met aan beide kanten een uniek NINJAGO-ontwerp. Inclusief bijpassende kussensloop van 70x90 cm.",
+    "afbeelding_url": "https://media.s-bol.com/PLGzD9AnDqlw/xG4qVgJ/691x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-dekbedovertrek-fight-140-x-200-cm-70-x-90-cm-katoen/9300000244920686/", "prijs": "€ 31,25" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/9miw1Ug", "prijs": "€ 33,99" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0FKNKmR", "prijs": "€ 33,99" }
+    ]
   }
 ]

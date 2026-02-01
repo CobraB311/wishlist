@@ -468,5 +468,29 @@
           "winkels": [
             { "naam": "HEMA", "link": "https://www.hema.com/nl-be/vrije-tijd/knutselen-handwerken/knutselen/stempelset-cijfers-15900239.html", "prijs": "€ 3,39" }
           ]
-        }
+        },
+  {
+    "id": "uno-draagtas-speelkaarten",
+    "naam": "UNO Draagtas voor speelkaarten",
+    "nummer": "5901",
+    "beschrijving": "Bescherm je favoriete UNO-kaarten met deze stevige en praktische draagtas van Theo Klein. Ideaal voor op reis, stevig uitgevoerd en voorzien van een handige rits. Let op: wordt geleverd zonder speelkaarten.",
+    "afbeelding_url": "https://media.s-bol.com/m86ox6z51r93/ROQzmjO/915x1200.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/fOJrS31", "prijs": "€ 6,40" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/dzYONtm", "prijs": "€ 9,09" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/uno-draagtas-voor-speelkaarten-voor-onderweg-11-cm-x-3-5-cm-x-15-5-cm/9300000089008825/", "prijs": "€ 9,39" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/uno-opbergtas/01732795", "prijs": "€ 9,95" },
+      { "naam": "MultiBazar", "link": "https://www.multibazar.be/nl/theo-klein-5901-uno-draagtas-894770", "prijs": "€ 9,99" }
+    ]
+  },
+  {
+    "id": "uno-flip-draagtas-speelkaarten",
+    "naam": "UNO Flip Draagtas voor speelkaarten",
+    "nummer": "5913",
+    "beschrijving": "Houd je UNO Flip kaarten veilig en georganiseerd in deze speciale paars-gele draagtas. Net zo stevig als de klassieke versie, maar uitgevoerd in de herkenbare kleuren van de Flip-editie. Voorzien van een handige rits en opbergvakken.",
+    "afbeelding_url": "https://media.s-bol.com/RGPY8xOY08Nw/58RGD2q/1079x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/", "prijs": "€ 9,99" }
+    ]
+  }
 ]

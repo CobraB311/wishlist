@@ -578,5 +578,17 @@
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/9miw1Ug", "prijs": "€ 33,99" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0FKNKmR", "prijs": "€ 33,99" }
     ]
+  },
+  {
+    "id": "lego-ninjago-in-de-aanval-avi-m4",
+    "naam": "LEGO® NINJAGO® - In de aanval (AVI M4)",
+    "nummer": "9789030508595",
+    "beschrijving": "Leer lezen met de ninja's! In dit spannende AVI M4 boekje gaan de ninja's in de aanval. Een perfecte manier om leesplezier te stimuleren voor fans van LEGO NINJAGO. Geschreven door Pim Lammers.",
+    "afbeelding_url": "https://static.fnac-static.com/multimedia/PE/Images/FR/NR/7e/3e/d7/14106238/1507-1/tsp20251217092059/LEGO-Ninjago-In-de-aanval-AVI-M4.jpg",
+    "winkels": [
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a16649984/Leren-lezen-met-Lego-boeken-AVI-M4-Deel-5-In-de-aanval-Pim-Lammers", "prijs": "€ 8,99" },
+      { "naam": "Boekenvoordeel.be", "link": "https://www.boekenvoordeel.be/p/lego-ninjago-in-de-aanval-107849", "prijs": "€ 8,99" },
+      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/in-de-aanval-9789030508595", "prijs": "€ 9,99" }
+    ]
   }
 ]

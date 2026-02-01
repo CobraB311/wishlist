@@ -412,6 +412,24 @@
       { "naam": "BrickWatch", "link": "https://www.brickwatch.net/en-BE/set/60505/Airplane-Service-Truck-Hovercraft-Remix.html", "prijs": "Check prijs" }
     ]
   },
+  {
+    "id": "set-lego-71826-ninjago-spinjitzu",
+    "naam": "LEGO® NINJAGO® Spinjitzu-drakenstrijdpakket",
+    "nummer": "71826",
+    "beschrijving": "Bereid je voor op een episch duel! Deze set bevat twee spinners, een drakenfiguur en minifiguren van Kai en een Wolvenmasker bewaker. Lanceer de spinners en kijk wie de strijd wint in de arena van NINJAGO.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltafca4575c7d0aed0/71826_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/7IipFrq", "prijs": "€ 15,95" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4wZcsKQ", "prijs": "€ 16,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-71826/9300000187249677/", "prijs": "€ 17,49" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-ninjago-71826-spinjitzu-drakenstrijdpakket-32031075", "prijs": "€ 17,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71826-lego-spinjitzu-drakenstrijdpakket/01831467", "prijs": "€ 19,95" },
+      { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_71826-spinjitzu-drakenstrijdpakket-2208486.html", "prijs": "€ 19,99" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/dragon-spinjitzu-battle-pack-71826", "prijs": "€ 19,99" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71826-Spinjitzu-drakenstrijdpakket/a20931969", "prijs": "€ 27,78" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/en-BE/set/71826/Dragon-Spinjitzu-Battle-Pack.html", "prijs": "Check prijs" }
+    ]
+  },
         {
           "id": "monster-jam-spiderman-vs-venom-9300000178192365",
           "naam": "Monster Jam - Marvel Venom vs. The Amazing Spider-Man",
@@ -589,6 +607,18 @@
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a16649984/Leren-lezen-met-Lego-boeken-AVI-M4-Deel-5-In-de-aanval-Pim-Lammers", "prijs": "€ 8,99" },
       { "naam": "Boekenvoordeel.be", "link": "https://www.boekenvoordeel.be/p/lego-ninjago-in-de-aanval-107849", "prijs": "€ 8,99" },
       { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/in-de-aanval-9789030508595", "prijs": "€ 9,99" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-coole-krachten-dragons-rising",
+    "naam": "LEGO® NINJAGO® Dragons Rising: Coole krachten",
+    "nummer": "9789030510499",
+    "beschrijving": "Ontdek alles over de nieuwe krachten van de ninja's in dit Dragons Rising handboek! Leer hoe Arin en Sora hun krachten gebruiken en ontdek de geheimen van de nieuwe draken. Een onmisbaar boek voor elke verzamelaar.",
+    "afbeelding_url": "https://media.s-bol.com/VqwQNLrkW1G5/QWx1AZM/819x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-dragon-s-rising-lego-ninjago-coole-krachten/9300000198765593/", "prijs": "€ 14,99" },
+      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/coole-krachten-9789030510499", "prijs": "€ 14,99" },
+      { "naam": "De Slegte", "link": "https://www.deslegte.com/coole-krachten-3640906/", "prijs": "€ 14,99" }
     ]
   }
 ]

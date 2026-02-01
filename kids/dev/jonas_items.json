@@ -492,5 +492,69 @@
     "winkels": [
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/", "prijs": "€ 9,99" }
     ]
+  },
+  {
+    "id": "vroemy-turbotwister-stuntauto",
+    "naam": "Vroemy Turbotwister - Bestuurbare Stuntauto (6 wielen)",
+    "nummer": "VRO-TT-06",
+    "beschrijving": "Een razendsnelle 6-wielige stuntauto die 360 graden kan draaien en over bijna elk terrein rijdt. De Turbotwister is voorzien van felle LED-verlichting en kan spectaculaire flips maken. Inclusief oplaadbare batterij voor urenlang speelplezier.",
+    "afbeelding_url": "https://media.s-bol.com/NwP5Yxk1XY7N/ElVX3kN/1191x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/vroemy-turbotwister-bestuurbare-auto-stuntauto-6-wielen-afstandsbestuurbare-auto-buiten-voor-jongens-meisjes/9300000241264382/", "prijs": "€ 32,95" }
+    ]
+  },
+  {
+    "id": "pokemon-mini-mazes-boek",
+    "naam": "Pokémon Mini Mazes",
+    "nummer": "9781405296304",
+    "beschrijving": "Test je vaardigheden als Pokémon Trainer met dit pocket-formaat doolhovenboek! Help Pikachu en zijn vrienden hun weg te vinden door tientallen uitdagende puzzels. Compact, kleurrijk en perfect voor fans van alle leeftijden.",
+    "afbeelding_url": "https://media.s-bol.com/BYMR6wornyko/Z6mVVB8/781x1200.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/eK0Twqy", "prijs": "€ 6,92" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/pokemon-mini-mazes/9200000128384265/", "prijs": "€ 10,26" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/32MYwFF", "prijs": "€ 10,34" }
+    ]
+  },
+  {
+    "id": "ravensburger-xoomy-maxi-xxl",
+    "naam": "Ravensburger Xoomy Maxi XXL Tekenmachine",
+    "nummer": "18135",
+    "beschrijving": "Word een echte tekenaar met de Xoomy Maxi XXL! Dankzij de grote tekentafel en de led-zoomlamp kun je afbeeldingen vergroten en combineren op papier. Bevat meer dan 300 afbeeldingen en een handige opbergkoffer voor al je tekenspullen.",
+    "afbeelding_url": "https://media.s-bol.com/qWx1NJxKZBp3/kRD4BEx/1200x936.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ravensburger-xoomy-maxi-xxl-tekenmachine/9300000034159462/", "prijs": "€ 34,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/xoomy-maxi-xxl/01623291", "prijs": "€ 34,99" },
+      { "naam": "Verthus", "link": "https://verthus.be/producten/xoomy-maxi", "prijs": "€ 39,95" },
+      { "naam": "HappyLand", "link": "https://www.happyland.be/product/xoomy-maxi-relaunch/", "prijs": "€ 39,95" },
+      { "naam": "Euroshop", "link": "https://www.euroshop.be/nl/15601064-ravensburger-xoomy-maxi-xxl-tekenmachine-vanaf-6-jaar", "prijs": "€ 39,95" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/xoomy-maxi-relaunch-28910592", "prijs": "€ 41,99" },
+      { "naam": "Ravensburger BE", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/arts-craft/craft-kits/xoomy-maxi-relaunch-dfennlei-18135", "prijs": "€ 48,99" }
+    ]
+  },
+  {
+    "id": "ravensburger-xoomy-uitbreiding-marvel",
+    "naam": "Ravensburger Xoomy Uitbreidingsset: Marvel",
+    "nummer": "18118",
+    "beschrijving": "Breid je Xoomy-collectie uit met je favoriete Marvel-superhelden! Deze set bevat 20 nieuwe filmschijfjes met afbeeldingen van onder andere Spider-Man, Iron Man en de Hulk. Let op: enkel te gebruiken in combinatie met een Xoomy tekenmachine.",
+    "afbeelding_url": "https://media.s-bol.com/LwOLEz02K04p/R6Yg1N0/550x617.jpg",
+    "winkels": [
+      { "naam": "Verthus", "link": "https://verthus.be/producten/xoomy-refill-marvel/", "prijs": "€ 7,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ravensburger-xoomy-uitbreidingsset-marvel/9300000162807350/", "prijs": "€ 9,99" }
+    ]
+  },
+  {
+    "id": "ravensburger-xoomy-refill-pokemon",
+    "naam": "Ravensburger Xoomy Uitbreidingsset: Pokémon",
+    "nummer": "20239",
+    "beschrijving": "Teken je eigen Pokémon wereld! Deze uitbreidingsset voor de Xoomy tekenmachine bevat 20 nieuwe schijfjes met afbeeldingen van populaire Pokémon zoals Pikachu, Charmander en Squirtle. Let op: enkel te gebruiken in combinatie met een Xoomy tekenmachine.",
+    "afbeelding_url": "https://media.s-bol.com/jBZXARgOxY8R/gVk0Bj/1142x1200.jpg",
+    "winkels": [
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/xoomy-refill-pokemon/01725964", "prijs": "€ 7,99" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/eD4QoTe", "prijs": "€ 7,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ravensburger-xoomy-refill-pokemon-hobbypakket/9300000129561055/", "prijs": "€ 8,39" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/agryAs0", "prijs": "€ 9,99" },
+      { "naam": "Ravensburger BE", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/arts-craft/craft-kits/xoomy-pokmon-refill-dfinleen-20239", "prijs": "€ 9,99" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Ravensburger-Xoomy-Pokemon-navulling/a17052164", "prijs": "€ 15,99" }
+    ]
   }
 ]

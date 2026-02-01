@@ -14,7 +14,29 @@ function createSparks() {
     }
 }
 
-// DE FIX: Deze functie bouwt de mail op
+// Hulpfunctie om prijzen numeriek te vergelijken
+function getLowestPriceInfo(winkels) {
+    if (!winkels || winkels.length === 0) return { prijs: "N.v.t.", index: -1 };
+
+    let lowestVal = Infinity;
+    let lowestIndex = 0;
+
+    winkels.forEach((w, index) => {
+        // Haal alleen getallen en decimalen eruit (bijv. "€ 29,95" -> 29.95)
+        const numericValue = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
+
+        if (!isNaN(numericValue) && numericValue < lowestVal) {
+            lowestVal = numericValue;
+            lowestIndex = index;
+        }
+    });
+
+    return {
+        prijs: lowestVal === Infinity ? winkels[0].prijs : `€ ${lowestVal.toFixed(2).replace('.', ',')}`,
+        index: lowestVal === Infinity ? -1 : lowestIndex
+    };
+}
+
 function claimItem(persoonNaam, itemName, itemId) {
     const subject = `CLAIM: ${itemName} voor ${persoonNaam}`;
     const body = `Beste,\n\nIk heb het volgende cadeau gekocht van de lijst:\n\nItem: ${itemName}\nBestemd voor: ${persoonNaam}\nID: ${itemId}\n\nZou je dit item als gekocht willen markeren? Bedankt!`;
@@ -43,7 +65,7 @@ function openTab(evt, tabId) {
     if (targetBtn) {
         targetBtn.classList.add("active");
         const name = targetBtn.innerText.toLowerCase();
-        
+
         targetBtn.style.color = "#fff";
         if (name.includes('jonas')) targetBtn.style.backgroundColor = "#b71c1c";
         else if (name.includes('milan')) targetBtn.style.backgroundColor = "#1976d2";
@@ -55,7 +77,7 @@ function openTab(evt, tabId) {
 
 function scrollToItem(persoonNaam, itemId) {
     const tabId = persoonNaam.toLowerCase() + '-list-content';
-    openTab(null, tabId); 
+    openTab(null, tabId);
     setTimeout(() => {
         const el = document.getElementById(itemId);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -66,7 +88,7 @@ function generateWishlistContent(data, purchasedIds) {
     const listContainer = document.getElementById('person-lists-container');
     const nav = document.getElementById('dynamic-tab-nav');
     const overview = document.getElementById('overview-grid-container');
-    
+
     let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333; color: #fff;">Overzicht</button>`;
     let listsHtml = '';
     let overviewHtml = '';
@@ -77,34 +99,42 @@ function generateWishlistContent(data, purchasedIds) {
     groups.forEach(person => {
         const tabId = person.naam.toLowerCase() + '-list-content';
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">${person.naam}</button>`;
-        
+
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2><div class="wens-lijst">`;
         overviewHtml += `<div class="overview-person-section"><h3>Lijst van ${person.naam}</h3><div class="overview-grid">`;
 
         person.items.forEach(item => {
             const isPurchased = purchasedIds.has(item.id);
             const overlay = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
-            
+
+            // Bereken laagste prijs info
+            const lowestInfo = getLowestPriceInfo(item.winkels);
+
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isPurchased ? 'purchased' : ''}">
                     <div class="left-column">
                         <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}"></div>
-                        <span style="display:block; margin-top:5px; color:#b71c1c; font-weight:bold;">${item.winkels?.[0]?.prijs || ''}</span>
+                        <span style="display:block; text-align:center; margin-top:5px; color:#b71c1c; font-weight:bold;">Vanaf ${lowestInfo.prijs}</span>
                     </div>
                     <div class="right-column">
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="winkel-links">
-                            ${item.winkels.map(w => `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px 12px; background:#d4af37; color:black; font-weight:bold; text-decoration:none; margin:5px; border-radius:3px;">${w.naam}</a>`).join('')}
+                            ${item.winkels.map((w, idx) => {
+                                const isLowest = idx === lowestInfo.index;
+                                const style = isLowest ? 'background:#b71c1c; color:white; border:2px solid #d4af37;' : 'background:#d4af37; color:black;';
+                                return `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px 12px; ${style} font-weight:bold; text-decoration:none; margin:5px; border-radius:3px;">${w.naam} (${w.prijs}) ${isLowest ? '★' : ''}</a>`;
+                            }).join('')}
                         </div>
                         ${!isPurchased ? `<button style="background:#b71c1c; color:white; border:none; padding:10px 15px; cursor:pointer; font-weight:bold; margin-top:10px; text-transform:uppercase;" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
                 </div>`;
-            
+
             overviewHtml += `
                 <div class="overview-grid-item ${isPurchased ? 'purchased' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
                     <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>
                     <div class="overview-caption">${item.naam}</div>
+                    <div style="font-size:0.8em; color:#b71c1c; font-weight:bold;">${lowestInfo.prijs}</div>
                 </div>`;
         });
         listsHtml += `</div></div>`;
@@ -113,7 +143,7 @@ function generateWishlistContent(data, purchasedIds) {
 
     nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
     overview.innerHTML = overviewHtml;
-    
+
     const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-section">${data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#b71c1c; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
     listContainer.innerHTML = listsHtml + invHtml;
 }
@@ -129,7 +159,7 @@ async function loadWishlist() {
 
         const fullData = { ...config, personen: pData, gezamenlijke_items: { naam: "Gezamenlijk", items: rGezam }, inventaris_links: rInv };
         generateWishlistContent(fullData, new Set(claims.purchased_items));
-        
+
         const loadingMsg = document.getElementById('loading-message');
         if (loadingMsg) loadingMsg.style.display = 'none';
     } catch (e) { console.error(e); }

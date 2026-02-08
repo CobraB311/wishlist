@@ -736,5 +736,16 @@
       { "naam": "SupraBazar", "link": "https://www.suprabazar.be/playmobil-cars-71858-playmobil-x-ford-f-150-raptor-32085259", "prijs": "€ 19,99" },
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playmobil-x-ford-f-150-raptor/9300000225695653/", "prijs": "€ 24,00" }
     ]
+  },
+  {
+    "id": "play-doh-all-in-one-creativity-starter-station",
+    "naam": "Play-Doh All-in-One Creativity Starter Station",
+    "nummer": "B0B621RNSY",
+    "beschrijving": "Een complete creatieve speelplek in één koffer! Dit station heeft een ingebouwde tafel met verschillende structuren, 15 accessoires en 6 kleuren klei. Na het spelen berg je alles op in de handige meeneemkoffer. Ideaal voor urenlang knutselplezier zonder rommel.",
+    "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/", "prijs": "€ 29,99" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0991EIdJ", "prijs": "€ 36,59" }
+    ]
   }
 ]

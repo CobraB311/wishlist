@@ -527,6 +527,19 @@
     ]
   },
   {
+    "id": "smartgames-squirrels-go-nuts",
+    "naam": "SmartGames: Squirrels Go Nuts!",
+    "nummer": "SG 425",
+    "beschrijving": "Help de eekhoorns hun wintervoorraad te verstoppen! In deze schuifpuzzel moet je de eekhoorns zo over het bord bewegen dat alle nootjes in de gaten vallen. Bevat 60 uitdagende opdrachten en is dankzij het deksel perfect om overal mee naartoe te nemen.",
+    "afbeelding_url": "https://media.s-bol.com/m9EWLkwDM9yG/2k9pN4M/797x1200.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/06faETJY", "prijs": "€ 12,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/smartgames-squirrels-go-nuts-60-opdrachten-denkpuzzel-eekhoorns/9200000091828788/", "prijs": "€ 17,95" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/smartgames-squirrels-go-nuts-compact-denkspel-60-opdrachten/01321302", "prijs": "€ 17,95" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/00au1R3i", "prijs": "€ 24,99" }
+    ]
+  },
+  {
     "id": "vroemy-turbotwister-stuntauto",
     "naam": "Vroemy Turbotwister - Bestuurbare Stuntauto (6 wielen)",
     "nummer": "VRO-TT-06",

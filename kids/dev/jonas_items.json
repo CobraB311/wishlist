@@ -630,5 +630,21 @@
       { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/coole-krachten-9789030510499", "prijs": "€ 14,99" },
       { "naam": "De Slegte", "link": "https://www.deslegte.com/coole-krachten-3640906/", "prijs": "€ 14,99" }
     ]
+  },
+  {
+    "id": "jumbo-ik-leer-rekenen-koffer",
+    "naam": "Jumbo Ik Leer Rekenen",
+    "nummer": "19570",
+    "beschrijving": "Met 'Ik Leer Rekenen' maken kinderen kennis met getallen, tellen en de eerste rekensommen. De set bevat 15 kaarten met 83 opdrachten op verschillende niveaus. Dankzij de speciale achterkant van de blokjes past alleen het juiste cijfer in het vakje, waardoor het kind zelf kan controleren of het antwoord klopt.",
+    "afbeelding_url": "https://media.s-bol.com/q3QG9J4k4mmk/vgVAw6g/1200x1102.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ik-leer-rekenen/9200000073981386/", "prijs": "€ 19,99" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/01UV0krh", "prijs": "€ 19,99" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0fhnzINt", "prijs": "€ 19,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/ik-leer-rekenen-nl/01285239", "prijs": "€ 21,99" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/ik-leer-rekenen-24390369", "prijs": "€ 23,99" },
+      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/jumbo-ik-leer-rekenen-1048904", "prijs": "€ 27,95" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Ik-leer-rekenen/a12623999", "prijs": "€ 33,62" }
+    ]
   }
 ]

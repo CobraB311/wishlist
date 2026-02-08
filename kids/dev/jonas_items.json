@@ -723,6 +723,38 @@
     ]
   },
   {
+    "id": "pokemon-eerste-leespret-galar",
+    "naam": "Pokémon eerste leespret: Op reis naar Galar",
+    "nummer": "9789044767254",
+    "beschrijving": "Ga mee op avontuur in de Galar-regio! In dit 'eerste leespret' boekje ontdekken jonge lezers de wereld van Pokémon met eenvoudige woorden en korte zinnen. Ideaal voor beginnende lezers die hun favoriete Pokémon willen volgen tijdens hun ontdekkingstocht.",
+    "afbeelding_url": "https://media.s-bol.com/4o8P4v2ZV9J1/rkGylO2/853x1200.jpg",
+    "winkels": [
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a20852021/Pokemon-eerste-leespret-Op-reis-naar-Galar", "prijs": "€ 8,95" },
+      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/pokemon-eerste-leespret-op-reis-naar-galar-1010376", "prijs": "€ 9,95" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/pokemon-eerste-leespret-op-reis-naar-galar/01829082", "prijs": "€ 9,95" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0ijtK75a", "prijs": "€ 9,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/pokemon-eerste-leespret-op-reis-naar-galar/9300000188712385/", "prijs": "€ 10,95" },
+      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/pokemon-eerste-leespret--op-reis-naar-galar-9789044767254", "prijs": "€ 10,95" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0hMNGtGy", "prijs": "€ 10,95" }
+    ]
+  },
+  {
+    "id": "pokemon-eerste-leespret-eten-gestolen",
+    "naam": "Pokémon eerste leespret: Wie heeft het eten gestolen?",
+    "nummer": "9789044767261",
+    "beschrijving": "Er is eten verdwenen! Los het mysterie op samen met Ash en zijn Pokémon. Dit boekje uit de 'eerste leespret' serie is speciaal ontwikkeld voor beginnende lezers, met makkelijke woorden en veel kleurrijke illustraties.",
+    "afbeelding_url": "https://media.s-bol.com/WynXmoZz2WxJ/xk0OxOn/853x1200.jpg",
+    "winkels": [
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a20995537/Pokemon-eerste-leespret-Wie-heeft-het-eten-gestolen", "prijs": "€ 8,95" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0fHoY7wf", "prijs": "€ 9,95" },
+      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/pokemon-eerste-leespret-wie-heeft-het-eten-gestolen-1010377", "prijs": "€ 9,95" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/pokemon-eerste-leespret-wie-heeft-het-eten-gestolen-6-31994216", "prijs": "€ 9,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/pokemon-eerste-leespret-wie-heeft-het-eten-gestolen/9300000188712340/", "prijs": "€ 10,95" },
+      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/pokemon-eerste-leespret--wie-heeft-het-eten-gestolen-9789044767261", "prijs": "€ 10,95" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/09fzV6JE", "prijs": "€ 10,95" }
+    ]
+  },
+  {
     "id": "playmobil-ford-f150-raptor",
     "naam": "Playmobil x Ford F-150 Raptor",
     "nummer": "71858",

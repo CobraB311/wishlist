@@ -41,6 +41,21 @@
     ]
   },
   {
+    "id": "switch-captain-toad-treasure-tracker",
+    "naam": "Captain Toad: Treasure Tracker (Nintendo Switch)",
+    "nummer": "045496422110",
+    "beschrijving": "Ga op avontuur met Captain Toad en Toadette! Verken meer dan 70 kleurrijke levels vol puzzels en vijanden. In deze unieke platformer kun je niet springen, dus moet je het perspectief van de wereld draaien om de weg naar de gouden ster te vinden. Bevat ook speciale levels gebaseerd op Super Mario Odyssey.",
+    "afbeelding_url": "https://media.s-bol.com/qx2kjZM41gWr/742x1200.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/07GETlod", "prijs": "€ 38,42" },
+      { "naam": "MediaMarkt", "link": "https://www.mediamarkt.nl/nl/product/_captain-toad-%E2%80%93-treasure-tracker-nintendo-switch-1566004.html", "prijs": "€ 38,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/switch-captain-toad-treasure-tracker/01332841", "prijs": "€ 39,95" },
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a11915336/Captain-toad-treasure-tracker-NL-SWITCH", "prijs": "€ 47,62" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/captain-toad-treasure-tracker/9200000096129133/", "prijs": "€ 51,35" },
+      { "naam": "Tweakers", "link": "https://tweakers.net/pricewatch/1168813/captain-toad-treasure-tracker-switch.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
     "id": "set-hotwheels-f1-5pack",
     "naam": "Hot Wheels Formule 1 Race Cars 5-Pack",
     "nummer": "JGF58",

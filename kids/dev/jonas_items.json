@@ -646,5 +646,49 @@
       { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/jumbo-ik-leer-rekenen-1048904", "prijs": "€ 27,95" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Ik-leer-rekenen/a12623999", "prijs": "€ 33,62" }
     ]
+  },
+  {
+    "id": "oefenboek-eerste-stappen-rekenen",
+    "naam": "Zo leuk is oefenen: Eerste stappen naar rekenen (5-6 jaar)",
+    "nummer": "9789044746181",
+    "description": "Bereid je kind spelenderwijs voor op het eerste leerjaar met dit kleurrijke oefenboek. Het boek bevat leuke opdrachten om te leren tellen, getallen te herkennen en de eerste eenvoudige rekenstapjes te zetten. Ideaal voor de 3de kleuterklas / groep 2.",
+    "afbeelding_url": "https://media.s-bol.com/XpV5PJXAqxjk/wpzj7rg/928x1200.jpg",
+    "winkels": [
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a10354546/Zo-leuk-is-oefenen-5-6-jaar-Zo-leuk-is-oefenen-Eerste-stappen-naar-rekenen-5-6-j-ZNU", "prijs": "€ 6,26" },
+      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/zo-leuk-is-oefenen-eerste-stappen-naar-rekenen-5-6-jaar-1017014", "prijs": "€ 6,95" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/zo-leuk-is-oefenen-eerste-stappen-naar-rekenen-5-9j-24304469", "prijs": "€ 6,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/eerste-stappen-naar-rekenen-5-6-jaar-3de-kleuterklas-groep-2/9200000073039281/", "prijs": "€ 7,50" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/05Bk2cNl", "prijs": "€ 7,50" },
+      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-eerste-stappen-naar-rekenen-5-6-j-9789044746181", "prijs": "€ 7,50" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/03Caodfu", "prijs": "€ 10,14" }
+    ]
+  },
+  {
+    "id": "oefenboek-eerste-stappen-lezen",
+    "naam": "Zo leuk is oefenen: Eerste stappen naar lezen (5-6 jaar)",
+    "nummer": "9789044746204",
+    "beschrijving": "Leg de basis voor vlot lezen met dit vrolijke oefenboek. Kinderen van 5 tot 6 jaar maken kennis met letters, klanken en korte woorden door middel van speelse opdrachten. Een ideale voorbereiding op het leesonderwijs in het eerste leerjaar.",
+    "afbeelding_url": "https://media.s-bol.com/ZrX0gmgZ37Dv/MZ5XA25/911x1200.jpg",
+    "winkels": [
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a10354548/Zo-leuk-is-oefenen-5-6-jaar-Zo-leuk-is-oefenen-Eerste-stappen-naar-lezen-5-6-j-ZNU", "prijs": "€ 6,26" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-eerste-stappen-naar-lezen-5-6-jaar/9200000073039165/", "prijs": "€ 7,50" },
+      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-eerste-stappen-naar-lezen-5-6-j-9789044746204", "prijs": "€ 7,50" }
+    ]
+  },
+  {
+    "id": "oefenboek-eerste-stappen-schrijven",
+    "naam": "Zo leuk is oefenen: Eerste stappen naar schrijven (5-6 jaar)",
+    "nummer": "9789044746198",
+    "beschrijving": "Oefen de fijne motoriek en de eerste schrijfvaardigheden! In dit boekje leert je kind spelenderwijs lijnen trekken, vormen maken en de eerste letters schrijven. De ideale voorbereiding op het schrijfonderwijs in het eerste leerjaar.",
+    "afbeelding_url": "https://media.s-bol.com/YnMGBm4KnrXA/NkgkBW6/1200x1200.jpg",
+    "winkels": [
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a10354547/Zo-leuk-is-oefenen-5-6-jaar-Zo-leuk-is-oefenen-Eerste-stappen-naar-schrijven-5-6-j-ZNU", "prijs": "€ 6,26" },
+      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/zo-leuk-is-oefenen-eerste-stappen-naar-schrijven-5-6-jaar-1017015", "prijs": "€ 6,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-eerste-stappen-naar-schrijven-5-6-jaar/9200000073039131/", "prijs": "€ 7,50" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0jaLeOLE", "prijs": "€ 7,50" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/096er5JT", "prijs": "€ 7,50" },
+      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-eerste-stappen-naar-schrijven-5-6-j-9789044746198", "prijs": "€ 7,50" },
+      { "naam": "Verthus", "link": "https://verthus.be/producten/zo-leuk-is-oefenen-schrijven-5-6j/", "prijs": "€ 7,50" }
+    ]
   }
 ]

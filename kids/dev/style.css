@@ -25,35 +25,26 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .tab-nav { padding: 20px 10px; display: flex; flex-direction: column; gap: 10px; }
 
 .tab-button {
-    background: #f1f1f1; border: 1px solid #ccc; padding: 15px;
+    background: #f1f1f1; border: 1px solid #ccc; padding: 12px;
     font-family: 'Impact', sans-serif; text-transform: uppercase;
     cursor: pointer; transition: 0.3s; text-align: left; border-radius: 4px;
-    font-size: 1.1em; color: #333; letter-spacing: 1px;
+    position: relative; overflow: hidden;
 }
 
-.tab-button:hover { background: #e0e0e0; border-color: #b71c1c; }
 .tab-button.active { color: white !important; border-color: #d4af37; transform: translateX(5px); }
 
-/* ZOEK- EN FILTERCONTROLS */
-.controls-container {
-    display: flex; gap: 10px; margin-bottom: 30px; align-items: stretch;
-}
+.tab-info { display: block; font-size: 1.1em; margin-bottom: 4px; position: relative; z-index: 2; }
+.tab-stats { display: block; font-size: 0.75em; font-family: sans-serif; opacity: 0.8; position: relative; z-index: 2; }
 
-#gift-search {
-    flex-grow: 1; padding: 15px; font-size: 1.1em;
-    border: 2px solid #ddd; border-radius: 8px;
-    box-sizing: border-box; transition: 0.3s;
-    font-family: 'Segoe UI', sans-serif;
-}
-#gift-search:focus { border-color: #b71c1c; outline: none; box-shadow: 0 0 8px rgba(183, 28, 28, 0.2); }
+/* KATANA PROGRESS BAR */
+.katana-progress { height: 4px; width: 100%; background: #ddd; margin-top: 6px; border-radius: 2px; }
+.katana-blade { height: 100%; background: #b71c1c; width: 0%; transition: width 1s ease-in-out; border-radius: 2px; }
+.tab-button.active .katana-blade { background: #d4af37; box-shadow: 0 0 8px #d4af37; }
 
-.filter-btn {
-    background: #fff; border: 2px solid #d4af37; border-radius: 8px;
-    padding: 0 20px; cursor: pointer; font-family: 'Impact', sans-serif;
-    text-transform: uppercase; transition: 0.2s; display: flex;
-    align-items: center; gap: 8px; white-space: nowrap; color: #333;
-}
-.filter-btn:hover { background: #fff9e6; transform: translateY(-2px); }
+/* CONTROLS */
+.controls-container { display: flex; gap: 10px; margin-bottom: 30px; }
+#gift-search { flex-grow: 1; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; }
+.filter-btn { border: 2px solid #d4af37; border-radius: 8px; padding: 0 15px; cursor: pointer; font-family: 'Impact'; text-transform: uppercase; background: white; }
 .filter-btn.active { background: #d4af37; color: white; }
 
 .page-wrapper { margin-left: 240px; min-height: 100vh; }
@@ -64,27 +55,16 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-.overview-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px; margin-bottom: 40px;
-}
-
-.overview-grid-item {
-    background: white; border: 1px solid #ddd; padding: 10px;
-    text-align: center; cursor: pointer; position: relative;
-    transition: 0.2s; border-radius: 4px;
-}
+/* OVERZICHT GRID */
+.overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; margin-bottom: 40px;}
+.overview-grid-item { background: white; border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 4px; cursor: pointer; position: relative; transition: 0.2s;}
 .overview-grid-item:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-.overview-grid-item.favorite-item {
-    background-color: #fff9e6; border: 2px solid #d4af37;
-    box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.1);
-}
-
+.overview-grid-item.favorite-item { background-color: #fff9e6; border: 2px solid #d4af37; }
 .overview-image-wrapper { height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
 .overview-image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .overview-caption { font-size: 0.8em; font-weight: bold; line-height: 1.2; height: 2.4em; overflow: hidden; }
 
+/* HERSTELDE DETAIL ITEMS (Vorige Layout) */
 .wens-item {
     display: flex; background: white; border: 1px solid #ddd;
     padding: 20px; margin-bottom: 20px; gap: 20px; position: relative; border-radius: 8px;
@@ -95,15 +75,16 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .item-image-container { height: 180px; display: flex; align-items: center; justify-content: center; position: relative; }
 .item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-.right-column { flex-grow: 1; }
+.right-column { flex-grow: 1; text-align: left; }
 
+/* KOOP KNOP & PRIJZEN */
 .buy-button {
     background: #b71c1c; color: white; border: none; padding: 12px 24px;
     font-family: 'Impact', sans-serif; text-transform: uppercase;
     cursor: pointer; border-radius: 4px; margin-top: 15px; transition: 0.2s;
-    font-size: 1em; letter-spacing: 1px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-.buy-button:hover { background: #d32f2f; transform: scale(1.05); box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3); }
+.buy-button:hover { background: #d32f2f; transform: scale(1.05); }
 
 .price-links { margin-top: 10px; }
 .price-link {
@@ -113,30 +94,14 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 }
 .price-link.lowest { background: #b71c1c; }
 
-.favorite-badge {
-    display: inline-block; background: #d4af37; color: white;
-    padding: 3px 8px; font-family: 'Impact', sans-serif; font-size: 0.8em;
-    margin-top: 10px; border-radius: 4px;
-}
+/* BADGES */
+.favorite-badge { display: inline-block; background: #d4af37; color: white; padding: 3px 8px; font-family: 'Impact'; font-size: 0.8em; margin-top: 10px; border-radius: 4px; }
 .mini-star { position: absolute; top: 5px; right: 5px; color: #d4af37; font-size: 1.2em; font-weight: bold; }
-
-.purchased-overlay {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg);
-    background: rgba(255,255,255,0.9); color: #b71c1c; border: 3px solid #b71c1c;
-    padding: 5px 15px; font-family: 'Impact', sans-serif; z-index: 10; font-size: 1.4em;
-}
+.purchased-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); background: rgba(255,255,255,0.9); color: #b71c1c; border: 3px solid #b71c1c; padding: 5px 15px; font-family: 'Impact'; z-index: 10; font-size: 1.4em; }
 .purchased img { filter: grayscale(1) opacity(0.3); }
-
-/* NIEUW: Filter voor gekochte items */
-.hide-purchased .purchased { display: none !important; }
 
 .snow-area { flex-grow: 1; position: relative; overflow: hidden; }
 .snow { position: absolute; background: #d4af37; width: 3px; height: 3px; border-radius: 50%; opacity: 0.4; animation: fall linear infinite; }
 @keyframes fall { to { transform: translateY(100vh); } }
 
-@media (max-width: 850px) {
-    .fixed-header { width: 100%; height: auto; position: relative; border-right: none; }
-    .page-wrapper { margin-left: 0; }
-    .wens-item { flex-direction: column; align-items: center; text-align: center; }
-    .controls-container { flex-direction: column; }
-}
+@media (max-width: 850px) { .fixed-header { width: 100%; position: relative; } .page-wrapper { margin-left: 0; } .wens-item { flex-direction: column; align-items: center; text-align: center; } .right-column { text-align: center; } }

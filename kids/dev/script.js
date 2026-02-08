@@ -15,66 +15,41 @@ function createSparks() {
     }
 }
 
-// Slimme normalisatie voor accenten
 function normalizeText(text) {
     return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-// Gecombineerde filterfunctie
 function filterGifts() {
-    const searchInput = document.getElementById('gift-search').value;
-    const normalizedInput = normalizeText(searchInput);
+    const input = normalizeText(document.getElementById('gift-search').value);
     const giftCards = document.querySelectorAll('.overview-grid-item, .wens-item');
-
     giftCards.forEach(card => {
         const titleEl = card.querySelector('h3, .overview-caption');
         const title = titleEl ? normalizeText(titleEl.innerText) : "";
         const descEl = card.querySelector('p');
         const desc = descEl ? normalizeText(descEl.innerText) : "";
         const isPurchased = card.classList.contains('purchased');
-
-        const matchesSearch = title.includes(normalizedInput) || desc.includes(normalizedInput);
-        const matchesPurchasedFilter = !hidePurchased || !isPurchased;
-
-        if (matchesSearch && matchesPurchasedFilter) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
-        }
+        const matchesSearch = title.includes(input) || desc.includes(input);
+        const matchesFilter = !hidePurchased || !isPurchased;
+        card.style.display = (matchesSearch && matchesFilter) ? "" : "none";
     });
 }
 
-// Wissel tussen Toon Gekocht / Verberg Gekocht
 function togglePurchasedFilter() {
     hidePurchased = !hidePurchased;
     const btn = document.getElementById('filter-purchased-btn');
-
-    if (hidePurchased) {
-        btn.innerHTML = '<span class="icon">🙈</span> Verberg gekocht';
-        btn.classList.add('active');
-    } else {
-        btn.innerHTML = '<span class="icon">👁️</span> Toon alles';
-        btn.classList.remove('active');
-    }
-
-    filterGifts(); // Pas filters direct toe
+    btn.innerHTML = hidePurchased ? '<span class="icon">🙈</span> Verberg gekocht' : '<span class="icon">👁️</span> Toon alles';
+    btn.classList.toggle('active', hidePurchased);
+    filterGifts();
 }
 
 function getLowestPriceInfo(winkels) {
     if (!winkels || winkels.length === 0) return { prijs: "N.v.t.", index: -1 };
-    let lowestVal = Infinity;
-    let lowestIndex = 0;
+    let lowestVal = Infinity, lowestIndex = 0;
     winkels.forEach((w, index) => {
-        const numericValue = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
-        if (!isNaN(numericValue) && numericValue < lowestVal) {
-            lowestVal = numericValue;
-            lowestIndex = index;
-        }
+        const val = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
+        if (!isNaN(val) && val < lowestVal) { lowestVal = val; lowestIndex = index; }
     });
-    return {
-        prijs: lowestVal === Infinity ? winkels[0].prijs : `€ ${lowestVal.toFixed(2).replace('.', ',')}`,
-        index: lowestIndex
-    };
+    return { prijs: lowestVal === Infinity ? winkels[0].prijs : `€ ${lowestVal.toFixed(2).replace('.', ',')}`, index: lowestIndex };
 }
 
 function claimItem(persoonNaam, itemName, itemId) {
@@ -98,20 +73,12 @@ function personIdToTabId(naam) {
 }
 
 function openTab(evt, tabId) {
-    // Reset filters bij wisselen van tab voor de beste ervaring
-    const searchInput = document.getElementById('gift-search');
-    if (searchInput) searchInput.value = "";
-    // We laten hidePurchased staan zoals de gebruiker hem had ingesteld
-
-    const contents = document.getElementsByClassName("tab-content");
-    for (let i = 0; i < contents.length; i++) contents[i].classList.remove("active");
-
-    const buttons = document.getElementsByClassName("tab-button");
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active");
-        buttons[i].style.backgroundColor = "";
-    }
-
+    if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".tab-button").forEach(b => {
+        b.classList.remove("active");
+        b.style.backgroundColor = "";
+    });
     const targetTab = document.getElementById(tabId);
     if (targetTab) targetTab.classList.add("active");
 
@@ -123,8 +90,6 @@ function openTab(evt, tabId) {
         else if (tabId.includes('gezamenlijk')) targetBtn.style.backgroundColor = "#2e7d32";
         else targetBtn.style.backgroundColor = "#333";
     }
-
-    filterGifts();
     window.scrollTo(0, 0);
 }
 
@@ -133,67 +98,71 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
     const listContainer = document.getElementById('person-lists-container');
     const overview = document.getElementById('overview-grid-container');
 
-    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333;">Overzicht</button>`;
-    let listsHtml = '';
-    let overviewHtml = '';
+    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333;"><span class="tab-info">Overzicht</span></button>`;
+    let listsHtml = '', overviewHtml = '';
 
     const groups = [...data.personen];
     if (data.gezamenlijke_items) groups.push(data.gezamenlijke_items);
 
     groups.forEach(person => {
         const tabId = personIdToTabId(person.naam);
-        navHtml += `<button class="tab-button" onclick="event, openTab(event, '${tabId}')">${person.naam}</button>`;
+        const total = person.items.length;
+        const bought = person.items.filter(i => purchasedIds.has(i.id)).length;
+        const perc = total > 0 ? Math.round((bought / total) * 100) : 0;
+
+        navHtml += `
+            <button class="tab-button" onclick="openTab(event, '${tabId}')">
+                <span class="tab-info">${person.naam}</span>
+                <span class="tab-stats">${bought}/${total} gekocht (${perc}%)</span>
+                <div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div>
+            </button>`;
 
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2>`;
         overviewHtml += `<h3>${person.naam}</h3><div class="overview-grid">`;
 
-        const sortedItems = [...person.items].sort((a, b) => (favoriteIds.has(b.id) ? 1 : 0) - (favoriteIds.has(a.id) ? 1 : 0));
+        const sorted = [...person.items].sort((a, b) => (favoriteIds.has(b.id) ? 1 : 0) - (favoriteIds.has(a.id) ? 1 : 0));
 
-        sortedItems.forEach(item => {
-            const isPurchased = purchasedIds.has(item.id);
-            const isFavorite = favoriteIds.has(item.id);
-            const lowest = getLowestPriceInfo(item.winkels);
-            const overlay = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+        sorted.forEach(item => {
+            const isP = purchasedIds.has(item.id);
+            const isF = favoriteIds.has(item.id);
+            const low = getLowestPriceInfo(item.winkels);
+            const overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
 
+            // Detail Lijst (HERSTELD LAYOUT)
             listsHtml += `
-                <div id="${item.id}" class="wens-item ${isPurchased ? 'purchased' : ''} ${isFavorite ? 'favorite-item' : ''}">
+                <div id="${item.id}" class="wens-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}">
                     <div class="left-column">
                         <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>
-                        ${isFavorite ? '<div class="favorite-badge">★ FAVORIET</div>' : ''}
+                        ${isF ? '<div class="favorite-badge">★ FAVORIET</div>' : ''}
                     </div>
                     <div class="right-column">
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="price-links">
-                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === lowest.index ? 'lowest' : ''}">${w.naam}: ${w.prijs}</a>`).join('')}
+                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}">${w.naam}: ${w.prijs}</a>`).join('')}
                         </div>
-                        ${!isPurchased ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                        ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
                 </div>`;
 
+            // Compact Overzicht
             overviewHtml += `
-                <div class="overview-grid-item ${isPurchased ? 'purchased' : ''} ${isFavorite ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
+                <div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
                     <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>
-                    ${isFavorite ? '<div class="mini-star">★</div>' : ''}
+                    ${isF ? '<div class="mini-star">★</div>' : ''}
                     <div class="overview-caption">${item.naam}</div>
-                    <div style="font-size:0.85em; color:#b71c1c; font-weight:bold;">Vanaf ${lowest.prijs}</div>
+                    <div style="font-size:0.85em; color:#b71c1c; font-weight:bold;">Vanaf ${low.prijs}</div>
                 </div>`;
         });
-        listsHtml += `</div>`;
-        overviewHtml += `</div>`;
+        listsHtml += `</div>`; overviewHtml += `</div>`;
     });
 
-    nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
+    nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')"><span class="tab-info">Inventaris</span></button>`;
     overview.innerHTML = overviewHtml;
 
     const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div id="inventory-list"></div></div>`;
     listContainer.innerHTML = listsHtml + invHtml;
-
-    if (data.inventaris_links) {
-        document.getElementById('inventory-list').innerHTML = data.inventaris_links.map(l =>
-            `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#b71c1c; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`
-        ).join('');
-    }
+    if (data.inventaris_links) document.getElementById('inventory-list').innerHTML = data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#b71c1c; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`).join('');
 }
 
 async function loadWishlist() {
@@ -201,19 +170,19 @@ async function loadWishlist() {
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
         const claims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
-        const favorites = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
-
+        const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
-        const rGezam = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
+        const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
         const rInv = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
 
         generateWishlistContent(
-            {...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGezam}, inventaris_links: rInv},
+            {...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}, inventaris_links: rInv},
             new Set(claims.purchased_items),
-            new Set(favorites.favorite_ids)
+            new Set(favs.favorite_ids)
         );
 
-        document.getElementById('loading-message').style.display = 'none';
+        const loader = document.getElementById('loading-message');
+        if (loader) loader.style.display = 'none';
     } catch (e) { console.error(e); }
 }
 

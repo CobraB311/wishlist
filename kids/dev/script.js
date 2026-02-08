@@ -1,4 +1,5 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
+let hidePurchased = false;
 
 function createSparks() {
     const container = document.getElementById('snow-container');
@@ -14,19 +15,15 @@ function createSparks() {
     }
 }
 
-// Hulpfunctie om tekst te "normaliseren" (verwijdert accenten en maakt lowercase)
+// Slimme normalisatie voor accenten
 function normalizeText(text) {
-    return text
-        .toLowerCase()
-        .trim()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+    return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+// Gecombineerde filterfunctie
 function filterGifts() {
     const searchInput = document.getElementById('gift-search').value;
     const normalizedInput = normalizeText(searchInput);
-
     const giftCards = document.querySelectorAll('.overview-grid-item, .wens-item');
 
     giftCards.forEach(card => {
@@ -34,13 +31,33 @@ function filterGifts() {
         const title = titleEl ? normalizeText(titleEl.innerText) : "";
         const descEl = card.querySelector('p');
         const desc = descEl ? normalizeText(descEl.innerText) : "";
+        const isPurchased = card.classList.contains('purchased');
 
-        if (title.includes(normalizedInput) || desc.includes(normalizedInput)) {
+        const matchesSearch = title.includes(normalizedInput) || desc.includes(normalizedInput);
+        const matchesPurchasedFilter = !hidePurchased || !isPurchased;
+
+        if (matchesSearch && matchesPurchasedFilter) {
             card.style.display = "";
         } else {
             card.style.display = "none";
         }
     });
+}
+
+// Wissel tussen Toon Gekocht / Verberg Gekocht
+function togglePurchasedFilter() {
+    hidePurchased = !hidePurchased;
+    const btn = document.getElementById('filter-purchased-btn');
+
+    if (hidePurchased) {
+        btn.innerHTML = '<span class="icon">🙈</span> Verberg gekocht';
+        btn.classList.add('active');
+    } else {
+        btn.innerHTML = '<span class="icon">👁️</span> Toon alles';
+        btn.classList.remove('active');
+    }
+
+    filterGifts(); // Pas filters direct toe
 }
 
 function getLowestPriceInfo(winkels) {
@@ -77,16 +94,14 @@ function scrollToItem(persoonNaam, itemId) {
 
 function personIdToTabId(naam) {
     const n = naam.toLowerCase();
-    if (n === 'gezamenlijk') return 'gezamenlijk-list-content';
-    return n + '-list-content';
+    return (n === 'gezamenlijk' ? 'gezamenlijk' : n) + '-list-content';
 }
 
 function openTab(evt, tabId) {
+    // Reset filters bij wisselen van tab voor de beste ervaring
     const searchInput = document.getElementById('gift-search');
-    if (searchInput) {
-        searchInput.value = "";
-        filterGifts();
-    }
+    if (searchInput) searchInput.value = "";
+    // We laten hidePurchased staan zoals de gebruiker hem had ingesteld
 
     const contents = document.getElementsByClassName("tab-content");
     for (let i = 0; i < contents.length; i++) contents[i].classList.remove("active");
@@ -108,6 +123,8 @@ function openTab(evt, tabId) {
         else if (tabId.includes('gezamenlijk')) targetBtn.style.backgroundColor = "#2e7d32";
         else targetBtn.style.backgroundColor = "#333";
     }
+
+    filterGifts();
     window.scrollTo(0, 0);
 }
 
@@ -125,7 +142,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
     groups.forEach(person => {
         const tabId = personIdToTabId(person.naam);
-        navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">${person.naam}</button>`;
+        navHtml += `<button class="tab-button" onclick="event, openTab(event, '${tabId}')">${person.naam}</button>`;
 
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2>`;
         overviewHtml += `<h3>${person.naam}</h3><div class="overview-grid">`;
@@ -196,8 +213,7 @@ async function loadWishlist() {
             new Set(favorites.favorite_ids)
         );
 
-        const loader = document.getElementById('loading-message');
-        if (loader) loader.style.display = 'none';
+        document.getElementById('loading-message').style.display = 'none';
     } catch (e) { console.error(e); }
 }
 

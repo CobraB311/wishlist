@@ -27,8 +27,11 @@
     <div class="content-padding">
         <h1 id="main-title">Verjaardagslijstjes</h1>
 
-        <div class="search-container">
+        <div class="controls-container">
             <input type="text" id="gift-search" placeholder="Zoek een cadeau (bijv. LEGO, Pokémon...)" onkeyup="filterGifts()">
+            <button id="filter-purchased-btn" class="filter-btn" onclick="togglePurchasedFilter()">
+                <span class="icon">👁️</span> Toon alles
+            </button>
         </div>
 
         <div id="overview-content" class="tab-content active">

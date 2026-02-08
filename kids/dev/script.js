@@ -14,6 +14,35 @@ function createSparks() {
     }
 }
 
+// Hulpfunctie om tekst te "normaliseren" (verwijdert accenten en maakt lowercase)
+function normalizeText(text) {
+    return text
+        .toLowerCase()
+        .trim()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+}
+
+function filterGifts() {
+    const searchInput = document.getElementById('gift-search').value;
+    const normalizedInput = normalizeText(searchInput);
+
+    const giftCards = document.querySelectorAll('.overview-grid-item, .wens-item');
+
+    giftCards.forEach(card => {
+        const titleEl = card.querySelector('h3, .overview-caption');
+        const title = titleEl ? normalizeText(titleEl.innerText) : "";
+        const descEl = card.querySelector('p');
+        const desc = descEl ? normalizeText(descEl.innerText) : "";
+
+        if (title.includes(normalizedInput) || desc.includes(normalizedInput)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
 function getLowestPriceInfo(winkels) {
     if (!winkels || winkels.length === 0) return { prijs: "N.v.t.", index: -1 };
     let lowestVal = Infinity;
@@ -53,6 +82,12 @@ function personIdToTabId(naam) {
 }
 
 function openTab(evt, tabId) {
+    const searchInput = document.getElementById('gift-search');
+    if (searchInput) {
+        searchInput.value = "";
+        filterGifts();
+    }
+
     const contents = document.getElementsByClassName("tab-content");
     for (let i = 0; i < contents.length; i++) contents[i].classList.remove("active");
 
@@ -103,7 +138,6 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
             const lowest = getLowestPriceInfo(item.winkels);
             const overlay = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
 
-            // Detail Lijst
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isPurchased ? 'purchased' : ''} ${isFavorite ? 'favorite-item' : ''}">
                     <div class="left-column">
@@ -114,17 +148,12 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="price-links">
-                            ${item.winkels.map((w, idx) => `
-                                <a href="${w.link}" target="_blank" class="price-link ${idx === lowest.index ? 'lowest' : ''}">
-                                    ${w.naam}: ${w.prijs}
-                                </a>
-                            `).join('')}
+                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === lowest.index ? 'lowest' : ''}">${w.naam}: ${w.prijs}</a>`).join('')}
                         </div>
                         ${!isPurchased ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
                 </div>`;
 
-            // Compact Overzicht
             overviewHtml += `
                 <div class="overview-grid-item ${isPurchased ? 'purchased' : ''} ${isFavorite ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
                     <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>
@@ -157,11 +186,7 @@ async function loadWishlist() {
         const claims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
         const favorites = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
 
-        const pData = await Promise.all(config.personen.map(async p => ({
-            naam: p.naam,
-            items: await fetch(p.data_file).then(r => r.json())
-        })));
-
+        const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
         const rGezam = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
         const rInv = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
 
@@ -173,9 +198,7 @@ async function loadWishlist() {
 
         const loader = document.getElementById('loading-message');
         if (loader) loader.style.display = 'none';
-    } catch (e) {
-        console.error("Fout bij laden:", e);
-    }
+    } catch (e) { console.error(e); }
 }
 
 window.onload = loadWishlist;

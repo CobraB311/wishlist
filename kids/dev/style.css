@@ -24,7 +24,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 
 .tab-nav { padding: 20px 10px; display: flex; flex-direction: column; gap: 10px; }
 
-/* TAB KNOPPEN */
 .tab-button {
     background: #f1f1f1; border: 1px solid #ccc; padding: 15px;
     font-family: 'Impact', sans-serif; text-transform: uppercase;
@@ -35,6 +34,16 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .tab-button:hover { background: #e0e0e0; border-color: #b71c1c; }
 .tab-button.active { color: white !important; border-color: #d4af37; transform: translateX(5px); }
 
+/* ZOEKBALK STYLING */
+.search-container { margin-bottom: 30px; }
+#gift-search {
+    width: 100%; padding: 15px; font-size: 1.1em;
+    border: 2px solid #ddd; border-radius: 8px;
+    box-sizing: border-box; transition: 0.3s;
+    font-family: 'Segoe UI', sans-serif;
+}
+#gift-search:focus { border-color: #b71c1c; outline: none; box-shadow: 0 0 8px rgba(183, 28, 28, 0.2); }
+
 .page-wrapper { margin-left: 240px; min-height: 100vh; }
 .content-padding { padding: 40px; max-width: 1200px; margin: 0 auto; }
 
@@ -43,7 +52,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* OVERZICHT GRID */
 .overview-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px; margin-bottom: 40px;
@@ -54,13 +62,10 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     text-align: center; cursor: pointer; position: relative;
     transition: 0.2s; border-radius: 4px;
 }
-
 .overview-grid-item:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-/* GOUDEN ACCENT VOOR FAVORIETEN IN OVERZICHT */
 .overview-grid-item.favorite-item {
-    background-color: #fff9e6;
-    border: 2px solid #d4af37;
+    background-color: #fff9e6; border: 2px solid #d4af37;
     box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.1);
 }
 
@@ -68,12 +73,10 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .overview-image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .overview-caption { font-size: 0.8em; font-weight: bold; line-height: 1.2; height: 2.4em; overflow: hidden; }
 
-/* DETAIL ITEMS */
 .wens-item {
     display: flex; background: white; border: 1px solid #ddd;
     padding: 20px; margin-bottom: 20px; gap: 20px; position: relative; border-radius: 8px;
 }
-
 .wens-item.favorite-item { border: 2px solid #d4af37; background: #fffdf5; }
 
 .left-column { width: 180px; flex-shrink: 0; text-align: center; }
@@ -82,15 +85,12 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 
 .right-column { flex-grow: 1; }
 
-/* KOOP KNOP */
 .buy-button {
     background: #b71c1c; color: white; border: none; padding: 12px 24px;
     font-family: 'Impact', sans-serif; text-transform: uppercase;
     cursor: pointer; border-radius: 4px; margin-top: 15px; transition: 0.2s;
-    font-size: 1em; letter-spacing: 1px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 1em; letter-spacing: 1px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-
 .buy-button:hover { background: #d32f2f; transform: scale(1.05); box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3); }
 
 .price-links { margin-top: 10px; }
@@ -99,16 +99,13 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     background: #d4af37; color: white; text-decoration: none;
     font-size: 0.9em; font-weight: bold; border-radius: 3px;
 }
-
 .price-link.lowest { background: #b71c1c; }
 
-/* BADGES & OVERLAYS */
 .favorite-badge {
     display: inline-block; background: #d4af37; color: white;
     padding: 3px 8px; font-family: 'Impact', sans-serif; font-size: 0.8em;
     margin-top: 10px; border-radius: 4px;
 }
-
 .mini-star { position: absolute; top: 5px; right: 5px; color: #d4af37; font-size: 1.2em; font-weight: bold; }
 
 .purchased-overlay {
@@ -116,10 +113,8 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     background: rgba(255,255,255,0.9); color: #b71c1c; border: 3px solid #b71c1c;
     padding: 5px 15px; font-family: 'Impact', sans-serif; z-index: 10; font-size: 1.4em;
 }
-
 .purchased img { filter: grayscale(1) opacity(0.3); }
 
-/* SPARKS */
 .snow-area { flex-grow: 1; position: relative; overflow: hidden; }
 .snow { position: absolute; background: #d4af37; width: 3px; height: 3px; border-radius: 50%; opacity: 0.4; animation: fall linear infinite; }
 @keyframes fall { to { transform: translateY(100vh); } }

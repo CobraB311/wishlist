@@ -254,36 +254,6 @@
           ]
         },
   {
-    "id": "set-lego-60495-recycling-truck",
-    "naam": "LEGO® City Vuilniswagen",
-    "nummer": "60495",
-    "beschrijving": "Help mee om LEGO City schoon te houden! Deze set bevat een moderne vuilniswagen met een functionerende kiepfunctie om de containers te legen. Inclusief 3 minifiguren en verschillende accessoires zoals een bezem en afval-elementen.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltc959c6bc5703df3d/60495_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/recycling-truck-60495", "prijs": "€ 39,99" },
-      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/en-BE/set/60495/Recycling-Truck.html", "prijs": "Check prijs" }
-    ]
-  },
-  {
-    "id": "set-lego-60478-cement-mixer",
-    "naam": "LEGO® City Cementwagen",
-    "nummer": "60478",
-    "beschrijving": "Breng de bouwplaats tot leven met deze realistische cementwagen! De truck heeft een draaibare mengtrommel die echt beton-elementen kan uitwerpen. Inclusief 2 minifiguren van bouwvakkers en diverse accessoires om direct te beginnen met bouwen.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt2812e4d10d19ff2d/60478_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/cQiEiiO", "prijs": "€ 29,95" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/15Oerrp", "prijs": "€ 31,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-60478/9300000237345464/", "prijs": "€ 31,99" },
-      { "naam": "Coolblue.be", "link": "https://www.coolblue.be/nl/product/972487/lego-city-cementwagen-60478.html", "prijs": "€ 34,99" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/lego-city-cementwagen-60478/02323336", "prijs": "€ 34,99" },
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/LEGO-60478-CEMENT-MIXER/a22209285", "prijs": "€ 37,99" },
-      { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_60478-cementwagen-2208353.html", "prijs": "€ 39,99" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60478-cementwagen-32126595", "prijs": "€ 39,99" },
-      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/cement-mixer-60478", "prijs": "€ 39,99" },
-      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/60478/Cement-Mixer.html", "prijs": "Check prijs" }
-    ]
-  },
-  {
     "id": "set-lego-76337-marvel-mecha",
     "naam": "LEGO® Marvel Miles Morales Mecha vs. Spider-Man 2099",
     "nummer": "76337",
@@ -299,24 +269,6 @@
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/icnBLZR", "prijs": "€ 14,99" },
       { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/miles-morales-mech-vs-spider-man-2099-76337", "prijs": "€ 14,99" },
       { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/76337/Miles-Morales-mech-vs-Spider-Man-2099.html", "prijs": "Check prijs" }
-    ]
-  },
-  {
-    "id": "set-lego-60479-prisoner-transport",
-    "naam": "LEGO® City Politie Gevangenentransport",
-    "nummer": "60479",
-    "beschrijving": "Houd de boeven achter slot en grendel met deze stoere gevangenisbus! De set bevat een transportwagen met tralies, een vluchtmotor en 3 minifiguren: een politieagent en twee boeven. Ideaal voor actievolle achtervolgingen in LEGO City.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt471b7741fe9cc2a2/60479_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bnRrJww", "prijs": "€ 16,95" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-60479/9300000237345478/", "prijs": "€ 16,99" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/h0NoHZi", "prijs": "€ 19,99" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/lego-city-politie-gevangenentransport-60479/02323589", "prijs": "€ 19,99" },
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/LEGO-60479-POLICE-PRISONER-TRANSPORT-VAN/a22213485", "prijs": "€ 19,99" },
-      { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_60479-politie-gevangenentransport-2208354.html", "prijs": "€ 19,99" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60479-politie-gevangentransport-32126596", "prijs": "€ 19,99" },
-      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/police-prisoner-transport-van-60479", "prijs": "€ 19,99" },
-      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/en-BE/set/60479/Police-Prisoner-Transport-Van.html", "prijs": "Check prijs" }
     ]
   },
   {
@@ -457,19 +409,6 @@
             { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/monster-tm-1-64-marvel-spiderman-vs-venom/01792881", "prijs": "€ 12,95" },
             { "naam": "SupraBazar", "link": "https://www.suprabazar.be/monster-jam-1-64-marvel-2-pack-spiderman-vs-venom-31984019", "prijs": "€ 12,99" },
             { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/monster-jam-marvel-venom-vs-the-amazing-spider-man-monsterjamtrucks-schaal-1-64/9300000178192365/", "prijs": "€ 14,99" }
-          ]
-        },
-        {
-          "id": "paw-patrol-rocky-vuilniswagen-9300000145001045",
-          "naam": "PAW Patrol The Mighty Movie - Vuilniswagen met Rocky-actiefiguur licht en geluid",
-          "nummer": "9300000145001045",
-          "beschrijving": "Werk samen met Rocky voor spannende reddingsavonturen! Vuilniswagen (ruim 17 cm) met superslank ontwerp, beweegbare recyclerarmen, en licht- en geluidseffecten.",
-          "afbeelding_url": "https://media.s-bol.com/77R3JlXr1ljy/rAmQGw/550x565.jpg",
-          "winkels": [
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/dAqj4WW", "prijs": "€ 14,31" },
-            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/paw-patrol-the-mighty-movie-voertuig-met-pup-rocky/01726992", "prijs": "€ 19,49" },
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/igLvCdp", "prijs": "€ 22,97" },
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-mighty-movie-vuilniswagen-met-rocky-actiefiguur-licht-en-geluid/9300000145001045/?referrer=socialshare_pdp_www", "prijs": "€ 26,99" }
           ]
         },
         {

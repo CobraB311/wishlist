@@ -705,5 +705,36 @@
       { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-eerste-stappen-naar-schrijven-5-6-j-9789044746198", "prijs": "€ 7,50" },
       { "naam": "Verthus", "link": "https://verthus.be/producten/zo-leuk-is-oefenen-schrijven-5-6j/", "prijs": "€ 7,50" }
     ]
+  },
+  {
+    "id": "oefenboek-verzamelband-eerste-stappen",
+    "naam": "Oefen je slim: Eerste reken-, schrijf- en leesoefeningen (5-6 jaar)",
+    "nummer": "9789044746129",
+    "beschrijving": "De ultieme voorbereiding op het eerste leerjaar in één dik oefenboek! Deze verzamelband combineert de belangrijkste oefeningen voor rekenen, schrijven en lezen. Dankzij de afwisselende opdrachten blijft het leren leuk en uitdagend voor kinderen van 5 tot 6 jaar.",
+    "afbeelding_url": "https://media.s-bol.com/xBlDMr4kWJx9/mZG4zQG/1200x1200.jpg",
+    "winkels": [
+      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a10057699/Oefen-je-slim-zo-leuk-is-oefenen-Oefen-je-slim-Eerste-reken-schrijf-en-leesoefeningen-5-6-j-ZNU", "prijs": "€ 10,76" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0ihl5SsX", "prijs": "€ 11,95" },
+      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/oefen-je-slim-allereerste-stappen-naar-cijfers-en-letters-4-5j-682477", "prijs": "€ 11,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/oefen-je-slim-eerste-reken-schrijf-en-leesoefeningen/9200000062189984/", "prijs": "€ 12,50" },
+      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/oefen-je-slim-eerste-reken-schrijf-en-leesoefeningen-5-6-j-9789044746129", "prijs": "€ 12,50" },
+      { "naam": "AVA", "link": "https://www.ava.be/nl/oefen-je-slim-eerste-reken-schrijf-en-lees-oefeningen-00462771", "prijs": "€ 12,50" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/06etRIHd", "prijs": "€ 12,50" }
+    ]
+  },
+  {
+    "id": "playmobil-ford-f150-raptor",
+    "naam": "Playmobil x Ford F-150 Raptor",
+    "nummer": "71858",
+    "beschrijving": "Beleef off-road avonturen met de iconische Ford F-150 Raptor van Playmobil. Deze gedetailleerde blauwe pick-up truck is voorzien van een ruime laadbak en stoere accenten. Inclusief een Playmobil figuur en accessoires voor urenlang speelplezier.",
+    "afbeelding_url": "https://media.s-bol.com/q1M75ApoA4kr/mwm8MWn/1200x1045.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/00FzcxTW", "prijs": "€ 18,06" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/05O761Wt", "prijs": "€ 19,06" },
+      { "naam": "Playmobil BE", "link": "https://www.playmobil.com/nl-be/playmobil-x-ford-f-150-raptor/71858.html", "prijs": "€ 19,99" },
+      { "naam": "Euroshop", "link": "https://www.euroshop.be/nl/speelgoed/figuren-rollenspel/speelsets-figuren-dieren/154210147-playmobil-x-ford-f-150-raptor-71858", "prijs": "€ 19,99" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/playmobil-cars-71858-playmobil-x-ford-f-150-raptor-32085259", "prijs": "€ 19,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playmobil-x-ford-f-150-raptor/9300000225695653/", "prijs": "€ 24,00" }
+    ]
   }
 ]

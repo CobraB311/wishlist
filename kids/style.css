@@ -1,704 +1,116 @@
-/* BASE STYLING & ANIMATIE */
+/* NINJAGO LICHT THEMA */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    min-height: 100vh;
-    scroll-behavior: smooth;
-
-    /* Gradient Kleuren */
-    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
-    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; margin: 0; padding: 0;
+    background: linear-gradient(135deg, #fdfdfd 0%, #f0f0f0 100%);
+    background-attachment: fixed; min-height: 100vh;
 }
 
-@keyframes gradient {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color: #b71c1c; }
+
+.ninja-banner {
+    width: 100%; height: 200px;
+    background: url('https://i1.sndcdn.com/visuals-001000838173-74Uowl-t1240x260.jpg') no-repeat center center;
+    background-size: cover; border-bottom: 4px solid #d4af37;
 }
 
-/* GOLVEN STYLING (Driedubbel Gelaagd Effect) */
-@keyframes wave {
-    0% { transform: translate3d(-90px, 0, 0); }
-    100% { transform: translate3d(85px, 0, 0); }
-}
-
-.wave {
-    border-radius: 1000% 1000% 0 0;
-    position: fixed;
-    width: 200%;
-    height: 12em;
-    transform: translate3d(0, 0, 0);
-    bottom: 0;
-    left: 0;
-}
-
-.wave1 {
-    background: rgb(255 255 255 / 40%);
-    animation: wave 10s linear infinite;
-    z-index: -10;
-}
-
-.wave2 {
-    background: rgb(255 255 255 / 25%);
-    animation: wave 12s linear infinite;
-    animation-delay: -2s;
-    z-index: -11;
-}
-
-.wave3 {
-    background: rgb(255 255 255 / 10%);
-    animation: wave 14s linear infinite;
-    animation-delay: -5s;
-    z-index: -12;
-}
-
-/* VASTE HEADER (VERTIKALE NAVIGATIE) */
 .fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 240px; 
-    background: #fff;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-    overflow-y: auto;
-    padding-top: 10px;
+    position: fixed; top: 0; left: 0;
+    height: 100%; width: 240px;
+    background: #ffffff; border-right: 4px solid #d4af37;
+    display: flex; flex-direction: column; z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
-.header-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.tab-nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
+.snow-area { flex-grow: 1; position: relative; overflow: hidden; background: #fff; }
+.page-wrapper { margin-left: 240px; min-height: 100vh; }
+.content-padding { padding: 30px; }
 
 .tab-button {
-    background-color: #f1f1f1;
-    color: #333;
-    display: block;
-    padding: 15px 15px;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
-    border-left: 5px solid transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.tab-button:hover:not(.active) {
-    background-color: #ddd;
+    background: #f9f9f9; color: #444; border: none;
+    border-bottom: 1px solid #eee; padding: 18px 15px; width: 100%;
+    text-align: left; font-weight: 700; cursor: pointer; 
+    font-family: 'Segoe UI', sans-serif; text-transform: uppercase; font-size: 0.9em;
+    transition: all 0.2s ease;
 }
 
 .tab-button.active {
-    background-color: #e8f5e9;
-    color: #4CAF50;
-    font-weight: bold;
-    border-left: 5px solid #4CAF50;
+    background-color: #333 !important;
+    color: #fff !important;
+    border-left: 8px solid #d4af37;
 }
 
-.percentage-bought {
-    font-size: 0.75em;
-    font-weight: normal;
-    background-color: #4CAF50;
-    color: white;
-    padding: 3px 6px;
-    border-radius: 12px;
-    margin-left: 10px;
-    flex-shrink: 0;
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* OVERVIEW GRID UPDATES */
+.overview-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px; margin-top: 15px;
 }
-
-.tab-button.active .percentage-bought {
-    background-color: #a5d6a7;
-}
-
-
-/* --- NIEUWE SNEEUW STYLING IN NAVIGATIEBALK --- */
-
-/* Container voor de sneeuw, vult de rest van de ruimte op */
-.snow-area {
-    flex-grow: 1; 
-    position: relative;
-    /* Een subtiele donkerdere/groenere achtergrond voor een kerstsfeer */
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    overflow: hidden; 
-    display: none; /* Standaard verborgen (mobiel) */
-    /* De z-index moet lager zijn dan de knoppen, maar in dit geval staat het onder de knoppen door de flex-direction: column in header-content */
-}
-
-/* De sneeuw wordt alleen getoond op desktop */
-@media (min-width: 901px) {
-    .snow-area {
-        display: block;
-    }
-}
-
-.snow {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.8;
-    z-index: 1;
-}
-
-/* Pure CSS Keyframes voor de sneeuwval */
-@keyframes fall-and-sway {
-    0% {
-        transform: translate(0, -10vh) scale(1);
-    }
-    50% {
-        transform: translate(10px, 50vh) scale(0.7);
-    }
-    100% {
-        transform: translate(0, 100vh) scale(0.5);
-    }
-}
-
-/* Variatie in positie, grootte en snelheid */
-/* Gebruik calc() om de vlokken te verspreiden over de breedte van 240px */
-.snow:nth-child(4n + 1) { 
-    left: calc(10% + 5px); 
-    animation: fall-and-sway 15s linear infinite; 
-    animation-delay: -2s;
-}
-.snow:nth-child(4n + 2) { 
-    left: calc(40% - 10px); 
-    width: 2px; 
-    height: 2px; 
-    opacity: 0.5; 
-    animation: fall-and-sway 20s linear infinite; 
-    animation-delay: -7s;
-}
-.snow:nth-child(4n + 3) { 
-    left: calc(70% + 15px); 
-    width: 4px; 
-    height: 4px; 
-    opacity: 1; 
-    animation: fall-and-sway 10s linear infinite; 
-    animation-delay: -12s;
-}
-.snow:nth-child(4n + 4) { 
-    left: calc(90% - 20px); 
-    width: 1px; 
-    height: 1px; 
-    opacity: 0.3; 
-    animation: fall-and-sway 25s linear infinite; 
-    animation-delay: -17s;
-}
-
-/* Meer variatie in delays en snelheid door verdere nth-child */
-.snow:nth-child(8n + 5) { animation-delay: -4s; animation-duration: 18s; left: calc(20% + 5px); }
-.snow:nth-child(8n + 6) { animation-delay: -9s; animation-duration: 12s; left: calc(50% - 10px); }
-.snow:nth-child(8n + 7) { animation-delay: -14s; animation-duration: 22s; left: calc(80% + 15px); }
-.snow:nth-child(8n + 8) { animation-delay: -19s; animation-duration: 16s; left: calc(5% - 5px); }
-
-.snow:nth-child(12n + 9) { animation-delay: -1s; animation-duration: 25s; left: calc(30% + 20px); }
-.snow:nth-child(12n + 10) { animation-delay: -6s; animation-duration: 13s; left: calc(60% - 5px); }
-.snow:nth-child(12n + 11) { animation-delay: -11s; animation-duration: 19s; left: calc(95% + 5px); }
-.snow:nth-child(12n + 12) { animation-delay: -16s; animation-duration: 10s; left: calc(75% - 15px); }
-
-/* --- EINDE SNEEUW STYLING --- */
-
-
-/* ALGEMENE LAYOUT (INHOUD) */
-
-.page-wrapper {
-    margin-left: 240px; 
-    padding: 20px 20px 80px 20px;
-    position: relative;
-    box-sizing: border-box;
-    min-height: 100vh;
-}
-
-/* title-container styling */
-.title-container {
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 20px 0;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-}
-
-/* h1 styling */
-h1 {
-    font-size: 2.5em;
-    color: #b71c1c;
-    text-shadow: none;
-}
-
-.last-update {
-    font-size: 0.9em;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* container styling */
-.container {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* TAB INHOUD (WENSENLIJSTEN EN OVERZICHT) */
-
-.tab-content {
-    display: none;
-    padding: 6px 0px;
-    border-top: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* OVERVIEW GRID (GALERIJ) */
-
-.overview-person-section {
-    margin-bottom: 40px;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
-}
-
-.overview-person-section h3 {
-    font-size: 1.8em;
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-.overview-grid-inner {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding-bottom: 20px;
-}
-
 .overview-grid-item {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 250px;
-    position: relative; /* Nodig voor purchased-overlay */
+    background: #fff; border: 1px solid #ddd; padding: 10px;
+    text-align: center; cursor: pointer;
+    min-height: 180px; /* Iets verhoogd voor de prijsweergave */
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.overview-grid-item:hover:not(.purchased) {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-/* NIEUWE STYLING VOOR GEKOCHTE ITEMS IN OVERZICHT */
-.overview-grid-item.purchased {
-    background-color: #fcfcfc; /* Lichtgrijze achtergrond */
-    box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    opacity: 0.8; /* Iets minder prominent */
-    cursor: default;
+.overview-grid-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .overview-image-wrapper {
+    height: 90px; width: 100%;
+    display: flex; align-items: center; justify-content: center;
     position: relative;
-    width: 100%;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    overflow: hidden;
 }
+.overview-image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.overview-caption { font-size: 0.8em; margin-top: 8px; font-weight: bold; line-height: 1.2; }
 
-.overview-grid-item.purchased .overview-image-wrapper img {
-    filter: grayscale(100%);
-    opacity: 0.5;
-    transition: filter 0.3s, opacity 0.3s;
-}
-
-.overview-image-wrapper img {
-    max-width: 100%;
-    max-height: 120px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 4px;
-    transition: filter 0.3s, opacity 0.3s;
-}
-
-.overview-caption {
-    font-size: 0.9em;
-    color: #333;
-    font-weight: 500;
-}
-
-.overview-person {
-    font-weight: normal;
-    color: #777;
-    display: block;
-    margin-top: 3px;
-    font-size: 0.85em;
-}
-
-/* WENSENLIJST DETAIL ITEMS */
-
-.wens-lijst {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding-top: 15px;
-}
-
+/* WENS ITEMS */
 .wens-item {
-    display: flex;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: background-color 0.3s;
-    position: relative; /* Nodig voor highlight */
+    display: flex; background: #fff; border: 1px solid #ddd;
+    padding: 20px; margin-bottom: 20px; gap: 20px; position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+.left-column { width: 160px; flex-shrink: 0; text-align: center; position: relative; }
+.item-image-container { height: 160px; display: flex; align-items: center; justify-content: center; position: relative; }
+.item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-.wens-item.purchased {
-    background-color: #fcfcfc;
-}
-
-.wens-item.purchased .item-image-container img {
-    filter: grayscale(100%);
-    opacity: 0.5;
-    transition: filter 0.3s, opacity 0.3s;
-}
-
-.wens-item.highlight {
-    box-shadow: 0 0 10px 3px #90ee90;
-    transition: box-shadow 0.5s;
-}
-
-.left-column {
-    width: 200px;
-    flex-shrink: 0;
-    margin-right: 20px;
-    padding-right: 20px;
-    border-right: 1px solid #eee;
-    text-align: center;
-}
-
-.item-image-container {
-    width: 100%;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    position: relative; /* Belangrijk voor overlay */
-    overflow: hidden; /* Belangrijk voor overlay */
-}
-
-/* STYLING VOOR GEKOCHT OVERLAY (Universeel voor detail en overzicht) */
+/* STEMPEL EFFECT */
 .purchased-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-15deg); /* Centreer en roteer */
-    z-index: 5;
-    background-color: rgba(255, 0, 0, 0.85); /* Half-transparant rood */
-    color: white;
-    padding: 5px 20px;
-    font-size: 1.5em;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    pointer-events: none; /* Zodat het geen kliks blokkeert */
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    background: rgba(255,255,255,0.95); color: #b71c1c; border: 3px double #b71c1c;
+    padding: 5px 15px; font-family: 'Impact', sans-serif; z-index: 10;
+    pointer-events: none; font-size: 1.2em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: stampAnimation 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.item-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 4px;
+@keyframes stampAnimation {
+    0% { transform: translate(-50%, -50%) scale(5); opacity: 0; }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(-15deg); opacity: 1; }
 }
 
-.item-price-under-image {
-    display: block;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #4CAF50;
-    margin-top: 0;
+.purchased img { filter: grayscale(1) opacity(0.3); }
+
+/* ANIMATIE VOOR LAAGSTE PRIJS KNOP */
+@keyframes pulse-gold {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
 
-.right-column {
-    flex-grow: 1;
-}
-
-.right-column h3 {
-    margin-top: 0;
-    color: #333;
-    font-size: 1.5em;
-    text-decoration: none;
-}
-
-.wens-item.purchased .right-column h3 {
-    text-decoration: line-through;
-    color: #999;
-}
-
-.item-description {
-    color: #555;
-    font-size: 0.95em;
-    margin-bottom: 10px;
-}
-
-.item-nummer {
-    font-size: 0.8em;
-    color: #999;
-    margin-bottom: 15px;
-}
-
-/* WINKEL LINKS */
-.winkel-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.winkel-link-button {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 0.9em;
-    transition: background-color 0.2s;
-}
-
-.winkel-link-button:hover {
-    background-color: #0056b3;
-}
-
-/* ACTIE AREA */
-.item-action-area {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-top: 15px;
-    border-top: 1px dashed #eee;
-}
-
-.claim-button {
-    background-color: #FFC107;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-
-.claim-button:hover {
-    background-color: #e0b400;
-}
-
-.purchased-note {
-    color: #4CAF50;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-/* INVENTARIS LINKS (Voor de Inventaris Tab) */
-.inventory-link-section {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    border-left: 5px solid #4CAF50;
-}
-
-.inventaris-link-item a {
-    font-size: 1.1em;
-    color: #007BFF;
-    text-decoration: none;
-    line-height: 1.8;
-    display: block;
-}
-
-.inventaris-link-item a:hover {
-    text-decoration: underline;
-}
-
-/* FOOTER */
-.footer-note {
-    margin-left: 240px; 
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 0.8em;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
-
-/* MEDIA QUERIES (RESPONSIVE) */
+/* VONKEN EFFECT */
+.snow { position: absolute; background: #d4af37; width: 4px; height: 4px; border-radius: 50%; opacity: 0.5; animation: fireRise 6s infinite linear; }
+@keyframes fireRise { 0% { transform: translateY(100vh); } 100% { transform: translateY(-10vh); } }
 
 @media (max-width: 900px) {
-    /* Schakel over naar mobiele layout */
-
-    .fixed-header {
-        position: static;
-        width: 100%;
-        height: auto;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        padding: 0;
-    }
-
-    .header-content {
-        height: auto;
-    }
-
-    .tab-nav {
-        flex-direction: row;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .tab-button {
-        flex-shrink: 0;
-        border-left: none;
-        border-bottom: 3px solid transparent;
-        justify-content: flex-start;
-        padding: 15px 10px;
-    }
-
-    .tab-button.active {
-        border-left: none;
-        border-bottom: 3px solid #4CAF50;
-        background-color: #fff;
-    }
-
-    .percentage-bought {
-        margin-left: 5px;
-        order: 2;
-    }
-
-    .page-wrapper {
-        margin-left: 0;
-        padding: 10px;
-        min-height: 100vh;
-    }
-
-    .title-container {
-        margin-bottom: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-        color: #b71c1c;
-        text-shadow: none;
-    }
-
-    /* Detail Items passen zich aan voor mobiel */
-    .wens-item {
-        flex-direction: column;
-    }
-    .left-column {
-        width: 100%;
-        margin-right: 0;
-        border-right: none;
-        border-bottom: 1px solid #eee;
-        padding-right: 0;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-    }
-    .item-image-container {
-        width: 100%;
-        height: auto;
-        max-height: 200px;
-        margin-bottom: 5px;
-        overflow: hidden;
-    }
-
-    .overview-image-wrapper {
-        height: auto;
-        max-height: 150px;
-    }
-
-    /* Ook de overlay op mobiel goed positioneren */
-    .purchased-overlay {
-        font-size: 1.2em;
-        padding: 4px 15px;
-    }
-
-    .item-image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .item-price-under-image {
-        display: block;
-        text-align: left;
-        margin-top: 5px;
-        margin-bottom: 15px;
-    }
-
-    .right-column {
-        width: 100%;
-    }
-
-    .item-action-area {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .claim-button {
-        width: 100%;
-        order: 2;
-    }
-
-    .purchased-note {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .winkel-links {
-        max-width: 100%;
-        justify-content: space-around;
-        margin-bottom: 15px;
-        gap: 8px;
-    }
-
-    .footer-note {
-        margin-left: 0;
-    }
-
-    .overview-grid-inner {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    
-    /* De sneeuw is verborgen op mobiel door media query in de sneeuw sectie */
+    .fixed-header { position: relative; width: 100%; height: auto; border-right: none; }
+    .page-wrapper { margin-left: 0; }
+    .wens-item { flex-direction: column; align-items: center; text-align: center; }
 }

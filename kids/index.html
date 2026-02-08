@@ -3,97 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Wenslijst (Wordt geladen...)</title>
+    <title>Verjaardagslijstjes</title>
 
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+
+    <meta http-equiv="content-type" content="no-cache, no-store, must-revalidate">
     
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
 
     <div class="fixed-header">
-        <div class="header-content">
-            <div id="dynamic-tab-nav" class="tab-nav">
-                </div>
-            <div class="snow-area">
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-                <div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div><div class="snow"></div>
-            </div>
-        </div>
+        <div id="dynamic-tab-nav" class="tab-nav"></div>
+        <div class="snow-area" id="snow-container"></div>
     </div>
     
     <div class="page-wrapper">
-        
-        <div class="title-container">
-            <h1 id="main-title">De Grote Eindejaarswenslijst!</h1>
-            <p class="last-update" id="last-update-text">Laatste update: --/--/----</p> 
-        </div>
-
-        <div class="container">
-            
+        <div class="ninja-banner"></div>
+        <div class="content-padding">
+            <h1 id="main-title">Verjaardagslijstjes</h1>
             <div id="overview-content" class="tab-content active">
-                <h2>Klik op een foto om direct naar het artikel te springen:</h2>
-                <div id="overview-grid-container" class="overview-grid">
-                    <p id="loading-message">Laden van wensenlijst...</p>
-                    </div>
-            </div>
-            
-            <div id="person-lists-container">
+                <div id="overview-grid-container">
+                    <p id="loading-message">Laden...</p>
                 </div>
-            
+            </div>
+            <div id="person-lists-container"></div>
         </div>
-        
-    </div>
-
-    <div class="wave wave1"></div> 
-    <div class="wave wave2"></div> 
-    <div class="wave wave3"></div> 
-    
-    <div class="footer-note">
-        <p>Gemaakt met liefde en JavaScript. Stuur een e-mail naar **<a href="mailto:bernaertruben@hotmail.com">bernaertruben@hotmail.com</a>** voor vragen of om een cadeau te claimen.</p>
     </div>
 
     <script src="script.js"></script>

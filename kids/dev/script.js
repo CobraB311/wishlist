@@ -1,6 +1,26 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
 
+function setNinjaGreeting() {
+    const greetingEl = document.getElementById('ninja-greeting');
+    if (!greetingEl) return;
+
+    const hour = new Date().getHours();
+    let message = "";
+
+    if (hour >= 6 && hour < 12) {
+        message = "Goedemorgen Ninja!";
+    } else if (hour >= 12 && hour < 18) {
+        message = "Goedemiddag Sensei!";
+    } else if (hour >= 18 && hour < 23) {
+        message = "Goedenavond Ninja.";
+    } else {
+        message = "Goedenacht Ninja.";
+    }
+
+    greetingEl.innerText = message;
+}
+
 function createSparks() {
     const container = document.getElementById('snow-container');
     if (!container) return;
@@ -93,7 +113,6 @@ function openTab(evt, tabId) {
     window.scrollTo(0, 0);
 }
 
-// BACK TO TOP LOGICA
 window.onscroll = function() {
     scrollFunction();
 };
@@ -110,10 +129,7 @@ function scrollFunction() {
 }
 
 function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function generateWishlistContent(data, purchasedIds, favoriteIds) {
@@ -187,6 +203,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 }
 
 async function loadWishlist() {
+    setNinjaGreeting();
     createSparks();
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
@@ -201,6 +218,10 @@ async function loadWishlist() {
             new Set(claims.purchased_items),
             new Set(favs.favorite_ids)
         );
+
+        if (config.wenslijst_titel) {
+            document.getElementById('main-title').innerText = config.wenslijst_titel;
+        }
 
         const loader = document.getElementById('loading-message');
         if (loader) loader.style.display = 'none';

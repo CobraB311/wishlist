@@ -22,6 +22,18 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
+/* HEADER STYLING */
+.main-header { margin-bottom: 20px; }
+#ninja-greeting {
+    font-size: 1.1em;
+    color: #d4af37;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+#main-title { margin-top: 0; font-size: 2.5em; }
+
 .tab-nav { padding: 20px 10px; display: flex; flex-direction: column; gap: 10px; }
 
 .tab-button {
@@ -102,7 +114,7 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 
 /* BACK TO TOP KNOP */
 #scrollToTopBtn {
-    display: none; /* Standaard verborgen */
+    display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;

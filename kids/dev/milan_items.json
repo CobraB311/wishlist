@@ -1,35 +1,47 @@
 [
-        {
-          "id": "hasbro-marvel-armored-up-avengers-9300000225966594",
-          "naam": "Hasbro Marvel actiefiguren Iron Man & Friends - Armored Up Avengers Pack",
-          "nummer": "G1255",
-          "beschrijving": "Set van 6 actiefiguren (3-inch) geïnspireerd op de Disney Jr. serie 'Iron Man and his Awesome Friends'. Bevat Iron Man, Ironheart, Iron Hulk, Captain America: Sam Wilson, Gamma en Ultron.",
-          "afbeelding_url": "https://media.s-bol.com/yNDQDDJgwLq6/vgJ5VRg/550x460.jpg",
-          "winkels": [
-            { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1DOZ5fR", "prijs": "€ 26,19" },
-            { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/i2vcTRC", "prijs": "€ 25,99" },
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" }
-          ]
-        },
-        {
-          "id": "marvel-spidey-rhino-wrecker",
-          "naam": "Marvel Spidey and his Amazing Friends - Rhino Wrecker (Rhino auto)",
-          "nummer": "F93485X0",
-          "beschrijving": "Het specifieke 'Rhino' voertuig ('Rhino Wrecker') met figuur uit de serie Spidey and his Amazing Friends. **LET OP: Dit moet specifiek het 'Rhino' voertuig zijn.**",
-          "afbeelding_url": "https://media.s-bol.com/olQ89Y9MR35L/W6LNG5v/1200x604.jpg",
-          "winkels": [
-            { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/spidey-en-zijn-geweldige-vriendjes-spidey-vehicle/02222943", "prijs": "€ 19,95" },
-            { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rhino-wrecker/9300000166567115/", "prijs": "€ 19,99" }
-          ]
-        },
-        {
-          "id": "dreamland-kookpotten-keukenaccessoires-01611687",
-          "naam": "Kookpotten en keukenaccessoires 13 delig",
-          "nummer": "01611687",
-          "beschrijving": "13-delige kookpotten speelset om meteen de keuken in te duiken. Pannen, deksels en kookaccessoires voor eindeloos veel culinaire speelpret. Geschikt vanaf 3 jaar.",
-          "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
-          "winkels": [
-            { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687", "prijs": "€ 19,99" }
-          ]
-        }
+  {
+    "id": "hasbro-marvel-armored-up-avengers-9300000225966594",
+    "naam": "Hasbro Marvel actiefiguren Iron Man & Friends - Armored Up Avengers Pack",
+    "nummer": "G1255",
+    "beschrijving": "Set van 6 actiefiguren (3-inch) geïnspireerd op de Disney Jr. serie 'Iron Man and his Awesome Friends'. Bevat Iron Man, Ironheart, Iron Hulk, Captain America: Sam Wilson, Gamma en Ultron.",
+    "afbeelding_url": "https://media.s-bol.com/yNDQDDJgwLq6/vgJ5VRg/550x460.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1DOZ5fR", "prijs": "€ 26,19" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/i2vcTRC", "prijs": "€ 25,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" }
+    ]
+  },
+  {
+    "id": "marvel-spidey-rhino-wrecker",
+    "naam": "Marvel Spidey and his Amazing Friends - Rhino Wrecker (Rhino auto)",
+    "nummer": "F93485X0",
+    "beschrijving": "Het specifieke 'Rhino' voertuig ('Rhino Wrecker') met figuur uit de serie Spidey and his Amazing Friends. **LET OP: Dit moet specifiek het 'Rhino' voertuig zijn.**",
+    "afbeelding_url": "https://media.s-bol.com/olQ89Y9MR35L/W6LNG5v/1200x604.jpg",
+    "winkels": [
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/spidey-en-zijn-geweldige-vriendjes-spidey-vehicle/02222943", "prijs": "€ 19,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rhino-wrecker/9300000166567115/", "prijs": "€ 19,99" }
+    ]
+  },
+  {
+    "id": "dreamland-kookpotten-keukenaccessoires-01611687",
+    "naam": "Kookpotten en keukenaccessoires 13 delig",
+    "nummer": "01611687",
+    "beschrijving": "13-delige kookpotten speelset om meteen de keuken in te duiken. Pannen, deksels en kookaccessoires voor eindeloos veel culinaire speelpret. Geschikt vanaf 3 jaar.",
+    "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
+    "winkels": [
+      { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687", "prijs": "€ 19,99" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-854311-lloyds-sword",
+    "naam": "LEGO® NINJAGO® Lloyds zwaard met schede",
+    "nummer": "854311",
+    "beschrijving": "Ga op avontuur als de Groene Ninja! Dit zwaard van Lloyd is gemaakt van zacht schuim voor veilig speelplezier en wordt geleverd met een gedetailleerde schede die Jonas makkelijk kan dragen. Een onmisbaar item voor elke jonge Ninjago-fan.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt20a7b4c7e3d77f72/854311_Prod.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      {
+        "naam": "LEGO Shop", "link": "https://www.lego.com/nl-be/product/lloyds-sword-with-sheath-854311", "prijs": "€ 19,99"
+      }
+    ]
+  }
 ]

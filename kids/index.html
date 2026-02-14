@@ -9,30 +9,40 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
 
-    <meta http-equiv="content-type" content="no-cache, no-store, must-revalidate">
-    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="fixed-header">
-        <div id="dynamic-tab-nav" class="tab-nav"></div>
-        <div class="snow-area" id="snow-container"></div>
-    </div>
-    
-    <div class="page-wrapper">
-        <div class="ninja-banner"></div>
-        <div class="content-padding">
-            <h1 id="main-title">Verjaardagslijstjes</h1>
-            <div id="overview-content" class="tab-content active">
-                <div id="overview-grid-container">
-                    <p id="loading-message">Laden...</p>
-                </div>
-            </div>
-            <div id="person-lists-container"></div>
-        </div>
-    </div>
+<div class="fixed-header">
+    <div id="dynamic-tab-nav" class="tab-nav"></div>
+    <div class="snow-area" id="snow-container"></div>
+</div>
 
-    <script src="script.js"></script>
+<div class="page-wrapper">
+    <div class="ninja-banner"></div>
+    <div class="content-padding">
+        <h1 id="main-title">Verjaardagslijstjes</h1>
+
+        <div class="controls-container">
+            <input type="text" id="gift-search" placeholder="Zoek een cadeau (bijv. LEGO, Pokémon...)" onkeyup="filterGifts()">
+            <button id="filter-purchased-btn" class="filter-btn" onclick="togglePurchasedFilter()">
+                <span class="icon">👁️</span> Toon alles
+            </button>
+        </div>
+
+        <div id="overview-content" class="tab-content active">
+            <div id="overview-grid-container">
+                <p id="loading-message">Laden...</p>
+            </div>
+        </div>
+        <div id="person-lists-container"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
+let hidePurchased = false;
 
 function createSparks() {
     const container = document.getElementById('snow-container');
@@ -14,69 +15,51 @@ function createSparks() {
     }
 }
 
-// Hulpfunctie om prijzen numeriek te vergelijken
+function normalizeText(text) {
+    return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function filterGifts() {
+    const input = normalizeText(document.getElementById('gift-search').value);
+    const giftCards = document.querySelectorAll('.overview-grid-item, .wens-item');
+    giftCards.forEach(card => {
+        const titleEl = card.querySelector('h3, .overview-caption');
+        const title = titleEl ? normalizeText(titleEl.innerText) : "";
+        const descEl = card.querySelector('p');
+        const desc = descEl ? normalizeText(descEl.innerText) : "";
+        const isPurchased = card.classList.contains('purchased');
+        const matchesSearch = title.includes(input) || desc.includes(input);
+        const matchesFilter = !hidePurchased || !isPurchased;
+        card.style.display = (matchesSearch && matchesFilter) ? "" : "none";
+    });
+}
+
+function togglePurchasedFilter() {
+    hidePurchased = !hidePurchased;
+    const btn = document.getElementById('filter-purchased-btn');
+    btn.innerHTML = hidePurchased ? '<span class="icon">🙈</span> Verberg gekocht' : '<span class="icon">👁️</span> Toon alles';
+    btn.classList.toggle('active', hidePurchased);
+    filterGifts();
+}
+
 function getLowestPriceInfo(winkels) {
     if (!winkels || winkels.length === 0) return { prijs: "N.v.t.", index: -1 };
-
-    let lowestVal = Infinity;
-    let lowestIndex = 0;
-
+    let lowestVal = Infinity, lowestIndex = 0;
     winkels.forEach((w, index) => {
-        // Haal alleen getallen en decimalen eruit (bijv. "€ 29,95" -> 29.95)
-        const numericValue = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
-
-        if (!isNaN(numericValue) && numericValue < lowestVal) {
-            lowestVal = numericValue;
-            lowestIndex = index;
-        }
+        const val = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
+        if (!isNaN(val) && val < lowestVal) { lowestVal = val; lowestIndex = index; }
     });
-
-    return {
-        prijs: lowestVal === Infinity ? winkels[0].prijs : `€ ${lowestVal.toFixed(2).replace('.', ',')}`,
-        index: lowestVal === Infinity ? -1 : lowestIndex
-    };
+    return { prijs: lowestVal === Infinity ? winkels[0].prijs : `€ ${lowestVal.toFixed(2).replace('.', ',')}`, index: lowestIndex };
 }
 
 function claimItem(persoonNaam, itemName, itemId) {
     const subject = `CLAIM: ${itemName} voor ${persoonNaam}`;
-    const body = `Beste,\n\nIk heb het volgende cadeau gekocht van de lijst:\n\nItem: ${itemName}\nBestemd voor: ${persoonNaam}\nID: ${itemId}\n\nZou je dit item als gekocht willen markeren? Bedankt!`;
+    const body = `Ik heb dit cadeau gekocht: ${itemName} (ID: ${itemId})`;
     window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-function openTab(evt, tabId) {
-    const contents = document.getElementsByClassName("tab-content");
-    for (let i = 0; i < contents.length; i++) {
-        contents[i].classList.remove("active");
-    }
-
-    const buttons = document.getElementsByClassName("tab-button");
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active");
-        buttons[i].style.backgroundColor = "";
-        buttons[i].style.color = "";
-    }
-
-    const selectedTab = document.getElementById(tabId);
-    if (selectedTab) {
-        selectedTab.classList.add("active");
-    }
-
-    let targetBtn = evt ? evt.currentTarget : document.querySelector(`button[onclick*="${tabId}"]`);
-    if (targetBtn) {
-        targetBtn.classList.add("active");
-        const name = targetBtn.innerText.toLowerCase();
-
-        targetBtn.style.color = "#fff";
-        if (name.includes('jonas')) targetBtn.style.backgroundColor = "#b71c1c";
-        else if (name.includes('milan')) targetBtn.style.backgroundColor = "#1976d2";
-        else if (name.includes('gezamenlijk')) targetBtn.style.backgroundColor = "#2e7d32";
-        else targetBtn.style.backgroundColor = "#333";
-    }
-    window.scrollTo(0, 0);
-}
-
 function scrollToItem(persoonNaam, itemId) {
-    const tabId = persoonNaam.toLowerCase() + '-list-content';
+    const tabId = personIdToTabId(persoonNaam);
     openTab(null, tabId);
     setTimeout(() => {
         const el = document.getElementById(itemId);
@@ -84,68 +67,102 @@ function scrollToItem(persoonNaam, itemId) {
     }, 300);
 }
 
-function generateWishlistContent(data, purchasedIds) {
-    const listContainer = document.getElementById('person-lists-container');
+function personIdToTabId(naam) {
+    const n = naam.toLowerCase();
+    return (n === 'gezamenlijk' ? 'gezamenlijk' : n) + '-list-content';
+}
+
+function openTab(evt, tabId) {
+    if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".tab-button").forEach(b => {
+        b.classList.remove("active");
+        b.style.backgroundColor = "";
+    });
+    const targetTab = document.getElementById(tabId);
+    if (targetTab) targetTab.classList.add("active");
+
+    let targetBtn = evt ? evt.currentTarget : document.querySelector(`button[onclick*="'${tabId}'"]`);
+    if (targetBtn) {
+        targetBtn.classList.add("active");
+        if (tabId.includes('jonas')) targetBtn.style.backgroundColor = "#b71c1c";
+        else if (tabId.includes('milan')) targetBtn.style.backgroundColor = "#1976d2";
+        else if (tabId.includes('gezamenlijk')) targetBtn.style.backgroundColor = "#2e7d32";
+        else targetBtn.style.backgroundColor = "#333";
+    }
+    window.scrollTo(0, 0);
+}
+
+function generateWishlistContent(data, purchasedIds, favoriteIds) {
     const nav = document.getElementById('dynamic-tab-nav');
+    const listContainer = document.getElementById('person-lists-container');
     const overview = document.getElementById('overview-grid-container');
 
-    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333; color: #fff;">Overzicht</button>`;
-    let listsHtml = '';
-    let overviewHtml = '';
+    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333;"><span class="tab-info">Overzicht</span></button>`;
+    let listsHtml = '', overviewHtml = '';
 
     const groups = [...data.personen];
     if (data.gezamenlijke_items) groups.push(data.gezamenlijke_items);
 
     groups.forEach(person => {
-        const tabId = person.naam.toLowerCase() + '-list-content';
-        navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')">${person.naam}</button>`;
+        const tabId = personIdToTabId(person.naam);
+        const total = person.items.length;
+        const bought = person.items.filter(i => purchasedIds.has(i.id)).length;
+        const perc = total > 0 ? Math.round((bought / total) * 100) : 0;
 
-        listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2><div class="wens-lijst">`;
-        overviewHtml += `<div class="overview-person-section"><h3>Lijst van ${person.naam}</h3><div class="overview-grid">`;
+        navHtml += `
+            <button class="tab-button" onclick="openTab(event, '${tabId}')">
+                <span class="tab-info">${person.naam}</span>
+                <span class="tab-stats">${bought}/${total} gekocht (${perc}%)</span>
+                <div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div>
+            </button>`;
 
-        person.items.forEach(item => {
-            const isPurchased = purchasedIds.has(item.id);
-            const overlay = isPurchased ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+        listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2>`;
+        overviewHtml += `<h3>${person.naam}</h3><div class="overview-grid">`;
 
-            // Bereken laagste prijs info
-            const lowestInfo = getLowestPriceInfo(item.winkels);
+        const sorted = [...person.items].sort((a, b) => (favoriteIds.has(b.id) ? 1 : 0) - (favoriteIds.has(a.id) ? 1 : 0));
 
+        sorted.forEach(item => {
+            const isP = purchasedIds.has(item.id);
+            const isF = favoriteIds.has(item.id);
+            const low = getLowestPriceInfo(item.winkels);
+            const overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+
+            // Detail Lijst (HERSTELD LAYOUT)
             listsHtml += `
-                <div id="${item.id}" class="wens-item ${isPurchased ? 'purchased' : ''}">
+                <div id="${item.id}" class="wens-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}">
                     <div class="left-column">
-                        <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}"></div>
-                        <span style="display:block; text-align:center; margin-top:5px; color:#b71c1c; font-weight:bold;">Vanaf ${lowestInfo.prijs}</span>
+                        <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>
+                        ${isF ? '<div class="favorite-badge">★ FAVORIET</div>' : ''}
                     </div>
                     <div class="right-column">
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
-                        <div class="winkel-links">
-                            ${item.winkels.map((w, idx) => {
-                                const isLowest = idx === lowestInfo.index;
-                                const style = isLowest ? 'background:#b71c1c; color:white; border:2px solid #d4af37;' : 'background:#d4af37; color:black;';
-                                return `<a href="${w.link}" target="_blank" style="display:inline-block; padding:8px 12px; ${style} font-weight:bold; text-decoration:none; margin:5px; border-radius:3px;">${w.naam} (${w.prijs}) ${isLowest ? '★' : ''}</a>`;
-                            }).join('')}
+                        <div class="price-links">
+                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}">${w.naam}: ${w.prijs}</a>`).join('')}
                         </div>
-                        ${!isPurchased ? `<button style="background:#b71c1c; color:white; border:none; padding:10px 15px; cursor:pointer; font-weight:bold; margin-top:10px; text-transform:uppercase;" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                        ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
                 </div>`;
 
+            // Compact Overzicht
             overviewHtml += `
-                <div class="overview-grid-item ${isPurchased ? 'purchased' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
-                    <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>
+                <div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
+                    <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>
+                    ${isF ? '<div class="mini-star">★</div>' : ''}
                     <div class="overview-caption">${item.naam}</div>
-                    <div style="font-size:0.8em; color:#b71c1c; font-weight:bold;">${lowestInfo.prijs}</div>
+                    <div style="font-size:0.85em; color:#b71c1c; font-weight:bold;">Vanaf ${low.prijs}</div>
                 </div>`;
         });
-        listsHtml += `</div></div>`;
-        overviewHtml += `</div></div>`;
+        listsHtml += `</div>`; overviewHtml += `</div>`;
     });
 
-    nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')">Inventaris</button>`;
+    nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')"><span class="tab-info">Inventaris</span></button>`;
     overview.innerHTML = overviewHtml;
 
-    const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div class="inventory-section">${data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#b71c1c; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`).join('')}</div></div>`;
+    const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div id="inventory-list"></div></div>`;
     listContainer.innerHTML = listsHtml + invHtml;
+    if (data.inventaris_links) document.getElementById('inventory-list').innerHTML = data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#b71c1c; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`).join('');
 }
 
 async function loadWishlist() {
@@ -153,15 +170,19 @@ async function loadWishlist() {
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
         const claims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
+        const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
-        const rGezam = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
+        const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
         const rInv = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
 
-        const fullData = { ...config, personen: pData, gezamenlijke_items: { naam: "Gezamenlijk", items: rGezam }, inventaris_links: rInv };
-        generateWishlistContent(fullData, new Set(claims.purchased_items));
+        generateWishlistContent(
+            {...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}, inventaris_links: rInv},
+            new Set(claims.purchased_items),
+            new Set(favs.favorite_ids)
+        );
 
-        const loadingMsg = document.getElementById('loading-message');
-        if (loadingMsg) loadingMsg.style.display = 'none';
+        const loader = document.getElementById('loading-message');
+        if (loader) loader.style.display = 'none';
     } catch (e) { console.error(e); }
 }
 

@@ -93,6 +93,29 @@ function openTab(evt, tabId) {
     window.scrollTo(0, 0);
 }
 
+// BACK TO TOP LOGICA
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    const topBtn = document.getElementById("scrollToTopBtn");
+    if (topBtn) {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 function generateWishlistContent(data, purchasedIds, favoriteIds) {
     const nav = document.getElementById('dynamic-tab-nav');
     const listContainer = document.getElementById('person-lists-container');
@@ -128,7 +151,6 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
             const low = getLowestPriceInfo(item.winkels);
             const overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
 
-            // Detail Lijst (HERSTELD LAYOUT)
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}">
                     <div class="left-column">
@@ -145,7 +167,6 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                     </div>
                 </div>`;
 
-            // Compact Overzicht
             overviewHtml += `
                 <div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
                     <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>

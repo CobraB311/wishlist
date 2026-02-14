@@ -1,6 +1,37 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
 
+function setNinjaGreeting() {
+    const greetingEl = document.getElementById('ninja-greeting');
+    if (!greetingEl) return;
+    const hour = new Date().getHours();
+    let message = "";
+    if (hour >= 6 && hour < 12) message = "Goedemorgen Ninja!";
+    else if (hour >= 12 && hour < 18) message = "Goedemiddag Sensei!";
+    else if (hour >= 18 && hour < 23) message = "Goedenavond Ninja.";
+    else message = "Goedenacht Ninja.";
+    greetingEl.innerText = message;
+}
+
+function openVideo(videoId) {
+    const modal = document.getElementById('videoModal');
+    const frame = document.getElementById('videoFrame');
+    frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    modal.style.display = "block";
+}
+
+function closeVideo() {
+    const modal = document.getElementById('videoModal');
+    const frame = document.getElementById('videoFrame');
+    frame.src = "";
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('videoModal');
+    if (event.target == modal) closeVideo();
+}
+
 function createSparks() {
     const container = document.getElementById('snow-container');
     if (!container) return;
@@ -81,7 +112,6 @@ function openTab(evt, tabId) {
     });
     const targetTab = document.getElementById(tabId);
     if (targetTab) targetTab.classList.add("active");
-
     let targetBtn = evt ? evt.currentTarget : document.querySelector(`button[onclick*="'${tabId}'"]`);
     if (targetBtn) {
         targetBtn.classList.add("active");
@@ -92,6 +122,18 @@ function openTab(evt, tabId) {
     }
     window.scrollTo(0, 0);
 }
+
+window.onscroll = function() { scrollFunction(); };
+
+function scrollFunction() {
+    const topBtn = document.getElementById("scrollToTopBtn");
+    if (topBtn) {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) topBtn.style.display = "block";
+        else topBtn.style.display = "none";
+    }
+}
+
+function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
 function generateWishlistContent(data, purchasedIds, favoriteIds) {
     const nav = document.getElementById('dynamic-tab-nav');
@@ -128,7 +170,6 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
             const low = getLowestPriceInfo(item.winkels);
             const overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
 
-            // Detail Lijst (HERSTELD LAYOUT)
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}">
                     <div class="left-column">
@@ -141,11 +182,13 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                         <div class="price-links">
                             ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}">${w.naam}: ${w.prijs}</a>`).join('')}
                         </div>
-                        ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                        <div class="button-row">
+                            ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                            ${item.video_id ? `<button class="video-button" onclick="openVideo('${item.video_id}')">🎬 Bekijk video</button>` : ''}
+                        </div>
                     </div>
                 </div>`;
 
-            // Compact Overzicht
             overviewHtml += `
                 <div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
                     <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>
@@ -159,13 +202,12 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
     nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')"><span class="tab-info">Inventaris</span></button>`;
     overview.innerHTML = overviewHtml;
-
-    const invHtml = `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div id="inventory-list"></div></div>`;
-    listContainer.innerHTML = listsHtml + invHtml;
+    listContainer.innerHTML = listsHtml + `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div id="inventory-list"></div></div>`;
     if (data.inventaris_links) document.getElementById('inventory-list').innerHTML = data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#b71c1c; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`).join('');
 }
 
 async function loadWishlist() {
+    setNinjaGreeting();
     createSparks();
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
@@ -174,13 +216,8 @@ async function loadWishlist() {
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
         const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
         const rInv = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
-
-        generateWishlistContent(
-            {...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}, inventaris_links: rInv},
-            new Set(claims.purchased_items),
-            new Set(favs.favorite_ids)
-        );
-
+        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}, inventaris_links: rInv}, new Set(claims.purchased_items), new Set(favs.favorite_ids));
+        if (config.wenslijst_titel) document.getElementById('main-title').innerText = config.wenslijst_titel;
         const loader = document.getElementById('loading-message');
         if (loader) loader.style.display = 'none';
     } catch (e) { console.error(e); }

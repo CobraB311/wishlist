@@ -8,7 +8,7 @@
     "winkels": [
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1DOZ5fR", "prijs": "€ 26,19" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/i2vcTRC", "prijs": "€ 25,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 29,99" }
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 22,92" }
     ]
   },
   {
@@ -39,9 +39,7 @@
     "beschrijving": "Ga op avontuur als de Groene Ninja! Dit zwaard van Lloyd is gemaakt van zacht schuim voor veilig speelplezier en wordt geleverd met een gedetailleerde schede die Jonas makkelijk kan dragen. Een onmisbaar item voor elke jonge Ninjago-fan.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt20a7b4c7e3d77f72/854311_Prod.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      {
-        "naam": "LEGO Shop", "link": "https://www.lego.com/nl-be/product/lloyds-sword-with-sheath-854311", "prijs": "€ 19,99"
-      }
+      { "naam": "LEGO Shop", "link": "https://www.lego.com/nl-be/product/lloyds-sword-with-sheath-854311", "prijs": "€ 19,99" }
     ]
   }
 ]

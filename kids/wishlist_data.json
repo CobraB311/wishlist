@@ -1,6 +1,8 @@
 {
   "wenslijst_titel": "Verjaardagslijstjes",
-  "datum": "2026-02-14",
+  "datum": "2026-02-22",
+  "aftel_datum": "2026-03-08T12:00:00",
+  "aftel_naam": "Jonas",
   "personen": [
     { "naam": "Jonas", "data_file": "jonas_items.json" },
     { "naam": "Milan", "data_file": "milan_items.json" }

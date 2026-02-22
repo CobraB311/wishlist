@@ -8,7 +8,7 @@
     "winkels": [
       { "naam": "Amazon.nl", "link": "https://www.amazon.nl/Nintendo-Switch-MARIO-TENNIS-FEVER/dp/B0FR9SXRB6", "prijs": "€ 68,95" },
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/switch-2-mario-tennis-fever-nl/02335384", "prijs": "€ 69,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/mario-tennis-fever-nintendo-switch-2/9300000240435887/", "prijs": "€ 69,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/mario-tennis-fever-nintendo-switch-2/9300000240435887/", "prijs": "€ 64,95" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a22034346/Mario-Tennis-Fever-Nintendo-Switch-2-NL-Videospel-Nintendo-Switch-2", "prijs": "€ 69,99" },
       { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_mario-tennis-fever-nintendo-switch-2-fr-2199211.html", "prijs": "€ 69,99" },
       { "naam": "Coolblue", "link": "https://www.coolblue.be/nl/product/974929/mario-tennis-fever-nintendo-switch-2.html", "prijs": "€ 70,00" },
@@ -50,7 +50,7 @@
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/07GETlod", "prijs": "€ 38,42" },
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/switch-captain-toad-treasure-tracker/01332841", "prijs": "€ 39,95" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a11915336/Captain-toad-treasure-tracker-NL-SWITCH", "prijs": "€ 47,62" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/captain-toad-treasure-tracker/9200000096129133/", "prijs": "€ 51,35" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/captain-toad-treasure-tracker/9200000096129133/", "prijs": "€ 39,99" },
       { "naam": "Tweakers", "link": "https://tweakers.net/pricewatch/1168813/captain-toad-treasure-tracker-switch.html", "prijs": "Check prijs" }
     ]
   },
@@ -61,89 +61,88 @@
     "beschrijving": "Een exclusieve set van 5 Hot Wheels F1-racewagens op schaal 1:64 van legendarische teams (McLaren, BWT Alpine, Visa Cash App RB, KICK Sauber en MoneyGram Haas). Must-have voor verzamelaars en jonge snelheidsduivels.",
     "afbeelding_url": "https://www.dreamland.be/media/cache/default_gallery_main_webp/media/image/02257006/02257006_001.1344d7a1.webp",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/hot-wheels-formula-1-race-team-5-car-pack/9300000222631510/", "prijs": "€ 8,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/hot-wheels-formula-1-race-team-5-car-pack/9300000222631510/", "prijs": "€ 7,89" },
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/hot-wheels-formule-1-race-cars-5-pack-voertuigen/02257006", "prijs": "€ 9,99" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/8vUwMZV", "prijs": "€ 10,99" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/1ApoeJ4", "prijs": "€ 12,99" },
       { "naam": "SupraBazar", "link": "https://www.suprabazar.be/hot-wheels-formule-1-5-f1-auto-s-32065562", "prijs": "€ 13,99" }
     ]
   },
-            {
-                "id": "set-11039",
-                "naam": "LEGO® Classic Creatieve Etensvriendjes",
-                "nummer": "11039",
-                "beschrijving": "Een creatieve set met 150 stenen om vrolijke etensvriendjes te bouwen, zoals een burger, ijsje, avocado of taco. Ideaal voor fantasierijk en vrij bouwen.",
-                "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-                "winkels": [
-                    {"naam": "Amazon.nl", "link": "https://amzn.eu/d/7eh6klT", "prijs": "€ 7,95"},
-                    {"naam": "Amazon.com.be", "link": "https://amzn.eu/d/4CN89uw", "prijs": "€ 7,95"},
-                    {"naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-etensvriendjes-11039/9300000187249559/", "prijs": "€ 8,95"},
-                    {"naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023", "prijs": "€ 9,95"},
-                    {"naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370", "prijs": "€ 9,98"},
-                    {"naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-food-friends-11039", "prijs": "€ 9,99"},
-                    {"naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11039/Creative-Food-Friends.html", "prijs": "Check prijs"}
-                ]
-            },
-            {
-                "id": "set-11036",
-                "naam": "LEGO® Classic Creatieve Voertuigen",
-                "nummer": "11036",
-                "beschrijving": "Een verzameling van 900 stenen om stoere voertuigen te bouwen, zoals een ijsjeswagen, kraan, takelwagen en meer! Inclusief 52 verschillende soorten wielen.",
-                "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt50be55787306f8ce/11036_alt1.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
-                "winkels": [
-                    {"naam": "Amazon.nl", "link": "https://amzn.eu/d/85C7oCA", "prijs": "€ 49,99"},
-                    {"naam": "Amazon.com.be", "link": "https://amzn.eu/d/bJnfzKn", "prijs": "€ 49,99"},
-                    {"naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11036-lego-creatieve-voertuigen/01755527", "prijs": "€ 54,95"},
-                    {"naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-voertuigen-11036/9300000157956434/", "prijs": "€ 47,99"},
-                    {"naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11036-creatieve-voertuigen-31627290", "prijs": "€ 49,98"},
-                    {"naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036", "prijs": "€ 49,99"},
-                    {"naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11036/Creative-Vehicles.html", "prijs": "Check prijs"}
-                ]
-            },
-            {
-                "id": "set-31134",
-                "naam": "LEGO® Creator 3-in-1 Space Shuttle",
-                "nummer": "31134",
-                "beschrijving": "Met deze set bouw je 3 modellen in 1! Een Space Shuttle, een stoer ruimteschip of een coole astronaut. Perfect voor urenlang speelplezier in de ruimte!",
-                "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt0a5a76e48f4ee7c6/31134_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-                "winkels": [
-                    {"naam": "Amazon.nl", "link": "https://amzn.eu/d/hzt6NJi", "prijs": "€ 7,99"},
-                    {"naam": "Amazon.com.be", "link": "https://amzn.eu/d/cO8lNMz", "prijs": "€ 7,99"},
-                    {"naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-creator-3in1-space-shuttle-ruimteschip-set-31134/9300000132639040/", "prijs": "€ 9,95"},
-                    {"naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/31134-lego-space-shuttle/01704112", "prijs": "€ 9,95"},
-                    {"naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-creator-31134-space-shuttle-30734427", "prijs": "€ 9,98"},
-                    {"naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/space-shuttle-31134", "prijs": "€ 9,99"},
-                    {"naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/31134/Space-Shuttle.html", "prijs": "Check prijs"}
-                ]
-            },
-            {
-                "id": "set-76312",
-                "naam": "LEGO® ǀ Marvel De Hulk truck vs. Thanos",
-                "nummer": "76312",
-                "beschrijving": "Epische confrontatie met Hulks supergrote, groene monstertruck tegen Thanos! De set bevat een truck met mega-ophanging en minifiguren van Hulk met helm en Thanos met zijn Tesseract en Infinity Gauntlet.",
-                "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt1bafb60f4145842b/76312_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-                "winkels": [
-                    {"naam": "Amazon.nl", "link": "https://amzn.eu/d/90UC8Ac", "prijs": "€ 20,79"},
-                    {"naam": "Amazon.com.be", "link": "https://amzn.eu/d/8uIshy7", "prijs": "€ 21,50"},
-                    {"naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622", "prijs": "€ 21,14"},
-                    {"naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/", "prijs": "€ 21,14"},
-                    {"naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817", "prijs": "€ 29,99"},
-                    {"naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312", "prijs": "€ 29,99"},
-                    {"naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/76312/The-Hulk-Truck-vs-Thanos.html", "prijs": "Check prijs"}
-                ]
-            },
+  {
+    "id": "set-11039",
+    "naam": "LEGO® Classic Creatieve Etensvriendjes",
+    "nummer": "11039",
+    "beschrijving": "Een creatieve set met 150 stenen om vrolijke etensvriendjes te bouwen, zoals een burger, ijsje, avocado of taco. Ideaal voor fantasierijk en vrij bouwen.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/7eh6klT", "prijs": "€ 7,95" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4CN89uw", "prijs": "€ 7,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-etensvriendjes-11039/9300000187249559/", "prijs": "€ 8,49" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023", "prijs": "€ 9,95" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370", "prijs": "€ 9,98" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-food-friends-11039", "prijs": "€ 9,99" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11039/Creative-Food-Friends.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
+    "id": "set-11036",
+    "naam": "LEGO® Classic Creatieve Voertuigen",
+    "nummer": "11036",
+    "beschrijving": "Een verzameling van 900 stenen om stoere voertuigen te bouwen, zoals een ijsjeswagen, kraan, takelwagen en meer! Inclusief 52 verschillende soorten wielen.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt50be55787306f8ce/11036_alt1.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/85C7oCA", "prijs": "€ 49,99" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bJnfzKn", "prijs": "€ 49,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11036-lego-creatieve-voertuigen/01755527", "prijs": "€ 54,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-voertuigen-11036/9300000157956434/", "prijs": "€ 40,99" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11036-creatieve-voertuigen-31627290", "prijs": "€ 49,98" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036", "prijs": "€ 49,99" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11036/Creative-Vehicles.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
+    "id": "set-31134",
+    "naam": "LEGO® Creator 3-in-1 Space Shuttle",
+    "nummer": "31134",
+    "beschrijving": "Met deze set bouw je 3 modellen in 1! Een Space Shuttle, een stoer ruimteschip of een coole astronaut. Perfect voor urenlang speelplezier in de ruimte!",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt0a5a76e48f4ee7c6/31134_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/hzt6NJi", "prijs": "€ 7,99" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/cO8lNMz", "prijs": "€ 7,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-creator-3in1-space-shuttle-ruimteschip-set-31134/9300000132639040/", "prijs": "€ 7,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/31134-lego-space-shuttle/01704112", "prijs": "€ 9,95" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-creator-31134-space-shuttle-30734427", "prijs": "€ 9,98" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/space-shuttle-31134", "prijs": "€ 9,99" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/31134/Space-Shuttle.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
+    "id": "set-76312",
+    "naam": "LEGO® ǀ Marvel De Hulk truck vs. Thanos",
+    "nummer": "76312",
+    "beschrijving": "Epische confrontatie met Hulks supergrote, groene monstertruck tegen Thanos! De set bevat een truck met mega-ophanging en minifiguren van Hulk met helm en Thanos met zijn Tesseract en Infinity Gauntlet.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt1bafb60f4145842b/76312_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/90UC8Ac", "prijs": "€ 20,79" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/8uIshy7", "prijs": "€ 21,50" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622", "prijs": "€ 21,14" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/", "prijs": "€ 22,46" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817", "prijs": "€ 29,99" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312", "prijs": "€ 29,99" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/76312/The-Hulk-Truck-vs-Thanos.html", "prijs": "Check prijs" }
+    ]
+  },
   {
     "id": "lego-ninjago-71857-tree-house-battle",
     "naam": "LEGO® NINJAGO® Ninjavoertuigen bij de boomhut",
     "nummer": "71857",
-    "video_id": "SPjyQlZ00ww",
     "beschrijving": "Een spectaculaire 4-in-1 speelset! Bouw een gedetailleerde boomhut en ga de strijd aan met een helikopter, een terreinwagen en een motor. Inclusief 6 minifiguren: Kai, Sora, Arin, Wyldfyre en twee schurken. Ideaal voor urenlang Ninja-speelplezier.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt240a111e241142eb/71857_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "Coolblue", "link": "https://www.coolblue.be/nl/product/972604/lego-ninjago-ninjavoertuigen-bij-de-boomhut-71857.html", "prijs": "€ 62,00" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/04VdqOsH", "prijs": "€ 62,00" },
       { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_71857-ninjavoertuigen-2208510.html", "prijs": "€ 62,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-ninjavoertuigen-bij-de-boomhut-actiespeelgoed-speelset-met-boomhut-helikopter-motor-en-6-minifiguren-71857/9300000237345509/", "prijs": "€ 63,00" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-ninjavoertuigen-bij-de-boomhut-actiespeelgoed-speelset-met-boomhut-helikopter-motor-en-6-minifiguren-71857/9300000237345509/", "prijs": "€ 62,00" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0f9Paqoi", "prijs": "€ 64,00" },
       { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-ninjago-71857-ninjagovoertuigen-bij-de-boomhut-32140521", "prijs": "€ 69,99" },
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/lego-ninjago-ninjavoertuigen-bij-de-boomhut-71857/02323077", "prijs": "€ 79,99" },
@@ -151,38 +150,38 @@
       { "naam": "Fnac", "link": "https://www.nl.fnac.be/LEGO-71857-NINJA-VEHICLE-TREE-HOUSE-BATTLE/a22209306", "prijs": "€ 79,99" }
     ]
   },
-            {
-                "id": "set-60408",
-                "naam": "LEGO® City Transportvoertuig met Sportautos",
-                "nummer": "60408",
-                "beschrijving": "Een gigantische autotransporter met een dubbele aanhanger en ruimte voor vier sportauto's. Inclusief minifiguren van een vrachtwagenchauffeur en twee racers.",
-                "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt263f3afbfec70411/60408_boxprod_v39_sha.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
-                "winkels": [
-                    {"naam": "Amazon.nl", "link": "https://amzn.eu/d/3ba25Oe", "prijs": "€ 83,00"},
-                    {"naam": "Amazon.com.be", "link": "https://amzn.eu/d/dJmm2BK", "prijs": "€ 83,00"},
-                    {"naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-transportvoertuig-met-sportauto-s-60408/9300000173010363/?referrer=socialshare_pdp_www", "prijs": "€ 99,99"},
-                    {"naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60408-lego-transportvoertuig-met-sportauto-s/01773873", "prijs": "€ 99,95"},
-                    {"naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60408-transportvoertuig-met-sportauto-s-31952189", "prijs": "€ 99,98"},
-                    {"naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/sportscar-transporter-with-cars-60408", "prijs": "€ 99,99"},
-                    {"naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/60408/Sportscar-Transporter-with-Cars.html", "prijs": "Check prijs"}
-                ]
-            },
-            {
-                "id": "set-60413",
-                "naam": "LEGO® City Brandweervliegtuig",
-                "nummer": "60413",
-                "beschrijving": "Een groot brandweervliegtuig met dubbele propeller en waterlanceerfunctie, een brandweerbuggy, een bosbrandscène en 3 minifiguren van brandweerlieden.",
-                "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt10b1007c3d622d07/60413.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-                "winkels": [
-                    {"naam": "Amazon.nl", "link": "https://amzn.eu/d/exhmPup", "prijs": "€ 47,49"},
-                    {"naam": "Amazon.com.be", "link": "https://amzn.eu/d/52rXj5J", "prijs": "€ 47,49"},
-                    {"naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-brandweervliegtuig-60413/9300000157956269/?referrer=socialshare_pdp_www", "prijs": "€ 54,99"},
-                    {"naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60413-brandweervliegtuig-31452041", "prijs": "€ 54,98"},
-                    {"naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60413-lego-brandweervliegtuig/01756081", "prijs": "€ 59,95"},
-                    {"naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/fire-rescue-plane-60413", "prijs": "€ 54,99"},
-                    {"naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/60413/Fire-Rescue-Plane.html", "prijs": "Check prijs"}
-                ]
-            },
+  {
+    "id": "set-60408",
+    "naam": "LEGO® City Transportvoertuig met Sportautos",
+    "nummer": "60408",
+    "beschrijving": "Een gigantische autotransporter met een dubbele aanhanger en ruimte voor vier sportauto's. Inclusief minifiguren van een vrachtwagenchauffeur en twee racers.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt263f3afbfec70411/60408_boxprod_v39_sha.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/3ba25Oe", "prijs": "€ 83,00" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/dJmm2BK", "prijs": "€ 83,00" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-transportvoertuig-met-sportauto-s-60408/9300000173010363/?referrer=socialshare_pdp_www", "prijs": "€ 99,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60408-lego-transportvoertuig-met-sportauto-s/01773873", "prijs": "€ 99,95" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60408-transportvoertuig-met-sportauto-s-31952189", "prijs": "€ 99,98" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/sportscar-transporter-with-cars-60408", "prijs": "€ 99,99" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/60408/Sportscar-Transporter-with-Cars.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
+    "id": "set-60413",
+    "naam": "LEGO® City Brandweervliegtuig",
+    "nummer": "60413",
+    "beschrijving": "Een groot brandweervliegtuig met dubbele propeller en waterlanceerfunctie, een brandweerbuggy, een bosbrandscène en 3 minifiguren van brandweerlieden.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt10b1007c3d622d07/60413.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/exhmPup", "prijs": "€ 47,49" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/52rXj5J", "prijs": "€ 47,49" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-brandweervliegtuig-60413/9300000157956269/?referrer=socialshare_pdp_www", "prijs": "€ 67,50" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60413-brandweervliegtuig-31452041", "prijs": "€ 54,98" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60413-lego-brandweervliegtuig/01756081", "prijs": "€ 59,95" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/fire-rescue-plane-60413", "prijs": "€ 54,99" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/60413/Fire-Rescue-Plane.html", "prijs": "Check prijs" }
+    ]
+  },
   {
     "id": "set-lego-60484-gaming-racecar",
     "naam": "LEGO® City Gaming Raceauto",
@@ -283,7 +282,7 @@
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/lego-spider-man-auto-vs-venomized-wolverine-76336/02323657", "prijs": "€ 14,99" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/j8eoI6z", "prijs": "€ 16,95" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/064gOCz", "prijs": "€ 16,95" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-marvel-76336/9300000237345463/", "prijs": "€ 19,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-marvel-76336/9300000237345463/", "prijs": "€ 16,99" },
       { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_76336-spider-man-vs-wolverine-2208581.html", "prijs": "€ 19,99" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/LEGO-76336-SUPER-HEROES/a22213448", "prijs": "€ 19,99" },
       { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-super-heroes-76336-spider-man-auto-vs.-venomized-wolverine-32140540", "prijs": "€ 19,99" },
@@ -298,7 +297,7 @@
     "beschrijving": "Geef plankgas met deze klassieke Hot Rod! Deze stoere modelauto heeft een afneembaar dak en een minifiguur van een coureur. Een perfect klein cadeautje voor jonge racefans vanaf 5 jaar.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt85e8e4843d76c937/60485_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-60485/9300000237345422/", "prijs": "€ 8,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-60485/9300000237345422/", "prijs": "€ 8,49" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/eJJN1LU", "prijs": "€ 8,95" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/fKc8W3l", "prijs": "€ 9,99" },
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/lego-city-hot-rod-60485/02323909", "prijs": "€ 9,99" },
@@ -317,7 +316,7 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt998df642757b7cdf/76338_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
     "winkels": [
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/lego-mechaduel-spider-man-vs-doc-ock-76338/02323299", "prijs": "€ 18,74" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-marvel-76338/9300000237345465/", "prijs": "€ 25,49" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-marvel-76338/9300000237345465/", "prijs": "€ 24,99" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/fnjMVlS", "prijs": "€ 25,49" },
       { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-super-heroes-76338-mechaduel-spider-man-vs.-doc-ock-32140559", "prijs": "€ 25,99" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/8qKsoQG", "prijs": "€ 29,49" },
@@ -336,7 +335,7 @@
     "winkels": [
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/6VBbw64", "prijs": "€ 8,95" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4jRMTX6", "prijs": "€ 8,95" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-71851/9300000237345408/", "prijs": "€ 8,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-71851/9300000237345408/", "prijs": "€ 8,49" },
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/lego-ninjago-kai-s-drakenmecha-strijdpakket-71851/02323923", "prijs": "€ 9,99" },
       { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_71851-kais-drakenmecha-2208506.html", "prijs": "€ 9,99" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/LEGO-71851-KAI-S-DRAGON-MECH-BATTLE-PACK/a22032289", "prijs": "€ 9,99" },
@@ -390,7 +389,7 @@
     "winkels": [
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/7IipFrq", "prijs": "€ 15,95" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4wZcsKQ", "prijs": "€ 16,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-71826/9300000187249677/", "prijs": "€ 17,49" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-71826/9300000187249677/", "prijs": "€ 10,30" },
       { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-ninjago-71826-spinjitzu-drakenstrijdpakket-32031075", "prijs": "€ 17,99" },
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71826-lego-spinjitzu-drakenstrijdpakket/01831467", "prijs": "€ 19,95" },
       { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_71826-spinjitzu-drakenstrijdpakket-2208486.html", "prijs": "€ 19,99" },
@@ -406,9 +405,7 @@
     "beschrijving": "Word een echte meester van Spinjitzu met deze dubbele katanas! Deze zwaarden zijn gemaakt van zacht schuim, waardoor ze veilig zijn voor actievolle duels. De set bevat twee katanas die Jonas op zijn rug kan dragen, precies zoals Kai of Lloyd.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt074f1eae3be18d9a/854310_Prod.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      {
-        "naam": "LEGO Shop", "link": "https://www.lego.com/nl-be/product/ninja-double-katanas-854310", "prijs": "€ 24,99"
-      }
+      { "naam": "LEGO Shop", "link": "https://www.lego.com/nl-be/product/ninja-double-katanas-854310", "prijs": "€ 24,99" }
     ]
   },
   {
@@ -432,7 +429,7 @@
     "beschrijving": "Set van 6 zelfinktende stempels met populaire Paw Patrol figuren. Ideaal om creatieve tekeningen en knutselwerkjes op te fleuren.",
     "afbeelding_url": "https://media.s-bol.com/K90WrVv0WQ2n/pYmG1p/970x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-stempels/9300000114581267/?referrer=socialshare_pdp_www", "prijs": "€ 7,99" }
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-stempels/9300000114581267/?referrer=socialshare_pdp_www", "prijs": "€ 10,22" }
     ]
   },
   {
@@ -442,7 +439,7 @@
     "beschrijving": "Set van 12 super uitwasbare viltstiften met een stempel aan de achterkant van elke stift. Inclusief verschillende leuke figuurtjes. Perfect voor creatief speelplezier zonder vlekken.",
     "afbeelding_url": "https://media.s-bol.com/JYn940kKOXQg/NxWM1Ev/550x418.jpg",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/carioca-stempelstift-superwashable-12-stiften/9200000055975554/?referrer=socialshare_pdp_www", "prijs": "€ 8,95" }
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/carioca-stempelstift-superwashable-12-stiften/9200000055975554/?referrer=socialshare_pdp_www", "prijs": "€ 14,10" }
     ]
   },
   {
@@ -487,7 +484,7 @@
     "afbeelding_url": "https://media.s-bol.com/m9EWLkwDM9yG/2k9pN4M/797x1200.jpg",
     "winkels": [
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/06faETJY", "prijs": "€ 12,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/smartgames-squirrels-go-nuts-60-opdrachten-denkpuzzel-eekhoorns/9200000091828788/", "prijs": "€ 17,95" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/smartgames-squirrels-go-nuts-60-opdrachten-denkpuzzel-eekhoorns/9200000091828788/", "prijs": "€ 12,99" },
       { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/smartgames-squirrels-go-nuts-compact-denkspel-60-opdrachten/01321302", "prijs": "€ 17,95" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/00au1R3i", "prijs": "€ 24,99" }
     ]
@@ -499,7 +496,7 @@
     "beschrijving": "Een razendsnelle 6-wielige stuntauto die 360 graden kan draaien en over bijna elk terrein rijdt. De Turbotwister is voorzien van felle LED-verlichting en kan spectaculaire flips maken. Inclusief oplaadbare batterij voor urenlang speelplezier.",
     "afbeelding_url": "https://media.s-bol.com/NwP5Yxk1XY7N/ElVX3kN/1191x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/vroemy-turbotwister-bestuurbare-auto-stuntauto-6-wielen-afstandsbestuurbare-auto-buiten-voor-jongens-meisjes/9300000241264382/", "prijs": "€ 32,95" }
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/vroemy-turbotwister-bestuurbare-auto-stuntauto-6-wielen-afstandsbestuurbare-auto-buiten-voor-jongens-meisjes/9300000241264382/", "prijs": "€ 37,95" }
     ]
   },
   {
@@ -509,9 +506,7 @@
     "beschrijving": "Deze stoere robot volgt de laserstraal van de afstandsbediening als een echte jager! Hij kan spullen tillen met zijn grijpers, heeft LED-ogen die van kleur veranderen en maakt coole geluidseffecten. Bovendien is hij volledig oplaadbaar via USB.",
     "afbeelding_url": "https://media.s-bol.com/g0WDqO2182l3/JZpr1wD/1190x1200.jpg",
     "winkels": [
-      {
-        "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/stena-lightchaser-robot-volgt-de-laser-kan-spullen-tillen-interactief-stem-speelgoed-led-ogen-met-geluidseffecten-jongens-oplaadbaar/9300000241037254/", "prijs": "€ 49,95"
-      }
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/stena-lightchaser-robot-volgt-de-laser-kan-spullen-tillen-interactief-stem-speelgoed-led-ogen-met-geluidseffecten-jongens-oplaadbaar/9300000241037254/", "prijs": "€ 49,95" }
     ]
   },
   {
@@ -590,7 +585,7 @@
     "beschrijving": "Beleef de avonturen van Judy Hopps en Nick Wilde opnieuw met dit ultieme stickerboek van Zootropolis 2! Bevat meer dan 60 herbruikbare stickers van de leukste personages uit de film en leuke achtergronden om ze op te plakken.",
     "afbeelding_url": "https://media.s-bol.com/3DZYMR1Q73gO/Bg1vBrY/925x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ultimate-sticker-book-disney-zootopia-2-ultimate-sticker-book/9300000236098592/", "prijs": "€ 11,89" }
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ultimate-sticker-book-disney-zootopia-2-ultimate-sticker-book/9300000236098592/", "prijs": "€ 11,34" }
     ]
   },
   {
@@ -600,7 +595,7 @@
     "beschrijving": "Slaap als een echte ninja onder dit stoere LEGO NINJAGO dekbedovertrek! Gemaakt van 100% katoen voor optimaal comfort. Het overtrek is omkeerbaar met aan beide kanten een uniek NINJAGO-ontwerp. Inclusief bijpassende kussensloop van 70x90 cm.",
     "afbeelding_url": "https://media.s-bol.com/PLGzD9AnDqlw/xG4qVgJ/691x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-dekbedovertrek-fight-140-x-200-cm-70-x-90-cm-katoen/9300000244920686/", "prijs": "€ 31,25" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-dekbedovertrek-fight-140-x-200-cm-70-x-90-cm-katoen/9300000244920686/", "prijs": "€ 36,00" },
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/9miw1Ug", "prijs": "€ 33,99" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0FKNKmR", "prijs": "€ 33,99" }
     ]
@@ -781,7 +776,7 @@
     "beschrijving": "Een complete creatieve speelplek in één koffer! Dit station heeft een ingebouwde tafel met verschillende structuren, 15 accessoires en 6 kleuren klei. Na het spelen berg je alles op in de handige meeneemkoffer. Ideaal voor urenlang knutselplezier zonder rommel.",
     "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/", "prijs": "€ 29,99" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/", "prijs": "€ 23,99" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0991EIdJ", "prijs": "€ 36,59" }
     ]
   },
@@ -792,7 +787,7 @@
     "beschrijving": "Veiligheid voorop! Dit fluorescerende en reflecterende hesje van Wowow zorgt ervoor dat Jonas extra goed opvalt in het verkeer. Het vestje heeft een handige ritssluiting en is van duurzaam materiaal.",
     "afbeelding_url": "https://media.s-bol.com/xM7OJ0m1ynXP/mw8359r/790x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/wowow-kinderhesje-zippy-green-m/9300000237288635/", "prijs": "€ 22,29" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/wowow-kinderhesje-zippy-green-m/9300000237288635/", "prijs": "€ 24,49" },
       { "naam": "Decathlon", "link": "https://www.decathlon.be/nl/p/mp/zippy-jacket-green/c7846ea0-f5a6-418b-8ae5-48ec045d82b7/c9", "prijs": "€ 25,99" }
     ]
   }

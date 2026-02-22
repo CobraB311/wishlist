@@ -5,62 +5,55 @@ function setNinjaGreeting() {
     const greetingEl = document.getElementById('ninja-greeting');
     if (!greetingEl) return;
     const hour = new Date().getHours();
-    let message = "";
-    if (hour >= 6 && hour < 12) message = "Goedemorgen Ninja!";
-    else if (hour >= 12 && hour < 18) message = "Goedemiddag Sensei!";
-    else if (hour >= 18 && hour < 23) message = "Goedenavond Ninja.";
-    else message = "Goedenacht Ninja.";
+    let message = (hour >= 6 && hour < 12) ? "Goedemorgen Ninja!" : (hour >= 12 && hour < 18) ? "Goedemiddag Sensei!" : (hour >= 18 && hour < 23) ? "Goedenavond Ninja." : "Goedenacht Ninja.";
     greetingEl.innerText = message;
 }
 
+function startCountdown(targetDateStr, targetName) {
+    const container = document.getElementById("countdown-container");
+    const timerEl = document.getElementById("countdown-timer");
+    if (!targetDateStr || !container) return;
+
+    container.style.display = "block";
+    const targetDate = new Date(targetDateStr).getTime();
+
+    const updateTimer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            clearInterval(updateTimer);
+            timerEl.innerHTML = `<div class="birthday-wish">🎉 GELUKKIGE VERJAARDAG ${targetName.toUpperCase()}! 🎉</div>`;
+        } else {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            timerEl.innerHTML = `${days}d ${hours}u ${minutes}m ${seconds}s`;
+        }
+    }, 1000);
+}
+
 function openVideo(videoId) {
-    const modal = document.getElementById('videoModal');
-    const frame = document.getElementById('videoFrame');
+    const modal = document.getElementById('videoModal'), frame = document.getElementById('videoFrame');
     frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
     modal.style.display = "block";
 }
-
 function closeVideo() {
-    const modal = document.getElementById('videoModal');
-    const frame = document.getElementById('videoFrame');
-    frame.src = "";
-    modal.style.display = "none";
+    const modal = document.getElementById('videoModal'), frame = document.getElementById('videoFrame');
+    frame.src = ""; modal.style.display = "none";
 }
+window.onclick = function(e) { if (e.target == document.getElementById('videoModal')) closeVideo(); }
 
-window.onclick = function(event) {
-    const modal = document.getElementById('videoModal');
-    if (event.target == modal) closeVideo();
-}
-
-function createSparks() {
-    const container = document.getElementById('snow-container');
-    if (!container) return;
-    container.innerHTML = '';
-    for (let i = 0; i < 40; i++) {
-        const spark = document.createElement('div');
-        spark.className = 'snow';
-        spark.style.left = Math.random() * 100 + "%";
-        spark.style.animationDuration = (Math.random() * 4 + 4) + "s";
-        spark.style.animationDelay = Math.random() * 5 + "s";
-        container.appendChild(spark);
-    }
-}
-
-function normalizeText(text) {
-    return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
+function normalizeText(text) { return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
 
 function filterGifts() {
     const input = normalizeText(document.getElementById('gift-search').value);
-    const giftCards = document.querySelectorAll('.overview-grid-item, .wens-item');
-    giftCards.forEach(card => {
-        const titleEl = card.querySelector('h3, .overview-caption');
-        const title = titleEl ? normalizeText(titleEl.innerText) : "";
-        const descEl = card.querySelector('p');
-        const desc = descEl ? normalizeText(descEl.innerText) : "";
-        const isPurchased = card.classList.contains('purchased');
+    document.querySelectorAll('.overview-grid-item, .wens-item').forEach(card => {
+        const title = normalizeText(card.querySelector('h3, .overview-caption')?.innerText || "");
+        const desc = normalizeText(card.querySelector('p')?.innerText || "");
         const matchesSearch = title.includes(input) || desc.includes(input);
-        const matchesFilter = !hidePurchased || !isPurchased;
+        const matchesFilter = !hidePurchased || !card.classList.contains('purchased');
         card.style.display = (matchesSearch && matchesFilter) ? "" : "none";
     });
 }
@@ -76,70 +69,42 @@ function togglePurchasedFilter() {
 function getLowestPriceInfo(winkels) {
     if (!winkels || winkels.length === 0) return { prijs: "N.v.t.", index: -1 };
     let lowestVal = Infinity, lowestIndex = 0;
-    winkels.forEach((w, index) => {
+    winkels.forEach((w, i) => {
         const val = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
-        if (!isNaN(val) && val < lowestVal) { lowestVal = val; lowestIndex = index; }
+        if (val < lowestVal) { lowestVal = val; lowestIndex = i; }
     });
-    return { prijs: lowestVal === Infinity ? winkels[0].prijs : `€ ${lowestVal.toFixed(2).replace('.', ',')}`, index: lowestIndex };
+    return { prijs: `€ ${lowestVal.toFixed(2).replace('.', ',')}`, index: lowestIndex };
 }
 
-function claimItem(persoonNaam, itemName, itemId) {
-    const subject = `CLAIM: ${itemName} voor ${persoonNaam}`;
-    const body = `Ik heb dit cadeau gekocht: ${itemName} (ID: ${itemId})`;
-    window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+function claimItem(p, i, id) {
+    window.location.href = `mailto:${recipientEmail}?subject=CLAIM: ${i} voor ${p}&body=Ik heb dit gekocht: ${i} (ID: ${id})`;
 }
 
-function scrollToItem(persoonNaam, itemId) {
-    const tabId = personIdToTabId(persoonNaam);
-    openTab(null, tabId);
-    setTimeout(() => {
-        const el = document.getElementById(itemId);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 300);
+function scrollToItem(pNaam, iId) {
+    openTab(null, personIdToTabId(pNaam));
+    setTimeout(() => document.getElementById(iId)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
 }
 
-function personIdToTabId(naam) {
-    const n = naam.toLowerCase();
-    return (n === 'gezamenlijk' ? 'gezamenlijk' : n) + '-list-content';
-}
+function personIdToTabId(naam) { return (naam.toLowerCase() === 'gezamenlijk' ? 'gezamenlijk' : naam.toLowerCase()) + '-list-content'; }
 
 function openTab(evt, tabId) {
     if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
     document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
-    document.querySelectorAll(".tab-button").forEach(b => {
-        b.classList.remove("active");
-        b.style.backgroundColor = "";
-    });
+    document.querySelectorAll(".tab-button").forEach(b => { b.classList.remove("active"); b.style.backgroundColor = ""; });
     const targetTab = document.getElementById(tabId);
     if (targetTab) targetTab.classList.add("active");
-    let targetBtn = evt ? evt.currentTarget : document.querySelector(`button[onclick*="'${tabId}'"]`);
-    if (targetBtn) {
-        targetBtn.classList.add("active");
-        if (tabId.includes('jonas')) targetBtn.style.backgroundColor = "#b71c1c";
-        else if (tabId.includes('milan')) targetBtn.style.backgroundColor = "#1976d2";
-        else if (tabId.includes('gezamenlijk')) targetBtn.style.backgroundColor = "#2e7d32";
-        else targetBtn.style.backgroundColor = "#333";
+    let btn = evt ? evt.currentTarget : document.querySelector(`button[onclick*="'${tabId}'"]`);
+    if (btn) {
+        btn.classList.add("active");
+        const colors = { jonas: "#b71c1c", milan: "#1976d2", gezamenlijk: "#2e7d32" };
+        const key = Object.keys(colors).find(k => tabId.includes(k));
+        btn.style.backgroundColor = colors[key] || "#333";
     }
     window.scrollTo(0, 0);
 }
 
-window.onscroll = function() { scrollFunction(); };
-
-function scrollFunction() {
-    const topBtn = document.getElementById("scrollToTopBtn");
-    if (topBtn) {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) topBtn.style.display = "block";
-        else topBtn.style.display = "none";
-    }
-}
-
-function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
 function generateWishlistContent(data, purchasedIds, favoriteIds) {
-    const nav = document.getElementById('dynamic-tab-nav');
-    const listContainer = document.getElementById('person-lists-container');
-    const overview = document.getElementById('overview-grid-container');
-
+    const nav = document.getElementById('dynamic-tab-nav'), listContainer = document.getElementById('person-lists-container'), overview = document.getElementById('overview-grid-container');
     let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333;"><span class="tab-info">Overzicht</span></button>`;
     let listsHtml = '', overviewHtml = '';
 
@@ -147,29 +112,18 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
     if (data.gezamenlijke_items) groups.push(data.gezamenlijke_items);
 
     groups.forEach(person => {
-        const tabId = personIdToTabId(person.naam);
-        const total = person.items.length;
-        const bought = person.items.filter(i => purchasedIds.has(i.id)).length;
-        const perc = total > 0 ? Math.round((bought / total) * 100) : 0;
-
+        const tabId = personIdToTabId(person.naam), total = person.items.length, bought = person.items.filter(i => purchasedIds.has(i.id)).length, perc = total > 0 ? Math.round((bought / total) * 100) : 0;
         navHtml += `
             <button class="tab-button" onclick="openTab(event, '${tabId}')">
                 <span class="tab-info">${person.naam}</span>
                 <span class="tab-stats">${bought}/${total} gekocht (${perc}%)</span>
                 <div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div>
             </button>`;
-
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2>`;
         overviewHtml += `<h3>${person.naam}</h3><div class="overview-grid">`;
 
-        const sorted = [...person.items].sort((a, b) => (favoriteIds.has(b.id) ? 1 : 0) - (favoriteIds.has(a.id) ? 1 : 0));
-
-        sorted.forEach(item => {
-            const isP = purchasedIds.has(item.id);
-            const isF = favoriteIds.has(item.id);
-            const low = getLowestPriceInfo(item.winkels);
-            const overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
-
+        person.items.sort((a,b) => (favoriteIds.has(b.id)?1:0) - (favoriteIds.has(a.id)?1:0)).forEach(item => {
+            const isP = purchasedIds.has(item.id), isF = favoriteIds.has(item.id), low = getLowestPriceInfo(item.winkels), overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}">
                     <div class="left-column">
@@ -177,18 +131,14 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                         ${isF ? '<div class="favorite-badge">★ FAVORIET</div>' : ''}
                     </div>
                     <div class="right-column">
-                        <h3>${item.naam}</h3>
-                        <p>${item.beschrijving}</p>
-                        <div class="price-links">
-                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}">${w.naam}: ${w.prijs}</a>`).join('')}
-                        </div>
+                        <h3>${item.naam}</h3><p>${item.beschrijving}</p>
+                        <div class="price-links">${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}">${w.naam}: ${w.prijs}</a>`).join('')}</div>
                         <div class="button-row">
                             ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
-                            ${item.video_id ? `<button class="video-button" onclick="openVideo('${item.video_id}')">🎬 Bekijk video</button>` : ''}
+                            ${item.video_id ? `<button class="video-button" onclick="openVideo('${item.video_id}')">🎬 Video</button>` : ''}
                         </div>
                     </div>
                 </div>`;
-
             overviewHtml += `
                 <div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
                     <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>
@@ -208,9 +158,9 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
 async function loadWishlist() {
     setNinjaGreeting();
-    createSparks();
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
+        if (config.aftel_datum) startCountdown(config.aftel_datum, config.aftel_naam || "Ninja");
         const claims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
         const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
@@ -223,4 +173,6 @@ async function loadWishlist() {
     } catch (e) { console.error(e); }
 }
 
+window.onscroll = function() { document.getElementById("scrollToTopBtn").style.display = (window.scrollY > 300) ? "block" : "none"; };
+function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 window.onload = loadWishlist;

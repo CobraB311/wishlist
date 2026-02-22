@@ -1,12 +1,29 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
 
+const zumaQuotes = [
+    "Laten we een duik nemen!",
+    "Klaar voor actie in de golven!",
+    "1, 2, Zuma komt eraan!",
+    "Deze pup houdt van water!",
+    "Geen klus te groot, geen pup te klein!",
+    "Zuma staat paraat!",
+    "Tijd voor een redding op zee!",
+    "Klaar voor een natte missie!"
+];
+
 function setPupGreeting() {
     const greetingEl = document.getElementById('pup-greeting');
     if (!greetingEl) return;
+
+    // Willekeurige quote kiezen
+    const randomQuote = zumaQuotes[Math.floor(Math.random() * zumaQuotes.length)];
+
     const hour = new Date().getHours();
-    let message = (hour >= 6 && hour < 12) ? "Klaar voor een duik, Milan?" : (hour >= 12 && hour < 18) ? "Zuma staat paraat!" : (hour >= 18 && hour < 23) ? "Tijd voor een hondenkoekje?" : "Slaap lekker, kleine pup.";
-    greetingEl.innerText = message;
+    let timeGreeting = (hour >= 6 && hour < 12) ? "Goedemorgen!" : (hour >= 12 && hour < 18) ? "Goedemiddag!" : (hour >= 18 && hour < 23) ? "Goedenavond." : "Goedenacht.";
+
+    // Algemene welkomsttekst voor de familie
+    greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
 }
 
 function createBubbles() {
@@ -91,6 +108,9 @@ function getLowestPriceInfo(winkels) {
 function personIdToTabId(naam) { return (naam.toLowerCase() === 'gezamenlijk' ? 'gezamenlijk' : naam.toLowerCase()) + '-list-content'; }
 
 function openTab(evt, tabId) {
+    // Wissel van quote bij elke tab-klik voor variatie
+    setPupGreeting();
+
     if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
     document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(b => {
@@ -145,13 +165,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                     </div>
                 </div>`;
 
-            overviewHtml += `
-                <div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')">
-                    <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>
-                    ${isF ? '<div class="mini-star">★</div>' : ''}
-                    <div class="overview-caption">${item.naam}</div>
-                    <div style="font-size:0.85em; color:#ff6600; font-weight:bold;">Vanaf ${low.prijs}</div>
-                </div>`;
+            overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div><div class="overview-caption">${item.naam}</div><div style="font-size:0.85em; color:#ff6600; font-weight:bold;">Vanaf ${low.prijs}</div></div>`;
         });
         listsHtml += `</div>`; overviewHtml += `</div>`;
     });
@@ -175,7 +189,9 @@ async function loadWishlist() {
         const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
         const rInv = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
         generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}, inventaris_links: rInv}, new Set(claims.purchased_items), new Set(favs.favorite_ids));
-        document.getElementById('loading-message').style.display = 'none';
+
+        const loader = document.getElementById('loading-message');
+        if (loader) loader.style.display = 'none';
     } catch (e) { console.error(e); }
 }
 

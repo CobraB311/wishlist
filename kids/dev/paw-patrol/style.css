@@ -101,14 +101,27 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 
 /* BUBBLES */
 .water-area { flex-grow: 1; position: relative; overflow: hidden; }
-.snow {
-    position: absolute; background: rgba(0, 170, 255, 0.3);
-    border-radius: 50%; animation: floatUp linear infinite;
-    border: 1px solid rgba(255,255,255,0.4);
-    cursor: pointer; /* INTERACTIE: Laat zien dat je erop kunt klikken/hoveren */
-}
+.snow { position: absolute; background: rgba(0, 170, 255, 0.3); border-radius: 50%; animation: floatUp linear infinite; border: 1px solid rgba(255,255,255,0.4); }
 @keyframes floatUp { 0% { transform: translateY(110vh); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(-10vh); opacity: 0; } }
 
-#scrollToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1001; background-color: #ff6600; color: white; border: 2px solid #00aaff; width: 60px; height: 60px; border-radius: 50%; font-family: 'Impact'; cursor: pointer; }
+/* HET ZUMA ANKER (Back to top) */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1001;
+    background-color: #ff6600;
+    color: white;
+    border: 3px solid #00aaff;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+#scrollToTopBtn:hover { transform: scale(1.1) rotate(10deg); background-color: #ff8533; }
 
 @media (max-width: 850px) { .fixed-header { width: 100%; position: relative; height: auto; border-right: none; border-bottom: 4px solid #00aaff; } .page-wrapper { margin-left: 0; } .tab-nav { flex-direction: row; overflow-x: auto; padding: 10px; } .wens-item { flex-direction: column; align-items: center; } }

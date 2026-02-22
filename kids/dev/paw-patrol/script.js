@@ -1,6 +1,7 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
 
+// Lijst met wisselende Zuma-quotes
 const zumaQuotes = [
     "Laten we een duik nemen!",
     "Klaar voor actie in de golven!",
@@ -16,13 +17,13 @@ function setPupGreeting() {
     const greetingEl = document.getElementById('pup-greeting');
     if (!greetingEl) return;
 
-    // Willekeurige quote kiezen
+    // Kies een willekeurige quote
     const randomQuote = zumaQuotes[Math.floor(Math.random() * zumaQuotes.length)];
 
     const hour = new Date().getHours();
     let timeGreeting = (hour >= 6 && hour < 12) ? "Goedemorgen!" : (hour >= 12 && hour < 18) ? "Goedemiddag!" : (hour >= 18 && hour < 23) ? "Goedenavond." : "Goedenacht.";
 
-    // Algemene welkomsttekst voor de familie
+    // Begroeting voor de hele familie
     greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
 }
 

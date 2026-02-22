@@ -161,7 +161,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
     if (data.inventaris_links) document.getElementById('inventory-list').innerHTML = data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#ff6600; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`).join('');
 }
 
-function claimItem(p, i, id) { window.location.href = `mailto:${recipientEmail}?subject=CLAIM: ${i} voor ${p}&body=Gekocht: ${i} (ID: ${id})`; }
+function claimItem(p, i, id) { window.location.href = `mailto:${recipientEmail}?subject=CLAIM: ${i} voor ${p}&body=Ik heb dit gekocht: ${i} (ID: ${id})`; }
 function scrollToItem(p, id) { openTab(null, personIdToTabId(p)); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300); }
 
 async function loadWishlist() {

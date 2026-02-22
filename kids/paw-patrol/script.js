@@ -117,8 +117,14 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
     let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333;"><span class="tab-info">Overzicht</span></button>`;
     let listsHtml = '', overviewHtml = '';
 
-    // MILAN EERST: We draaien de volgorde in de data array om
-    const groups = [...data.personen].reverse();
+    // MILAN EERST: Sorteer personen array zodat Milan altijd eerst komt
+    const sortedPeople = [...data.personen].sort((a, b) => {
+        if (a.naam.toLowerCase() === 'milan') return -1;
+        if (b.naam.toLowerCase() === 'milan') return 1;
+        return 0;
+    });
+
+    const groups = [...sortedPeople];
     if (data.gezamenlijke_items) groups.push(data.gezamenlijke_items);
 
     groups.forEach(person => {

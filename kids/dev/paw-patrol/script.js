@@ -1,7 +1,7 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
 
-// Lijst met wisselende Zuma-quotes
+// Lijst met wisselende Zuma-quotes voor de hele familie
 const zumaQuotes = [
     "Laten we een duik nemen!",
     "Klaar voor actie in de golven!",
@@ -17,13 +17,10 @@ function setPupGreeting() {
     const greetingEl = document.getElementById('pup-greeting');
     if (!greetingEl) return;
 
-    // Kies een willekeurige quote
     const randomQuote = zumaQuotes[Math.floor(Math.random() * zumaQuotes.length)];
-
     const hour = new Date().getHours();
     let timeGreeting = (hour >= 6 && hour < 12) ? "Goedemorgen!" : (hour >= 12 && hour < 18) ? "Goedemiddag!" : (hour >= 18 && hour < 23) ? "Goedenavond." : "Goedenacht.";
 
-    // Begroeting voor de hele familie
     greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
 }
 
@@ -31,16 +28,53 @@ function createBubbles() {
     const container = document.getElementById('snow-container');
     if (!container) return;
     container.innerHTML = '';
-    for (let i = 0; i < 20; i++) {
+
+    for (let i = 0; i < 25; i++) {
         const bubble = document.createElement('div');
-        bubble.className = 'snow';
+        bubble.className = 'snow'; // We behouden de classnaam uit de CSS voor stabiliteit
         bubble.style.left = Math.random() * 100 + "%";
-        const size = (Math.random() * 12 + 8) + "px";
-        bubble.style.width = size; bubble.style.height = size;
+
+        const size = (Math.random() * 15 + 10) + "px";
+        bubble.style.width = size;
+        bubble.style.height = size;
+
         bubble.style.animationDuration = (Math.random() * 4 + 4) + "s";
-        bubble.style.animationDelay = (Math.random() * 5) + "s";
+        bubble.style.animationDelay = (Math.random() * 8) + "s";
+
+        // INTERACTIE: Knappen bij hover
+        bubble.addEventListener('mouseover', function() {
+            bubble.style.transition = 'transform 0.2s, opacity 0.2s';
+            bubble.style.transform = 'scale(2)';
+            bubble.style.opacity = '0';
+            setTimeout(() => {
+                bubble.remove();
+                // Optioneel: Maak na 3 seconden een nieuwe bubbel aan om de zijbalk vol te houden
+                setTimeout(createNewSingleBubble, 3000);
+            }, 200);
+        });
+
         container.appendChild(bubble);
     }
+}
+
+// Functie om een enkele nieuwe bubbel toe te voegen als er een geknapt is
+function createNewSingleBubble() {
+    const container = document.getElementById('snow-container');
+    if (!container) return;
+    const bubble = document.createElement('div');
+    bubble.className = 'snow';
+    bubble.style.left = Math.random() * 100 + "%";
+    const size = (Math.random() * 15 + 10) + "px";
+    bubble.style.width = size; bubble.style.height = size;
+    bubble.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+    bubble.addEventListener('mouseover', function() {
+        bubble.style.transform = 'scale(2)';
+        bubble.style.opacity = '0';
+        setTimeout(() => { bubble.remove(); setTimeout(createNewSingleBubble, 3000); }, 200);
+    });
+
+    container.appendChild(bubble);
 }
 
 function startCountdown(targetDateStr, targetName) {
@@ -109,9 +143,7 @@ function getLowestPriceInfo(winkels) {
 function personIdToTabId(naam) { return (naam.toLowerCase() === 'gezamenlijk' ? 'gezamenlijk' : naam.toLowerCase()) + '-list-content'; }
 
 function openTab(evt, tabId) {
-    // Wissel van quote bij elke tab-klik voor variatie
     setPupGreeting();
-
     if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
     document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(b => {
@@ -151,7 +183,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}">
                     <div class="left-column">
-                        <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}"></div>
+                        <div class="item-image-container">${overlay}<img src="${item.afbeelding_url}" alt="${item.naam}"></div>
                         ${isF ? '<div class="favorite-badge">★ FAVORIET</div>' : ''}
                     </div>
                     <div class="right-column">

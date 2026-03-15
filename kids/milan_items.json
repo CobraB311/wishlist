@@ -23,6 +23,19 @@
     ]
   },
   {
+    "id": "gund-paw-patrol-zuma-knuffel",
+    "naam": "GUND PAW Patrol Zuma Knuffel (15 cm)",
+    "beschrijving": "Een zachte en knuffelbare Zuma pluche van 15 cm. Perfect voor de kleinste PAW Patrol fans om mee te nemen op elke reddingsmissie.",
+    "afbeelding_url": "https://media.s-bol.com/LYz51nGV33yr/Nx2q95z/550x604.jpg",
+    "winkels": [
+      { "naam": "Amazon.be", "prijs": "€ 8,63", "link": "https://amzn.eu/d/06KOYZCq" },
+      { "naam": "Amazon.nl", "prijs": "€ 8,63", "link": "https://amzn.eu/d/01bi7cbh" },
+      { "naam": "DreamLand", "prijs": "€ 9,95", "link": "https://www.dreamland.be/nl/producten/paw-patrol-pluche-zuma-15cm/01622409" },
+      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/gund-paw-patrol-zuma-knuffel-15-cm/9300000018986698/" },
+      { "naam": "Fnac", "prijs": "€ 20,44", "link": "https://www.nl.fnac.be/Paw-Patrol-Zuma-Pluche-Gund-Patrol-15-cm/a15273257" }
+    ]
+  },
+  {
     "id": "dreamland-kookpotten-keukenaccessoires-01611687",
     "naam": "Kookpotten en keukenaccessoires 13 delig",
     "nummer": "01611687",
@@ -85,6 +98,22 @@
     ]
   },
   {
+    "id": "set-11036",
+    "naam": "LEGO® Classic Creatieve Voertuigen",
+    "nummer": "11036",
+    "beschrijving": "Een verzameling van 900 stenen om stoere voertuigen te bouwen, zoals een ijsjeswagen, kraan, takelwagen en meer! Inclusief 52 verschillende soorten wielen.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt50be55787306f8ce/11036_alt1.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/85C7oCA", "prijs": "€ 40,99" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bJnfzKn", "prijs": "€ 40,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11036-lego-creatieve-voertuigen/01755527", "prijs": "€ 41,21" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-voertuigen-11036/9300000157956434/", "prijs": "€ 40,99" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11036-creatieve-voertuigen-31627290", "prijs": "€ 49,98" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036", "prijs": "€ 49,99" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11036/Creative-Vehicles.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
     "id": "play-doh-all-in-one-creativity-starter-station",
     "naam": "Play-Doh All-in-One Creativity Starter Station",
     "nummer": "B0B621RNSY",
@@ -93,6 +122,35 @@
     "winkels": [
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/", "prijs": "€ 23,99" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0991EIdJ", "prijs": "€ 36,59" }
+    ]
+  },
+  {
+    "id": "carrera-mario-kart-tabletop",
+    "naam": "Carrera RC Mario Kart Tabletop Racing Set - Mario vs. Luigi",
+    "beschrijving": "Race met Mario en Luigi over de tafel met deze compacte raceset! Inclusief 2 op afstand bestuurbare auto's op schaal 1:50.",
+    "afbeelding_url": "https://carrera-toys.com/cdn/shop/files/625132_700x.webp?v=1756810008",
+    "winkels": [
+      { "naam": "Verthus", "prijs": "€ 49,95", "link": "https://verthus.be/producten/revell-rc-mario-kart-tafel-racing-set/" },
+      { "naam": "Multibazar", "prijs": "€ 49,95", "link": "https://www.multibazar.be/nl/carrera-team-mario-kart-tabletop-racebaan-mario-luigi-5km-u-1-50-1052812" },
+      { "naam": "De Kinderplaneet", "prijs": "€ 49,95", "link": "https://www.dekinderplaneet.be/nl/carrera-team-mario-kart-tabletop-racebaan-mario-luigi-5km-u-1-50-1052812" },
+      { "naam": "Bol.com", "prijs": "€ 50,00", "link": "https://www.bol.com/be/nl/p/carrera-rc-auto-mini-mario-kart-tabletop-racing-set-mario-vs-luigi-2-auto-s-schaal-1-43-2-4-ghz-rc-model-kant-en-klaar/9300000229648390/" },
+      { "naam": "Carrera Toys", "prijs": "€ 54,99", "link": "https://carrera-toys.com/nl-eu/products/370430015-24ghz-mario-karttm-tabletop-racing-set-mario-and-luigi" },
+      { "naam": "DreamLand", "prijs": "€ 59,99", "link": "https://www.dreamland.be/nl/producten/mario-kart-table-top-racing-set/01871739" },
+      { "naam": "Fnac", "prijs": "€ 59,99", "link": "https://www.nl.fnac.be/Afstandsbedienbare-voertuigen-Carrera-RC-Mario-Kart-Tabletop-Racing-Set-Mario-et-Luigi/a21758491" }
+    ]
+  },
+  {
+    "id": "playmobil-9463-brandweer",
+    "naam": "PLAYMOBIL City Action Brandweer ladderwagen (9463)",
+    "beschrijving": "Bestrijd branden op grote hoogte met deze ladderwagen. Inclusief werkende zwaailichten en geluid, een uitschuifbare ladder en brandweerfiguren.",
+    "afbeelding_url": "https://media.playmobil.com/i/playmobil/9463_product_box_front?locale=nl-BE,nl,en,*&fmt=auto&strip=true&qlt=80&unsharp=0,1,0.9,1&fmt.jpeg.interlaced=true",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 44,99", "link": "https://www.bol.com/be/nl/p/playmobil-city-action-brandweer-ladderwagen-9463/9200000095070035/" },
+      { "naam": "Amazon.be", "prijs": "€ 44,99", "link": "https://amzn.eu/d/0hqNAh3b" },
+      { "naam": "Amazon.nl", "prijs": "€ 44,99", "link": "https://amzn.eu/d/031ryeOF" },
+      { "naam": "Fnac", "prijs": "€ 54,99", "link": "https://www.nl.fnac.be/PLAYMOBIL-Brandweer-ladderwagen/a12054492" },
+      { "naam": "Playmobil.com", "prijs": "€ 84,99", "link": "https://www.playmobil.com/nl-be/brandweer-ladderwagen/9463.html" },
+      { "naam": "DreamLand", "prijs": "€ 84,99", "link": "https://www.dreamland.be/nl/producten/9463-playmobil-brandweer-ladderwagen/01334432" }
     ]
   }
 ]

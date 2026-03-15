@@ -98,6 +98,22 @@
     ]
   },
   {
+    "id": "set-11036",
+    "naam": "LEGO® Classic Creatieve Voertuigen",
+    "nummer": "11036",
+    "beschrijving": "Een verzameling van 900 stenen om stoere voertuigen te bouwen, zoals een ijsjeswagen, kraan, takelwagen en meer! Inclusief 52 verschillende soorten wielen.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt50be55787306f8ce/11036_alt1.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/85C7oCA", "prijs": "€ 40,99" },
+      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bJnfzKn", "prijs": "€ 40,99" },
+      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11036-lego-creatieve-voertuigen/01755527", "prijs": "€ 41,21" },
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-voertuigen-11036/9300000157956434/", "prijs": "€ 40,99" },
+      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11036-creatieve-voertuigen-31627290", "prijs": "€ 49,98" },
+      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036", "prijs": "€ 49,99" },
+      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11036/Creative-Vehicles.html", "prijs": "Check prijs" }
+    ]
+  },
+  {
     "id": "play-doh-all-in-one-creativity-starter-station",
     "naam": "Play-Doh All-in-One Creativity Starter Station",
     "nummer": "B0B621RNSY",

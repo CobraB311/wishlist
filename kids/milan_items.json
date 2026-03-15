@@ -33,6 +33,48 @@
     ]
   },
   {
+    "id": "lego-71853-jay",
+    "naam": "LEGO NINJAGO Jay's drakenmechastrijd (71853)",
+    "beschrijving": "Help Jay om de kwaadaardige krachten te verslaan met deze beweegbare mecha en drakenkracht! Inclusief 2 minifiguren.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt3d599aa01ae92f0e/71853_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon.be", "prijs": "€ 16,95", "link": "https://amzn.eu/d/0b8FNmzU" },
+      { "naam": "Amazon.nl", "prijs": "€ 16,95", "link": "https://amzn.eu/d/0aPjO1IY" },
+      { "naam": "MediaMarkt", "prijs": "€ 16,99", "link": "https://www.mediamarkt.be/nl/product/_lego-ninjago-71853-jays-drakenmechastrijd-2208507.html" },
+      { "naam": "Bol.com", "prijs": "€ 16,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-jay-s-drakenmechastrijd-speelgoedmecha-speelset-met-2-minifiguren-71853/9300000243481722/" },
+      { "naam": "DreamLand", "prijs": "€ 16,99", "link": "https://www.dreamland.be/nl/producten/71853-lego-r-ninjago-r-jay-s-drakenmechastrijd/02338262" },
+      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/jays-dragon-mech-fight-71853" },
+      { "naam": "Supra Bazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-ninjago-71853-jay-s-drakenmechastrijd-32164798" },
+      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71853-Jay-s-drakenmechastrijd/a22209280" }
+    ]
+  },
+  {
+    "id": "lego-71831-spinjitzu-tempel",
+    "naam": "LEGO NINJAGO Spinjitzu ninjatempel (71831)",
+    "beschrijving": "Bezoek de legendarische tempel met deze gedetailleerde speelset. Inclusief minifiguren om je eigen Spinjitzu-avonturen na te spelen.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt42fe8b15a9fbea8c/71831_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 29,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-spinjitzu-ninjatempel-actie-71831/9300000187249733/" },
+      { "naam": "Amazon.be", "prijs": "€ 30,49", "link": "https://amzn.eu/d/00VWicvt" },
+      { "naam": "Amazon.nl", "prijs": "€ 30,49", "link": "https://amzn.eu/d/0iW5FSVD" },
+      { "naam": "Supra Bazar", "prijs": "€ 35,99", "link": "https://www.suprabazar.be/lego-ninjago-71831-spinjitzu-ninjatempel-32031082" },
+      { "naam": "MediaMarkt", "prijs": "€ 36,99", "link": "https://www.mediamarkt.be/nl/product/_71831-spinjitzu-ninjatempel-2208491.html" },
+      { "naam": "LEGO.com", "prijs": "€ 39,99", "link": "https://www.lego.com/nl-be/product/ninja-spinjitzu-temple-71831" },
+      { "naam": "DreamLand", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/71831-lego-spinjitzu-ninjatempel/01831443" },
+      { "naam": "Fnac", "prijs": "€ 46,83", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71831-Spinjitzu-ninjatempel/a20941893" }
+    ]
+  },
+  {
+    "id": "lego-71840-rogue-vs-drix",
+    "naam": "LEGO NINJAGO Rogue vs. Drix racewagenduel (71840)",
+    "beschrijving": "Race naar de overwinning met deze spannende duel-set! Inclusief 2 raceauto's, 3 minifiguren en coole ninja-accessoires. Perfect voor jonge ninja's vanaf 4 jaar.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltf6cd1697eb8e0bb4/71840_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/rogue-vs-drix-race-car-duel-71840" },
+      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-rogue-vs-drix-racewagenduel-ninjaspeelset-met-3-minifiguren-2-raceauto-s-2-ninjakatana-s-en-een-onthullingszwaard-cadeautje-voor-kinderen-vanaf-4-jaar-71840/9300000232474979/" }
+    ]
+  },
+  {
     "id": "lego-ninjago-854311-lloyds-sword",
     "naam": "LEGO® NINJAGO® Lloyds zwaard met schede",
     "nummer": "854311",
@@ -40,6 +82,17 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt20a7b4c7e3d77f72/854311_Prod.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO Shop", "link": "https://www.lego.com/nl-be/product/lloyds-sword-with-sheath-854311", "prijs": "€ 19,99" }
+    ]
+  },
+  {
+    "id": "play-doh-all-in-one-creativity-starter-station",
+    "naam": "Play-Doh All-in-One Creativity Starter Station",
+    "nummer": "B0B621RNSY",
+    "beschrijving": "Een complete creatieve speelplek in één koffer! Dit station heeft een ingebouwde tafel met verschillende structuren, 15 accessoires en 6 kleuren klei. Na het spelen berg je alles op in de handige meeneemkoffer. Ideaal voor urenlang knutselplezier zonder rommel.",
+    "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/", "prijs": "€ 23,99" },
+      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0991EIdJ", "prijs": "€ 36,59" }
     ]
   }
 ]

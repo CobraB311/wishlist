@@ -140,6 +140,17 @@
     ]
   },
   {
+    "id": "hot-wheels-triple-loop-set",
+    "naam": "Hot Wheels Track Creator Set met Drievoudige Looping",
+    "beschrijving": "Bouw de ultieme stunt met deze 3-in-1 Triple Loop set! Lanceer je Hot Wheels auto's door drie loopings voor maximale actie.",
+    "afbeelding_url": "https://media.s-bol.com/Kx5nB73XpLgl/qjZo0WG/1200x771.jpg",
+    "winkels": [
+      { "naam": "DreamLand", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/hot-wheels-track-creator-3-in-1-triple-loop/01875249" },
+      { "naam": "Amazon.be", "prijs": "€ 42,46", "link": "https://amzn.eu/d/0ekVJazO" },
+      { "naam": "Bol.com", "prijs": "€ 49,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-track-creator-set-met-drievoudige-looping/9300000226904759/" }
+    ]
+  },
+  {
     "id": "playmobil-9463-brandweer",
     "naam": "PLAYMOBIL City Action Brandweer ladderwagen (9463)",
     "beschrijving": "Bestrijd branden op grote hoogte met deze ladderwagen. Inclusief werkende zwaailichten en geluid, een uitschuifbare ladder en brandweerfiguren.",
@@ -151,6 +162,16 @@
       { "naam": "Fnac", "prijs": "€ 54,99", "link": "https://www.nl.fnac.be/PLAYMOBIL-Brandweer-ladderwagen/a12054492" },
       { "naam": "Playmobil.com", "prijs": "€ 84,99", "link": "https://www.playmobil.com/nl-be/brandweer-ladderwagen/9463.html" },
       { "naam": "DreamLand", "prijs": "€ 84,99", "link": "https://www.dreamland.be/nl/producten/9463-playmobil-brandweer-ladderwagen/01334432" }
+    ]
+  },
+  {
+    "id": "zootropolis-2-blu-ray",
+    "naam": "Zootropolis 2 (Blu-ray)",
+    "beschrijving": "Het vervolg op de populaire Disney-film. Volg de nieuwe avonturen van Judy Hopps en Nick Wilde in de grote stad Zootropolis.",
+    "afbeelding_url": "https://media.s-bol.com/YKB06jnrK1x9/Z4P3zMJ/550x703.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
+      { "naam": "Boekenvoordeel", "prijs": "€ 29,99", "link": "https://www.boekenvoordeel.be/p/zootropolis-2-blu-ray-113386" }
     ]
   }
 ]

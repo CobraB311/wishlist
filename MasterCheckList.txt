@@ -1,0 +1,67 @@
+Master Checklist: Functionaliteiten & Requirements
+🎨 Visueel & Thema (Zuma / Paw Patrol)
+Zuma Styling: Oranje en blauwe accenten doorheen de hele site.
+
+Interactieve Bubbels: Geanimeerde blauwe bubbels die onder de menubalk omhoog zweven en knappen bij hover.
+
+Pup Welkomsttekst: Een wisselende Zuma-quote bovenin (bijv. "Laten we een duik nemen!") gecombineerd met een tijd-afhankelijke groet (Goedemorgen, etc.).
+
+Zuma Banner: De grote afbeelding bovenaan de pagina die het thema direct zet.
+
+Scroll-to-Top: De oranje anker-knop rechtsonder die verschijnt bij scrollen en je vloeiend omhoog brengt.
+
+🏠 Overzicht & Navigatie
+Paginering per Tab: Elk tabblad (Overzicht, Milan, etc.) fungeert als een aparte pagina. Het overzichtgrid verdwijnt volledig als je een persoon bekijkt.
+
+Linkse Menubalk: Het menu staat verticaal aan de linkerkant (op desktop) en bevat de tabbladen.
+
+Statistieken in Tabs: Elk tabblad toont direct hoeveel items er al gekocht zijn (bijv. 2/10 gekocht) inclusief een voortgangsbalkje (Katana-stijl).
+
+Oranje Actieve Tab: Het tabblad waar je op staat, wordt fel oranje met witte tekst.
+
+🎁 Wensen & Details
+Grid Overzicht: Een compacte weergave van alle cadeaus met foto, naam en "Vanaf prijs".
+
+Favorieten Markering:
+
+Overzicht: Gele achtergrond en een gouden sterretje rechtsboven.
+
+Detail: Gele achtergrond en een "★ FAVORIET" badge.
+
+Prijzen & Winkels:
+
+Winkels worden getoond als horizontale labels/buttons.
+
+Verticale Uitlijning: De namen, prijzen en "Bekijk" knoppen staan strak verticaal onder elkaar uitgelijnd.
+
+Laagste Prijs: De goedkoopste aanbieder wordt automatisch oranje gekleurd.
+
+Directe Navigatie: Klikken op een item in het overzicht opent het juiste tabblad en scrolt automatisch naar het juiste cadeau.
+
+🛒 Claim Systeem (Google Sheets)
+Live Database: Geen handmatige commits meer; claims worden direct opgeslagen in een Google Sheet.
+
+Custom Claim Popup:
+
+Geen browser-alerts, maar een gestylede Paw Patrol popup.
+
+Bevat de tekst dat de claim automatisch wordt bijgewerkt en een mail niet meer nodig is.
+
+Spinner: Een draaiende reddingsboei-animatie tijdens het opslaan van de claim.
+
+Gekocht Status (Visueel):
+
+De foto krijgt een grijze waas (grayscale).
+
+Er verschijnt een stempel "GEKOCHT" diagonaal over de foto.
+
+Alle teksten van dat artikel (titel, prijs, beschrijving) worden grijs en de winkel-links worden gedeactiveerd.
+
+🔍 Filters & Extra's
+Zoekbalk: Direct filteren op cadeau-naam (bijv. "Lego").
+
+Status Filter: Een knop om reeds gekochte items te verbergen (👁️ Toon alles vs 🙈 Verberg).
+
+Countdown Banner: Een aftelklok met de tekst "De missie start over:", die aftelt naar de verjaardag.
+
+Config.js: Een apart bestand om de Google Sheet URL (DEV of PRO) in te stellen zonder de hoofdcode te raken.

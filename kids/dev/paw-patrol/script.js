@@ -1,26 +1,17 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
 
-// Lijst met wisselende Zuma-quotes voor de familie
 const zumaQuotes = [
-    "Laten we een duik nemen!",
-    "Klaar voor actie in de golven!",
-    "1, 2, Zuma komt eraan!",
-    "Deze pup houdt van water!",
-    "Geen klus te groot, geen pup te klein!",
-    "Zuma staat paraat!",
-    "Tijd voor een redding op zee!",
-    "Klaar voor een natte missie!"
+    "Laten we een duik nemen!", "Klaar voor action in de golven!", "1, 2, Zuma komt eraan!",
+    "Deze pup houdt van water!", "Geen klus te groot, geen pup te klein!", "Zuma staat paraat!"
 ];
 
 function setPupGreeting() {
     const greetingEl = document.getElementById('pup-greeting');
     if (!greetingEl) return;
-
     const randomQuote = zumaQuotes[Math.floor(Math.random() * zumaQuotes.length)];
     const hour = new Date().getHours();
     let timeGreeting = (hour >= 6 && hour < 12) ? "Goedemorgen!" : (hour >= 12 && hour < 18) ? "Goedemiddag!" : (hour >= 18 && hour < 23) ? "Goedenavond." : "Goedenacht.";
-
     greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
 }
 
@@ -36,14 +27,6 @@ function createBubbles() {
         bubble.style.width = size; bubble.style.height = size;
         bubble.style.animationDuration = (Math.random() * 4 + 4) + "s";
         bubble.style.animationDelay = (Math.random() * 5) + "s";
-
-        // Interactie: Knappen bij hover
-        bubble.addEventListener('mouseover', function() {
-            bubble.style.transform = 'scale(2)';
-            bubble.style.opacity = '0';
-            setTimeout(() => bubble.remove(), 200);
-        });
-
         container.appendChild(bubble);
     }
 }
@@ -70,17 +53,6 @@ function startCountdown(targetDateStr, targetName) {
     }, 1000);
 }
 
-function openVideo(videoId) {
-    const modal = document.getElementById('videoModal'), frame = document.getElementById('videoFrame');
-    frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    modal.style.display = "block";
-}
-function closeVideo() {
-    const modal = document.getElementById('videoModal'), frame = document.getElementById('videoFrame');
-    frame.src = ""; modal.style.display = "none";
-}
-window.onclick = function(e) { if (e.target == document.getElementById('videoModal')) closeVideo(); }
-
 function normalizeText(text) { return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
 
 function filterGifts() {
@@ -101,39 +73,42 @@ function togglePurchasedFilter() {
     filterGifts();
 }
 
-function getLowestPriceInfo(winkels) {
-    if (!winkels || winkels.length === 0) return { prijs: "N.v.t.", index: -1 };
-    let lowestVal = Infinity, lowestIndex = 0;
-    winkels.forEach((w, i) => {
-        const val = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
-        if (val < lowestVal) { lowestVal = val; lowestIndex = i; }
-    });
-    return { prijs: `€ ${lowestVal.toFixed(2).replace('.', ',')}`, index: lowestIndex };
+function showCustomModal(title, text, confirmCallback) {
+    const modal = document.getElementById('customModal');
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-text').innerText = text;
+    document.getElementById('modal-spinner').style.display = 'none';
+    document.getElementById('modal-buttons').style.display = 'flex';
+    modal.style.display = 'block';
+
+    document.getElementById('modal-confirm-btn').onclick = function() {
+        document.getElementById('modal-buttons').style.display = 'none';
+        document.getElementById('modal-spinner').style.display = 'block';
+        document.getElementById('modal-text').innerText = "De missie wordt bijgewerkt... Even geduld!";
+        confirmCallback();
+    };
+    document.getElementById('modal-cancel-btn').onclick = function() { modal.style.display = 'none'; };
 }
 
-function personIdToTabId(naam) { return (naam.toLowerCase() === 'gezamenlijk' ? 'gezamenlijk' : naam.toLowerCase()) + '-list-content'; }
-
-function openTab(evt, tabId) {
-    setPupGreeting();
-    if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
-    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
-    document.querySelectorAll(".tab-button").forEach(b => {
-        b.classList.remove("active");
-        b.style.backgroundColor = "";
-    });
-    const targetTab = document.getElementById(tabId);
-    if (targetTab) targetTab.classList.add("active");
-    let btn = evt ? evt.currentTarget : document.querySelector(`button[onclick*="'${tabId}'"]`);
-    if (btn) {
-        btn.classList.add("active");
-        btn.style.backgroundColor = "#ff6600";
-    }
-    window.scrollTo(0, 0);
+function claimItem(person, itemName, id) {
+    showCustomModal(
+        "Cadeau gekocht?",
+        `Markeer "${itemName}" als gekocht.\n\n⚠️ Let op: Dit wordt direct automatisch bijgewerkt op de website. Je hoeft geen mail meer te sturen!`,
+        function() {
+            fetch(CONFIG.GOOGLE_SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify({ itemId: id })
+            }).then(() => {
+                setTimeout(() => location.reload(), 1500);
+            });
+        }
+    );
 }
 
 function generateWishlistContent(data, purchasedIds, favoriteIds) {
     const nav = document.getElementById('dynamic-tab-nav'), listContainer = document.getElementById('person-lists-container'), overview = document.getElementById('overview-grid-container');
-    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')" style="background-color: #333;"><span class="tab-info">Overzicht</span></button>`;
+    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')"><span class="tab-info">Overzicht</span></button>`;
     let listsHtml = '', overviewHtml = '';
 
     const sortedPeople = [...data.personen].sort((a, b) => a.naam.toLowerCase() === 'milan' ? -1 : 1);
@@ -144,7 +119,13 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
         const tabId = personIdToTabId(person.naam);
         const total = person.items.length, bought = person.items.filter(i => purchasedIds.has(i.id)).length, perc = total > 0 ? Math.round((bought / total) * 100) : 0;
 
-        navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')"><span class="tab-info">${person.naam}</span><span class="tab-stats">${bought}/${total} gekocht</span><div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div></button>`;
+        navHtml += `
+            <button class="tab-button" onclick="openTab(event, '${tabId}')">
+                <span class="tab-info">${person.naam}</span>
+                <span class="tab-stats">${bought}/${total} gekocht</span>
+                <div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div>
+            </button>`;
+
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2>`;
         overviewHtml += `<h3>${person.naam}</h3><div class="overview-grid">`;
 
@@ -158,14 +139,17 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                         ${isF ? '<div class="favorite-badge">★ FAVORIET</div>' : ''}
                     </div>
                     <div class="right-column">
-                        <h3>${item.naam}</h3><p>${item.beschrijving}</p>
+                        <h3>${item.naam}</h3>
+                        <p>${item.beschrijving}</p>
                         <div class="price-links">
-                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}">${w.naam}: ${w.prijs}</a>`).join('')}
+                            ${item.winkels.map((w, idx) => `
+                                <a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}">
+                                    <span class="shop-name">${w.naam}</span>
+                                    <span class="shop-price">${w.prijs}</span>
+                                    <span class="shop-go">Bekijk</span>
+                                </a>`).join('')}
                         </div>
-                        <div class="button-row">
-                            ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
-                            ${item.video_id ? `<button class="video-button" onclick="openVideo('${item.video_id}')">🎬 Video</button>` : ''}
-                        </div>
+                        ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
                 </div>`;
 
@@ -173,40 +157,59 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
         });
         listsHtml += `</div>`; overviewHtml += `</div>`;
     });
-    nav.innerHTML = navHtml + `<button class="tab-button" onclick="openTab(event, 'inventory-content')"><span class="tab-info">Inventaris</span></button>`;
+    nav.innerHTML = navHtml;
     overview.innerHTML = overviewHtml;
-    listContainer.innerHTML = listsHtml + `<div id="inventory-content" class="tab-content"><h2>Inventaris</h2><div id="inventory-list"></div></div>`;
-    if (data.inventaris_links) document.getElementById('inventory-list').innerHTML = data.inventaris_links.map(l => `<div style="margin:15px 0;"><a href="${l.url}" target="_blank" style="color:#ff6600; font-weight:bold; text-decoration:none;">📜 ${l.naam}</a></div>`).join('');
+    listContainer.innerHTML = listsHtml;
 }
 
-function claimItem(p, i, id) { window.location.href = `mailto:${recipientEmail}?subject=CLAIM: ${i} voor ${p}&body=Ik heb dit gekocht: ${i} (ID: ${id})`; }
-function scrollToItem(p, id) { openTab(null, personIdToTabId(p)); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300); }
+function openTab(evt, tabId) {
+    setPupGreeting();
+    if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
+    const target = document.getElementById(tabId);
+    if(target) target.classList.add("active");
+    if (evt) evt.currentTarget.classList.add("active");
+    window.scrollTo(0,0);
+}
+
+function scrollToItem(p, id) {
+    openTab(null, personIdToTabId(p));
+    setTimeout(() => {
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+}
+
+function personIdToTabId(naam) { return (naam.toLowerCase() === 'gezamenlijk' ? 'gezamenlijk' : naam.toLowerCase()) + '-list-content'; }
+
+function getLowestPriceInfo(winkels) {
+    if (!winkels || winkels.length === 0) return { prijs: "N.v.t.", index: -1 };
+    let lowestVal = Infinity, lowestIndex = 0;
+    winkels.forEach((w, i) => {
+        const val = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
+        if (val < lowestVal) { lowestVal = val; lowestIndex = i; }
+    });
+    return { prijs: `€ ${lowestVal.toFixed(2).replace('.', ',')}`, index: lowestIndex };
+}
 
 async function loadWishlist() {
     setPupGreeting(); createBubbles();
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
         if (config.aftel_datum) startCountdown(config.aftel_datum, config.aftel_naam || "Milan");
-        const claims = await fetch('claims.json').then(r => r.json()).catch(() => ({purchased_items:[]}));
+        const claims = await fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json()).catch(() => ({purchased_items:[]}));
         const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
         const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
-        const rInv = await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []);
-        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}, inventaris_links: rInv}, new Set(claims.purchased_items), new Set(favs.favorite_ids));
-
-        const loader = document.getElementById('loading-message');
-        if (loader) loader.style.display = 'none';
+        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}}, new Set(claims.purchased_items), new Set(favs.favorite_ids));
+        document.getElementById('loading-message').style.display = 'none';
     } catch (e) { console.error(e); }
 }
 
 window.onscroll = function() {
     const btn = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        btn.style.display = "block";
-    } else {
-        btn.style.display = "none";
-    }
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { btn.style.display = "block"; } else { btn.style.display = "none"; }
 };
-
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 window.onload = loadWishlist;

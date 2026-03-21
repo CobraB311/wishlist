@@ -36,6 +36,32 @@
     ]
   },
   {
+    "id": "paw-patrol-search-rescue-rocky-recyclevoertuig",
+    "naam": "PAW Patrol Opsporing en Redding - Rocky's Recyclevoertuig",
+    "beschrijving": "Ga op reddingsmissie met Rocky! Dit Search & Rescue voertuig heeft een handige terugtrekfunctie en bevat 2 speelfiguren.",
+    "afbeelding_url": "https://media.s-bol.com/m3j9MMV8XVR0/MjRPZyO/1200x1184.jpg",
+    "winkels": [
+      { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/paw-patrol-search-rescue-vehicle-rocky/02313085" },
+      { "naam": "Amazon.com.be", "prijs": "€ 19,99", "link": "https://amzn.eu/d/0iBXZKyG" },
+      { "naam": "Amazon.nl", "prijs": "€ 19,99", "link": "https://amzn.eu/d/09K8QjJF" },
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-opsporing-en-redding-rocky-s-recyclevoertuig-met-2-figuren-terugtrekfunctie-speelgoedvoertuigen/9300000236973821/" },
+      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/Voertuig-figuur-Paw-Patrol-Search-et-Rescue-Rocky-Pat-patrouille/a22470921" },
+      { "naam": "Supra Bazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/paw-patrol-search-rescue-vehicle-rocky-32163306" }
+    ]
+  },
+  {
+    "id": "paw-patrol-ryder-rescue-atv-speelgoedauto",
+    "naam": "PAW Patrol Ryder's Rescue ATV met speelfiguur",
+    "beschrijving": "Rijd de redding tegemoet met Ryder en zijn Rescue ATV! Dit voertuig is gemaakt van gerecycled plastic en bevat een Ryder speelfiguur in zijn klassieke uniform.",
+    "afbeelding_url": "https://media.s-bol.com/qDRqZ4JVm4Jy/jRvo7Y/550x590.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 10,36", "link": "https://www.bol.com/be/nl/p/paw-patrol-ryder-s-rescue-atv-speelgoedauto-met-speelfiguur-52-gerecycled-plastic-duurzaam-speelgoed/9300000055705054/" },
+      { "naam": "DreamLand", "prijs": "€ 11,21", "link": "https://www.dreamland.be/nl/producten/paw-patrol-voertuig-met-ryder/01577167" },
+      { "naam": "Amazon.nl", "prijs": "€ 23,00", "link": "https://amzn.eu/d/052Y6yvd" },
+      { "naam": "Amazon.com.be", "prijs": "€ 26,00", "link": "https://amzn.eu/d/0cX0hZ47" }
+    ]
+  },
+  {
     "id": "dreamland-kookpotten-keukenaccessoires-01611687",
     "naam": "Kookpotten en keukenaccessoires 13 delig",
     "nummer": "01611687",
@@ -43,6 +69,19 @@
     "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
     "winkels": [
       { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-led-sleutelhanger-lloyd-light",
+    "naam": "LEGO Ninjago Legacy Lloyd Sleutelhanger met licht",
+    "beschrijving": "Een coole Lloyd minifiguur als sleutelhanger met ingebouwde LED-verlichting in de voetjes. Ideaal voor aan een boekentas of sleutelbos.",
+    "afbeelding_url": "https://media.s-bol.com/gk5NVwP9kRR9/AglvKl/550x550.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "prijs": "€ 15,90", "link": "https://amzn.eu/d/0366uU1P" },
+      { "naam": "Multibazar", "prijs": "€ 15,95", "link": "https://www.multibazar.be/nl/lego-led-sleutelhanger-ninjago-lloyd-852967" },
+      { "naam": "DreamLand", "prijs": "€ 16,99", "link": "https://www.dreamland.be/nl/producten/lego-ninjago-legacy-sleutelhanger-m-licht-lloyd/01637717" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 19,60", "link": "https://www.standaardboekhandel.be/p/lego-ninjago-legacy-lloyd-key-light-4895028528102" },
+      { "naam": "Bol.com", "prijs": "€ 23,48", "link": "https://www.bol.com/be/nl/p/lego-led-sleutelhanger-ninjago-lloyd-met-licht/9300000025919730/" }
     ]
   },
   {

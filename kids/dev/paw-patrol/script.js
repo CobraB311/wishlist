@@ -15,20 +15,23 @@ function setPupGreeting() {
     greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
 }
 
+// BUBBELS HERSTELD
 function createBubbles() {
     const container = document.getElementById('snow-container');
     if (!container) return;
-    container.innerHTML = '';
-    for (let i = 0; i < 20; i++) {
-        const bubble = document.createElement('div');
-        bubble.className = 'snow';
-        bubble.style.left = Math.random() * 100 + "%";
-        const size = (Math.random() * 12 + 8) + "px";
-        bubble.style.width = size; bubble.style.height = size;
-        bubble.style.animationDuration = (Math.random() * 4 + 4) + "s";
-        bubble.style.animationDelay = (Math.random() * 5) + "s";
-        container.appendChild(bubble);
-    }
+
+    const bubble = document.createElement('div');
+    bubble.className = 'snow';
+    bubble.style.left = Math.random() * 100 + "%";
+    const size = (Math.random() * 15 + 10) + "px";
+    bubble.style.width = size;
+    bubble.style.height = size;
+    bubble.style.animationDuration = (Math.random() * 4 + 6) + "s";
+
+    container.appendChild(bubble);
+
+    // Verwijder bubbel na animatie
+    setTimeout(() => { bubble.remove(); }, 10000);
 }
 
 function startCountdown(targetDateStr, targetName) {
@@ -97,7 +100,7 @@ function claimItem(person, itemName, id) {
         function() {
             fetch(CONFIG.GOOGLE_SHEET_URL, {
                 method: 'POST',
-                mode: 'no-cors',
+                mode: 'cors',
                 body: JSON.stringify({ itemId: id })
             }).then(() => {
                 setTimeout(() => location.reload(), 1500);
@@ -119,13 +122,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
         const tabId = personIdToTabId(person.naam);
         const total = person.items.length, bought = person.items.filter(i => purchasedIds.has(i.id)).length, perc = total > 0 ? Math.round((bought / total) * 100) : 0;
 
-        navHtml += `
-            <button class="tab-button" onclick="openTab(event, '${tabId}')">
-                <span class="tab-info">${person.naam}</span>
-                <span class="tab-stats">${bought}/${total} gekocht</span>
-                <div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div>
-            </button>`;
-
+        navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')"><span class="tab-info">${person.naam}</span><span class="tab-stats">${bought}/${total} gekocht</span><div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div></button>`;
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2>`;
         overviewHtml += `<h3>${person.naam}</h3><div class="overview-grid">`;
 
@@ -142,12 +139,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="price-links">
-                            ${item.winkels.map((w, idx) => `
-                                <a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}">
-                                    <span class="shop-name">${w.naam}</span>
-                                    <span class="shop-price">${w.prijs}</span>
-                                    <span class="shop-go">Bekijk</span>
-                                </a>`).join('')}
+                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}"><span class="shop-name">${w.naam}</span><span class="shop-price">${w.prijs}</span><span class="shop-go">Bekijk</span></a>`).join('')}
                         </div>
                         ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
                     </div>
@@ -194,7 +186,11 @@ function getLowestPriceInfo(winkels) {
 }
 
 async function loadWishlist() {
-    setPupGreeting(); createBubbles();
+    setPupGreeting();
+
+    // BUBBEL STROOM START
+    setInterval(createBubbles, 800);
+
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
         if (config.aftel_datum) startCountdown(config.aftel_datum, config.aftel_naam || "Milan");

@@ -72,6 +72,17 @@
     ]
   },
   {
+    "id": "lego-minifig-dekbedovertrek-140-200",
+    "naam": "LEGO Minifiguren Dekbedovertrek - 140 x 200 cm",
+    "beschrijving": "Kleurrijk LEGO dekbedovertrek met een vrolijke print van verschillende minifiguren. Het overtrek is omkeerbaar en wordt geleverd inclusief kussensloop.",
+    "afbeelding_url": "https://media.s-bol.com/zgz6BXVNgWYY/qx6PL63/477x840.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "prijs": "€ 25,99", "link": "https://amzn.eu/d/0cJOycHe" },
+      { "naam": "Bol.com", "prijs": "€ 31,00", "link": "https://www.bol.com/be/nl/p/lego-dekbedovertrek-mini-fig-140-x-200-70-x-90-cm-polyester/9300000190250790/" },
+      { "naam": "Amazon.com.be", "prijs": "N.v.t.", "link": "https://amzn.eu/d/05aen4b2" }
+    ]
+  },
+  {
     "id": "lego-ninjago-led-sleutelhanger-lloyd-light",
     "naam": "LEGO Ninjago Legacy Lloyd Sleutelhanger met licht",
     "beschrijving": "Een coole Lloyd minifiguur als sleutelhanger met ingebouwde LED-verlichting in de voetjes. Ideaal voor aan een boekentas of sleutelbos.",
@@ -150,6 +161,23 @@
       { "naam": "SupraBazar", "prijs": "€ 49,98", "link": "https://www.suprabazar.be/lego-classic-11036-creatieve-voertuigen-31627290" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/11036/Creative-Vehicles.html" }
+    ]
+  },
+  {
+    "id": "lego-duplo-10421-alfabetvrachtwagen",
+    "naam": "LEGO DUPLO Stad 10421 Alfabetvrachtwagen",
+    "nummer": "10421",
+    "beschrijving": "Peuters kunnen spelenderwijs letters leren met deze kleurrijke alfabetvrachtwagen. De set bevat een vrachtwagen met aanhanger, een DUPLO figuurtje en 26 alfabetstenen om te stapelen en te sorteren.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltbe14ced3aee68b64/10421.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Supra Bazar", "prijs": "€ 26,99", "link": "https://www.suprabazar.be/lego-duplo-10421-alfabetvrachtwagen-31627120" },
+      { "naam": "Amazon.nl", "prijs": "€ 27,99", "link": "https://amzn.eu/d/0dyrQL0m" },
+      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/lego-10421-duplo-stad-alfabetvrachtwagen-educatief-speelgoed/9300000157956263/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 31,99", "link": "https://amzn.eu/d/013TvIcf" },
+      { "naam": "Multibazar", "prijs": "€ 33,95", "link": "https://www.multibazar.be/nl/lego-duplo-10421-alfabetvrachtwagen-887676?colour=611068" },
+      { "naam": "DreamLand", "prijs": "€ 39,95", "link": "https://www.dreamland.be/nl/producten/10421-lego-alfabetvrachtwagen/01756562" },
+      { "naam": "Fnac", "prijs": "€ 39,95", "link": "https://www.nl.fnac.be/LEGO-DUPLO-Town-10421-Alfabetvrachtwagen/a18821686" },
+      { "naam": "LEGO.com", "prijs": "€ 39,99", "link": "https://www.lego.com/nl-be/product/alphabet-truck-10421" }
     ]
   },
   {

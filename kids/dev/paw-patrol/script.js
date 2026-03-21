@@ -36,6 +36,14 @@ function createBubbles() {
         bubble.style.width = size; bubble.style.height = size;
         bubble.style.animationDuration = (Math.random() * 4 + 4) + "s";
         bubble.style.animationDelay = (Math.random() * 5) + "s";
+
+        // Interactie: Knappen bij hover
+        bubble.addEventListener('mouseover', function() {
+            bubble.style.transform = 'scale(2)';
+            bubble.style.opacity = '0';
+            setTimeout(() => bubble.remove(), 200);
+        });
+
         container.appendChild(bubble);
     }
 }
@@ -106,7 +114,7 @@ function getLowestPriceInfo(winkels) {
 function personIdToTabId(naam) { return (naam.toLowerCase() === 'gezamenlijk' ? 'gezamenlijk' : naam.toLowerCase()) + '-list-content'; }
 
 function openTab(evt, tabId) {
-    setPupGreeting(); // Wissel quote bij tab-wissel
+    setPupGreeting();
     if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
     document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(b => {
@@ -161,7 +169,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                     </div>
                 </div>`;
 
-            overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div><div class="overview-caption">${item.naam}</div><div style="font-size:0.85em; color:#ff6600; font-weight:bold;">Vanaf ${low.prijs}</div></div>`;
+            overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>${isF ? '<div class="mini-star">★</div>' : ''}<div class="overview-caption">${item.naam}</div><div style="font-size:0.85em; color:#ff6600; font-weight:bold;">Vanaf ${low.prijs}</div></div>`;
         });
         listsHtml += `</div>`; overviewHtml += `</div>`;
     });
@@ -191,7 +199,6 @@ async function loadWishlist() {
     } catch (e) { console.error(e); }
 }
 
-// Logica voor het tonen van het anker
 window.onscroll = function() {
     const btn = document.getElementById("scrollToTopBtn");
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {

@@ -14,7 +14,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     background-size: cover; border-bottom: 5px solid #ff6600;
 }
 
-/* VASTE SIDEBAR LINKS */
 .fixed-header {
     position: fixed; top: 0; left: 0;
     height: 100%; width: 240px;
@@ -23,7 +22,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
-/* CONTENT WRAPPER */
 .page-wrapper { margin-left: 240px; min-height: 100vh; }
 .content-padding { padding: 40px; max-width: 1200px; margin: 0 auto; }
 
@@ -31,7 +29,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 #pup-greeting { font-size: 1.1em; color: #00aaff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
 #main-title { margin-top: 0; font-size: 2.5em; }
 
-/* COUNTDOWN */
 .countdown-banner {
     background: #ffffff; border: 3px solid #ff6600; border-radius: 12px;
     padding: 15px; margin-bottom: 25px; text-align: center;
@@ -39,7 +36,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .countdown-label { font-family: 'Impact', sans-serif; text-transform: uppercase; color: #333; font-size: 0.9em; letter-spacing: 1px; margin-bottom: 5px; }
 #countdown-timer { font-family: 'Impact', sans-serif; font-size: 1.8em; color: #ff6600; letter-spacing: 2px; }
 
-/* TABS */
 .tab-nav { padding: 20px 10px; display: flex; flex-direction: column; gap: 10px; }
 .tab-button {
     background: #f1f1f1; border: 1px solid #00aaff; padding: 12px;
@@ -51,12 +47,10 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .tab-info { display: block; font-size: 1.1em; margin-bottom: 4px; position: relative; z-index: 2; }
 .tab-stats { display: block; font-size: 0.75em; opacity: 0.8; position: relative; z-index: 2; }
 
-/* PROGRESS BAR */
 .katana-progress { height: 6px; width: 100%; background: #ddd; margin-top: 6px; border-radius: 3px; }
 .katana-blade { height: 100%; background: #00aaff; width: 0%; transition: width 1s ease-in-out; border-radius: 3px; }
 .tab-button.active .katana-blade { background: #ff6600; }
 
-/* CONTROLS */
 .controls-container { display: flex; gap: 10px; margin-bottom: 30px; }
 #gift-search { flex-grow: 1; padding: 15px; border: 2px solid #00aaff; border-radius: 8px; font-size: 1em; }
 .filter-btn { border: 2px solid #ff6600; border-radius: 8px; padding: 0 15px; cursor: pointer; font-family: 'Impact'; text-transform: uppercase; background: white; }
@@ -65,7 +59,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
-/* GRID */
 .overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; margin-bottom: 40px;}
 .overview-grid-item { background: white; border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 4px; cursor: pointer; position: relative; transition: 0.2s;}
 .overview-grid-item:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
@@ -75,7 +68,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .overview-image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .overview-caption { font-size: 0.8em; font-weight: bold; line-height: 1.2; height: 2.4em; overflow: hidden; }
 
-/* DETAIL ITEMS */
 .wens-item { display: flex; background: white; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; gap: 20px; position: relative; border-radius: 8px; }
 .wens-item.favorite-item { border: 2px solid #ffcc00; background: #fffdf5; }
 .left-column { width: 180px; flex-shrink: 0; text-align: center; }
@@ -83,7 +75,6 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .item-image-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .right-column { flex-grow: 1; text-align: left; }
 
-/* PRIJZEN */
 .price-links { margin-top: 10px; margin-bottom: 10px; }
 .price-link { display: inline-block; padding: 6px 12px; margin: 4px 4px 4px 0; background: #00aaff; color: white; text-decoration: none; font-size: 0.9em; font-weight: bold; border-radius: 3px; }
 .price-link.lowest { background: #ff6600; }
@@ -91,20 +82,16 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .favorite-badge { display: inline-block; background: #ffcc00; color: #333; padding: 3px 8px; font-family: 'Impact'; font-size: 0.8em; margin-top: 10px; border-radius: 4px; }
 .mini-star { position: absolute; top: 5px; right: 5px; color: #ffcc00; font-size: 1.2em; }
 
-/* GEKOCHT */
 .purchased-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); background: rgba(255,255,255,0.9); color: #ff6600; border: 3px solid #ff6600; padding: 5px 15px; font-family: 'Impact'; z-index: 10; font-size: 1.4em; pointer-events: none; }
 .purchased img { filter: grayscale(1) opacity(0.3); }
 
-/* BUTTONS */
 .buy-button, .video-button { background: #ff6600; color: white; border: none; padding: 12px 24px; font-family: 'Impact'; text-transform: uppercase; cursor: pointer; border-radius: 4px; margin-top: 10px; }
 .video-button { background: #00aaff; margin-left: 10px; }
 
-/* BUBBLES */
 .water-area { flex-grow: 1; position: relative; overflow: hidden; }
-.snow { position: absolute; background: rgba(0, 170, 255, 0.3); border-radius: 50%; animation: floatUp linear infinite; border: 1px solid rgba(255,255,255,0.4); }
+.snow { position: absolute; background: rgba(0, 170, 255, 0.3); border-radius: 50%; animation: floatUp linear infinite; border: 1px solid rgba(255,255,255,0.4); cursor: pointer; }
 @keyframes floatUp { 0% { transform: translateY(110vh); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(-10vh); opacity: 0; } }
 
-/* HET ZUMA ANKER (Back to top) */
 #scrollToTopBtn {
     display: none;
     position: fixed;

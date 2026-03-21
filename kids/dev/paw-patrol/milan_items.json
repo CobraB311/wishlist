@@ -173,5 +173,14 @@
       { "naam": "Bol.com", "prijs": "€ 27,89", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
       { "naam": "Boekenvoordeel", "prijs": "€ 29,99", "link": "https://www.boekenvoordeel.be/p/zootropolis-2-blu-ray-113386" }
     ]
+  },
+  {
+    "id": "magnetic-tiles-magnaminds-100-stuks",
+    "naam": "Magnetic Tiles MagnaMinds - 100 stuks",
+    "beschrijving": "Magnetisch constructiespeelgoed (100 stuks) voor urenlang bouwplezier. Compatibel met andere grote merken magnetische tegels.",
+    "afbeelding_url": "https://media.s-bol.com/3XlA5Oq1nRKn/PN7o4rW/1200x1173.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 34,95", "link": "https://www.bol.com/be/nl/p/magnetic-tiles-magnaminds-magnatiles-100-stuks/9300000150075882/" }
+    ]
   }
 ]

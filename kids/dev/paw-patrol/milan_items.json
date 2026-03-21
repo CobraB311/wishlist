@@ -6,9 +6,9 @@
     "beschrijving": "Set van 6 actiefiguren (3-inch) geïnspireerd op de Disney Jr. serie 'Iron Man and his Awesome Friends'. Bevat Iron Man, Ironheart, Iron Hulk, Captain America: Sam Wilson, Gamma en Ultron.",
     "afbeelding_url": "https://media.s-bol.com/yNDQDDJgwLq6/vgJ5VRg/550x460.jpg",
     "winkels": [
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/1DOZ5fR", "prijs": "€ 26,19" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/i2vcTRC", "prijs": "€ 25,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www", "prijs": "€ 22,92" }
+      { "naam": "Amazon.nl", "prijs": "€ 26,19", "link": "https://amzn.eu/d/1DOZ5fR" },
+      { "naam": "Amazon.com.be", "prijs": "€ 25,99", "link": "https://amzn.eu/d/i2vcTRC" },
+      { "naam": "Bol.com", "prijs": "€ 22,92", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www" }
     ]
   },
   {
@@ -18,8 +18,8 @@
     "beschrijving": "Het specifieke 'Rhino' voertuig ('Rhino Wrecker') met figuur uit de serie Spidey and his Amazing Friends. **LET OP: Dit moet specifiek het 'Rhino' voertuig zijn.**",
     "afbeelding_url": "https://media.s-bol.com/olQ89Y9MR35L/W6LNG5v/1200x604.jpg",
     "winkels": [
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/spidey-en-zijn-geweldige-vriendjes-spidey-vehicle/02222943", "prijs": "€ 19,95" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rhino-wrecker/9300000166567115/", "prijs": "€ 19,99" }
+      { "naam": "DreamLand", "prijs": "€ 19,95", "link": "https://www.dreamland.be/nl/producten/spidey-en-zijn-geweldige-vriendjes-spidey-vehicle/02222943" },
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rhino-wrecker/9300000166567115/" }
     ]
   },
   {
@@ -42,7 +42,7 @@
     "beschrijving": "13-delige kookpotten speelset om meteen de keuken in te duiken. Pannen, deksels en kookaccessoires voor eindeloos veel culinaire speelpret. Geschikt vanaf 3 jaar.",
     "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
     "winkels": [
-      { "naam": "Dreamland", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687", "prijs": "€ 19,99" }
+      { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687" }
     ]
   },
   {
@@ -94,7 +94,7 @@
     "beschrijving": "Ga op avontuur als de Groene Ninja! Dit zwaard van Lloyd is gemaakt van zacht schuim voor veilig speelplezier en wordt geleverd met een gedetailleerde schede die Jonas makkelijk kan dragen. Een onmisbaar item voor elke jonge Ninjago-fan.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt20a7b4c7e3d77f72/854311_Prod.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      { "naam": "LEGO Shop", "link": "https://www.lego.com/nl-be/product/lloyds-sword-with-sheath-854311", "prijs": "€ 19,99" }
+      { "naam": "LEGO Shop", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/lloyds-sword-with-sheath-854311" }
     ]
   },
   {
@@ -104,13 +104,13 @@
     "beschrijving": "Een verzameling van 900 stenen om stoere voertuigen te bouwen, zoals een ijsjeswagen, kraan, takelwagen en meer! Inclusief 52 verschillende soorten wielen.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt50be55787306f8ce/11036_alt1.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
     "winkels": [
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/85C7oCA", "prijs": "€ 40,99" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/bJnfzKn", "prijs": "€ 40,99" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/11036-lego-creatieve-voertuigen/01755527", "prijs": "€ 41,21" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-voertuigen-11036/9300000157956434/", "prijs": "€ 40,99" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11036-creatieve-voertuigen-31627290", "prijs": "€ 49,98" },
-      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036", "prijs": "€ 49,99" },
-      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11036/Creative-Vehicles.html", "prijs": "Check prijs" }
+      { "naam": "Amazon.nl", "prijs": "€ 40,99", "link": "https://amzn.eu/d/85C7oCA" },
+      { "naam": "Amazon.com.be", "prijs": "€ 40,99", "link": "https://amzn.eu/d/bJnfzKn" },
+      { "naam": "DreamLand", "prijs": "€ 41,21", "link": "https://www.dreamland.be/nl/producten/11036-lego-creatieve-voertuigen/01755527" },
+      { "naam": "Bol.com", "prijs": "€ 40,99", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-voertuigen-11036/9300000157956434/" },
+      { "naam": "SupraBazar", "prijs": "€ 49,98", "link": "https://www.suprabazar.be/lego-classic-11036-creatieve-voertuigen-31627290" },
+      { "naam": "LEGO® Shop BE", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036" },
+      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/11036/Creative-Vehicles.html" }
     ]
   },
   {
@@ -120,8 +120,8 @@
     "beschrijving": "Een complete creatieve speelplek in één koffer! Dit station heeft een ingebouwde tafel met verschillende structuren, 15 accessoires en 6 kleuren klei. Na het spelen berg je alles op in de handige meeneemkoffer. Ideaal voor urenlang knutselplezier zonder rommel.",
     "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/", "prijs": "€ 23,99" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0991EIdJ", "prijs": "€ 36,59" }
+      { "naam": "Bol.com", "prijs": "€ 23,99", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/" },
+      { "naam": "Amazon.nl", "prijs": "€ 36,59", "link": "https://amzn.eu/d/0991EIdJ" }
     ]
   },
   {
@@ -170,7 +170,7 @@
     "beschrijving": "Het vervolg op de populaire Disney-film. Volg de nieuwe avonturen van Judy Hopps en Nick Wilde in de grote stad Zootropolis.",
     "afbeelding_url": "https://media.s-bol.com/YKB06jnrK1x9/Z4P3zMJ/550x703.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
+      { "naam": "Bol.com", "prijs": "€ 27,89", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
       { "naam": "Boekenvoordeel", "prijs": "€ 29,99", "link": "https://www.boekenvoordeel.be/p/zootropolis-2-blu-ray-113386" }
     ]
   }

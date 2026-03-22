@@ -62,6 +62,24 @@
     ]
   },
   {
+    "id": "hot-wheels-fast-furious-10-pack",
+    "naam": "Hot Wheels Fast & Furious 10-pack auto's",
+    "beschrijving": "Een verzameling van 10 iconische speelgoedauto's uit de Fast & Furious franchise. Deze die-cast voertuigen zijn uitgevoerd op een schaal van 1:64 en bevatten authentieke details van de bekende filmreeks.",
+    "afbeelding_url": "https://media.s-bol.com/YPmRx2Axzrkp/660k847/877x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 41,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-fast-furious-10-pack-auto-s-jct92/9300000236199845/" }
+    ]
+  },
+  {
+    "id": "die-cast-ruimteset-astronauten-shuttle",
+    "naam": "Die-Cast Ruimteset",
+    "beschrijving": "Een uitgebreide speelset met diverse ruimtevaartvoertuigen, waaronder een spaceshuttle en astronauten. Gemaakt van stevig die-cast materiaal voor urenlang speelplezier.",
+    "afbeelding_url": "https://media.s-bol.com/Kj5zVXk4XBAM/jRjzZKP/913x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 13,99", "link": "https://www.bol.com/be/nl/p/die-cast-ruimteset/9300000184359428/" }
+    ]
+  },
+  {
     "id": "dreamland-kookpotten-keukenaccessoires-01611687",
     "naam": "Kookpotten en keukenaccessoires 13 delig",
     "nummer": "01611687",
@@ -241,6 +259,21 @@
     ]
   },
   {
+    "id": "playmobil-71466-brandweer-plaats-ongeval",
+    "naam": "PLAYMOBIL Action Heroes 71466 - Brandweer op de plaats van het ongeval",
+    "nummer": "71466",
+    "beschrijving": "Help de brandweerman bij het blussen van de brandende motor! Deze set bevat een brandweerman, een motorfiets in vlammen, een werkende brandblusser die water kan spuiten en diverse accessoires voor een spannend rollenspel.",
+    "afbeelding_url": "https://media.s-bol.com/mPKw7WZzr7Vp/LNVVOD/550x577.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "prijs": "€ 8,99", "link": "https://amzn.eu/d/0etHbtKI" },
+      { "naam": "Amazon.nl", "prijs": "€ 8,99", "link": "https://amzn.eu/d/080nBAC9" },
+      { "naam": "Supra Bazar", "prijs": "€ 11,98", "link": "https://www.suprabazar.be/playmobil-action-heroes-71466-brandweer-op-de-plaats-van-het-ongeval-31627876" },
+      { "naam": "Bol.com", "prijs": "€ 13,99", "link": "https://www.bol.com/be/nl/p/71466/9300000166959390/" },
+      { "naam": "DreamLand", "prijs": "€ 13,99", "link": "https://www.dreamland.be/nl/producten/71466-playmobil-brandweer-op-de-plaats-van-het-ongeval/01766189" },
+      { "naam": "Fnac", "prijs": "€ 20,43", "link": "https://www.nl.fnac.be/Playmobil-Action-Heroes-71466-Brandweer-op-de-plaats-van-het-ongeval/a18859238" }
+    ]
+  },
+  {
     "id": "zootropolis-2-blu-ray",
     "naam": "Zootropolis 2 (Blu-ray)",
     "beschrijving": "Het vervolg op de populaire Disney-film. Volg de nieuwe avonturen van Judy Hopps en Nick Wilde in de grote stad Zootropolis.",
@@ -257,6 +290,18 @@
     "afbeelding_url": "https://media.s-bol.com/3XlA5Oq1nRKn/PN7o4rW/1200x1173.jpg",
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 34,95", "link": "https://www.bol.com/be/nl/p/magnetic-tiles-magnaminds-magnatiles-100-stuks/9300000150075882/" }
+    ]
+  },
+  {
+    "id": "smartgames-drie-kleine-biggetjes-deluxe",
+    "naam": "SmartGames - Drie Kleine Biggetjes Deluxe",
+    "beschrijving": "Een uitdagend puzzelspel voor kleuters met 48 opdrachten. Help de drie biggetjes hun huizen te bouwen zodat ze veilig zijn voor de wolf. Inclusief een extra sprookjesboek met plaatjes.",
+    "afbeelding_url": "https://media.s-bol.com/3x9GV8KOnj4r/lYpyQyl/1200x1112.jpg",
+    "winkels": [
+      { "naam": "Verthus", "prijs": "€ 22,95", "link": "https://verthus.be/producten/smart-de-drie-kleine-biggetjes-48-opdrachten/" },
+      { "naam": "Amazon.nl", "prijs": "€ 23,40", "link": "https://amzn.eu/d/0afJ1oKU" },
+      { "naam": "Bol.com", "prijs": "€ 24,90", "link": "https://www.bol.com/be/nl/p/smartgames-drie-kleine-biggetjes-deluxe-kleuterspel-48-puzzel-opdrachten-met-extra-sprookjesboek/9200000059431562/" },
+      { "naam": "DreamLand", "prijs": "€ 26,95", "link": "https://www.dreamland.be/nl/producten/smartgames-drie-kleine-biggetjes-deluxe-sprookjesspel-kleuters-48-opdrachten/01215861" }
     ]
   }
 ]

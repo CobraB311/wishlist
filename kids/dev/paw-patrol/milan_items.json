@@ -8,7 +8,7 @@
     "winkels": [
       { "naam": "Amazon.nl", "prijs": "€ 26,99", "link": "https://amzn.eu/d/1DOZ5fR" },
       { "naam": "Amazon.com.be", "prijs": "€ 21,99", "link": "https://amzn.eu/d/i2vcTRC" },
-      { "naam": "Bol.com", "prijs": "€ 26,99", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www" }
+      { "naam": "Bol.com", "prijs": "€ 18,99", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www" }
     ]
   },
   {
@@ -55,9 +55,9 @@
     "beschrijving": "Rijd de redding tegemoet met Ryder en zijn Rescue ATV! Dit voertuig is gemaakt van gerecycled plastic en bevat een Ryder speelfiguur in zijn klassieke uniform.",
     "afbeelding_url": "https://media.s-bol.com/qDRqZ4JVm4Jy/jRvo7Y/550x590.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 11,21", "link": "https://www.bol.com/be/nl/p/paw-patrol-ryder-s-rescue-atv-speelgoedauto-met-speelfiguur-52-gerecycled-plastic-duurzaam-speelgoed/9300000055705054/" },
+      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-ryder-s-rescue-atv-speelgoedauto-met-speelfiguur-52-gerecycled-plastic-duurzaam-speelgoed/9300000055705054/" },
       { "naam": "DreamLand", "prijs": "€ 11,21", "link": "https://www.dreamland.be/nl/producten/paw-patrol-voertuig-met-ryder/01577167" },
-      { "naam": "Amazon.nl", "prijs": "€ 23,14", "link": "https://amzn.eu/d/052Y6yvd" },
+      { "naam": "Amazon.nl", "prijs": "€ 23,12", "link": "https://amzn.eu/d/052Y6yvd" },
       { "naam": "Amazon.com.be", "prijs": "€ 26,00", "link": "https://amzn.eu/d/0cX0hZ47" }
     ]
   },
@@ -67,7 +67,7 @@
     "beschrijving": "Een verzameling van 10 iconische speelgoedauto's uit de Fast & Furious franchise. Deze die-cast voertuigen zijn uitgevoerd op een schaal van 1:64 en bevatten authentieke details van de bekende filmreeks.",
     "afbeelding_url": "https://media.s-bol.com/YPmRx2Axzrkp/660k847/877x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 52,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-fast-furious-10-pack-auto-s-jct92/9300000236199845/" }
+      { "naam": "Bol.com", "prijs": "€ 63,10", "link": "https://www.bol.com/be/nl/p/hot-wheels-fast-furious-10-pack-auto-s-jct92/9300000236199845/" }
     ]
   },
   {
@@ -199,7 +199,7 @@
     "winkels": [
       { "naam": "Supra Bazar", "prijs": "€ 26,99", "link": "https://www.suprabazar.be/lego-duplo-10421-alfabetvrachtwagen-31627120" },
       { "naam": "Amazon.nl", "prijs": "€ 27,99", "link": "https://amzn.eu/d/0dyrQL0m" },
-      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/lego-10421-duplo-stad-alfabetvrachtwagen-educatief-speelgoed/9300000157956263/" },
+      { "naam": "Bol.com", "prijs": "€ 33,99", "link": "https://www.bol.com/be/nl/p/lego-10421-duplo-stad-alfabetvrachtwagen-educatief-speelgoed/9300000157956263/" },
       { "naam": "Amazon.com.be", "prijs": "€ 31,99", "link": "https://amzn.eu/d/013TvIcf" },
       { "naam": "Multibazar", "prijs": "€ 33,95", "link": "https://www.multibazar.be/nl/lego-duplo-10421-alfabetvrachtwagen-887676?colour=611068" },
       { "naam": "DreamLand", "prijs": "€ 39,95", "link": "https://www.dreamland.be/nl/producten/10421-lego-alfabetvrachtwagen/01756562" },
@@ -215,7 +215,7 @@
     "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 20,99", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/" },
-      { "naam": "Amazon.nl", "prijs": "€ 36,39", "link": "https://amzn.eu/d/0991EIdJ" }
+      { "naam": "Amazon.nl", "prijs": "€ 36,79", "link": "https://amzn.eu/d/0991EIdJ" }
     ]
   },
   {
@@ -227,7 +227,7 @@
       { "naam": "Verthus", "prijs": "€ 49,95", "link": "https://verthus.be/producten/revell-rc-mario-kart-tafel-racing-set/" },
       { "naam": "Multibazar", "prijs": "€ 49,95", "link": "https://www.multibazar.be/nl/carrera-team-mario-kart-tabletop-racebaan-mario-luigi-5km-u-1-50-1052812" },
       { "naam": "De Kinderplaneet", "prijs": "€ 49,95", "link": "https://www.dekinderplaneet.be/nl/carrera-team-mario-kart-tabletop-racebaan-mario-luigi-5km-u-1-50-1052812" },
-      { "naam": "Bol.com", "prijs": "€ 50,00", "link": "https://www.bol.com/be/nl/p/carrera-rc-auto-mini-mario-kart-tabletop-racing-set-mario-vs-luigi-2-auto-s-schaal-1-43-2-4-ghz-rc-model-kant-en-klaar/9300000229648390/" },
+      { "naam": "Bol.com", "prijs": "€ 41,95", "link": "https://www.bol.com/be/nl/p/carrera-rc-auto-mini-mario-kart-tabletop-racing-set-mario-vs-luigi-2-auto-s-schaal-1-43-2-4-ghz-rc-model-kant-en-klaar/9300000229648390/" },
       { "naam": "Carrera Toys", "prijs": "€ 54,99", "link": "https://carrera-toys.com/nl-eu/products/370430015-24ghz-mario-karttm-tabletop-racing-set-mario-and-luigi" },
       { "naam": "DreamLand", "prijs": "€ 59,99", "link": "https://www.dreamland.be/nl/producten/mario-kart-table-top-racing-set/01871739" },
       { "naam": "Fnac", "prijs": "€ 59,99", "link": "https://www.nl.fnac.be/Afstandsbedienbare-voertuigen-Carrera-RC-Mario-Kart-Tabletop-Racing-Set-Mario-et-Luigi/a21758491" }
@@ -250,7 +250,7 @@
     "beschrijving": "Bestrijd branden op grote hoogte met deze ladderwagen. Inclusief werkende zwaailichten en geluid, een uitschuifbare ladder en brandweerfiguren.",
     "afbeelding_url": "https://media.playmobil.com/i/playmobil/9463_product_box_front?locale=nl-BE,nl,en,*&fmt=auto&strip=true&qlt=80&unsharp=0,1,0.9,1&fmt.jpeg.interlaced=true",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 54,80", "link": "https://www.bol.com/be/nl/p/playmobil-city-action-brandweer-ladderwagen-9463/9200000095070035/" },
+      { "naam": "Bol.com", "prijs": "€ 45,75", "link": "https://www.bol.com/be/nl/p/playmobil-city-action-brandweer-ladderwagen-9463/9200000095070035/" },
       { "naam": "Amazon.be", "prijs": "€ 45,75", "link": "https://amzn.eu/d/0hqNAh3b" },
       { "naam": "Amazon.nl", "prijs": "€ 45,75", "link": "https://amzn.eu/d/031ryeOF" },
       { "naam": "Fnac", "prijs": "€ 54,99", "link": "https://www.nl.fnac.be/PLAYMOBIL-Brandweer-ladderwagen/a12054492" },
@@ -279,7 +279,7 @@
     "beschrijving": "Het vervolg op de populaire Disney-film. Volg de nieuwe avonturen van Judy Hopps en Nick Wilde in de grote stad Zootropolis.",
     "afbeelding_url": "https://media.s-bol.com/YKB06jnrK1x9/Z4P3zMJ/550x703.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 25,93", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
+      { "naam": "Bol.com", "prijs": "€ 26,15", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
       { "naam": "Boekenvoordeel", "prijs": "€ 29,99", "link": "https://www.boekenvoordeel.be/p/zootropolis-2-blu-ray-113386" }
     ]
   },
@@ -289,7 +289,7 @@
     "beschrijving": "Magnetisch constructiespeelgoed (100 stuks) voor urenlang bouwplezier. Compatibel met andere grote merken magnetische tegels.",
     "afbeelding_url": "https://media.s-bol.com/3XlA5Oq1nRKn/PN7o4rW/1200x1173.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 34,95", "link": "https://www.bol.com/be/nl/p/magnetic-tiles-magnaminds-magnatiles-100-stuks/9300000150075882/" }
+      { "naam": "Bol.com", "prijs": "€ 30,49", "link": "https://www.bol.com/be/nl/p/magnetic-tiles-magnaminds-magnatiles-100-stuks/9300000150075882/" }
     ]
   },
   {
@@ -300,7 +300,7 @@
     "winkels": [
       { "naam": "Verthus", "prijs": "€ 22,95", "link": "https://verthus.be/producten/smart-de-drie-kleine-biggetjes-48-opdrachten/" },
       { "naam": "Amazon.nl", "prijs": "€ 18,99", "link": "https://amzn.eu/d/0afJ1oKU" },
-      { "naam": "Bol.com", "prijs": "€ 23,99", "link": "https://www.bol.com/be/nl/p/smartgames-drie-kleine-biggetjes-deluxe-kleuterspel-48-puzzel-opdrachten-met-extra-sprookjesboek/9200000059431562/" },
+      { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/smartgames-drie-kleine-biggetjes-deluxe-kleuterspel-48-puzzel-opdrachten-met-extra-sprookjesboek/9200000059431562/" },
       { "naam": "DreamLand", "prijs": "€ 24,95", "link": "https://www.dreamland.be/nl/producten/smartgames-drie-kleine-biggetjes-deluxe-sprookjesspel-kleuters-48-opdrachten/01215861" }
     ]
   }

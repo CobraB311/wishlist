@@ -130,7 +130,7 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .snow {
     position: absolute; background: rgba(0, 170, 255, 0.3); border-radius: 50%;
     border: 1px solid rgba(255,255,255,0.4); z-index: 10;
-    bottom: -50px; /* Start onder de container */
+    bottom: -50px;
     animation: floatUp linear infinite;
 }
 

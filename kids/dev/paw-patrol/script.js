@@ -15,7 +15,7 @@ function setPupGreeting() {
     greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
 }
 
-// BUBBELS HERSTELD
+// BUBBELS LOGICA
 function createBubbles() {
     const container = document.getElementById('snow-container');
     if (!container) return;
@@ -29,20 +29,32 @@ function createBubbles() {
     bubble.style.animationDuration = (Math.random() * 4 + 6) + "s";
 
     container.appendChild(bubble);
-
-    // Verwijder bubbel na animatie
     setTimeout(() => { bubble.remove(); }, 10000);
 }
 
+// COUNTDOWN MET BELGISCHE TIJDZONE FIX
 function startCountdown(targetDateStr, targetName) {
     const container = document.getElementById("countdown-container");
     const timerEl = document.getElementById("countdown-timer");
     if (!targetDateStr || !container) return;
     container.style.display = "block";
-    const targetDate = new Date(targetDateStr).getTime();
+
+    // FIX: Forceer interpretatie als Belgische tijd (CET/CEST)
+    // Als de string geen offset heeft, voegen we er een toe voor België (+02:00 in april)
+    let dateToParse = targetDateStr;
+    if (!targetDateStr.includes('+') && !targetDateStr.includes('Z')) {
+        const testDate = new Date(targetDateStr);
+        // April is zomertijd in België (+02:00)
+        const isDST = testDate.getMonth() > 2 && testDate.getMonth() < 10;
+        dateToParse += isDST ? "+02:00" : "+01:00";
+    }
+
+    const targetDate = new Date(dateToParse).getTime();
+
     const updateTimer = setInterval(() => {
         const now = new Date().getTime();
         const distance = targetDate - now;
+
         if (distance < 0) {
             clearInterval(updateTimer);
             timerEl.innerHTML = `🎉 GELUKKIGE VERJAARDAG ${targetName.toUpperCase()}! 🎉`;
@@ -187,8 +199,6 @@ function getLowestPriceInfo(winkels) {
 
 async function loadWishlist() {
     setPupGreeting();
-
-    // BUBBEL STROOM START
     setInterval(createBubbles, 800);
 
     try {

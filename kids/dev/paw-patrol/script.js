@@ -1,5 +1,6 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
+let globalPurchasedIds = new Set(); // We houden de lijst globaal bij
 
 const zumaQuotes = [
     "Laten we een duik nemen!", "Klaar voor action in de golven!", "1, 2, Zuma komt eraan!",
@@ -18,7 +19,6 @@ function setPupGreeting() {
 function createBubbles() {
     const container = document.getElementById('snow-container');
     if (!container) return;
-
     const bubble = document.createElement('div');
     bubble.className = 'snow';
     bubble.style.left = Math.random() * 100 + "%";
@@ -26,7 +26,6 @@ function createBubbles() {
     bubble.style.width = size;
     bubble.style.height = size;
     bubble.style.animationDuration = (Math.random() * 4 + 6) + "s";
-
     container.appendChild(bubble);
     setTimeout(() => { bubble.remove(); }, 10000);
 }
@@ -36,20 +35,16 @@ function startCountdown(targetDateStr, targetName) {
     const timerEl = document.getElementById("countdown-timer");
     if (!targetDateStr || !container) return;
     container.style.display = "block";
-
     let dateToParse = targetDateStr;
     if (!targetDateStr.includes('+') && !targetDateStr.includes('Z')) {
         const testDate = new Date(targetDateStr);
         const isDST = testDate.getMonth() > 2 && testDate.getMonth() < 10;
         dateToParse += isDST ? "+02:00" : "+01:00";
     }
-
     const targetDate = new Date(dateToParse).getTime();
-
     const updateTimer = setInterval(() => {
         const now = new Date().getTime();
         const distance = targetDate - now;
-
         if (distance < 0) {
             clearInterval(updateTimer);
             timerEl.innerHTML = `🎉 GELUKKIGE VERJAARDAG ${targetName.toUpperCase()}! 🎉`;
@@ -61,6 +56,33 @@ function startCountdown(targetDateStr, targetName) {
             timerEl.innerHTML = `${days}d ${hours}u ${minutes}m ${seconds}s`;
         }
     }, 1000);
+}
+
+// ACHTERGROND REFRESH VAN CLAIMS
+async function refreshClaims() {
+    try {
+        const response = await fetch(CONFIG.GOOGLE_SHEET_URL);
+        const data = await response.json();
+        globalPurchasedIds = new Set(data.purchased_items);
+
+        // Update direct de UI (grijs maken van items die net verkocht zijn)
+        document.querySelectorAll('.wens-item, .overview-grid-item').forEach(el => {
+            const id = el.id || el.getAttribute('onclick')?.match(/'([^']+)'\s*\)$/)?.[1];
+            if (id && globalPurchasedIds.has(id)) {
+                if (!el.classList.contains('purchased')) {
+                    el.classList.add('purchased');
+                    // Voeg overlay toe als die er nog niet is
+                    if (!el.querySelector('.purchased-overlay')) {
+                        const imgWrapper = el.querySelector('.item-image-container, .overview-image-wrapper');
+                        if (imgWrapper) imgWrapper.insertAdjacentHTML('afterbegin', '<div class="purchased-overlay">GEKOCHT</div>');
+                    }
+                    // Verberg koopknop
+                    const btn = el.querySelector('.buy-button');
+                    if (btn) btn.remove();
+                }
+            }
+        });
+    } catch (e) { console.warn("Achtergrond update mislukt"); }
 }
 
 function normalizeText(text) { return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
@@ -85,44 +107,67 @@ function togglePurchasedFilter() {
 
 function showCustomModal(title, text, confirmCallback) {
     const modal = document.getElementById('customModal');
+    document.getElementById('modal-icon').innerText = "🐾";
     document.getElementById('modal-title').innerText = title;
     document.getElementById('modal-text').innerText = text;
     document.getElementById('modal-spinner').style.display = 'none';
     document.getElementById('modal-buttons').style.display = 'flex';
+    document.getElementById('modal-cancel-btn').style.display = 'inline-block';
+    document.getElementById('modal-confirm-btn').innerText = "Ja, ik koop dit!";
     modal.style.display = 'block';
 
     document.getElementById('modal-confirm-btn').onclick = function() {
-        document.getElementById('modal-buttons').style.display = 'none';
-        document.getElementById('modal-spinner').style.display = 'block';
-        document.getElementById('modal-text').innerText = "De missie wordt bijgewerkt...";
-        confirmCallback();
+        if (confirmCallback) confirmCallback();
     };
     document.getElementById('modal-cancel-btn').onclick = function() { modal.style.display = 'none'; };
 }
 
 async function claimItem(person, itemName, id) {
+    // 1. Directe check: is het item in onze lokale (verversende) lijst al gekocht?
+    await refreshClaims(); // Doe nog een snelle check vlak voor de modal
+    if (globalPurchasedIds.has(id)) {
+        showCustomModal("Oeps!", "Dit cadeau is zojuist door iemand anders geclaimd.", () => location.reload());
+        document.getElementById('modal-confirm-btn').innerText = "Pagina herladen";
+        document.getElementById('modal-cancel-btn').style.display = 'none';
+        return;
+    }
+
     let userIp = "Onbekend";
     try {
-        // We halen het IP op via een kleine externe fetch
         const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
         userIp = data.ip;
-    } catch (e) { console.warn("IP-adres niet gevonden."); }
+    } catch (e) { console.warn("IP niet gevonden."); }
 
     showCustomModal(
         "Cadeau gekocht?",
-        `Markeer "${itemName}" als gekocht.\n\n⚠️ Let op: Dit wordt direct automatisch bijgewerkt op de website. Je hoeft geen mail meer te sturen!`,
+        `Markeer "${itemName}" als gekocht.\n\n⚠️ Dit wordt direct bijgewerkt.`,
         function() {
+            document.getElementById('modal-buttons').style.display = 'none';
+            document.getElementById('modal-spinner').style.display = 'block';
+            document.getElementById('modal-text').innerText = "De missie wordt bijgewerkt...";
+
             fetch(CONFIG.GOOGLE_SHEET_URL, {
                 method: 'POST',
                 mode: 'cors',
-                body: JSON.stringify({
-                    itemId: id,
-                    ipAddress: userIp // IP wordt hier meegestuurd
-                })
-            }).then(() => {
-                setTimeout(() => location.reload(), 1500);
-            });
+                body: JSON.stringify({ itemId: id, ipAddress: userIp })
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.result === "already_claimed") {
+                    document.getElementById('modal-spinner').style.display = 'none';
+                    document.getElementById('modal-icon').innerText = "⚠️";
+                    document.getElementById('modal-title').innerText = "Te laat!";
+                    document.getElementById('modal-text').innerText = "Iemand anders was je net voor! Het item is al geclaimd.";
+                    document.getElementById('modal-buttons').style.display = 'flex';
+                    document.getElementById('modal-confirm-btn').innerText = "Begrepen";
+                    document.getElementById('modal-confirm-btn').onclick = () => location.reload();
+                    document.getElementById('modal-cancel-btn').style.display = 'none';
+                } else {
+                    setTimeout(() => location.reload(), 1000);
+                }
+            })
+            .catch(() => location.reload());
         }
     );
 }
@@ -174,6 +219,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
 function openTab(evt, tabId) {
     setPupGreeting();
+    refreshClaims(); // VERVERS CLAIMS IN ACHTERGROND BIJ TAB-WISSEL
     if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
     document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
@@ -206,15 +252,18 @@ function getLowestPriceInfo(winkels) {
 async function loadWishlist() {
     setPupGreeting();
     setInterval(createBubbles, 800);
+    // Ververs elke 30 seconden ook de claims automatisch
+    setInterval(refreshClaims, 30000);
 
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
         if (config.aftel_datum) startCountdown(config.aftel_datum, config.aftel_naam || "Milan");
         const claims = await fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json()).catch(() => ({purchased_items:[]}));
+        globalPurchasedIds = new Set(claims.purchased_items);
         const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
         const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
-        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}}, new Set(claims.purchased_items), new Set(favs.favorite_ids));
+        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}}, globalPurchasedIds, new Set(favs.favorite_ids));
         document.getElementById('loading-message').style.display = 'none';
     } catch (e) { console.error(e); }
 }

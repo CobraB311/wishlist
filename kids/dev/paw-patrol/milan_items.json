@@ -86,6 +86,39 @@
     ]
   },
   {
+    "id": "pixar-lightyear-hyperspeed-zurg-mothership",
+    "naam": "Pixar Lightyear Hyperspeed Series - Zurg Moederschip",
+    "beschrijving": "Beleef de avonturen uit de Disney en Pixar film Lightyear opnieuw met het indrukwekkende moederschip van Zurg. Dit gedetailleerde gevechtsschip uit de Hyperspeed Series is inclusief een kleine Zurg-figuur die in de cockpit past.",
+    "afbeelding_url": "https://media.s-bol.com/0EmQwoOJvP9V/91lDgj8/550x592.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "prijs": "€ 14,95", "link": "https://amzn.eu/d/08hYybU3" },
+      { "naam": "Amazon.com.be", "prijs": "€ 21,25", "link": "https://amzn.eu/d/0hl3gVxI" },
+      { "naam": "Fnac", "prijs": "€ 21,30", "link": "https://www.nl.fnac.be/Disney-Pixar-Buzz-Lightyear-Zurg-Slagschip-Beeldje/a16548717" },
+      { "naam": "Bol.com", "prijs": "€ 23,23", "link": "https://www.bol.com/be/nl/p/pixar-lightyear-hyperspeed-series-ruimteschip-van-zurg/9300000071523569/" }
+    ]
+  },
+  {
+    "id": "pixar-lightyear-hyperspeed-xl01-buzz",
+    "naam": "Pixar Lightyear Hyperspeed Series - XL-01 met Buzz Lightyear",
+    "beschrijving": "Vlieg mee met Buzz Lightyear in zijn XL-01 ruimteschip! Deze gedetailleerde set uit de Hyperspeed Series bevat het iconische witte schip uit de film en een beweegbaar Buzz Lightyear minifiguur dat echt in de cockpit past.",
+    "afbeelding_url": "https://media.s-bol.com/m8nJ10G94BZO/91lD22D/550x558.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "prijs": "€ 7,99", "link": "https://amzn.eu/d/0auOBVtQ" },
+      { "naam": "Fnac", "prijs": "€ 16,76", "link": "https://www.nl.fnac.be/Disney-Pixar-Buzz-Lightyear-XL-01-scheepsBeeldje-en-Buzz-miniBeeldje/a16548718" },
+      { "naam": "Bol.com", "prijs": "€ 20,82", "link": "https://www.bol.com/be/nl/p/pixar-lightyear-hyperspeed-series-buzz-met-ruimteschip-xl-01-actiefiguur/9300000071523586/" }
+    ]
+  },
+  {
+    "id": "pixar-lightyear-hyperspeed-xl15-buzz",
+    "naam": "Pixar Lightyear Hyperspeed Series - XL-15 met Buzz Lightyear",
+    "beschrijving": "Ga op een intergalactische missie met Buzz Lightyear en zijn XL-15 ruimteschip. Deze set uit de Hyperspeed Series bevat het gedetailleerde schip en een bijbehorend Buzz Lightyear minifiguur dat in de cockpit geplaatst kan worden.",
+    "afbeelding_url": "https://media.s-bol.com/1EnR0pBKVw6P/xnP2oRE/550x566.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "prijs": "€ 14,19", "link": "https://amzn.eu/d/0aSF2j1a" },
+      { "naam": "Bol.com", "prijs": "€ 20,93", "link": "https://www.bol.com/be/nl/p/pixar-lightyear-hyperspeed-series-buzz-met-ruimteschip-xl-15-actiefiguur/9300000071523548/" }
+    ]
+  },
+  {
     "id": "die-cast-ruimteset-astronauten-shuttle",
     "naam": "Die-Cast Ruimteset",
     "beschrijving": "Een uitgebreide speelset met diverse ruimtevaartvoertuigen, waaronder een spaceshuttle en astronauten. Gemaakt van stevig die-cast materiaal voor urenlang speelplezier.",

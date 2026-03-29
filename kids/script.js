@@ -101,24 +101,31 @@ function togglePurchasedFilter() {
     filterGifts();
 }
 
-// Centrale functie voor Modal UI updates
+// Centrale functie voor Modal UI updates - FIX: Reset cancel btn altijd
 function updateModalUI(config) {
     const modal = document.getElementById('customModal');
+    const cancelBtn = document.getElementById('modal-cancel-btn');
+    const confirmBtn = document.getElementById('modal-confirm-btn');
+
     document.getElementById('modal-icon').innerText = config.icon || "🐾";
     document.getElementById('modal-title').innerText = config.title || "";
     document.getElementById('modal-text').innerText = config.text || "";
     document.getElementById('modal-spinner').style.display = config.showSpinner ? 'block' : 'none';
     document.getElementById('modal-buttons').style.display = config.showButtons ? 'flex' : 'none';
-    if (config.confirmText) document.getElementById('modal-confirm-btn').innerText = config.confirmText;
-    if (config.cancelText) document.getElementById('modal-cancel-btn').innerText = config.cancelText;
-    document.getElementById('modal-cancel-btn').style.display = config.hideCancel ? 'none' : 'inline-block';
 
-    if (config.onConfirm) document.getElementById('modal-confirm-btn').onclick = config.onConfirm;
+    if (config.confirmText) confirmBtn.innerText = config.confirmText;
+    if (config.cancelText) cancelBtn.innerText = config.cancelText;
+
+    // Zorg dat de annuleerknop altijd sluit, tenzij anders opgegeven
+    cancelBtn.style.display = config.hideCancel ? 'none' : 'inline-block';
+    cancelBtn.onclick = function() { modal.style.display = 'none'; };
+
+    if (config.onConfirm) confirmBtn.onclick = config.onConfirm;
     modal.style.display = 'block';
 }
 
 async function claimItem(person, itemName, id) {
-    // STAP 1: Toon direct de modal in 'Laden' stand
+    // 1. Direct Laden tonen
     updateModalUI({
         title: "Even geduld...",
         text: "We controleren de beschikbaarheid van dit cadeau...",
@@ -127,7 +134,7 @@ async function claimItem(person, itemName, id) {
     });
 
     try {
-        // STAP 2: Voer checks uit op de achtergrond
+        // 2. Checks uitvoeren
         const [ipRes, claimsRes] = await Promise.all([
             fetch('https://api.ipify.org?format=json').then(r => r.json()).catch(() => ({ip: "Onbekend"})),
             fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json())
@@ -136,7 +143,7 @@ async function claimItem(person, itemName, id) {
         const userIp = ipRes.ip;
         globalPurchasedIds = new Set(claimsRes.purchased_items);
 
-        // STAP 3: Check of het inmiddels verkocht is
+        // 3. Verkocht check
         if (globalPurchasedIds.has(id)) {
             updateModalUI({
                 icon: "⚠️",
@@ -151,7 +158,7 @@ async function claimItem(person, itemName, id) {
             return;
         }
 
-        // STAP 4: Alles OK? Toon de echte bevestigingsvraag
+        // 4. Bevestiging tonen
         updateModalUI({
             title: "Cadeau gekocht?",
             text: `Markeer "${itemName}" als gekocht.\n\n⚠️ Dit wordt direct bijgewerkt op de website.`,
@@ -160,7 +167,6 @@ async function claimItem(person, itemName, id) {
             confirmText: "Ja, ik koop dit!",
             cancelText: "Annuleren",
             onConfirm: function() {
-                // Toon laad-status TIJDENS het opslaan
                 updateModalUI({
                     title: "Bezig met opslaan...",
                     text: "De missie wordt voltooid...",

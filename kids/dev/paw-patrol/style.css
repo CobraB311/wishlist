@@ -107,7 +107,7 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .mini-star { position: absolute; top: 8px; right: 8px; color: #ffcc00; font-size: 1.4em; z-index: 5; }
 .favorite-badge { display: inline-block; background: #ffcc00; color: #333; padding: 3px 8px; font-family: 'Impact'; font-size: 0.8em; margin-top: 10px; border-radius: 4px; }
 
-/* MODALS STYLING HERSTELD */
+/* MODALS STYLING */
 .custom-modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(5px); }
 .custom-modal-content { background-color: #fff; margin: 10% auto; padding: 35px; border: 6px solid #ff6600; width: 90%; max-width: 450px; border-radius: 25px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 
@@ -125,7 +125,7 @@ h1, h2, h3 { font-family: 'Impact', sans-serif; text-transform: uppercase; color
 .loader { border: 8px solid #f3f3f3; border-top: 8px solid #ff6600; border-bottom: 8px solid #00aaff; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 20px auto; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-/* SNOW & BUBBELS ANIMATIE FIX */
+/* SNOW & BUBBELS */
 .water-area { flex-grow: 1; position: relative; overflow: hidden; width: 100%; min-height: 200px; background: rgba(0, 170, 255, 0.05); }
 .snow {
     position: absolute; background: rgba(0, 170, 255, 0.3); border-radius: 50%;

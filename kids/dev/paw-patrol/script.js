@@ -15,7 +15,6 @@ function setPupGreeting() {
     greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
 }
 
-// BUBBELS LOGICA
 function createBubbles() {
     const container = document.getElementById('snow-container');
     if (!container) return;
@@ -32,19 +31,15 @@ function createBubbles() {
     setTimeout(() => { bubble.remove(); }, 10000);
 }
 
-// COUNTDOWN MET BELGISCHE TIJDZONE FIX
 function startCountdown(targetDateStr, targetName) {
     const container = document.getElementById("countdown-container");
     const timerEl = document.getElementById("countdown-timer");
     if (!targetDateStr || !container) return;
     container.style.display = "block";
 
-    // FIX: Forceer interpretatie als Belgische tijd (CET/CEST)
-    // Als de string geen offset heeft, voegen we er een toe voor België (+02:00 in april)
     let dateToParse = targetDateStr;
     if (!targetDateStr.includes('+') && !targetDateStr.includes('Z')) {
         const testDate = new Date(targetDateStr);
-        // April is zomertijd in België (+02:00)
         const isDST = testDate.getMonth() > 2 && testDate.getMonth() < 10;
         dateToParse += isDST ? "+02:00" : "+01:00";
     }
@@ -99,13 +94,21 @@ function showCustomModal(title, text, confirmCallback) {
     document.getElementById('modal-confirm-btn').onclick = function() {
         document.getElementById('modal-buttons').style.display = 'none';
         document.getElementById('modal-spinner').style.display = 'block';
-        document.getElementById('modal-text').innerText = "De missie wordt bijgewerkt... Even geduld!";
+        document.getElementById('modal-text').innerText = "De missie wordt bijgewerkt...";
         confirmCallback();
     };
     document.getElementById('modal-cancel-btn').onclick = function() { modal.style.display = 'none'; };
 }
 
-function claimItem(person, itemName, id) {
+async function claimItem(person, itemName, id) {
+    let userIp = "Onbekend";
+    try {
+        // We halen het IP op via een kleine externe fetch
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        userIp = data.ip;
+    } catch (e) { console.warn("IP-adres niet gevonden."); }
+
     showCustomModal(
         "Cadeau gekocht?",
         `Markeer "${itemName}" als gekocht.\n\n⚠️ Let op: Dit wordt direct automatisch bijgewerkt op de website. Je hoeft geen mail meer te sturen!`,
@@ -113,7 +116,10 @@ function claimItem(person, itemName, id) {
             fetch(CONFIG.GOOGLE_SHEET_URL, {
                 method: 'POST',
                 mode: 'cors',
-                body: JSON.stringify({ itemId: id })
+                body: JSON.stringify({
+                    itemId: id,
+                    ipAddress: userIp // IP wordt hier meegestuurd
+                })
             }).then(() => {
                 setTimeout(() => location.reload(), 1500);
             });

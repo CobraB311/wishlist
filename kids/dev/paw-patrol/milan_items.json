@@ -356,5 +356,26 @@
       { "naam": "DreamLand", "prijs": "€ 49,95", "link": "https://www.dreamland.be/nl/producten/ontdek-de-boerderij/01814637" },
       { "naam": "Bol.com", "prijs": "€ 49,95", "link": "https://www.bol.com/be/nl/p/tiptoi-starter-set-ontdek-de-boerderij-interactief-leersysteem/9300000178263903/" }
     ]
+  },
+  {
+    "id": "spiderman-ecozen-tritan-waterfles-480ml",
+    "naam": "Spiderman Ecozen / Tritan Waterfles - 480 ml",
+    "beschrijving": "Een duurzame en herbruikbare Spiderman drinkfles voor dagelijks gebruik. Gemaakt van hoogwaardig Ecozen/Tritan materiaal, BPA-vrij en voorzien van een handige drinktuit. Inhoud: 480 ml.",
+    "afbeelding_url": "https://media.s-bol.com/k3OE59gpZB9X/Q19Pqwq/387x840.jpg",
+    "winkels": [
+      { "naam": "Multibazar", "prijs": "€ 9,99", "link": "https://www.multibazar.be/nl/spiderman-tritan-premium-waterfles-480ml-1048880" },
+      { "naam": "DreamLand", "prijs": "€ 11,99", "link": "https://www.dreamland.be/nl/producten/spiderman-tritan-premium-waterfles-480ml/02252599" },
+      { "naam": "Bol.com", "prijs": "€ 13,39", "link": "https://www.bol.com/be/nl/p/euromic-spiderman-ecozen-dagelijks-gebruik-480-ml-meerkleurig/9300000230582618/" }
+    ]
+  },
+  {
+    "id": "spiderman-lunchbox-3-compartimenten-midnight-flyer",
+    "naam": "Spiderman Lunchbox met 3 compartimenten",
+    "beschrijving": "Praktische brooddoos met Spiderman 'Midnight Flyer' print. Dankzij de drie aparte vakjes kun je boterhammen, fruit en snacks gescheiden van elkaar meenemen zonder dat ze door elkaar raken.",
+    "afbeelding_url": "https://media.s-bol.com/BWR1BB96wOxX/66OEzrL/550x366.jpg",
+    "winkels": [
+      { "naam": "DreamLand", "prijs": "€ 8,99", "link": "https://www.dreamland.be/nl/producten/spiderman-brooddoos-multi-compartment/02252575" },
+      { "naam": "Bol.com", "prijs": "€ 10,99", "link": "https://www.bol.com/be/nl/p/spiderman-lunchbox-met-3-extra-aparte-compartimenten-midnight-flyer/9300000234248692/" }
+    ]
   }
 ]

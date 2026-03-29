@@ -23,6 +23,21 @@
     ]
   },
   {
+    "id": "vtech-switch-go-dinos-scott-spinosaurus",
+    "naam": "VTech Switch & Go Dinos - Scott Spinosaurus",
+    "beschrijving": "Transformeer deze stoere Spinosaurus in een flits naar een snelle racewagen! Met meer dan 50 stoere geluiden en zinnen, een lcd-scherm met animaties en coole lichteffecten.",
+    "afbeelding_url": "https://www.vtechnl.com/assets/425c9a2b-770f-4df6-8736-f19428894162/195223%20Switch%20&%20Go%20Dinos%20-%20Scott%20Spinosaurus%20main.jpg?size=m",
+    "winkels": [
+      { "naam": "DreamLand", "prijs": "€ 22,49", "link": "https://www.dreamland.be/nl/producten/switch-go-dinos-scott-spinosaurus/01563153" },
+      { "naam": "Fnac", "prijs": "€ 24,92", "link": "https://www.nl.fnac.be/Interactief-transformeerbaar-voertuig-Vtech-Switch-and-Go-Dinos-Brutor-Super-Spinosaurus/a13243191" },
+      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/vtech-switch-go-dinos-scott-spinosaurus-speelgoed-dinosaurus-4-tot-8-jaar/9300000004745544/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 28,52", "link": "https://amzn.eu/d/0beX5i6R" },
+      { "naam": "Supra Bazar", "prijs": "€ 29,98", "link": "https://www.suprabazar.be/vtech-switch-go-dino-s-scott-spinosaurus-28117948" },
+      { "naam": "VTech", "prijs": "€ 29,99", "link": "https://www.vtechnl.com/switchandgodinos/scott-spinosaurus" },
+      { "naam": "Amazon.nl", "prijs": "€ 57,68", "link": "https://amzn.eu/d/01I9yHFb" }
+    ]
+  },
+  {
     "id": "gund-paw-patrol-zuma-knuffel",
     "naam": "GUND PAW Patrol Zuma Knuffel (15 cm)",
     "beschrijving": "Een zachte en knuffelbare Zuma pluche van 15 cm. Perfect voor de kleinste PAW Patrol fans om mee te nemen op elke reddingsmissie.",
@@ -120,6 +135,26 @@
       { "naam": "DreamLand", "prijs": "€ 16,99", "link": "https://www.dreamland.be/nl/producten/lego-ninjago-legacy-sleutelhanger-m-licht-lloyd/01637717" },
       { "naam": "Standaard Boekhandel", "prijs": "€ 19,60", "link": "https://www.standaardboekhandel.be/p/lego-ninjago-legacy-lloyd-key-light-4895028528102" },
       { "naam": "Bol.com", "prijs": "€ 23,48", "link": "https://www.bol.com/be/nl/p/lego-led-sleutelhanger-ninjago-lloyd-met-licht/9300000025919730/" }
+    ]
+  },
+  {
+    "id": "lego-71850-lloyd-vs-aardemonster",
+    "naam": "LEGO NINJAGO Lloyd vs. aardemonster in spinner (71850)",
+    "nummer": "71850",
+    "beschrijving": "Neem het op tegen het aardemonster met deze actievolle spinnerset! Bevat 2 minifiguren (Lloyd en een aardemonster), een bouwbare spinner en accessoires om je eigen gevechten na te spelen.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt02fe55fa576833c2/71850_Box1_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 8,49", "link": "https://www.bol.com/be/nl/p/lego-ninjago-lloyd-vs-aardemonster-in-spinner-actiespeelgoed-speelset-met-2-minifiguren-en-spinner-ninjago-bouwset-voor-kinderen-vanaf-6-jaar-cadeautje-71850/9300000237345455/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 8,49", "link": "https://amzn.eu/d/0f19FjYL" },
+      { "naam": "Amazon.nl", "prijs": "€ 8,95", "link": "https://amzn.eu/d/03retGqs" },
+      { "naam": "Verthus", "prijs": "€ 8,99", "link": "https://verthus.be/producten/lego-ninjago-lloyd-vs-elementaire-monsterspinner/" },
+      { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/lloyd-vs-earth-monster-spinner-71850" },
+      { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_71850-lloyd-vs-aardemonster-2208505.html" },
+      { "naam": "DreamLand", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/71850-lego-ninjago-lloyd-vs-aardemonster-in-spinner/02323756" },
+      { "naam": "Supra Bazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/lego-ninjago-71850-lloyd-vs.-aardemonster-in-spinner-32140522" },
+      { "naam": "Fnac", "prijs": "€ 9,99", "link": "https://www.nl.fnac.be/LEGO-71850-LLOYD-VS-ELEMENTAL-MONSTER-SPINNER/a22209303" },
+      { "naam": "Multibazar", "prijs": "€ 9,99", "link": "https://www.multibazar.be/nl/lego-ninjago-lloyd-vs-aardemonster-spinner-71850-1065227" },
+      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-NL/set/71850/Lloyd-vs-Earth-Monster-Spinner.html" }
     ]
   },
   {
@@ -307,6 +342,19 @@
       { "naam": "Amazon.nl", "prijs": "€ 17,99", "link": "https://amzn.eu/d/0afJ1oKU" },
       { "naam": "Bol.com", "prijs": "€ 24,45", "link": "https://www.bol.com/be/nl/p/smartgames-drie-kleine-biggetjes-deluxe-kleuterspel-48-puzzel-opdrachten-met-extra-sprookjesboek/9200000059431562/" },
       { "naam": "DreamLand", "prijs": "€ 24,95", "link": "https://www.dreamland.be/nl/producten/smartgames-drie-kleine-biggetjes-deluxe-sprookjesspel-kleuters-48-opdrachten/01215861" }
+    ]
+  },
+  {
+    "id": "tiptoi-starter-set-ontdek-de-boerderij-00211",
+    "naam": "tiptoi® Starter Set: Ontdek de boerderij",
+    "beschrijving": "De ideale instap in het tiptoi® leersysteem. Deze set bevat de interactieve stift (met oplaadbare batterij) en het boek 'Ontdek de boerderij'. Kinderen kunnen hiermee zelfstandig op ontdekkingstocht gaan door de wereld van de boerderij met geluiden, verhalen en spelletjes.",
+    "afbeelding_url": "https://ravensburger.cloud/images/product-cover/650x445/Ravensburger-Starter-Set-Ontdek-de-boerderij-00211.webp",
+    "winkels": [
+      { "naam": "Ravensburger", "prijs": "€ 43,99", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/tiptoi/tiptoi-pen-starter-sets/-00211" },
+      { "naam": "Supra Bazar", "prijs": "€ 47,99", "link": "https://www.suprabazar.be/tiptoi-starterset-ontdek-de-boerderij-oplaadbare-stift-31969003" },
+      { "naam": "De Kinderplaneet", "prijs": "€ 49,95", "link": "https://www.dekinderplaneet.be/nl/tiptoi-starter-set-ontdek-de-boerderij-1000903" },
+      { "naam": "DreamLand", "prijs": "€ 49,95", "link": "https://www.dreamland.be/nl/producten/ontdek-de-boerderij/01814637" },
+      { "naam": "Bol.com", "prijs": "€ 49,95", "link": "https://www.bol.com/be/nl/p/tiptoi-starter-set-ontdek-de-boerderij-interactief-leersysteem/9300000178263903/" }
     ]
   }
 ]

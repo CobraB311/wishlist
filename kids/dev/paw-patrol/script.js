@@ -1,6 +1,6 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
-let globalPurchasedIds = new Set(); // We houden de lijst globaal bij
+let globalPurchasedIds = new Set();
 
 const zumaQuotes = [
     "Laten we een duik nemen!", "Klaar voor action in de golven!", "1, 2, Zuma komt eraan!",
@@ -58,31 +58,27 @@ function startCountdown(targetDateStr, targetName) {
     }, 1000);
 }
 
-// ACHTERGROND REFRESH VAN CLAIMS
 async function refreshClaims() {
     try {
         const response = await fetch(CONFIG.GOOGLE_SHEET_URL);
         const data = await response.json();
         globalPurchasedIds = new Set(data.purchased_items);
 
-        // Update direct de UI (grijs maken van items die net verkocht zijn)
         document.querySelectorAll('.wens-item, .overview-grid-item').forEach(el => {
             const id = el.id || el.getAttribute('onclick')?.match(/'([^']+)'\s*\)$/)?.[1];
             if (id && globalPurchasedIds.has(id)) {
                 if (!el.classList.contains('purchased')) {
                     el.classList.add('purchased');
-                    // Voeg overlay toe als die er nog niet is
                     if (!el.querySelector('.purchased-overlay')) {
                         const imgWrapper = el.querySelector('.item-image-container, .overview-image-wrapper');
                         if (imgWrapper) imgWrapper.insertAdjacentHTML('afterbegin', '<div class="purchased-overlay">GEKOCHT</div>');
                     }
-                    // Verberg koopknop
                     const btn = el.querySelector('.buy-button');
                     if (btn) btn.remove();
                 }
             }
         });
-    } catch (e) { console.warn("Achtergrond update mislukt"); }
+    } catch (e) { console.warn("Sync mislukt"); }
 }
 
 function normalizeText(text) { return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
@@ -105,71 +101,103 @@ function togglePurchasedFilter() {
     filterGifts();
 }
 
-function showCustomModal(title, text, confirmCallback) {
+// Centrale functie voor Modal UI updates
+function updateModalUI(config) {
     const modal = document.getElementById('customModal');
-    document.getElementById('modal-icon').innerText = "🐾";
-    document.getElementById('modal-title').innerText = title;
-    document.getElementById('modal-text').innerText = text;
-    document.getElementById('modal-spinner').style.display = 'none';
-    document.getElementById('modal-buttons').style.display = 'flex';
-    document.getElementById('modal-cancel-btn').style.display = 'inline-block';
-    document.getElementById('modal-confirm-btn').innerText = "Ja, ik koop dit!";
-    modal.style.display = 'block';
+    document.getElementById('modal-icon').innerText = config.icon || "🐾";
+    document.getElementById('modal-title').innerText = config.title || "";
+    document.getElementById('modal-text').innerText = config.text || "";
+    document.getElementById('modal-spinner').style.display = config.showSpinner ? 'block' : 'none';
+    document.getElementById('modal-buttons').style.display = config.showButtons ? 'flex' : 'none';
+    if (config.confirmText) document.getElementById('modal-confirm-btn').innerText = config.confirmText;
+    if (config.cancelText) document.getElementById('modal-cancel-btn').innerText = config.cancelText;
+    document.getElementById('modal-cancel-btn').style.display = config.hideCancel ? 'none' : 'inline-block';
 
-    document.getElementById('modal-confirm-btn').onclick = function() {
-        if (confirmCallback) confirmCallback();
-    };
-    document.getElementById('modal-cancel-btn').onclick = function() { modal.style.display = 'none'; };
+    if (config.onConfirm) document.getElementById('modal-confirm-btn').onclick = config.onConfirm;
+    modal.style.display = 'block';
 }
 
 async function claimItem(person, itemName, id) {
-    // 1. Directe check: is het item in onze lokale (verversende) lijst al gekocht?
-    await refreshClaims(); // Doe nog een snelle check vlak voor de modal
-    if (globalPurchasedIds.has(id)) {
-        showCustomModal("Oeps!", "Dit cadeau is zojuist door iemand anders geclaimd.", () => location.reload());
-        document.getElementById('modal-confirm-btn').innerText = "Pagina herladen";
-        document.getElementById('modal-cancel-btn').style.display = 'none';
-        return;
-    }
+    // STAP 1: Toon direct de modal in 'Laden' stand
+    updateModalUI({
+        title: "Even geduld...",
+        text: "We controleren de beschikbaarheid van dit cadeau...",
+        showSpinner: true,
+        showButtons: false
+    });
 
-    let userIp = "Onbekend";
     try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        const data = await response.json();
-        userIp = data.ip;
-    } catch (e) { console.warn("IP niet gevonden."); }
+        // STAP 2: Voer checks uit op de achtergrond
+        const [ipRes, claimsRes] = await Promise.all([
+            fetch('https://api.ipify.org?format=json').then(r => r.json()).catch(() => ({ip: "Onbekend"})),
+            fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json())
+        ]);
 
-    showCustomModal(
-        "Cadeau gekocht?",
-        `Markeer "${itemName}" als gekocht.\n\n⚠️ Dit wordt direct bijgewerkt.`,
-        function() {
-            document.getElementById('modal-buttons').style.display = 'none';
-            document.getElementById('modal-spinner').style.display = 'block';
-            document.getElementById('modal-text').innerText = "De missie wordt bijgewerkt...";
+        const userIp = ipRes.ip;
+        globalPurchasedIds = new Set(claimsRes.purchased_items);
 
-            fetch(CONFIG.GOOGLE_SHEET_URL, {
-                method: 'POST',
-                mode: 'cors',
-                body: JSON.stringify({ itemId: id, ipAddress: userIp })
-            })
-            .then(response => response.json())
-            .then(result => {
-                if (result.result === "already_claimed") {
-                    document.getElementById('modal-spinner').style.display = 'none';
-                    document.getElementById('modal-icon').innerText = "⚠️";
-                    document.getElementById('modal-title').innerText = "Te laat!";
-                    document.getElementById('modal-text').innerText = "Iemand anders was je net voor! Het item is al geclaimd.";
-                    document.getElementById('modal-buttons').style.display = 'flex';
-                    document.getElementById('modal-confirm-btn').innerText = "Begrepen";
-                    document.getElementById('modal-confirm-btn').onclick = () => location.reload();
-                    document.getElementById('modal-cancel-btn').style.display = 'none';
-                } else {
-                    setTimeout(() => location.reload(), 1000);
-                }
-            })
-            .catch(() => location.reload());
+        // STAP 3: Check of het inmiddels verkocht is
+        if (globalPurchasedIds.has(id)) {
+            updateModalUI({
+                icon: "⚠️",
+                title: "Te laat!",
+                text: "Helaas, dit cadeau is zojuist door iemand anders geclaimd.",
+                showSpinner: false,
+                showButtons: true,
+                confirmText: "Oké, jammer",
+                hideCancel: true,
+                onConfirm: () => location.reload()
+            });
+            return;
         }
-    );
+
+        // STAP 4: Alles OK? Toon de echte bevestigingsvraag
+        updateModalUI({
+            title: "Cadeau gekocht?",
+            text: `Markeer "${itemName}" als gekocht.\n\n⚠️ Dit wordt direct bijgewerkt op de website.`,
+            showSpinner: false,
+            showButtons: true,
+            confirmText: "Ja, ik koop dit!",
+            cancelText: "Annuleren",
+            onConfirm: function() {
+                // Toon laad-status TIJDENS het opslaan
+                updateModalUI({
+                    title: "Bezig met opslaan...",
+                    text: "De missie wordt voltooid...",
+                    showSpinner: true,
+                    showButtons: false
+                });
+
+                fetch(CONFIG.GOOGLE_SHEET_URL, {
+                    method: 'POST',
+                    mode: 'cors',
+                    body: JSON.stringify({ itemId: id, ipAddress: userIp })
+                })
+                .then(r => r.json())
+                .then(result => {
+                    if (result.result === "already_claimed") {
+                        updateModalUI({
+                            icon: "⚠️",
+                            title: "Net te laat!",
+                            text: "Tijdens het klikken is dit item helaas al geclaimd.",
+                            showSpinner: false,
+                            showButtons: true,
+                            confirmText: "Begrepen",
+                            hideCancel: true,
+                            onConfirm: () => location.reload()
+                        });
+                    } else {
+                        setTimeout(() => location.reload(), 800);
+                    }
+                })
+                .catch(() => location.reload());
+            }
+        });
+
+    } catch (e) {
+        console.error(e);
+        location.reload();
+    }
 }
 
 function generateWishlistContent(data, purchasedIds, favoriteIds) {
@@ -219,7 +247,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
 function openTab(evt, tabId) {
     setPupGreeting();
-    refreshClaims(); // VERVERS CLAIMS IN ACHTERGROND BIJ TAB-WISSEL
+    refreshClaims();
     if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
     document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
@@ -252,7 +280,6 @@ function getLowestPriceInfo(winkels) {
 async function loadWishlist() {
     setPupGreeting();
     setInterval(createBubbles, 800);
-    // Ververs elke 30 seconden ook de claims automatisch
     setInterval(refreshClaims, 30000);
 
     try {

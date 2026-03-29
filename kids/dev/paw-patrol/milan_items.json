@@ -410,5 +410,42 @@
       { "naam": "DreamLand", "prijs": "€ 8,99", "link": "https://www.dreamland.be/nl/producten/spiderman-brooddoos-multi-compartment/02252575" },
       { "naam": "Bol.com", "prijs": "€ 10,99", "link": "https://www.bol.com/be/nl/p/spiderman-lunchbox-met-3-extra-aparte-compartimenten-midnight-flyer/9300000234248692/" }
     ]
+  },
+  {
+    "id": "zo-leuk-is-oefenen-leuke-schrijfspelletjes",
+    "naam": "Zo leuk is oefenen - Leuke schrijfspelletjes voor de allerkleinsten (3-4 jaar)",
+    "beschrijving": "Een vrolijk oefenboek vol leuke schrijfspelletjes die de fijne motoriek van jonge kinderen stimuleren. Ideaal als voorbereiding op het schrijven voor de 1ste kleuterklas.",
+    "afbeelding_url": "https://media.s-bol.com/gGkgR1rrXQ3D/lOP6Ypr/550x550.jpg",
+    "winkels": [
+      { "naam": "Fnac", "prijs": "€ 6,26", "link": "https://www.nl.fnac.be/a11301447/Zo-leuk-is-oefenen-3-4-jaar-1ste-kleuterklas-voorbereiding-op-groep-1-Zo-leuk-is-oefenen-Leuke-schrijfspelletjes-3-4-j-ZNU" },
+      { "naam": "Bol.com", "prijs": "€ 7,50", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-leuke-schrijfspelletjes-voor-de-allerkleinsten/9200000087763564/" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 7,50", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-leuke-schrijfspelletjes-3-4-j-9789044750034" },
+      { "naam": "De Slegte", "prijs": "€ 7,50", "link": "https://www.deslegte.com/leuke-schrijfspelletjes-voor-de-allerkleinsten-1756362/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 19,20", "link": "https://amzn.eu/d/01iv39By" }
+    ]
+  },
+  {
+    "id": "zo-leuk-is-oefenen-leuke-telspelletjes",
+    "naam": "Zo leuk is oefenen - Leuke telspelletjes voor de allerkleinsten (3-4 jaar)",
+    "beschrijving": "Een leerzaam oefenboek vol vrolijke telspelletjes die peuters en kleuters helpen bij hun eerste stappen in de wereld van getallen. De oefeningen zijn speciaal ontworpen voor de 1ste kleuterklas als voorbereiding op groep 1.",
+    "afbeelding_url": "https://media.s-bol.com/xBlDrzAyR7qz/YEWAkPA/550x550.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 7,50", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-0-leuke-telspelletjes-voor-de-allerkleinsten-3-4-jaar-1ste-kleuterklas-voorbereiding-op-groep-1/9200000087763386/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 7,50", "link": "https://amzn.eu/d/097tTP9j" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 7,50", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-leuke-telspelletjes-3-4-j-9789044750041" },
+      { "naam": "Amazon.nl", "prijs": "€ 9,83", "link": "https://amzn.eu/d/0gNXXYaD" }
+    ]
+  },
+  {
+    "id": "zo-leuk-is-oefenen-leuke-oefenspelletjes",
+    "naam": "Zo leuk is oefenen - Leuke oefenspelletjes voor de allerkleinsten (3-4 jaar)",
+    "beschrijving": "Dit vrolijke oefenboek zit vol leuke spelletjes die de algemene ontwikkeling van je kind stimuleren. Spelenderwijs leert je peuter of kleuter logisch nadenken, vormen herkennen en kleuren onderscheiden, perfect als voorbereiding op de 1ste kleuterklas.",
+    "afbeelding_url": "https://media.s-bol.com/K57yGWDW7VOM/3QpqWZn/550x725.jpg",
+    "winkels": [
+      { "naam": "Fnac", "prijs": "€ 6,26", "link": "https://www.nl.fnac.be/a11301449/Zo-leuk-is-oefenen-3-4-jaar-1ste-kleuterklas-voorbereiding-op-groep-1-Zo-leuk-is-oefenen-Leuke-oefenspelletjes-3-4-j-ZNU" },
+      { "naam": "Bol.com", "prijs": "€ 7,50", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-leuke-oefenspelletjes-voor-de-allerkleinsten/9200000087763767/" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 7,50", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-leuke-oefenspelletjes-3-4-j-9789044750058" },
+      { "naam": "Verthus", "prijs": "€ 7,50", "link": "https://verthus.be/producten/zo-leuk-is-oefenen-oefenspelletjes-3-4j/" }
+    ]
   }
 ]

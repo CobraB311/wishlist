@@ -1,5 +1,6 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
+let globalPurchasedIds = new Set();
 
 const zumaQuotes = [
     "Laten we een duik nemen!", "Klaar voor action in de golven!", "1, 2, Zuma komt eraan!",
@@ -15,11 +16,9 @@ function setPupGreeting() {
     greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
 }
 
-// BUBBELS HERSTELD
 function createBubbles() {
     const container = document.getElementById('snow-container');
     if (!container) return;
-
     const bubble = document.createElement('div');
     bubble.className = 'snow';
     bubble.style.left = Math.random() * 100 + "%";
@@ -27,10 +26,7 @@ function createBubbles() {
     bubble.style.width = size;
     bubble.style.height = size;
     bubble.style.animationDuration = (Math.random() * 4 + 6) + "s";
-
     container.appendChild(bubble);
-
-    // Verwijder bubbel na animatie
     setTimeout(() => { bubble.remove(); }, 10000);
 }
 
@@ -39,7 +35,13 @@ function startCountdown(targetDateStr, targetName) {
     const timerEl = document.getElementById("countdown-timer");
     if (!targetDateStr || !container) return;
     container.style.display = "block";
-    const targetDate = new Date(targetDateStr).getTime();
+    let dateToParse = targetDateStr;
+    if (!targetDateStr.includes('+') && !targetDateStr.includes('Z')) {
+        const testDate = new Date(targetDateStr);
+        const isDST = testDate.getMonth() > 2 && testDate.getMonth() < 10;
+        dateToParse += isDST ? "+02:00" : "+01:00";
+    }
+    const targetDate = new Date(dateToParse).getTime();
     const updateTimer = setInterval(() => {
         const now = new Date().getTime();
         const distance = targetDate - now;
@@ -54,6 +56,29 @@ function startCountdown(targetDateStr, targetName) {
             timerEl.innerHTML = `${days}d ${hours}u ${minutes}m ${seconds}s`;
         }
     }, 1000);
+}
+
+async function refreshClaims() {
+    try {
+        const response = await fetch(CONFIG.GOOGLE_SHEET_URL);
+        const data = await response.json();
+        globalPurchasedIds = new Set(data.purchased_items);
+
+        document.querySelectorAll('.wens-item, .overview-grid-item').forEach(el => {
+            const id = el.id || el.getAttribute('onclick')?.match(/'([^']+)'\s*\)$/)?.[1];
+            if (id && globalPurchasedIds.has(id)) {
+                if (!el.classList.contains('purchased')) {
+                    el.classList.add('purchased');
+                    if (!el.querySelector('.purchased-overlay')) {
+                        const imgWrapper = el.querySelector('.item-image-container, .overview-image-wrapper');
+                        if (imgWrapper) imgWrapper.insertAdjacentHTML('afterbegin', '<div class="purchased-overlay">GEKOCHT</div>');
+                    }
+                    const btn = el.querySelector('.buy-button');
+                    if (btn) btn.remove();
+                }
+            }
+        });
+    } catch (e) { console.warn("Sync mislukt"); }
 }
 
 function normalizeText(text) { return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
@@ -76,37 +101,103 @@ function togglePurchasedFilter() {
     filterGifts();
 }
 
-function showCustomModal(title, text, confirmCallback) {
+// Centrale functie voor Modal UI updates
+function updateModalUI(config) {
     const modal = document.getElementById('customModal');
-    document.getElementById('modal-title').innerText = title;
-    document.getElementById('modal-text').innerText = text;
-    document.getElementById('modal-spinner').style.display = 'none';
-    document.getElementById('modal-buttons').style.display = 'flex';
-    modal.style.display = 'block';
+    document.getElementById('modal-icon').innerText = config.icon || "🐾";
+    document.getElementById('modal-title').innerText = config.title || "";
+    document.getElementById('modal-text').innerText = config.text || "";
+    document.getElementById('modal-spinner').style.display = config.showSpinner ? 'block' : 'none';
+    document.getElementById('modal-buttons').style.display = config.showButtons ? 'flex' : 'none';
+    if (config.confirmText) document.getElementById('modal-confirm-btn').innerText = config.confirmText;
+    if (config.cancelText) document.getElementById('modal-cancel-btn').innerText = config.cancelText;
+    document.getElementById('modal-cancel-btn').style.display = config.hideCancel ? 'none' : 'inline-block';
 
-    document.getElementById('modal-confirm-btn').onclick = function() {
-        document.getElementById('modal-buttons').style.display = 'none';
-        document.getElementById('modal-spinner').style.display = 'block';
-        document.getElementById('modal-text').innerText = "De missie wordt bijgewerkt... Even geduld!";
-        confirmCallback();
-    };
-    document.getElementById('modal-cancel-btn').onclick = function() { modal.style.display = 'none'; };
+    if (config.onConfirm) document.getElementById('modal-confirm-btn').onclick = config.onConfirm;
+    modal.style.display = 'block';
 }
 
-function claimItem(person, itemName, id) {
-    showCustomModal(
-        "Cadeau gekocht?",
-        `Markeer "${itemName}" als gekocht.\n\n⚠️ Let op: Dit wordt direct automatisch bijgewerkt op de website. Je hoeft geen mail meer te sturen!`,
-        function() {
-            fetch(CONFIG.GOOGLE_SHEET_URL, {
-                method: 'POST',
-                mode: 'cors',
-                body: JSON.stringify({ itemId: id })
-            }).then(() => {
-                setTimeout(() => location.reload(), 1500);
+async function claimItem(person, itemName, id) {
+    // STAP 1: Toon direct de modal in 'Laden' stand
+    updateModalUI({
+        title: "Even geduld...",
+        text: "We controleren de beschikbaarheid van dit cadeau...",
+        showSpinner: true,
+        showButtons: false
+    });
+
+    try {
+        // STAP 2: Voer checks uit op de achtergrond
+        const [ipRes, claimsRes] = await Promise.all([
+            fetch('https://api.ipify.org?format=json').then(r => r.json()).catch(() => ({ip: "Onbekend"})),
+            fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json())
+        ]);
+
+        const userIp = ipRes.ip;
+        globalPurchasedIds = new Set(claimsRes.purchased_items);
+
+        // STAP 3: Check of het inmiddels verkocht is
+        if (globalPurchasedIds.has(id)) {
+            updateModalUI({
+                icon: "⚠️",
+                title: "Te laat!",
+                text: "Helaas, dit cadeau is zojuist door iemand anders geclaimd.",
+                showSpinner: false,
+                showButtons: true,
+                confirmText: "Oké, jammer",
+                hideCancel: true,
+                onConfirm: () => location.reload()
             });
+            return;
         }
-    );
+
+        // STAP 4: Alles OK? Toon de echte bevestigingsvraag
+        updateModalUI({
+            title: "Cadeau gekocht?",
+            text: `Markeer "${itemName}" als gekocht.\n\n⚠️ Dit wordt direct bijgewerkt op de website.`,
+            showSpinner: false,
+            showButtons: true,
+            confirmText: "Ja, ik koop dit!",
+            cancelText: "Annuleren",
+            onConfirm: function() {
+                // Toon laad-status TIJDENS het opslaan
+                updateModalUI({
+                    title: "Bezig met opslaan...",
+                    text: "De missie wordt voltooid...",
+                    showSpinner: true,
+                    showButtons: false
+                });
+
+                fetch(CONFIG.GOOGLE_SHEET_URL, {
+                    method: 'POST',
+                    mode: 'cors',
+                    body: JSON.stringify({ itemId: id, ipAddress: userIp })
+                })
+                .then(r => r.json())
+                .then(result => {
+                    if (result.result === "already_claimed") {
+                        updateModalUI({
+                            icon: "⚠️",
+                            title: "Net te laat!",
+                            text: "Tijdens het klikken is dit item helaas al geclaimd.",
+                            showSpinner: false,
+                            showButtons: true,
+                            confirmText: "Begrepen",
+                            hideCancel: true,
+                            onConfirm: () => location.reload()
+                        });
+                    } else {
+                        setTimeout(() => location.reload(), 800);
+                    }
+                })
+                .catch(() => location.reload());
+            }
+        });
+
+    } catch (e) {
+        console.error(e);
+        location.reload();
+    }
 }
 
 function generateWishlistContent(data, purchasedIds, favoriteIds) {
@@ -156,6 +247,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
 function openTab(evt, tabId) {
     setPupGreeting();
+    refreshClaims();
     if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
     document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
@@ -187,18 +279,18 @@ function getLowestPriceInfo(winkels) {
 
 async function loadWishlist() {
     setPupGreeting();
-
-    // BUBBEL STROOM START
     setInterval(createBubbles, 800);
+    setInterval(refreshClaims, 30000);
 
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
         if (config.aftel_datum) startCountdown(config.aftel_datum, config.aftel_naam || "Milan");
         const claims = await fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json()).catch(() => ({purchased_items:[]}));
+        globalPurchasedIds = new Set(claims.purchased_items);
         const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
         const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
-        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}}, new Set(claims.purchased_items), new Set(favs.favorite_ids));
+        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}}, globalPurchasedIds, new Set(favs.favorite_ids));
         document.getElementById('loading-message').style.display = 'none';
     } catch (e) { console.error(e); }
 }

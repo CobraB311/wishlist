@@ -6,9 +6,9 @@
     "beschrijving": "Set van 6 actiefiguren (3-inch) geïnspireerd op de Disney Jr. serie 'Iron Man and his Awesome Friends'. Bevat Iron Man, Ironheart, Iron Hulk, Captain America: Sam Wilson, Gamma en Ultron.",
     "afbeelding_url": "https://media.s-bol.com/yNDQDDJgwLq6/vgJ5VRg/550x460.jpg",
     "winkels": [
-      { "naam": "Amazon.nl", "prijs": "€ 26,99", "link": "https://amzn.eu/d/1DOZ5fR" },
-      { "naam": "Amazon.com.be", "prijs": "€ 21,99", "link": "https://amzn.eu/d/i2vcTRC" },
-      { "naam": "Bol.com", "prijs": "€ 26,99", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www" }
+      { "naam": "Amazon.nl", "prijs": "€ 18,99", "link": "https://amzn.eu/d/1DOZ5fR" },
+      { "naam": "Amazon.com.be", "prijs": "€ 18,99", "link": "https://amzn.eu/d/i2vcTRC" },
+      { "naam": "Bol.com", "prijs": "€ 18,99", "link": "https://www.bol.com/be/nl/p/marvel-iron-man-and-his-awesome-friends-armored-up-avengers-actiefiguren/9300000225966594/?referrer=socialshare_pdp_www" }
     ]
   },
   {
@@ -23,16 +23,120 @@
     ]
   },
   {
+    "id": "vtech-switch-go-dinos-scott-spinosaurus",
+    "naam": "VTech Switch & Go Dinos - Scott Spinosaurus",
+    "beschrijving": "Transformeer deze stoere Spinosaurus in een flits naar een snelle racewagen! Met meer dan 50 stoere geluiden en zinnen, een lcd-scherm met animaties en coole lichteffecten.",
+    "afbeelding_url": "https://media.s-bol.com/BPgMnX0K8kxW/1200x1099.jpg",
+    "winkels": [
+      { "naam": "DreamLand", "prijs": "€ 22,49", "link": "https://www.dreamland.be/nl/producten/switch-go-dinos-scott-spinosaurus/01563153" },
+      { "naam": "Fnac", "prijs": "€ 24,92", "link": "https://www.nl.fnac.be/Interactief-transformeerbaar-voertuig-Vtech-Switch-and-Go-Dinos-Brutor-Super-Spinosaurus/a13243191" },
+      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/vtech-switch-go-dinos-scott-spinosaurus-speelgoed-dinosaurus-4-tot-8-jaar/9300000004745544/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 28,52", "link": "https://amzn.eu/d/0beX5i6R" },
+      { "naam": "Supra Bazar", "prijs": "€ 29,98", "link": "https://www.suprabazar.be/vtech-switch-go-dino-s-scott-spinosaurus-28117948" },
+      { "naam": "VTech", "prijs": "€ 29,99", "link": "https://www.vtechnl.com/switchandgodinos/scott-spinosaurus" },
+      { "naam": "Amazon.nl", "prijs": "€ 57,68", "link": "https://amzn.eu/d/01I9yHFb" }
+    ]
+  },
+  {
     "id": "gund-paw-patrol-zuma-knuffel",
     "naam": "GUND PAW Patrol Zuma Knuffel (15 cm)",
     "beschrijving": "Een zachte en knuffelbare Zuma pluche van 15 cm. Perfect voor de kleinste PAW Patrol fans om mee te nemen op elke reddingsmissie.",
     "afbeelding_url": "https://media.s-bol.com/LYz51nGV33yr/Nx2q95z/550x604.jpg",
     "winkels": [
-      { "naam": "Amazon.be", "prijs": "€ 9,95", "link": "https://amzn.eu/d/06KOYZCq" },
+      { "naam": "Amazon.be", "prijs": "€ 9,99", "link": "https://amzn.eu/d/06KOYZCq" },
       { "naam": "Amazon.nl", "prijs": "€ 9,95", "link": "https://amzn.eu/d/01bi7cbh" },
       { "naam": "DreamLand", "prijs": "€ 7,46", "link": "https://www.dreamland.be/nl/producten/paw-patrol-pluche-zuma-15cm/01622409" },
-      { "naam": "Bol.com", "prijs": "€ 9,95", "link": "https://www.bol.com/be/nl/p/gund-paw-patrol-zuma-knuffel-15-cm/9300000018986698/" },
+      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/gund-paw-patrol-zuma-knuffel-15-cm/9300000018986698/" },
       { "naam": "Fnac", "prijs": "€ 20,44", "link": "https://www.nl.fnac.be/Paw-Patrol-Zuma-Pluche-Gund-Patrol-15-cm/a15273257" }
+    ]
+  },
+  {
+    "id": "paw-patrol-search-rescue-rocky-recyclevoertuig",
+    "naam": "PAW Patrol Opsporing en Redding - Rocky's Recyclevoertuig",
+    "beschrijving": "Ga op reddingsmissie met Rocky! Dit Search & Rescue voertuig heeft een handige terugtrekfunctie en bevat 2 speelfiguren.",
+    "afbeelding_url": "https://media.s-bol.com/m3j9MMV8XVR0/MjRPZyO/1200x1184.jpg",
+    "winkels": [
+      { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/paw-patrol-search-rescue-vehicle-rocky/02313085" },
+      { "naam": "Amazon.com.be", "prijs": "€ 14,99", "link": "https://amzn.eu/d/0iBXZKyG" },
+      { "naam": "Amazon.nl", "prijs": "€ 19,99", "link": "https://amzn.eu/d/09K8QjJF" },
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-opsporing-en-redding-rocky-s-recyclevoertuig-met-2-figuren-terugtrekfunctie-speelgoedvoertuigen/9300000236973821/" },
+      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/Voertuig-figuur-Paw-Patrol-Search-et-Rescue-Rocky-Pat-patrouille/a22470921" },
+      { "naam": "Supra Bazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/paw-patrol-search-rescue-vehicle-rocky-32163306" }
+    ]
+  },
+  {
+    "id": "paw-patrol-ryder-rescue-atv-speelgoedauto",
+    "naam": "PAW Patrol Ryder's Rescue ATV met speelfiguur",
+    "beschrijving": "Rijd de redding tegemoet met Ryder en zijn Rescue ATV! Dit voertuig is gemaakt van gerecycled plastic en bevat een Ryder speelfiguur in zijn klassieke uniform.",
+    "afbeelding_url": "https://media.s-bol.com/qDRqZ4JVm4Jy/jRvo7Y/550x590.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-ryder-s-rescue-atv-speelgoedauto-met-speelfiguur-52-gerecycled-plastic-duurzaam-speelgoed/9300000055705054/" },
+      { "naam": "DreamLand", "prijs": "€ 11,21", "link": "https://www.dreamland.be/nl/producten/paw-patrol-voertuig-met-ryder/01577167" },
+      { "naam": "Amazon.nl", "prijs": "€ 23,11", "link": "https://amzn.eu/d/052Y6yvd" },
+      { "naam": "Amazon.com.be", "prijs": "€ 26,00", "link": "https://amzn.eu/d/0cX0hZ47" }
+    ]
+  },
+  {
+    "id": "hot-wheels-fast-furious-10-pack",
+    "naam": "Hot Wheels Fast & Furious 10-pack auto's",
+    "beschrijving": "Een verzameling van 10 iconische speelgoedauto's uit de Fast & Furious franchise. Deze die-cast voertuigen zijn uitgevoerd op een schaal van 1:64 en bevatten authentieke details van de bekende filmreeks.",
+    "afbeelding_url": "https://media.s-bol.com/YPmRx2Axzrkp/660k847/877x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 58,31", "link": "https://www.bol.com/be/nl/p/hot-wheels-fast-furious-10-pack-auto-s-jct92/9300000236199845/" }
+    ]
+  },
+  {
+    "id": "dickie-toys-mercedes-amg-e43-sos-belgie",
+    "naam": "Dickie Toys Mercedes-AMG E43 - Belgische Politiewagen (30 cm)",
+    "beschrijving": "Een gedetailleerde Belgische politie-uitvoering van de Mercedes-AMG E43 met licht- en geluidseffecten. Let op: dit betreft de specifieke Belgische SOS-versie (Federale Politie look), niet de Nederlandse uitvoering.",
+    "afbeelding_url": "https://media.s-bol.com/RMp21nzqLjVO/Q1BloJM/550x480.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 24,99", "link": "https://www.bol.com/be/nl/p/dickie-toys-mercedes-amg-e43-sos-belgische-politiewagen-30-cm-licht-geluid-speelgoedvoertuig/9300000023436875/" },
+      { "naam": "DreamLand", "prijs": "€ 24,99", "link": "https://www.dreamland.be/nl/producten/politie-mercedes-amg-1-16/01417357" },
+      { "naam": "Supra Bazar", "prijs": "€ 24,99", "link": "https://www.suprabazar.be/dickie-politie-wagen-mercedes-amg-e43-licht-en-geluid-30-cm-belgisch-27091506" },
+      { "naam": "Happyland", "prijs": "€ 29,95", "link": "https://www.happyland.be/product/s-o-s-politie-mercedes-amg-e43/" }
+    ]
+  },
+  {
+    "id": "pixar-lightyear-hyperspeed-zurg-mothership",
+    "naam": "Pixar Lightyear Hyperspeed Series - Zurg Moederschip",
+    "beschrijving": "Beleef de avonturen uit de Disney en Pixar film Lightyear opnieuw met het indrukwekkende moederschip van Zurg. Dit gedetailleerde gevechtsschip uit de Hyperspeed Series is inclusief een kleine Zurg-figuur die in de cockpit past.",
+    "afbeelding_url": "https://media.s-bol.com/0EmQwoOJvP9V/91lDgj8/550x592.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "prijs": "€ 14,95", "link": "https://amzn.eu/d/08hYybU3" },
+      { "naam": "Amazon.com.be", "prijs": "€ 21,30", "link": "https://amzn.eu/d/0hl3gVxI" },
+      { "naam": "Fnac", "prijs": "€ 21,30", "link": "https://www.nl.fnac.be/Disney-Pixar-Buzz-Lightyear-Zurg-Slagschip-Beeldje/a16548717" },
+      { "naam": "Bol.com", "prijs": "€ 23,23", "link": "https://www.bol.com/be/nl/p/pixar-lightyear-hyperspeed-series-ruimteschip-van-zurg/9300000071523569/" }
+    ]
+  },
+  {
+    "id": "pixar-lightyear-hyperspeed-xl01-buzz",
+    "naam": "Pixar Lightyear Hyperspeed Series - XL-01 met Buzz Lightyear",
+    "beschrijving": "Vlieg mee met Buzz Lightyear in zijn XL-01 ruimteschip! Deze gedetailleerde set uit de Hyperspeed Series bevat het iconische witte schip uit de film en een beweegbaar Buzz Lightyear minifiguur dat echt in de cockpit past.",
+    "afbeelding_url": "https://media.s-bol.com/m8nJ10G94BZO/91lD22D/550x558.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "prijs": "€ 9,33", "link": "https://amzn.eu/d/0auOBVtQ" },
+      { "naam": "Fnac", "prijs": "€ 16,76", "link": "https://www.nl.fnac.be/Disney-Pixar-Buzz-Lightyear-XL-01-scheepsBeeldje-en-Buzz-miniBeeldje/a16548718" },
+      { "naam": "Bol.com", "prijs": "€ 20,82", "link": "https://www.bol.com/be/nl/p/pixar-lightyear-hyperspeed-series-buzz-met-ruimteschip-xl-01-actiefiguur/9300000071523586/" }
+    ]
+  },
+  {
+    "id": "pixar-lightyear-hyperspeed-xl15-buzz",
+    "naam": "Pixar Lightyear Hyperspeed Series - XL-15 met Buzz Lightyear",
+    "beschrijving": "Ga op een intergalactische missie met Buzz Lightyear en zijn XL-15 ruimteschip. Deze set uit de Hyperspeed Series bevat het gedetailleerde schip en een bijbehorend Buzz Lightyear minifiguur dat in de cockpit geplaatst kan worden.",
+    "afbeelding_url": "https://media.s-bol.com/1EnR0pBKVw6P/xnP2oRE/550x566.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "prijs": "€ 14,75", "link": "https://amzn.eu/d/0aSF2j1a" },
+      { "naam": "Bol.com", "prijs": "€ 20,93", "link": "https://www.bol.com/be/nl/p/pixar-lightyear-hyperspeed-series-buzz-met-ruimteschip-xl-15-actiefiguur/9300000071523548/" }
+    ]
+  },
+  {
+    "id": "die-cast-ruimteset-astronauten-shuttle",
+    "naam": "Die-Cast Ruimteset",
+    "beschrijving": "Een uitgebreide speelset met diverse ruimtevaartvoertuigen, waaronder een spaceshuttle en astronauten. Gemaakt van stevig die-cast materiaal voor urenlang speelplezier.",
+    "afbeelding_url": "https://media.s-bol.com/Kj5zVXk4XBAM/jRjzZKP/913x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 11,99", "link": "https://www.bol.com/be/nl/p/die-cast-ruimteset/9300000184359428/" }
     ]
   },
   {
@@ -43,6 +147,59 @@
     "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
     "winkels": [
       { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-kinderservies-5-delig-wit-blauw",
+    "naam": "LEGO Ninjago Kinderservies - 5-delig",
+    "beschrijving": "Herbruikbaar 5-delig kinderservies in LEGO Ninjago thema. De set is BPA-vrij, vaatwasser- en microgolfbestendig en bevat een bord, kom, beker en een bestekset (lepel en vork).",
+    "afbeelding_url": "https://media.s-bol.com/BWpkZDZP3RLQ/mwrDM0r/1200x1190.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-kinderservies-5-delig-herbruikbaar-inclusief-bord-kom-bestek-en-beker-vaatwasser-en-microgolfbestendig-bpa-vrij-wit-donkerblauw/9300000263062236/" }
+    ]
+  },
+  {
+    "id": "lego-minifig-dekbedovertrek-140-200",
+    "naam": "LEGO Minifiguren Dekbedovertrek - 140 x 200 cm",
+    "beschrijving": "Kleurrijk LEGO dekbedovertrek met een vrolijke print van verschillende minifiguren. Het overtrek is omkeerbaar en wordt geleverd inclusief kussensloop.",
+    "afbeelding_url": "https://media.s-bol.com/zgz6BXVNgWYY/qx6PL63/477x840.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "prijs": "€ 25,99", "link": "https://amzn.eu/d/0cJOycHe" },
+      { "naam": "Bol.com", "prijs": "€ 31,99", "link": "https://www.bol.com/be/nl/p/lego-dekbedovertrek-mini-fig-140-x-200-70-x-90-cm-polyester/9300000190250790/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 24,99", "link": "https://amzn.eu/d/05aen4b2" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-led-sleutelhanger-lloyd-light",
+    "naam": "LEGO Ninjago Legacy Lloyd Sleutelhanger met licht",
+    "beschrijving": "Een coole Lloyd minifiguur als sleutelhanger met ingebouwde LED-verlichting in de voetjes. Ideaal voor aan een boekentas of sleutelbos.",
+    "afbeelding_url": "https://media.s-bol.com/gk5NVwP9kRR9/AglvKl/550x550.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "prijs": "€ 15,90", "link": "https://amzn.eu/d/0366uU1P" },
+      { "naam": "Multibazar", "prijs": "€ 15,95", "link": "https://www.multibazar.be/nl/lego-led-sleutelhanger-ninjago-lloyd-852967" },
+      { "naam": "DreamLand", "prijs": "€ 16,99", "link": "https://www.dreamland.be/nl/producten/lego-ninjago-legacy-sleutelhanger-m-licht-lloyd/01637717" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 19,60", "link": "https://www.standaardboekhandel.be/p/lego-ninjago-legacy-lloyd-key-light-4895028528102" },
+      { "naam": "Bol.com", "prijs": "€ 23,48", "link": "https://www.bol.com/be/nl/p/lego-led-sleutelhanger-ninjago-lloyd-met-licht/9300000025919730/" }
+    ]
+  },
+  {
+    "id": "lego-71850-lloyd-vs-aardemonster",
+    "naam": "LEGO NINJAGO Lloyd vs. aardemonster in spinner (71850)",
+    "nummer": "71850",
+    "beschrijving": "Neem het op tegen het aardemonster met deze actievolle spinnerset! Bevat 2 minifiguren (Lloyd en een aardemonster), een bouwbare spinner en accessoires om je eigen gevechten na te spelen.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt02fe55fa576833c2/71850_Box1_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 8,49", "link": "https://www.bol.com/be/nl/p/lego-ninjago-lloyd-vs-aardemonster-in-spinner-actiespeelgoed-speelset-met-2-minifiguren-en-spinner-ninjago-bouwset-voor-kinderen-vanaf-6-jaar-cadeautje-71850/9300000237345455/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 8,49", "link": "https://amzn.eu/d/0f19FjYL" },
+      { "naam": "Amazon.nl", "prijs": "€ 8,95", "link": "https://amzn.eu/d/03retGqs" },
+      { "naam": "Verthus", "prijs": "€ 8,99", "link": "https://verthus.be/producten/lego-ninjago-lloyd-vs-elementaire-monsterspinner/" },
+      { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/lloyd-vs-earth-monster-spinner-71850" },
+      { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_71850-lloyd-vs-aardemonster-2208505.html" },
+      { "naam": "DreamLand", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/71850-lego-ninjago-lloyd-vs-aardemonster-in-spinner/02323756" },
+      { "naam": "Supra Bazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/lego-ninjago-71850-lloyd-vs.-aardemonster-in-spinner-32140522" },
+      { "naam": "Fnac", "prijs": "€ 9,99", "link": "https://www.nl.fnac.be/LEGO-71850-LLOYD-VS-ELEMENTAL-MONSTER-SPINNER/a22209303" },
+      { "naam": "Multibazar", "prijs": "€ 9,99", "link": "https://www.multibazar.be/nl/lego-ninjago-lloyd-vs-aardemonster-spinner-71850-1065227" },
+      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-NL/set/71850/Lloyd-vs-Earth-Monster-Spinner.html" }
     ]
   },
   {
@@ -58,7 +215,8 @@
       { "naam": "DreamLand", "prijs": "€ 16,99", "link": "https://www.dreamland.be/nl/producten/71853-lego-r-ninjago-r-jay-s-drakenmechastrijd/02338262" },
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/jays-dragon-mech-fight-71853" },
       { "naam": "Supra Bazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-ninjago-71853-jay-s-drakenmechastrijd-32164798" },
-      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71853-Jay-s-drakenmechastrijd/a22209280" }
+      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71853-Jay-s-drakenmechastrijd/a22209280" },
+      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71853/Jay-s-Dragon-Mech-Fight.html" }
     ]
   },
   {
@@ -67,14 +225,15 @@
     "beschrijving": "Bezoek de legendarische tempel met deze gedetailleerde speelset. Inclusief minifiguren om je eigen Spinjitzu-avonturen na te spelen.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt42fe8b15a9fbea8c/71831_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
+      { "naam": "Amazon.nl", "prijs": "€ 25,99", "link": "https://amzn.eu/d/0iW5FSVD" },
       { "naam": "Bol.com", "prijs": "€ 25,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-spinjitzu-ninjatempel-actie-71831/9300000187249733/" },
       { "naam": "Amazon.be", "prijs": "€ 25,99", "link": "https://amzn.eu/d/00VWicvt" },
-      { "naam": "Amazon.nl", "prijs": "€ 24,99", "link": "https://amzn.eu/d/0iW5FSVD" },
       { "naam": "Supra Bazar", "prijs": "€ 35,99", "link": "https://www.suprabazar.be/lego-ninjago-71831-spinjitzu-ninjatempel-32031082" },
       { "naam": "MediaMarkt", "prijs": "€ 36,99", "link": "https://www.mediamarkt.be/nl/product/_71831-spinjitzu-ninjatempel-2208491.html" },
-      { "naam": "LEGO.com", "prijs": "€ 39,99", "link": "https://www.lego.com/nl-be/product/ninja-spinjitzu-temple-71831" },
       { "naam": "DreamLand", "prijs": "€ 39,95", "link": "https://www.dreamland.be/nl/producten/71831-lego-spinjitzu-ninjatempel/01831443" },
-      { "naam": "Fnac", "prijs": "€ 46,83", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71831-Spinjitzu-ninjatempel/a20941893" }
+      { "naam": "LEGO.com", "prijs": "€ 39,99", "link": "https://www.lego.com/nl-be/product/ninja-spinjitzu-temple-71831" },
+      { "naam": "Fnac", "prijs": "€ 46,83", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71831-Spinjitzu-ninjatempel/a20941893" },
+      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71831/Ninja-Spinjitzu-Temple.html" }
     ]
   },
   {
@@ -84,17 +243,19 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltf6cd1697eb8e0bb4/71840_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/rogue-vs-drix-race-car-duel-71840" },
-      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-rogue-vs-drix-racewagenduel-ninjaspeelset-met-3-minifiguren-2-raceauto-s-2-ninjakatana-s-en-een-onthullingszwaard-cadeautje-voor-kinderen-vanaf-4-jaar-71840/9300000232474979/" }
+      { "naam": "Bol.com", "prijs": "€ 26,95", "link": "https://www.bol.com/be/nl/p/lego-ninjago-rogue-vs-drix-racewagenduel-71840/9300000232474979/" },
+      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71840/Rogue-vs-Drix-Race-Car-Duel.html" }
     ]
   },
   {
     "id": "lego-ninjago-854311-lloyds-sword",
     "naam": "LEGO® NINJAGO® Lloyds zwaard met schede",
     "nummer": "854311",
-    "beschrijving": "Ga op avontuur als de Groene Ninja! Dit zwaard van Lloyd is gemaakt van zacht schuim voor veilig speelplezier en wordt geleverd met een gedetailleerde schede die Jonas makkelijk kan dragen. Een onmisbaar item voor elke jonge Ninjago-fan.",
+    "beschrijving": "Ga op avontuur als de Groene Ninja! Dit zwaard van Lloyd is gemaakt van zacht schuim voor veilig speelplezier en wordt geleverd met een gedetailleerde schede die Jonas makkelijk kan dragen.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt20a7b4c7e3d77f72/854311_Prod.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      { "naam": "LEGO Shop", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/lloyds-sword-with-sheath-854311" }
+      { "naam": "LEGO Shop", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/lloyds-sword-with-sheath-854311" },
+      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/854311/Lloyd-s-Sword-with-Sheath.html" }
     ]
   },
   {
@@ -106,11 +267,29 @@
     "winkels": [
       { "naam": "Amazon.nl", "prijs": "€ 33,99", "link": "https://amzn.eu/d/85C7oCA" },
       { "naam": "Amazon.com.be", "prijs": "€ 33,99", "link": "https://amzn.eu/d/bJnfzKn" },
-      { "naam": "DreamLand", "prijs": "€ 54,95", "link": "https://www.dreamland.be/nl/producten/11036-lego-creatieve-voertuigen/01755527" },
       { "naam": "Bol.com", "prijs": "€ 33,99", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-voertuigen-11036/9300000157956434/" },
       { "naam": "SupraBazar", "prijs": "€ 49,98", "link": "https://www.suprabazar.be/lego-classic-11036-creatieve-voertuigen-31627290" },
-      { "naam": "LEGO® Shop BE", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036" },
+      { "naam": "LEGO Shop BE", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/creative-vehicles-11036" },
+      { "naam": "DreamLand", "prijs": "€ 54,95", "link": "https://www.dreamland.be/nl/producten/11036-lego-creatieve-voertuigen/01755527" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/11036/Creative-Vehicles.html" }
+    ]
+  },
+  {
+    "id": "lego-duplo-10421-alfabetvrachtwagen",
+    "naam": "LEGO DUPLO Stad 10421 Alfabetvrachtwagen",
+    "nummer": "10421",
+    "beschrijving": "Peuters kunnen spelenderwijs letters leren met deze kleurrijke alfabetvrachtwagen. Bevat 26 alfabetstenen om te stapelen en te sorteren.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltbe14ced3aee68b64/10421.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Supra Bazar", "prijs": "€ 26,99", "link": "https://www.suprabazar.be/lego-duplo-10421-alfabetvrachtwagen-31627120" },
+      { "naam": "Amazon.nl", "prijs": "€ 27,99", "link": "https://amzn.eu/d/0dyrQL0m" },
+      { "naam": "Amazon.com.be", "prijs": "€ 28,89", "link": "https://amzn.eu/d/013TvIcf" },
+      { "naam": "Multibazar", "prijs": "€ 33,95", "link": "https://www.multibazar.be/nl/lego-duplo-10421-alfabetvrachtwagen-887676?colour=611068" },
+      { "naam": "Bol.com", "prijs": "€ 32,95", "link": "https://www.bol.com/be/nl/p/lego-10421-duplo-stad-alfabetvrachtwagen/9300000157956263/" },
+      { "naam": "DreamLand", "prijs": "€ 39,95", "link": "https://www.dreamland.be/nl/producten/10421-lego-alfabetvrachtwagen/01756562" },
+      { "naam": "Fnac", "prijs": "€ 39,95", "link": "https://www.nl.fnac.be/LEGO-DUPLO-Town-10421-Alfabetvrachtwagen/a18821686" },
+      { "naam": "LEGO.com", "prijs": "€ 39,99", "link": "https://www.lego.com/nl-be/product/alphabet-truck-10421" },
+      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/10421/Alphabet-Truck.html" }
     ]
   },
   {
@@ -120,8 +299,8 @@
     "beschrijving": "Een complete creatieve speelplek in één koffer! Dit station heeft een ingebouwde tafel met verschillende structuren, 15 accessoires en 6 kleuren klei. Na het spelen berg je alles op in de handige meeneemkoffer. Ideaal voor urenlang knutselplezier zonder rommel.",
     "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 20,99", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/" },
-      { "naam": "Amazon.nl", "prijs": "€ 36,39", "link": "https://amzn.eu/d/0991EIdJ" }
+      { "naam": "Bol.com", "prijs": "€ 19,98", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/" },
+      { "naam": "Amazon.nl", "prijs": "€ 28,50", "link": "https://amzn.eu/d/0991EIdJ" }
     ]
   },
   {
@@ -133,7 +312,7 @@
       { "naam": "Verthus", "prijs": "€ 49,95", "link": "https://verthus.be/producten/revell-rc-mario-kart-tafel-racing-set/" },
       { "naam": "Multibazar", "prijs": "€ 49,95", "link": "https://www.multibazar.be/nl/carrera-team-mario-kart-tabletop-racebaan-mario-luigi-5km-u-1-50-1052812" },
       { "naam": "De Kinderplaneet", "prijs": "€ 49,95", "link": "https://www.dekinderplaneet.be/nl/carrera-team-mario-kart-tabletop-racebaan-mario-luigi-5km-u-1-50-1052812" },
-      { "naam": "Bol.com", "prijs": "€ 50,00", "link": "https://www.bol.com/be/nl/p/carrera-rc-auto-mini-mario-kart-tabletop-racing-set-mario-vs-luigi-2-auto-s-schaal-1-43-2-4-ghz-rc-model-kant-en-klaar/9300000229648390/" },
+      { "naam": "Bol.com", "prijs": "€ 41,95", "link": "https://www.bol.com/be/nl/p/carrera-rc-auto-mini-mario-kart-tabletop-racing-set-mario-vs-luigi-2-auto-s-schaal-1-43-2-4-ghz-rc-model-kant-en-klaar/9300000229648390/" },
       { "naam": "Carrera Toys", "prijs": "€ 54,99", "link": "https://carrera-toys.com/nl-eu/products/370430015-24ghz-mario-karttm-tabletop-racing-set-mario-and-luigi" },
       { "naam": "DreamLand", "prijs": "€ 59,99", "link": "https://www.dreamland.be/nl/producten/mario-kart-table-top-racing-set/01871739" },
       { "naam": "Fnac", "prijs": "€ 59,99", "link": "https://www.nl.fnac.be/Afstandsbedienbare-voertuigen-Carrera-RC-Mario-Kart-Tabletop-Racing-Set-Mario-et-Luigi/a21758491" }
@@ -146,7 +325,7 @@
     "afbeelding_url": "https://media.s-bol.com/Kx5nB73XpLgl/qjZo0WG/1200x771.jpg",
     "winkels": [
       { "naam": "DreamLand", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/hot-wheels-track-creator-3-in-1-triple-loop/01875249" },
-      { "naam": "Amazon.be", "prijs": "€ 42,22", "link": "https://amzn.eu/d/0ekVJazO" },
+      { "naam": "Amazon.be", "prijs": "€ 44,99", "link": "https://amzn.eu/d/0ekVJazO" },
       { "naam": "Bol.com", "prijs": "€ 49,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-track-creator-set-met-drievoudige-looping/9300000226904759/" }
     ]
   },
@@ -156,7 +335,7 @@
     "beschrijving": "Bestrijd branden op grote hoogte met deze ladderwagen. Inclusief werkende zwaailichten en geluid, een uitschuifbare ladder en brandweerfiguren.",
     "afbeelding_url": "https://media.playmobil.com/i/playmobil/9463_product_box_front?locale=nl-BE,nl,en,*&fmt=auto&strip=true&qlt=80&unsharp=0,1,0.9,1&fmt.jpeg.interlaced=true",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 54,80", "link": "https://www.bol.com/be/nl/p/playmobil-city-action-brandweer-ladderwagen-9463/9200000095070035/" },
+      { "naam": "Bol.com", "prijs": "€ 45,75", "link": "https://www.bol.com/be/nl/p/playmobil-city-action-brandweer-ladderwagen-9463/9200000095070035/" },
       { "naam": "Amazon.be", "prijs": "€ 45,75", "link": "https://amzn.eu/d/0hqNAh3b" },
       { "naam": "Amazon.nl", "prijs": "€ 45,75", "link": "https://amzn.eu/d/031ryeOF" },
       { "naam": "Fnac", "prijs": "€ 54,99", "link": "https://www.nl.fnac.be/PLAYMOBIL-Brandweer-ladderwagen/a12054492" },
@@ -165,13 +344,120 @@
     ]
   },
   {
+    "id": "playmobil-71466-brandweer-plaats-ongeval",
+    "naam": "PLAYMOBIL Action Heroes 71466 - Brandweer op de plaats van het ongeval",
+    "nummer": "71466",
+    "beschrijving": "Help de brandweerman bij het blussen van de brandende motor! Deze set bevat een brandweerman, een motorfiets in vlammen, een werkende brandblusser die water kan spuiten en diverse accessoires voor een spannend rollenspel.",
+    "afbeelding_url": "https://media.s-bol.com/mPKw7WZzr7Vp/LNVVOD/550x577.jpg",
+    "winkels": [
+      { "naam": "Amazon.com.be", "prijs": "€ 11,98", "link": "https://amzn.eu/d/0etHbtKI" },
+      { "naam": "Amazon.nl", "prijs": "€ 9,09", "link": "https://amzn.eu/d/080nBAC9" },
+      { "naam": "Supra Bazar", "prijs": "€ 11,98", "link": "https://www.suprabazar.be/playmobil-action-heroes-71466-brandweer-op-de-plaats-van-het-ongeval-31627876" },
+      { "naam": "Bol.com", "prijs": "€ 12,49", "link": "https://www.bol.com/be/nl/p/71466/9300000166959390/" },
+      { "naam": "DreamLand", "prijs": "€ 13,95", "link": "https://www.dreamland.be/nl/producten/71466-playmobil-brandweer-op-de-plaats-van-het-ongeval/01766189" },
+      { "naam": "Fnac", "prijs": "€ 20,43", "link": "https://www.nl.fnac.be/Playmobil-Action-Heroes-71466-Brandweer-op-de-plaats-van-het-ongeval/a18859238" }
+    ]
+  },
+  {
     "id": "zootropolis-2-blu-ray",
     "naam": "Zootropolis 2 (Blu-ray)",
     "beschrijving": "Het vervolg op de populaire Disney-film. Volg de nieuwe avonturen van Judy Hopps en Nick Wilde in de grote stad Zootropolis.",
     "afbeelding_url": "https://media.s-bol.com/YKB06jnrK1x9/Z4P3zMJ/550x703.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 27,89", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
+      { "naam": "Bol.com", "prijs": "€ 26,69", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
       { "naam": "Boekenvoordeel", "prijs": "€ 29,99", "link": "https://www.boekenvoordeel.be/p/zootropolis-2-blu-ray-113386" }
+    ]
+  },
+  {
+    "id": "magnetic-tiles-magnaminds-100-stuks",
+    "naam": "Magnetic Tiles MagnaMinds - 100 stuks",
+    "beschrijving": "Magnetisch constructiespeelgoed (100 stuks) voor urenlang bouwplezier. Compatibel met andere grote merken magnetische tegels.",
+    "afbeelding_url": "https://media.s-bol.com/3XlA5Oq1nRKn/PN7o4rW/1200x1173.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 30,49", "link": "https://www.bol.com/be/nl/p/magnetic-tiles-magnaminds-magnatiles-100-stuks/9300000150075882/" }
+    ]
+  },
+  {
+    "id": "smartgames-drie-kleine-biggetjes-deluxe",
+    "naam": "SmartGames - Drie Kleine Biggetjes Deluxe",
+    "beschrijving": "Een uitdagend puzzelspel voor kleuters met 48 opdrachten. Help de drie biggetjes hun huizen te bouwen zodat ze veilig zijn voor de wolf. Inclusief een extra sprookjesboek met plaatjes.",
+    "afbeelding_url": "https://media.s-bol.com/3x9GV8KOnj4r/lYpyQyl/1200x1112.jpg",
+    "winkels": [
+      { "naam": "Verthus", "prijs": "€ 22,95", "link": "https://verthus.be/producten/smart-de-drie-kleine-biggetjes-48-opdrachten/" },
+      { "naam": "Amazon.nl", "prijs": "€ 17,99", "link": "https://amzn.eu/d/0afJ1oKU" },
+      { "naam": "Bol.com", "prijs": "€ 24,45", "link": "https://www.bol.com/be/nl/p/smartgames-drie-kleine-biggetjes-deluxe-kleuterspel-48-puzzel-opdrachten-met-extra-sprookjesboek/9200000059431562/" },
+      { "naam": "DreamLand", "prijs": "€ 24,95", "link": "https://www.dreamland.be/nl/producten/smartgames-drie-kleine-biggetjes-deluxe-sprookjesspel-kleuters-48-opdrachten/01215861" }
+    ]
+  },
+  {
+    "id": "tiptoi-starter-set-ontdek-de-boerderij-00211",
+    "naam": "tiptoi® Starter Set: Ontdek de boerderij",
+    "beschrijving": "De ideale instap in het tiptoi® leersysteem. Deze set bevat de interactieve stift (met oplaadbare batterij) en het boek 'Ontdek de boerderij'. Kinderen kunnen hiermee zelfstandig op ontdekkingstocht gaan door de wereld van de boerderij met geluiden, verhalen en spelletjes.",
+    "afbeelding_url": "https://ravensburger.cloud/images/product-cover/650x445/Ravensburger-Starter-Set-Ontdek-de-boerderij-00211.webp",
+    "winkels": [
+      { "naam": "Ravensburger", "prijs": "€ 43,99", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/tiptoi/tiptoi-pen-starter-sets/-00211" },
+      { "naam": "Supra Bazar", "prijs": "€ 47,99", "link": "https://www.suprabazar.be/tiptoi-starterset-ontdek-de-boerderij-oplaadbare-stift-31969003" },
+      { "naam": "De Kinderplaneet", "prijs": "€ 49,95", "link": "https://www.dekinderplaneet.be/nl/tiptoi-starter-set-ontdek-de-boerderij-1000903" },
+      { "naam": "DreamLand", "prijs": "€ 49,95", "link": "https://www.dreamland.be/nl/producten/ontdek-de-boerderij/01814637" },
+      { "naam": "Bol.com", "prijs": "€ 49,95", "link": "https://www.bol.com/be/nl/p/tiptoi-starter-set-ontdek-de-boerderij-interactief-leersysteem/9300000178263903/" }
+    ]
+  },
+  {
+    "id": "spiderman-ecozen-tritan-waterfles-480ml",
+    "naam": "Spiderman Ecozen / Tritan Waterfles - 480 ml",
+    "beschrijving": "Een duurzame en herbruikbare Spiderman drinkfles voor dagelijks gebruik. Gemaakt van hoogwaardig Ecozen/Tritan materiaal, BPA-vrij en voorzien van een handige drinktuit. Inhoud: 480 ml.",
+    "afbeelding_url": "https://media.s-bol.com/k3OE59gpZB9X/Q19Pqwq/387x840.jpg",
+    "winkels": [
+      { "naam": "Multibazar", "prijs": "€ 9,99", "link": "https://www.multibazar.be/nl/spiderman-tritan-premium-waterfles-480ml-1048880" },
+      { "naam": "DreamLand", "prijs": "€ 11,99", "link": "https://www.dreamland.be/nl/producten/spiderman-tritan-premium-waterfles-480ml/02252599" },
+      { "naam": "Bol.com", "prijs": "€ 13,39", "link": "https://www.bol.com/be/nl/p/euromic-spiderman-ecozen-dagelijks-gebruik-480-ml-meerkleurig/9300000230582618/" }
+    ]
+  },
+  {
+    "id": "spiderman-lunchbox-3-compartimenten-midnight-flyer",
+    "naam": "Spiderman Lunchbox met 3 compartimenten",
+    "beschrijving": "Praktische brooddoos met Spiderman 'Midnight Flyer' print. Dankzij de drie aparte vakjes kun je boterhammen, fruit en snacks gescheiden van elkaar meenemen zonder dat ze door elkaar raken.",
+    "afbeelding_url": "https://media.s-bol.com/BWR1BB96wOxX/66OEzrL/550x366.jpg",
+    "winkels": [
+      { "naam": "DreamLand", "prijs": "€ 8,99", "link": "https://www.dreamland.be/nl/producten/spiderman-brooddoos-multi-compartment/02252575" },
+      { "naam": "Bol.com", "prijs": "€ 10,99", "link": "https://www.bol.com/be/nl/p/spiderman-lunchbox-met-3-extra-aparte-compartimenten-midnight-flyer/9300000234248692/" }
+    ]
+  },
+  {
+    "id": "zo-leuk-is-oefenen-leuke-schrijfspelletjes",
+    "naam": "Zo leuk is oefenen - Leuke schrijfspelletjes voor de allerkleinsten (3-4 jaar)",
+    "beschrijving": "Een vrolijk oefenboek vol leuke schrijfspelletjes die de fijne motoriek van jonge kinderen stimuleren. Ideaal als voorbereiding op het schrijven voor de 1ste kleuterklas.",
+    "afbeelding_url": "https://media.s-bol.com/gGkgR1rrXQ3D/lOP6Ypr/550x550.jpg",
+    "winkels": [
+      { "naam": "Fnac", "prijs": "€ 6,26", "link": "https://www.nl.fnac.be/a11301447/Zo-leuk-is-oefenen-3-4-jaar-1ste-kleuterklas-voorbereiding-op-groep-1-Zo-leuk-is-oefenen-Leuke-schrijfspelletjes-3-4-j-ZNU" },
+      { "naam": "Bol.com", "prijs": "€ 7,50", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-leuke-schrijfspelletjes-voor-de-allerkleinsten/9200000087763564/" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 7,50", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-leuke-schrijfspelletjes-3-4-j-9789044750034" },
+      { "naam": "De Slegte", "prijs": "€ 7,50", "link": "https://www.deslegte.com/leuke-schrijfspelletjes-voor-de-allerkleinsten-1756362/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 19,20", "link": "https://amzn.eu/d/01iv39By" }
+    ]
+  },
+  {
+    "id": "zo-leuk-is-oefenen-leuke-telspelletjes",
+    "naam": "Zo leuk is oefenen - Leuke telspelletjes voor de allerkleinsten (3-4 jaar)",
+    "beschrijving": "Een leerzaam oefenboek vol vrolijke telspelletjes die peuters en kleuters helpen bij hun eerste stappen in de wereld van getallen. De oefeningen zijn speciaal ontworpen voor de 1ste kleuterklas als voorbereiding op groep 1.",
+    "afbeelding_url": "https://media.s-bol.com/xBlDrzAyR7qz/YEWAkPA/550x550.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 7,50", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-0-leuke-telspelletjes-voor-de-allerkleinsten-3-4-jaar-1ste-kleuterklas-voorbereiding-op-groep-1/9200000087763386/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 7,50", "link": "https://amzn.eu/d/097tTP9j" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 7,50", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-leuke-telspelletjes-3-4-j-9789044750041" },
+      { "naam": "Amazon.nl", "prijs": "€ 9,83", "link": "https://amzn.eu/d/0gNXXYaD" }
+    ]
+  },
+  {
+    "id": "zo-leuk-is-oefenen-leuke-oefenspelletjes",
+    "naam": "Zo leuk is oefenen - Leuke oefenspelletjes voor de allerkleinsten (3-4 jaar)",
+    "beschrijving": "Dit vrolijke oefenboek zit vol leuke spelletjes die de algemene ontwikkeling van je kind stimuleren. Spelenderwijs leert je peuter of kleuter logisch nadenken, vormen herkennen en kleuren onderscheiden, perfect als voorbereiding op de 1ste kleuterklas.",
+    "afbeelding_url": "https://media.s-bol.com/K57yGWDW7VOM/3QpqWZn/550x725.jpg",
+    "winkels": [
+      { "naam": "Fnac", "prijs": "€ 6,26", "link": "https://www.nl.fnac.be/a11301449/Zo-leuk-is-oefenen-3-4-jaar-1ste-kleuterklas-voorbereiding-op-groep-1-Zo-leuk-is-oefenen-Leuke-oefenspelletjes-3-4-j-ZNU" },
+      { "naam": "Bol.com", "prijs": "€ 7,50", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-leuke-oefenspelletjes-voor-de-allerkleinsten/9200000087763767/" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 7,50", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-leuke-oefenspelletjes-3-4-j-9789044750058" },
+      { "naam": "Verthus", "prijs": "€ 7,50", "link": "https://verthus.be/producten/zo-leuk-is-oefenen-oefenspelletjes-3-4j/" }
     ]
   }
 ]

@@ -3,7 +3,7 @@ let hidePurchased = false;
 let globalPurchasedIds = new Set();
 
 const zumaQuotes = [
-    "Laten we een duik nemen!", "Klaar voor action in de golven!", "1, 2, Zuma komt eraan!",
+    "Laten we een duik nemen!", "Klaar voor actie in de golven!", "1, 2, Zuma komt eraan!",
     "Deze pup houdt van water!", "Geen klus te groot, geen pup te klein!", "Zuma staat paraat!"
 ];
 
@@ -22,12 +22,12 @@ function createBubbles() {
     const bubble = document.createElement('div');
     bubble.className = 'snow';
     bubble.style.left = Math.random() * 100 + "%";
-    const size = (Math.random() * 15 + 10) + "px";
-    bubble.style.width = size;
-    bubble.style.height = size;
-    bubble.style.animationDuration = (Math.random() * 4 + 6) + "s";
+    const sizeNum = Math.random() * 20 + 10;
+    const size = sizeNum + "px";
+    bubble.style.width = size; bubble.style.height = size;
+    bubble.style.animationDuration = (Math.random() * 4 + 5) + "s";
     container.appendChild(bubble);
-    setTimeout(() => { bubble.remove(); }, 10000);
+    setTimeout(() => bubble.remove(), 9000);
 }
 
 function startCountdown(targetDateStr, targetName) {
@@ -35,75 +35,25 @@ function startCountdown(targetDateStr, targetName) {
     const timerEl = document.getElementById("countdown-timer");
     if (!targetDateStr || !container) return;
     container.style.display = "block";
-    let dateToParse = targetDateStr;
-    if (!targetDateStr.includes('+') && !targetDateStr.includes('Z')) {
-        const testDate = new Date(targetDateStr);
-        const isDST = testDate.getMonth() > 2 && testDate.getMonth() < 10;
-        dateToParse += isDST ? "+02:00" : "+01:00";
-    }
-    const targetDate = new Date(dateToParse).getTime();
-    const updateTimer = setInterval(() => {
+    const targetDate = new Date(targetDateStr).getTime();
+    setInterval(() => {
         const now = new Date().getTime();
         const distance = targetDate - now;
         if (distance < 0) {
-            clearInterval(updateTimer);
             timerEl.innerHTML = `🎉 GELUKKIGE VERJAARDAG ${targetName.toUpperCase()}! 🎉`;
         } else {
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            timerEl.innerHTML = `${days}d ${hours}u ${minutes}m ${seconds}s`;
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+            timerEl.innerHTML = `${d}d ${h}u ${m}m ${s}s`;
         }
     }, 1000);
 }
 
-// ACHTERGROND REFRESH VAN CLAIMS + TELLER UPDATE
-async function refreshClaims() {
-    try {
-        const response = await fetch(CONFIG.GOOGLE_SHEET_URL);
-        const data = await response.json();
-        globalPurchasedIds = new Set(data.purchased_items);
-
-        // 1. Update de items op het scherm (grijs maken/overlay toevoegen)
-        document.querySelectorAll('.wens-item, .overview-grid-item').forEach(el => {
-            const id = el.id || el.getAttribute('onclick')?.match(/'([^']+)'\s*\)$/)?.[1];
-            if (id && globalPurchasedIds.has(id)) {
-                if (!el.classList.contains('purchased')) {
-                    el.classList.add('purchased');
-                    if (!el.querySelector('.purchased-overlay')) {
-                        const imgWrapper = el.querySelector('.item-image-container, .overview-image-wrapper');
-                        if (imgWrapper) imgWrapper.insertAdjacentHTML('afterbegin', '<div class="purchased-overlay">GEKOCHT</div>');
-                    }
-                    const btn = el.querySelector('.buy-button');
-                    if (btn) btn.remove();
-                }
-            }
-        });
-
-        // 2. Update de tellers en voortgangsbalken in het menu
-        document.querySelectorAll('.tab-button').forEach(btn => {
-            const tabId = btn.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
-            if (!tabId || tabId === 'overview-content') return;
-
-            const container = document.getElementById(tabId);
-            if (container) {
-                const totalItems = container.querySelectorAll('.wens-item').length;
-                const boughtItems = container.querySelectorAll('.wens-item.purchased').length;
-                const percentage = totalItems > 0 ? Math.round((boughtItems / totalItems) * 100) : 0;
-
-                const statsEl = btn.querySelector('.tab-stats');
-                if (statsEl) statsEl.innerText = `${boughtItems}/${totalItems} gekocht`;
-
-                const bladeEl = btn.querySelector('.katana-blade');
-                if (bladeEl) bladeEl.style.width = `${percentage}%`;
-            }
-        });
-
-    } catch (e) { console.warn("Sync mislukt"); }
+function normalizeText(text) {
+    return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
-
-function normalizeText(text) { return text.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
 
 function filterGifts() {
     const input = normalizeText(document.getElementById('gift-search').value);
@@ -123,10 +73,68 @@ function togglePurchasedFilter() {
     filterGifts();
 }
 
+async function refreshClaims() {
+    try {
+        const response = await fetch(CONFIG.GOOGLE_SHEET_URL);
+        const data = await response.json();
+        globalPurchasedIds = new Set(data.purchased_items);
+
+        document.querySelectorAll('.wens-item, .overview-grid-item').forEach(el => {
+            const id = el.id || el.getAttribute('data-id');
+            if (id && globalPurchasedIds.has(id)) {
+                if (!el.classList.contains('purchased')) {
+                    el.classList.add('purchased');
+                    const imgContainer = el.querySelector('.item-image-container, .overview-image-wrapper');
+                    if (imgContainer && !el.querySelector('.purchased-overlay')) {
+                        imgContainer.insertAdjacentHTML('afterbegin', '<div class="purchased-overlay">GEKOCHT</div>');
+                    }
+                    const btn = el.querySelector('.buy-button'); if (btn) btn.remove();
+                }
+            }
+        });
+
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            const targetId = btn.getAttribute('data-target');
+            if (targetId && !['overview-content', 'inventory-list'].includes(targetId)) {
+                const container = document.getElementById(targetId);
+                if (container) {
+                    const total = container.querySelectorAll('.wens-item').length;
+                    const bought = container.querySelectorAll('.wens-item.purchased').length;
+                    const perc = total > 0 ? Math.round((bought / total) * 100) : 0;
+                    const stats = btn.querySelector('.tab-stats'); if (stats) stats.innerText = `${bought}/${total} gekocht`;
+                    const blade = btn.querySelector('.katana-blade'); if (blade) blade.style.width = perc + "%";
+                }
+            }
+        });
+    } catch (e) { console.warn("Sync mislukt"); }
+}
+
+function openTab(evt, tabId) {
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
+    document.getElementById(tabId).classList.add("active");
+    if (evt) evt.currentTarget.classList.add("active");
+    window.scrollTo(0, 0);
+}
+
+function openVideoModal(videoId) {
+    const frame = document.getElementById('youtube-frame');
+    frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    document.getElementById('youtubeModal').style.display = 'block';
+}
+
+function closeVideoModal() {
+    const frame = document.getElementById('youtube-frame');
+    frame.src = "";
+    document.getElementById('youtubeModal').style.display = 'none';
+}
+
 function updateModalUI(config) {
     const modal = document.getElementById('customModal');
-    const cancelBtn = document.getElementById('modal-cancel-btn');
-    const confirmBtn = document.getElementById('modal-confirm-btn');
+    const modalContent = modal.querySelector('.custom-modal-content');
+
+    // Reset naar standaard (niet-fout) state
+    modalContent.classList.remove('modal-error');
 
     document.getElementById('modal-icon').innerText = config.icon || "🐾";
     document.getElementById('modal-title').innerText = config.title || "";
@@ -134,97 +142,83 @@ function updateModalUI(config) {
     document.getElementById('modal-spinner').style.display = config.showSpinner ? 'block' : 'none';
     document.getElementById('modal-buttons').style.display = config.showButtons ? 'flex' : 'none';
 
-    if (config.confirmText) confirmBtn.innerText = config.confirmText;
-    if (config.cancelText) cancelBtn.innerText = config.cancelText;
+    // Als het een error is, voeg de class toe
+    if (config.isError) {
+        modalContent.classList.add('modal-error');
+    }
 
-    cancelBtn.style.display = config.hideCancel ? 'none' : 'inline-block';
-    cancelBtn.onclick = function() { modal.style.display = 'none'; };
-
-    if (config.onConfirm) confirmBtn.onclick = config.onConfirm;
     modal.style.display = 'block';
 }
 
-async function claimItem(person, itemName, id) {
-    updateModalUI({
-        title: "Even geduld...",
-        text: "We controleren de beschikbaarheid...",
-        showSpinner: true,
-        showButtons: false
-    });
-
+async function claimItem(name, id) {
+    updateModalUI({ title: "Even geduld...", text: "We controleren de beschikbaarheid...", showSpinner: true, showButtons: false });
     try {
-        const [ipRes, claimsRes] = await Promise.all([
-            fetch('https://api.ipify.org?format=json').then(r => r.json()).catch(() => ({ip: "Onbekend"})),
-            fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json())
-        ]);
-
-        const userIp = ipRes.ip;
+        const claimsRes = await fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json());
         globalPurchasedIds = new Set(claimsRes.purchased_items);
 
         if (globalPurchasedIds.has(id)) {
             updateModalUI({
-                icon: "⚠️",
+                icon: "🚫",
                 title: "Te laat!",
                 text: "Helaas, dit cadeau is zojuist door iemand anders geclaimd.",
                 showSpinner: false,
                 showButtons: true,
-                confirmText: "Oké, jammer",
-                hideCancel: true,
-                onConfirm: () => location.reload()
+                isError: true
             });
+            const confirmBtn = document.getElementById('modal-confirm-btn');
+            confirmBtn.innerText = "Oké, jammer";
+            confirmBtn.onclick = () => location.reload();
+            document.getElementById('modal-cancel-btn').style.display = 'none';
             return;
         }
 
-        updateModalUI({
-            title: "Cadeau gekocht?",
-            text: `Markeer "${itemName}" als gekocht.\n\n⚠️ Dit wordt direct bijgewerkt op de website.`,
-            showSpinner: false,
-            showButtons: true,
-            confirmText: "Ja, ik koop dit!",
-            cancelText: "Annuleren",
-            onConfirm: function() {
-                updateModalUI({
-                    title: "Bezig met opslaan...",
-                    text: "De missie wordt voltooid...",
-                    showSpinner: true,
-                    showButtons: false
-                });
+        updateModalUI({ title: "Cadeau gekocht?", text: `Wil je "${name}" markeren als gekocht? Dit wordt direct bijgewerkt.`, showSpinner: false, showButtons: true });
+        const confirmBtn = document.getElementById('modal-confirm-btn');
+        const cancelBtn = document.getElementById('modal-cancel-btn');
+        confirmBtn.innerText = "Ja, ik koop dit!";
+        cancelBtn.style.display = 'inline-block';
 
-                fetch(CONFIG.GOOGLE_SHEET_URL, {
+        confirmBtn.onclick = async () => {
+            updateModalUI({ title: "Bezig met opslaan...", text: "De missie wordt voltooid...", showSpinner: true, showButtons: false });
+            try {
+                const ipRes = await fetch('https://api.ipify.org?format=json').then(r => r.json()).catch(() => ({ip:"Onbekend"}));
+                const response = await fetch(CONFIG.GOOGLE_SHEET_URL, {
                     method: 'POST',
                     mode: 'cors',
-                    body: JSON.stringify({ itemId: id, ipAddress: userIp })
-                })
-                .then(r => r.json())
-                .then(result => {
-                    if (result.result === "already_claimed") {
-                        updateModalUI({
-                            icon: "⚠️",
-                            title: "Net te laat!",
-                            text: "Dit item is helaas al geclaimd.",
-                            showSpinner: false,
-                            showButtons: true,
-                            confirmText: "Begrepen",
-                            hideCancel: true,
-                            onConfirm: () => location.reload()
-                        });
-                    } else {
-                        setTimeout(() => location.reload(), 800);
-                    }
-                })
-                .catch(() => location.reload());
-            }
-        });
+                    body: JSON.stringify({ itemId: id, ipAddress: ipRes.ip })
+                });
+                const result = await response.json();
 
+                if (result.result === "already_claimed") {
+                    updateModalUI({
+                        icon: "🚫",
+                        title: "Net te laat!",
+                        text: "Iemand anders was je net een fractie voor.",
+                        showSpinner: false,
+                        showButtons: true,
+                        isError: true
+                    });
+                    document.getElementById('modal-confirm-btn').innerText = "Begrepen";
+                    document.getElementById('modal-confirm-btn').onclick = () => location.reload();
+                    document.getElementById('modal-cancel-btn').style.display = 'none';
+                } else {
+                    location.reload();
+                }
+            } catch (e) {
+                location.reload();
+            }
+        };
     } catch (e) {
-        console.error(e);
-        location.reload();
+        console.error("Fout bij claim:", e);
     }
 }
 
-function generateWishlistContent(data, purchasedIds, favoriteIds) {
-    const nav = document.getElementById('dynamic-tab-nav'), listContainer = document.getElementById('person-lists-container'), overview = document.getElementById('overview-grid-container');
-    let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')"><span class="tab-info">Overzicht</span></button>`;
+function generateWishlistContent(data, purchasedIds, favoriteIds, inventoryLinks) {
+    const nav = document.getElementById('dynamic-tab-nav');
+    const lists = document.getElementById('person-lists-container');
+    const overview = document.getElementById('overview-grid-container');
+
+    let navHtml = `<button class="tab-button active" data-target="overview-content" onclick="openTab(event, 'overview-content')"><span class="tab-info">Overzicht</span></button>`;
     let listsHtml = '', overviewHtml = '';
 
     const sortedPeople = [...data.personen].sort((a, b) => a.naam.toLowerCase() === 'milan' ? -1 : 1);
@@ -232,15 +226,23 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
     if (data.gezamenlijke_items) groups.push(data.gezamenlijke_items);
 
     groups.forEach(person => {
-        const tabId = personIdToTabId(person.naam);
-        const total = person.items.length, bought = person.items.filter(i => purchasedIds.has(i.id)).length, perc = total > 0 ? Math.round((bought / total) * 100) : 0;
+        const tabId = person.naam.toLowerCase() + "-list";
+        navHtml += `
+            <button class="tab-button" data-target="${tabId}" onclick="openTab(event, '${tabId}')">
+                <span class="tab-info">${person.naam}</span>
+                <span class="tab-stats">Laden...</span>
+                <div class="katana-progress"><div class="katana-blade"></div></div>
+            </button>`;
 
-        navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')"><span class="tab-info">${person.naam}</span><span class="tab-stats">${bought}/${total} gekocht</span><div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div></button>`;
         listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2>`;
         overviewHtml += `<h3>${person.naam}</h3><div class="overview-grid">`;
 
-        person.items.sort((a,b) => (favoriteIds.has(b.id)?1:0) - (favoriteIds.has(a.id)?1:0)).forEach(item => {
-            const isP = purchasedIds.has(item.id), isF = favoriteIds.has(item.id), low = getLowestPriceInfo(item.winkels), overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+        const sortedItems = [...person.items].sort((a, b) => (favoriteIds.has(b.id) ? 1 : 0) - (favoriteIds.has(a.id) ? 1 : 0));
+
+        sortedItems.forEach(item => {
+            const isP = purchasedIds.has(item.id), isF = favoriteIds.has(item.id), low = getLowestPrice(item.winkels);
+            const overlay = isP ? '<div class="purchased-overlay">GEKOCHT</div>' : '';
+            const vidBtn = (item.video_id && !isP) ? `<button class="video-button" onclick="openVideoModal('${item.video_id}')">🎬 Video</button>` : '';
 
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}">
@@ -252,74 +254,83 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                         <h3>${item.naam}</h3>
                         <p>${item.beschrijving}</p>
                         <div class="price-links">
-                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}"><span class="shop-name">${w.naam}</span><span class="shop-price">${w.prijs}</span><span class="shop-go">Bekijk</span></a>`).join('')}
+                            ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.idx ? 'lowest' : ''}"><span class="shop-name">${w.naam}</span><span class="shop-price">${w.prijs}</span></a>`).join('')}
                         </div>
-                        ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                        <div style="display:flex; gap:10px; margin-top:auto;">
+                            ${!isP ? `<button class="buy-button" onclick="claimItem('${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                            ${vidBtn}
+                        </div>
                     </div>
                 </div>`;
 
-            overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>${isF ? '<div class="mini-star">★</div>' : ''}<div class="overview-caption">${item.naam}</div><div style="font-size:0.85em; color:#ff6600; font-weight:bold;">Vanaf ${low.prijs}</div></div>`;
+            overviewHtml += `
+                <div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" data-id="${item.id}" onclick="openTab(null, '${tabId}'); setTimeout(() => document.getElementById('${item.id}').scrollIntoView({behavior:'smooth', block:'center'}), 100)">
+                    <div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>
+                    ${isF ? '<div class="mini-star">★</div>' : ''}
+                    <div class="overview-caption">${item.naam}</div>
+                    <div style="color:#ff6600; font-weight:bold; margin-top:5px;">Vanaf ${low.val} ${item.video_id ? '🎬' : ''}</div>
+                </div>`;
         });
         listsHtml += `</div>`; overviewHtml += `</div>`;
     });
+
+    if (inventoryLinks && inventoryLinks.length > 0) {
+        navHtml += `<button class="tab-button" data-target="inventory-list" onclick="openTab(event, 'inventory-list')"><span class="tab-info">Inventaris</span></button>`;
+        listsHtml += `<div id="inventory-list" class="tab-content"><h2>Onze Inventaris</h2><div class="price-links" style="padding:20px; background:white; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">`;
+        inventoryLinks.forEach(link => {
+            listsHtml += `<a href="${link.url}" target="_blank" class="price-link" style="min-width:200px;"><span class="shop-name">Bekijk lijst</span><span class="shop-price">${link.naam}</span></a>`;
+        });
+        listsHtml += `</div></div>`;
+    }
+
     nav.innerHTML = navHtml;
+    lists.innerHTML = listsHtml;
     overview.innerHTML = overviewHtml;
-    listContainer.innerHTML = listsHtml;
-}
-
-function openTab(evt, tabId) {
-    setPupGreeting();
     refreshClaims();
-    if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
-    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
-    document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
-    const target = document.getElementById(tabId);
-    if(target) target.classList.add("active");
-    if (evt) evt.currentTarget.classList.add("active");
-    window.scrollTo(0,0);
 }
 
-function scrollToItem(p, id) {
-    openTab(null, personIdToTabId(p));
-    setTimeout(() => {
-        const el = document.getElementById(id);
-        if(el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 100);
-}
-
-function personIdToTabId(naam) { return (naam.toLowerCase() === 'gezamenlijk' ? 'gezamenlijk' : naam.toLowerCase()) + '-list-content'; }
-
-function getLowestPriceInfo(winkels) {
-    if (!winkels || winkels.length === 0) return { prijs: "N.v.t.", index: -1 };
-    let lowestVal = Infinity, lowestIndex = 0;
+function getLowestPrice(winkels) {
+    if (!winkels || winkels.length === 0) return { val: "€ 0", idx: 0 };
+    let low = { val: "€ 0", idx: 0, num: Infinity };
     winkels.forEach((w, i) => {
-        const val = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
-        if (val < lowestVal) { lowestVal = val; lowestIndex = i; }
+        const n = parseFloat(w.prijs.replace(/[^\d,.]/g, '').replace(',', '.'));
+        if (n < low.num) low = { val: w.prijs, idx: i, num: n };
     });
-    return { prijs: `€ ${lowestVal.toFixed(2).replace('.', ',')}`, index: lowestIndex };
+    return low;
 }
 
 async function loadWishlist() {
-    setPupGreeting();
-    setInterval(createBubbles, 800);
-    setInterval(refreshClaims, 30000);
-
+    setPupGreeting(); setInterval(createBubbles, 600); setInterval(refreshClaims, 30000);
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
         if (config.aftel_datum) startCountdown(config.aftel_datum, config.aftel_naam || "Milan");
-        const claims = await fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json()).catch(() => ({purchased_items:[]}));
+
+        const [claims, favs, inv] = await Promise.all([
+            fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json()).catch(() => ({purchased_items:[]})),
+            fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]})),
+            fetch(config.inventaris_links_file).then(r => r.json()).catch(() => [])
+        ]);
+
         globalPurchasedIds = new Set(claims.purchased_items);
-        const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
         const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
-        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}}, globalPurchasedIds, new Set(favs.favorite_ids));
-        document.getElementById('loading-message').style.display = 'none';
+
+        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}}, globalPurchasedIds, new Set(favs.favorite_ids), inv);
+        document.getElementById('loading-message')?.remove();
     } catch (e) { console.error(e); }
 }
 
-window.onscroll = function() {
-    const btn = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { btn.style.display = "block"; } else { btn.style.display = "none"; }
-};
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+window.onscroll = () => {
+    const btn = document.getElementById("scrollToTopBtn");
+    if(btn) btn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+window.onclick = (e) => {
+    if (e.target.id === 'youtubeModal') closeVideoModal();
+    if (e.target.id === 'customModal') {
+        if (document.getElementById('modal-spinner').style.display === 'none') {
+            document.getElementById('customModal').style.display='none';
+        }
+    }
+};
 window.onload = loadWishlist;

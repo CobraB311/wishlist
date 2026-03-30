@@ -50,12 +50,21 @@
         <div id="modal-spinner" class="loader" style="display:none;"></div>
         <div id="modal-buttons">
             <button id="modal-confirm-btn" class="modal-btn confirm">Ja, ik koop dit!</button>
-            <button id="modal-cancel-btn" class="modal-btn cancel">Annuleren</button>
+            <button id="modal-cancel-btn" class="modal-btn cancel" onclick="document.getElementById('customModal').style.display='none'">Annuleren</button>
         </div>
     </div>
 </div>
 
-<button id="scrollToTopBtn" onclick="scrollToTop()">⚓</button>
+<div id="youtubeModal" class="custom-modal">
+    <div class="custom-modal-content video-modal-content">
+        <span class="close-video" onclick="closeVideoModal()">&times;</span>
+        <div class="video-container">
+            <iframe id="youtube-frame" src="" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<button onclick="scrollToTop()" id="scrollToTopBtn" title="Omhoog">⚓</button>
 
 <script src="script.js"></script>
 </body>

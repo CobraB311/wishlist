@@ -58,12 +58,14 @@ function startCountdown(targetDateStr, targetName) {
     }, 1000);
 }
 
+// ACHTERGROND REFRESH VAN CLAIMS + TELLER UPDATE
 async function refreshClaims() {
     try {
         const response = await fetch(CONFIG.GOOGLE_SHEET_URL);
         const data = await response.json();
         globalPurchasedIds = new Set(data.purchased_items);
 
+        // 1. Update de items op het scherm (grijs maken/overlay toevoegen)
         document.querySelectorAll('.wens-item, .overview-grid-item').forEach(el => {
             const id = el.id || el.getAttribute('onclick')?.match(/'([^']+)'\s*\)$/)?.[1];
             if (id && globalPurchasedIds.has(id)) {
@@ -78,6 +80,26 @@ async function refreshClaims() {
                 }
             }
         });
+
+        // 2. Update de tellers en voortgangsbalken in het menu
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            const tabId = btn.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+            if (!tabId || tabId === 'overview-content') return;
+
+            const container = document.getElementById(tabId);
+            if (container) {
+                const totalItems = container.querySelectorAll('.wens-item').length;
+                const boughtItems = container.querySelectorAll('.wens-item.purchased').length;
+                const percentage = totalItems > 0 ? Math.round((boughtItems / totalItems) * 100) : 0;
+
+                const statsEl = btn.querySelector('.tab-stats');
+                if (statsEl) statsEl.innerText = `${boughtItems}/${totalItems} gekocht`;
+
+                const bladeEl = btn.querySelector('.katana-blade');
+                if (bladeEl) bladeEl.style.width = `${percentage}%`;
+            }
+        });
+
     } catch (e) { console.warn("Sync mislukt"); }
 }
 
@@ -101,7 +123,6 @@ function togglePurchasedFilter() {
     filterGifts();
 }
 
-// Centrale functie voor Modal UI updates - FIX: Reset cancel btn altijd
 function updateModalUI(config) {
     const modal = document.getElementById('customModal');
     const cancelBtn = document.getElementById('modal-cancel-btn');
@@ -116,7 +137,6 @@ function updateModalUI(config) {
     if (config.confirmText) confirmBtn.innerText = config.confirmText;
     if (config.cancelText) cancelBtn.innerText = config.cancelText;
 
-    // Zorg dat de annuleerknop altijd sluit, tenzij anders opgegeven
     cancelBtn.style.display = config.hideCancel ? 'none' : 'inline-block';
     cancelBtn.onclick = function() { modal.style.display = 'none'; };
 
@@ -125,16 +145,14 @@ function updateModalUI(config) {
 }
 
 async function claimItem(person, itemName, id) {
-    // 1. Direct Laden tonen
     updateModalUI({
         title: "Even geduld...",
-        text: "We controleren de beschikbaarheid van dit cadeau...",
+        text: "We controleren de beschikbaarheid...",
         showSpinner: true,
         showButtons: false
     });
 
     try {
-        // 2. Checks uitvoeren
         const [ipRes, claimsRes] = await Promise.all([
             fetch('https://api.ipify.org?format=json').then(r => r.json()).catch(() => ({ip: "Onbekend"})),
             fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json())
@@ -143,7 +161,6 @@ async function claimItem(person, itemName, id) {
         const userIp = ipRes.ip;
         globalPurchasedIds = new Set(claimsRes.purchased_items);
 
-        // 3. Verkocht check
         if (globalPurchasedIds.has(id)) {
             updateModalUI({
                 icon: "⚠️",
@@ -158,7 +175,6 @@ async function claimItem(person, itemName, id) {
             return;
         }
 
-        // 4. Bevestiging tonen
         updateModalUI({
             title: "Cadeau gekocht?",
             text: `Markeer "${itemName}" als gekocht.\n\n⚠️ Dit wordt direct bijgewerkt op de website.`,
@@ -185,7 +201,7 @@ async function claimItem(person, itemName, id) {
                         updateModalUI({
                             icon: "⚠️",
                             title: "Net te laat!",
-                            text: "Tijdens het klikken is dit item helaas al geclaimd.",
+                            text: "Dit item is helaas al geclaimd.",
                             showSpinner: false,
                             showButtons: true,
                             confirmText: "Begrepen",

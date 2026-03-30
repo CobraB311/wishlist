@@ -1,23 +1,23 @@
-Master Checklist: Functionaliteiten & Requirements
+🐾 Master Checklist: Functionaliteiten & Requirements
 🎨 Visueel & Thema (Zuma / Paw Patrol)
-Zuma Styling: Oranje en blauwe accenten doorheen de hele site.
+Zuma Styling: Oranje (#ff6600) en blauwe (#00aaff) accenten doorheen de hele site.
 
-Interactieve Bubbels: Geanimeerde blauwe bubbels die onder de menubalk omhoog zweven en knappen bij hover.
+Interactieve Bubbels: Geanimeerde blauwe bubbels die onder de menubalk omhoog zweven (Zuma waterthema).
 
-Pup Welkomsttekst: Een wisselende Zuma-quote bovenin (bijv. "Laten we een duik nemen!") gecombineerd met een tijd-afhankelijke groet (Goedemorgen, etc.).
+Pup Welkomsttekst: Wisselende Zuma-quotes gecombineerd met een tijd-afhankelijke groet (bijv. "Goedemorgen! Zuma staat paraat!").
 
-Zuma Banner: De grote afbeelding bovenaan de pagina die het thema direct zet.
+Zuma Banner: Grote visuele banner bovenaan de pagina die het thema direct zet.
 
-Scroll-to-Top: De oranje anker-knop rechtsonder die verschijnt bij scrollen en je vloeiend omhoog brengt.
+Scroll-to-Top: De oranje anker-knop (⚓) rechtsonder die verschijnt bij scrollen voor snelle navigatie omhoog.
 
 🏠 Overzicht & Navigatie
-Paginering per Tab: Elk tabblad (Overzicht, Milan, etc.) fungeert als een aparte pagina. Het overzichtgrid verdwijnt volledig als je een persoon bekijkt.
+Paginering per Tab: Elk tabblad (Overzicht, Milan, etc.) fungeert als een aparte weergave; het overzichtgrid verdwijnt volledig als je een persoon bekijkt.
 
-Linkse Menubalk: Het menu staat verticaal aan de linkerkant (op desktop) en bevat de tabbladen.
+Linkse Menubalk: Het menu staat verticaal aan de linkerkant (op desktop) en bevat alle tabbladen.
 
-Statistieken in Tabs: Elk tabblad toont direct hoeveel items er al gekocht zijn (bijv. 2/10 gekocht) inclusief een voortgangsbalkje (Katana-stijl).
+Live Statistieken in Tabs: Elk tabblad toont direct hoeveel items er gekocht zijn (bijv. 2/10 gekocht) inclusief een Katana-stijl voortgangsbalk die automatisch live update bij nieuwe claims.
 
-Oranje Actieve Tab: Het tabblad waar je op staat, wordt fel oranje met witte tekst.
+Oranje Actieve Tab: Het tabblad waar de bezoeker zich bevindt, wordt fel oranje met witte tekst.
 
 🎁 Wensen & Details
 Grid Overzicht: Een compacte weergave van alle cadeaus met foto, naam en "Vanaf prijs".
@@ -30,38 +30,40 @@ Detail: Gele achtergrond en een "★ FAVORIET" badge.
 
 Prijzen & Winkels:
 
-Winkels worden getoond als horizontale labels/buttons.
+Winkels worden getoond als duidelijke labels/buttons.
 
-Verticale Uitlijning: De namen, prijzen en "Bekijk" knoppen staan strak verticaal onder elkaar uitgelijnd.
+Verticale Uitlijning: Namen, prijzen en "Bekijk" knoppen staan strak onder elkaar uitgelijnd.
 
-Laagste Prijs: De goedkoopste aanbieder wordt automatisch oranje gekleurd.
+Laagste Prijs: De goedkoopste aanbieder krijgt automatisch een oranje accent.
 
-Directe Navigatie: Klikken op een item in het overzicht opent het juiste tabblad en scrolt automatisch naar het juiste cadeau.
+Deep Navigation: Klikken op een item in het overzicht opent direct het juiste tabblad en scrolt naar het cadeau.
 
-🛒 Claim Systeem (Google Sheets)
-Live Database: Geen handmatige commits meer; claims worden direct opgeslagen in een Google Sheet.
+🛒 Automatisch Claim Systeem (Google Sheets & Apps Script)
+Live Database: Claims worden direct opgeslagen in een Google Sheet via een Apps Script API.
 
-Custom Claim Popup:
+Instant Modal Feedback: De popup opent onmiddellijk na de klik ("Even geduld...") om de reactietijd van de server te maskeren.
 
-Geen browser-alerts, maar een gestylede Paw Patrol popup.
+Anti-Conflict Check: Het systeem controleert vlak voor het opslaan of het item niet nét door iemand anders is geclaimd. Bij een conflict verschijnt een "Te laat!" melding.
 
-Bevat de tekst dat de claim automatisch wordt bijgewerkt en een mail niet meer nodig is.
+Automatische Mail-notificatie: Het script stuurt direct een mail naar de beheerder bij elke geslaagde aankoop of bij script-fouten.
 
-Spinner: Een draaiende reddingsboei-animatie tijdens het opslaan van de claim.
+IP-adres Logging: Het IP-adres van de koper wordt gelogd in de sheet en meegezonden in de mail voor extra controle.
+
+Custom Claim Popup: Een gestylede Paw Patrol popup met een draaiende reddingsboei-spinner tijdens het laden.
 
 Gekocht Status (Visueel):
 
-De foto krijgt een grijze waas (grayscale).
+Foto krijgt een grijze waas (grayscale) en een diagonale "GEKOCHT" stempel.
 
-Er verschijnt een stempel "GEKOCHT" diagonaal over de foto.
-
-Alle teksten van dat artikel (titel, prijs, beschrijving) worden grijs en de winkel-links worden gedeactiveerd.
+Alle teksten worden grijs en de winkel-links/koopknoppen worden gedeactiveerd.
 
 🔍 Filters & Extra's
+Achtergrond Sync: De site ververst elke 30 seconden (en bij elke tab-wissel) geruisloos de status van de claims.
+
 Zoekbalk: Direct filteren op cadeau-naam (bijv. "Lego").
 
 Status Filter: Een knop om reeds gekochte items te verbergen (👁️ Toon alles vs 🙈 Verberg).
 
-Countdown Banner: Een aftelklok met de tekst "De missie start over:", die aftelt naar de verjaardag.
+Countdown Banner: Een aftelklok naar de verjaardag ("De missie start over:").
 
-Config.js: Een apart bestand om de Google Sheet URL (DEV of PRO) in te stellen zonder de hoofdcode te raken.
+Config.js: Een apart bestand voor de Google Sheet URL om makkelijk te wisselen tussen DEV en PRO omgevingen.

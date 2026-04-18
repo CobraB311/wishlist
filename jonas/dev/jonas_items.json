@@ -355,7 +355,9 @@
     "beschrijving": "Houd je UNO Flip kaarten veilig en georganiseerd in deze speciale paars-gele draagtas. Net zo stevig als de klassieke versie, maar uitgevoerd in de herkenbare kleuren van de Flip-editie. Voorzien van een handige rits en opbergvakken.",
     "afbeelding_url": "https://media.s-bol.com/RGPY8xOY08Nw/58RGD2q/1079x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/" }
+      { "naam": "Amazon NL", "prijs": "€ 9,99", "link": "https://amzn.eu/d/01Ggopzu" },
+      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/" },
+      { "naam": "Amazon BE", "prijs": "€ 18,94", "link": "https://amzn.eu/d/09jebDd9" }
     ]
   },
   {
@@ -406,7 +408,6 @@
     "afbeelding_url": "https://static.fnac-static.com/multimedia/PE/Images/FR/NR/7e/3e/d7/14106238/1507-1/tsp20251217092059/LEGO-Ninjago-In-de-aanval-AVI-M4.jpg",
     "winkels": [
       { "naam": "Fnac.be", "prijs": "€ 8,99", "link": "https://www.nl.fnac.be/a16649984/Leren-lezen-met-Lego-boeken-AVI-M4-Deel-5-In-de-aanval-Pim-Lammers" },
-      { "naam": "Boekenvoordeel.be", "prijs": "€ 8,99", "link": "https://www.boekenvoordeel.be/p/lego-ninjago-in-de-aanval-107849" },
       { "naam": "Standaard Boekhandel", "prijs": "€ 9,99", "link": "https://www.standaardboekhandel.be/p/in-de-aanval-9789030508595" }
     ]
   },

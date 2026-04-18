@@ -16,19 +16,6 @@
     ]
   },
   {
-    "id": "set-joy-con-2-purple-green",
-    "naam": "Joy-Con 2 Controllerset (Lichtpaars & Lichtgroen)",
-    "nummer": "10017928",
-    "beschrijving": "De vernieuwde Joy-Con 2 controllers voor de Nintendo Switch 2. Deze set in lichtpaars en lichtgroen biedt verbeterde precisie, haptische feedback en een ergonomisch ontwerp voor urenlang speelplezier.",
-    "afbeelding_url": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_600,q_auto:eco:sensitive/efq7vgaujfatsva9y2en",
-    "winkels": [
-      { "naam": "Nintendo Store", "link": "https://store.nintendo.be/nl/joy-con-2-controllerset-lichtpaarslichtgroen-000000000010017928", "prijs": "€ 89,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/nintendo-switch-2-joy-con-controller-paar-paars-groen/9300000256647967/", "prijs": "€ 89,99" },
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/NINTENDO-JOY-CON-PAIR-PRPL-GREEN/a22538834", "prijs": "€ 89,99" },
-      { "naam": "Tweakers Pricewatch", "link": "https://tweakers.net/pricewatch/2308884/nintendo-joy-con-2-groen-paars-zwart.html", "prijs": "Check prijs" }
-    ]
-  },
-  {
     "id": "switch2-controller-pokemon-mega",
     "naam": "PowerA Advantage Draadloze Controller - Pokémon Mega Evolutions",
     "nummer": "10018297",
@@ -38,20 +25,6 @@
       { "naam": "Nintendo Store", "link": "https://store.nintendo.be/nl/advantage-draadloze-controller-voor-nintendo-switch-2-pokemon-mega-evolutions-000000000010018297", "prijs": "€ 64,99" },
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/powera-advantage-draadloze-controller-voor-nintendo-switch-2-pokemon-mega-evoluties/9300000237035829/", "prijs": "€ 64,99" },
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Draadloze-controller-PowerA-Pokemon-Mega-Evolutions-voor-Nintendo-Switch-2/a21880976", "prijs": "€ 69,95" }
-    ]
-  },
-  {
-    "id": "switch-captain-toad-treasure-tracker",
-    "naam": "Captain Toad: Treasure Tracker (Nintendo Switch)",
-    "nummer": "045496422110",
-    "beschrijving": "Ga op avontuur met Captain Toad en Toadette! Verken meer dan 70 kleurrijke levels vol puzzels en vijanden. In deze unieke platformer kun je niet springen, dus moet je het perspectief van de wereld draaien om de weg naar de gouden ster te vinden. Bevat ook speciale levels gebaseerd op Super Mario Odyssey.",
-    "afbeelding_url": "https://media.s-bol.com/qx2kjZM41gWr/742x1200.jpg",
-    "winkels": [
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/07GETlod", "prijs": "€ 38,66" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/switch-captain-toad-treasure-tracker/01332841", "prijs": "€ 39,95" },
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a11915336/Captain-toad-treasure-tracker-NL-SWITCH", "prijs": "€ 47,62" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/captain-toad-treasure-tracker/9200000096129133/", "prijs": "€ 39,99" },
-      { "naam": "Tweakers", "link": "https://tweakers.net/pricewatch/1168813/captain-toad-treasure-tracker-switch.html", "prijs": "Check prijs" }
     ]
   },
   {
@@ -82,22 +55,6 @@
       { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370", "prijs": "€ 9,98" },
       { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/creative-food-friends-11039", "prijs": "€ 9,99" },
       { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/11039/Creative-Food-Friends.html", "prijs": "Check prijs" }
-    ]
-  },
-  {
-    "id": "set-31134",
-    "naam": "LEGO® Creator 3-in-1 Space Shuttle",
-    "nummer": "31134",
-    "beschrijving": "Met deze set bouw je 3 modellen in 1! Een Space Shuttle, een stoer ruimteschip of een coole astronaut. Perfect voor urenlang speelplezier in de ruimte!",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt0a5a76e48f4ee7c6/31134_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/hzt6NJi", "prijs": "€ 7,99" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/cO8lNMz", "prijs": "€ 8,49" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-creator-3in1-space-shuttle-ruimteschip-set-31134/9300000132639040/", "prijs": "€ 7,99" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/31134-lego-space-shuttle/01704112", "prijs": "€ 9,95" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-creator-31134-space-shuttle-30734427", "prijs": "€ 9,98" },
-      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/space-shuttle-31134", "prijs": "€ 9,99" },
-      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/31134/Space-Shuttle.html", "prijs": "Check prijs" }
     ]
   },
   {
@@ -311,24 +268,6 @@
     ]
   },
   {
-    "id": "set-lego-71851-ninjago-kai-mech",
-    "naam": "LEGO® NINJAGO® Kai's drakenmecha-strijdpakket",
-    "nummer": "71851",
-    "beschrijving": "Stort je in de strijd met Kai en Sora! Dit strijdpakket bevat een verstelbare mecha en 3 minifiguren: Kai en Sora met katana's, en een Wolvenmasker bewaker. Een geweldige manier voor jonge ninja's om hun collectie uit te breiden.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltb0755ce0af5da2ea/71851_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/6VBbw64", "prijs": "€ 8,95" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4jRMTX6", "prijs": "€ 8,49" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-71851/9300000237345408/", "prijs": "€ 8,49" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/lego-ninjago-kai-s-drakenmecha-strijdpakket-71851/02323923", "prijs": "€ 7,49" },
-      { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_71851-kais-drakenmecha-2208506.html", "prijs": "€ 9,99" },
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/LEGO-71851-KAI-S-DRAGON-MECH-BATTLE-PACK/a22032289", "prijs": "€ 9,99" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-ninjago-71851-kai-s-drakenmecha-strijdpakket-32140106", "prijs": "€ 9,99" },
-      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/kais-dragon-mech-battle-pack-71851", "prijs": "€ 9,99" },
-      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/en-BE/set/71851/Kai-s-Dragon-Mech-Battle-Pack.html", "prijs": "Check prijs" }
-    ]
-  },
-  {
     "id": "set-lego-71854-cole-mission-mech",
     "naam": "LEGO® NINJAGO® Cole's missiemecha en draak Zane",
     "nummer": "71854",
@@ -365,24 +304,6 @@
     ]
   },
   {
-    "id": "set-lego-71826-ninjago-spinjitzu",
-    "naam": "LEGO® NINJAGO® Spinjitzu-drakenstrijdpakket",
-    "nummer": "71826",
-    "beschrijving": "Bereid je voor op een episch duel! Deze set bevat twee spinners, een drakenfiguur en minifiguren van Kai en een Wolvenmasker bewaker. Lanceer de spinners en kijk wie de strijd wint in de arena van NINJAGO.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltafca4575c7d0aed0/71826_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/7IipFrq", "prijs": "€ 15,95" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/4wZcsKQ", "prijs": "€ 11,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-71826/9300000187249677/", "prijs": "€ 10,30" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-ninjago-71826-spinjitzu-drakenstrijdpakket-32031075", "prijs": "€ 17,99" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/71826-lego-spinjitzu-drakenstrijdpakket/01831467", "prijs": "€ 14,96" },
-      { "naam": "MediaMarkt", "link": "https://www.mediamarkt.be/nl/product/_71826-spinjitzu-drakenstrijdpakket-2208486.html", "prijs": "€ 19,99" },
-      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/dragon-spinjitzu-battle-pack-71826", "prijs": "€ 19,99" },
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71826-Spinjitzu-drakenstrijdpakket/a20931969", "prijs": "€ 27,78" },
-      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/en-BE/set/71826/Dragon-Spinjitzu-Battle-Pack.html", "prijs": "Check prijs" }
-    ]
-  },
-  {
     "id": "lego-ninjago-854310-dubbele-katanas",
     "naam": "LEGO® NINJAGO® Dubbele katanas",
     "nummer": "854310",
@@ -414,26 +335,6 @@
     "afbeelding_url": "https://media.s-bol.com/K90WrVv0WQ2n/pYmG1p/970x1200.jpg",
     "winkels": [
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/paw-patrol-stempels/9300000114581267/?referrer=socialshare_pdp_www", "prijs": "€ 10,22" }
-    ]
-  },
-  {
-    "id": "carioca-stempelstift-superwashable-9200000055975554",
-    "naam": "Carioca Stempelstift Superwashable (12 Stiften)",
-    "nummer": "9200000055975554",
-    "beschrijving": "Set van 12 super uitwasbare viltstiften met een stempel aan de achterkant van elke stift. Inclusief verschillende leuke figuurtjes. Perfect voor creatief speelplezier zonder vlekken.",
-    "afbeelding_url": "https://media.s-bol.com/JYn940kKOXQg/NxWM1Ev/550x418.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/carioca-stempelstift-superwashable-12-stiften/9200000055975554/?referrer=socialshare_pdp_www", "prijs": "€ 14,10" }
-    ]
-  },
-  {
-    "id": "stempelset-cijfers-hema-15900239",
-    "naam": "Stempelset Cijfers (9 stempels)",
-    "nummer": "15900239",
-    "beschrijving": "Met deze stempelset met cijfers kunnen kinderen vertrouwd raken met cijfers en rekenen. De set bevat 9 stempels, ideaal voor creatief leren en spelenderwijs kennismaken met getallen. Waarschuwing: Niet geschikt voor kinderen jonger dan 3 jaar (Kleine onderdelen, verstikkingsgevaar).",
-    "afbeelding_url": "https://www.hema.com/dw/image/v2/BBRK_PRD/on/demandware.static/-/Sites-HEMA-master-catalog/default/dwa2284737/product/15900239_01_001.jpg?sw=1095&sh=1242&sm=fit&sfrm=png&bgcolor=F5F5F5",
-    "winkels": [
-      { "naam": "HEMA", "link": "https://www.hema.com/nl-be/vrije-tijd/knutselen-handwerken/knutselen/stempelset-cijfers-15900239.html", "prijs": "€ 3,39" }
     ]
   },
   {
@@ -474,26 +375,6 @@
     ]
   },
   {
-    "id": "vroemy-turbotwister-stuntauto",
-    "naam": "Vroemy Turbotwister - Bestuurbare Stuntauto (6 wielen)",
-    "nummer": "VRO-TT-06",
-    "beschrijving": "Een razendsnelle 6-wielige stuntauto die 360 graden kan draaien en over bijna elk terrein rijdt. De Turbotwister is voorzien van felle LED-verlichting en kan spectaculaire flips maken. Inclusief oplaadbare batterij voor urenlang speelplezier.",
-    "afbeelding_url": "https://media.s-bol.com/NwP5Yxk1XY7N/ElVX3kN/1191x1200.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/vroemy-turbotwister-bestuurbare-auto-stuntauto-6-wielen-afstandsbestuurbare-auto-buiten-voor-jongens-meisjes/9300000241264382/", "prijs": "€ 37,95" }
-    ]
-  },
-  {
-    "id": "stena-lightchaser-robot",
-    "naam": "Stena Lightchaser Robot - Interactief & Oplaadbaar",
-    "nummer": "9300000241037254",
-    "beschrijving": "Deze stoere robot volgt de laserstraal van de afstandsbediening als een echte jager! Hij kan spullen tillen met zijn grijpers, heeft LED-ogen die van kleur veranderen en maakt coole geluidseffecten. Bovendien is hij volledig oplaadbaar via USB.",
-    "afbeelding_url": "https://media.s-bol.com/g0WDqO2182l3/JZpr1wD/1190x1200.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/stena-lightchaser-robot-volgt-de-laser-kan-spullen-tillen-interactief-stem-speelgoed-led-ogen-met-geluidseffecten-jongens-oplaadbaar/9300000241037254/", "prijs": "€ 49,95" }
-    ]
-  },
-  {
     "id": "pokemon-mini-mazes-boek",
     "naam": "Pokémon Mini Mazes",
     "nummer": "9781405296304",
@@ -503,33 +384,6 @@
       { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/eK0Twqy", "prijs": "€ 6,85" },
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/pokemon-mini-mazes/9200000128384265/", "prijs": "€ 10,26" },
       { "naam": "Amazon.nl", "link": "https://amzn.eu/d/32MYwFF", "prijs": "€ 10,34" }
-    ]
-  },
-  {
-    "id": "ravensburger-xoomy-maxi-xxl",
-    "naam": "Ravensburger Xoomy Maxi XXL Tekenmachine",
-    "nummer": "18135",
-    "beschrijving": "Word een echte tekenaar met de Xoomy Maxi XXL! Dankzij de grote tekentafel en de led-zoomlamp kun je afbeeldingen vergroten en combineren op papier. Bevat meer dan 300 afbeeldingen en een handige opbergkoffer voor al je tekenspullen.",
-    "afbeelding_url": "https://media.s-bol.com/qWx1NJxKZBp3/kRD4BEx/1200x936.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ravensburger-xoomy-maxi-xxl-tekenmachine/9300000034159462/", "prijs": "€ 34,99" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/xoomy-maxi-xxl/01623291", "prijs": "€ 34,99" },
-      { "naam": "Verthus", "link": "https://verthus.be/producten/xoomy-maxi", "prijs": "€ 39,95" },
-      { "naam": "HappyLand", "link": "https://www.happyland.be/product/xoomy-maxi-relaunch/", "prijs": "€ 39,95" },
-      { "naam": "Euroshop", "link": "https://www.euroshop.be/nl/15601064-ravensburger-xoomy-maxi-xxl-tekenmachine-vanaf-6-jaar", "prijs": "€ 39,95" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/xoomy-maxi-relaunch-28910592", "prijs": "€ 41,99" },
-      { "naam": "Ravensburger BE", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/arts-craft/craft-kits/xoomy-maxi-relaunch-dfennlei-18135", "prijs": "€ 48,99" }
-    ]
-  },
-  {
-    "id": "ravensburger-xoomy-uitbreiding-marvel",
-    "naam": "Ravensburger Xoomy Uitbreidingsset: Marvel",
-    "nummer": "18118",
-    "beschrijving": "Breid je Xoomy-collectie uit met je favoriete Marvel-superhelden! Deze set bevat 20 nieuwe filmschijfjes met afbeeldingen van onder andere Spider-Man, Iron Man en de Hulk. Let op: enkel te gebruiken in combinatie met een Xoomy tekenmachine.",
-    "afbeelding_url": "https://media.s-bol.com/LwOLEz02K04p/R6Yg1N0/550x617.jpg",
-    "winkels": [
-      { "naam": "Verthus", "link": "https://verthus.be/producten/xoomy-refill-marvel/", "prijs": "€ 7,95" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ravensburger-xoomy-uitbreidingsset-marvel/9300000162807350/", "prijs": "€ 9,99" }
     ]
   },
   {
@@ -548,53 +402,6 @@
     ]
   },
   {
-    "id": "ravensburger-puzzel-pokemon-3x49",
-    "naam": "Ravensburger Pokémon Puzzel (3x49 stukjes)",
-    "nummer": "05586",
-    "beschrijving": "Drie verschillende puzzels in één doos! Ontdek de wereld van Pokémon met deze set van 3 puzzels van elk 49 stukjes. Perfect voor urenlang puzzelplezier met Charmander, Bulbasaur, Squirtle en Pikachu.",
-    "afbeelding_url": "https://media.s-bol.com/gMoN9pnB4079/ynGW/1200x875.jpg",
-    "winkels": [
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0hiXX9e5", "prijs": "€ 8,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ravensburger-puzzel-pokemon-legpuzzel-3x49-stukjes-kinderpuzzel/9300000087608277/", "prijs": "€ 10,99" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/08meFvI2", "prijs": "€ 10,99" },
-      { "naam": "Euroshop", "link": "https://www.euroshop.be/nl/15601325-ravensburger-puzzel-pok-mon-charmander-bulbasaur-squirtle-vanaf-5-jaar-3x49-stukken", "prijs": "€ 11,95" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/ravensburger-puzzel-pokemon-3x49-stuks-31818968", "prijs": "€ 12,98" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/pokemon-charmander-bulbasaur-and-squirtle-3x49-stukjes/01685022", "prijs": "€ 13,99" }
-    ]
-  },
-  {
-    "id": "sticker-book-zootopia-2",
-    "naam": "Ultimate Sticker Book Disney Zootopia 2",
-    "nummer": "9780241743140",
-    "beschrijving": "Beleef de avonturen van Judy Hopps en Nick Wilde opnieuw met dit ultieme stickerboek van Zootropolis 2! Bevat meer dan 60 herbruikbare stickers van de leukste personages uit de film en leuke achtergronden om ze op te plakken.",
-    "afbeelding_url": "https://media.s-bol.com/3DZYMR1Q73gO/Bg1vBrY/925x1200.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ultimate-sticker-book-disney-zootopia-2-ultimate-sticker-book/9300000236098592/", "prijs": "€ 11,34" }
-    ]
-  },
-  {
-    "id": "lego-ninjago-dekbedovertrek-fight",
-    "naam": "LEGO® NINJAGO® Dekbedovertrek - Fight (140x200 cm)",
-    "nummer": "NIN-2449-F",
-    "beschrijving": "Slaap als een echte ninja onder dit stoere LEGO NINJAGO dekbedovertrek! Gemaakt van 100% katoen voor optimaal comfort. Het overtrek is omkeerbaar met aan beide kanten een uniek NINJAGO-ontwerp. Inclusief bijpassende kussensloop van 70x90 cm.",
-    "afbeelding_url": "https://media.s-bol.com/PLGzD9AnDqlw/xG4qVgJ/691x1200.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-dekbedovertrek-fight-140-x-200-cm-70-x-90-cm-katoen/9300000244920686/", "prijs": "€ 36,00" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/9miw1Ug", "prijs": "€ 33,99" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0FKNKmR", "prijs": "€ 33,99" }
-    ]
-  },
-  {
-    "id": "hoeslaken-jersey-oranje-90x200",
-    "naam": "Jacobson Premium Jersey Hoeslaken - Oranje (90x200 cm)",
-    "nummer": "JAC-OR-90200",
-    "beschrijving": "Een zacht en elastisch hoeslaken van 100% gekamd katoen. Door de jersey-weving is het laken ademend en strijkvrij. Met een hoekhoogte van 25 cm past het perfect om een standaard eenpersoonsmatras. De felle oranje kleur past ideaal bij een LEGO NINJAGO slaapkamer.",
-    "afbeelding_url": "https://media.s-bol.com/NWwAo1VNLGx6/YEooM/1200x1138.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/jacobson-premium-jersey-hoeslaken-90x200cm-100-katoen-tot-25cm-matrasdikte-oranje/9300000111970349/", "prijs": "€ 16,95" }
-    ]
-  },
-  {
     "id": "lego-ninjago-in-de-aanval-avi-m4",
     "naam": "LEGO® NINJAGO® - In de aanval (AVI M4)",
     "nummer": "9789030508595",
@@ -607,62 +414,6 @@
     ]
   },
   {
-    "id": "lego-ninjago-coole-krachten-dragons-rising",
-    "naam": "LEGO® NINJAGO® Dragons Rising: Coole krachten",
-    "nummer": "9789030510499",
-    "beschrijving": "Ontdek alles over de nieuwe krachten van de ninja's in dit Dragons Rising handboek! Leer hoe Arin en Sora hun krachten gebruiken en ontdek de geheimen van de nieuwe draken. Een onmisbaar boek voor elke verzamelaar.",
-    "afbeelding_url": "https://media.s-bol.com/VqwQNLrkW1G5/QWx1AZM/819x1200.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-dragon-s-rising-lego-ninjago-coole-krachten/9300000198765593/", "prijs": "€ 14,99" },
-      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/coole-krachten-9789030510499", "prijs": "€ 14,99" },
-      { "naam": "De Slegte", "link": "https://www.deslegte.com/coole-krachten-3640906/", "prijs": "€ 14,99" }
-    ]
-  },
-  {
-    "id": "lego-ninjago-800-stickers",
-    "naam": "LEGO® NINJAGO® 800 Stickers",
-    "nummer": "9781780559872",
-    "beschrijving": "Een gigantisch stickerboek voor de echte Ninja-fan! Bevat maar liefst 800 stickers van je favoriete Ninjago-helden, schurken en voertuigen om overal op te plakken.",
-    "afbeelding_url": "https://media.s-bol.com/Jjo0BR5nBzZ9/L3AKRA/842x1200.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-ninjago-800-stickers/9300000145591720/", "prijs": "€ 8,00" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0bfpfery", "prijs": "€ 8,00" },
-      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/lego-ninjago-800-stickers-9781780559872", "prijs": "€ 9,95" }
-    ]
-  },
-  {
-    "id": "jumbo-ik-leer-rekenen-koffer",
-    "naam": "Jumbo Ik Leer Rekenen",
-    "nummer": "19570",
-    "beschrijving": "Met 'Ik Leer Rekenen' maken kinderen kennis met getallen, tellen en de eerste rekensommen. De set bevat 15 kaarten met 83 opdrachten op verschillende niveaus. Dankzij de speciale achterkant van de blokjes past alleen het juiste cijfer in het vakje, waardoor het kind zelf kan controleren of het antwoord klopt.",
-    "afbeelding_url": "https://media.s-bol.com/q3QG9J4k4mmk/vgVAw6g/1200x1102.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/ik-leer-rekenen/9200000073981386/", "prijs": "€ 19,99" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/01UV0krh", "prijs": "€ 19,99" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/0fhnzINt", "prijs": "€ 19,99" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/ik-leer-rekenen-nl/01285239", "prijs": "€ 21,99" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/ik-leer-rekenen-24390369", "prijs": "€ 23,99" },
-      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/jumbo-ik-leer-rekenen-1048904", "prijs": "€ 27,95" },
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/Ik-leer-rekenen/a12623999", "prijs": "€ 33,62" }
-    ]
-  },
-  {
-    "id": "oefenboek-eerste-stappen-rekenen",
-    "naam": "Zo leuk is oefenen: Eerste stappen naar rekenen (5-6 jaar)",
-    "nummer": "9789044746181",
-    "beschrijving": "Bereid je kind spelenderwijs voor op het eerste leerjaar met dit kleurrijke oefenboek. Het boek bevat leuke opdrachten om te leren tellen, getallen te herkennen en de eerste eenvoudige rekenstapjes te zetten. Ideaal voor de 3de kleuterklas / groep 2.",
-    "afbeelding_url": "https://media.s-bol.com/XpV5PJXAqxjk/wpzj7rg/928x1200.jpg",
-    "winkels": [
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a10354546/Zo-leuk-is-oefenen-5-6-jaar-Zo-leuk-is-oefenen-Eerste-stappen-naar-rekenen-5-6-j-ZNU", "prijs": "€ 6,26" },
-      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/zo-leuk-is-oefenen-eerste-stappen-naar-rekenen-5-6-jaar-1017014", "prijs": "€ 6,95" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/zo-leuk-is-oefenen-eerste-stappen-naar-rekenen-5-9j-24304469", "prijs": "€ 6,99" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/eerste-stappen-naar-rekenen-5-6-jaar-3de-kleuterklas-groep-2/9200000073039281/", "prijs": "€ 7,50" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/05Bk2cNl", "prijs": "€ 7,50" },
-      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-eerste-stappen-naar-rekenen-5-6-j-9789044746181", "prijs": "€ 7,50" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/03Caodfu", "prijs": "€ 10,14" }
-    ]
-  },
-  {
     "id": "oefenboek-eerste-stappen-lezen",
     "naam": "Zo leuk is oefenen: Eerste stappen naar lezen (5-6 jaar)",
     "nummer": "9789044746204",
@@ -672,38 +423,6 @@
       { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a10354548/Zo-leuk-is-oefenen-5-6-jaar-Zo-leuk-is-oefenen-Eerste-stappen-naar-lezen-5-6-j-ZNU", "prijs": "€ 6,26" },
       { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-eerste-stappen-naar-lezen-5-6-jaar/9200000073039165/", "prijs": "€ 7,50" },
       { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-eerste-stappen-naar-lezen-5-6-j-9789044746204", "prijs": "€ 7,50" }
-    ]
-  },
-  {
-    "id": "oefenboek-eerste-stappen-schrijven",
-    "naam": "Zo leuk is oefenen: Eerste stappen naar schrijven (5-6 jaar)",
-    "nummer": "9789044746198",
-    "beschrijving": "Oefen de fijne motoriek en de eerste schrijfvaardigheden! In dit boekje leert je kind spelenderwijs lijnen trekken, vormen maken en de eerste letters schrijven. De ideale voorbereiding op het schrijfonderwijs in het eerste leerjaar.",
-    "afbeelding_url": "https://media.s-bol.com/YnMGBm4KnrXA/NkgkBW6/1200x1200.jpg",
-    "winkels": [
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a10354547/Zo-leuk-is-oefenen-5-6-jaar-Zo-leuk-is-oefenen-Eerste-stappen-naar-schrijven-5-6-j-ZNU", "prijs": "€ 6,26" },
-      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/zo-leuk-is-oefenen-eerste-stappen-naar-schrijven-5-6-jaar-1017015", "prijs": "€ 6,95" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/zo-leuk-is-oefenen-eerste-stappen-naar-schrijven-5-6-jaar/9200000073039131/", "prijs": "€ 7,50" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0jaLeOLE", "prijs": "€ 7,50" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/096er5JT", "prijs": "€ 7,50" },
-      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/zo-leuk-is-oefenen-eerste-stappen-naar-schrijven-5-6-j-9789044746198", "prijs": "€ 7,50" },
-      { "naam": "Verthus", "link": "https://verthus.be/producten/zo-leuk-is-oefenen-schrijven-5-6j/", "prijs": "€ 7,50" }
-    ]
-  },
-  {
-    "id": "oefenboek-verzamelband-eerste-stappen",
-    "naam": "Oefen je slim: Eerste reken-, schrijf- en leesoefeningen (5-6 jaar)",
-    "nummer": "9789044746129",
-    "beschrijving": "De ultieme voorbereiding op het eerste leerjaar in één dik oefenboek! Deze verzamelband combineert de belangrijkste oefeningen voor rekenen, schrijven en lezen. Dankzij de afwisselende opdrachten blijft het leren leuk en uitdagend voor kinderen van 5 tot 6 jaar.",
-    "afbeelding_url": "https://media.s-bol.com/xBlDMr4kWJx9/mZG4zQG/1200x1200.jpg",
-    "winkels": [
-      { "naam": "Fnac.be", "link": "https://www.nl.fnac.be/a10057699/Oefen-je-slim-zo-leuk-is-oefenen-Oefen-je-slim-Eerste-reken-schrijf-en-leesoefeningen-5-6-j-ZNU", "prijs": "€ 10,76" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/0ihl5SsX", "prijs": "€ 12,50" },
-      { "naam": "De Kinderplaneet", "link": "https://www.dekinderplaneet.be/nl/oefen-je-slim-eerste-reken-schrijf-en-leesoefeningen-5-6j-682478?colour=611068", "prijs": "€ 12,50" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/oefen-je-slim-eerste-reken-schrijf-en-leesoefeningen/9200000062189984/", "prijs": "€ 12,50" },
-      { "naam": "Standaard Boekhandel", "link": "https://www.standaardboekhandel.be/p/oefen-je-slim-eerste-reken-schrijf-en-leesoefeningen-5-6-j-9789044746129", "prijs": "€ 12,50" },
-      { "naam": "AVA", "link": "https://www.ava.be/nl/oefen-je-slim-eerste-reken-schrijf-en-lees-oefeningen-00462771", "prijs": "€ 12,50" },
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/06etRIHd", "prijs": "€ 12,50" }
     ]
   },
   {

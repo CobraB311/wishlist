@@ -1,32 +1,5 @@
 [
   {
-    "id": "set-mario-tennis-fever-switch2",
-    "naam": "Mario Tennis Fever (Nintendo Switch 2)",
-    "nummer": "9300000240435887",
-    "beschrijving": "Stap de baan op met Mario en zijn vrienden in de meest spectaculaire tennisgame tot nu toe, exclusief voor de Nintendo Switch 2. Gebruik nieuwe Fever-moves en geniet van verbluffende graphics!",
-    "afbeelding_url": "https://media.s-bol.com/qB864oLvKDE2/Bg9v65k/741x1200.jpg",
-    "winkels": [
-      { "naam": "Amazon.nl", "prijs": "€ 58,95", "link": "https://www.amazon.nl/Nintendo-Switch-MARIO-TENNIS-FEVER/dp/B0FR9SXRB6" },
-      { "naam": "DreamLand", "prijs": "€ 64,99", "link": "https://www.dreamland.be/nl/producten/switch-2-mario-tennis-fever-nl/02335384" },
-      { "naam": "Bol.com", "prijs": "€ 58,95", "link": "https://www.bol.com/be/nl/p/mario-tennis-fever-nintendo-switch-2/9300000240435887/" },
-      { "naam": "Fnac.be", "prijs": "€ 69,99", "link": "https://www.nl.fnac.be/a22034346/Mario-Tennis-Fever-Nintendo-Switch-2-NL-Videospel-Nintendo-Switch-2" },
-      { "naam": "Coolblue", "prijs": "€ 60,00", "link": "https://www.coolblue.be/nl/product/974929/mario-tennis-fever-nintendo-switch-2.html" },
-      { "naam": "SupraBazar", "prijs": "€ 69,99", "link": "https://www.suprabazar.be/nintendo-switch-2-super-mario-tennis-fever-32145564" }
-    ]
-  },
-  {
-    "id": "switch2-controller-pokemon-mega",
-    "naam": "PowerA Advantage Draadloze Controller - Pokémon Mega Evolutions",
-    "nummer": "10018297",
-    "beschrijving": "Breng je gameplay naar een hoger niveau met deze officieel gelicentieerde controller voor de Nintendo Switch 2. Voorzien van Hall-effect sticks (geen drift!) en een prachtig design met Mega Evoluties zoals Lucario en Mewtwo. Werkt ook op de huidige Switch-familie.",
-    "afbeelding_url": "https://assets.nintendo.eu/image/private/f_auto,c_limit,w_1920,q_auto:low/yeyuihlf2qjwrooij2bu",
-    "winkels": [
-      { "naam": "Nintendo Store", "prijs": "€ 64,99", "link": "https://store.nintendo.be/nl/advantage-draadloze-controller-voor-nintendo-switch-2-pokemon-mega-evolutions-000000000010018297" },
-      { "naam": "Bol.com", "prijs": "€ 64,99", "link": "https://www.bol.com/be/nl/p/powera-advantage-draadloze-controller-voor-nintendo-switch-2-pokemon-mega-evoluties/9300000237035829/" },
-      { "naam": "Fnac.be", "prijs": "€ 69,95", "link": "https://www.nl.fnac.be/Draadloze-controller-PowerA-Pokemon-Mega-Evolutions-voor-Nintendo-Switch-2/a21880976" }
-    ]
-  },
-  {
     "id": "set-hotwheels-f1-5pack",
     "naam": "Hot Wheels Formule 1 Race Cars 5-Pack",
     "nummer": "JGF58",
@@ -70,55 +43,6 @@
       { "naam": "DreamLand", "prijs": "€ 29,95", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76312/The-Hulk-Truck-vs-Thanos.html" }
-    ]
-  },
-  {
-    "id": "lego-ninjago-71857-tree-house-battle",
-    "naam": "LEGO® NINJAGO® Ninjavoertuigen bij de boomhut",
-    "nummer": "71857",
-    "video_id": "SPjyQlZ00ww",
-    "beschrijving": "Een spectaculaire 4-in-1 speelset! Bouw een gedetailleerde boomhut en ga de strijd aan met een helikopter, een terreinwagen en een motor. Inclusief 6 minifiguren: Kai, Sora, Arin, Wyldfyre en twee schurken. Ideaal voor urenlang Ninja-speelplezier.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt240a111e241142eb/71857_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Coolblue", "prijs": "€ 62,00", "link": "https://www.coolblue.be/nl/product/972604/lego-ninjago-ninjavoertuigen-bij-de-boomhut-71857.html" },
-      { "naam": "Amazon.com.be", "prijs": "€ 62,00", "link": "https://amzn.eu/d/04VdqOsH" },
-      { "naam": "MediaMarkt", "prijs": "€ 62,99", "link": "https://www.mediamarkt.be/nl/product/_71857-ninjavoertuigen-2208510.html" },
-      { "naam": "Bol.com", "prijs": "€ 56,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-ninjavoertuigen-bij-de-boomhut-actiespeelgoed-speelset-met-boomhut-helikopter-motor-en-6-minifiguren-71857/9300000237345509/" },
-      { "naam": "Amazon.nl", "prijs": "€ 56,99", "link": "https://amzn.eu/d/0f9Paqoi" },
-      { "naam": "SupraBazar", "prijs": "€ 69,99", "link": "https://www.suprabazar.be/lego-ninjago-71857-ninjagovoertuigen-bij-de-boomhut-32140521" },
-      { "naam": "DreamLand", "prijs": "€ 79,99", "link": "https://www.dreamland.be/nl/producten/lego-ninjago-ninjavoertuigen-bij-de-boomhut-71857/02323077" },
-      { "naam": "LEGO Shop", "prijs": "€ 79,99", "link": "https://www.lego.com/nl-be/product/ninja-vehicle-tree-house-battle-71857" },
-      { "naam": "Fnac", "prijs": "€ 79,99", "link": "https://www.nl.fnac.be/LEGO-71857-NINJA-VEHICLE-TREE-HOUSE-BATTLE/a22209306" }
-    ]
-  },
-  {
-    "id": "set-60408",
-    "naam": "LEGO® City Transportvoertuig met Sportautos",
-    "nummer": "60408",
-    "beschrijving": "Een gigantische autotransporter met een dubbele aanhanger en ruimte voor vier sportauto's. Inclusief minifiguren van een vrachtwagenchauffeur en twee racers.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt263f3afbfec70411/60408_boxprod_v39_sha.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.nl", "prijs": "€ 109,99", "link": "https://amzn.eu/d/3ba25Oe" },
-      { "naam": "Amazon.com.be", "prijs": "€ 83,00", "link": "https://amzn.eu/d/dJmm2BK" },
-      { "naam": "Bol.com", "prijs": "€ 99,99", "link": "https://www.bol.com/be/nl/p/lego-city-transportvoertuig-met-sportauto-s-60408/9300000173010363/?referrer=socialshare_pdp_www" },
-      { "naam": "DreamLand", "prijs": "€ 69,99", "link": "https://www.dreamland.be/nl/producten/60408-lego-transportvoertuig-met-sportauto-s/01773873" },
-      { "naam": "LEGO® Shop BE", "prijs": "€ 99,99", "link": "https://www.lego.com/nl-be/product/sportscar-transporter-with-cars-60408" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60408/Sportscar-Transporter-with-Cars.html" }
-    ]
-  },
-  {
-    "id": "set-60413",
-    "naam": "LEGO® City Brandweervliegtuig",
-    "nummer": "60413",
-    "beschrijving": "Een groot brandweervliegtuig met dubbele propeller en waterlanceerfunctie, een brandweerbuggy, een bosbrandscène en 3 minifiguren van brandweerlieden.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt10b1007c3d622d07/60413.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.nl", "prijs": "€ 47,49", "link": "https://amzn.eu/d/exhmPup" },
-      { "naam": "Amazon.com.be", "prijs": "€ 47,49", "link": "https://amzn.eu/d/52rXj5J" },
-      { "naam": "Bol.com", "prijs": "€ 69,95", "link": "https://www.bol.com/be/nl/p/lego-city-brandweervliegtuig-60413/9300000157956269/?referrer=socialshare_pdp_www" },
-      { "naam": "DreamLand", "prijs": "€ 44,99", "link": "https://www.dreamland.be/nl/producten/60413-lego-brandweervliegtuig/01756081" },
-      { "naam": "LEGO® Shop BE", "prijs": "€ 54,99", "link": "https://www.lego.com/nl-be/product/fire-rescue-plane-60413" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60413/Fire-Rescue-Plane.html" }
     ]
   },
   {
@@ -283,25 +207,6 @@
     ]
   },
   {
-    "id": "set-lego-60505-airplane-remix",
-    "naam": "LEGO® City Vliegtuig Servicewagen en Hovercraft Remix",
-    "nummer": "60505",
-    "beschrijving": "Bouw en verbouw met deze 3-in-1 remix set! Bevat voertuigen voor de luchthavenhulpdiensten, waaronder een servicewagen en een hovercraft. Perfect voor kinderen die houden van reddingsacties en technische voertuigen.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt22e3852ba47dab90/60505_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 46,00", "link": "https://www.bol.com/be/nl/p/lego-city-60505/9300000237345520/" },
-      { "naam": "Amazon.nl", "prijs": "€ 46,00", "link": "https://amzn.eu/d/j9dqL0w" },
-      { "naam": "Coolblue.be", "prijs": "€ 55,00", "link": "https://www.coolblue.be/nl/product/972494/lego-city-vliegtuig-servicewagen-en-hovercraft-remix-60505.html" },
-      { "naam": "MediaMarkt", "prijs": "€ 50,99", "link": "https://www.mediamarkt.be/nl/product/_60505-vliegtuig-wagen-hovercraft-2208374.html" },
-      { "naam": "Amazon.com.be", "prijs": "€ 46,00", "link": "https://amzn.eu/d/fhATWRH" },
-      { "naam": "DreamLand", "prijs": "€ 69,99", "link": "https://www.dreamland.be/nl/producten/lego-city-vliegtuig-servicewagen-en-hovercraft-remix-60505/02323138" },
-      { "naam": "SupraBazar", "prijs": "€ 64,99", "link": "https://www.suprabazar.be/lego-city-60505-vliegtuig-servicewagen-en-hovercraft-mix-32140507" },
-      { "naam": "Fnac.be", "prijs": "€ 69,99", "link": "https://www.nl.fnac.be/LEGO-60505-AIRPLANE-SERVICE-TRUCK-etAMP-HOVERCRAFT-REM/a22209287" },
-      { "naam": "LEGO® Shop BE", "prijs": "€ 69,99", "link": "https://www.lego.com/nl-be/product/airplane-service-truck-hovercraft-remix-60505" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/en-BE/set/60505/Airplane-Service-Truck-Hovercraft-Remix.html" }
-    ]
-  },
-  {
     "id": "lego-ninjago-854310-dubbele-katanas",
     "naam": "LEGO® NINJAGO® Dubbele katanas",
     "nummer": "854310",
@@ -410,6 +315,17 @@
     "winkels": [
       { "naam": "Fnac.be", "prijs": "€ 8,99", "link": "https://www.nl.fnac.be/a16649984/Leren-lezen-met-Lego-boeken-AVI-M4-Deel-5-In-de-aanval-Pim-Lammers" },
       { "naam": "Standaard Boekhandel", "prijs": "€ 9,99", "link": "https://www.standaardboekhandel.be/p/in-de-aanval-9789030508595" }
+    ]
+  },
+  {
+    "id": "play-doh-all-in-one-creativity-starter-station",
+    "naam": "Play-Doh All-in-One Creativity Starter Station",
+    "nummer": "B0B621RNSY",
+    "beschrijving": "Een complete creatieve speelplek in één koffer! Dit station heeft een ingebouwde tafel met verschillende structuren, 15 accessoires en 6 kleuren klei. Na het spelen berg je alles op in de handige meeneemkoffer. Ideaal voor urenlang knutselplezier zonder rommel.",
+    "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 19,98", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/" },
+      { "naam": "Amazon.nl", "prijs": "€ 28,50", "link": "https://amzn.eu/d/0991EIdJ" }
     ]
   },
   {

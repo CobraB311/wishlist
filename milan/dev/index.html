@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan's Paw Patrol Wensenlijst</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <script src="config.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="fixed-header">
+    <div id="dynamic-tab-nav" class="tab-nav"></div>
+    <div class="water-area" id="snow-container"></div>
+</div>
+
+<div class="page-wrapper">
+    <div class="zuma-banner"></div>
+    <div class="content-padding">
+        <header class="main-header">
+            <div id="pup-greeting">Laden...</div>
+            <h1 id="main-title">Milan's Wensenlijst</h1>
+            <div id="countdown-container" class="countdown-banner" style="display:none;">
+                <div class="countdown-label">De missie start over:</div>
+                <div id="countdown-timer">--d --u --m --s</div>
+            </div>
+        </header>
+
+        <div class="controls-container">
+            <input type="text" id="gift-search" placeholder="Zoek een cadeau..." onkeyup="filterGifts()">
+            <button id="filter-purchased-btn" class="filter-btn" onclick="togglePurchasedFilter()">
+                <span class="icon">👁️</span> Toon alles
+            </button>
+        </div>
+
+        <div id="overview-content" class="tab-content active">
+            <div id="overview-grid-container"><p id="loading-message">Laden van de missie...</p></div>
+        </div>
+        <div id="person-lists-container"></div>
+    </div>
+</div>
+
+<div id="customModal" class="custom-modal">
+    <div class="custom-modal-content">
+        <div id="modal-icon">🐾</div>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+        <div id="modal-spinner" class="loader" style="display:none;"></div>
+        <div id="modal-buttons">
+            <button id="modal-confirm-btn" class="modal-btn confirm">Ja, ik koop dit!</button>
+            <button id="modal-cancel-btn" class="modal-btn cancel">Annuleren</button>
+        </div>
+    </div>
+</div>
+
+<button id="scrollToTopBtn" onclick="scrollToTop()">⚓</button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -104,7 +104,7 @@
       { "naam": "Amazon.nl", "prijs": "€ 21,99", "link": "https://amzn.eu/d/90UC8Ac" },
       { "naam": "Amazon.com.be", "prijs": "€ 23,74", "link": "https://amzn.eu/d/8uIshy7" },
       { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622" },
-      { "naam": "Bol.com", "prijs": "€ 23,72", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" },
+      { "naam": "Bol.com", "prijs": "€ 23,74", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" },
       { "naam": "DreamLand", "prijs": "€ 29,95", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76312/The-Hulk-Truck-vs-Thanos.html" }
@@ -119,7 +119,7 @@
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/lego-city-60484/9300000237345414/" },
       { "naam": "Amazon.com.be", "prijs": "€ 8,49", "link": "https://www.amazon.com.be/-/en/60484/dp/B0056GU80U" },
-      { "naam": "Amazon.nl", "prijs": "€ 7,99", "link": "https://www.amazon.nl/LEGO-City-Voertuigen-Bouwpakket-Minifiguur/dp/B0056GU80U" },
+      { "naam": "Amazon.nl", "prijs": "€ 7,98", "link": "https://www.amazon.nl/LEGO-City-Voertuigen-Bouwpakket-Minifiguur/dp/B0056GU80U" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/rides-gaming-race-car-60484" },
       { "naam": "DreamLand", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/60484-lego-city-gaming-raceauto/02323893" },
       { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_60484-voertuigen-gaming-raceauto-2208358.html" },
@@ -397,7 +397,7 @@
     "beschrijving": "Set van 6 zelfinktende stempels met populaire Paw Patrol figuren. Ideaal om creatieve tekeningen en knutselwerkjes op te fleuren.",
     "afbeelding_url": "https://media.s-bol.com/K90WrVv0WQ2n/pYmG1p/970x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 8,01", "link": "https://www.bol.com/be/nl/p/paw-patrol-stempels/9300000114581267/?referrer=socialshare_pdp_www" }
+      { "naam": "Bol.com", "prijs": "€ 4,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-stempels/9300000114581267/?referrer=socialshare_pdp_www" }
     ]
   },
   {
@@ -423,7 +423,7 @@
     "winkels": [
       { "naam": "Amazon NL", "prijs": "€ 9,99", "link": "https://amzn.eu/d/01Ggopzu" },
       { "naam": "Bol.com", "prijs": "€ 16,88", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/" },
-      { "naam": "Amazon BE", "prijs": "€ 18,94", "link": "https://amzn.eu/d/09jebDd9" }
+      { "naam": "Amazon BE", "prijs": "€ 19,05", "link": "https://amzn.eu/d/09jebDd9" }
     ]
   },
   {
@@ -498,7 +498,7 @@
     "beschrijving": "Een complete creatieve speelplek in één koffer! Dit station heeft een ingebouwde tafel met verschillende structuren, 15 accessoires en 6 kleuren klei. Na het spelen berg je alles op in de handige meeneemkoffer. Ideaal voor urenlang knutselplezier zonder rommel.",
     "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 19,98", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/" },
+      { "naam": "Bol.com", "prijs": "€ 29,99", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/" },
       { "naam": "Amazon.nl", "prijs": "€ 28,50", "link": "https://amzn.eu/d/0991EIdJ" }
     ]
   },
@@ -522,9 +522,8 @@
     "afbeelding_url": "https://media.s-bol.com/4o8P4v2ZV9J1/rkGylO2/853x1200.jpg",
     "winkels": [
       { "naam": "Fnac.be", "prijs": "€ 8,95", "link": "https://www.nl.fnac.be/a20852021/Pokemon-eerste-leespret-Op-reis-naar-Galar" },
-      { "naam": "De Kinderplaneet", "prijs": "€ 10,95", "link": "https://www.dekinderplaneet.be/nl/pokemon-eerste-leespret-op-reis-naar-galar-1010376" },
       { "naam": "DreamLand", "prijs": "€ 9,95", "link": "https://www.dreamland.be/nl/producten/pokemon-eerste-leespret-op-reis-naar-galar/01829082" },
-      { "naam": "Amazon.com.be", "prijs": "€ 9,95", "link": "https://amzn.eu/d/0ijtK75a" },
+      { "naam": "Amazon.com.be", "prijs": "€ 8,95", "link": "https://amzn.eu/d/0ijtK75a" },
       { "naam": "Bol.com", "prijs": "€ 10,95", "link": "https://www.bol.com/be/nl/p/pokemon-eerste-leespret-op-reis-naar-galar/9300000188712385/" },
       { "naam": "Standaard Boekhandel", "prijs": "€ 10,95", "link": "https://www.standaardboekhandel.be/p/pokemon-eerste-leespret--op-reis-naar-galar-9789044767254" },
       { "naam": "Amazon.nl", "prijs": "€ 10,95", "link": "https://amzn.eu/d/0hMNGtGy" }

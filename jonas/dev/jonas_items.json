@@ -30,6 +30,22 @@
     ]
   },
   {
+    "id": "lego-city-wegplaten-60304",
+    "naam": "LEGO City Wegplaten (60304)",
+    "nummer": "60304",
+    "beschrijving": "Breid je stad uit met deze LEGO City Wegplaten. De set bevat glow-in-the-dark lantaarnpalen, verkeerslichten, verkeersborden, wegmarkeringen, drempels en een zebrapad. Perfect om je LEGO City creaties met elkaar te verbinden.",
+    "afbeelding_url": "https://media.s-bol.com/PxznB5oRRDjw/oYLMw63/550x521.jpg",
+    "winkels": [
+      { "naam": "Amazon BE", "prijs": "€ 14,39", "link": "https://amzn.eu/d/0bqJq2xh" },
+      { "naam": "Bol.com", "prijs": "€ 14,39", "link": "https://www.bol.com/be/nl/p/lego-city-wegplaten-60304/9300000015132297/" },
+      { "naam": "Suprabazar", "prijs": "€ 17,98", "link": "https://www.suprabazar.be/lego-city-60304-wegplaten-28351544" },
+      { "naam": "Dreamland", "prijs": "€ 19,95", "link": "https://www.dreamland.be/nl/producten/60304-lego-city-wegplaten/01579840" },
+      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/road-plates-60304" },
+      { "naam": "MediaMarkt", "prijs": "€ 19,99", "link": "https://www.mediamarkt.be/nl/product/_lego-60304-wegplaten-2208253.html" },
+      { "naam": "Fnac", "prijs": "€ 27,90", "link": "https://www.nl.fnac.be/LEGO-60304-INTERSECTION-A-ASSEMBLER/a15233648" }
+    ]
+  },
+  {
     "id": "set-76312",
     "naam": "LEGO® ǀ Marvel De Hulk truck vs. Thanos",
     "nummer": "76312",

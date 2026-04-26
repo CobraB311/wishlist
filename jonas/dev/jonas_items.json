@@ -14,22 +14,6 @@
     ]
   },
   {
-    "id": "set-11039",
-    "naam": "LEGO® Classic Creatieve Etensvriendjes",
-    "nummer": "11039",
-    "beschrijving": "Een creatieve set met 150 stenen om vrolijke etensvriendjes te bouwen, zoals een burger, ijsje, avocado of taco. Ideaal voor fantasierijk en vrij bouwen.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8a9e986fdf1c4bc9/11039_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.nl", "prijs": "€ 7,99", "link": "https://amzn.eu/d/7eh6klT" },
-      { "naam": "Amazon.com.be", "prijs": "€ 8,49", "link": "https://amzn.eu/d/4CN89uw" },
-      { "naam": "Bol.com", "prijs": "€ 7,99", "link": "https://www.bol.com/be/nl/p/lego-classic-creatieve-etensvriendjes-11039/9300000187249559/" },
-      { "naam": "DreamLand", "prijs": "€ 9,95", "link": "https://www.dreamland.be/nl/producten/11039-lego-creatieve-etensvriendjes/01831023" },
-      { "naam": "SupraBazar", "prijs": "€ 9,98", "link": "https://www.suprabazar.be/lego-classic-11039-creatieve-etensvriendjes-32031370" },
-      { "naam": "LEGO® Shop BE", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/creative-food-friends-11039" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/11039/Creative-Food-Friends.html" }
-    ]
-  },
-  {
     "id": "lego-city-wegplaten-60304",
     "naam": "LEGO City Wegplaten (60304)",
     "nummer": "60304",
@@ -43,6 +27,71 @@
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/road-plates-60304" },
       { "naam": "MediaMarkt", "prijs": "€ 19,99", "link": "https://www.mediamarkt.be/nl/product/_lego-60304-wegplaten-2208253.html" },
       { "naam": "Fnac", "prijs": "€ 27,90", "link": "https://www.nl.fnac.be/LEGO-60304-INTERSECTION-A-ASSEMBLER/a15233648" }
+    ]
+  },
+  {
+    "id": "lego-city-karts-en-racers-60400",
+    "naam": "LEGO City Karts en racers (60400)",
+    "nummer": "60400",
+    "beschrijving": "Zet de coureurs in hun karts en bereid je voor op een spannende race! Deze set bevat een turquoise en een oranje kart, plus twee minifiguren met racehelmen. Een perfect klein cadeautje voor jonge racefans van LEGO City.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt14605814eeac35c6/60400.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon NL", "prijs": "€ 6,99", "link": "https://amzn.eu/d/0dAQ7QMz" },
+      { "naam": "Amazon BE", "prijs": "€ 7,02", "link": "https://amzn.eu/d/06GyhRbf" },
+      { "naam": "Dreamland", "prijs": "€ 9,95", "link": "https://www.dreamland.be/nl/producten/60400-lego-city-karts-en-racers/01755985" },
+      { "naam": "Suprabazar", "prijs": "€ 9,98", "link": "https://www.suprabazar.be/lego-city-60400-karts-en-racers-31451822" },
+      { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/go-karts-and-race-drivers-60400" },
+      { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_lego-60400-karts-en-racers-2208193.html" },
+      { "naam": "Fnac", "prijs": "€ 17,30", "link": "https://www.nl.fnac.be/LEGO-City-60400-Karts-en-racers/a18821647" }
+    ]
+  },
+  {
+    "id": "lego-city-transportwagen-voor-motoren-60491",
+    "naam": "LEGO City Transportwagen voor motoren (60491)",
+    "nummer": "60491",
+    "beschrijving": "Vervoer je motoren naar het circuit met deze stoere transportwagen. De set bevat een vrachtwagen met oprijplaat, twee motoren en twee minifiguren van coureurs. Ideaal voor jonge LEGO City fans die van snelheid en voertuigen houden.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt9f0dd9c321bab444/60491_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/lego-city-transportwagen-voor-motoren-dieplader-bouwset-met-speelgoedvoertuigen-2-speelgoedmotoren-2-minifiguren-eenvoudig-te-bouwen-vrachtwagenmodel-voor-jongens-en-meisjes-vanaf-4-jaar-cadeau-voor-kinderverjaardagen-60491/9300000237345466/" },
+      { "naam": "Amazon NL", "prijs": "€ 14,99", "link": "https://amzn.eu/d/05AYF9qz" },
+      { "naam": "MediaMarkt", "prijs": "€ 16,99", "link": "https://www.mediamarkt.be/nl/product/_60491-transportwagen-voor-motoren-2208365.html" },
+      { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60491-lego-city-transportwagen-voor-motoren/02323398" },
+      { "naam": "Suprabazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-city-60491-transportwagen-voor-motoren-32140485" },
+      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/motorcycle-transporter-60491" },
+      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-60491-MOTORCYCLE-TRANSPORTER/a22209258" }
+    ]
+  },
+  {
+    "id": "lego-city-politie-gevangenentransport-60479",
+    "naam": "LEGO City Politie gevangenentransport (60479)",
+    "nummer": "60479",
+    "beschrijving": "Vervoer de boeven naar de gevangenis met deze stevige transportwagen. De set bevat een truck met gevangeniscel, een motor en drie minifiguren (een agent en twee boeven). De perfecte uitbreiding voor je LEGO City politiekorps om de straten veilig te houden.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt471b7741fe9cc2a2/60479_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/lego-city-politie-gevangenentransport-politiespeelgoed-voor-kinderen-jongens-en-meisjes-vanaf-6-jaar-bouwset-met-truck-en-motor-minifiguren-van-een-agent-en-2-boeven-cadeautip-voor-verjaardagen-60479/9300000237345478/" },
+      { "naam": "Amazon NL", "prijs": "€ 14,99", "link": "https://amzn.eu/d/0a6vxstc" },
+      { "naam": "Amazon BE", "prijs": "€ 14,99", "link": "https://amzn.eu/d/09q9PQPz" },
+      { "naam": "MediaMarkt", "prijs": "€ 19,99", "link": "https://www.mediamarkt.be/nl/product/_60479-politie-gevangenentransport-2208354.html" },
+      { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60479-lego-city-politie-gevangenentransport/02323589" },
+      { "naam": "Suprabazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-city-60479-politie-gevangentransport-32126596" },
+      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/police-prisoner-transport-van-60479" },
+      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-60479-POLICE-PRISONER-TRANSPORT-VAN/a22213485" }
+    ]
+  },
+  {
+    "id": "lego-city-emergency-ambulance-60451",
+    "naam": "LEGO City Emergency Ambulance (60451)",
+    "nummer": "60451",
+    "beschrijving": "Snel naar de plek van het ongeval met deze LEGO City Emergency Ambulance. De set bevat een ambulance met een afneembaar dak, een brancard en twee minifiguren van hulpverleners. Perfect voor urenlang speelplezier in de stad.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt593f24a4fa2fb963/60451_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/lego-city-ambulance-60451/9300000187249658/" },
+      { "naam": "Amazon NL", "prijs": "€ 14,99", "link": "https://amzn.eu/d/0iFCBlQh" },
+      { "naam": "Suprabazar", "prijs": "€ 17,99", "link": "https://www.suprabazar.be/lego-city-60451-ambulance-32031052" },
+      { "naam": "Dreamland", "prijs": "€ 19,95", "link": "https://www.dreamland.be/nl/producten/60451-lego-city-ambulance/01830569" },
+      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/emergency-ambulance-60451" },
+      { "naam": "MediaMarkt", "prijs": "€ 19,99", "link": "https://www.mediamarkt.be/nl/product/_60451-ambulance-2208341.html" },
+      { "naam": "Fnac", "prijs": "€ 25,37", "link": "https://www.nl.fnac.be/LEGO-60451-CITY-AMBULANCE/a20941820" }
     ]
   },
   {
@@ -134,6 +183,22 @@
     ]
   },
   {
+    "id": "lego-city-straalvliegtuig-vs-sportauto-60489",
+    "naam": "LEGO City Straalvliegtuig vs. sportauto (60489)",
+    "nummer": "60489",
+    "beschrijving": "Wie is het snelst? Dit spannende duel tussen een straalvliegtuig en een sportauto is inclusief twee minifiguren (een piloot en een coureur) en accessoires. De voertuigen zijn gebouwd voor snelheid en actie in de lucht en op de weg.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltbc81ccd9527d2d30/60489_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon BE", "prijs": "€ 23,98", "link": "https://amzn.eu/d/06ZjjEYl" },
+      { "naam": "Bol.com", "prijs": "€ 24,04", "link": "https://www.bol.com/be/nl/p/lego-city-straalvliegtuig-vs-sportauto-racespeelset-met-straalvliegtuig-en-sportauto-voor-jongens-en-meisjes-vanaf-6-jaar-die-van-snelheid-houden-minifiguren-van-een-coureur-en-piloot-klein-cadeautje-voor-een-kinderverjaardag-60489/9300000237345515/" },
+      { "naam": "MediaMarkt", "prijs": "€ 26,99", "link": "https://www.mediamarkt.be/nl/product/_60489-straalvliegtuig-vs-sportauto-2208363.html" },
+      { "naam": "Suprabazar", "prijs": "€ 26,99", "link": "https://www.suprabazar.be/lego-city-60489-straalvliegtuig-vs.-sportauto-32126725" },
+      { "naam": "Dreamland", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/60489-lego-city-straalvliegtuig-vs-sportauto/02323411" },
+      { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/jet-vs-car-60489" },
+      { "naam": "Fnac", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-60489-JET-VS-CAR/a22209312" }
+    ]
+  },
+  {
     "id": "set-lego-76337-marvel-mecha",
     "naam": "LEGO® Marvel Miles Morales Mecha vs. Spider-Man 2099",
     "nummer": "76337",
@@ -188,21 +253,18 @@
     ]
   },
   {
-    "id": "set-lego-76338-spiderman-doc-ock",
-    "naam": "LEGO® Marvel Mechagevecht: Spider-Man vs. Doc Ock",
-    "nummer": "76338",
-    "beschrijving": "Zet de strijd tussen Spider-Man en Doc Ock voort met deze indrukwekkende mecha-duel set. Beide personages hebben hun eigen verstelbare mecha-pak met krachtige wapens en grijparmen voor actievolle Marvel-gevechten.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt998df642757b7cdf/76338_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+    "id": "lego-marvel-spider-man-vs-ghost-rider-motorcycle-76335",
+    "naam": "LEGO Marvel Spider-Man vs. Ghost Rider motor (76335)",
+    "nummer": "76335",
+    "beschrijving": "Zet Spider-Man en Ghost Rider tegenover elkaar in dit spectaculaire motor-duel! Deze set bevat de vlammende motor van Ghost Rider en de snelle motor van Spider-Man, inclusief minifiguren van beide helden. Een geweldige actieset voor jonge Marvel-fans.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt75247de54e2f7b71/76335_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/lego-mechaduel-spider-man-vs-doc-ock-76338/02323299" },
-      { "naam": "Bol.com", "prijs": "€ 23,98", "link": "https://www.bol.com/be/nl/p/lego-marvel-76338/9300000237345465/" },
-      { "naam": "Amazon.com.be", "prijs": "€ 23,98", "link": "https://amzn.eu/d/fnjMVlS" },
-      { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-super-heroes-76338-mechaduel-spider-man-vs.-doc-ock-32140559" },
-      { "naam": "Amazon.nl", "prijs": "€ 23,98", "link": "https://amzn.eu/d/8qKsoQG" },
-      { "naam": "MediaMarkt", "prijs": "€ 26,99", "link": "https://www.mediamarkt.be/nl/product/_76338-mechaduel-2208583.html" },
-      { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-76338-SUPER-HEROES/a22213490" },
-      { "naam": "LEGO® Shop BE", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/mech-battle-spider-man-vs-doc-ock-76338" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/en-BE/set/76338/Mech-Battle-Spider-Man-vs-Doc-Ock.html" }
+      { "naam": "Bol.com", "prijs": "€ 9,51", "link": "https://www.bol.com/be/nl/p/lego-marvel-spider-man-vs-mysterio-de-daily-bugle-bouwpakket-76342/9300000237345410/" },
+      { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/spider-man-vs-ghost-rider-motorcycle-76335" },
+      { "naam": "Suprabazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/lego-super-heroes-76335-spider-man-vs.-ghost-rider-motor-32140539" },
+      { "naam": "Dreamland", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/76335-lego-super-heroes-marvel-spider-man-vs-ghost-rider-motor/02323817" },
+      { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_76335-spiderman-vs-ghost-rider-moto-2208580.html" },
+      { "naam": "Fnac", "prijs": "€ 9,99", "link": "https://www.nl.fnac.be/LEGO-76335-SUPER-HEROES/a22213463" }
     ]
   },
   {
@@ -220,6 +282,86 @@
       { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-71854-COLE-S-MISSION-MECH-etAMP-DRAGON-ZANE/a22032302" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/coles-mission-mech-dragon-zane-71854" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/en-BE/set/71854/Cole-s-Mission-Mech-Dragon-Zane.html" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-kais-elementaire-vuurmecha-71808",
+    "naam": "LEGO NINJAGO Kai's elementaire vuurmecha (71808)",
+    "nummer": "71808",
+    "beschrijving": "Strijd tegen de gemene Clan met Kai in zijn aanpasbare elementaire vuurmecha. Deze actiefiguur heeft beweegbare armen en benen die kunnen worden gecombineerd met onderdelen van andere NINJAGO mecha. Inclusief 4 minifiguren: Kai, Zane, Jordana en een Wolf Masker strijder.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt47c375a77ac76137/71808_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon NL", "prijs": "€ 20,10", "link": "https://amzn.eu/d/07JyCgmL" },
+      { "naam": "Amazon BE", "prijs": "€ 20,10", "link": "https://amzn.eu/d/06dMUQTG" },
+      { "naam": "Bol.com", "prijs": "€ 23,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-kai-s-elementaire-vuurmecha-71808/9300000157956156/" },
+      { "naam": "Suprabazar", "prijs": "€ 25,98", "link": "https://www.suprabazar.be/lego-ninjago-71808-kai-s-elementaire-vuurmecha-31452638" },
+      { "naam": "Dreamland", "prijs": "€ 29,95", "link": "https://www.dreamland.be/nl/producten/71808-lego-ninjago-kai-s-elementaire-vuurmecha/01756364" },
+      { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/kais-elemental-fire-mech-71808" },
+      { "naam": "MediaMarkt", "prijs": "€ 29,99", "link": "https://www.mediamarkt.be/nl/product/_71808-kais-elementaire-vuurmecha-2208485.html" },
+      { "naam": "Fnac", "prijs": "€ 34,97", "link": "https://www.nl.fnac.be/LEGO-71808-KAI-S-ELEMENTAL-FIRE-MECH/a18821632" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-lloyds-pull-back-race-car-71828",
+    "naam": "LEGO NINJAGO Lloyds pull-back racewagen (71828)",
+    "nummer": "71828",
+    "beschrijving": "Lloyds pull-back racewagen is klaar voor actie! Trek de auto naar achteren en laat hem los om Lloyd razendsnel naar de overwinning te laten rijden. Deze stoere set bevat een bouwbare racewagen met pull-back functie en een Lloyd minifiguur.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8b3aa0fc9671a9b9/71828_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 16,96", "link": "https://www.bol.com/be/nl/p/lego-ninjago-lloyds-pull-back-racewagen-set-71828/9300000187249678/" },
+      { "naam": "Amazon BE", "prijs": "€ 16,96", "link": "https://amzn.eu/d/09oQERJr" },
+      { "naam": "Suprabazar", "prijs": "€ 21,99", "link": "https://www.suprabazar.be/lego-ninjago-71828-lloyds-pull-back-racewagen-32031077" },
+      { "naam": "Dreamland", "prijs": "€ 24,95", "link": "https://www.dreamland.be/nl/producten/71828-lego-ninjago-lloyds-pull-back-racewagen/01831450" },
+      { "naam": "LEGO.com", "prijs": "€ 24,99", "link": "https://www.lego.com/nl-be/product/lloyds-pull-back-race-car-71828" },
+      { "naam": "Fnac", "prijs": "€ 24,99", "link": "https://www.nl.fnac.be/LEGO-71828-NINJAGO-LLOYDS-PULL-BACK-RACEWAGEN/a20941852" },
+      { "naam": "MediaMarkt", "prijs": "€ 24,99", "link": "https://www.mediamarkt.be/nl/product/_71828-lloyds-pull-back-racewagen-2208488.html" }
+    ]
+  },
+  {
+    "id": "lego-ninjago-nya-vs-mutatiemonster-71849",
+    "naam": "LEGO NINJAGO Nya vs. mutatiemonster in spinner (71849)",
+    "nummer": "71849",
+    "beschrijving": "Zet Nya in de spinner, trek aan het koord en kijk hoe ze ronddraait om het mutatiemonster te verslaan! Deze actievolle set bevat een spinner, twee minifiguren en een bouwbaar monster. Perfect voor snelle NINJAGO duels.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt40eea0a3603a3902/71849_Box1_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 9,51", "link": "https://www.bol.com/be/nl/p/lego-ninjago-nya-vs-mutatiemonster-in-spinner-actiespeelgoed-speelset-met-2-minifiguren-en-spinner-ninjago-bouwset-voor-kinderen-vanaf-6-jaar-klein-cadeautje-71849/9300000237345446/" },
+      { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/nya-vs-mutation-monster-spinner-71849" },
+      { "naam": "Suprabazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/lego-ninjago-71849-nya-vs.-mutatiemonster-in-spinner-32140600" },
+      { "naam": "Fnac", "prijs": "€ 9,99", "link": "https://www.nl.fnac.be/LEGO-71849-NYA-VS-ELEMENTAL-MONSTER-SPINNER/a22209224" },
+      { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_71849-nya-vs-mutatiemonster-2208504.html" },
+      { "naam": "Dreamland", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/71849-lego-ninjago-nya-vs-mutatiemonster-in-spinner/02323749" }
+    ]
+  },
+  {
+    "id": "lego-technic-monster-jam-thunderroarus-42200",
+    "naam": "LEGO Technic Monster Jam ThunderROARus (42200)",
+    "nummer": "42200",
+    "beschrijving": "Bereid je voor op monsterlijke actie met deze ThunderROARus pull-back truck! Deze 2-in-1 set kan worden omgebouwd van een stoere Monster Jam truck naar een flitsende raceauto. Dankzij de pull-back functie schiet de truck razendsnel vooruit voor de vetste stunts.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltc280dd94988047ab/42200_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Amazon NL", "prijs": "€ 17,00", "link": "https://amzn.eu/d/02xwT3mf" },
+      { "naam": "Bol.com", "prijs": "€ 21,00", "link": "https://www.bol.com/be/nl/p/lego-technic-monster-jam-thunderroarus-pull-back-truck-42200/9300000187249552/" },
+      { "naam": "Amazon BE", "prijs": "€ 22,38", "link": "https://amzn.eu/d/0jboOeMv" },
+      { "naam": "Suprabazar", "prijs": "€ 24,99", "link": "https://www.suprabazar.be/lego-technic-42200-monster-jam-thunderroarus-32030791" },
+      { "naam": "Dreamland", "prijs": "€ 27,95", "link": "https://www.dreamland.be/nl/producten/42200-lego-technic-monster-jam-thunderroarus-pull-back/01831788" },
+      { "naam": "LEGO.com", "prijs": "€ 27,99", "link": "https://www.lego.com/nl-be/product/monster-jam-thunderroarus-pull-back-42200" },
+      { "naam": "Fnac", "prijs": "€ 27,99", "link": "https://www.nl.fnac.be/LEGO-42200-TECHNIC-MONSTER-JAM-THUNDERROARUS-PULL-BACK/a20931963" }
+    ]
+  },
+  {
+    "id": "lego-city-achtervolging-met-politieboot-60456",
+    "naam": "LEGO City Achtervolging met politieboot (60456)",
+    "nummer": "60456",
+    "beschrijving": "Zet de achtervolging in op het water! Deze politieboot drijft echt en is uitgerust met een coole jetmotor. De set bevat een politieboot, een vluchtvaartuig voor de boeven en drie minifiguren voor urenlang speelplezier op het water.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltb9e350458a00ccee/60456_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 23,59", "link": "https://www.bol.com/be/nl/p/lego-city-achtervolging-met-politieboot-drijft-echt-60456/9300000227400154/" },
+      { "naam": "Suprabazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-city-police-60456-achtervolging-met-politieboot-32074534" },
+      { "naam": "Coolblue", "prijs": "€ 26,99", "link": "https://www.coolblue.be/nl/product/972472/lego-city-achtervolging-met-politieboot-60456.html" },
+      { "naam": "Dreamland", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/60456-lego-city-achtervolging-met-politieboot/01854602" },
+      { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/police-boat-chase-60456" },
+      { "naam": "MediaMarkt", "prijs": "€ 32,99", "link": "https://www.mediamarkt.be/nl/product/_lego-police-boat-chase-bouwspeelgoed-meerkleurig-155703178.html" },
+      { "naam": "Fnac", "prijs": "€ 36,43", "link": "https://www.nl.fnac.be/LEGO-60456-CITY-POLITIE-POLITIE-BOOTACHTERVOLGING/a21451688" }
     ]
   },
   {

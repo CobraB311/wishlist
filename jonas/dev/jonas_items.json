@@ -146,7 +146,7 @@
       { "naam": "Amazon.nl", "prijs": "€ 15,98", "link": "https://amzn.eu/d/j8eoI6z" },
       { "naam": "Amazon.com.be", "prijs": "€ 15,98", "link": "https://amzn.eu/d/064gOCz" },
       { "naam": "Bol.com", "prijs": "€ 15,98", "link": "https://www.bol.com/be/nl/p/lego-marvel-76336/9300000237345463/" },
-      { "naam": "MediaMarkt", "prijs": "€ 17,99", "link": "https://www.mediamarkt.be/nl/product/_76336-spider-man-vs-wolverine-2208581.html" },
+      { "naam": "MediaMarkt", "prijs": "€ 19,99", "link": "https://www.mediamarkt.be/nl/product/_76336-spider-man-vs-wolverine-2208581.html" },
       { "naam": "Fnac.be", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-76336-SUPER-HEROES/a22213448" },
       { "naam": "SupraBazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-super-heroes-76336-spider-man-auto-vs.-venomized-wolverine-32140540" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/spider-man-car-vs-venomized-wolverine-76336" },
@@ -200,7 +200,7 @@
       { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/lego-ninjago-cole-s-missiemecha-en-draak-zane-71854/02323312" },
       { "naam": "Amazon.com.be", "prijs": "€ 22,01", "link": "https://amzn.eu/d/if0kZkO" },
       { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-ninjago-71854-cole-s-missiemecha-en-draak-zane-32140107" },
-      { "naam": "MediaMarkt", "prijs": "€ 26,99", "link": "https://www.mediamarkt.be/nl/product/_71854-coles-missiemecha-en-zane-2208508.html" },
+      { "naam": "MediaMarkt", "prijs": "€ 29,99", "link": "https://www.mediamarkt.be/nl/product/_71854-coles-missiemecha-en-zane-2208508.html" },
       { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-71854-COLE-S-MISSION-MECH-etAMP-DRAGON-ZANE/a22032302" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/coles-mission-mech-dragon-zane-71854" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/en-BE/set/71854/Cole-s-Mission-Mech-Dragon-Zane.html" }
@@ -330,7 +330,7 @@
     "afbeelding_url": "https://media.s-bol.com/j4rE3r1X424z/qjVWP72/1200x1200.jpg",
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 19,98", "link": "https://www.bol.com/be/nl/p/playdoh-meeneem-creation-set/9300000227368417/" },
-      { "naam": "Amazon.nl", "prijs": "€ 36,39", "link": "https://amzn.eu/d/0991EIdJ" }
+      { "naam": "Amazon.nl", "prijs": "€ 28,50", "link": "https://amzn.eu/d/0991EIdJ" }
     ]
   },
   {

@@ -52,8 +52,8 @@
     "beschrijving": "Vervoer je motoren naar het circuit met deze stoere transportwagen. De set bevat een vrachtwagen met oprijplaat, twee motoren en twee minifiguren van coureurs. Ideaal voor jonge LEGO City fans die van snelheid en voertuigen houden.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt9f0dd9c321bab444/60491_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/lego-city-transportwagen-voor-motoren-dieplader-bouwset-met-speelgoedvoertuigen-2-speelgoedmotoren-2-minifiguren-eenvoudig-te-bouwen-vrachtwagenmodel-voor-jongens-en-meisjes-vanaf-4-jaar-cadeau-voor-kinderverjaardagen-60491/9300000237345466/" },
-      { "naam": "Amazon NL", "prijs": "€ 14,99", "link": "https://amzn.eu/d/05AYF9qz" },
+      { "naam": "Bol.com", "prijs": "€ 13,99", "link": "https://www.bol.com/be/nl/p/lego-city-transportwagen-voor-motoren-dieplader-bouwset-met-speelgoedvoertuigen-2-speelgoedmotoren-2-minifiguren-eenvoudig-te-bouwen-vrachtwagenmodel-voor-jongens-en-meisjes-vanaf-4-jaar-cadeau-voor-kinderverjaardagen-60491/9300000237345466/" },
+      { "naam": "Amazon NL", "prijs": "€ 13,99", "link": "https://amzn.eu/d/05AYF9qz" },
       { "naam": "MediaMarkt", "prijs": "€ 16,99", "link": "https://www.mediamarkt.be/nl/product/_60491-transportwagen-voor-motoren-2208365.html" },
       { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60491-lego-city-transportwagen-voor-motoren/02323398" },
       { "naam": "Suprabazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-city-60491-transportwagen-voor-motoren-32140485" },
@@ -71,7 +71,7 @@
       { "naam": "Bol.com", "prijs": "€ 13,99", "link": "https://www.bol.com/be/nl/p/lego-city-politie-gevangenentransport-politiespeelgoed-voor-kinderen-jongens-en-meisjes-vanaf-6-jaar-bouwset-met-truck-en-motor-minifiguren-van-een-agent-en-2-boeven-cadeautip-voor-verjaardagen-60479/9300000237345478/" },
       { "naam": "Amazon NL", "prijs": "€ 13,99", "link": "https://amzn.eu/d/0a6vxstc" },
       { "naam": "Amazon BE", "prijs": "€ 13,99", "link": "https://amzn.eu/d/09q9PQPz" },
-      { "naam": "MediaMarkt", "prijs": "€ 16,99", "link": "https://www.mediamarkt.be/nl/product/_60479-politie-gevangenentransport-2208354.html" },
+      { "naam": "MediaMarkt", "prijs": "€ 15,99", "link": "https://www.mediamarkt.be/nl/product/_60479-politie-gevangenentransport-2208354.html" },
       { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60479-lego-city-politie-gevangenentransport/02323589" },
       { "naam": "Suprabazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-city-60479-politie-gevangentransport-32126596" },
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/police-prisoner-transport-van-60479" },
@@ -104,7 +104,7 @@
       { "naam": "Amazon.nl", "prijs": "€ 21,99", "link": "https://amzn.eu/d/90UC8Ac" },
       { "naam": "Amazon.com.be", "prijs": "€ 23,74", "link": "https://amzn.eu/d/8uIshy7" },
       { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622" },
-      { "naam": "Bol.com", "prijs": "€ 23,77", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" },
+      { "naam": "Bol.com", "prijs": "€ 23,82", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" },
       { "naam": "DreamLand", "prijs": "€ 29,95", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76312/The-Hulk-Truck-vs-Thanos.html" }
@@ -137,7 +137,7 @@
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/lego-city-60483/9300000237345413/" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/rides-construction-loader-60483" },
-      { "naam": "Amazon.nl", "prijs": "€ 7,98", "link": "https://www.amazon.nl/LEGO-City-Voertuigen-Graafmachine-Rollenspellen/dp/B0056GRGN2/" },
+      { "naam": "Amazon.nl", "prijs": "€ 6,99", "link": "https://www.amazon.nl/LEGO-City-Voertuigen-Graafmachine-Rollenspellen/dp/B0056GRGN2/" },
       { "naam": "Amazon.com.be", "prijs": "€ 9,49", "link": "https://www.amazon.com.be/-/nl/LEGO-City-Voertuigen-bouwplaatslader-bouwvoertuig/dp/B0056GRGN2/" },
       { "naam": "DreamLand", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/60483-lego-city-bouwlader/02323886" },
       { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_60483-voertuigen-bouwlader-2208357.html" },
@@ -206,7 +206,7 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt071362fc54fbb4e1/76337_Prod_en-gb.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
     "winkels": [
       { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/lego-miles-morales-mecha-vs-spider-man-2099-76337/02323725" },
-      { "naam": "Bol.com", "prijs": "€ 11,98", "link": "https://www.bol.com/be/nl/p/lego-marvel-76337/9300000237345430/" },
+      { "naam": "Bol.com", "prijs": "€ 11,97", "link": "https://www.bol.com/be/nl/p/lego-marvel-76337/9300000237345430/" },
       { "naam": "Amazon.nl", "prijs": "€ 11,97", "link": "https://amzn.eu/d/b4q73eB" },
       { "naam": "MediaMarkt", "prijs": "€ 13,99", "link": "https://www.mediamarkt.be/nl/product/_76337-miles-morales-vs-spider-man-2208582.html" },
       { "naam": "SupraBazar", "prijs": "€ 14,99", "link": "https://www.suprabazar.be/lego-super-heroes-76337-miles-morales-mecha-vs.-spider-man-2099-32140541" },
@@ -242,7 +242,7 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt85e8e4843d76c937/60485_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/lego-city-60485/9300000237345422/" },
-      { "naam": "Amazon.nl", "prijs": "€ 7,14", "link": "https://amzn.eu/d/eJJN1LU" },
+      { "naam": "Amazon.nl", "prijs": "€ 6,99", "link": "https://amzn.eu/d/eJJN1LU" },
       { "naam": "Amazon.com.be", "prijs": "€ 7,14", "link": "https://amzn.eu/d/fKc8W3l" },
       { "naam": "DreamLand", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/lego-city-hot-rod-60485/02323909" },
       { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_60485-hot-rod-2208359.html" },
@@ -259,7 +259,7 @@
     "beschrijving": "Zet Spider-Man en Ghost Rider tegenover elkaar in dit spectaculaire motor-duel! Deze set bevat de vlammende motor van Ghost Rider en de snelle motor van Spider-Man, inclusief minifiguren van beide helden. Een geweldige actieset voor jonge Marvel-fans.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt75247de54e2f7b71/76335_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 8,49", "link": "https://www.bol.com/be/nl/p/lego-marvel-spider-man-vs-mysterio-de-daily-bugle-bouwpakket-76342/9300000237345410/" },
+      { "naam": "Bol.com", "prijs": "€ 8,99", "link": "https://www.bol.com/be/nl/p/lego-marvel-spider-man-vs-mysterio-de-daily-bugle-bouwpakket-76342/9300000237345410/" },
       { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/spider-man-vs-ghost-rider-motorcycle-76335" },
       { "naam": "Suprabazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/lego-super-heroes-76335-spider-man-vs.-ghost-rider-motor-32140539" },
       { "naam": "Dreamland", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/76335-lego-super-heroes-marvel-spider-man-vs-ghost-rider-motor/02323817" },
@@ -324,7 +324,7 @@
     "beschrijving": "Zet Nya in de spinner, trek aan het koord en kijk hoe ze ronddraait om het mutatiemonster te verslaan! Deze actievolle set bevat een spinner, twee minifiguren en een bouwbaar monster. Perfect voor snelle NINJAGO duels.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt40eea0a3603a3902/71849_Box1_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 8,49", "link": "https://www.bol.com/be/nl/p/lego-ninjago-nya-vs-mutatiemonster-in-spinner-actiespeelgoed-speelset-met-2-minifiguren-en-spinner-ninjago-bouwset-voor-kinderen-vanaf-6-jaar-klein-cadeautje-71849/9300000237345446/" },
+      { "naam": "Bol.com", "prijs": "€ 8,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-nya-vs-mutatiemonster-in-spinner-actiespeelgoed-speelset-met-2-minifiguren-en-spinner-ninjago-bouwset-voor-kinderen-vanaf-6-jaar-klein-cadeautje-71849/9300000237345446/" },
       { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/nya-vs-mutation-monster-spinner-71849" },
       { "naam": "Suprabazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/lego-ninjago-71849-nya-vs.-mutatiemonster-in-spinner-32140600" },
       { "naam": "Fnac", "prijs": "€ 9,99", "link": "https://www.nl.fnac.be/LEGO-71849-NYA-VS-ELEMENTAL-MONSTER-SPINNER/a22209224" },
@@ -340,7 +340,7 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltc280dd94988047ab/42200_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "Amazon NL", "prijs": "€ 17,00", "link": "https://amzn.eu/d/02xwT3mf" },
-      { "naam": "Bol.com", "prijs": "€ 22,48", "link": "https://www.bol.com/be/nl/p/lego-technic-monster-jam-thunderroarus-pull-back-truck-42200/9300000187249552/" },
+      { "naam": "Bol.com", "prijs": "€ 22,53", "link": "https://www.bol.com/be/nl/p/lego-technic-monster-jam-thunderroarus-pull-back-truck-42200/9300000187249552/" },
       { "naam": "Amazon BE", "prijs": "€ 21,00", "link": "https://amzn.eu/d/0jboOeMv" },
       { "naam": "Suprabazar", "prijs": "€ 24,99", "link": "https://www.suprabazar.be/lego-technic-42200-monster-jam-thunderroarus-32030791" },
       { "naam": "Dreamland", "prijs": "€ 27,95", "link": "https://www.dreamland.be/nl/producten/42200-lego-technic-monster-jam-thunderroarus-pull-back/01831788" },
@@ -357,7 +357,7 @@
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 23,59", "link": "https://www.bol.com/be/nl/p/lego-city-achtervolging-met-politieboot-drijft-echt-60456/9300000227400154/" },
       { "naam": "Suprabazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-city-police-60456-achtervolging-met-politieboot-32074534" },
-      { "naam": "Coolblue", "prijs": "€ 27,99", "link": "https://www.coolblue.be/nl/product/972472/lego-city-achtervolging-met-politieboot-60456.html" },
+      { "naam": "Coolblue", "prijs": "€ 26,99", "link": "https://www.coolblue.be/nl/product/972472/lego-city-achtervolging-met-politieboot-60456.html" },
       { "naam": "Dreamland", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/60456-lego-city-achtervolging-met-politieboot/01854602" },
       { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/police-boat-chase-60456" },
       { "naam": "MediaMarkt", "prijs": "€ 32,99", "link": "https://www.mediamarkt.be/nl/product/_lego-police-boat-chase-bouwspeelgoed-meerkleurig-155703178.html" },
@@ -423,7 +423,7 @@
     "winkels": [
       { "naam": "Amazon NL", "prijs": "€ 16,88", "link": "https://amzn.eu/d/01Ggopzu" },
       { "naam": "Bol.com", "prijs": "€ 16,88", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/" },
-      { "naam": "Amazon BE", "prijs": "€ 19,05", "link": "https://amzn.eu/d/09jebDd9" }
+      { "naam": "Amazon BE", "prijs": "€ 15,69", "link": "https://amzn.eu/d/09jebDd9" }
     ]
   },
   {
@@ -448,7 +448,7 @@
     "afbeelding_url": "https://media.s-bol.com/m9EWLkwDM9yG/2k9pN4M/797x1200.jpg",
     "winkels": [
       { "naam": "Amazon.nl", "prijs": "€ 12,99", "link": "https://amzn.eu/d/06faETJY" },
-      { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/smartgames-squirrels-go-nuts-60-opdrachten-denkpuzzel-eekhoorns/9200000091828788/" },
+      { "naam": "Bol.com", "prijs": "€ 17,95", "link": "https://www.bol.com/be/nl/p/smartgames-squirrels-go-nuts-60-opdrachten-denkpuzzel-eekhoorns/9200000091828788/" },
       { "naam": "DreamLand", "prijs": "€ 17,99", "link": "https://www.dreamland.be/nl/producten/smartgames-squirrels-go-nuts-compact-denkspel-60-opdrachten/01321302" },
       { "naam": "Amazon.com.be", "prijs": "€ 17,95", "link": "https://amzn.eu/d/00au1R3i" }
     ]
@@ -461,7 +461,7 @@
     "afbeelding_url": "https://media.s-bol.com/BYMR6wornyko/Z6mVVB8/781x1200.jpg",
     "winkels": [
       { "naam": "Amazon.com.be", "prijs": "€ 6,95", "link": "https://amzn.eu/d/eK0Twqy" },
-      { "naam": "Bol.com", "prijs": "€ 9,78", "link": "https://www.bol.com/be/nl/p/pokemon-mini-mazes/9200000128384265/" },
+      { "naam": "Bol.com", "prijs": "€ 9,92", "link": "https://www.bol.com/be/nl/p/pokemon-mini-mazes/9200000128384265/" },
       { "naam": "Amazon.nl", "prijs": "€ 10,34", "link": "https://amzn.eu/d/32MYwFF" }
     ]
   },
@@ -552,7 +552,7 @@
     "afbeelding_url": "https://media.s-bol.com/q1M75ApoA4kr/mwm8MWn/1200x1045.jpg",
     "winkels": [
       { "naam": "Amazon.nl", "prijs": "€ 15,04", "link": "https://amzn.eu/d/00FzcxTW" },
-      { "naam": "Amazon.com.be", "prijs": "€ 15,05", "link": "https://amzn.eu/d/05O761Wt" },
+      { "naam": "Amazon.com.be", "prijs": "€ 15,04", "link": "https://amzn.eu/d/05O761Wt" },
       { "naam": "Playmobil BE", "prijs": "€ 19,99", "link": "https://www.playmobil.com/nl-be/playmobil-x-ford-f-150-raptor/71858.html" },
       { "naam": "Euroshop", "prijs": "€ 19,99", "link": "https://www.euroshop.be/nl/speelgoed/figuren-rollenspel/speelsets-figuren-dieren/154210147-playmobil-x-ford-f-150-raptor-71858" },
       { "naam": "SupraBazar", "prijs": "€ 15,99", "link": "https://www.suprabazar.be/playmobil-cars-71858-playmobil-x-ford-f-150-raptor-32085259" },
@@ -566,7 +566,7 @@
     "beschrijving": "Veiligheid voorop! Dit fluorescerende en reflecterende hesje van Wowow zorgt ervoor dat Jonas extra goed opvalt in het verkeer. Het vestje heeft een handige ritssluiting en is van duurzaam materiaal.",
     "afbeelding_url": "https://media.s-bol.com/xM7OJ0m1ynXP/mw8359r/790x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 21,29", "link": "https://www.bol.com/be/nl/p/wowow-kinderhesje-zippy-green-m/9300000237288635/" },
+      { "naam": "Bol.com", "prijs": "€ 26,40", "link": "https://www.bol.com/be/nl/p/wowow-kinderhesje-zippy-green-m/9300000237288635/" },
       { "naam": "Decathlon", "prijs": "€ 25,99", "link": "https://www.decathlon.be/nl/p/mp/zippy-jacket-green/c7846ea0-f5a6-418b-8ae5-48ec045d82b7/c9" }
     ]
   }

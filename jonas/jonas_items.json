@@ -54,7 +54,7 @@
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 13,99", "link": "https://www.bol.com/be/nl/p/lego-city-transportwagen-voor-motoren-dieplader-bouwset-met-speelgoedvoertuigen-2-speelgoedmotoren-2-minifiguren-eenvoudig-te-bouwen-vrachtwagenmodel-voor-jongens-en-meisjes-vanaf-4-jaar-cadeau-voor-kinderverjaardagen-60491/9300000237345466/" },
       { "naam": "Amazon NL", "prijs": "€ 13,99", "link": "https://amzn.eu/d/05AYF9qz" },
-      { "naam": "MediaMarkt", "prijs": "€ 16,99", "link": "https://www.mediamarkt.be/nl/product/_60491-transportwagen-voor-motoren-2208365.html" },
+      { "naam": "MediaMarkt", "prijs": "€ 15,99", "link": "https://www.mediamarkt.be/nl/product/_60491-transportwagen-voor-motoren-2208365.html" },
       { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60491-lego-city-transportwagen-voor-motoren/02323398" },
       { "naam": "Suprabazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-city-60491-transportwagen-voor-motoren-32140485" },
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/motorcycle-transporter-60491" },
@@ -90,7 +90,7 @@
       { "naam": "Suprabazar", "prijs": "€ 17,99", "link": "https://www.suprabazar.be/lego-city-60451-ambulance-32031052" },
       { "naam": "Dreamland", "prijs": "€ 19,95", "link": "https://www.dreamland.be/nl/producten/60451-lego-city-ambulance/01830569" },
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/emergency-ambulance-60451" },
-      { "naam": "MediaMarkt", "prijs": "€ 17,99", "link": "https://www.mediamarkt.be/nl/product/_60451-ambulance-2208341.html" },
+      { "naam": "MediaMarkt", "prijs": "€ 15,99", "link": "https://www.mediamarkt.be/nl/product/_60451-ambulance-2208341.html" },
       { "naam": "Fnac", "prijs": "€ 25,37", "link": "https://www.nl.fnac.be/LEGO-60451-CITY-AMBULANCE/a20941820" }
     ]
   },
@@ -104,7 +104,7 @@
       { "naam": "Amazon.nl", "prijs": "€ 21,99", "link": "https://amzn.eu/d/90UC8Ac" },
       { "naam": "Amazon.com.be", "prijs": "€ 23,74", "link": "https://amzn.eu/d/8uIshy7" },
       { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76312-de-hulk-truck-vs.-thanos-32052622" },
-      { "naam": "Bol.com", "prijs": "€ 23,82", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" },
+      { "naam": "Bol.com", "prijs": "€ 23,74", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" },
       { "naam": "DreamLand", "prijs": "€ 29,95", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76312/The-Hulk-Truck-vs-Thanos.html" }
@@ -208,7 +208,7 @@
       { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/lego-miles-morales-mecha-vs-spider-man-2099-76337/02323725" },
       { "naam": "Bol.com", "prijs": "€ 11,97", "link": "https://www.bol.com/be/nl/p/lego-marvel-76337/9300000237345430/" },
       { "naam": "Amazon.nl", "prijs": "€ 11,97", "link": "https://amzn.eu/d/b4q73eB" },
-      { "naam": "MediaMarkt", "prijs": "€ 13,99", "link": "https://www.mediamarkt.be/nl/product/_76337-miles-morales-vs-spider-man-2208582.html" },
+      { "naam": "MediaMarkt", "prijs": "€ 14,99", "link": "https://www.mediamarkt.be/nl/product/_76337-miles-morales-vs-spider-man-2208582.html" },
       { "naam": "SupraBazar", "prijs": "€ 14,99", "link": "https://www.suprabazar.be/lego-super-heroes-76337-miles-morales-mecha-vs.-spider-man-2099-32140541" },
       { "naam": "Fnac.be", "prijs": "€ 14,99", "link": "https://www.nl.fnac.be/LEGO-76337-SUPER-HEROES/a22213477" },
       { "naam": "Amazon.com.be", "prijs": "€ 11,97", "link": "https://amzn.eu/d/icnBLZR" },
@@ -340,7 +340,7 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltc280dd94988047ab/42200_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "Amazon NL", "prijs": "€ 17,00", "link": "https://amzn.eu/d/02xwT3mf" },
-      { "naam": "Bol.com", "prijs": "€ 22,53", "link": "https://www.bol.com/be/nl/p/lego-technic-monster-jam-thunderroarus-pull-back-truck-42200/9300000187249552/" },
+      { "naam": "Bol.com", "prijs": "€ 22,52", "link": "https://www.bol.com/be/nl/p/lego-technic-monster-jam-thunderroarus-pull-back-truck-42200/9300000187249552/" },
       { "naam": "Amazon BE", "prijs": "€ 21,00", "link": "https://amzn.eu/d/0jboOeMv" },
       { "naam": "Suprabazar", "prijs": "€ 24,99", "link": "https://www.suprabazar.be/lego-technic-42200-monster-jam-thunderroarus-32030791" },
       { "naam": "Dreamland", "prijs": "€ 27,95", "link": "https://www.dreamland.be/nl/producten/42200-lego-technic-monster-jam-thunderroarus-pull-back/01831788" },
@@ -385,7 +385,7 @@
     "beschrijving": "Troy de T-Rex verandert in een stoere racewagen! Deze dinosaurus heeft coole vuureffecten, lichtjes en maakt echte dino-geluiden. Met het lcd-scherm zie je Troy's animaties veranderen van dino-ogen naar een coureur.",
     "afbeelding_url": "https://media.s-bol.com/JxYYpONxnpXl/AD6NKM1/1142x1200.jpg",
     "winkels": [
-      { "naam": "Amazon BE", "prijs": "€ 17,99", "link": "https://amzn.eu/d/07bEF0tv" },
+      { "naam": "Amazon BE", "prijs": "€ 24,99", "link": "https://amzn.eu/d/07bEF0tv" },
       { "naam": "Happyland", "prijs": "€ 22,99", "link": "https://www.happyland.be/product/vtech-switch-go-dinos-fire-troy-t-rex/" },
       { "naam": "Dreamland", "prijs": "€ 22,99", "link": "https://www.dreamland.be/nl/producten/switch-go-dinos-fire-troy-t-rex/01606690" }
     ]
@@ -423,7 +423,7 @@
     "winkels": [
       { "naam": "Amazon NL", "prijs": "€ 16,88", "link": "https://amzn.eu/d/01Ggopzu" },
       { "naam": "Bol.com", "prijs": "€ 16,88", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/" },
-      { "naam": "Amazon BE", "prijs": "€ 15,69", "link": "https://amzn.eu/d/09jebDd9" }
+      { "naam": "Amazon BE", "prijs": "€ 16,14", "link": "https://amzn.eu/d/09jebDd9" }
     ]
   },
   {
@@ -551,8 +551,8 @@
     "beschrijving": "Beleef off-road avonturen met de iconische Ford F-150 Raptor van Playmobil. Deze gedetailleerde blauwe pick-up truck is voorzien van een ruime laadbak en stoere accenten. Inclusief een Playmobil figuur en accessoires voor urenlang speelplezier.",
     "afbeelding_url": "https://media.s-bol.com/q1M75ApoA4kr/mwm8MWn/1200x1045.jpg",
     "winkels": [
-      { "naam": "Amazon.nl", "prijs": "€ 15,04", "link": "https://amzn.eu/d/00FzcxTW" },
-      { "naam": "Amazon.com.be", "prijs": "€ 15,04", "link": "https://amzn.eu/d/05O761Wt" },
+      { "naam": "Amazon.nl", "prijs": "€ 20,00", "link": "https://amzn.eu/d/00FzcxTW" },
+      { "naam": "Amazon.com.be", "prijs": "€ 15,99", "link": "https://amzn.eu/d/05O761Wt" },
       { "naam": "Playmobil BE", "prijs": "€ 19,99", "link": "https://www.playmobil.com/nl-be/playmobil-x-ford-f-150-raptor/71858.html" },
       { "naam": "Euroshop", "prijs": "€ 19,99", "link": "https://www.euroshop.be/nl/speelgoed/figuren-rollenspel/speelsets-figuren-dieren/154210147-playmobil-x-ford-f-150-raptor-71858" },
       { "naam": "SupraBazar", "prijs": "€ 15,99", "link": "https://www.suprabazar.be/playmobil-cars-71858-playmobil-x-ford-f-150-raptor-32085259" },

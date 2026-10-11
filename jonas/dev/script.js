@@ -18,21 +18,21 @@ function setPupGreeting() {
     const randomQuote = zumaQuotes[Math.floor(Math.random() * zumaQuotes.length)];
     const hour = new Date().getHours();
     let timeGreeting = (hour >= 6 && hour < 12) ? "Goedemorgen!" : (hour >= 12 && hour < 18) ? "Goedemiddag!" : (hour >= 18 && hour < 23) ? "Goedenavond." : "Goedenacht.";
-    greetingEl.innerText = `${timeGreeting} Welkom bij de missie. ${randomQuote}`;
+    greetingEl.innerText = `${timeGreeting} Fijne feestdagen! ${randomQuote}`;
 }
 
 function createBubbles() {
     const container = document.getElementById('snow-container');
     if (!container) return;
-    const bubble = document.createElement('div');
-    bubble.className = 'snow';
-    bubble.style.left = Math.random() * 100 + "%";
-    const size = (Math.random() * 15 + 10) + "px";
-    bubble.style.width = size;
-    bubble.style.height = size;
-    bubble.style.animationDuration = (Math.random() * 4 + 6) + "s";
-    container.appendChild(bubble);
-    setTimeout(() => { bubble.remove(); }, 10000);
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snow';
+    snowflake.style.left = Math.random() * 100 + "%";
+    const size = (Math.random() * 7 + 4) + "px";
+    snowflake.style.width = size;
+    snowflake.style.height = size;
+    snowflake.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    container.appendChild(snowflake);
+    setTimeout(() => { snowflake.remove(); }, 8000);
 }
 
 function startCountdown(targetDateStr, targetName) {
@@ -52,7 +52,7 @@ function startCountdown(targetDateStr, targetName) {
         const distance = targetDate - now;
         if (distance < 0) {
             clearInterval(updateTimer);
-            timerEl.innerHTML = `🎉 GELUKKIGE VERJAARDAG ${targetName.toUpperCase()}! 🎉`;
+            timerEl.innerHTML = `🎄 VROLIJK KERSTFEEST ${targetName.toUpperCase()}! 🎁`;
         } else {
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -78,7 +78,7 @@ async function refreshClaims() {
                     el.classList.add('purchased');
                     if (!el.querySelector('.purchased-overlay')) {
                         const imgWrapper = el.querySelector('.item-image-container, .overview-image-wrapper');
-                        if (imgWrapper) imgWrapper.insertAdjacentHTML('afterbegin', '<div class="purchased-overlay">GEKOCHT</div>');
+                        if (imgWrapper) imgWrapper.insertAdjacentHTML('afterbegin', '<div class=\"purchased-overlay\">GEKOCHT</div>');
                     }
                     const btn = el.querySelector('.buy-button');
                     if (btn) btn.remove();
@@ -133,7 +133,7 @@ function updateModalUI(config) {
     const cancelBtn = document.getElementById('modal-cancel-btn');
     const confirmBtn = document.getElementById('modal-confirm-btn');
 
-    document.getElementById('modal-icon').innerText = config.icon || "🐾";
+    document.getElementById('modal-icon').innerText = config.icon || "🎁";
     document.getElementById('modal-title').innerText = config.title || "";
     document.getElementById('modal-text').innerText = config.text || "";
     document.getElementById('modal-spinner').style.display = config.showSpinner ? 'block' : 'none';
@@ -263,7 +263,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                     </div>
                 </div>`;
 
-            overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>${isF ? '<div class="mini-star">★</div>' : ''}<div class="overview-caption">${item.naam}</div><div style="font-size:0.85em; color:#ff6600; font-weight:bold;">Vanaf ${low.prijs}</div></div>`;
+            overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>${isF ? '<div class="mini-star">★</div>' : ''}<div class="overview-caption">${item.naam}</div><div class="overview-price">Vanaf ${low.prijs}</div></div>`;
         });
         listsHtml += `</div>`; overviewHtml += `</div>`;
     });
@@ -306,7 +306,7 @@ function getLowestPriceInfo(winkels) {
 
 async function loadWishlist() {
     setPupGreeting();
-    setInterval(createBubbles, 800);
+    setInterval(createBubbles, 500);
     setInterval(refreshClaims, 30000);
 
     try {

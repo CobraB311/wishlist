@@ -82,6 +82,8 @@ async function refreshClaims() {
                     }
                     const btn = el.querySelector('.buy-button');
                     if (btn) btn.remove();
+                    const vid = el.querySelector('.video-button');
+                    if (vid) vid.remove();
                 }
             }
         });
@@ -126,6 +128,20 @@ function togglePurchasedFilter() {
     btn.innerHTML = hidePurchased ? '<span class="icon">🙈</span> Verberg' : '<span class="icon">👁️</span> Toon alles';
     btn.classList.toggle('active', hidePurchased);
     filterGifts();
+}
+
+function openVideoModal(videoId) {
+    const frame = document.getElementById('youtube-frame');
+    if (frame) frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    const modal = document.getElementById('youtubeModal');
+    if (modal) modal.style.display = 'block';
+}
+
+function closeVideoModal() {
+    const frame = document.getElementById('youtube-frame');
+    if (frame) frame.src = "";
+    const modal = document.getElementById('youtubeModal');
+    if (modal) modal.style.display = 'none';
 }
 
 function updateModalUI(config) {
@@ -248,6 +264,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
         person.items.sort((a,b) => (favoriteIds.has(b.id)?1:0) - (favoriteIds.has(a.id)?1:0)).forEach(item => {
             const isP = purchasedIds.has(item.id), isF = favoriteIds.has(item.id), low = getLowestPriceInfo(item.winkels), overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
+            const vidBtn = (item.video_id && !isP) ? `<button class="video-button" onclick="openVideoModal('${item.video_id}')">🎬 Video</button>` : '';
 
             listsHtml += `
                 <div id="${item.id}" class="wens-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}">
@@ -261,11 +278,14 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                         <div class="price-links">
                             ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}"><span class="shop-name">${w.naam}</span><span class="shop-price">${w.prijs}</span><span class="shop-go">Bekijk</span></a>`).join('')}
                         </div>
-                        ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                        <div class="button-row">
+                            ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                            ${vidBtn}
+                        </div>
                     </div>
                 </div>`;
 
-            overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>${isF ? '<div class="mini-star">★</div>' : ''}<div class="overview-caption">${item.naam}</div><div class="overview-price">Vanaf ${low.prijs}</div></div>`;
+            overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>${isF ? '<div class="mini-star">★</div>' : ''}<div class="overview-caption">${item.naam}</div><div class="overview-price">Vanaf ${low.prijs} ${item.video_id ? '🎬' : ''}</div></div>`;
         });
         listsHtml += `</div>`; overviewHtml += `</div>`;
     });
@@ -353,6 +373,9 @@ window.onscroll = function() {
 };
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 window.onclick = function(e) {
+    if (e.target && e.target.id === 'youtubeModal') {
+        closeVideoModal();
+    }
     if (e.target && e.target.id === 'customModal') {
         const spinner = document.getElementById('modal-spinner');
         if (!spinner || spinner.style.display === 'none') {

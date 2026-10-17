@@ -78,7 +78,7 @@ async function refreshClaims() {
                     el.classList.add('purchased');
                     if (!el.querySelector('.purchased-overlay')) {
                         const imgWrapper = el.querySelector('.item-image-container, .overview-image-wrapper');
-                        if (imgWrapper) imgWrapper.insertAdjacentHTML('afterbegin', '<div class=\"purchased-overlay\">GEKOCHT</div>');
+                        if (imgWrapper) imgWrapper.insertAdjacentHTML('afterbegin', '<div class="purchased-overlay">GEKOCHT</div>');
                     }
                     const btn = el.querySelector('.buy-button');
                     if (btn) btn.remove();
@@ -89,7 +89,7 @@ async function refreshClaims() {
         // 2. Update de tellers en voortgangsbalken in het menu
         document.querySelectorAll('.tab-button').forEach(btn => {
             const tabId = btn.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
-            if (!tabId || tabId === 'overview-content') return;
+            if (!tabId || tabId === 'overview-content' || tabId === 'inventory-content') return;
 
             const container = document.getElementById(tabId);
             if (container) {
@@ -267,6 +267,27 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
         });
         listsHtml += `</div>`; overviewHtml += `</div>`;
     });
+
+    if (data.inventaris_links && data.inventaris_links.length > 0) {
+        navHtml += `<button class="tab-button" onclick="openTab(event, 'inventory-content')"><span class="tab-info">Inventaris</span></button>`;
+        listsHtml += `
+            <div id="inventory-content" class="tab-content">
+                <h2>Onze Inventaris</h2>
+                <p class="inventory-intro">Dit zijn overzichten van speelgoed en collecties die we al hebben, om dubbele cadeaus te voorkomen.</p>
+                <div class="inventory-links-container">
+                    ${data.inventaris_links.map(l => `
+                        <a href="${l.url}" target="_blank" class="inventory-link-card">
+                            <div class="inventory-link-info">
+                                <span class="inventory-icon">📦</span>
+                                <span class="inventory-name">${l.naam}</span>
+                            </div>
+                            <span class="inventory-go">Bekijk collectie ➔</span>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>`;
+    }
+
     nav.innerHTML = navHtml;
     overview.innerHTML = overviewHtml;
     listContainer.innerHTML = listsHtml;
@@ -317,7 +338,8 @@ async function loadWishlist() {
         const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
         const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
-        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}}, globalPurchasedIds, new Set(favs.favorite_ids));
+        const rInv = config.inventaris_links_file ? await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []) : [];
+        generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}, inventaris_links: rInv}, globalPurchasedIds, new Set(favs.favorite_ids));
         document.getElementById('loading-message').style.display = 'none';
     } catch (e) { console.error(e); }
 }

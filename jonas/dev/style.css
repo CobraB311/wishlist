@@ -648,6 +648,77 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
+/* INVENTARIS TAB */
+.inventory-intro {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 25px;
+    max-width: 650px;
+    line-height: 1.5;
+}
+
+.inventory-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+.inventory-link-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid var(--xmas-green);
+    border-radius: 8px;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: var(--xmas-text);
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+}
+
+.inventory-link-card:hover {
+    transform: translateX(4px);
+    background: var(--xmas-green-light);
+    border-color: var(--xmas-green-hover);
+    box-shadow: 0 4px 12px rgba(27, 94, 32, 0.15);
+}
+
+.inventory-link-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.inventory-icon {
+    font-size: 1.3em;
+}
+
+.inventory-name {
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--xmas-text);
+}
+
+.inventory-go {
+    background: var(--xmas-red);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: bold;
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 0.5px;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.inventory-link-card:hover .inventory-go {
+    background: var(--xmas-red-hover);
+}
+
 @media (max-width: 850px) {
     .fixed-header {
         width: 100%;
@@ -660,4 +731,6 @@ h1, h2, h3 {
     .tab-nav { flex-direction: row; overflow-x: auto; }
     .wens-item { flex-direction: column; }
     .price-links { max-width: 100%; }
+    .inventory-link-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .inventory-go { align-self: flex-end; }
 }

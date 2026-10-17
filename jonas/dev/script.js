@@ -234,7 +234,9 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
     const sortedPeople = [...data.personen].sort((a, b) => a.naam.toLowerCase() === 'jonas' ? -1 : 1);
     const groups = [...sortedPeople];
-    if (data.gezamenlijke_items) groups.push(data.gezamenlijke_items);
+    if (data.gezamenlijke_items && data.gezamenlijke_items.items && data.gezamenlijke_items.items.length > 0) {
+        groups.push(data.gezamenlijke_items);
+    }
 
     groups.forEach(person => {
         const tabId = personIdToTabId(person.naam);
@@ -301,7 +303,8 @@ function openTab(evt, tabId) {
     document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
     const target = document.getElementById(tabId);
     if(target) target.classList.add("active");
-    if (evt) evt.currentTarget.classList.add("active");
+    const targetBtn = evt ? evt.currentTarget : document.querySelector(`.tab-button[onclick*="'${tabId}'"]`);
+    if (targetBtn) targetBtn.classList.add("active");
     window.scrollTo(0,0);
 }
 
@@ -349,4 +352,12 @@ window.onscroll = function() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { btn.style.display = "block"; } else { btn.style.display = "none"; }
 };
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+window.onclick = function(e) {
+    if (e.target && e.target.id === 'customModal') {
+        const spinner = document.getElementById('modal-spinner');
+        if (!spinner || spinner.style.display === 'none') {
+            document.getElementById('customModal').style.display = 'none';
+        }
+    }
+};
 window.onload = loadWishlist;

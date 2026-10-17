@@ -31,7 +31,7 @@ h1, h2, h3 {
     letter-spacing: 0.5px;
 }
 
-.zuma-banner {
+.theme-banner, .zuma-banner {
     width: 100%;
     height: 250px;
     background: url('https://www.lego.com/cdn/cs/set/assets/blt4532ae70139c8c99/sachabricks_new-watermark.jpg?fit=crop&format=jpg&quality=80&width=1600&height=500&dpr=1') no-repeat center center;
@@ -65,7 +65,7 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
-#pup-greeting {
+#header-greeting, #pup-greeting {
     font-size: 1.1em;
     color: var(--xmas-green);
     font-weight: bold;
@@ -78,6 +78,15 @@ h1, h2, h3 {
     margin-top: 0;
     font-size: 2.5em;
     color: var(--xmas-red);
+}
+
+.last-update {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .countdown-banner {

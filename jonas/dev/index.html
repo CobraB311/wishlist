@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonas' Kerst Wensenlijst</title>
+    <title>Wensenlijst</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <script src="config.js"></script>
@@ -17,13 +17,14 @@
 </div>
 
 <div class="page-wrapper">
-    <div class="zuma-banner"></div>
+    <div class="theme-banner"></div>
     <div class="content-padding">
         <header class="main-header">
-            <div id="pup-greeting">Laden...</div>
-            <h1 id="main-title">Jonas' Wensenlijst</h1>
+            <div id="header-greeting">Laden...</div>
+            <h1 id="main-title">Wensenlijst</h1>
+            <p class="last-update" id="last-update-text"></p>
             <div id="countdown-container" class="countdown-banner" style="display:none;">
-                <div class="countdown-label">De missie start over:</div>
+                <div id="countdown-label" class="countdown-label">Aftellen:</div>
                 <div id="countdown-timer">--d --u --m --s</div>
             </div>
         </header>
@@ -36,7 +37,7 @@
         </div>
 
         <div id="overview-content" class="tab-content active">
-            <div id="overview-grid-container"><p id="loading-message">Laden van de missie...</p></div>
+            <div id="overview-grid-container"><p id="loading-message">Laden van wensenlijst...</p></div>
         </div>
         <div id="person-lists-container"></div>
     </div>

@@ -1,8 +1,21 @@
 {
-  "wenslijst_titel": "Eindejaar",
-  "datum": "2026-10-11",
+  "wenslijst_titel": "Eindejaar wenslijst",
+  "datum": "2026-10-17",
+  "groet_tekst": "Fijne feestdagen!",
+  "banner_afbeelding": "https://www.lego.com/cdn/cs/set/assets/blt4532ae70139c8c99/sachabricks_new-watermark.jpg?fit=crop&format=jpg&quality=80&width=1600&height=500&dpr=1",
   "aftel_datum": "2026-12-25T00:00:00",
   "aftel_naam": "Jonas",
+  "countdown_label": "Het kerstfeest start over:",
+  "countdown_eindtekst": "🎄 VROLIJK KERSTFEEST {naam}! 🎁",
+  "quotes": [
+    "Stel nooit uit tot morgen wat je vandaag kunt doen.",
+    "Ninja, GO!",
+    "Ninja geven nooit op!",
+    "De beste manier om een vijand te verslaan, is door hem tot je vriend te maken.",
+    "Zoals ijzer ijzer scherpt, scherpt broeder broeder.",
+    "Het gaat niet om de grootte van de ninja in het gevecht, maar om de grootte van het gevecht in de ninja.",
+    "Je kunt alleen degenen redden die gered willen worden."
+  ],
   "personen": [
     { "naam": "Jonas", "data_file": "jonas_items.json" }
   ],

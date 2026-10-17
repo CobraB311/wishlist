@@ -1,25 +1,23 @@
 const recipientEmail = 'bernaertruben@hotmail.com';
 let hidePurchased = false;
 let globalPurchasedIds = new Set();
+let quotes = [];
+let currentConfig = null;
 
-const zumaQuotes = [
-    "Stel nooit uit tot morgen wat je vandaag kunt doen.",
-    "Ninja, GO!",
-    "Ninja geven nooit op!",
-    "De beste manier om een vijand te verslaan, is door hem tot je vriend te maken.",
-    "Zoals ijzer ijzer scherpt, scherpt broeder broeder.",
-    "Het gaat niet om de grootte van de ninja in het gevecht, maar om de grootte van het gevecht in de ninja.",
-    "Je kunt alleen degenen redden die gered willen worden."
-];
-
-function setPupGreeting() {
-    const greetingEl = document.getElementById('pup-greeting');
+function setGreeting(customGreeting) {
+    const greetingEl = document.getElementById('header-greeting') || document.getElementById('pup-greeting');
     if (!greetingEl) return;
-    const randomQuote = zumaQuotes[Math.floor(Math.random() * zumaQuotes.length)];
+    const quoteList = (quotes && quotes.length > 0) ? quotes : [
+        "Welkom bij de wensenlijst!"
+    ];
+    const randomQuote = quoteList[Math.floor(Math.random() * quoteList.length)];
     const hour = new Date().getHours();
     let timeGreeting = (hour >= 6 && hour < 12) ? "Goedemorgen!" : (hour >= 12 && hour < 18) ? "Goedemiddag!" : (hour >= 18 && hour < 23) ? "Goedenavond." : "Goedenacht.";
-    greetingEl.innerText = `${timeGreeting} Fijne feestdagen! ${randomQuote}`;
+    const themeGreeting = customGreeting || (currentConfig && currentConfig.groet_tekst) || "";
+    greetingEl.innerText = `${timeGreeting} ${themeGreeting} ${randomQuote}`.replace(/\s+/g, ' ').trim();
 }
+
+function setPupGreeting() { setGreeting(); }
 
 function createBubbles() {
     const container = document.getElementById('snow-container');
@@ -35,10 +33,12 @@ function createBubbles() {
     setTimeout(() => { snowflake.remove(); }, 8000);
 }
 
-function startCountdown(targetDateStr, targetName) {
+function startCountdown(targetDateStr, targetName, labelText, finishText) {
     const container = document.getElementById("countdown-container");
     const timerEl = document.getElementById("countdown-timer");
+    const labelEl = document.getElementById("countdown-label") || container?.querySelector('.countdown-label');
     if (!targetDateStr || !container) return;
+    if (labelEl && labelText) labelEl.innerText = labelText;
     container.style.display = "block";
     let dateToParse = targetDateStr;
     if (!targetDateStr.includes('+') && !targetDateStr.includes('Z')) {
@@ -52,7 +52,8 @@ function startCountdown(targetDateStr, targetName) {
         const distance = targetDate - now;
         if (distance < 0) {
             clearInterval(updateTimer);
-            timerEl.innerHTML = `🎄 VROLIJK KERSTFEEST ${targetName.toUpperCase()}! 🎁`;
+            const template = finishText || `🎉 Feest voor {naam}! 🎉`;
+            timerEl.innerHTML = template.replace('{naam}', (targetName || "").toUpperCase());
         } else {
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -206,7 +207,7 @@ async function claimItem(person, itemName, id) {
             onConfirm: function() {
                 updateModalUI({
                     title: "Bezig met opslaan...",
-                    text: "De missie wordt voltooid...",
+                    text: (currentConfig && currentConfig.claim_opslaan_tekst) || "Het cadeau wordt geclaimd...",
                     showSpinner: true,
                     showButtons: false
                 });
@@ -316,7 +317,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 }
 
 function openTab(evt, tabId) {
-    setPupGreeting();
+    setGreeting();
     refreshClaims();
     if (document.getElementById('gift-search')) { document.getElementById('gift-search').value = ""; filterGifts(); }
     document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
@@ -349,13 +350,35 @@ function getLowestPriceInfo(winkels) {
 }
 
 async function loadWishlist() {
-    setPupGreeting();
     setInterval(createBubbles, 500);
     setInterval(refreshClaims, 30000);
 
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
-        if (config.aftel_datum) startCountdown(config.aftel_datum, config.aftel_naam || "Jonas");
+        currentConfig = config;
+        quotes = config.quotes || [];
+        setGreeting(config.groet_tekst);
+
+        if (config.wenslijst_titel) {
+            document.title = config.wenslijst_titel;
+            const titleEl = document.getElementById('main-title');
+            if (titleEl) titleEl.innerText = config.wenslijst_titel;
+        }
+
+        if (config.datum) {
+            const lastUpdateEl = document.getElementById('last-update-text');
+            if (lastUpdateEl) lastUpdateEl.innerText = `Laatste update: ${config.datum}`;
+        }
+
+        if (config.banner_afbeelding) {
+            const bannerEl = document.querySelector('.theme-banner, .zuma-banner');
+            if (bannerEl) bannerEl.style.backgroundImage = `url('${config.banner_afbeelding}')`;
+        }
+
+        if (config.aftel_datum) {
+            startCountdown(config.aftel_datum, config.aftel_naam || "Jonas", config.countdown_label, config.countdown_eindtekst);
+        }
+
         const claims = await fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json()).catch(() => ({purchased_items:[]}));
         globalPurchasedIds = new Set(claims.purchased_items);
         const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));

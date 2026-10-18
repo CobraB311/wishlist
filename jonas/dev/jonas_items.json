@@ -52,16 +52,6 @@
     ]
   },
   {
-    "id": "lego-city-f1-williams-racing-haas-f1-race-cars-60464",
-    "naam": "LEGO City F1 Williams Racing & Haas F1 raceauto's (60464)",
-    "nummer": "60464",
-    "beschrijving": "Zet de strijd op het circuit in met deze F1 racewagens van Williams Racing en Haas. De set bevat twee gedetailleerde Formule 1-wagens en twee minifiguren van coureurs voor spannende races op de baan.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt7ad6d8854a7f62d4/60464_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/f1-williams-racing-haas-f1-race-cars-60464" }
-    ]
-  },
-  {
     "id": "lego-city-f1-pit-stop-pit-crew-with-ferrari-car-60443",
     "naam": "LEGO City F1 Pitstop & pitcrew met Ferrari auto (60443)",
     "nummer": "60443",
@@ -69,48 +59,6 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt9ef20f731124c8bc/60443_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/f1-pit-stop-pit-crew-with-ferrari-car-60443" }
-    ]
-  },
-  {
-    "id": "lego-city-f1-truck-with-rb20-amr24-f1-cars-60445",
-    "naam": "LEGO City F1 Truck met RB20 & AMR24 F1 auto's (60445)",
-    "nummer": "60445",
-    "beschrijving": "Vervoer de Red Bull Racing RB20 en Aston Martin AMR24 Formule 1-wagens naar het circuit! Deze uitgebreide set bevat een grote transporttruck met oplegger, twee gedetailleerde F1-wagens, pituitrusting en meerdere minifiguren.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt2d3b416abd8f13fc/bltbdd8f04781b26b26-60445_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 99,99", "link": "https://www.lego.com/nl-be/product/f1-truck-with-rb20-amr24-f1-cars-60445" }
-    ]
-  },
-  {
-    "id": "lego-city-wegplaten-60304",
-    "naam": "LEGO City Wegplaten (60304)",
-    "nummer": "60304",
-    "beschrijving": "Breid je stad uit met deze LEGO City Wegplaten. De set bevat glow-in-the-dark lantaarnpalen, verkeerslichten, verkeersborden, wegmarkeringen, drempels en een zebrapad. Perfect om je LEGO City creaties met elkaar te verbinden.",
-    "afbeelding_url": "https://media.s-bol.com/PxznB5oRRDjw/oYLMw63/550x521.jpg",
-    "winkels": [
-      { "naam": "Amazon BE", "prijs": "€ 14,39", "link": "https://amzn.eu/d/0bqJq2xh" },
-      { "naam": "Bol.com", "prijs": "€ 16,99", "link": "https://www.bol.com/be/nl/p/lego-city-wegplaten-60304/9300000015132297/" },
-      { "naam": "Suprabazar", "prijs": "€ 17,98", "link": "https://www.suprabazar.be/lego-city-60304-wegplaten-28351544" },
-      { "naam": "Dreamland", "prijs": "€ 19,95", "link": "https://www.dreamland.be/nl/producten/60304-lego-city-wegplaten/01579840" },
-      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/road-plates-60304" },
-      { "naam": "MediaMarkt", "prijs": "€ 18,99", "link": "https://www.mediamarkt.be/nl/product/_lego-60304-wegplaten-2208253.html" },
-      { "naam": "Fnac", "prijs": "€ 27,90", "link": "https://www.nl.fnac.be/LEGO-60304-INTERSECTION-A-ASSEMBLER/a15233648" }
-    ]
-  },
-  {
-    "id": "lego-city-karts-en-racers-60400",
-    "naam": "LEGO City Karts en racers (60400)",
-    "nummer": "60400",
-    "beschrijving": "Zet de coureurs in hun karts en bereid je voor op een spannende race! Deze set bevat een turquoise en een oranje kart, plus twee minifiguren met racehelmen. Een perfect klein cadeautje voor jonge racefans van LEGO City.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt14605814eeac35c6/60400.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon NL", "prijs": "€ 6,99", "link": "https://amzn.eu/d/0dAQ7QMz" },
-      { "naam": "Amazon BE", "prijs": "€ 7,03", "link": "https://amzn.eu/d/06GyhRbf" },
-      { "naam": "Dreamland", "prijs": "€ 9,95", "link": "https://www.dreamland.be/nl/producten/60400-lego-city-karts-en-racers/01755985" },
-      { "naam": "Suprabazar", "prijs": "€ 9,98", "link": "https://www.suprabazar.be/lego-city-60400-karts-en-racers-31451822" },
-      { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/go-karts-and-race-drivers-60400" },
-      { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_lego-60400-karts-en-racers-2208193.html" },
-      { "naam": "Fnac", "prijs": "€ 17,30", "link": "https://www.nl.fnac.be/LEGO-City-60400-Karts-en-racers/a18821647" }
     ]
   },
   {

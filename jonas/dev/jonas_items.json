@@ -277,16 +277,6 @@
     ]
   },
   {
-    "id": "lego-city-fire-rescue-boat-60373",
-    "naam": "LEGO City Brandweerboot (60373)",
-    "nummer": "60373",
-    "beschrijving": "Schiet te hulp op het water met deze blussende brandweerboot! De set bevat een blusboot die echt kan drijven, een kleine speedboot voor de brandweer, inclusief bluselementen en drie minifiguren voor spannende reddingsacties.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt627cf8c475b7a627/60373_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/fire-rescue-boat-60373" }
-    ]
-  },
-  {
     "id": "lego-city-fire-station-with-fire-truck-60414",
     "naam": "LEGO City Brandweerkazerne met brandweerwagen (60414)",
     "nummer": "60414",
@@ -294,16 +284,6 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt1a69be3fcb88b72e/60414.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 79,99", "link": "https://www.lego.com/nl-be/product/fire-station-with-fire-truck-60414" }
-    ]
-  },
-  {
-    "id": "lego-city-coast-guard-rescue-boat-helicopter-60504",
-    "naam": "LEGO City Kustwacht reddingsboot & helikopter (60504)",
-    "nummer": "60504",
-    "beschrijving": "Ga op spectaculaire reddingsmissies op zee! Deze uitgebreide kustwachtset bevat een grote reddingsboot die kan drijven, een helikopter, een opblaasbare reddingsboot en meerdere minifiguren van de kustwacht om drenkelingen te redden.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt3ee7044230b1d72e/blte38ebd2ef80a9c72-60504_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 109,99", "link": "https://www.lego.com/nl-be/product/coast-guard-rescue-boat-helicopter-60504" }
     ]
   },
   {
@@ -519,36 +499,6 @@
     ]
   },
   {
-    "id": "lego-jurassic-world-raptor-off-road-escape-76972",
-    "naam": "LEGO Jurassic World Raptor terreinwagen ontsnapping (76972)",
-    "nummer": "76972",
-    "beschrijving": "Ontsnap aan de snelle Velociraptor met deze robuuste terreinwagen! De set bevat een terreinvoertuig met uitrusting, een verstelbare raptor-figuur en minifiguren om spannende dinosaurus-achtervolgingen na te spelen.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt7813d4b35cdc5b40/76972_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 34,99", "link": "https://www.lego.com/nl-be/product/raptor-off-road-escape-76972" }
-    ]
-  },
-  {
-    "id": "lego-jurassic-world-t-rex-river-escape-76975",
-    "naam": "LEGO Jurassic World T. rex rivier ontsnapping (76975)",
-    "nummer": "76975",
-    "beschrijving": "Vlucht via de rivier voor de machtige T. rex! Inclusief een stuurbare boot, een gedetailleerd rivierlandschap met steiger, een indrukwekkende T. rex-figuur en meerdere minifiguren.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt77fc3a2ac5b81d79/76975_Box1_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/t-rex-river-escape-76975" }
-    ]
-  },
-  {
-    "id": "lego-jurassic-world-spinosaurus-quetzalcoatlus-air-mission-76976",
-    "naam": "LEGO Jurassic World Spinosaurus & Quetzalcoatlus luchtmissie (76976)",
-    "nummer": "76976",
-    "beschrijving": "Beleef een gigantisch dinosaurusavontuur op het land en in de lucht! Deze uitgebreide set bevat een gevaarlijke Spinosaurus, een vliegende Quetzalcoatlus met grote spanwijdte, een onderzoekshelikopter, een observatiepost en diverse minifiguren.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt59a17f9fa8fce039/76976_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 149,99", "link": "https://www.lego.com/nl-be/product/spinosaurus-quetzalcoatlus-air-mission-76976" }
-    ]
-  },
-  {
     "id": "lego-jurassic-world-baby-dinosaur-pteranodon-77977",
     "naam": "LEGO Jurassic World Baby dinosaurus Pteranodon (77977)",
     "nummer": "77977",
@@ -556,16 +506,6 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt3596bd09a884665c/blt934803c471454482-77977_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 24,99", "link": "https://www.lego.com/nl-be/product/baby-dinosaur-pteranodon-77977" }
-    ]
-  },
-  {
-    "id": "lego-jurassic-world-spinosaurus-dinosaur-escape-77982",
-    "naam": "LEGO Jurassic World Spinosaurus dinosaurus ontsnapping (77982)",
-    "nummer": "77982",
-    "beschrijving": "Pas op, de Spinosaurus breekt uit! Inclusief een omheining met uitbreekfunctie, een robuust terreinvoertuig, een gedetailleerde Spinosaurus-figuur en minifiguren om de ontsnapping onder controle te krijgen.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltf7c9e80e1334b7d3/blte4b13441b2f774e9-77982_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 69,99", "link": "https://www.lego.com/nl-be/product/spinosaurus-dinosaur-escape-77982" }
     ]
   },
   {

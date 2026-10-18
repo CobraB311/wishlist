@@ -365,32 +365,6 @@
     ]
   },
   {
-    "id": "set-60413",
-    "naam": "LEGO® City Brandweervliegtuig",
-    "nummer": "60413",
-    "beschrijving": "Een groot brandweervliegtuig met dubbele propeller en waterlanceerfunctie, een brandweerbuggy, een bosbrandscène en 3 minifiguren van brandweerlieden.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt10b1007c3d622d07/60413.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon.nl", "link": "https://amzn.eu/d/exhmPup", "prijs": "€ 47,49" },
-      { "naam": "Amazon.com.be", "link": "https://amzn.eu/d/52rXj5J", "prijs": "€ 47,49" },
-      { "naam": "Bol.com", "link": "https://www.bol.com/be/nl/p/lego-city-brandweervliegtuig-60413/9300000157956269/?referrer=socialshare_pdp_www", "prijs": "€ 70,09" },
-      { "naam": "SupraBazar", "link": "https://www.suprabazar.be/lego-city-60413-brandweervliegtuig-31452041", "prijs": "€ 54,98" },
-      { "naam": "DreamLand", "link": "https://www.dreamland.be/nl/producten/60413-lego-brandweervliegtuig/01756081", "prijs": "€ 59,95" },
-      { "naam": "LEGO® Shop BE", "link": "https://www.lego.com/nl-be/product/fire-rescue-plane-60413", "prijs": "€ 54,99" },
-      { "naam": "BrickWatch", "link": "https://www.brickwatch.net/nl-BE/set/60413/Fire-Rescue-Plane.html", "prijs": "Check prijs" }
-    ]
-  },
-  {
-    "id": "lego-city-airport-fire-truck-60499",
-    "naam": "LEGO City Vliegveld brandweerwagen (60499)",
-    "nummer": "60499",
-    "beschrijving": "Haast je naar de landingsbaan met deze krachtige vliegveld brandweerwagen! De set beschikt over een grote bluswagen met spuitarm, brandblusuitrusting en minifiguren van brandweerlieden om noodsituaties op de luchthaven snel aan te pakken.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt0dd97957780b2975/60499_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 69,99", "link": "https://www.lego.com/nl-be/product/airport-fire-truck-60499" }
-    ]
-  },
-  {
     "id": "lego-city-fire-rescue-boat-60373",
     "naam": "LEGO City Brandweerboot (60373)",
     "nummer": "60373",

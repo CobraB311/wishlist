@@ -385,23 +385,6 @@
     ]
   },
   {
-    "id": "lego-ninjago-kais-elementaire-vuurmecha-71808",
-    "naam": "LEGO NINJAGO Kai's elementaire vuurmecha (71808)",
-    "nummer": "71808",
-    "beschrijving": "Strijd tegen de gemene Clan met Kai in zijn aanpasbare elementaire vuurmecha. Deze actiefiguur heeft beweegbare armen en benen die kunnen worden gecombineerd met onderdelen van andere NINJAGO mecha. Inclusief 4 minifiguren: Kai, Zane, Jordana en een Wolf Masker strijder.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt47c375a77ac76137/71808_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Amazon NL", "prijs": "€ 19,99", "link": "https://amzn.eu/d/07JyCgmL" },
-      { "naam": "Amazon BE", "prijs": "€ 19,99", "link": "https://amzn.eu/d/06dMUQTG" },
-      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-kai-s-elementaire-vuurmecha-71808/9300000157956156/" },
-      { "naam": "Suprabazar", "prijs": "€ 25,98", "link": "https://www.suprabazar.be/lego-ninjago-71808-kai-s-elementaire-vuurmecha-31452638" },
-      { "naam": "Dreamland", "prijs": "€ 29,95", "link": "https://www.dreamland.be/nl/producten/71808-lego-ninjago-kai-s-elementaire-vuurmecha/01756364" },
-      { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/kais-elemental-fire-mech-71808" },
-      { "naam": "MediaMarkt", "prijs": "€ 29,99", "link": "https://www.mediamarkt.be/nl/product/_71808-kais-elementaire-vuurmecha-2208485.html" },
-      { "naam": "Fnac", "prijs": "€ 34,97", "link": "https://www.nl.fnac.be/LEGO-71808-KAI-S-ELEMENTAL-FIRE-MECH/a18821632" }
-    ]
-  },
-  {
     "id": "lego-ninjago-lloyds-pull-back-race-car-71828",
     "naam": "LEGO NINJAGO Lloyds pull-back racewagen (71828)",
     "nummer": "71828",
@@ -549,13 +532,20 @@
     ]
   },
   {
-    "id": "lego-ninjago-kais-elemental-fire-mech-71808",
+    "id": "lego-ninjago-kais-elementaire-vuurmecha-71808",
     "naam": "LEGO NINJAGO Kai's elementaire vuurmecha (71808)",
     "nummer": "71808",
-    "beschrijving": "Laat de elementaire krachten los met Kai's vuurmecha! De mecha heeft verstelbare armen en benen, een groot zwaard en aanpasbare onderdelen. Inclusief 4 minifiguren waaronder Kai en Wolf Masker strijders.",
+    "beschrijving": "Strijd tegen de gemene Clan met Kai in zijn aanpasbare elementaire vuurmecha. Deze actiefiguur heeft beweegbare armen en benen die kunnen worden gecombineerd met onderdelen van andere NINJAGO mecha. Inclusief 4 minifiguren: Kai, Zane, Jordana en een Wolf Masker strijder.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt47c375a77ac76137/71808_alt1.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/kais-elemental-fire-mech-71808" }
+      { "naam": "Amazon NL", "prijs": "€ 19,99", "link": "https://amzn.eu/d/07JyCgmL" },
+      { "naam": "Amazon BE", "prijs": "€ 19,99", "link": "https://amzn.eu/d/06dMUQTG" },
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-kai-s-elementaire-vuurmecha-71808/9300000157956156/" },
+      { "naam": "Suprabazar", "prijs": "€ 25,98", "link": "https://www.suprabazar.be/lego-ninjago-71808-kai-s-elementaire-vuurmecha-31452638" },
+      { "naam": "Dreamland", "prijs": "€ 29,95", "link": "https://www.dreamland.be/nl/producten/71808-lego-ninjago-kai-s-elementaire-vuurmecha/01756364" },
+      { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/kais-elemental-fire-mech-71808" },
+      { "naam": "MediaMarkt", "prijs": "€ 29,99", "link": "https://www.mediamarkt.be/nl/product/_71808-kais-elementaire-vuurmecha-2208485.html" },
+      { "naam": "Fnac", "prijs": "€ 34,97", "link": "https://www.nl.fnac.be/LEGO-71808-KAI-S-ELEMENTAL-FIRE-MECH/a18821632" }
     ]
   },
   {

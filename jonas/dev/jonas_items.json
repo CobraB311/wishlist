@@ -130,23 +130,6 @@
     ]
   },
   {
-    "id": "lego-city-politie-gevangenentransport-60479",
-    "naam": "LEGO City Politie gevangenentransport (60479)",
-    "nummer": "60479",
-    "beschrijving": "Vervoer de boeven naar de gevangenis met deze stevige transportwagen. De set bevat een truck met gevangeniscel, een motor en drie minifiguren (een agent en twee boeven). De perfecte uitbreiding voor je LEGO City politiekorps om de straten veilig te houden.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt471b7741fe9cc2a2/60479_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 13,99", "link": "https://www.bol.com/be/nl/p/lego-city-politie-gevangenentransport-politiespeelgoed-voor-kinderen-jongens-en-meisjes-vanaf-6-jaar-bouwset-met-truck-en-motor-minifiguren-van-een-agent-en-2-boeven-cadeautip-voor-verjaardagen-60479/9300000237345478/" },
-      { "naam": "Amazon NL", "prijs": "€ 13,99", "link": "https://amzn.eu/d/0a6vxstc" },
-      { "naam": "Amazon BE", "prijs": "€ 13,99", "link": "https://amzn.eu/d/09q9PQPz" },
-      { "naam": "MediaMarkt", "prijs": "€ 15,99", "link": "https://www.mediamarkt.be/nl/product/_60479-politie-gevangenentransport-2208354.html" },
-      { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60479-lego-city-politie-gevangenentransport/02323589" },
-      { "naam": "Suprabazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-city-60479-politie-gevangentransport-32126596" },
-      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/police-prisoner-transport-van-60479" },
-      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-60479-POLICE-PRISONER-TRANSPORT-VAN/a22213485" }
-    ]
-  },
-  {
     "id": "lego-city-emergency-ambulance-60451",
     "naam": "LEGO City Emergency Ambulance (60451)",
     "nummer": "60451",
@@ -399,13 +382,20 @@
     ]
   },
   {
-    "id": "lego-city-police-prisoner-transport-van-60479",
-    "naam": "LEGO City Gevangenentransport (60479)",
+    "id": "lego-city-politie-gevangenentransport-60479",
+    "naam": "LEGO City Politie gevangenentransport (60479)",
     "nummer": "60479",
-    "beschrijving": "Vervoer gevaarlijke boeven veilig naar de cel met deze robuuste politiewagen! De set bevat een bepantserde transportbus met uitbreekfunctie, een snelle achtervolgingsmotor en minifiguren van agenten en een boef.",
+    "beschrijving": "Vervoer de boeven naar de gevangenis met deze stevige transportwagen. De set bevat een truck met gevangeniscel, een motor en drie minifiguren (een agent en twee boeven). De perfecte uitbreiding voor je LEGO City politiekorps om de straten veilig te houden.",
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt471b7741fe9cc2a2/60479_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/police-prisoner-transport-van-60479" }
+      { "naam": "Bol.com", "prijs": "€ 13,99", "link": "https://www.bol.com/be/nl/p/lego-city-politie-gevangenentransport-politiespeelgoed-voor-kinderen-jongens-en-meisjes-vanaf-6-jaar-bouwset-met-truck-en-motor-minifiguren-van-een-agent-en-2-boeven-cadeautip-voor-verjaardagen-60479/9300000237345478/" },
+      { "naam": "Amazon NL", "prijs": "€ 13,99", "link": "https://amzn.eu/d/0a6vxstc" },
+      { "naam": "Amazon BE", "prijs": "€ 13,99", "link": "https://amzn.eu/d/09q9PQPz" },
+      { "naam": "MediaMarkt", "prijs": "€ 15,99", "link": "https://www.mediamarkt.be/nl/product/_60479-politie-gevangenentransport-2208354.html" },
+      { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60479-lego-city-politie-gevangenentransport/02323589" },
+      { "naam": "Suprabazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-city-60479-politie-gevangentransport-32126596" },
+      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/police-prisoner-transport-van-60479" },
+      { "naam": "Fnac", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-60479-POLICE-PRISONER-TRANSPORT-VAN/a22213485" }
     ]
   },
   {

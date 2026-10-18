@@ -186,16 +186,6 @@
     ]
   },
   {
-    "id": "lego-city-burger-truck-60404",
-    "naam": "LEGO City Burgertruck (60404)",
-    "nummer": "60404",
-    "beschrijving": "Serveerde heerlijkste burgers van de stad met deze mobiele burgerkraam! Inclusief een keukengedeelte, een afneembare giant-burger op het dak, plus minifiguren van de verkoper en een klant met gehoorapparaat.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltc8e139c1b13be9a6/60404.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/burger-truck-60404" }
-    ]
-  },
-  {
     "id": "lego-city-off-road-4x4-mountain-truck-60447",
     "naam": "LEGO City Terreinwagen 4x4 bergavontuur (60447)",
     "nummer": "60447",
@@ -236,16 +226,6 @@
     ]
   },
   {
-    "id": "lego-city-fries-food-truck-60488",
-    "naam": "LEGO City Frietkraam wagen (60488)",
-    "nummer": "60488",
-    "beschrijving": "Verkoop de knapperigste frietjes van de stad met deze vrolijke foodtruck! Voorzien van een bakfrituur, sausflessen en minifiguren van een verkoper en een hongerige klant.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blte1c4d3536caf989d/60488_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/fries-food-truck-60488" }
-    ]
-  },
-  {
     "id": "lego-city-snowplow-60490",
     "naam": "LEGO City Sneeuwruimer (60490)",
     "nummer": "60490",
@@ -253,16 +233,6 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltb5d9e3af6b052c23/60490_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 24,99", "link": "https://www.lego.com/nl-be/product/snowplow-60490" }
-    ]
-  },
-  {
-    "id": "lego-city-the-lego-van-60500",
-    "naam": "LEGO City De LEGO Bus (60500)",
-    "nummer": "60500",
-    "beschrijving": "Een speciale LEGO merkbus voor het vervoer van LEGO sets en fan-artikelen! Uitgerust met een ruim laadruim, gele LEGO branding en minifiguren.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt7227dad36b7504b2/60500_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/the-lego-van-60500" }
     ]
   },
   {

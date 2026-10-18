@@ -51,6 +51,56 @@
     ]
   },
   {
+    "id": "lego-duplo-3-in-1-creative-ramps-with-vehicles-10478",
+    "naam": "LEGO DUPLO 3-in-1 Creatieve hellingen met voertuigen (10478)",
+    "nummer": "10478",
+    "beschrijving": "Bouw en race met deze veelzijdige 3-in-1 set! Jonge bouwers kunnen 3 verschillende hellingen en parcoursen creëren voor de meegeleverde kleurrijke voertuigen. Stimuleert de fijne motoriek en het ruimtelijk inzicht.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltf5b4a200730f4f26/blt089ab96e431c2cf3-10478_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "LEGO.com", "prijs": "€ 69,99", "link": "https://www.lego.com/nl-be/product/3-in-1-creative-ramps-with-vehicles-10478" }
+    ]
+  },
+  {
+    "id": "lego-marvel-spidey-underwater-vehicles-11207",
+    "naam": "LEGO Marvel Spidey onderwatervoertuigen (11207)",
+    "nummer": "11207",
+    "beschrijving": "Duik de actie in met Spidey en zijn vrienden! Deze 4+ set bevat kleurrijke onderwatervoertuigen met grote startelementen, plus figuren van Spidey en zijn team voor eenvoudige en plezierige bouwervaringen.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt2aa34d0d05466003/11207_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "LEGO.com", "prijs": "€ 34,99", "link": "https://www.lego.com/nl-be/product/spidey-underwater-vehicles-11207" }
+    ]
+  },
+  {
+    "id": "lego-marvel-spidey-on-his-motorcycle-vs-rhino-11206",
+    "naam": "LEGO Marvel Spidey op zijn motor vs. Rhino (11206)",
+    "nummer": "11206",
+    "beschrijving": "Scheur de strijd tegemoet met Spidey op zijn coole motor! Help Spidey de sterke Rhino te stoppen in deze snel te bouwen 4+ set, inclusief Spidey-motor en een Rhino-figuur met accessoires.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt955107cf5938ed2b/11206_Box1_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/spidey-on-his-motorcycle-vs-rhino-11206" }
+    ]
+  },
+  {
+    "id": "lego-marvel-ultron-vs-iron-man-11209",
+    "naam": "LEGO Marvel Ultron vs. Iron Man (11209)",
+    "nummer": "11209",
+    "beschrijving": "Help Iron Man de schurkachtige Ultron te verslaan! Speciaal ontworpen voor jonge bouwers vanaf 4 jaar met eenvoudig te bouwen elementen, een voertuig en minifiguren van Iron Man en Ultron.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8b66bb4efe27d631/blt433144f615e7dff5-11209_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/ultron-vs-iron-man-11209" }
+    ]
+  },
+  {
+    "id": "lego-marvel-loki-vs-team-iron-man-11211",
+    "naam": "LEGO Marvel Loki vs. Team Iron Man (11211)",
+    "nummer": "11211",
+    "beschrijving": "Stop de kattenkwaad van Loki met Team Iron Man! Deze speelset voor jonge helden bevat een hoofdkwartier, superhelden-voertuigen en meerdere minifiguren voor eindeloos actievol speelplezier.",
+    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt91b2c1c8367ce11c/blta0abb3c51d6932a3-11211_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
+    "winkels": [
+      { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/loki-vs-team-iron-man-11211" }
+    ]
+  },
+  {
     "id": "lego-71853-jay",
     "naam": "LEGO NINJAGO Jay's drakenmechastrijd (71853)",
     "beschrijving": "Help Jay om de kwaadaardige krachten te verslaan met deze beweegbare mecha en drakenkracht! Inclusief 2 minifiguren.",

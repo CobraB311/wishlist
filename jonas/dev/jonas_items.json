@@ -630,24 +630,6 @@
     ]
   },
   {
-    "id": "set-lego-76336-spiderman-wolverine",
-    "naam": "LEGO® Marvel Spider-Man Auto vs. Venomized Wolverine",
-    "nummer": "76336",
-    "beschrijving": "Zet de achtervolging in met de Spider-Man auto en neem het op tegen de angstaanjagende Venomized Wolverine! Deze set bevat een coole auto met spinnenweb-details en twee iconische minifiguren voor legendarische Marvel-gevechten.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt9efb044b9275c39d/76336_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/lego-spider-man-auto-vs-venomized-wolverine-76336/02323657" },
-      { "naam": "Amazon.nl", "prijs": "€ 15,97", "link": "https://amzn.eu/d/j8eoI6z" },
-      { "naam": "Amazon.com.be", "prijs": "€ 15,97", "link": "https://amzn.eu/d/064gOCz" },
-      { "naam": "Bol.com", "prijs": "€ 19,00", "link": "https://www.bol.com/be/nl/p/lego-marvel-76336/9300000237345463/" },
-      { "naam": "MediaMarkt", "prijs": "€ 17,99", "link": "https://www.mediamarkt.be/nl/product/_76336-spider-man-vs-wolverine-2208581.html" },
-      { "naam": "Fnac.be", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-76336-SUPER-HEROES/a22213448" },
-      { "naam": "SupraBazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-super-heroes-76336-spider-man-auto-vs.-venomized-wolverine-32140540" },
-      { "naam": "LEGO® Shop BE", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/spider-man-car-vs-venomized-wolverine-76336" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/en-BE/set/76336/Spider-Man-Car-vs-Venomized-Wolverine.html" }
-    ]
-  },
-  {
     "id": "lego-marvel-spider-man-mech-vs-anti-venom-76308",
     "naam": "LEGO Marvel Spider-Man mecha vs. Anti-Venom (76308)",
     "nummer": "76308",
@@ -660,29 +642,6 @@
     ]
   },
   {
-    "id": "lego-marvel-spider-man-vs-venom-muscle-car-76309",
-    "naam": "LEGO Marvel Spider-Man vs. Venom musclecar (76309)",
-    "nummer": "76309",
-    "beschrijving": "Achtervolg de overgenomen musclecar van Venom met Spider-Man! Het voertuig is voorzien van grillige Venom-details en studshooters. Inclusief minifiguren van Spider-Man en Venom voor actievolle straatvechtpartijen.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltf2546c13fb1fccfc/76309_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/spider-man-vs-venom-muscle-car-76309" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76309/Spider-Man-vs.-Venom-Muscle-Car.html" }
-    ]
-  },
-  {
-    "id": "lego-marvel-avengers-endgame-thor-vs-chitauri-76322",
-    "naam": "LEGO Marvel Avengers: Endgame Thor vs. Chitauri (76322)",
-    "nummer": "76322",
-    "beschrijving": "Beleef het epische eindgevecht uit Avengers: Endgame! Help Thor met Stormbreaker en Mjolnir om het op te nemen tegen de Chitauri-krijgers en hun zweefvoertuig. Inclusief bliksem-effecten en gedetailleerde minifiguren.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltb27d847830dc6ff9/76322_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/avengers-endgame-thor-vs-chitauri-76322" },
-      { "naam": "Bol.com", "prijs": "€ 49,28", "link": "https://www.bol.com/be/nl/p/lego-marvel-avengers-endgame-thor-vs-chitauri-76322/9300000227400255/?referrer=socialshare_pdp_www" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76322/Avengers-Endgame-Thor-vs.-Chitauri.html" }
-    ]
-  },
-  {
     "id": "lego-marvel-iron-mans-laboratory-hall-of-armor-76315",
     "naam": "LEGO Marvel Iron Man's laboratorium: Hall of Armor (76315)",
     "nummer": "76315",
@@ -692,29 +651,6 @@
       { "naam": "LEGO.com", "prijs": "€ 54,99", "link": "https://www.lego.com/nl-be/product/iron-mans-laboratory-hall-of-armor-76315" },
       { "naam": "Bol.com", "prijs": "€ 52,14", "link": "https://www.bol.com/be/nl/p/lego-marvel-iron-mans-laboratorium-harnasruimte-set-76315/9300000198889978/?referrer=socialshare_pdp_www" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76315/Iron-Mans-Laboratory-Hall-of-Armor.html" }
-    ]
-  },
-  {
-    "id": "lego-marvel-iron-man-mech-vs-ultron-76307",
-    "naam": "LEGO Marvel Iron Man mecha vs. Ultron (76307)",
-    "nummer": "76307",
-    "beschrijving": "Plaats Iron Man in de cockpit van zijn machtige mecha en strijd tegen Ultron! De mecha heeft verstelbare armen en benen plus een noppenschieter. Inclusief minifiguren van Iron Man en Ultron.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltbbd2b63929332cac/76307_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 14,99", "link": "https://www.lego.com/nl-be/product/iron-man-mech-vs-ultron-76307" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76307/Iron-Man-Mech-vs.-Ultron.html" }
-    ]
-  },
-  {
-    "id": "lego-marvel-iron-man-war-machine-vs-hammer-drones-76320",
-    "naam": "LEGO Marvel Iron Man & War Machine vs. Hammer Drones (76320)",
-    "nummer": "76320",
-    "beschrijving": "Sla de handen ineen met Iron Man en War Machine om de gevaarlijke Hammer Drones uit te schakelen! Deze actievolle set bevat schietmechanismen en minifiguren met diverse energy-blast elementen.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt1e367e067f574223/76320_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/iron-man-war-machine-vs-hammer-drones-76320" },
-      { "naam": "Bol.com", "prijs": "€ 17,94", "link": "https://www.bol.com/be/nl/p/lego-marvel-iron-man-en-war-machine-vs-hammer-drones-76320/9300000227400259/?referrer=socialshare_pdp_www" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76320/Iron-Man--War-Machine-vs.-Hammer-Drones.html" }
     ]
   },
   {

@@ -212,36 +212,6 @@
     ]
   },
   {
-    "id": "set-lego-60485-hot-rod",
-    "naam": "LEGO® City Hot Rod",
-    "nummer": "60485",
-    "beschrijving": "Geef plankgas met deze klassieke Hot Rod! Deze stoere modelauto heeft een afneembaar dak en een minifiguur van een coureur. Een perfect klein cadeautje voor jonge racefans vanaf 5 jaar.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt85e8e4843d76c937/60485_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/lego-city-60485/9300000237345422/" },
-      { "naam": "Amazon.nl", "prijs": "€ 6,99", "link": "https://amzn.eu/d/eJJN1LU" },
-      { "naam": "Amazon.com.be", "prijs": "€ 7,14", "link": "https://amzn.eu/d/fKc8W3l" },
-      { "naam": "DreamLand", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/lego-city-hot-rod-60485/02323909" },
-      { "naam": "MediaMarkt", "prijs": "€ 9,99", "link": "https://www.mediamarkt.be/nl/product/_60485-hot-rod-2208359.html" },
-      { "naam": "Fnac.be", "prijs": "€ 9,99", "link": "https://www.nl.fnac.be/LEGO-60485-HOT-ROD/a22209300" },
-      { "naam": "SupraBazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/lego-city-60485-hot-rod-32126597" },
-      { "naam": "LEGO® Shop BE", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/hot-rod-60485" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/en-BE/set/60485/Hot-Rod.html" }
-    ]
-  },
-  {
-    "id": "lego-city-ev-supercar-60486",
-    "naam": "LEGO City EV Supercar (60486)",
-    "nummer": "60486",
-    "beschrijving": "Rijd de toekomst tegemoet met deze gestroomlijnde elektrische supercar! De set bevat een futuristische sportwagen, een oplaadpaal en een minifiguur van een coureur voor snelle actie op het circuit.",
-    "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt18a843382a958803/60486_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
-    "winkels": [
-      { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/ev-supercar-60486" },
-      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/lego-city-ev-supercar-bouwset-elektrische-sportauto-voor-jongens-meisjes-en-fans-vanaf-5-jaar-raceauto-met-minifiguur-van-coureur-klein-cadeautje-voor-een-kinderverjaardag-60486/9300000237345438/?referrer=socialshare_pdp_www" },
-      { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60486/EV-Supercar.html" }
-    ]
-  },
-  {
     "id": "lego-city-yellow-taxi-60487",
     "naam": "LEGO City Gele taxi (60487)",
     "nummer": "60487",

@@ -439,7 +439,9 @@ async function loadWishlist() {
 
         if (config.datum) {
             const lastUpdateEl = document.getElementById('last-update-text');
-            if (lastUpdateEl) lastUpdateEl.innerText = `Laatste update: ${config.datum}`;
+            if (lastUpdateEl) {
+                lastUpdateEl.innerHTML = `Lijst & prijzen bijgewerkt op: ${config.datum}<br><span class="last-update-sub">(Gekochte items worden direct verwerkt)</span>`;
+            }
         }
 
         if (config.banner_afbeelding) {

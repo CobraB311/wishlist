@@ -1,6 +1,6 @@
 {
   "wenslijst_titel": "Eindejaar wenslijst",
-  "datum": "2026-10-18",
+  "datum": "2026-10-25",
   "groet_tekst": "Fijne feestdagen!",
   "banner_afbeelding": "https://lego.bricksmegastore.com/cdn/shop/articles/xmas_banner_f1762cb8-6703-4499-8cfa-a5fe9ef5a675.png?v=1762476555&width=1280",
   "aftel_datum": "2026-12-25T00:00:00",
@@ -21,5 +21,6 @@
     { "naam": "Milan", "data_file": "../../../milan/dev/milan_items.json" }
   ],
   "inventaris_links_file": "inventory_links.json",
-  "gezamenlijke_items_file": "gezamenlijk_items.json"
+  "gezamenlijke_items_file": "gezamenlijk_items.json",
+  "koop_knop_tekst": "Ik koop voor {naam}!"
 }

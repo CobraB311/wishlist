@@ -197,12 +197,16 @@ async function claimItem(person, itemName, id) {
             return;
         }
 
+        const confirmBtnText = (person && person.toLowerCase() !== 'gezamenlijk')
+            ? `Ja, ik koop voor ${person}!`
+            : "Ja, ik koop dit!";
+
         updateModalUI({
             title: "Cadeau gekocht?",
             text: `Markeer "${itemName}" als gekocht.\n\n⚠️ Dit wordt direct bijgewerkt op de website.`,
             showSpinner: false,
             showButtons: true,
-            confirmText: "Ja, ik koop dit!",
+            confirmText: confirmBtnText,
             cancelText: "Annuleren",
             onConfirm: function() {
                 updateModalUI({
@@ -260,8 +264,25 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
         const total = person.items.length, bought = person.items.filter(i => purchasedIds.has(i.id)).length, perc = total > 0 ? Math.round((bought / total) * 100) : 0;
 
         navHtml += `<button class="tab-button" onclick="openTab(event, '${tabId}')"><span class="tab-info">${person.naam}</span><span class="tab-stats">${bought}/${total} gekocht</span><div class="katana-progress"><div class="katana-blade" style="width: ${perc}%"></div></div></button>`;
-        listsHtml += `<div id="${tabId}" class="tab-content"><h2>Wensen van ${person.naam}</h2>`;
-        overviewHtml += `<h3>${person.naam}</h3><div class="overview-grid">`;
+
+        const isGezamenlijk = person.naam.toLowerCase() === 'gezamenlijk';
+        const template = (currentConfig && currentConfig.koop_knop_tekst) || "Ik koop voor {naam}!";
+        const buyBtnText = isGezamenlijk ? 'Ik koop dit!' : template.replace('{naam}', person.naam);
+        const headerTitle = isGezamenlijk ? `Wensen ${person.naam}` : `Wensen van ${person.naam}`;
+
+        listsHtml += `
+            <div id="${tabId}" class="tab-content">
+                <div class="person-sticky-header">
+                    <h2>🎁 ${headerTitle}</h2>
+                    <span class="person-sticky-badge">${person.naam}</span>
+                </div>`;
+
+        overviewHtml += `
+            <div class="overview-section">
+                <div class="overview-person-header">
+                    <h3>🎁 ${person.naam}</h3>
+                </div>
+                <div class="overview-grid">`;
 
         person.items.sort((a,b) => (favoriteIds.has(b.id)?1:0) - (favoriteIds.has(a.id)?1:0)).forEach(item => {
             const isP = purchasedIds.has(item.id), isF = favoriteIds.has(item.id), low = getLowestPriceInfo(item.winkels), overlay = isP ? `<div class="purchased-overlay">GEKOCHT</div>` : '';
@@ -280,7 +301,7 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
                             ${item.winkels.map((w, idx) => `<a href="${w.link}" target="_blank" class="price-link ${idx === low.index ? 'lowest' : ''}"><span class="shop-name">${w.naam}</span><span class="shop-price">${w.prijs}</span><span class="shop-go">Bekijk</span></a>`).join('')}
                         </div>
                         <div class="button-row">
-                            ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">Ik koop dit!</button>` : ''}
+                            ${!isP ? `<button class="buy-button" onclick="claimItem('${person.naam}', '${item.naam.replace(/'/g, "\\'")}', '${item.id}')">${buyBtnText}</button>` : ''}
                             ${vidBtn}
                         </div>
                     </div>
@@ -288,14 +309,17 @@ function generateWishlistContent(data, purchasedIds, favoriteIds) {
 
             overviewHtml += `<div class="overview-grid-item ${isP ? 'purchased' : ''} ${isF ? 'favorite-item' : ''}" onclick="scrollToItem('${person.naam}', '${item.id}')"><div class="overview-image-wrapper">${overlay}<img src="${item.afbeelding_url}"></div>${isF ? '<div class="mini-star">★</div>' : ''}<div class="overview-caption">${item.naam}</div><div class="overview-price">Vanaf ${low.prijs} ${item.video_id ? '🎬' : ''}</div></div>`;
         });
-        listsHtml += `</div>`; overviewHtml += `</div>`;
+        listsHtml += `</div>`; overviewHtml += `</div></div>`;
     });
 
     if (data.inventaris_links && data.inventaris_links.length > 0) {
         navHtml += `<button class="tab-button" onclick="openTab(event, 'inventory-content')"><span class="tab-info">Inventaris</span></button>`;
         listsHtml += `
             <div id="inventory-content" class="tab-content">
-                <h2>Onze Inventaris</h2>
+                <div class="person-sticky-header">
+                    <h2>📦 Onze Inventaris</h2>
+                    <span class="person-sticky-badge">Collectie</span>
+                </div>
                 <p class="inventory-intro">Dit zijn overzichten van speelgoed en collecties die we al hebben, om dubbele cadeaus te voorkomen.</p>
                 <div class="inventory-links-container">
                     ${data.inventaris_links.map(l => `

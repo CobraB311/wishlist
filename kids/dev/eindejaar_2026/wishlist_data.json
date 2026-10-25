@@ -10,13 +10,13 @@
   "claims_error_titel": "Onze excuses!",
   "claims_error_tekst": "We konden de actuele status van de cadeaus momenteel niet ophalen. Om te voorkomen dat cadeaus per ongeluk dubbel worden gekocht, zijn de verlanglijstjes tijdelijk niet zichtbaar.",
   "quotes": [
-    "Stel nooit uit tot morgen wat je vandaag kunt doen.",
-    "Ninja, GO!",
-    "Ninja geven nooit op!",
-    "De beste manier om een vijand te verslaan, is door hem tot je vriend te maken.",
-    "Zoals ijzer ijzer scherpt, scherpt broeder broeder.",
-    "Het gaat niet om de grootte van de ninja in het gevecht, maar om de grootte van het gevecht in de ninja.",
-    "Je kunt alleen degenen redden die gered willen worden."
+    "Fijne feestdagen en een gelukkig nieuwjaar!",
+    "Ho ho ho! Vrolijk kerstfeest!",
+    "Mag je kerst gevuld zijn met warmte, gezelligheid en liefde.",
+    "De beste kerstcadeaus vind je niet onder de boom, maar in het gezelschap van elkaar.",
+    "Laat de feestdagen maar beginnen!",
+    "Moge je dagen sprankelen van vreugde en je kerst vol magie zijn.",
+    "Warme kerstwensen voor het hele gezin!"
   ],
   "personen": [
     { "naam": "Jonas", "data_file": "../../../jonas/dev/jonas_items.json" },

@@ -248,6 +248,55 @@ async function claimItem(person, itemName, id) {
     }
 }
 
+function showClaimsError() {
+    const controls = document.querySelector('.controls-container');
+    if (controls) controls.style.display = 'none';
+
+    const nav = document.getElementById('dynamic-tab-nav');
+    if (nav) nav.innerHTML = '';
+
+    const listContainer = document.getElementById('person-lists-container');
+    if (listContainer) listContainer.innerHTML = '';
+
+    const title = (currentConfig && currentConfig.claims_error_titel) || "Onze excuses!";
+    const text = (currentConfig && currentConfig.claims_error_tekst) || "We konden de actuele status van de cadeaus momenteel niet ophalen. Om te voorkomen dat cadeaus per ongeluk dubbel worden gekocht, zijn de verlanglijstjes tijdelijk niet zichtbaar.";
+
+    const overview = document.getElementById('overview-grid-container');
+    if (overview) {
+        overview.innerHTML = `
+            <div class="claims-error-card">
+                <div class="claims-error-icon">⚠️</div>
+                <h2>${title}</h2>
+                <p>${text}</p>
+                <p class="claims-error-sub">Even geduld alstublieft, je kunt de pagina zo meteen opnieuw proberen te laden.</p>
+                <div class="retry-wrapper">
+                    <button id="claims-retry-btn" class="retry-btn" disabled onclick="location.reload()">
+                        Opnieuw proberen in <span id="retry-countdown">10</span>s
+                    </button>
+                </div>
+            </div>
+        `;
+    }
+
+    let timeLeft = 10;
+    const countdownEl = document.getElementById('retry-countdown');
+    const retryBtn = document.getElementById('claims-retry-btn');
+
+    const countdownInterval = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+            if (countdownEl) countdownEl.innerText = timeLeft;
+        } else {
+            clearInterval(countdownInterval);
+            if (retryBtn) {
+                retryBtn.disabled = false;
+                retryBtn.classList.add('ready');
+                retryBtn.innerHTML = '🔄 Opnieuw proberen';
+            }
+        }
+    }, 1000);
+}
+
 function generateWishlistContent(data, purchasedIds, favoriteIds) {
     const nav = document.getElementById('dynamic-tab-nav'), listContainer = document.getElementById('person-lists-container'), overview = document.getElementById('overview-grid-container');
     let navHtml = `<button class="tab-button active" onclick="openTab(event, 'overview-content')"><span class="tab-info">Overzicht</span></button>`;
@@ -375,7 +424,6 @@ function getLowestPriceInfo(winkels) {
 
 async function loadWishlist() {
     setInterval(createBubbles, 500);
-    setInterval(refreshClaims, 30000);
 
     try {
         const config = await fetch('wishlist_data.json').then(r => r.json());
@@ -403,15 +451,43 @@ async function loadWishlist() {
             startCountdown(config.aftel_datum, config.aftel_naam || "Jonas", config.countdown_label, config.countdown_eindtekst);
         }
 
-        const claims = await fetch(CONFIG.GOOGLE_SHEET_URL).then(r => r.json()).catch(() => ({purchased_items:[]}));
+        // Strikte controle op claims bij initiële load
+        let claims = null;
+        try {
+            const signal = (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) ? AbortSignal.timeout(10000) : undefined;
+            const claimsRes = await fetch(CONFIG.GOOGLE_SHEET_URL, { signal });
+            if (!claimsRes.ok) throw new Error("HTTP status " + claimsRes.status);
+            const claimsData = await claimsRes.json();
+            if (!claimsData || !Array.isArray(claimsData.purchased_items)) {
+                throw new Error("Ongeldig claims formaat");
+            }
+            claims = claimsData;
+        } catch (claimsErr) {
+            console.error("Claims ophalen mislukt bij start:", claimsErr);
+        }
+
+        if (!claims) {
+            showClaimsError();
+            return;
+        }
+
         globalPurchasedIds = new Set(claims.purchased_items);
         const favs = await fetch('favorites.json').then(r => r.json()).catch(() => ({favorite_ids:[]}));
         const pData = await Promise.all(config.personen.map(async p => ({ naam: p.naam, items: await fetch(p.data_file).then(r => r.json()) })));
         const rGez = await fetch(config.gezamenlijke_items_file).then(r => r.json()).catch(() => []);
         const rInv = config.inventaris_links_file ? await fetch(config.inventaris_links_file).then(r => r.json()).catch(() => []) : [];
         generateWishlistContent({...config, personen: pData, gezamenlijke_items: {naam: "Gezamenlijk", items: rGez}, inventaris_links: rInv}, globalPurchasedIds, new Set(favs.favorite_ids));
-        document.getElementById('loading-message').style.display = 'none';
-    } catch (e) { console.error(e); }
+        
+        const loadingMsg = document.getElementById('loading-message');
+        if (loadingMsg) loadingMsg.style.display = 'none';
+
+        // Start achtergrond-refresh pas nadat initiële claims succesvol geladen zijn
+        setInterval(refreshClaims, 30000);
+
+    } catch (e) {
+        console.error(e);
+        showClaimsError();
+    }
 }
 
 window.onscroll = function() {

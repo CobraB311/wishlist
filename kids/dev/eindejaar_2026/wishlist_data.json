@@ -7,6 +7,8 @@
   "aftel_naam": "Jonas & Milan",
   "countdown_label": "Het kerstfeest start over:",
   "countdown_eindtekst": "🎄 VROLIJK KERSTFEEST {naam}! 🎁",
+  "claims_error_titel": "Onze excuses!",
+  "claims_error_tekst": "We konden de actuele status van de cadeaus momenteel niet ophalen. Om te voorkomen dat cadeaus per ongeluk dubbel worden gekocht, zijn de verlanglijstjes tijdelijk niet zichtbaar.",
   "quotes": [
     "Stel nooit uit tot morgen wat je vandaag kunt doen.",
     "Ninja, GO!",

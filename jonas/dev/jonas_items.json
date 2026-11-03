@@ -787,6 +787,26 @@
     ]
   },
   {
+    "id": "star-wars-power-crystal-lightsaber",
+    "naam": "Star Wars Power Crystal Lightsaber",
+    "nummer": "9300000225966634",
+    "beschrijving": "Interactieve Star Wars Power Crystal Lightsaber met licht- en geluidseffecten. Inclusief kyberkristallen om de kleur van het lichtzwaard te veranderen, geschikt voor kinderen vanaf 4 jaar.",
+    "afbeelding_url": "https://media.s-bol.com/r4359KLrrrGW/Z4wjDNv/1200x1090.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 49,99", "link": "https://www.bol.com/be/nl/p/star-wars-power-crystal-lightsaber-star-wars-speelgoed-voor-kinderen-van-4/9300000225966634/" }
+    ]
+  },
+  {
+    "id": "teenage-mutant-ninja-turtles-mix-n-match-donatello",
+    "naam": "Teenage Mutant Ninja Turtles Mix 'N Match Donatello",
+    "nummer": "9300000236735718",
+    "beschrijving": "Mix 'N Match Donatello actiefiguur uit Teenage Mutant Ninja Turtles. Verwisselbare onderdelen om je eigen unieke Turtle-mutant te creëren.",
+    "afbeelding_url": "https://media.s-bol.com/JpgELRWKlwR2/zmEkM67/1053x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/teenage-mutant-ninja-turtles-mix-n-match-donatello/9300000236735718/" }
+    ]
+  },
+  {
     "id": "monster-jam-spiderman-vs-venom-9300000178192365",
     "naam": "Monster Jam - Marvel Venom vs. The Amazing Spider-Man",
     "nummer": "778988350130",
@@ -827,18 +847,6 @@
     ]
   },
   {
-    "id": "uno-flip-draagtas-speelkaarten",
-    "naam": "UNO Flip Draagtas voor speelkaarten",
-    "nummer": "5913",
-    "beschrijving": "Houd je UNO Flip kaarten veilig en georganiseerd in deze speciale paars-gele draagtas. Net zo stevig als de klassieke versie, maar uitgevoerd in de herkenbare kleuren van de Flip-editie. Voorzien van een handige rits en opbergvakken.",
-    "afbeelding_url": "https://media.s-bol.com/RGPY8xOY08Nw/58RGD2q/1079x1200.jpg",
-    "winkels": [
-      { "naam": "Amazon NL", "prijs": "€ 16,88", "link": "https://amzn.eu/d/01Ggopzu" },
-      { "naam": "Bol.com", "prijs": "€ 9,34", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/" },
-      { "naam": "Amazon BE", "prijs": "€ 16,14", "link": "https://amzn.eu/d/09jebDd9" }
-    ]
-  },
-  {
     "id": "vier-op-een-rij-reisspel",
     "naam": "Vier op een rij reisspel",
     "nummer": "B1000",
@@ -863,6 +871,46 @@
       { "naam": "Bol.com", "prijs": "€ 16,50", "link": "https://www.bol.com/be/nl/p/smartgames-squirrels-go-nuts-60-opdrachten-denkpuzzel-eekhoorns/9200000091828788/" },
       { "naam": "DreamLand", "prijs": "€ 17,99", "link": "https://www.dreamland.be/nl/producten/smartgames-squirrels-go-nuts-compact-denkspel-60-opdrachten/01321302" },
       { "naam": "Amazon.com.be", "prijs": "€ 17,95", "link": "https://amzn.eu/d/00au1R3i" }
+    ]
+  },
+  {
+    "id": "banana-joe-actiespel-kinderspel",
+    "naam": "Banana Joe - Actiespel Kinderspel",
+    "nummer": "9200000093309555",
+    "beschrijving": "Spannend kinderspel waarin spelers bananen van het aapje Banana Joe moeten plukken, maar pas op: hij kan op elk moment omhoog springen!",
+    "afbeelding_url": "https://media.s-bol.com/gqXP9zzzERkY/YEBLVjK/550x485.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 19,00", "link": "https://www.bol.com/be/nl/p/banana-joe-actiespel-kinderspel/9200000093309555/" }
+    ]
+  },
+  {
+    "id": "code-breaking-bordspellen-reisspellen-kraak-de-code",
+    "naam": "Code Breaking - Kraak de Code Reisspel",
+    "nummer": "9300000185372712",
+    "beschrijving": "Compact en uitdagend codekrakerspel in reisformaat. Test je logisch denkvermogen en gepuzzel door de geheime kleurencodes van je tegenstander te ontrafelen.",
+    "afbeelding_url": "https://media.s-bol.com/PqyjOp0O7yzw/5yKZN88/1200x1192.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,89", "link": "https://www.bol.com/be/nl/p/code-breaking-bordspellen-reisspellen-kraak-de-code-spellen/9300000185372712/" }
+    ]
+  },
+  {
+    "id": "999-games-halli-galli",
+    "naam": "999 Games Halli Galli Spel",
+    "nummer": "1004004000008442",
+    "beschrijving": "Het razendsnelle reactiespel met de bekende bel! Draai kaarten om met verschillende soorten fruit en druk als eerste op de bel zodra er precies 5 van hetzelfde fruit te zien zijn.",
+    "afbeelding_url": "https://media.s-bol.com/Nw2r85wOMM2D/DRrL8XY/1200x878.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 15,99", "link": "https://www.bol.com/be/nl/p/999-games-spel-halli-galli/1004004000008442/" }
+    ]
+  },
+  {
+    "id": "ravensburger-rush-hour-deluxe-2025-puzzel-denkspel",
+    "naam": "Ravensburger Rush Hour Deluxe 2025 Puzzel Denkspel",
+    "nummer": "9300000194454546",
+    "beschrijving": "Het ultieme schuifpuzzel denkspel in Deluxe uitvoering. Verschuif de auto's en vrachtwagens om de rode auto uit de file te laten ontsnappen via 60 verschillende uitdagende opdrachten.",
+    "afbeelding_url": "https://media.s-bol.com/qqYN9glDkBJr/M8x6qLQ/1195x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 22,48", "link": "https://www.bol.com/be/nl/p/ravensburger-rush-hour-deluxe-2025-puzzel-denkspel/9300000194454546/" }
     ]
   },
   {

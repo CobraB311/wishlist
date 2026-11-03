@@ -10,6 +10,16 @@
     ]
   },
   {
+    "id": "yoshi-and-the-mysterious-book-nintendo-switch-2",
+    "naam": "Yoshi and the Mysterious Book - Nintendo Switch 2",
+    "nummer": "9300000267826680",
+    "beschrijving": "Ga op een kleurrijk avontuur met Yoshi op de Nintendo Switch 2 en ontrafel de geheimen van het mysterieuze boek.",
+    "afbeelding_url": "https://media.s-bol.com/g3o1voJy6w63/KZX0qgJ/742x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 59,99", "link": "https://www.bol.com/be/nl/p/yoshi-and-the-mysterious-book-nintendo-switch-2/9300000267826680/" }
+    ]
+  },
+  {
     "id": "mepal-drinkfles-met-flipdop-campus-600-ml-paw-patrol-dino",
     "naam": "Mepal Drinkfles met flipdop Campus 600 ml - Paw Patrol Dino",
     "nummer": "9300000317155772",
@@ -39,6 +49,16 @@
       { "naam": "Dreamland", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/spiderman-interactief-horloge/01577549" },
       { "naam": "Amazon BE", "prijs": "€ 47,88", "link": "https://amzn.eu/d/03vrB3Tr" },
       { "naam": "Bol.com", "prijs": "€ 56,25", "link": "https://www.bol.com/be/nl/p/accutime-spider-man-smartwatch-kinderen-selfie-camera-foto-video-rood/9300000020095146/" }
+    ]
+  },
+  {
+    "id": "pokemon-bel-sleutelhanger-charmander",
+    "naam": "Pokémon Bel Sleutelhanger - Charmander",
+    "nummer": "pokemon-charmander-keychain",
+    "beschrijving": "Kleurrijke en schattige Pokémon sleutelhanger met een bellend belletje van Charmander.",
+    "afbeelding_url": "https://files.cardgameshop.be/cache/products/images/0/i/e/800x800/3/2/83f5234683ca886f3300d48a67a41b58b11fd2/pokemon-bel-sleutelhanger-charmander.webp",
+    "winkels": [
+      { "naam": "Card Game Shop", "prijs": "€ 9,95", "link": "https://www.cardgameshop.be/nl/producten/pokemon-bel-sleutelhanger-charmander" }
     ]
   },
   {

@@ -40,6 +40,16 @@
     ]
   },
   {
+    "id": "mepal-fruitbox-campus-300-ml-paw-patrol-dino",
+    "naam": "Mepal Fruitbox Campus 300 ml - Paw Patrol Dino",
+    "nummer": "9300000317155774",
+    "beschrijving": "Handig Mepal Campus fruitdoosje (300 ml) inclusief fruitvorkje. Sluit goed af en is ideaal voor mee naar school, uitgevoerd in Paw Patrol Dino thema.",
+    "afbeelding_url": "https://media.s-bol.com/D4039kkWG6WY/K1Xy1JR/1200x1180.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 9,49", "link": "https://www.bol.com/be/nl/p/mepal-fruitbox-campus-300-ml-inclusief-fruitvorkje-sluit-goed-af-snackdoosje-paw-patrol-dino/9300000317155774/" }
+    ]
+  },
+  {
     "id": "accutime-spider-man-smartwatch-kinderen",
     "naam": "Accutime Spider-Man Smartwatch voor kinderen",
     "nummer": "9300000020095146",
@@ -59,6 +69,16 @@
     "afbeelding_url": "https://files.cardgameshop.be/cache/products/images/0/i/e/800x800/3/2/83f5234683ca886f3300d48a67a41b58b11fd2/pokemon-bel-sleutelhanger-charmander.webp",
     "winkels": [
       { "naam": "Card Game Shop", "prijs": "€ 9,95", "link": "https://www.cardgameshop.be/nl/producten/pokemon-bel-sleutelhanger-charmander" }
+    ]
+  },
+  {
+    "id": "hot-wheels-mario-kart-rode-yoshi",
+    "naam": "Hot Wheels Mario Kart - Rode Yoshi",
+    "nummer": "01420357",
+    "beschrijving": "Hot Wheels Mario Kart gegoten die-cast kart op schaal 1:64, specifiek in de uitvoering van Rode Yoshi.",
+    "afbeelding_url": "https://www.dreamland.be/media/image/01420357/01420357_041/01420357_001.jpg",
+    "winkels": [
+      { "naam": "Dreamland", "prijs": "€ 9,99", "link": "https://www.dreamland.be/fr/produits/hot-wheels-mario-kart/01420357" }
     ]
   },
   {
@@ -99,6 +119,137 @@
     "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
     "winkels": [
       { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687" }
+    ]
+  },
+  {
+    "id": "paw-patrol-keukenset",
+    "naam": "PAW Patrol Keukenset",
+    "nummer": "9300000110387991",
+    "beschrijving": "Vrolijke PAW Patrol keukenset voor kinderen, perfect voor kleine chef-koks die graag helpen in de keuken of rollenspellen spelen met hun favoriete pups.",
+    "afbeelding_url": "https://media.s-bol.com/gg2O8YvyvXAj/VP55nNz/1037x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 12,95", "link": "https://www.bol.com/be/nl/p/paw-patrol-keukenset/9300000110387991/" }
+    ]
+  },
+  {
+    "id": "paw-patrol-chase-humdinger-speelfigurenset",
+    "naam": "PAW Patrol Chase & Humdinger Speelfigurenset",
+    "nummer": "9300000177674915",
+    "beschrijving": "Speelfigurenset van PAW Patrol met Chase en Burgemeester Humdinger voor het naspelen van spannende Avonturenbay-scènes.",
+    "afbeelding_url": "https://media.s-bol.com/0rgjXB20E5LG/gJ2AlEk/1200x1137.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/paw-patrol-chase-humdinger-speelfigurenset/9300000177674915/" }
+    ]
+  },
+  {
+    "id": "paw-patrol-de-dino-film-rise-roll-dino-set-spinosaurus-rex",
+    "naam": "PAW Patrol De Dino Film - Rise & Roll Dino Set (Spinosaurus & Rex)",
+    "nummer": "9300000252262219",
+    "beschrijving": "Rise & Roll Dino set met een 17,7 cm grote Spinosaurus speelgoeddinosaurus met geluidseffecten en een Rex actiefiguur uit PAW Patrol: De Dino Film.",
+    "afbeelding_url": "https://media.s-bol.com/3WOzKYAgqxXO/r80ArjL/1200x1126.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 21,16", "link": "https://www.bol.com/be/nl/p/paw-patrol-de-dino-film-rise-roll-dino-set-bevat-speelgoeddinosaurus-spinosaurus-van-17-7-cm-met-geluiden-en-rex-actiefiguur/9300000252262219/" }
+    ]
+  },
+  {
+    "id": "rubble-crew-charger-s-kraanwagen-met-speelfiguur",
+    "naam": "Rubble & Crew Charger's Kraanwagen met speelfiguur",
+    "nummer": "9300000180340274",
+    "beschrijving": "Ga aan de slag met Charger en zijn stoere kraanwagen uit Rubble & Crew! Voorzien van draaibare kraanarm, grijper en een Charger speelfiguur voor echte bouwavonturen.",
+    "afbeelding_url": "https://media.s-bol.com/3xlmxxYNDP6Q/n5OLLOP/1188x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/rubble-crew-charger-s-kraanwagen-met-speelfiguur-en-beweegbare-onderdelen/9300000180340274/" }
+    ]
+  },
+  {
+    "id": "rubble-crew-motor-s-wrecking-ball-speelgoedauto",
+    "naam": "Rubble & Crew Motor's Wrecking Ball Speelgoedauto",
+    "nummer": "9300000177675259",
+    "beschrijving": "Sloop en bouw met Motor en haar Wrecking Ball voertuig! Inclusief beweegbare sloopkogel, wals-elementen en een Motor speelfiguur uit Rubble & Crew.",
+    "afbeelding_url": "https://media.s-bol.com/4yJlMKo83LPk/Nk73OKK/1200x1192.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 12,85", "link": "https://www.bol.com/be/nl/p/rubble-crew-motor-s-wrecking-ball-speelgoedauto-met-speelfiguur-en-beweegbare-onderdelen/9300000177675259/" }
+    ]
+  },
+  {
+    "id": "paw-patrol-the-dino-movie-zuma-dino-rescue-hovercraft",
+    "naam": "PAW Patrol The Dino Movie Zuma Dino Rescue Hovercraft",
+    "nummer": "9300000252262241",
+    "beschrijving": "Red de dinosaurussen met Zuma en zijn Dino Rescue Hovercraft! Beschikt over een uitschuifbare reddingsklauw en bevat 2 actiefiguren (Zuma en een dinosaurus) plus het voertuig.",
+    "afbeelding_url": "https://media.s-bol.com/gglv65VwWQ4G/W7JYv6X/1200x1144.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 15,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-zuma-dino-rescue-hovercraft-met-uitschuifbare-reddingsklauw-verzamel-2-actiefiguren-en-een-voertuig/9300000252262241/" }
+    ]
+  },
+  {
+    "id": "paw-patrol-the-dino-movie-hear-me-roar-rhubarb-speelgoeddinosaurus",
+    "naam": "PAW Patrol The Dino Movie Hear Me Roar Rhubarb Speelgoeddinosaurus",
+    "nummer": "9300000261530226",
+    "beschrijving": "Interactieve Rhubarb speelgoeddinosaurus van 17.7 cm met geluidseffecten. Inclusief Marshall actiefiguur en 2 extra dinofiguren uit PAW Patrol: The Dino Movie.",
+    "afbeelding_url": "https://media.s-bol.com/qvKmPXEknDRR/gL0DLvr/1200x1180.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 34,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-hear-me-roar-rhubarb-speelgoeddinosaurus-van-17-7-cm-met-geactiveerde-geluiden-marshall-actiefiguur-en-2-dinofiguren/9300000261530226/" }
+    ]
+  },
+  {
+    "id": "marvel-s-iron-man-and-his-awesome-friends-ultron-supergroot-armor-speelset",
+    "naam": "Marvel's Iron Man and his Awesome Friends Ultron Supergroot Armor Speelset",
+    "nummer": "9300000247823204",
+    "beschrijving": "Supergrote Ultron armor speelset met actiefiguur uit Marvel's Iron Man and his Awesome Friends.",
+    "afbeelding_url": "https://media.s-bol.com/mov7l41QK1Wn/D9nmvjk/1200x1052.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 24,41", "link": "https://www.bol.com/be/nl/p/marvel-s-iron-man-and-his-awesome-friends-ultron-supergroot-armor-speelset/9300000247823204/" }
+    ]
+  },
+  {
+    "id": "marvel-s-iron-man-and-his-awesome-friends-supergroot-armor-speelset",
+    "naam": "Marvel's Iron Man and his Awesome Friends Supergroot Armor Speelset",
+    "nummer": "9300000247823197",
+    "beschrijving": "Supergrote Iron Man armor speelset voor jonge superheldenfans uit Iron Man and his Awesome Friends.",
+    "afbeelding_url": "https://media.s-bol.com/mov7BM6GV62n/4R0NZN1/1200x1059.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 13,39", "link": "https://www.bol.com/be/nl/p/marvel-s-iron-man-and-his-awesome-friends-supergroot-armor-speelset/9300000247823197/" }
+    ]
+  },
+  {
+    "id": "spidey-and-his-amazing-friends-team-spidey-helikopter-speelset",
+    "naam": "Spidey and his Amazing Friends Team Spidey Helikopter Speelset",
+    "nummer": "9300000247823249",
+    "beschrijving": "Team Spidey helikopter speelset inclusief speelgoedvoertuig en figuren uit Spidey and his Amazing Friends.",
+    "afbeelding_url": "https://media.s-bol.com/m5BpjP7WrY19/nZpoDpW/1200x1063.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/spidey-and-his-amazing-friends-team-spidey-helikopter-speelset/9300000247823249/" }
+    ]
+  },
+  {
+    "id": "dc-comics-crusader-batmobile-with-4-action-figures-set",
+    "naam": "DC Comics Crusader Batmobile met 4 Actiefiguren (10 cm)",
+    "nummer": "9300000177674864",
+    "beschrijving": "Bestrijd de misdaad in Gotham City met de Crusader Batmobile speelset. Inclusief Batmobile met BatHook-schieter en 4 actiefiguren van 10 cm (Batman, Nightwing, The Joker en Clayface).",
+    "afbeelding_url": "https://media.s-bol.com/6pRNgvxpWAYV/PNr3gY4/1200x909.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "Check prijs", "link": "https://www.bol.com/be/nl/p/dc-comics-crusader-batmobile-with-4-action-figures-set-kids-toys-for-boys-and-girls-ages-4/9300000177674864/" },
+      { "naam": "Suprabazar", "prijs": "Check prijs", "link": "https://www.suprabazar.be/batman-crusader-bundle-batmobile-met-4-basic-10-cm-figuren-31984026" }
+    ]
+  },
+  {
+    "id": "minions-monsters-grote-studioterrein-met-2-filmstudio-s",
+    "naam": "Minions Monsters Grote Studioterrein met 2 Filmstudio's",
+    "nummer": "9300000269708149",
+    "beschrijving": "Minions Monsters speelset met groot studioterrein, 2 filmstudio's en inclusief 6 Minions figuurtjes voor filmisch speelplezier.",
+    "afbeelding_url": "https://media.s-bol.com/m3132GO2vnE3/W7LqByo/1200x1126.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 24,99", "link": "https://www.bol.com/be/nl/p/minions-monsters-grote-studioterrein-met-2-filmstudio-s-incl-6-minions-figuurtjes/9300000269708149/" }
+    ]
+  },
+  {
+    "id": "teenage-mutant-ninja-turtles-mix-n-match-michelangelo",
+    "naam": "Teenage Mutant Ninja Turtles Mix 'N Match Michelangelo",
+    "nummer": "9300000236735719",
+    "beschrijving": "Mix 'N Match Michelangelo actiefiguur uit Teenage Mutant Ninja Turtles. Verwisselbare onderdelen om je eigen unieke Turtle-mutant te creëren.",
+    "afbeelding_url": "https://media.s-bol.com/goj71yY7mjE6/98yW014/1042x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/teenage-mutant-ninja-turtles-mix-n-match-michelangelo/9300000236735719/" }
     ]
   },
   {
@@ -195,6 +346,16 @@
     ]
   },
   {
+    "id": "playmobil-city-action-politiemotor-achtervolging-van-de-geldrover-70572",
+    "naam": "Playmobil City Action Politiemotor Achtervolging van de geldrover - 70572",
+    "nummer": "70572",
+    "beschrijving": "Spannende Playmobil City Action speelset met politiemotor en geldrover. Inclusief figuren, motor en accessoires voor een snelle achtervolging.",
+    "afbeelding_url": "https://media.s-bol.com/qZZznWyXXJqD/1200x800.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/playmobil-city-action-politiemotor-achtervolging-van-de-geldrover-70572/9300000019880095/" }
+    ]
+  },
+  {
     "id": "zootropolis-2-blu-ray",
     "naam": "Zootropolis 2 (Blu-ray)",
     "beschrijving": "Het vervolg op de populaire Disney-film. Volg de nieuwe avonturen van Judy Hopps en Nick Wilde in de grote stad Zootropolis.",
@@ -214,6 +375,28 @@
     ]
   },
   {
+    "id": "uno-flip-draagtas-speelkaarten",
+    "naam": "UNO Flip Draagtas voor speelkaarten",
+    "nummer": "5913",
+    "beschrijving": "Houd je UNO Flip kaarten veilig en georganiseerd in deze speciale paars-gele draagtas. Net zo stevig als de klassieke versie, maar uitgevoerd in de herkenbare kleuren van de Flip-editie. Voorzien van een handige rits en opbergvakken.",
+    "afbeelding_url": "https://media.s-bol.com/RGPY8xOY08Nw/58RGD2q/1079x1200.jpg",
+    "winkels": [
+      { "naam": "Amazon NL", "prijs": "€ 16,88", "link": "https://amzn.eu/d/01Ggopzu" },
+      { "naam": "Bol.com", "prijs": "€ 9,34", "link": "https://www.bol.com/be/nl/p/theo-klein-uno-flip-draagtas-11x3-5x15-5-cm-uno-kaarten-niet-inbegrepen-paars-geel/9300000197273057/" },
+      { "naam": "Amazon BE", "prijs": "€ 16,14", "link": "https://amzn.eu/d/09jebDd9" }
+    ]
+  },
+  {
+    "id": "wie-is-het-kinderspel",
+    "naam": "Wie is het? Kinderspel",
+    "nummer": "9300000151792673",
+    "beschrijving": "Het klassieke raadspel Wie is het? waarin spelers door sluwe ja-en-nee-vragen te stellen proberen te ontdekken welk geheim personage de tegenstander gekozen heeft.",
+    "afbeelding_url": "https://media.s-bol.com/m9zzVO1mBw6E/QW50G3q/1200x1172.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 17,00", "link": "https://www.bol.com/be/nl/p/wie-is-het-kinderspel/9300000151792673/" }
+    ]
+  },
+  {
     "id": "smartgames-drie-kleine-biggetjes-deluxe",
     "naam": "SmartGames - Drie Kleine Biggetjes Deluxe",
     "beschrijving": "Een uitdagend puzzelspel voor kleuters met 48 opdrachten. Help de drie biggetjes hun huizen te bouwen zodat ze veilig zijn voor de wolf. Inclusief een extra sprookjesboek met plaatjes.",
@@ -223,6 +406,16 @@
       { "naam": "Amazon.nl", "prijs": "€ 18,99", "link": "https://amzn.eu/d/0afJ1oKU" },
       { "naam": "Bol.com", "prijs": "€ 20,39", "link": "https://www.bol.com/be/nl/p/smartgames-drie-kleine-biggetjes-deluxe-kleuterspel-48-puzzel-opdrachten-met-extra-sprookjesboek/9200000059431562/" },
       { "naam": "DreamLand", "prijs": "€ 24,99", "link": "https://www.dreamland.be/nl/producten/smartgames-drie-kleine-biggetjes-deluxe-sprookjesspel-kleuters-48-opdrachten/01215861" }
+    ]
+  },
+  {
+    "id": "paw-patrol-prikblok",
+    "naam": "PAW Patrol Prikblok",
+    "nummer": "9200000062266209",
+    "beschrijving": "Creatief PAW Patrol prikblok voor kinderen, inclusief vrolijke kleurplaten, prikpen en viltmatje om de leukste figuren uit te prikken.",
+    "afbeelding_url": "https://media.s-bol.com/J2Pm47mXPNY2/vEMJLg/550x669.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 11,95", "link": "https://www.bol.com/be/nl/p/paw-patrol-prikblok/9200000062266209/" }
     ]
   },
   {
@@ -239,24 +432,33 @@
     ]
   },
   {
-    "id": "spiderman-ecozen-tritan-waterfles-480ml",
-    "naam": "Spiderman Ecozen / Tritan Waterfles - 480 ml",
-    "beschrijving": "Een duurzame en herbruikbare Spiderman drinkfles voor dagelijks gebruik. Gemaakt van hoogwaardig Ecozen/Tritan materiaal, BPA-vrij en voorzien van een handige drinktuit. Inhoud: 480 ml.",
-    "afbeelding_url": "https://media.s-bol.com/k3OE59gpZB9X/Q19Pqwq/387x840.jpg",
+    "id": "paw-patrol-red-de-race",
+    "naam": "PAW Patrol - Red de race",
+    "nummer": "9300000271883003",
+    "beschrijving": "Spannend PAW Patrol avonturenboek/speelset 'Red de race' boordevol actie en race-plezier met de bekende PAW Patrol pups.",
+    "afbeelding_url": "https://media.s-bol.com/K4VB7X8GwqxM/6XMyrAQ/1200x1016.jpg",
     "winkels": [
-      { "naam": "Multibazar", "prijs": "€ 9,99", "link": "https://www.multibazar.be/nl/spiderman-tritan-premium-waterfles-480ml-1048880" },
-      { "naam": "DreamLand", "prijs": "€ 11,99", "link": "https://www.dreamland.be/nl/producten/spiderman-tritan-premium-waterfles-480ml/02252599" },
-      { "naam": "Bol.com", "prijs": "€ 13,39", "link": "https://www.bol.com/be/nl/p/euromic-spiderman-ecozen-dagelijks-gebruik-480-ml-meerkleurig/9300000230582618/" }
+      { "naam": "Bol.com", "prijs": "€ 17,00", "link": "https://www.bol.com/be/nl/p/paw-patrol-red-de-race/9300000271883003/" }
     ]
   },
   {
-    "id": "spiderman-lunchbox-3-compartimenten-midnight-flyer",
-    "naam": "Spiderman Lunchbox met 3 compartimenten",
-    "beschrijving": "Praktische brooddoos met Spiderman 'Midnight Flyer' print. Dankzij de drie aparte vakjes kun je boterhammen, fruit en snacks gescheiden van elkaar meenemen zonder dat ze door elkaar raken.",
-    "afbeelding_url": "https://media.s-bol.com/BWR1BB96wOxX/66OEzrL/550x366.jpg",
+    "id": "paw-patrol-de-dino-film-boek",
+    "naam": "PAW Patrol - De Dino Film",
+    "nummer": "9300000271928313",
+    "beschrijving": "Beleef het spannende avontuur uit PAW Patrol: De Dino Film opnieuw met dit vrolijke voorlees- en kijkboek vol bekende pups en dinosaurussen.",
+    "afbeelding_url": "https://media.s-bol.com/qNNXx50Q9zg2/p80lO82/1181x1200.jpg",
     "winkels": [
-      { "naam": "DreamLand", "prijs": "€ 8,99", "link": "https://www.dreamland.be/nl/producten/spiderman-brooddoos-multi-compartment/02252575" },
-      { "naam": "Bol.com", "prijs": "€ 15,76", "link": "https://www.bol.com/be/nl/p/spiderman-lunchbox-met-3-extra-aparte-compartimenten-midnight-flyer/9300000234248692/" }
+      { "naam": "Bol.com", "prijs": "€ 9,89", "link": "https://www.bol.com/be/nl/p/paw-patrol-de-dino-film/9300000271928313/" }
+    ]
+  },
+  {
+    "id": "ses-creative-paw-patrol-ik-leer-knippen",
+    "naam": "SES Creative PAW Patrol Ik leer knippen",
+    "nummer": "9300000247175316",
+    "beschrijving": "Knutselpakket met 36 PAW Patrol knipvellen en een veilige kinderschaar. Leren knippen op verschillende niveaus, geschikt voor kinderen vanaf 3 jaar.",
+    "afbeelding_url": "https://media.s-bol.com/BqPYvK6AwOxX/98zjJ0D/1200x929.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 12,99", "link": "https://www.bol.com/be/nl/p/ses-creative-paw-patrol-ik-leer-knippen-inclusief-veilige-kinderschaar-verschillende-niveaus-36-paw-patrol-knipvellen-knutselpakket-met-paw-patrol-made-in-holland-vanaf-3-jaar/9300000247175316/" }
     ]
   }
 ]

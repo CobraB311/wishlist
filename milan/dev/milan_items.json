@@ -20,6 +20,16 @@
     ]
   },
   {
+    "id": "garfield-escape-from-monday-nintendo-switch",
+    "naam": "Garfield - Escape from Monday (Nintendo Switch)",
+    "nummer": "9300000286915031",
+    "beschrijving": "Garfield - Escape from Monday voor de Nintendo Switch. Beleef een vrolijk avontuur waarin je Garfield helpt de maandag te ontvluchten.",
+    "afbeelding_url": "https://media.s-bol.com/qvnrRERrzYJ7/oQPKmKY/741x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 39,99", "link": "https://www.bol.com/be/nl/p/garfield-escape-from-monday-nintendo-switch/9300000286915031/" }
+    ]
+  },
+  {
     "id": "mepal-drinkfles-met-flipdop-campus-600-ml-paw-patrol-dino",
     "naam": "Mepal Drinkfles met flipdop Campus 600 ml - Paw Patrol Dino",
     "nummer": "9300000317155772",
@@ -82,15 +92,6 @@
     ]
   },
   {
-    "id": "hot-wheels-fast-furious-10-pack",
-    "naam": "Hot Wheels Fast & Furious 10-pack auto's",
-    "beschrijving": "Een verzameling van 10 iconische speelgoedauto's uit de Fast & Furious franchise. Deze die-cast voertuigen zijn uitgevoerd op een schaal van 1:64 en bevatten authentieke details van de bekende filmreeks.",
-    "afbeelding_url": "https://media.s-bol.com/YPmRx2Axzrkp/660k847/877x1200.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 51,00", "link": "https://www.bol.com/be/nl/p/hot-wheels-fast-furious-10-pack-auto-s-jct92/9300000236199845/" }
-    ]
-  },
-  {
     "id": "dickie-toys-mercedes-amg-e43-sos-belgie",
     "naam": "Dickie Toys Mercedes-AMG E43 - Belgische Politiewagen (30 cm)",
     "beschrijving": "Een gedetailleerde Belgische politie-uitvoering van de Mercedes-AMG E43 met licht- en geluidseffecten. Let op: dit betreft de specifieke Belgische SOS-versie (Federale Politie look), niet de Nederlandse uitvoering.",
@@ -103,6 +104,16 @@
     ]
   },
   {
+    "id": "brio-bluey-train-set",
+    "naam": "BRIO Bluey Treinset",
+    "nummer": "9300000260135312",
+    "beschrijving": "Houten BRIO treinset in Bluey-thema met spooronderdelen, trein en figuren uit de populaire animatieserie.",
+    "afbeelding_url": "https://media.s-bol.com/0Q8wZk1rDYlX/mQLVx7p/1200x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 45,99", "link": "https://www.bol.com/be/nl/p/brio-bluey-train-set/9300000260135312/" }
+    ]
+  },
+  {
     "id": "dreamland-kookpotten-keukenaccessoires-01611687",
     "naam": "Kookpotten en keukenaccessoires 13 delig",
     "nummer": "01611687",
@@ -110,6 +121,36 @@
     "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
     "winkels": [
       { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687" }
+    ]
+  },
+  {
+    "id": "new-classic-toys-houten-speelgoed-pasta-set",
+    "naam": "New Classic Toys Houten Speelgoed Pasta Set (FSC)",
+    "nummer": "9300000176017449",
+    "beschrijving": "Houten speelgoed pasta set van New Classic Toys om je eigen pasta te maken. Gemaakt van duurzaam FSC-gecertificeerd hout voor urenlang keukenspeelplezier.",
+    "afbeelding_url": "https://media.s-bol.com/g9vVkzvrlnPZ/n58mXnp/1200x578.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 42,95", "link": "https://www.bol.com/be/nl/p/new-classic-toys-houten-speelgoed-pasta-set-speelgoedeetset-maak-je-eigen-pasta-fsc/9300000176017449/" }
+    ]
+  },
+  {
+    "id": "woet-houten-pizza-speelset",
+    "naam": "Woet Houten Pizza Speelset met 30 Accessoires",
+    "nummer": "9300000230182488",
+    "beschrijving": "Complete houten pizza speelset met 30 accessoires waaronder toppings met klittenband, snijgereedschap, hete saus en een menukaart. Geschikt voor kinderen vanaf 2 jaar.",
+    "afbeelding_url": "https://media.s-bol.com/nyqGNMM35pYE/nZo143W/1200x865.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 34,50", "link": "https://www.bol.com/be/nl/p/woet-houten-pizza-speelset-complete-maak-je-eigen-pizza-set-met-30-accessoires-toppings-met-klittenband-snijgereedschap-hete-saus-en-menukaart-rollenspel-keukenspeelgoed-speelgoedeten-vanaf-2-jaar/9300000230182488/" }
+    ]
+  },
+  {
+    "id": "casdon-dyson-steelstofzuiger-draadloos-speelgoed-stofzuiger",
+    "naam": "Casdon Dyson Draadloze Steelstofzuiger Speelgoed Stofzuiger",
+    "nummer": "9300000147604006",
+    "beschrijving": "Realistische speelgoedversie van de bekende Dyson draadloze steelstofzuiger met werkende zuigkracht, licht- en geluidseffecten en verwisselbare opzetstukken.",
+    "afbeelding_url": "https://media.s-bol.com/OoRYY3nOzXNN/A4VKnO/928x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 29,99", "link": "https://www.bol.com/be/nl/p/casdon-dyson-steelstofzuiger-draadloos-speelgoed-stofzuiger/9300000147604006/" }
     ]
   },
   {
@@ -144,7 +185,7 @@
   },
   {
     "id": "rubble-crew-charger-s-kraanwagen-met-speelfiguur",
-    "naam": "Rubble & Crew Charger's Kraanwagen met speelfiguur",
+    "naam": "PAW Patrol Rubble & Crew Charger's Kraanwagen met speelfiguur",
     "nummer": "9300000180340274",
     "beschrijving": "Ga aan de slag met Charger en zijn stoere kraanwagen uit Rubble & Crew! Voorzien van draaibare kraanarm, grijper en een Charger speelfiguur voor echte bouwavonturen.",
     "afbeelding_url": "https://media.s-bol.com/3xlmxxYNDP6Q/n5OLLOP/1188x1200.jpg",
@@ -154,7 +195,7 @@
   },
   {
     "id": "rubble-crew-motor-s-wrecking-ball-speelgoedauto",
-    "naam": "Rubble & Crew Motor's Wrecking Ball Speelgoedauto",
+    "naam": "PAW Patrol Rubble & Crew Motor's Wrecking Ball Speelgoedauto",
     "nummer": "9300000177675259",
     "beschrijving": "Sloop en bouw met Motor en haar Wrecking Ball voertuig! Inclusief beweegbare sloopkogel, wals-elementen en een Motor speelfiguur uit Rubble & Crew.",
     "afbeelding_url": "https://media.s-bol.com/4yJlMKo83LPk/Nk73OKK/1200x1192.jpg",
@@ -209,7 +250,48 @@
     "beschrijving": "Team Spidey helikopter speelset inclusief speelgoedvoertuig en figuren uit Spidey and his Amazing Friends.",
     "afbeelding_url": "https://media.s-bol.com/m5BpjP7WrY19/nZpoDpW/1200x1063.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/spidey-and-his-amazing-friends-team-spidey-helikopter-speelset/9300000247823249/" }
+      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/spidey-and-his-amazing-friends-team-spidey-helikopter-speelset/9300000247823249/" },
+      { "naam": "DreamLand", "prijs": "€ 18,74", "link": "https://www.dreamland.be/nl/producten/spidey-and-his-amazing-friends-team-spidey-copter/02339740" },
+      { "naam": "Amazon.nl", "prijs": "€ 24,99", "link": "https://amzn.eu/d/0g7V92Mf" },
+      { "naam": "Fnac", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/Spidey-And-His-Amazing-Friends-Figuurtje-Team-Spidey-Copter/a22679571" },
+      { "naam": "Amazon.com.be", "prijs": "€ 36,27", "link": "https://amzn.eu/d/0fKqVz2W" }
+    ]
+  },
+  {
+    "id": "marvel-spidey-and-his-amazing-friends-rescue-webs-brandweerwagen",
+    "naam": "Marvel Spidey and his Amazing Friends Rescue Webs Brandweerwagen",
+    "nummer": "9300000245783364",
+    "beschrijving": "Spidey and his Amazing Friends Rescue Webs brandweerwagen met speelgoedvoertuig en accessoires voor reddingsmissies met Spidey.",
+    "afbeelding_url": "https://media.s-bol.com/KnPM6Qrnqzmn/32AL5pn/1200x1108.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 41,99", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rescue-webs-brandweerwagen/9300000245783364/" }
+    ]
+  },
+  {
+    "id": "marvel-super-hero-adventures-jet-quarter-spider-man",
+    "naam": "Marvel Super Hero Adventures Jet Quarter & Spider-Man Speelfiguur",
+    "nummer": "9300000003428136",
+    "beschrijving": "Marvel Super Hero Adventures Jet Quarter straaljager inclusief 12,5 cm Spider-Man actiefiguur voor spannende luchfavonturen.",
+    "afbeelding_url": "https://media.s-bol.com/3EmPRx9BELz9/2k22Apz/1200x722.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/marvel-super-hero-adventures-jet-quarter-spider-man-speelfiguur-12-5-cm/9300000003428136/" },
+      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/super-hero-adventures-spider-man-jetquarters/01564013" },
+      { "naam": "Supra Bazar", "prijs": "€ 39,99", "link": "https://www.suprabazar.be/super-hero-adventures-spider-man-jetquarters-web-jet-31760632" },
+      { "naam": "Amazon.nl", "prijs": "€ 59,99", "link": "https://amzn.eu/d/013usaUG" },
+      { "naam": "Amazon.com.be", "prijs": "€ 69,99", "link": "https://amzn.eu/d/0eTwEJXV" }
+    ]
+  },
+  {
+    "id": "marvel-spider-man-f58095l1-toy-figure",
+    "naam": "Marvel Spider-Man Toy Figure / Titan Hero 3-Pack",
+    "nummer": "9300000118497249",
+    "beschrijving": "Marvel Spider-Man speelfiguur voertuigset voor spannende actie-avonturen.",
+    "afbeelding_url": "https://media.s-bol.com/r7m49vNAOnm4/rRNONE/1200x771.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/marvel-spider-man-f58095l1-toy-figure/9300000118497249/" },
+      { "naam": "DreamLand", "prijs": "€ 22,49", "link": "https://www.dreamland.be/nl/producten/spider-man-titan-hero-collection-3-pack/01577693" },
+      { "naam": "Supra Bazar", "prijs": "€ 39,98", "link": "https://www.suprabazar.be/marvel-spider-man-titan-hero-figuren-3-pack-30-cm-31326001" },
+      { "naam": "Amazon.nl", "prijs": "€ 50,61", "link": "https://amzn.eu/d/02UG3h2V" }
     ]
   },
   {
@@ -221,6 +303,16 @@
     "winkels": [
       { "naam": "Bol.com", "prijs": "Check prijs", "link": "https://www.bol.com/be/nl/p/dc-comics-crusader-batmobile-with-4-action-figures-set-kids-toys-for-boys-and-girls-ages-4/9300000177674864/" },
       { "naam": "Suprabazar", "prijs": "Check prijs", "link": "https://www.suprabazar.be/batman-crusader-bundle-batmobile-met-4-basic-10-cm-figuren-31984026" }
+    ]
+  },
+  {
+    "id": "star-wars-ps-hq-speelset",
+    "naam": "Star Wars PS HQ Speelset",
+    "nummer": "9300000162933403",
+    "beschrijving": "Star Wars speelset met hoofdkwartier en speelfiguren voor het herbeleven van spannende galactische avonturen.",
+    "afbeelding_url": "https://media.s-bol.com/j419xX8zXnpY/X67Ol9m/1200x761.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 25,99", "link": "https://www.bol.com/be/nl/p/star-wars-ps-hq-speelset/9300000162933403/" }
     ]
   },
   {
@@ -355,6 +447,56 @@
     ]
   },
   {
+    "id": "ravensburger-gravitrax-junior-starter-xxl-paw-patrol",
+    "naam": "Ravensburger GraviTrax Junior Starter XXL PAW Patrol",
+    "nummer": "9300000260135342",
+    "beschrijving": "Uitgebreide GraviTrax Junior Starter XXL kogelbaan speelset in PAW Patrol-thema, speciaal ontworpen voor jongere kinderen.",
+    "afbeelding_url": "https://media.s-bol.com/7P3PrmYvk3Ej/E8r41x0/1200x1112.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 87,33", "link": "https://www.bol.com/be/nl/p/ravensburger-gravitrax-junior-starter-xxl-paw-patrol/9300000260135342/" }
+    ]
+  },
+  {
+    "id": "play-doh-mix-play-variety-20-pack",
+    "naam": "Play-Doh Mix & Play Variety 20-Pack",
+    "nummer": "9300000233154815",
+    "beschrijving": "Grote voordeelset met 20 potjes Play-Doh klei in verschillende kleuren en texturen voor urenlang creatief kleiplezier.",
+    "afbeelding_url": "https://media.s-bol.com/N4NP4NOgJKgm/K1PW5KY/1200x1050.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 44,49", "link": "https://www.bol.com/be/nl/p/play-doh-mix-play-variety-20-pack/9300000233154815/" }
+    ]
+  },
+  {
+    "id": "jumbo-pisa",
+    "naam": "Jumbo Pisa Actiespel",
+    "nummer": "1004004000017407",
+    "beschrijving": "Klassiek behendigheidsspel waarbij spelers om de beurt hun toeristen op de wankele Toren van Pisa moeten plaatsen zonder dat deze omvalt.",
+    "afbeelding_url": "https://media.s-bol.com/npOyMYXYm7x5/2vgGDZK/1097x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/jumbo-pisa/1004004000017407/" }
+    ]
+  },
+  {
+    "id": "dokter-bibber-vernieuwde-editie-bordspel",
+    "naam": "Dokter Bibber - Vernieuwde Editie Bordspel",
+    "nummer": "9300000196801525",
+    "beschrijving": "Het bekende behendigheidsspel Dokter Bibber in een vernieuwde editie. Gebruik het pincet om de kwalen uit de patiënt te verwijderen zonder dat de hommer gaat branden of zoemen.",
+    "afbeelding_url": "https://media.s-bol.com/vy2N937gk2nX/5yXMvoB/1200x1151.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/dokter-bibber-vernieuwde-editie-bordspel-gezelschapsspel/9300000196801525/" }
+    ]
+  },
+  {
+    "id": "silvergear-boter-kaas-en-eieren-spel-3-in-1",
+    "naam": "Silvergear Boter Kaas en Eieren 3-in-1 Elektronisch Reisspel (Rood)",
+    "nummer": "9300000246454217",
+    "beschrijving": "Compact 3-in-1 elektronisch spellenapparaat met Whack-a-Mole, Boter-Kaas-en-Eieren (Tic-Tac-Toe) en Memory. Ideaal als educatief reisspel voor onderweg.",
+    "afbeelding_url": "https://media.s-bol.com/7PKl266l6EPr/vQ7E9m8/1500x1500.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/silvergear-boter-kaas-en-eieren-spel-3-in-1-whack-a-mole-tic-tac-toe-memory-spelletjes-reisspelletjes-kinderen-educatief-speelgoed-reisspellen-cadeau-voor-jongens-en-meisjes-vakantie-vliegtuig-auto-reizen-6-7-8-9-jaar-rood/9300000246454217/" }
+    ]
+  },
+  {
     "id": "uno-flip-draagtas-speelkaarten",
     "naam": "UNO Flip Draagtas voor speelkaarten",
     "nummer": "5913",
@@ -399,6 +541,16 @@
     ]
   },
   {
+    "id": "clementoni-education-mijn-eerste-100-woorden-interactief",
+    "naam": "Clementoni Education - Mijn Eerste 100 Woorden Interactief",
+    "nummer": "9300000264837113",
+    "beschrijving": "Educatief en interactief speelgoed waarmee peuters van 2 tot 4 jaar hun eerste 100 woorden leren in het Nederlands en Engels.",
+    "afbeelding_url": "https://media.s-bol.com/qv8oDwPjBEp3/86O18ml/1053x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 25,95", "link": "https://www.bol.com/be/nl/p/clementoni-education-mijn-eerste-100-woorden-interactief-woordjes-leren-educatief-speelgoed-peuter-nederlands-engels-2-4-jaar/9300000264837113/" }
+    ]
+  },
+  {
     "id": "tiptoi-starter-set-ontdek-de-boerderij-00211",
     "naam": "tiptoi® Starter Set: Ontdek de boerderij",
     "beschrijving": "De ideale instap in het tiptoi® leersysteem. Deze set bevat de interactieve stift (met oplaadbare batterij) en het boek 'Ontdek de boerderij'. Kinderen kunnen hiermee zelfstandig op ontdekkingstocht gaan door de wereld van de boerderij met geluiden, verhalen en spelletjes.",
@@ -429,6 +581,16 @@
     "afbeelding_url": "https://media.s-bol.com/qNNXx50Q9zg2/p80lO82/1181x1200.jpg",
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 9,89", "link": "https://www.bol.com/be/nl/p/paw-patrol-de-dino-film/9300000271928313/" }
+    ]
+  },
+  {
+    "id": "paw-patrol-superdik-voorleesboek",
+    "naam": "PAW Patrol Superdik Voorleesboek",
+    "nummer": "9300000320406852",
+    "beschrijving": "Superdik voorleesboek boordevol spannende avonturen van de PAW Patrol pups voor urenlang voorleesplezier.",
+    "afbeelding_url": "https://media.s-bol.com/gm5pROq2my63/JyGG62l/1142x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 15,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-superdik-voorleesboek-van-paw-patrol/9300000320406852/" }
     ]
   },
   {

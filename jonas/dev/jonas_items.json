@@ -1,5 +1,15 @@
 [
   {
+    "id": "lego-batman-legacy-of-the-dark-knight-ps5",
+    "naam": "LEGO Batman - Legacy of the Dark Knight (PS5)",
+    "nummer": "9300000251333745",
+    "beschrijving": "LEGO Batman: Legacy of the Dark Knight voor de PlayStation 5. Beleef de iconische avonturen van de Dark Knight in een meeslepende LEGO-wereld.",
+    "afbeelding_url": "https://media.s-bol.com/3NXgDBzV23vx/1jZB5P0/1023x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 52,49", "link": "https://www.bol.com/be/nl/p/lego-batman-legacy-of-the-dark-knight-ps5/9300000251333745/" }
+    ]
+  },
+  {
     "id": "set-mario-tennis-fever-switch2",
     "naam": "Mario Tennis Fever (Nintendo Switch 2)",
     "nummer": "9300000240435887",
@@ -13,16 +23,6 @@
       { "naam": "MediaMarkt", "prijs": "€ 69,99", "link": "https://www.mediamarkt.be/nl/product/_mario-tennis-fever-nintendo-switch-2-fr-2199211.html" },
       { "naam": "Coolblue", "prijs": "€ 70,00", "link": "https://www.coolblue.be/nl/product/974929/mario-tennis-fever-nintendo-switch-2.html" },
       { "naam": "SupraBazar", "prijs": "€ 79,99", "link": "https://www.suprabazar.be/nintendo-switch-2-super-mario-tennis-fever-32145564" }
-    ]
-  },
-  {
-    "id": "lego-batman-legacy-of-the-dark-knight-nintendo-switch-2",
-    "naam": "LEGO Batman: Legacy of the Dark Knight - Nintendo Switch 2",
-    "nummer": "9300000251333746",
-    "beschrijving": "Beleef de legendarische avonturen van The Dark Knight in LEGO-vorm op de Nintendo Switch 2. Neem het op tegen Gotham's beruchtste schurken in deze meeslepende actie-game.",
-    "afbeelding_url": "https://media.s-bol.com/qzVGz8g9L76p/08Vv95y/741x1200.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 54,95", "link": "https://www.bol.com/be/nl/p/lego-batman-legacy-of-the-dark-knight-nintendo-switch-2/9300000251333746/" }
     ]
   },
   {
@@ -59,6 +59,16 @@
       { "naam": "Amazon.nl", "prijs": "€ 7,89", "link": "https://amzn.eu/d/8vUwMZV" },
       { "naam": "Amazon.com.be", "prijs": "€ 7,89", "link": "https://amzn.eu/d/1ApoeJ4" },
       { "naam": "SupraBazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/hot-wheels-formule-1-5-f1-auto-s-32065562" }
+    ]
+  },
+  {
+    "id": "hot-wheels-racing-formula-1-downhill-circuit-race-baanset",
+    "naam": "Hot Wheels Racing Formula 1 Downhill Circuit Race Baanset",
+    "nummer": "9300000244057674",
+    "beschrijving": "Hot Wheels F1 downhill circuit racebaanset inclusief 3 metalen Formula 1 auto's voor razendsnelle races en actievolle afdalingen.",
+    "afbeelding_url": "https://media.s-bol.com/nwx8kRg3xZKY/pZwEny6/1200x1124.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 64,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-racing-formula-1-downhill-circuit-race-baanset-met-3-metalen-f1-auto-s/9300000244057674/" }
     ]
   },
   {
@@ -844,6 +854,16 @@
     ]
   },
   {
+    "id": "paw-patrol-the-dino-movie-rocky-dino-rescue-recycler",
+    "naam": "PAW Patrol The Dino Movie Rocky Dino Rescue Recycler",
+    "nummer": "9300000252262272",
+    "beschrijving": "PAW Patrol Rocky Dino Rescue Recycler voertuigset met geheim vak, werkende klauw en 2 actiefiguren voor spannende dinosaurus-reddingsmissies.",
+    "afbeelding_url": "https://media.s-bol.com/JmvVmV7MGBz2/2vZj8zK/1200x1185.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 15,50", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-rocky-dino-rescue-recycler-met-geheim-vak-en-werkende-klauw-2-actiefiguren-en-voertuig/9300000252262272/" }
+    ]
+  },
+  {
     "id": "uno-draagtas-speelkaarten",
     "naam": "UNO Draagtas voor speelkaarten",
     "nummer": "5901",
@@ -885,6 +905,22 @@
     ]
   },
   {
+    "id": "smartgames-dragon-inferno-strategisch-bordspel",
+    "naam": "SmartGames Dragon Inferno Strategisch Bordspel (2 spelers)",
+    "nummer": "9300000033739374",
+    "beschrijving": "Strategisch bordspel van SmartGames voor 2 spelers waarbij je je eigen koninkrijk moet opbouwen en beschermen tegen de draak.",
+    "afbeelding_url": "https://media.s-bol.com/qpvLXwY3ojkR/484q8rg/1200x1114.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/smartgames-dragon-inferno-strategisch-bordspel-2-spelers/9300000033739374/" },
+      { "naam": "De Kinderplaneet", "prijs": "€ 24,95", "link": "https://www.dekinderplaneet.be/nl/smart-dragon-inferno-855093" },
+      { "naam": "Multi Bazar", "prijs": "€ 24,95", "link": "https://www.multibazar.be/nl/smart-dragon-inferno-855093" },
+      { "naam": "Happyland", "prijs": "€ 24,99", "link": "https://www.happyland.be/product/smartgames-dragon-inferno/" },
+      { "naam": "Fox & Compagnie", "prijs": "€ 25,00", "link": "https://www.foxetcompagnie.com/nl/dragon-inferno-2-spelers-99911418" },
+      { "naam": "Amazon.nl", "prijs": "€ 42,75", "link": "https://amzn.eu/d/0izkurB4" },
+      { "naam": "Amazon.com.be", "prijs": "€ 45,39", "link": "https://amzn.eu/d/0e3BosQt" }
+    ]
+  },
+  {
     "id": "banana-joe-actiespel-kinderspel",
     "naam": "Banana Joe - Actiespel Kinderspel",
     "nummer": "9200000093309555",
@@ -922,6 +958,38 @@
     "afbeelding_url": "https://media.s-bol.com/qqYN9glDkBJr/M8x6qLQ/1195x1200.jpg",
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 22,48", "link": "https://www.bol.com/be/nl/p/ravensburger-rush-hour-deluxe-2025-puzzel-denkspel/9300000194454546/" }
+    ]
+  },
+  {
+    "id": "nintendo-super-mario-air-hockey",
+    "naam": "Nintendo Super Mario Air Hockey",
+    "nummer": "9300000013905698",
+    "beschrijving": "Tafelmodel air hockey spel in Super Mario-thema voor snelle en spannende duels.",
+    "afbeelding_url": "https://media.s-bol.com/5Pm4KOWMNBWR/r0wY3Nw/1200x824.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 31,49", "link": "https://www.bol.com/be/nl/p/nintendo-super-mario-air-hockey/9300000013905698/" }
+    ]
+  },
+  {
+    "id": "hasbro-gaming-mini-bordspel-zeeslag-7",
+    "naam": "Hasbro Gaming Mini Bordspel Zeeslag",
+    "nummer": "9300000070619151",
+    "beschrijving": "Compacte reisversie van het klassieke Zeeslag strategiebordspel voor 2 spelers.",
+    "afbeelding_url": "https://media.s-bol.com/pBL1RgJXvwmV/O76Pqwr/1200x1190.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 21,95", "link": "https://www.bol.com/be/nl/p/hasbro-gaming-mini-bordspel-zeeslag-7/9300000070619151/" }
+    ]
+  },
+  {
+    "id": "ravensburger-puzzel-despicable-me-4-100-xxl-stukjes",
+    "naam": "Ravensburger Puzzel Despicable Me 4 (100 XXL Stukjes)",
+    "nummer": "9300000161620315",
+    "beschrijving": "Ravensburger legpuzzel met 100 XXL stukjes in Despicable Me 4 thema, speciaal voor jonge puzzelaars.",
+    "afbeelding_url": "https://ravensburger.cloud/images/produktseiten/600x600/12001062.webp",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/ravensburger-puzzel-despicable-me-4-legpuzzel-100-xxl-stukjes/9300000161620315/" },
+      { "naam": "Ravensburger", "prijs": "€ 13,99", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/jigsaw-puzzles/kids-puzzles/despicable-me-4-12001062" },
+      { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/dispicable-me-4-100-stukjes-xxl/01783193" }
     ]
   },
   {
@@ -978,6 +1046,56 @@
     ]
   },
   {
+    "id": "monsterjagen-2-alle-hens-aan-dek",
+    "naam": "Monsterjagen 2 - Alle hens aan dek",
+    "nummer": "9300000144752405",
+    "beschrijving": "Spannend kinderboek 'Monsterjagen 2 - Alle hens aan dek' boordevol avontuur en humor.",
+    "afbeelding_url": "https://media.s-bol.com/YA6NqW2EjxKO/M8PDOlP/760x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/monsterjagen-2-alle-hens-aan-dek/9300000144752405/" }
+    ]
+  },
+  {
+    "id": "de-grote-drakenrace",
+    "naam": "De grote drakenrace",
+    "nummer": "9300000167338369",
+    "beschrijving": "Avontuurlijk kinderboek 'De grote drakenrace' vol fantasie en spanning.",
+    "afbeelding_url": "https://media.s-bol.com/MljxNEDZPJGB/pYpwnV2/781x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 20,99", "link": "https://www.bol.com/be/nl/p/de-grote-drakenrace/9300000167338369/" }
+    ]
+  },
+  {
+    "id": "dungeon-runners-2-level-2-de-lucht",
+    "naam": "Dungeon Runners 2 - Dungeon Runners Level 2: De Lucht",
+    "nummer": "9300000227473176",
+    "beschrijving": "Spannend en grappig kinderboek 'Dungeon Runners 2: De Lucht' vol actie, avonturen en game-elementen.",
+    "afbeelding_url": "https://media.s-bol.com/1AJ6Egw4rPjV/Z4ZzxPw/830x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 15,29", "link": "https://www.bol.com/be/nl/p/dungeon-runners-2-dungeon-runners-level-2-de-lucht/9300000227473176/" }
+    ]
+  },
+  {
+    "id": "de-geheime-drakenschool-1",
+    "naam": "De geheime drakenschool 1",
+    "nummer": "9300000145034744",
+    "beschrijving": "Eerste deel in de populaire kinderboekenserie 'De geheime drakenschool' over magische avonturen en draken.",
+    "afbeelding_url": "https://media.s-bol.com/4wzk9pLBzwpg/mx9nor/778x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/de-geheime-drakenschool-1-de-geheime-drakenschool/9300000145034744/" }
+    ]
+  },
+  {
+    "id": "wauw-wist-je-dat-al",
+    "naam": "Wauw, wist je dat al?",
+    "nummer": "9300000238020907",
+    "beschrijving": "Informatief en weetjesrijk kinderboek 'Wauw, wist je dat al?' boordevol verrassende feiten en illustraties.",
+    "afbeelding_url": "https://media.s-bol.com/8LppqkDr4ZYg/Z4ZxNQJ/988x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 25,95", "link": "https://www.bol.com/be/nl/p/wauw-wist-je-dat-al/9300000238020907/" }
+    ]
+  },
+  {
     "id": "wowow-kinderhesje-zippy-green",
     "naam": "Wowow Zippy Kinderhesje - Reflecterend (Green) - M Medium",
     "nummer": "9300000237288635",
@@ -986,6 +1104,16 @@
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 24,09", "link": "https://www.bol.com/be/nl/p/wowow-kinderhesje-zippy-green-m/9300000237288635/" },
       { "naam": "Decathlon", "prijs": "€ 25,99", "link": "https://www.decathlon.be/nl/p/mp/zippy-jacket-green/c7846ea0-f5a6-418b-8ae5-48ec045d82b7/c9" }
+    ]
+  },
+  {
+    "id": "dragon-night-light-alarm-clock-met-geluiden",
+    "naam": "Dragon Night Light Alarm Clock met geluiden",
+    "nummer": "9300000227330956",
+    "beschrijving": "Schattige drakenwekker met nachtlampje en geluidseffecten, ideaal voor op de kinderzijde van het nachtkastje.",
+    "afbeelding_url": "https://media.s-bol.com/8VlpE8wDrVpL/X6O3w0v/1180x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 34,99", "link": "https://www.bol.com/be/nl/p/dragon-night-light-alarm-clock-met-geluiden/9300000227330956/" }
     ]
   }
 ]

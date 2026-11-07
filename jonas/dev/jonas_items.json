@@ -833,8 +833,7 @@
     "afbeelding_url": "https://media.s-bol.com/JxYYpONxnpXl/AD6NKM1/1142x1200.jpg",
     "winkels": [
       { "naam": "Amazon BE", "prijs": "€ 16,99", "link": "https://amzn.eu/d/07bEF0tv" },
-      { "naam": "Happyland", "prijs": "€ 22,99", "link": "https://www.happyland.be/product/vtech-switch-go-dinos-fire-troy-t-rex/" },
-      { "naam": "Dreamland", "prijs": "€ 22,99", "link": "https://www.dreamland.be/nl/producten/switch-go-dinos-fire-troy-t-rex/01606690" }
+      { "naam": "Happyland", "prijs": "€ 22,99", "link": "https://www.happyland.be/product/vtech-switch-go-dinos-fire-troy-t-rex/" }
     ]
   },
   {
@@ -845,6 +844,21 @@
     "afbeelding_url": "https://media.s-bol.com/JmvVmV7MGBz2/2vZj8zK/1200x1185.jpg",
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 15,50", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-rocky-dino-rescue-recycler-met-geheim-vak-en-werkende-klauw-2-actiefiguren-en-voertuig/9300000252262272/" }
+    ]
+  },
+  {
+    "id": "playmobil-ford-f150-raptor",
+    "naam": "Playmobil x Ford F-150 Raptor",
+    "nummer": "71858",
+    "beschrijving": "Beleef off-road avonturen met de iconische Ford F-150 Raptor van Playmobil. Deze gedetailleerde blauwe pick-up truck is voorzien van een ruime laadbak en stoere accenten. Inclusief een Playmobil figuur en accessoires voor urenlang speelplezier.",
+    "afbeelding_url": "https://media.s-bol.com/q1M75ApoA4kr/mwm8MWn/1200x1045.jpg",
+    "winkels": [
+      { "naam": "Amazon.nl", "prijs": "€ 20,00", "link": "https://amzn.eu/d/00FzcxTW" },
+      { "naam": "Amazon.com.be", "prijs": "€ 15,99", "link": "https://amzn.eu/d/05O761Wt" },
+      { "naam": "Playmobil BE", "prijs": "€ 19,99", "link": "https://www.playmobil.com/nl-be/playmobil-x-ford-f-150-raptor/71858.html" },
+      { "naam": "Euroshop", "prijs": "€ 19,99", "link": "https://www.euroshop.be/nl/speelgoed/figuren-rollenspel/speelsets-figuren-dieren/154210147-playmobil-x-ford-f-150-raptor-71858" },
+      { "naam": "SupraBazar", "prijs": "€ 15,99", "link": "https://www.suprabazar.be/playmobil-cars-71858-playmobil-x-ford-f-150-raptor-32085259" },
+      { "naam": "Bol.com", "prijs": "€ 20,00", "link": "https://www.bol.com/be/nl/p/playmobil-x-ford-f-150-raptor/9300000225695653/" }
     ]
   },
   {
@@ -964,17 +978,6 @@
       { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/ravensburger-puzzel-despicable-me-4-legpuzzel-100-xxl-stukjes/9300000161620315/" },
       { "naam": "Ravensburger", "prijs": "€ 13,99", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/jigsaw-puzzles/kids-puzzles/despicable-me-4-12001062" },
       { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/dispicable-me-4-100-stukjes-xxl/01783193" }
-    ]
-  },
-  {
-    "id": "lego-ninjago-in-de-aanval-avi-m4",
-    "naam": "LEGO® NINJAGO® - In de aanval (AVI M4)",
-    "nummer": "9789030508595",
-    "beschrijving": "Leer lezen met de ninja's! In dit spannende AVI M4 boekje gaan de ninja's in de aanval. Een perfecte manier om leesplezier te stimuleren voor fans van LEGO NINJAGO. Geschreven door Pim Lammers.",
-    "afbeelding_url": "https://static.fnac-static.com/multimedia/PE/Images/FR/NR/7e/3e/d7/14106238/1507-1/tsp20251217092059/LEGO-Ninjago-In-de-aanval-AVI-M4.jpg",
-    "winkels": [
-      { "naam": "Fnac.be", "prijs": "€ 8,99", "link": "https://www.nl.fnac.be/a16649984/Leren-lezen-met-Lego-boeken-AVI-M4-Deel-5-In-de-aanval-Pim-Lammers" },
-      { "naam": "Standaard Boekhandel", "prijs": "€ 9,99", "link": "https://www.standaardboekhandel.be/p/in-de-aanval-9789030508595" }
     ]
   },
   {

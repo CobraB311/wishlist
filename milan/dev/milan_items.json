@@ -602,5 +602,25 @@
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 12,99", "link": "https://www.bol.com/be/nl/p/ses-creative-paw-patrol-ik-leer-knippen-inclusief-veilige-kinderschaar-verschillende-niveaus-36-paw-patrol-knipvellen-knutselpakket-met-paw-patrol-made-in-holland-vanaf-3-jaar/9300000247175316/" }
     ]
+  },
+  {
+    "id": "rubie-s-batman-verkleedkostuum-jongens-zwart-maat-104",
+    "naam": "Rubie's Batman Verkleedkostuum Jongens Zwart (Maat 104 / 3-4 jaar)",
+    "nummer": "9200000114305308",
+    "beschrijving": "Rubie's Batman verkleedkostuum voor kinderen, ideaal voor verkleedfeestjes, themafeesten en carnaval.",
+    "afbeelding_url": "https://media.s-bol.com/xE6pOPMjgzAJ/mZm0KWp/745x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 40,79", "link": "https://www.bol.com/be/nl/p/rubie-s-batman-verkleedkostuum-jongens-zwart-maat-104/9200000114305308/" }
+    ]
+  },
+  {
+    "id": "rubie-s-kostuum-marvel-captain-america-jongens-blauw-104-cm",
+    "naam": "Rubie's Marvel Captain America Verkleedkostuum Jongens Blauw (Maat 104 / 3-4 jaar)",
+    "nummer": "9200000098859646",
+    "beschrijving": "Rubie's Captain America verkleedkostuum in het blauw voor kinderen (specifiek maat 104 / 3-4 jaar), inclusief pak en masker voor superheldenavonturen.",
+    "afbeelding_url": "https://media.s-bol.com/qDYjkBDrzqV2/YEVOXZO/515x1200.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 28,79", "link": "https://www.bol.com/be/nl/p/rubie-s-kostuum-marvel-captain-america-jongens-blauw-104-cm/9200000098859646/" }
+    ]
   }
 ]

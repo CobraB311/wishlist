@@ -458,6 +458,46 @@
     ]
   },
   {
+    "id": "playmobil-knights-leeuw-met-gouden-ridder-72212",
+    "naam": "PLAYMOBIL Knights Leeuw met Gouden Ridder (72212)",
+    "nummer": "72212",
+    "beschrijving": "PLAYMOBIL riddersets met een machtige leeuw en een gouden ridder voor spannende middeleeuwse avonturen.",
+    "afbeelding_url": "https://media.s-bol.com/J3RkpqEX1RPK/QkvrMX9/1090x1500.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/playmobil-knights-leeuw-met-gouden-ridder-72212/9300000376677374/" }
+    ]
+  },
+  {
+    "id": "playmobil-72072-speelset-zooverzorger-voertuig",
+    "naam": "PLAYMOBIL 72072 Speelset Zooverzorger-voertuig (62 delen)",
+    "nummer": "72072",
+    "beschrijving": "62-delige PLAYMOBIL speelset met zooverzorger en voertuig voor dierenreddingsacties en onderhoud in de dierentuin.",
+    "afbeelding_url": "https://media.s-bol.com/4M6NpmOzmYv2/Y7ELrBO/1200x963.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/playmobil-72072-speelset-zooverzorger-voertuig-62-delen/9300000248152372/" }
+    ]
+  },
+  {
+    "id": "playmobil-72023-duopack-heks-en-tovenaar",
+    "naam": "PLAYMOBIL DuoPack Heks en Tovenaar (72023)",
+    "nummer": "72023",
+    "beschrijving": "PLAYMOBIL DuoPack speelset met een heks en tovenaar inclusief magische accessoires.",
+    "afbeelding_url": "https://media.playmobil.com/i/playmobil/72023_product_box_front",
+    "winkels": [
+      { "naam": "PLAYMOBIL", "prijs": "€ 5,99", "link": "https://www.playmobil.com/nl-be/duopack-heks-en-tovenaar/72023.html" }
+    ]
+  },
+  {
+    "id": "playmobil-x-porsche-911-turbo-72239",
+    "naam": "PLAYMOBIL x Porsche 911 Turbo (72239)",
+    "nummer": "72239",
+    "beschrijving": "PLAYMOBIL Porsche 911 Turbo speelgoedauto in iconische sportwagen-uitvoering.",
+    "afbeelding_url": "https://media.playmobil.com/i/playmobil/72239_product_box_front",
+    "winkels": [
+      { "naam": "PLAYMOBIL", "prijs": "€ 19,99", "link": "https://www.playmobil.com/nl-be/playmobil-x-porsche-911-turbo/72239.html" }
+    ]
+  },
+  {
     "id": "zootropolis-2-blu-ray",
     "naam": "Zootropolis 2 (Blu-ray)",
     "beschrijving": "Het vervolg op de populaire Disney-film. Volg de nieuwe avonturen van Judy Hopps en Nick Wilde in de grote stad Zootropolis.",

@@ -796,16 +796,6 @@
     ]
   },
   {
-    "id": "star-wars-power-crystal-lightsaber",
-    "naam": "Star Wars Power Crystal Lightsaber",
-    "nummer": "9300000225966634",
-    "beschrijving": "Interactieve Star Wars Power Crystal Lightsaber met licht- en geluidseffecten. Inclusief kyberkristallen om de kleur van het lichtzwaard te veranderen, geschikt voor kinderen vanaf 4 jaar.",
-    "afbeelding_url": "https://media.s-bol.com/r4359KLrrrGW/Z4wjDNv/1200x1090.jpg",
-    "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 49,99", "link": "https://www.bol.com/be/nl/p/star-wars-power-crystal-lightsaber-star-wars-speelgoed-voor-kinderen-van-4/9300000225966634/" }
-    ]
-  },
-  {
     "id": "pokemon-poke-ball-sleutelhanger-jumping-pikachu",
     "naam": "Pokémon Poké Ball Sleutelhanger - Jumping Pikachu",
     "nummer": "pokemon-poke-ball-sleutelhanger-jumping-pikachu",
@@ -1092,6 +1082,26 @@
     "afbeelding_url": "https://media.s-bol.com/8VlpE8wDrVpL/X6O3w0v/1180x1200.jpg",
     "winkels": [
       { "naam": "Bol.com", "prijs": "€ 34,99", "link": "https://www.bol.com/be/nl/p/dragon-night-light-alarm-clock-met-geluiden/9300000227330956/" }
+    ]
+  },
+  {
+    "id": "star-wars-power-crystal-lightsaber",
+    "naam": "Star Wars Power Crystal Lightsaber",
+    "nummer": "9300000225966634",
+    "beschrijving": "Interactieve Star Wars Power Crystal Lightsaber met licht- en geluidseffecten. Inclusief kyberkristallen om de kleur van het lichtzwaard te veranderen, geschikt voor kinderen vanaf 4 jaar.",
+    "afbeelding_url": "https://media.s-bol.com/r4359KLrrrGW/Z4wjDNv/1200x1090.jpg",
+    "winkels": [
+      { "naam": "Bol.com", "prijs": "€ 49,99", "link": "https://www.bol.com/be/nl/p/star-wars-power-crystal-lightsaber-star-wars-speelgoed-voor-kinderen-van-4/9300000225966634/" }
+    ]
+  },
+  {
+    "id": "star-wars-darth-vader-kostuum-voor-kinderen-basic",
+    "naam": "Star Wars Darth Vader Kostuum voor Kinderen Basic (Maat 116-122 / 5-6 jaar)",
+    "nummer": "145478",
+    "beschrijving": "Star Wars Darth Vader verkleedkledingset voor kinderen, ideaal voor verkleedpartijtjes en themafeesten.",
+    "afbeelding_url": "https://a1.mmo.cm/s3/thumbnail/44/4b/5c/1792169748/145478-1_1152x1562.jpg?ts=1792169748",
+    "winkels": [
+      { "naam": "Party.be", "prijs": "€ 34,99", "link": "https://www.party.be/nl/p/star-wars-darth-vader-kostuum-voor-kinderen-basic--145478?search=darth%20vader" }
     ]
   }
 ]

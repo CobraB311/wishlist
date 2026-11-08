@@ -76,6 +76,10 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 44,99", "link": "https://www.lego.com/nl-be/product/f1-display-truck-with-audi-f1-race-car-60493" },
       { "naam": "Bol.com", "prijs": "€ 38,99", "link": "https://www.bol.com/be/nl/p/lego-city-f1-displaytruck-met-audi-f1-racewagen-60493/9300000243481732/" },
+      { "naam": "DreamLand", "prijs": "€ 34,99", "link": "https://www.dreamland.be/nl/producten/60493-lego-city-displaytruck-met-audi-f1-racewagen/02338217" },
+      { "naam": "Coolblue", "prijs": "€ 38,99", "link": "https://www.coolblue.be/nl/product/972488/lego-city-f1-displaytruck-met-audi-f1-racewagen-60493.html" },
+      { "naam": "Fnac.be", "prijs": "€ 44,99", "link": "https://www.nl.fnac.be/LEGO-City-60493-F1-Display-Truck-with-Audi-F1-Race-Car/a22209232" },
+      { "naam": "SupraBazar", "prijs": "€ 34,99", "link": "https://www.suprabazar.be/lego-city-60493-formule-1-displaytruck-met-audi-f1-racewagen-32164795" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60493/F1-Display-truck-with-Audi-F1-Race-Car.html" }
     ]
   },

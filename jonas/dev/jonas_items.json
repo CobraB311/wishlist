@@ -19,7 +19,7 @@
       { "naam": "Amazon.nl", "prijs": "€ 59,00", "link": "https://www.amazon.nl/Nintendo-Switch-MARIO-TENNIS-FEVER/dp/B0FR9SXRB6" },
       { "naam": "DreamLand", "prijs": "€ 69,99", "link": "https://www.dreamland.be/nl/producten/switch-2-mario-tennis-fever-nl/02335384" },
       { "naam": "Bol.com", "prijs": "€ 63,99", "link": "https://www.bol.com/be/nl/p/mario-tennis-fever-nintendo-switch-2/9300000240435887/" },
-      { "naam": "Fnac.be", "prijs": "€ 69,99", "link": "https://www.nl.fnac.be/a22034346/Mario-Tennis-Fever-Nintendo-Switch-2-NL-Videospel-Nintendo-Switch-2" },
+      { "naam": "Fnac.be", "prijs": "€ 79,99", "link": "https://www.nl.fnac.be/a22034346/Mario-Tennis-Fever-Nintendo-Switch-2-NL-Videospel-Nintendo-Switch-2" },
       { "naam": "MediaMarkt", "prijs": "€ 63,99", "link": "https://www.mediamarkt.be/nl/product/_mario-tennis-fever-nintendo-switch-2-2199212.html" },
       { "naam": "Coolblue", "prijs": "€ 64,00", "link": "https://www.coolblue.be/nl/product/974929/mario-tennis-fever-nintendo-switch-2.html" },
       { "naam": "SupraBazar", "prijs": "€ 79,99", "link": "https://www.suprabazar.be/nintendo-switch-2-super-mario-tennis-fever-32145564" }
@@ -34,7 +34,7 @@
     "winkels": [
       { "naam": "Nintendo Store", "prijs": "€ 64,99", "link": "https://store.nintendo.be/nl/advantage-draadloze-controller-voor-nintendo-switch-2-pokemon-mega-evolutions-000000000010018297" },
       { "naam": "Bol.com", "prijs": "€ 60,99", "link": "https://www.bol.com/be/nl/p/powera-advantage-draadloze-controller-voor-nintendo-switch-2-pokemon-mega-evoluties/9300000237035829/" },
-      { "naam": "Fnac.be", "prijs": "€ 69,95", "link": "https://www.nl.fnac.be/Draadloze-controller-PowerA-Pokemon-Mega-Evolutions-voor-Nintendo-Switch-2/a21880976" }
+      { "naam": "Fnac.be", "prijs": "€ 55,95", "link": "https://www.nl.fnac.be/Draadloze-controller-PowerA-Pokemon-Mega-Evolutions-voor-Nintendo-Switch-2/a21880976" }
     ]
   },
   {
@@ -92,7 +92,11 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt9ef20f731124c8bc/60443_boxprod_v39.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/f1-pit-stop-pit-crew-with-ferrari-car-60443" },
-      { "naam": "Bol.com", "prijs": "€ 23,95", "link": "https://www.bol.com/be/nl/p/lego-city-f1-pitstop-en-pitcrew-met-ferrari-auto-60443/9300000187249639/" },
+      { "naam": "Bol.com", "prijs": "€ 22,45", "link": "https://www.bol.com/be/nl/p/lego-city-f1-pitstop-en-pitcrew-met-ferrari-auto-60443/9300000187249639/" },
+      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/60443-lego-city-f1-pitstop-en-pitcrew-met-ferrari-au/01830644" },
+      { "naam": "Coolblue", "prijs": "€ 27,99", "link": "https://www.coolblue.be/nl/product/972470/lego-city-f1-pitstop-en-pitcrew-met-ferrari-auto-60443.html" },
+      { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-60443-CITY-F1-PITSTOP-CREW-MET-FERRARI-AUTO/a20941808" },
+      { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-city-60443-f1-pitstop-en-pitcrew-met-ferrari-auto-32030846" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60443/F1-Pit-Stop--Pit-Crew-with-Ferrari-Car.html" }
     ]
   },
@@ -109,7 +113,7 @@
       { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60451-lego-city-ambulance/01830569" },
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/emergency-ambulance-60451" },
       { "naam": "MediaMarkt", "prijs": "€ 18,99", "link": "https://www.mediamarkt.be/nl/product/_60451-ambulance-2208341.html" },
-      { "naam": "Fnac", "prijs": "€ 25,37", "link": "https://www.nl.fnac.be/LEGO-60451-CITY-AMBULANCE/a20941820" },
+      { "naam": "Fnac", "prijs": "€ 27,79", "link": "https://www.nl.fnac.be/LEGO-60451-CITY-AMBULANCE/a20941820" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60451/Emergency-Ambulance.html" }
     ]
   },
@@ -122,7 +126,11 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt6b9e5e1105c7678a/blt0122db24849b46a8-60496_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/pizza-delivery-experience-with-vehicles-60496" },
-      { "naam": "Bol.com", "prijs": "€ 33,39", "link": "https://www.bol.com/be/nl/p/lego-city-pizzacentrale-met-voertuigen-bouwspeelgoed-van-een-pizzarestaurant-met-bezorgdrone-sportwagen-en-scooter-cadeautip-voor-raceliefhebbers-vanaf-6-jaar-60496/9300000266727738/?referrer=socialshare_pdp_www" },
+      { "naam": "Bol.com", "prijs": "€ 36,99", "link": "https://www.bol.com/be/nl/p/lego-city-pizzacentrale-met-voertuigen-bouwspeelgoed-van-een-pizzarestaurant-met-bezorgdrone-sportwagen-en-scooter-cadeautip-voor-raceliefhebbers-vanaf-6-jaar-60496/9300000266727738/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/60496-lego-city-pizzacentrale-met-voertuigen/02350332" },
+      { "naam": "Coolblue", "prijs": "€ 41,99", "link": "https://www.coolblue.be/nl/product/975495/lego-city-pizzacentrale-met-voertuigen-60496.html" },
+      { "naam": "Fnac.be", "prijs": "€ 49,99", "link": "https://www.nl.fnac.be/LEGO-City-60496-Pizzacentrale-met-voertuigen/a22592658" },
+      { "naam": "SupraBazar", "prijs": "€ 39,99", "link": "https://www.suprabazar.be/lego-city-60496-pizzacentrale-met-voertuigen-32179769" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60496/Pizza-Delivery-Experience-with-Vehicles.html" }
     ]
   },
@@ -134,7 +142,9 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt15fefa98b699dc7d/blt33a2eda4c9d743f2-60497_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 54,99", "link": "https://www.lego.com/nl-be/product/drive-through-car-wash-60497" },
-      { "naam": "Bol.com", "prijs": "€ 43,99", "link": "https://www.bol.com/be/nl/p/lego-city-autowasstraat-auto-bouwpakket-voor-kinderen-vanaf-6-jaar-60497/9300000266727709/" },
+      { "naam": "Bol.com", "prijs": "€ 41,92", "link": "https://www.bol.com/be/nl/p/lego-city-autowasstraat-auto-bouwpakket-voor-kinderen-vanaf-6-jaar-60497/9300000266727709/" },
+      { "naam": "DreamLand", "prijs": "€ 54,99", "link": "https://www.dreamland.be/nl/producten/60497-lego-city-autowasstraat/02350349" },
+      { "naam": "Coolblue", "prijs": "€ 45,99", "link": "https://www.coolblue.be/nl/product/975497/lego-city-autowasstraat-60497.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60497/Drive-Through-Car-Wash.html" }
     ]
   },
@@ -148,6 +158,11 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 99,99", "link": "https://www.lego.com/nl-be/product/airport-with-airplane-60502" },
       { "naam": "Bol.com", "prijs": "€ 74,99", "link": "https://www.bol.com/be/nl/p/lego-luchthaven-met-vliegtuig-speelgoedset-met-vliegveldmodel-voor-jongens-meisjes-en-fans-van-speelgoedvliegtuigen-bouwset-voor-1-tot-4-personen-9-minifiguren-verjaardagscadeau-voor-kinderen-vanaf-8-jaar-60502/9300000237345521/" },
+      { "naam": "DreamLand", "prijs": "€ 74,99", "link": "https://www.dreamland.be/nl/producten/60502-lego-city-luchthaven-met-vliegtuig/02323053" },
+      { "naam": "Coolblue", "prijs": "€ 76,00", "link": "https://www.coolblue.be/nl/product/972491/lego-city-luchthaven-met-vliegtuig-60502.html" },
+      { "naam": "Fnac.be", "prijs": "€ 101,52", "link": "https://www.nl.fnac.be/LEGO-60502-AIRPORT-WITH-AIRPLANE/a22209233" },
+      { "naam": "SupraBazar", "prijs": "€ 89,99", "link": "https://www.suprabazar.be/lego-city-60502-luchthaven-met-vliegtuig-32126730" },
+      { "naam": "MediaMarkt", "prijs": "€ 76,99", "link": "https://www.mediamarkt.be/nl/product/_60502-luchthaven-met-vliegtuig-2208370.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60502/Airport-with-Airplane.html" }
     ]
   },
@@ -160,6 +175,10 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/red-double-decker-sightseeing-bus-60407" },
       { "naam": "Bol.com", "prijs": "€ 22,49", "link": "https://www.bol.com/be/nl/p/lego-city-toeristische-rode-dubbeldekker-60407/9300000173010391/" },
+      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/60407-lego-city-toeristische-rode-dubbeldekker/01773866" },
+      { "naam": "Coolblue", "prijs": "€ 26,99", "link": "https://www.coolblue.be/nl/product/972469/lego-city-toeristische-rode-dubbeldekker-60407.html" },
+      { "naam": "Fnac.be", "prijs": "€ 36,32", "link": "https://www.nl.fnac.be/LEGO-City-60407-Toeristische-rode-dubbeldekker/a19790572" },
+      { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-city-60407-toeristische-rode-dubbledekker-31952188" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60407/Red-Double-Decker-Sightseeing-Bus.html" }
     ]
   },
@@ -172,6 +191,10 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/off-road-4x4-mountain-truck-60447" },
       { "naam": "Bol.com", "prijs": "€ 16,19", "link": "https://www.bol.com/be/nl/p/lego-city-4x4-terreinwagen-voor-in-de-bergen-60447/9300000187249659/" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/60447-lego-city-4x4-terreinwagen-voor-in-de-bergen/01830552" },
+      { "naam": "Fnac.be", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-60447-CITY-F1-4X4-TERREINWAGEN-VOOR-IN-DE-BERGEN/a20931964" },
+      { "naam": "SupraBazar", "prijs": "€ 17,99", "link": "https://www.suprabazar.be/lego-city-60447-4x4-terreinwagen-voor-in-de-bergen-32030849" },
+      { "naam": "MediaMarkt", "prijs": "€ 17,99", "link": "https://www.mediamarkt.be/nl/product/_60447-4x4-terreinwagen-2208340.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60447/Off-Road-4x4-Mountain-Truck.html" }
     ]
   },
@@ -184,6 +207,10 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/holiday-adventure-camper-van-60454" },
       { "naam": "Bol.com", "prijs": "€ 22,60", "link": "https://www.bol.com/be/nl/p/lego-city-avontuurlijke-camper-voertuigset-60454/9300000187249645/" },
+      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/60454-lego-city-avontuurlijke-camper/01830538" },
+      { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-60454-CITY-AVONTUURLIJKE-CAMPER/a20941874" },
+      { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-city-60454-avontuurlijke-camper-32031058" },
+      { "naam": "MediaMarkt", "prijs": "€ 30,79", "link": "https://www.mediamarkt.be/nl/product/_60454-avontuurlijke-camper-2208343.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60454/Holiday-Adventure-Camper-Van.html" }
     ]
   },
@@ -196,6 +223,11 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 39,99", "link": "https://www.lego.com/nl-be/product/cement-mixer-60478" },
       { "naam": "Bol.com", "prijs": "€ 33,99", "link": "https://www.bol.com/be/nl/p/lego-city-cementwagen-groot-bouwvoertuig-voor-jongens-meisjes-en-kinderen-vanaf-7-jaar-betonmixer-met-draaiende-trommel-en-kantelbare-cabine-cadeautip-voor-verjaardagen-60478/9300000237345464/" },
+      { "naam": "DreamLand", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/60478-lego-city-cementwagen/02323336" },
+      { "naam": "Coolblue", "prijs": "€ 36,99", "link": "https://www.coolblue.be/nl/product/972487/lego-city-cementwagen-60478.html" },
+      { "naam": "Fnac.be", "prijs": "€ 47,21", "link": "https://www.nl.fnac.be/LEGO-60478-CEMENT-MIXER/a22209285" },
+      { "naam": "SupraBazar", "prijs": "€ 35,99", "link": "https://www.suprabazar.be/lego-city-60478-cementwagen-32126595" },
+      { "naam": "MediaMarkt", "prijs": "€ 24,00", "link": "https://www.mediamarkt.be/nl/product/_60478-cementwagen-2208353.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60478/Cement-Mixer.html" }
     ]
   },
@@ -208,6 +240,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 24,99", "link": "https://www.lego.com/nl-be/product/snowplow-60490" },
       { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/lego-city-sneeuwschuiver-sneeuwruimer-speelgoed-vrachtwagen-voor-jongens-en-meisjes-vanaf-6-jaar-bouwset-met-1-minifiguur-cadeautip-voor-een-verjaardag-60490/9300000237345479/" },
+      { "naam": "DreamLand", "prijs": "€ 24,99", "link": "https://www.dreamland.be/nl/producten/60490-lego-city-sneeuwploeg/02323459" },
+      { "naam": "Fnac.be", "prijs": "€ 31,83", "link": "https://www.nl.fnac.be/LEGO-60490-SNOWPLOW/a22209311?oref=c4ab5708-3662-223c-9d61-578e86150d05" },
+      { "naam": "SupraBazar", "prijs": "€ 23,99", "link": "https://www.suprabazar.be/lego-city-60490-sneeuwploeg-32126726" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60490/Snowplow.html" }
     ]
   },
@@ -221,7 +256,8 @@
       { "naam": "Amazon.nl", "prijs": "€ 44,99", "link": "https://amzn.eu/d/90UC8Ac" },
       { "naam": "Amazon.com.be", "prijs": "€ 44,90", "link": "https://amzn.eu/d/8uIshy7" },
       { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/lego-marvel-de-hulk-truck-vs-thanos-superhelden-speelgoed-76312/9300000198889972/" },
-      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/76312-lego-the-hulk-truck-vs-thanos/01841817" },
+      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/76312-lego-super-heroes-marvel-the-hulk-truck-vs-thanos/01841817" },
+      { "naam": "Fnac.be", "prijs": "€ 35,99", "link": "https://www.nl.fnac.be/LEGO-Super-Heroes-76312-De-Hulk-truck-vs-Thanos/a21189218" },
       { "naam": "LEGO® Shop BE", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/the-hulk-truck-vs-thanos-76312" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76312/The-Hulk-Truck-vs-Thanos.html" }
     ]
@@ -252,6 +288,8 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 14,99", "link": "https://www.lego.com/nl-be/product/yellow-taxi-60487" },
       { "naam": "Bol.com", "prijs": "€ 13,99", "link": "https://www.bol.com/be/nl/p/lego-city-gele-taxi-modelautobouwset-met-2-minifiguren-klassieke-speelgoedtaxi-60487/9300000237345434/" },
+      { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/60487-lego-city-gele-taxi/02323732" },
+      { "naam": "Fnac.be", "prijs": "€ 14,99", "link": "https://www.nl.fnac.be/LEGO-60487-YELLOW-TAXI/a22209222" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60487/Yellow-Taxi.html" }
     ]
   },
@@ -269,7 +307,7 @@
       { "naam": "Dreamland", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/60456-lego-city-achtervolging-met-politieboot/01854602" },
       { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/police-boat-chase-60456" },
       { "naam": "MediaMarkt", "prijs": "€ 27,99", "link": "https://www.mediamarkt.be/nl/product/_lego-police-boat-chase-bouwspeelgoed-meerkleurig-155703178.html" },
-      { "naam": "Fnac", "prijs": "€ 36,43", "link": "https://www.nl.fnac.be/LEGO-60456-CITY-POLITIE-POLITIE-BOOTACHTERVOLGING/a21451688" },
+      { "naam": "Fnac", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-60456-CITY-POLITIE-POLITIE-BOOTACHTERVOLGING/a21451688" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60456/Police-Boat-Chase.html" }
     ]
   },
@@ -316,6 +354,11 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 79,99", "link": "https://www.lego.com/nl-be/product/fire-station-with-fire-truck-60414" },
       { "naam": "Bol.com", "prijs": "€ 54,99", "link": "https://www.bol.com/be/nl/p/lego-city-brandweerkazerne-en-brandweerauto-60414/9300000157956292/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 59,99", "link": "https://www.dreamland.be/nl/producten/60414-lego-city-brandweerkazerne-en-brandweerauto/01756098" },
+      { "naam": "Coolblue", "prijs": "€ 63,00", "link": "https://www.coolblue.be/nl/product/972477/lego-city-brandweerkazerne-en-brandweerauto-60414.html" },
+      { "naam": "Fnac.be", "prijs": "€ 83,98", "link": "https://www.nl.fnac.be/LEGO-City-60414-Brandweerkazerne-en-brandweerauto/a18821691" },
+      { "naam": "SupraBazar", "prijs": "€ 69,98", "link": "https://www.suprabazar.be/lego-city-60414-brandweerkazerne-en-brandweerauto-31452063" },
+      { "naam": "MediaMarkt", "prijs": "€ 74,19", "link": "https://www.mediamarkt.be/nl/product/_lego-fire-station-with-fire-truck-bouwspeelgoed-meerkleurig-143861653.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60414/Fire-Station-with-Fire-Truck.html" }
     ]
   },
@@ -328,6 +371,11 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 109,99", "link": "https://www.lego.com/nl-be/product/arctic-explorer-science-lab-truck-60471" },
       { "naam": "Bol.com", "prijs": "€ 74,26", "link": "https://www.bol.com/be/nl/p/lego-city-laboratoriumtruck-op-de-noordpool-bouwset-60471/9300000227400140/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 109,99", "link": "https://www.dreamland.be/nl/producten/60471-lego-city-laboratoriumtruck-op-de-noordpool/01854596" },
+      { "naam": "Coolblue", "prijs": "€ 87,00", "link": "https://www.coolblue.be/nl/product/972483/lego-city-laboratoriumtruck-op-de-noordpool-60471.html" },
+      { "naam": "Fnac.be", "prijs": "€ 104,33", "link": "https://www.nl.fnac.be/LEGO-60471-CITY-VERKENNING-ARCTISCHE-ONDERZOEKERS-WETENS/a21473841" },
+      { "naam": "SupraBazar", "prijs": "€ 99,99", "link": "https://www.suprabazar.be/lego-city-60471-laboratoriumtruck-op-de-noordpool-32075138" },
+      { "naam": "MediaMarkt", "prijs": "€ 106,19", "link": "https://www.mediamarkt.be/nl/product/_lego-arctic-explorer-science-lab-truck-bouwspeelgoed-meerkleurig-155703294.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60471/Arctic-Explorer-Science-Lab-Truck.html" }
     ]
   },
@@ -361,6 +409,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 199,99", "link": "https://www.lego.com/nl-be/product/police-train-heist-60508" },
       { "naam": "Bol.com", "prijs": "€ 135,99", "link": "https://www.bol.com/be/nl/p/lego-city-overval-op-politietrein-speelgoedtreinset-60508/9300000243481709/" },
+      { "naam": "DreamLand", "prijs": "€ 139,99", "link": "https://www.dreamland.be/nl/producten/60508-lego-city-police-train-heist/02338149" },
+      { "naam": "Fnac.be", "prijs": "€ 199,99", "link": "https://www.nl.fnac.be/LEGO-60508-POLICE-TRAIN-HEIST/a22209234" },
+      { "naam": "SupraBazar", "prijs": "€ 149,99", "link": "https://www.suprabazar.be/lego-city-trains-60508-overval-op-politietrein-32164797" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/60508/Police-Train-Heist.html" }
     ]
   },
@@ -373,6 +424,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 99,99", "link": "https://www.lego.com/nl-be/product/dino-jet-71514" },
       { "naam": "Bol.com", "prijs": "€ 89,99", "link": "https://www.bol.com/be/nl/p/lego-dreamzzz-dinoruimteschip-dinosaurusbouwset-ruimtespeelgoed-voor-kinderen-vanaf-9-jaar-2-in-1-bouwset-met-stegosaurus-brontosaurus-en-4-minifiguren-cadeautip-71514/9300000237345529/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 99,99", "link": "https://www.dreamland.be/nl/producten/71514-lego-dreamzzz-dinoruimteschip/02323688" },
+      { "naam": "Fnac.be", "prijs": "€ 99,99", "link": "https://www.nl.fnac.be/LEGO-71514-DINO-JET/a22209267" },
+      { "naam": "SupraBazar", "prijs": "€ 89,99", "link": "https://www.suprabazar.be/lego-dreamzzz-71514-dinoruimteschip-32140517" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71514/Dino-Jet.html" }
     ]
   },
@@ -385,6 +439,8 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/nightmare-scorpion-digger-71513" },
       { "naam": "Bol.com", "prijs": "€ 48,97", "link": "https://www.bol.com/be/nl/p/lego-dreamzzz-nachtmerrie-schorpioengraver-bouwset-speelgoed-voor-kinderen-vanaf-7-jaar-fantasierijke-graafmachine-met-2-bouwmogelijkheden-en-3-minifiguren-cadeautip-71513/9300000237345506/" },
+      { "naam": "Fnac.be", "prijs": "€ 55,68", "link": "https://www.nl.fnac.be/LEGO-71513-NIGHTMARE-SCORPION-DIGGER/a22209265" },
+      { "naam": "SupraBazar", "prijs": "€ 44,99", "link": "https://www.suprabazar.be/lego-dreamzzz-71513-nachtmerrie-schorpioengraver-32140515" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71513/Nightmare-Scorpion-Digger.html" }
     ]
   },
@@ -434,6 +490,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/zilvar-and-grimtak-the-dragon-beast-71863" },
       { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-zilvar-en-grimtak-het-drakenbeest-speelgoed-draak-voor-kinderen-71863/9300000266727719/" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/71863-lego-ninjago-zilvar-en-grimtak-het-drakenbeest/02350387" },
+      { "naam": "Fnac.be", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71863-71863-Zilvar-en-Grimtak-het-Drakenbeest/a22432009" },
+      { "naam": "SupraBazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-ninjago-71863-zilvar-en-grimtak-het-drakenbeest-32179820" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71863/Zilvar-and-Grimtak-the-Dragon-Beast.html" }
     ]
   },
@@ -447,6 +506,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/kai-and-coles-combiner-vehicles-71864" },
       { "naam": "Bol.com", "prijs": "€ 23,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-kai-en-cole-s-combivoertuigen-bouwset-voor-kinderen-met-2-transformerende-voertuigen-en-3-minifiguren-cadeautip-voor-jongens-en-meisjes-vanaf-7-jaar-71864/9300000266727714/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/71864-lego-ninjago-kai-en-cole-s-combivoertuigen/02350394" },
+      { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71864-Kai-en-Cole-s-combivoertuigen/a22431996" },
+      { "naam": "SupraBazar", "prijs": "€ 24,99", "link": "https://www.suprabazar.be/lego-ninjago-71864-kai-en-cole-s-combivoertuigen-32179821" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71864/Kai-and-Coles-Combiner-Vehicles.html" }
     ]
   },
@@ -460,6 +522,8 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 99,99", "link": "https://www.lego.com/nl-be/product/zanes-ultra-combiner-mech-71834" },
       { "naam": "Bol.com", "prijs": "€ 65,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-zane-s-ultra-combomecha-4-in-1-71834/9300000187249741/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 99,99", "link": "https://www.dreamland.be/nl/producten/71834-lego-ninjago-zane-s-ultra-combomecha/01831405" },
+      { "naam": "Fnac.be", "prijs": "€ 92,55", "link": "https://www.nl.fnac.be/LEGO-Ninjago-71834-Zane-s-ultra-combomecha/a20941853" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71834/Zanes-Ultra-Combiner-Mech.html" }
     ]
   },
@@ -472,6 +536,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/lloyds-green-forest-dragon-71829" },
       { "naam": "Bol.com", "prijs": "€ 18,49", "link": "https://www.bol.com/be/nl/p/lego-ninjago-lloyds-groene-bosdraak-71829/9300000187249735/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/71829-lego-ninjago-lloyds-groene-bosdraak/01831474" },
+      { "naam": "Fnac.be", "prijs": "€ 21,99", "link": "https://www.nl.fnac.be/LEGO-71829-NINJAGO-LLOYDS-GROENE-BOSDRAAK/a20941919" },
+      { "naam": "SupraBazar", "prijs": "€ 19,98", "link": "https://www.suprabazar.be/lego-ninjago-71829-lloyds-groene-bosdraak-32031078" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71829/Lloyds-Green-Forest-Dragon.html" }
     ]
   },
@@ -503,6 +570,10 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/arins-spinjitzu-battle-mech-71839" },
       { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/lego-ninjago-arins-spinjitzu-strijdmecha-speelgoed-71839/9300000227400211/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/71839-lego-ninjago-arins-spinjitzu-strijdmecha/01855166" },
+      { "naam": "Fnac.be", "prijs": "€ 27,80", "link": "https://www.nl.fnac.be/LEGO-71839-NINJAGO-ARINS-SPINJITZU-GEVECHTSMECHA/a21473850" },
+      { "naam": "SupraBazar", "prijs": "€ 17,99", "link": "https://www.suprabazar.be/lego-ninjago-71839-arins-spinjitzu-strijdmecha-32075201" },
+      { "naam": "MediaMarkt", "prijs": "€ 19,99", "link": "https://www.mediamarkt.be/nl/product/_71839-arins-spinjitzu-strijdmecha-2208496.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/71839/Arins-Spinjitzu-Battle-Mech.html" }
     ]
   },
@@ -516,6 +587,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 69,99", "link": "https://www.lego.com/nl-be/product/team-sonic-command-truck-77006" },
       { "naam": "Bol.com", "prijs": "€ 51,99", "link": "https://www.bol.com/be/nl/p/lego-sonic-the-hedgehog-team-sonic-commandotruck-77006/9300000227400240/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 69,99", "link": "https://www.dreamland.be/nl/producten/77006-lego-team-sonic-commandotruck/01866346" },
+      { "naam": "Coolblue", "prijs": "€ 57,00", "link": "https://www.coolblue.be/nl/product/972607/lego-sonic-team-sonic-commandotruck-77006.html" },
+      { "naam": "Fnac.be", "prijs": "78,98", "link": "https://www.nl.fnac.be/LEGO-Sonic-the-Hedgehog-77006-Team-Sonic-commandotruck/a21489064" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/77006/Team-Sonic-Command-Truck.html" }
     ]
   },
@@ -528,6 +602,8 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 39,99", "link": "https://www.lego.com/nl-be/product/silvers-car-vs-knuckles-monster-truck-77118" },
       { "naam": "Bol.com", "prijs": "€ 35,99", "link": "https://www.bol.com/be/nl/p/lego-sonic-the-hedgehog-silvers-auto-vs-knuckles-monstertruck-speelgoed-bouwset-voor-kinderen-vanaf-8-jaar-2-racewagens-en-2-minifiguren-sonic-gamingcadeau-77118/9300000237345493/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/77118-lego-sonic-silvers-auto-vs-knuckles-monstertruck/02323947" },
+      { "naam": "Coolblue", "prijs": "€ 35,99", "link": "https://www.coolblue.be/nl/product/972608/lego-sonic-silvers-auto-vs-knuckles-monstertruck-77118.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/77118/Silvers-Car-vs.-Knuckles-Monster-Truck.html" }
     ]
   },
@@ -540,6 +616,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 24,99", "link": "https://www.lego.com/nl-be/product/baby-dinosaur-pteranodon-77977" },
       { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/lego-jurassic-world-babydinosaurus-pteranodon-speelgoed-voor-kinderen-vanaf-7-jaar-77977/9300000265640058/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 24,99", "link": "https://www.dreamland.be/nl/producten/77977-lego-jurassic-world-babydinosaurus-pteranodon/02391137" },
+      { "naam": "Fnac.be", "prijs": "€ 24,99", "link": "https://www.nl.fnac.be/LEGO-77977-BABY-DINOSAUR-PTERANODON/a23016651" },
+      { "naam": "SupraBazar", "prijs": "€ 24,99", "link": "https://www.suprabazar.be/lego-jurassic-world-77977-babydinosaurus-pteranodon-32195225" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/77977/Baby-Dinosaur-Pteranodon.html" }
     ]
   },
@@ -552,6 +631,10 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 99,99", "link": "https://www.lego.com/nl-be/product/mosasaurus-dinosaur-boat-attack-77983" },
       { "naam": "Bol.com", "prijs": "€ 65,09", "link": "https://www.bol.com/be/nl/p/lego-jurassic-world-mosasaurus-bootaanval-dinosaurus-speelgoed-voor-kinderen-77983/9300000265640063/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 99,99", "link": "https://www.dreamland.be/nl/producten/77983-lego-jurassic-world-mosasaurus-bootaanval/02391168" },
+      { "naam": "Coolblue", "prijs": "€ 78,00", "link": "https://www.coolblue.be/nl/product/978251/lego-jurassic-world-mosasaurus-bootaanval-77983.html" },
+      { "naam": "Fnac.be", "prijs": "€ 99,99", "link": "https://www.nl.fnac.be/LEGO-77983-MOSASAURUS-DINOSAUR-BOAT-ATTACK/a23016656" },
+      { "naam": "SupraBazar", "prijs": "€ 89,99", "link": "https://www.suprabazar.be/lego-jurassic-world-77983-mosasaurus-bootaanval-32195231" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/77983/Mosasaurus-Dinosaur-Boat-Attack.html" }
     ]
   },
@@ -564,6 +647,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 59,99", "link": "https://www.lego.com/nl-be/product/batman-tumbler-vs-two-face-the-joker-76303" },
       { "naam": "Bol.com", "prijs": "€ 44,99", "link": "https://www.bol.com/be/nl/p/lego-dc-batman-batman-tumbler-vs-two-face-en-the-joker-76303/9300000187249753/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 59,99", "link": "https://www.dreamland.be/nl/producten/76303-lego-super-heroes-dc-batman-tumbler-vs-two-face-the-joker/01831603" },
+      { "naam": "Fnac.be", "prijs": "71,64", "link": "https://www.nl.fnac.be/LEGO-76303-BATMAN-TUMBLER-VS-TWO-FACE-EN-THE-JOKER/a20941903" },
+      { "naam": "MediaMarkt", "prijs": "€ 66,48", "link": "https://www.mediamarkt.be/nl/product/_lego-batman-tumbler-vs-two-face-bouwspeelgoed-meerkleurig-151872265.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76303/Batman-Tumbler-vs-Two-Face--The-Joker.html" }
     ]
   },
@@ -577,6 +663,10 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 89,99", "link": "https://www.lego.com/nl-be/product/spider-man-vs-hulk-epic-clash-76350" },
       { "naam": "Bol.com", "prijs": "€ 66,32", "link": "https://www.bol.com/be/nl/p/lego-marvel-spider-man-vs-hulk-ultieme-confrontatie-superheld-speelgoed-voor-kinderen-76350/9300000266727723/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 89,99", "link": "https://www.dreamland.be/nl/producten/76350-lego-marvel-spider-man-vs-hulk-ultieme-confrontatie/02350493" },
+      { "naam": "Coolblue", "prijs": "€ 71,00", "link": "https://www.coolblue.be/nl/product/975487/lego-marvel-spider-man-vs-hulk-ultieme-confrontatie-76350.html" },
+      { "naam": "Fnac.be", "prijs": "91,99", "link": "https://www.nl.fnac.be/LEGO-Marvel-76350-76350-Spider-Man-vs-Hulk-ultieme-confrontatie/a22740326" },
+      { "naam": "SupraBazar", "prijs": "€ 79,99", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76350-spider-man-vs.-hulk-ultieme-confrontatie-32179832" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76350/Spider-Man-vs.-Hulk-Epic-Clash.html" }
     ]
   },
@@ -589,6 +679,10 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/spider-man-prison-transport-chase-76349" },
       { "naam": "Bol.com", "prijs": "€ 34,83", "link": "https://www.bol.com/be/nl/p/lego-marvel-spider-man-achtervolging-van-gevangenistransport-superheldenbouwset-met-4-minifiguren-cadeau-voor-kinderen-vanaf-8-jaar-en-fans-van-spider-man-brand-new-day-76349/9300000266727740/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 49,99", "link": "https://www.dreamland.be/nl/producten/76349-lego-marvel-spider-man-achtervolging-van-gevangenistransport/02350486" },
+      { "naam": "Coolblue", "prijs": "€ 42,99", "link": "https://www.coolblue.be/nl/product/975486/lego-marvel-spider-man-achtervolging-van-gevangenistransport-76349.html" },
+      { "naam": "Fnac.be", "prijs": "47,49", "link": "https://www.nl.fnac.be/LEGO-Marvel-76349-Spider-Man-achtervolging-van-gevangenistransport/a22735092" },
+      { "naam": "SupraBazar", "prijs": "€ 45,99", "link": "https://www.suprabazar.be/lego-super-heroes-marvel-76349-spider-man-achtervolging-van-gevangenis-32179830" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76349/Spider-Man-Prison-Transport-Chase.html" }
     ]
   },
@@ -602,6 +696,8 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/spider-man-vs-doc-ock-subway-train-scene-76321" },
       { "naam": "Bol.com", "prijs": "€ 51,99", "link": "https://www.bol.com/be/nl/p/lego-marvel-spider-man-vs-doc-ock-metroscene-76321/9300000227400248/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 49,99", "link": "https://www.dreamland.be/nl/producten/76321-lego-super-heroes-marvel-spider-man-vs-doc-ock/01866155" },
+      { "naam": "SupraBazar", "prijs": "€ 45,99", "link": "https://www.suprabazar.be/lego-super-heroes-76321-spider-man-vs.-doc-ock-metroscene-32097358" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76321/Spider-Man-vs.-Doc-Ock-Subway-Train-Scene.html" }
     ]
   },
@@ -614,6 +710,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 14,99", "link": "https://www.lego.com/nl-be/product/spider-man-mech-vs-anti-venom-76308" },
       { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/lego-marvel-spider-man-mecha-vs-anti-venom-76308/9300000187249754/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/76308-lego-super-heroes-marvel-spider-man-mech-vs-anti-venom/01831689" },
+      { "naam": "Fnac.be", "prijs": "€ 14,99", "link": "https://www.nl.fnac.be/LEGO-76308-MARVEL-SPIDER-MAN-MECHA-VS-ANTI-VENOM/a20941839" },
+      { "naam": "SupraBazar", "prijs": "€ 14,98", "link": "https://www.suprabazar.be/lego-super-heroes-76308-spider-man-mecha-vs.-anti-venom-32032052" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76308/Spider-Man-Mech-vs.-Anti-Venom.html" }
     ]
   },
@@ -626,6 +725,8 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 54,99", "link": "https://www.lego.com/nl-be/product/iron-mans-laboratory-hall-of-armor-76315" },
       { "naam": "Bol.com", "prijs": "€ 39,99", "link": "https://www.bol.com/be/nl/p/lego-marvel-iron-mans-laboratorium-harnasruimte-set-76315/9300000198889978/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 54,99", "link": "https://www.dreamland.be/nl/producten/76315-lego-super-heroes-marvel-iron-man-s-laboratory-hall-of-armor/01841824" },
+      { "naam": "Coolblue", "prijs": "€ 46,99", "link": "https://www.coolblue.be/nl/product/972578/lego-marvel-iron-mans-laboratorium-harnasruimte-76315.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/76315/Iron-Mans-Laboratory-Hall-of-Armor.html" }
     ]
   },
@@ -639,6 +740,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 29,99", "link": "https://www.lego.com/nl-be/product/cobb-vanths-speeder-75437" },
       { "naam": "Bol.com", "prijs": "€ 22,99", "link": "https://www.bol.com/be/nl/p/lego-star-wars-cobb-vanths-speeder-voertuig-decoratie-en-bouwpakket-voor-kinderen-75437/9300000237345411/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/75437-lego-star-wars-cobb-vanths-speeder/02323381" },
+      { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/LEGO-Star-Wars-75437-Cobb-Vanth-s-Speeder/a22213445" },
+      { "naam": "SupraBazar", "prijs": "€ 25,99", "link": "https://www.suprabazar.be/lego-star-wars-75437-cobb-vanths-speeder-32140531" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75437/Cobb-Vanths-Speeder.html" }
     ]
   },
@@ -651,6 +755,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 69,99", "link": "https://www.lego.com/nl-be/product/arc-170-starfighter-75402" },
       { "naam": "Bol.com", "prijs": "€ 46,99", "link": "https://www.bol.com/be/nl/p/lego-star-wars-arc-170-starfighter-bouw-75402/9300000187249752/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 69,99", "link": "https://www.dreamland.be/nl/producten/75402-lego-star-wars-arc-170-starfighter/01831559" },
+      { "naam": "Fnac.be", "prijs": "€ 69,99", "link": "https://www.nl.fnac.be/LEGO-75402-STAR-WARS-ARC-170-STARFIGHTER/a20941900" },
+      { "naam": "SupraBazar", "prijs": "€ 64,99", "link": "https://www.suprabazar.be/lego-star-wars-75402-arc-170-starfighter-32032043" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75402/ARC-170-Starfighter.html" }
     ]
   },
@@ -663,6 +770,9 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 14,99", "link": "https://www.lego.com/nl-be/product/clone-shock-trooper-mech-75448" },
       { "naam": "Bol.com", "prijs": "€ 12,68", "link": "https://www.bol.com/be/nl/p/lego-star-wars-clone-shock-trooper-mecha-speelset-snel-te-bouwen-verstelbare-actiefiguur-met-een-lego-minifiguur-klein-star-wars-cadeautje-voor-kinderen-vanaf-6-jaar-75448/9300000237345428/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/75448-lego-star-wars-clone-shock-troopertm-mecha/02323718" },
+      { "naam": "Fnac.be", "prijs": "€ 23,97", "link": "https://www.nl.fnac.be/LEGO-75448-CLONE-SHOCK-TROOPER-MECH/a22213474?oref=0439f787-fcd3-ad03-a5c3-916eb104ddec" },
+      { "naam": "SupraBazar", "prijs": "€ 14,99", "link": "https://www.suprabazar.be/lego-star-wars-75448-clone-shock-trooper-mecha-32140535" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75448/Clone-Shock-Trooper-Mech.html" }
     ]
   },
@@ -675,6 +785,7 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 14,99", "link": "https://www.lego.com/nl-be/product/darth-maul-mech-75411" },
       { "naam": "Bol.com", "prijs": "€ 13,59", "link": "https://www.bol.com/be/nl/p/lego-star-wars-the-clone-wars-darth-maul-mecha-set-75411/9300000227400201/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/75411-lego-star-wars-darth-maul-mecha/01855203" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75411/Darth-Maul-Mech.html" }
     ]
   },
@@ -688,6 +799,7 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 149,99", "link": "https://www.lego.com/nl-be/product/republic-juggernaut-75413" },
       { "naam": "Bol.com", "prijs": "€ 104,99", "link": "https://www.bol.com/be/nl/p/lego-star-wars-the-clone-wars-republic-juggernaut-75413/9300000227400241/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 104,99", "link": "https://www.dreamland.be/nl/producten/75413-lego-star-wars-republic-juggernaut/01866261" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75413/Republic-Juggernaut.html" }
     ]
   },
@@ -699,6 +811,7 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt81954b8886a6f5f1/75431_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 39,99", "link": "https://www.lego.com/nl-be/product/327th-star-corps-clone-troopers-battle-pack-75431" },
+      { "naam": "DreamLand", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/75431-lego-star-wars-327th-star-corps-clone-troopers-uitbreidingsset/01866223" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75431/327th-Star-Corps-Clone-Troopers-Battle-Pack.html" }
     ]
   },
@@ -711,6 +824,12 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 149,99", "link": "https://www.lego.com/nl-be/product/battle-of-felucia-separatist-mtt-75435" },
       { "naam": "Bol.com", "prijs": "€ 107,63", "link": "https://www.bol.com/be/nl/p/lego-star-wars-the-clone-wars-slag-om-felucia-separatist-mtt-75435/9300000227400261/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 109,99", "link": "https://www.dreamland.be/nl/producten/75435-lego-star-wars-slag-om-felucia-separatist/01866254" },
+      { "naam": "Coolblue", "prijs": "€ 126,00", "link": "https://www.coolblue.be/nl/product/972646/lego-star-wars-slag-om-felucia-separatist-mtt-75435.html" },
+      { "naam": "Fnac.be", "prijs": "€ 149,99", "link": "https://www.nl.fnac.be/75435-LEGO-STAR-WARS/a21705975" },
+      { "naam": "SupraBazar", "prijs": "€ 134,99", "link": "https://www.suprabazar.be/lego-star-wars-75435-slag-om-felucia-serparist-mtt-32097291" },
+      { "naam": "MediaMarkt BE", "prijs": "€ 146,36", "link": "https://www.mediamarkt.be/nl/product/_lego-star-wars-75435-slag-om-felucia-separatist-mtt-lego-bouwset-veelkleurig-159404335.html" },
+      { "naam": "Amazon.com.be", "prijs": "€ 99,99", "link": "https://www.amazon.com.be/-/nl/LEGO-separatisten-75435-interactief-droidfiguren/dp/B0DWF9CLWZ/" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75435/Battle-of-Felucia-Separatist-MTT.html" }
     ]
   },
@@ -723,6 +842,12 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/the-force-burner-snowspeeder-75414" },
       { "naam": "Bol.com", "prijs": "€ 34,99", "link": "https://www.bol.com/be/nl/p/lego-star-wars-the-force-burner-snowspeeder-75414/9300000227400246/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 34,99", "link": "https://www.dreamland.be/nl/producten/75414-lego-star-wars-the-force-burner-snowspeeder/01866285" },
+      { "naam": "Fnac.be", "prijs": "€ 47,49", "link": "https://www.nl.fnac.be/75414-LEGO-STAR-WARS/a21705990" },
+      { "naam": "SupraBazar", "prijs": "€ 45,99", "link": "https://www.suprabazar.be/lego-star-wars-75414-the-force-burner-snowspeeder-32097019" },
+      { "naam": "MediaMarkt BE", "prijs": "€ 38,99", "link": "https://www.mediamarkt.be/nl/product/_75414-the-force-burner-snowspeeder-2206785.html" },
+      { "naam": "Verthus", "prijs": "€ 49,99", "link": "https://verthus.be/producten/lego-star-wars-the-force-burner-snowspeeder-75414/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 36,95", "link": "https://www.amazon.com.be/-/nl/LEGO-Snowspeeder-75414-minifiguren-lichtzwaarden/dp/B0DWDJPVC8/" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75414/The-Force-Burner-Snowspeeder.html" }
     ]
   },
@@ -736,6 +861,12 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 179,99", "link": "https://www.lego.com/nl-be/product/the-dark-falcon-75389" },
       { "naam": "Bol.com", "prijs": "€ 129,00", "link": "https://www.bol.com/be/nl/p/lego-star-wars-dark-falcon-75389/9300000175725354/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 134,99", "link": "https://www.dreamland.be/nl/producten/75389-lego-star-wars-dark-falcon/01786477" },
+      { "naam": "Fnac.be", "prijs": "€ 179,99", "link": "https://www.nl.fnac.be/LEGO-Star-Wars-Rebuild-the-Galaxy-75389-Dark-Falcon/a20479767" },
+      { "naam": "SupraBazar", "prijs": "€ 169,99", "link": "https://www.suprabazar.be/lego-star-wars-75389-dark-falcon-31971318" },
+      { "naam": "MediaMarkt BE", "prijs": "€ 179,99", "link": "https://www.mediamarkt.be/nl/product/_75389-dark-falcon-2208526.html" },
+      { "naam": "Amazon.com.be", "prijs": "€ 145,50", "link": "https://www.amazon.com.be/-/nl/LEGO-ruimteschipset-tentoonstellen-verjaardagscadeau-75389/dp/B0CWH3FX31/" },
+      { "naam": "Amazon.nl", "prijs": "€ 127,71", "link": "https://www.amazon.nl/LEGO-75389-speelgoed-minifiguren-onderdelen/dp/B0CWH3FX31/" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75389/The-Dark-Falcon.html" }
     ]
   },
@@ -748,6 +879,12 @@
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/death-trooper-night-trooper-battle-pack-75412" },
       { "naam": "Bol.com", "prijs": "€ 16,49", "link": "https://www.bol.com/be/nl/p/lego-star-wars-death-trooper-en-night-trooper-battle-pack-set-75412/9300000227400192/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/75412-lego-star-wars-death-trooper-en-night-trooper-battl/01855180" },
+      { "naam": "Fnac.be", "prijs": "€ 29,19", "link": "https://www.nl.fnac.be/LEGO-75412-STAR-WARS-DEATH-TROOPER-EN-NIGHT-TROOPER-GEVE/a21473851" },
+      { "naam": "SupraBazar", "prijs": "€ 17,99", "link": "https://www.suprabazar.be/lego-star-wars-75412-death-trooper-en-night-trooper-battle-pack-32075211" },
+      { "naam": "MediaMarkt BE", "prijs": "€ 18,99", "link": "https://www.mediamarkt.be/nl/product/_75412-death-trooper-and-night-trooper-2208535.html" },
+      { "naam": "Amazon.com.be", "prijs": "€ 13,51", "link": "https://www.amazon.com.be/-/nl/LEGO-75412-gevechtspakket-minifiguren-verzamelaar/dp/B0DWF1N45H/" },
+      { "naam": "Amazon.nl", "prijs": "€ 13,51", "link": "https://www.amazon.nl/LEGO-75412-speelgoed-minifiguren-onderdelen/dp/B0DWF1N45H/" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/75412/Death-Trooper--Night-Trooper-Battle-Pack.html" }
     ]
   },

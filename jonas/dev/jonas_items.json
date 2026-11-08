@@ -6,7 +6,12 @@
     "beschrijving": "LEGO Batman: Legacy of the Dark Knight voor de PlayStation 5. Beleef de iconische avonturen van de Dark Knight in een meeslepende LEGO-wereld.",
     "afbeelding_url": "https://media.s-bol.com/3NXgDBzV23vx/1jZB5P0/1023x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 52,39", "link": "https://www.bol.com/be/nl/p/lego-batman-legacy-of-the-dark-knight-ps5/9300000251333745/" }
+      { "naam": "Bol.com", "prijs": "€ 52,39", "link": "https://www.bol.com/be/nl/p/lego-batman-legacy-of-the-dark-knight-ps5/9300000251333745/" },
+      { "naam": "MediaMarkt BE", "prijs": "€ 55,99", "link": "https://www.mediamarkt.be/nl/product/_lego-batman-legacy-of-the-dark-knight-ps5-2212534.html" },
+      { "naam": "Fnac.be", "prijs": "€ 51,99", "link": "https://www.nl.fnac.be/a22470053/LEGO-Batman-The-Legacy-of-the-Dark-Knight-PS5-Videospel-Playstation-5" },
+      { "naam": "Amazon.com.be", "prijs": "€ 53,39", "link": "https://www.amazon.com.be/-/en/LEGO-Batman-Legacy-Knight-PlayStation/dp/B0G5PYBSBB/" },
+      { "naam": "DreamLand", "prijs": "€ 59,99", "link": "https://www.dreamland.be/nl/producten/ps5-lego-batman-legacy-of-the-dark-knight/02337753" },
+      { "naam": "Coolblue", "prijs": "€ 55,00", "link": "https://www.coolblue.be/nl/product/974526/lego-batman-legacy-of-the-dark-knight-ps5.html" }
     ]
   },
   {
@@ -34,7 +39,10 @@
     "winkels": [
       { "naam": "Nintendo Store", "prijs": "€ 64,99", "link": "https://store.nintendo.be/nl/advantage-draadloze-controller-voor-nintendo-switch-2-pokemon-mega-evolutions-000000000010018297" },
       { "naam": "Bol.com", "prijs": "€ 60,99", "link": "https://www.bol.com/be/nl/p/powera-advantage-draadloze-controller-voor-nintendo-switch-2-pokemon-mega-evoluties/9300000237035829/" },
-      { "naam": "Fnac.be", "prijs": "€ 55,95", "link": "https://www.nl.fnac.be/Draadloze-controller-PowerA-Pokemon-Mega-Evolutions-voor-Nintendo-Switch-2/a21880976" }
+      { "naam": "Fnac.be", "prijs": "€ 55,95", "link": "https://www.nl.fnac.be/Draadloze-controller-PowerA-Pokemon-Mega-Evolutions-voor-Nintendo-Switch-2/a21880976" },
+      { "naam": "MediaMarkt BE", "prijs": "€ 64,99", "link": "https://www.mediamarkt.be/nl/product/_powera-advantage-draadloze-controller-nintendo-s2-pokemon-mega-evoluties-geel-2223116.html" },
+      { "naam": "DreamLand", "prijs": "€ 53,99", "link": "https://www.dreamland.be/nl/producten/power-a-switch-2-wireless-controller-pokemon-mega-evolutions/02392790" },
+      { "naam": "SportsDirect", "prijs": "€ 66,00", "link": "https://www.sportsdirect.be/powera-advantage-wireless-controller-for-nintendo-switch-2-pokemon-mega-evolutions-729692#colcode=72969299" }
     ]
   },
   {
@@ -44,7 +52,8 @@
     "beschrijving": "Spannende Minions & Monsters speelset boordevol avontuur, monsters en ondeugende Minions voor urenlang creatief speelplezier.",
     "afbeelding_url": "https://media.s-bol.com/3LQGNM2LvzxR/XQDDw2V/917x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/minions-and-monsters/9300000376899061/" }
+      { "naam": "Bol.com", "prijs": "€ 27,99", "link": "https://www.bol.com/be/nl/p/minions-and-monsters/9300000376899061/" },
+      { "naam": "MediaMarkt BE", "prijs": "€ 21,99", "link": "https://www.mediamarkt.be/nl/product/_minions-and-monsters-blu-ray-2252438.html" }
     ]
   },
   {
@@ -54,7 +63,12 @@
     "beschrijving": "Hot Wheels Formula 1 set van 10 metalen speelgoedauto's van de verschillende 2025 F1 racing teams.",
     "afbeelding_url": "https://media.s-bol.com/y3gxGlZplyyg/BLoAWz2/1200x826.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-formula-1-set-van-10-speelgoedauto-s-van-elk-2025-f1-racing-team/9300000241757896/" }
+      { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-formula-1-set-van-10-speelgoedauto-s-van-elk-2025-f1-racing-team/9300000241757896/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 17,99", "link": "https://www.amazon.com.be/-/en/Hot-Wheels-Diecast-representing-authentic/dp/B0G3QKVFJK/" },
+      { "naam": "Amazon.nl", "prijs": "€ 14,98", "link": "https://www.amazon.nl/Hot-Wheels-Formula-die-cast-raceautos/dp/B0G3QKVFJK" },
+      { "naam": "Fnac.be", "prijs": "€ 23,99", "link": "https://www.nl.fnac.be/HW-RAC-10-PACK/a23016955" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/hot-wheels-race-10-pack-f1/02313689" },
+      { "naam": "SupraBazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/hot-wheels-f1-gift-pack-10-auto-s-32164576" }
     ]
   },
   {
@@ -64,7 +78,10 @@
     "beschrijving": "Hot Wheels F1 downhill circuit racebaanset inclusief 3 metalen Formula 1 auto's voor razendsnelle races en actievolle afdalingen.",
     "afbeelding_url": "https://media.s-bol.com/nwx8kRg3xZKY/pZwEny6/1200x1124.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 59,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-racing-formula-1-downhill-circuit-race-baanset-met-3-metalen-f1-auto-s/9300000244057674/" }
+      { "naam": "Bol.com", "prijs": "€ 59,99", "link": "https://www.bol.com/be/nl/p/hot-wheels-racing-formula-1-downhill-circuit-race-baanset-met-3-metalen-f1-auto-s/9300000244057674/" },
+      { "naam": "DreamLand", "prijs": "€ 49,99", "link": "https://www.dreamland.be/nl/producten/hot-wheels-f1-downhill-circuit-race-gemotoriseerd/02364964" },
+      { "naam": "Amazon.nl", "prijs": "€ 59,99", "link": "https://www.amazon.nl/Hot-Wheels-Formule-Downhill-racebaanset/dp/B0G3QKSBD6" },
+      { "naam": "Fnac.be", "prijs": "€ 89,99", "link": "https://www.nl.fnac.be/2026-HOT-WHEEL-RACING-TBD/a23243532" }
     ]
   },
   {
@@ -927,7 +944,8 @@
     "beschrijving": "Vrolijke Pokémon sleutelhanger in de vorm van een Poké Ball met een springende Pikachu afbeelding.",
     "afbeelding_url": "https://files.cardgameshop.be/cache/products/images/t/w/v/800x800/7/3/998e175bad6b302bddbf04d736b05f64348a5d/pokemon-poke-ball-sleutelhanger-jumping-pikachu.webp",
     "winkels": [
-      { "naam": "CardGameShop", "prijs": "€ 9,95", "link": "https://www.cardgameshop.be/nl/producten/pokemon-poke-ball-sleutelhanger-jumping-pikachu" }
+      { "naam": "CardGameShop", "prijs": "€ 9,95", "link": "https://www.cardgameshop.be/nl/producten/pokemon-poke-ball-sleutelhanger-jumping-pikachu" },
+      { "naam": "Fnac.be", "prijs": "€ 9,49", "link": "https://www.nl.fnac.be/Verzamelfiguur-Porte-cles-Pokemon-Pikachu-Funism/a23243413" }
     ]
   },
   {
@@ -972,7 +990,13 @@
     "beschrijving": "PAW Patrol Rocky Dino Rescue Recycler voertuigset met geheim vak, werkende klauw en 2 actiefiguren voor spannende dinosaurus-reddingsmissies.",
     "afbeelding_url": "https://media.s-bol.com/JmvVmV7MGBz2/2vZj8zK/1200x1185.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 15,50", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-rocky-dino-rescue-recycler-met-geheim-vak-en-werkende-klauw-2-actiefiguren-en-voertuig/9300000252262272/" }
+      { "naam": "Bol.com", "prijs": "€ 15,50", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-rocky-dino-rescue-recycler-met-geheim-vak-en-werkende-klauw-2-actiefiguren-en-voertuig/9300000252262272/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 15,50", "link": "https://www.amazon.com.be/-/en/Paw-Patrol-Compartment-Measures-compartment/dp/B0FR9HR1PB/" },
+      { "naam": "Amazon.nl", "prijs": "€ 15,24", "link": "https://www.amazon.nl/-/en/Paw-Patrol-Rescue-Recycler-Secret/dp/B0FR9HR1PB" },
+      { "naam": "SupraBazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/paw-patrol-dino-movie-voertuig-met-rocky-32214447" },
+      { "naam": "DreamLand", "prijs": "€ 14,99", "link": "https://www.dreamland.be/nl/producten/paw-patrol-dino-movie-voertuig-rocky/02334950" },
+      { "naam": "Multibazar", "prijs": "€ 19,95", "link": "https://www.multibazar.be/nl/paw-patrol-dino-movie-voertuig-rocky-spin-master-1079230" },
+      { "naam": "Fnac.be", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/Set-met-figuurtjes-en-voertuig-Paw-Patrol-Rocky-De-Film-Dino-missie/a23242229" }
     ]
   },
   {
@@ -1053,7 +1077,13 @@
     "beschrijving": "Spannend kinderspel waarin spelers bananen van het aapje Banana Joe moeten plukken, maar pas op: hij kan op elk moment omhoog springen!",
     "afbeelding_url": "https://media.s-bol.com/gqXP9zzzERkY/YEBLVjK/550x485.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 15,99", "link": "https://www.bol.com/be/nl/p/banana-joe-actiespel-kinderspel/9200000093309555/" }
+      { "naam": "Bol.com", "prijs": "€ 15,99", "link": "https://www.bol.com/be/nl/p/banana-joe-actiespel-kinderspel/9200000093309555/" },
+      { "naam": "DreamLand", "prijs": "€ 16,99", "link": "https://www.dreamland.be/nl/producten/banana-joe-nl/01349238" },
+      { "naam": "Euroshop", "prijs": "€ 16,99", "link": "https://www.euroshop.be/nl/13369342-banana-joe-nl" },
+      { "naam": "Amazon.com.be", "prijs": "€ 15,99", "link": "https://www.amazon.com.be/-/en/Goliath-330990-NL-Banana-Joe/dp/B07FVRZDHL" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 15,95", "link": "https://www.dekinderplaneet.be/nl/banana-joe-nl-746756" },
+      { "naam": "Fnac.be", "prijs": "€ 24,99", "link": "https://www.nl.fnac.be/Bordspel-Goliath-Hop-La-Banana/a12661334" },
+      { "naam": "Verthus", "prijs": "€ 19,95", "link": "https://verthus.be/producten/banana-joe-spel-goliath/" }
     ]
   },
   {
@@ -1063,7 +1093,14 @@
     "beschrijving": "Het razendsnelle reactiespel met de bekende bel! Draai kaarten om met verschillende soorten fruit en druk als eerste op de bel zodra er precies 5 van hetzelfde fruit te zien zijn.",
     "afbeelding_url": "https://media.s-bol.com/Nw2r85wOMM2D/DRrL8XY/1200x878.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/999-games-spel-halli-galli/1004004000008442/" }
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/999-games-spel-halli-galli/1004004000008442/" },
+      { "naam": "Euroshop", "prijs": "€ 15,95", "link": "https://www.euroshop.be/nl/19370033-999-games-halli-galli-actiespel-vanaf-6-jaar" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 14,99", "link": "https://www.dekinderplaneet.be/nl/halli-galli-tin-box-fruitig-reactiespel-voor-jong-en-oud-199391" },
+      { "naam": "DreamLand", "prijs": "€ 16,99", "link": "https://www.dreamland.be/nl/producten/halli-galli/00087551" },
+      { "naam": "Fnac.be", "prijs": "€ 16,99", "link": "https://www.nl.fnac.be/999-games-Halli-Galli-NL/a8292495" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 18,99", "link": "https://www.standaardboekhandel.be/p/halli-galli-8717249191513" },
+      { "naam": "Boekenvoordeel", "prijs": "€ 16,99", "link": "https://www.boekenvoordeel.be/p/halli-galli-36826" },
+      { "naam": "Verthus", "prijs": "€ 14,95", "link": "https://verthus.be/producten/halli-galli/" }
     ]
   },
   {
@@ -1073,7 +1110,10 @@
     "beschrijving": "Het ultieme schuifpuzzel denkspel in Deluxe uitvoering. Verschuif de auto's en vrachtwagens om de rode auto uit de file te laten ontsnappen via 60 verschillende uitdagende opdrachten.",
     "afbeelding_url": "https://media.s-bol.com/qqYN9glDkBJr/M8x6qLQ/1195x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 25,99", "link": "https://www.bol.com/be/nl/p/ravensburger-rush-hour-deluxe-2025-puzzel-denkspel/9300000194454546/" }
+      { "naam": "Bol.com", "prijs": "€ 25,99", "link": "https://www.bol.com/be/nl/p/ravensburger-rush-hour-deluxe-2025-puzzel-denkspel/9300000194454546/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 22,02", "link": "https://www.amazon.com.be/-/nl/ThinkFun-76617-bottelspel-voertuigen-volwassenen/dp/B0DDL4S6XC" },
+      { "naam": "Ravensburger", "prijs": "€ 27,90", "link": "https://www.ravensburger.be/nl-BE/ravensburger/products/games/logic-games/rush-hour-deluxe-76617" },
+      { "naam": "Verthus", "prijs": "€ 26,95", "link": "https://verthus.be/producten/rush-hour-deluxe-2025/" }
     ]
   },
   {
@@ -1083,7 +1123,11 @@
     "beschrijving": "Tafelmodel air hockey spel in Super Mario-thema voor snelle en spannende duels.",
     "afbeelding_url": "https://media.s-bol.com/5Pm4KOWMNBWR/r0wY3Nw/1200x824.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 31,49", "link": "https://www.bol.com/be/nl/p/nintendo-super-mario-air-hockey/9300000013905698/" }
+      { "naam": "Bol.com", "prijs": "€ 31,49", "link": "https://www.bol.com/be/nl/p/nintendo-super-mario-air-hockey/9300000013905698/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 40,25", "link": "https://www.amazon.com.be/-/nl/Super-Mario-Hockey-Attack-Imaginar/dp/B0987WRZYM" },
+      { "naam": "DreamLand", "prijs": "€ 35,99", "link": "https://www.dreamland.be/nl/producten/super-mario-air-hockey/01624830" },
+      { "naam": "Fnac.be", "prijs": "€ 34,99", "link": "https://www.nl.fnac.be/Super-Mario-Air-Hockey-sjoelbak/a16589390" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 30,95", "link": "https://www.dekinderplaneet.be/nl/super-mario-air-hockey-854947" }
     ]
   },
   {
@@ -1093,7 +1137,12 @@
     "beschrijving": "Compacte reisversie van het klassieke Zeeslag strategiebordspel voor 2 spelers.",
     "afbeelding_url": "https://media.s-bol.com/pBL1RgJXvwmV/O76Pqwr/1200x1190.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 21,95", "link": "https://www.bol.com/be/nl/p/hasbro-gaming-mini-bordspel-zeeslag-7/9300000070619151/" }
+      { "naam": "Bol.com", "prijs": "€ 21,95", "link": "https://www.bol.com/be/nl/p/hasbro-gaming-mini-bordspel-zeeslag-7/9300000070619151/" },
+      { "naam": "DreamLand", "prijs": "€ 24,99", "link": "https://www.dreamland.be/nl/producten/zeeslag-nl/01655025" },
+      { "naam": "Euroshop", "prijs": "€ 23,95", "link": "https://www.euroshop.be/nl/13356200-hasbro-zeeslag-bordspel-vanaf-7-jaar" },
+      { "naam": "Amazon.com.be", "prijs": "€ 21,95", "link": "https://www.amazon.com.be/-/nl/Gegoten-zeeslag-bordspel-spelers-Nederlandse/dp/B0B42GXXBK" },
+      { "naam": "Amazon.nl", "prijs": "€ 24,99", "link": "https://www.amazon.nl/klassiek-bordspel-strategisch-kinderen-spannend/dp/B0B42GXXBK" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 23,95", "link": "https://www.dekinderplaneet.be/nl/spel-zeeslag-854836" }
     ]
   },
   {
@@ -1157,7 +1206,9 @@
     "beschrijving": "Avontuurlijk kinderboek 'De grote drakenrace' vol fantasie en spanning.",
     "afbeelding_url": "https://media.s-bol.com/MljxNEDZPJGB/pYpwnV2/781x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 20,99", "link": "https://www.bol.com/be/nl/p/de-grote-drakenrace/9300000167338369/" }
+      { "naam": "Bol.com", "prijs": "€ 20,99", "link": "https://www.bol.com/be/nl/p/de-grote-drakenrace/9300000167338369/" },
+      { "naam": "Fnac.be", "prijs": "€ 20,99", "link": "https://www.nl.fnac.be/a19172269/Kacy-Ritter-De-grote-drakenrace" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 20,99", "link": "https://www.standaardboekhandel.be/p/de-grote-drakenrace-9789402714661" }
     ]
   },
   {
@@ -1167,7 +1218,10 @@
     "beschrijving": "Spannend en grappig kinderboek 'Dungeon Runners 2: De Lucht' vol actie, avonturen en game-elementen.",
     "afbeelding_url": "https://media.s-bol.com/1AJ6Egw4rPjV/Z4ZzxPw/830x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 15,29", "link": "https://www.bol.com/be/nl/p/dungeon-runners-2-dungeon-runners-level-2-de-lucht/9300000227473176/" }
+      { "naam": "Bol.com", "prijs": "€ 15,29", "link": "https://www.bol.com/be/nl/p/dungeon-runners-2-dungeon-runners-level-2-de-lucht/9300000227473176/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 16,99", "link": "https://www.amazon.com.be/-/en/Level-lucht-game-avontuur-obstakels-monsters/dp/9000396506/" },
+      { "naam": "Fnac.be", "prijs": "€ 16,99", "link": "https://www.nl.fnac.be/a21566436/Dungeon-Runners-DUNGEON-RUNNERS-LEVEL-2-DE-LUCHT" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 16,99", "link": "https://www.standaardboekhandel.be/p/de-lucht-9789000396504" }
     ]
   },
   {
@@ -1177,7 +1231,10 @@
     "beschrijving": "Eerste deel in de populaire kinderboekenserie 'De geheime drakenschool' over magische avonturen en draken.",
     "afbeelding_url": "https://media.s-bol.com/4wzk9pLBzwpg/mx9nor/778x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/de-geheime-drakenschool-1-de-geheime-drakenschool/9300000145034744/" }
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/de-geheime-drakenschool-1-de-geheime-drakenschool/9300000145034744/" },
+      { "naam": "Fnac.be", "prijs": "€ 19,99", "link": "https://www.nl.fnac.be/a17914834/Emily-Skye-De-geheime-drakenschool" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 19,99", "link": "https://www.standaardboekhandel.be/p/de-geheime-drakenschool-9789026167201" },
+      { "naam": "Amazon.com.be", "prijs": "€ 19,99", "link": "https://www.amazon.com.be/-/en/geheime-drakenschool-Emily-Skye/dp/9026167202" }
     ]
   },
   {
@@ -1187,7 +1244,10 @@
     "beschrijving": "Informatief en weetjesrijk kinderboek 'Wauw, wist je dat al?' boordevol verrassende feiten en illustraties.",
     "afbeelding_url": "https://media.s-bol.com/8LppqkDr4ZYg/Z4ZxNQJ/988x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 25,95", "link": "https://www.bol.com/be/nl/p/wauw-wist-je-dat-al/9300000238020907/" }
+      { "naam": "Bol.com", "prijs": "€ 25,95", "link": "https://www.bol.com/be/nl/p/wauw-wist-je-dat-al/9300000238020907/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 25,95", "link": "https://www.amazon.com.be/-/en/Wauw-Wist-dat-antwoordboek-kinderen/dp/9044768379/" },
+      { "naam": "Fnac.be", "prijs": "€ 25,95", "link": "https://www.nl.fnac.be/a21984398/Andrew-Charman-Wauw-Wist-je-dat-al" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 25,95", "link": "https://www.standaardboekhandel.be/p/wauw-wist-je-dat-al-9789044768374" }
     ]
   },
   {
@@ -1208,7 +1268,8 @@
     "beschrijving": "Schattige drakenwekker met nachtlampje en geluidseffecten, ideaal voor op de kinderzijde van het nachtkastje.",
     "afbeelding_url": "https://media.s-bol.com/8VlpE8wDrVpL/X6O3w0v/1180x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 34,99", "link": "https://www.bol.com/be/nl/p/dragon-night-light-alarm-clock-met-geluiden/9300000227330956/" }
+      { "naam": "Bol.com", "prijs": "€ 34,99", "link": "https://www.bol.com/be/nl/p/dragon-night-light-alarm-clock-met-geluiden/9300000227330956/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 34,99", "link": "https://www.amazon.com.be/-/en/Lexibook-RL800DRA-Melodies-Backlit-Display/dp/B0F7HZLHS4/" }
     ]
   },
   {
@@ -1219,7 +1280,8 @@
     "beschrijving": "Interactieve Star Wars Power Crystal Lightsaber met licht- en geluidseffecten. Inclusief kyberkristallen om de kleur van het lichtzwaard te veranderen, geschikt voor kinderen vanaf 4 jaar.",
     "afbeelding_url": "https://media.s-bol.com/r4359KLrrrGW/Z4wjDNv/1200x1090.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 49,99", "link": "https://www.bol.com/be/nl/p/star-wars-power-crystal-lightsaber-star-wars-speelgoed-voor-kinderen-van-4/9300000225966634/" }
+      { "naam": "Bol.com", "prijs": "€ 49,99", "link": "https://www.bol.com/be/nl/p/star-wars-power-crystal-lightsaber-star-wars-speelgoed-voor-kinderen-van-4/9300000225966634/" },
+      { "naam": "DreamLand", "prijs": "€ 49,99", "link": "https://www.dreamland.be/nl/producten/star-wars-power-crystal-lightsaber/02315300" }
     ]
   },
   {

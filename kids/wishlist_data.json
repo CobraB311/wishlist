@@ -1,12 +1,28 @@
 {
-  "wenslijst_titel": "Verjaardagslijstjes",
-  "datum": "2026-03-15",
-  "aftel_datum": "2026-04-19T12:00:00",
-  "aftel_naam": "Milan",
+  "wenslijst_titel": "Eindejaar wenslijst",
+  "datum": "2026-11-14",
+  "groet_tekst": "Fijne feestdagen!",
+  "banner_afbeelding": "https://lego.bricksmegastore.com/cdn/shop/articles/xmas_banner_f1762cb8-6703-4499-8cfa-a5fe9ef5a675.png?v=1762476555&width=1280",
+  "aftel_datum": "2026-12-25T12:00:00",
+  "aftel_naam": "Jonas & Milan",
+  "countdown_label": "Het kerstfeest start over:",
+  "countdown_eindtekst": "🎄 VROLIJK KERSTFEEST {naam}! 🎁",
+  "claims_error_titel": "Onze excuses!",
+  "claims_error_tekst": "We konden de actuele status van de cadeaus momenteel niet ophalen. Om te voorkomen dat cadeaus per ongeluk dubbel worden gekocht, zijn de verlanglijstjes tijdelijk niet zichtbaar.",
+  "quotes": [
+    "Fijne feestdagen en een gelukkig nieuwjaar!",
+    "Ho ho ho! Vrolijk kerstfeest!",
+    "Mag je kerst gevuld zijn met warmte, gezelligheid en liefde.",
+    "De beste kerstcadeaus vind je niet onder de boom, maar in het gezelschap van elkaar.",
+    "Laat de feestdagen maar beginnen!",
+    "Moge je dagen sprankelen van vreugde en je kerst vol magie zijn.",
+    "Warme kerstwensen voor het hele gezin!"
+  ],
   "personen": [
     { "naam": "Jonas", "data_file": "../jonas/jonas_items.json" },
     { "naam": "Milan", "data_file": "../milan/milan_items.json" }
   ],
   "inventaris_links_file": "inventory_links.json",
-  "gezamenlijke_items_file": "gezamenlijk_items.json"
+  "gezamenlijke_items_file": "gezamenlijk_items.json",
+  "koop_knop_tekst": "Ik koop voor {naam}!"
 }

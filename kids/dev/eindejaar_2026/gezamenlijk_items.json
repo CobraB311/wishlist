@@ -6,7 +6,10 @@
     "beschrijving": "Beweeg en sport op het tropische eiland in Nintendo Switch Sports Resort voor de Nintendo Switch 2! Neem het alleen of samen met vrienden en familie op in diverse actieve sporten met intuïtieve bewegingsbesturing.",
     "afbeelding_url": "https://media.s-bol.com/A3EM2MnJOJMz/mqNzyzO/925x1500.jpg",
     "winkels": [
-      { "naam": "bol.com", "prijs": "€ 47,95", "link": "https://www.bol.com/be/nl/p/nintendo-switch-sports-resort-nintendo-switch-2/9300000309770614/?referrer=socialshare_pdp_www" }
+      { "naam": "Bol.com", "prijs": "€ 47,95", "link": "https://www.bol.com/be/nl/p/nintendo-switch-sports-resort-nintendo-switch-2/9300000309770614/?referrer=socialshare_pdp_www" },
+      { "naam": "Fnac.be", "prijs": "€ 56,99", "link": "https://www.nl.fnac.be/a23241672/SWITCH-SPORTS-RESORT-NL-SWITCH-2-Videospel-Nintendo-Switch" },
+      { "naam": "DreamLand", "prijs": "€ 52,99", "link": "https://www.dreamland.be/nl/producten/switch-2-nintendo-sports-resort-nl/02404073" },
+      { "naam": "Amazon.nl", "prijs": "€ 47,95", "link": "https://www.amazon.nl/Switch-SWITCH-SPORTS-RESORT-Nederlands/dp/B0H6XFYL4L" }
     ]
   }
 ]

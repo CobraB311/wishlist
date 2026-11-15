@@ -44,7 +44,9 @@
     "beschrijving": "Lekdichte en hygiënische Mepal Campus waterfles voor kinderen met een inhoud van 600 ml, uitgevoerd in Paw Patrol Dino thema.",
     "afbeelding_url": "https://media.s-bol.com/xXlKvkkLYjN9/nxQkxLR/459x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 13,49", "link": "https://www.bol.com/be/nl/p/mepal-drinkfles-met-flipdop-campus-600-ml-waterfles-kinderen-lekdicht-hygienische-deksel-paw-patrol-dino/9300000317155772/" }
+      { "naam": "Bol.com", "prijs": "€ 13,49", "link": "https://www.bol.com/be/nl/p/mepal-drinkfles-met-flipdop-campus-600-ml-waterfles-kinderen-lekdicht-hygienische-deksel-paw-patrol-dino/9300000317155772/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 13,49", "link": "https://www.amazon.com.be/-/en/Mepal-Compatible-Childrens-Leak-Proof-Dishwasher/dp/B0H71GCTX7/" },
+      { "naam": "Mepal", "prijs": "€ 17,99", "link": "https://www.mepal.com/be-nl/campus-drinkfles-met-flipdop-600-ml-paw-patrol-dino-107485065420" }
     ]
   },
   {
@@ -54,7 +56,9 @@
     "beschrijving": "Mepal Campus broodtrommel met bento-bakje en bentovorkje voor kinderen (750 ml), geschikt voor 4 boterhammen, in Paw Patrol Dino thema.",
     "afbeelding_url": "https://media.s-bol.com/D4039kkZNKzx/2x4Nx6v/1200x926.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 11,99", "link": "https://www.bol.com/be/nl/p/mepal-lunchbox-campus-750-ml-broodtrommel-met-vakjes-voor-kinderen-geschikt-voor-4-boterhammen-paw-patrol-dino/9300000317155773/" }
+      { "naam": "Bol.com", "prijs": "€ 11,99", "link": "https://www.bol.com/be/nl/p/mepal-lunchbox-campus-750-ml-broodtrommel-met-vakjes-voor-kinderen-geschikt-voor-4-boterhammen-paw-patrol-dino/9300000317155773/" },
+      { "naam": "DreamLand", "prijs": "€ 11,99", "link": "https://www.dreamland.be/nl/producten/paw-patrol-dino-lunchbox-midi/02410616" },
+      { "naam": "Mepal", "prijs": "€ 11,99", "link": "https://www.mepal.com/be-nl/campus-bento-lunchbox-met-vorkje-paw-patrol-dino-107440065420" }
     ]
   },
   {
@@ -64,7 +68,11 @@
     "beschrijving": "Handig Mepal Campus fruitdoosje (300 ml) inclusief fruitvorkje. Sluit goed af en is ideaal voor mee naar school, uitgevoerd in Paw Patrol Dino thema.",
     "afbeelding_url": "https://media.s-bol.com/D4039kkWG6WY/K1Xy1JR/1200x1180.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 9,49", "link": "https://www.bol.com/be/nl/p/mepal-fruitbox-campus-300-ml-inclusief-fruitvorkje-sluit-goed-af-snackdoosje-paw-patrol-dino/9300000317155774/" }
+      { "naam": "Bol.com", "prijs": "€ 9,49", "link": "https://www.bol.com/be/nl/p/mepal-fruitbox-campus-300-ml-inclusief-fruitvorkje-sluit-goed-af-snackdoosje-paw-patrol-dino/9300000317155774/" },
+      { "naam": "Mepal", "prijs": "€ 9,49", "link": "https://www.mepal.com/be-nl/campus-fruitbox-300-ml-met-vorkje-paw-patrol-dino-107430065420" },
+      { "naam": "SupraBazar", "prijs": "€ 7,99", "link": "https://www.suprabazar.be/mepal-fruitbox-campus-paw-patrol-dino-met-vorkje-6.7x10.4-cm-300ml-32186656" },
+      { "naam": "DreamLand", "prijs": "€ 9,49", "link": "https://www.dreamland.be/nl/producten/paw-patrol-dino-fruitbox-300ml/02410623" },
+      { "naam": "Amazon.nl", "prijs": "€ 7,24", "link": "https://www.amazon.nl/Mepal-Fruitbox-Snackbox-Vaatwasmachine-magnetronbestendig/dp/B0H71HJ97C" }
     ]
   },
   {
@@ -151,7 +159,8 @@
     "beschrijving": "13-delige kookpotten speelset om meteen de keuken in te duiken. Pannen, deksels en kookaccessoires voor eindeloos veel culinaire speelpret. Geschikt vanaf 3 jaar.",
     "afbeelding_url": "https://www.dreamland.be/media/image/01611687/01611687_001.jpg",
     "winkels": [
-      { "naam": "Dreamland", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687" }
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/kookpotten-en-keukenaccessoires-13-delig/01611687" },
+      { "naam": "Bol.com", "prijs": "€ 24,79", "link": "https://www.bol.com/be/nl/p/moderne-keukenset-13-st/9300000134656101/?referrer=socialshare_pdp_www" }
     ]
   },
   {
@@ -161,7 +170,8 @@
     "beschrijving": "Houten speelgoed pasta set van New Classic Toys om je eigen pasta te maken. Gemaakt van duurzaam FSC-gecertificeerd hout voor urenlang keukenspeelplezier.",
     "afbeelding_url": "https://media.s-bol.com/g9vVkzvrlnPZ/n58mXnp/1200x578.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 30,99", "link": "https://www.bol.com/be/nl/p/new-classic-toys-houten-speelgoed-pasta-set-speelgoedeetset-maak-je-eigen-pasta-fsc/9300000176017449/" }
+      { "naam": "Bol.com", "prijs": "€ 30,99", "link": "https://www.bol.com/be/nl/p/new-classic-toys-houten-speelgoed-pasta-set-speelgoedeetset-maak-je-eigen-pasta-fsc/9300000176017449/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 42,95", "link": "https://www.amazon.com.be/-/nl/Woet-pastaspeelgoed-kinderen-keukenset-FSC-keukenaccessoires/dp/B0F9KYVX5W/" }
     ]
   },
   {
@@ -171,7 +181,9 @@
     "beschrijving": "Complete houten pizza speelset met 30 accessoires waaronder toppings met klittenband, snijgereedschap, hete saus en een menukaart. Geschikt voor kinderen vanaf 2 jaar.",
     "afbeelding_url": "https://media.s-bol.com/nyqGNMM35pYE/nZo143W/1200x865.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 30,99", "link": "https://www.bol.com/be/nl/p/woet-houten-pizza-speelset-complete-maak-je-eigen-pizza-set-met-30-accessoires-toppings-met-klittenband-snijgereedschap-hete-saus-en-menukaart-rollenspel-keukenspeelgoed-speelgoedeten-vanaf-2-jaar/9300000230182488/" }
+      { "naam": "Bol.com", "prijs": "€ 30,99", "link": "https://www.bol.com/be/nl/p/woet-houten-pizza-speelset-complete-maak-je-eigen-pizza-set-met-30-accessoires-toppings-met-klittenband-snijgereedschap-hete-saus-en-menukaart-rollenspel-keukenspeelgoed-speelgoedeten-vanaf-2-jaar/9300000230182488/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 29,99", "link": "https://www.amazon.com.be/-/nl/Woet-pizzaspeelgoed-voedselset-accessoires-keukenspeelgoed/dp/B0FXV3GJWP/" },
+      { "naam": "Woet", "prijs": "€ 34,50", "link": "https://woet.eu/houten-speelgoed/product/houten-pizza-speelset/" }
     ]
   },
   {
@@ -203,7 +215,9 @@
     "beschrijving": "Speelfigurenset van PAW Patrol met Chase en Burgemeester Humdinger voor het naspelen van spannende Avonturenbay-scènes.",
     "afbeelding_url": "https://media.s-bol.com/0rgjXB20E5LG/gJ2AlEk/1200x1137.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/paw-patrol-chase-humdinger-speelfigurenset/9300000177674915/" }
+      { "naam": "Bol.com", "prijs": "Niet leverbaar", "link": "https://www.bol.com/be/nl/p/paw-patrol-chase-humdinger-speelfigurenset/9300000177674915/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 16,97", "link": "https://www.amazon.com.be/-/nl/Paw-Patrol-Hero-Pups-Chase/dp/B0CSPCFXPY/" },
+      { "naam": "Fnac.be", "prijs": "Niet leverbaar", "link": "https://www.nl.fnac.be/Paw-Patrol-Hero-Pups-Chase-et-Humdinger-figuren/a21237861" }
     ]
   },
   {
@@ -226,7 +240,11 @@
     "beschrijving": "Rise & Roll Dino set met een 17,7 cm grote Spinosaurus speelgoeddinosaurus met geluidseffecten en een Rex actiefiguur uit PAW Patrol: De Dino Film.",
     "afbeelding_url": "https://media.s-bol.com/3WOzKYAgqxXO/r80ArjL/1200x1126.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 21,39", "link": "https://www.bol.com/be/nl/p/paw-patrol-de-dino-film-rise-roll-dino-set-bevat-speelgoeddinosaurus-spinosaurus-van-17-7-cm-met-geluiden-en-rex-actiefiguur/9300000252262219/" }
+      { "naam": "Bol.com", "prijs": "€ 21,39", "link": "https://www.bol.com/be/nl/p/paw-patrol-de-dino-film-rise-roll-dino-set-bevat-speelgoeddinosaurus-spinosaurus-van-17-7-cm-met-geluiden-en-rex-actiefiguur/9300000252262219/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 21,99", "link": "https://www.amazon.com.be/-/nl/Paw-Patrol-6076188/dp/B0FR9DRRV6/" },
+      { "naam": "Amazon.nl", "prijs": "€ 21,85", "link": "https://www.amazon.nl/Paw-Patrol-Speelset-Dino-RiseAndRollDinoSet/dp/B0FR9DRRV6" },
+      { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/Paw-Patrol-Figuur-Pat-Patrouille-Coffret-Rise-et-Roll-Rex-Le-film-Mission-Dino/a23290291" },
+      { "naam": "Multibazar", "prijs": "€ 29,95", "link": "https://www.multibazar.be/nl/paw-patrol-dino-film-rex-spinosaurus-set-spin-master-1079243" }
     ]
   },
   {
@@ -236,7 +254,11 @@
     "beschrijving": "Ga aan de slag met Charger en zijn stoere kraanwagen uit Rubble & Crew! Voorzien van draaibare kraanarm, grijper en een Charger speelfiguur voor echte bouwavonturen.",
     "afbeelding_url": "https://media.s-bol.com/3xlmxxYNDP6Q/n5OLLOP/1188x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 14,95", "link": "https://www.bol.com/be/nl/p/rubble-crew-charger-s-kraanwagen-met-speelfiguur-en-beweegbare-onderdelen/9300000180340274/" }
+      { "naam": "Bol.com", "prijs": "€ 14,95", "link": "https://www.bol.com/be/nl/p/rubble-crew-charger-s-kraanwagen-met-speelfiguur-en-beweegbare-onderdelen/9300000180340274/" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/rubble-crew-voertuig-charger/01758511" },
+      { "naam": "Fnac.be", "prijs": "€ 15,99", "link": "https://www.nl.fnac.be/Voertuig-met-Charger-actiefiguur-Rubble-et-Crew/a18958569" },
+      { "naam": "Amazon.com.be", "prijs": "€ 14,95", "link": "https://www.amazon.com.be/-/nl/Rubble-Crew-Core-Vehicle-Charger/dp/B0CCW11XY6/" },
+      { "naam": "Multibazar", "prijs": "€ 14,95", "link": "https://www.multibazar.be/nl/paw-patrol-rubble-and-crew-basic-voertuig-charger-1052945" }
     ]
   },
   {
@@ -246,7 +268,11 @@
     "beschrijving": "Sloop en bouw met Motor en haar Wrecking Ball voertuig! Inclusief beweegbare sloopkogel, wals-elementen en een Motor speelfiguur uit Rubble & Crew.",
     "afbeelding_url": "https://media.s-bol.com/4yJlMKo83LPk/Nk73OKK/1200x1192.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 12,85", "link": "https://www.bol.com/be/nl/p/rubble-crew-motor-s-wrecking-ball-speelgoedauto-met-speelfiguur-en-beweegbare-onderdelen/9300000177675259/" }
+      { "naam": "Bol.com", "prijs": "€ 12,85", "link": "https://www.bol.com/be/nl/p/rubble-crew-motor-s-wrecking-ball-speelgoedauto-met-speelfiguur-en-beweegbare-onderdelen/9300000177675259/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 12,85", "link": "https://www.amazon.com.be/-/en/Rubble-Crew-Vehicle-Core-Motor/dp/B0CQN6DTWC/" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/rubble-crew-voertuig-motor/01792676" },
+      { "naam": "Fnac.be", "prijs": "€ 15,99", "link": "https://www.nl.fnac.be/Rubble-Voertuig-en-figuur-et-Company-Molly/a20722771" },
+      { "naam": "SupraBazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/rubble-crew-voertuig-met-motor-31983664" }
     ]
   },
   {
@@ -256,7 +282,12 @@
     "beschrijving": "Red de dinosaurussen met Zuma en zijn Dino Rescue Hovercraft! Beschikt over een uitschuifbare reddingsklauw en bevat 2 actiefiguren (Zuma en een dinosaurus) plus het voertuig.",
     "afbeelding_url": "https://media.s-bol.com/gglv65VwWQ4G/W7JYv6X/1200x1144.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-zuma-dino-rescue-hovercraft-met-uitschuifbare-reddingsklauw-verzamel-2-actiefiguren-en-een-voertuig/9300000252262241/" }
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-zuma-dino-rescue-hovercraft-met-uitschuifbare-reddingsklauw-verzamel-2-actiefiguren-en-een-voertuig/9300000252262241/" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/paw-patrol-dino-movie-voertuig-zuma/02334967" },
+      { "naam": "Amazon.com.be", "prijs": "€ 14,99", "link": "https://www.amazon.com.be/-/nl/Paw-Patrol-Movie-Hovercraft-Rescue/dp/B0FR9JWR34/" },
+      { "naam": "Amazon.nl", "prijs": "€ 14,63", "link": "https://www.amazon.nl/Paw-Patrol-uitbreidbare-reddingstang-fantasiespel/dp/B0FR9JWR34/" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 19,95", "link": "https://www.dekinderplaneet.be/nl/paw-patrol-zuma-dino-hovercraft-spin-master-3-jaar-1079233" },
+      { "naam": "SupraBazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/paw-patrol-dino-movie-voertuig-met-zuma-32214449" }
     ]
   },
   {
@@ -266,7 +297,13 @@
     "beschrijving": "PAW Patrol Dino Tow Dash eenvoudig op afstand bestuurbaar voertuig inclusief Chase en stegosaurus actiefiguren.",
     "afbeelding_url": "https://media.s-bol.com/xDJZP4LJvDrz/328kOYM/1200x1161.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 26,79", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-dino-tow-dash-rc-eenvoudig-op-afstand-te-besturen-voertuig-met-chase-en-stegosaurus-actiefiguren/9300000252262235/" }
+      { "naam": "Bol.com", "prijs": "€ 26,79", "link": "https://www.bol.com/be/nl/p/paw-patrol-the-dino-movie-dino-tow-dash-rc-eenvoudig-op-afstand-te-besturen-voertuig-met-chase-en-stegosaurus-actiefiguren/9300000252262235/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 26,79", "link": "https://www.amazon.com.be/-/en/PAW-VHC-DinoTowDash-RC-GML2pkSLD/dp/B0FR99F41Q/" },
+      { "naam": "Amazon.nl", "prijs": "€ 29,58", "link": "https://www.amazon.nl/PAW-VHC-DinoTowDash-RC-GML2pkSLD/dp/B0FR99F41Q" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 39,95", "link": "https://www.dekinderplaneet.be/nl/paw-patrol-dino-rc-chase-spin-master-vanaf-3-jaar-1079256" },
+      { "naam": "DreamLand", "prijs": "€ 39,99", "link": "https://www.dreamland.be/nl/producten/paw-patrol-dino-movie-voertuig-chase-tow-and-dash-rc/02335100" },
+      { "naam": "Multibazar", "prijs": "€ 39,95", "link": "https://www.multibazar.be/nl/paw-patrol-dino-rc-chase-spin-master-vanaf-3-jaar-1079256" },
+      { "naam": "SupraBazar", "prijs": "€ 39,99", "link": "https://www.suprabazar.be/paw-patrol-dino-movie-dino-tow-dash-rc-32214516" }
     ]
   },
   {
@@ -276,7 +313,8 @@
     "beschrijving": "Supergrote Ultron armor speelset met actiefiguur uit Marvel's Iron Man and his Awesome Friends.",
     "afbeelding_url": "https://media.s-bol.com/mov7l41QK1Wn/D9nmvjk/1200x1052.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 24,41", "link": "https://www.bol.com/be/nl/p/marvel-s-iron-man-and-his-awesome-friends-ultron-supergroot-armor-speelset/9300000247823204/" }
+      { "naam": "Bol.com", "prijs": "€ 24,41", "link": "https://www.bol.com/be/nl/p/marvel-s-iron-man-and-his-awesome-friends-ultron-supergroot-armor-speelset/9300000247823204/" },
+      { "naam": "Amazon.nl", "prijs": "€ 20,49", "link": "https://www.amazon.nl/MarvelS-Giant-Sized-Marvel-Actiefiguur-Superheldspeelgoed-Actiefiguren/dp/B0G2TDRDXJ" }
     ]
   },
   {
@@ -286,7 +324,8 @@
     "beschrijving": "Supergrote Iron Man armor speelset voor jonge superheldenfans uit Iron Man and his Awesome Friends.",
     "afbeelding_url": "https://media.s-bol.com/mov7BM6GV62n/4R0NZN1/1200x1059.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 13,39", "link": "https://www.bol.com/be/nl/p/marvel-s-iron-man-and-his-awesome-friends-supergroot-armor-speelset/9300000247823197/" }
+      { "naam": "Bol.com", "prijs": "€ 13,39", "link": "https://www.bol.com/be/nl/p/marvel-s-iron-man-and-his-awesome-friends-supergroot-armor-speelset/9300000247823197/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 21,49", "link": "https://www.amazon.com.be/-/nl/Marvel-buitengewone-reuzenpantser-mecha-pantser-superheldenspeelgoed/dp/B0G2TGZ7PM/" }
     ]
   },
   {
@@ -310,7 +349,12 @@
     "beschrijving": "Spidey and his Amazing Friends Rescue Webs brandweerwagen met speelgoedvoertuig en accessoires voor reddingsmissies met Spidey.",
     "afbeelding_url": "https://media.s-bol.com/KnPM6Qrnqzmn/32AL5pn/1200x1108.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 34,99", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rescue-webs-brandweerwagen/9300000245783364/" }
+      { "naam": "Bol.com", "prijs": "€ 34,99", "link": "https://www.bol.com/be/nl/p/marvel-spidey-and-his-amazing-friends-rescue-webs-brandweerwagen/9300000245783364/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 29,99", "link": "https://www.amazon.com.be/-/en/Marvel-Spidey-Friends-Extraordinary-Vehicle/dp/B0G4N8XW7C" },
+      { "naam": "Amazon.nl", "prijs": "€ 39,49", "link": "https://www.amazon.nl/-/en/Amazing-Boyfriends-Rescue-Webs-Vehicle-Superhero/dp/B0G4N8XW7C" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 41,95", "link": "https://www.dekinderplaneet.be/nl/hasbro-spidey-brandweerwagen-met-geluid-marvel-3-1084612" },
+      { "naam": "Verthus", "prijs": "€ 39,95", "link": "https://verthus.be/producten/spidey-rescue-brandweerwagen/" },
+      { "naam": "Multibazar", "prijs": "€ 41,95", "link": "https://www.multibazar.be/nl/hasbro-spidey-brandweerwagen-met-geluid-marvel-3-1084612" }
     ]
   },
   {
@@ -358,7 +402,10 @@
     "beschrijving": "Star Wars speelset met hoofdkwartier en speelfiguren voor het herbeleven van spannende galactische avonturen.",
     "afbeelding_url": "https://media.s-bol.com/j419xX8zXnpY/X67Ol9m/1200x761.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 25,99", "link": "https://www.bol.com/be/nl/p/star-wars-ps-hq-speelset/9300000162933403/" }
+      { "naam": "Bol.com", "prijs": "€ 25,99", "link": "https://www.bol.com/be/nl/p/star-wars-ps-hq-speelset/9300000162933403/" },
+      { "naam": "Fnac.be", "prijs": "€ 64,03", "link": "https://www.nl.fnac.be/Star-Wars-Jonge-Jedi-Tempel-actiefiguur/a18245872" },
+      { "naam": "Amazon.com.be", "prijs": "€ 136,81", "link": "https://www.amazon.com.be/-/en/Star-Wars-Adventures-20-Inch-Tall-Preschool/dp/B0BGJJ2K99" },
+      { "naam": "Amazon.nl", "prijs": "€ 28,80", "link": "https://www.amazon.nl/Jedi-tempel-speelset-actiefiguren-Wars-speelgoed-peuterspeelgoed/dp/B0BDHM27VW" }
     ]
   },
   {
@@ -368,7 +415,8 @@
     "beschrijving": "Mix 'N Match Michelangelo actiefiguur uit Teenage Mutant Ninja Turtles. Verwisselbare onderdelen om je eigen unieke Turtle-mutant te creëren.",
     "afbeelding_url": "https://media.s-bol.com/goj71yY7mjE6/98yW014/1042x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/teenage-mutant-ninja-turtles-mix-n-match-michelangelo/9300000236735719/" }
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/teenage-mutant-ninja-turtles-mix-n-match-michelangelo/9300000236735719/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 15,11", "link": "https://www.amazon.com.be/-/en/Turtles-Michelangelo-Collectible-Articulated-Accessorized/dp/B0DX257JS6/" }
     ]
   },
   {
@@ -378,7 +426,8 @@
     "beschrijving": "Minions Monsters speelset met groot studioterrein, 2 filmstudio's en inclusief 6 Minions figuurtjes voor filmisch speelplezier.",
     "afbeelding_url": "https://media.s-bol.com/m3132GO2vnE3/W7LqByo/1200x1126.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 20,84", "link": "https://www.bol.com/be/nl/p/minions-monsters-grote-studioterrein-met-2-filmstudio-s-incl-6-minions-figuurtjes/9300000269708149/" }
+      { "naam": "Bol.com", "prijs": "€ 20,84", "link": "https://www.bol.com/be/nl/p/minions-monsters-grote-studioterrein-met-2-filmstudio-s-incl-6-minions-figuurtjes/9300000269708149/" },
+      { "naam": "DreamLand", "prijs": "€ 24,99", "link": "https://www.dreamland.be/nl/producten/minions-3-story-6pk/02374468" }
     ]
   },
   {
@@ -389,6 +438,13 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/bltf5b4a200730f4f26/blt089ab96e431c2cf3-10478_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 69,99", "link": "https://www.lego.com/nl-be/product/3-in-1-creative-ramps-with-vehicles-10478" },
+      { "naam": "Bol.com", "prijs": "€ 50,22", "link": "https://www.bol.com/be/nl/p/lego-duplo-stad-3-in-1-creatieve-hellingen-met-voertuigen-leerzaam-speelgoed-voor-kinderen-vanaf-3-jaar-cadeautip-voor-peuters-10478/9300000266727635/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 69,99", "link": "https://www.dreamland.be/nl/producten/10478-lego-duplo-3-in-1-creatieve-hellingen-met-voertuigen/02349749" },
+      { "naam": "Fnac.be", "prijs": "€ 48,99", "link": "https://www.nl.fnac.be/LEGO-10478-3-IN-1-CREATIVE-RAMPS-WITH-VEHICLES/a22736107" },
+      { "naam": "SupraBazar", "prijs": "€ 64,99", "link": "https://www.suprabazar.be/lego-duplo-town-10478-3-in-1-creatieve-hellingen-met-voertuigen-32178901" },
+      { "naam": "MediaMarkt", "prijs": "€ 71,99", "link": "https://www.mediamarkt.be/nl/product/_lego-duplo-10478-creatieve-springschansen-met-kleine-racertjes-bouwset-meerkleurig-178270940.html" },
+      { "naam": "Amazon.com.be", "prijs": "€ 48,99", "link": "https://www.amazon.com.be/-/nl/LEGO-DUPLO-creatieve-hellingen-voertuigen/dp/B0FPXFBP42/" },
+      { "naam": "Amazon.nl", "prijs": "€ 40,99", "link": "https://www.amazon.nl/LEGO-voertuigen-10478-bouwpakket-onderdelen/dp/B0FPXFBP42/" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/10478/3-in-1-Creative-Ramps-with-Vehicles.html" }
     ]
   },
@@ -400,6 +456,13 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt2aa34d0d05466003/11207_boxprod_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 34,99", "link": "https://www.lego.com/nl-be/product/spidey-underwater-vehicles-11207" },
+      { "naam": "Bol.com", "prijs": "€ 29,99", "link": "https://www.bol.com/be/nl/p/lego-marvel-spidey-en-zijn-geweldige-vriendjes-spidey-onderwatervoertuigen-bouwset-cadeau-voor-kinderen-vanaf-4-jaar-spidey-bouwset-3-onderzeeers-en-3-minifiguren-11207/9300000237345475/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 24,99", "link": "https://www.dreamland.be/nl/producten/11207-lego-super-heroes-marvel-spidey-onderwatervoertuigen/02323169" },
+      { "naam": "Fnac.be", "prijs": "€ 39,22", "link": "https://www.nl.fnac.be/LEGO-11207-SPIDEY-UNDERWATER-VEHICLES/a22209263" },
+      { "naam": "SupraBazar", "prijs": "€ 29,99", "link": "https://www.suprabazar.be/lego-spidey-11207-onderwatervoertuigen-32140130" },
+      { "naam": "MediaMarkt", "prijs": "€ 32,99", "link": "https://www.mediamarkt.be/nl/product/_11207-spidey-onderwatervoertuigen-2208416.html" },
+      { "naam": "Amazon.com.be", "prijs": "€ 21,99", "link": "https://www.amazon.com.be/-/nl/LEGO-Spidey-onderwatervoertuigen-superheldenspeelgoed-minifiguren/dp/B0FPVTSQ3G/" },
+      { "naam": "Amazon.nl", "prijs": "€ 21,99", "link": "https://www.amazon.nl/LEGO-Spidey-onderwatervoertuigen-superhelden-minifiguren/dp/B0FPVTSQ3G/" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/11207/Spidey-Underwater-Vehicles.html" }
     ]
   },
@@ -411,6 +474,12 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt955107cf5938ed2b/11206_Box1_v39_en-gb.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 9,99", "link": "https://www.lego.com/nl-be/product/spidey-on-his-motorcycle-vs-rhino-11206" },
+      { "naam": "Bol.com", "prijs": "€ 9,99", "link": "https://www.bol.com/be/nl/p/lego-marvel-spidey-en-zijn-geweldige-vriendjes-spidey-op-zijn-motor-vs-rhino-superheldenbouwset-cadeau-voor-kinderen-vanaf-4-jaar-spider-man-bouwset-met-2-minifiguren-11206/9300000237345431/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 9,99", "link": "https://www.dreamland.be/nl/producten/11206-lego-super-heroes-marvel-spidey-op-motor-vs-rhino/02322544" },
+      { "naam": "SupraBazar", "prijs": "€ 9,99", "link": "https://www.suprabazar.be/lego-spidey-11206-spidey-op-zijn-motor-vs.rhino-32125257" },
+      { "naam": "MediaMarkt", "prijs": "€ 9,89", "link": "https://www.mediamarkt.be/nl/product/_lego-11206-spidey-op-motor-vs-rhino-bouwset-meerkleurig-168282945.html" },
+      { "naam": "Amazon.com.be", "prijs": "€ 8,99", "link": "https://www.amazon.com.be/-/nl/LEGO-11206-superhelden-minifiguren-cadeau-idee/dp/B0FPXDYJYK/" },
+      { "naam": "Amazon.nl", "prijs": "€ 7,99", "link": "https://www.amazon.nl/LEGO-Spidey-Speelgoed-minifiguren-onderdelen/dp/B0FPXDYJYK/" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/11206/Spidey-on-his-Motorcycle-vs-Rhino.html" }
     ]
   },
@@ -422,6 +491,11 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt8b66bb4efe27d631/blt433144f615e7dff5-11209_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 19,99", "link": "https://www.lego.com/nl-be/product/ultron-vs-iron-man-11209" },
+      { "naam": "Bol.com", "prijs": "€ 15,10", "link": "https://www.bol.com/be/nl/p/lego-marvel-iron-man-en-zijn-fantastische-vriendjes-ultron-tegen-iron-man-superheldenspeelgoed-cadeau-voor-kinderen-vanaf-4-jaar-2-minifiguren-mecha-en-vliegtuigje-11209/9300000266727652/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/11209-lego-marvel-ultron-tegen-iron-man/02349787" },
+      { "naam": "SupraBazar", "prijs": "€ 19,99", "link": "https://www.suprabazar.be/lego-disney-junior-11209-ultron-tegen-iron-man-32178905" },
+      { "naam": "Amazon.com.be", "prijs": "€ 13,99", "link": "https://www.amazon.com.be/-/nl/LEGO-Marvel-ongelooflijke-vrienden-Ultron/dp/B0FPXHGKFW/" },
+      { "naam": "Amazon.nl", "prijs": "€ 14,80", "link": "https://www.amazon.nl/LEGO-11209-actiefiguur-minifiguren-onderdelen/dp/B0FPXHGKFW/" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/11209/Ultron-vs-Iron-Man.html" }
     ]
   },
@@ -433,6 +507,12 @@
     "afbeelding_url": "https://www.lego.com/cdn/cs/set/assets/blt91b2c1c8367ce11c/blta0abb3c51d6932a3-11211_boxprod_v29.png?format=webply&fit=bounds&quality=75&width=1200&height=1200&dpr=1",
     "winkels": [
       { "naam": "LEGO.com", "prijs": "€ 49,99", "link": "https://www.lego.com/nl-be/product/loki-vs-team-iron-man-11211" },
+      { "naam": "Bol.com", "prijs": "€ 33,56", "link": "https://www.bol.com/be/nl/p/lego-marvel-iron-man-en-zijn-fantastische-vriendjes-loki-tegen-team-iron-man-cadeau-voor-kinderen-vanaf-4-jaar-11211/9300000266727632/?referrer=socialshare_pdp_www" },
+      { "naam": "DreamLand", "prijs": "€ 49,99", "link": "https://www.dreamland.be/nl/producten/11211-lego-marvel-loki-tegen-team-iron-man/02349794" },
+      { "naam": "SupraBazar", "prijs": "€ 45,99", "link": "https://www.suprabazar.be/lego-disney-11211-loki-tegen-team-iron-man-32178906" },
+      { "naam": "Amazon.com.be", "prijs": "€ 29,85", "link": "https://www.amazon.com.be/-/nl/LEGO-Marvel-ongelooflijke-vrienden-tegen/dp/B0FPXHBPCS/" },
+      { "naam": "Amazon.nl", "prijs": "€ 29,85", "link": "https://www.amazon.nl/LEGO-11211-speelgoed-minifiguren-onderdelen/dp/B0FPXHBPCS/" },
+      { "naam": "MediaMarkt", "prijs": "€ 47,29", "link": "https://www.mediamarkt.be/nl/product/_lego-11211-loki-vs-team-iron-man-bouwset-meerkleurig-177081050.html" },
       { "naam": "BrickWatch", "prijs": "Check prijs", "link": "https://www.brickwatch.net/nl-BE/set/11211/Loki-vs-Team-Iron-Man.html" }
     ]
   },
@@ -475,7 +555,15 @@
     "beschrijving": "Spannende Playmobil City Action speelset met politiemotor en geldrover. Inclusief figuren, motor en accessoires voor een snelle achtervolging.",
     "afbeelding_url": "https://media.s-bol.com/qZZznWyXXJqD/1200x800.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 15,00", "link": "https://www.bol.com/be/nl/p/playmobil-city-action-politiemotor-achtervolging-van-de-geldrover-70572/9300000019880095/" }
+      { "naam": "Bol.com", "prijs": "€ 15,00", "link": "https://www.bol.com/be/nl/p/playmobil-city-action-politiemotor-achtervolging-van-de-geldrover-70572/9300000019880095/" },
+      { "naam": "Playmobil", "prijs": "€ 19,99", "link": "https://www.playmobil.com/nl-be/politiemotor%3A-achtervolging-van-de-geldrover/70572.html" },
+      { "naam": "Fnac.be", "prijs": "€ 14,99", "link": "https://www.nl.fnac.be/Playmobil-City-Action-Politieagent-met-motor-en-dief-70572/a15314019" },
+      { "naam": "Amazon.com.be", "prijs": "€ 15,95", "link": "https://www.amazon.com.be/-/nl/PLAYMOBIL-70572-Politieagent-motor-dief/dp/B08KTNFZ5B/" },
+      { "naam": "Amazon.nl", "prijs": "€ 9,39", "link": "https://www.amazon.nl/-/en/Playmobil-Action-Police-Pursuit-Multicolor/dp/B08KTNFZ5B" },
+      { "naam": "Multibazar", "prijs": "€ 15,95", "link": "https://www.multibazar.be/nl/playmobil-70572-politiemotor-achtervolging-van-de-geldrover-815077" },
+      { "naam": "DreamLand", "prijs": "€ 17,99", "link": "https://www.dreamland.be/nl/producten/70572-playmobil-politiemotor-achtervolging-van-de-geldrover/01578478" },
+      { "naam": "MediaMarkt", "prijs": "€ 28,57", "link": "https://www.mediamarkt.be/nl/product/_playmobil-city-action-70572-speelgoed-meerkleurig-156229375.html" },
+      { "naam": "Happyland", "prijs": "€ 17,95", "link": "https://www.happyland.be/product/politiemotor-achtervolging-van-de-geldrover/" }
     ]
   },
   {
@@ -485,7 +573,12 @@
     "beschrijving": "PLAYMOBIL riddersets met een machtige leeuw en een gouden ridder voor spannende middeleeuwse avonturen.",
     "afbeelding_url": "https://media.s-bol.com/J3RkpqEX1RPK/QkvrMX9/1090x1500.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/playmobil-knights-leeuw-met-gouden-ridder-72212/9300000376677374/" }
+      { "naam": "Bol.com", "prijs": "€ 14,99", "link": "https://www.bol.com/be/nl/p/playmobil-knights-leeuw-met-gouden-ridder-72212/9300000376677374/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 13,49", "link": "https://www.amazon.com.be/-/nl/PLAYMOBIL-Knights-72212-gevechtsset-gepantserde/dp/B0G7LPR4BV/" },
+      { "naam": "Playmobil", "prijs": "€ 14,99", "link": "https://www.playmobil.com/nl-nl/leeuw-met-gouden-ridder/72212.html" },
+      { "naam": "Multibazar", "prijs": "€ 13,99", "link": "https://www.multibazar.be/nl/playmobil-leeuw-met-gouden-ridder-1080557" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 13,99", "link": "https://www.dekinderplaneet.be/nl/playmobil-leeuw-met-gouden-ridder-1080557" },
+      { "naam": "SupraBazar", "prijs": "€ 13,99", "link": "https://www.suprabazar.be/playmobil-knights-72212-leeuw-met-gouden-ridder-32189377" }
     ]
   },
   {
@@ -495,7 +588,12 @@
     "beschrijving": "62-delige PLAYMOBIL speelset met zooverzorger en voertuig voor dierenreddingsacties en onderhoud in de dierentuin.",
     "afbeelding_url": "https://media.s-bol.com/4M6NpmOzmYv2/Y7ELrBO/1200x963.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 25,04", "link": "https://www.bol.com/be/nl/p/playmobil-72072-speelset-zooverzorger-voertuig-62-delen/9300000248152372/" }
+      { "naam": "Bol.com", "prijs": "€ 25,04", "link": "https://www.bol.com/be/nl/p/playmobil-72072-speelset-zooverzorger-voertuig-62-delen/9300000248152372/" },
+      { "naam": "Playmobil", "prijs": "€ 29,99", "link": "https://www.playmobil.com/nl-be/dierentuin%3A-dierenverzorger-met-voertuig/72072.html" },
+      { "naam": "Fnac.be", "prijs": "€ 29,99", "link": "https://www.nl.fnac.be/Playmobil-Animals-and-Friends-72072-Dierentuin-Dierenverzorger-met-voertuig/a22970728" },
+      { "naam": "Amazon.com.be", "prijs": "€ 25,04", "link": "https://www.amazon.com.be/-/en/PLAYMOBIL-Animals-Friends-Children-72072/dp/B0G7LFF8CD" },
+      { "naam": "DreamLand", "prijs": "€ 29,99", "link": "https://www.dreamland.be/nl/producten/72072-playmobil-dierentuin-dierenverzorger-met-voertuig/02336497" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 29,95", "link": "https://www.dekinderplaneet.be/nl/playmobil-72072-dierentuin-dierenverzorger-met-voertuig-1066885" }
     ]
   },
   {
@@ -505,7 +603,11 @@
     "beschrijving": "PLAYMOBIL DuoPack speelset met een heks en tovenaar inclusief magische accessoires.",
     "afbeelding_url": "https://media.playmobil.com/i/playmobil/72023_product_box_front",
     "winkels": [
-      { "naam": "PLAYMOBIL", "prijs": "€ 5,99", "link": "https://www.playmobil.com/nl-be/duopack-heks-en-tovenaar/72023.html" }
+      { "naam": "PLAYMOBIL", "prijs": "€ 5,99", "link": "https://www.playmobil.com/nl-be/duopack-heks-en-tovenaar/72023.html" },
+      { "naam": "Amazon.com.be", "prijs": "€ 13,03", "link": "https://www.amazon.com.be/Duo-Pack-Sorci%C3%A8re-Magicien-playmobil/dp/B0G87J19HZ" },
+      { "naam": "SupraBazar", "prijs": "€ 5,99", "link": "https://www.suprabazar.be/playmobil-72023-duopacks-duopack-heks-en-tovenaar-32147162" },
+      { "naam": "Amazon.nl", "prijs": "€ 13,06", "link": "https://www.amazon.nl/-/en/Duo-Pack-witch-wizard-playmobil/dp/B0G87J19HZ" },
+      { "naam": "Multibazar", "prijs": "€ 5,99", "link": "https://www.multibazar.be/nl/playmobil-72023-duopack-heks-en-tovenaar-4-1066874" }
     ]
   },
   {
@@ -515,7 +617,13 @@
     "beschrijving": "PLAYMOBIL Porsche 911 Turbo speelgoedauto in iconische sportwagen-uitvoering.",
     "afbeelding_url": "https://media.playmobil.com/i/playmobil/72239_product_box_front",
     "winkels": [
-      { "naam": "PLAYMOBIL", "prijs": "€ 19,99", "link": "https://www.playmobil.com/nl-be/playmobil-x-porsche-911-turbo/72239.html" }
+      { "naam": "PLAYMOBIL", "prijs": "€ 19,99", "link": "https://www.playmobil.com/nl-be/playmobil-x-porsche-911-turbo/72239.html" },
+      { "naam": "Amazon.com.be", "prijs": "€ 15,95", "link": "https://www.amazon.com.be/-/nl/PLAYMOBIL-klassiek-verzamelaars-editie-accessoires-72239/dp/B0G7L4QRN5/" },
+      { "naam": "Amazon.nl", "prijs": "€ 19,99", "link": "https://www.amazon.nl/PLAYMOBIL-klassiek-verzamelaars-editie-accessoires-72239/dp/B0G7L4QRN5" },
+      { "naam": "Euro Shop", "prijs": "€ 16,99", "link": "https://www.euroshop.be/nl/154210312-playmobil-icons-x-porsche-911-turbo-72239" },
+      { "naam": "Fnac.be", "prijs": "€ 25,49", "link": "https://www.nl.fnac.be/Playmobil-72239-Playmobil-X-Porsche-911-Turbo/a23292801" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 19,95", "link": "https://www.dekinderplaneet.be/nl/playmobil-porsche-911-turbo-g-model-1080574" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/72239-playmobil-porsche-911-turbo/02389424" }
     ]
   },
   {
@@ -524,7 +632,8 @@
     "beschrijving": "Het vervolg op de populaire Disney-film. Volg de nieuwe avonturen van Judy Hopps en Nick Wilde in de grote stad Zootropolis.",
     "afbeelding_url": "https://media.s-bol.com/YKB06jnrK1x9/Z4P3zMJ/550x703.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 16,99", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" }
+      { "naam": "Bol.com", "prijs": "€ 16,99", "link": "https://www.bol.com/be/nl/p/zootropolis-2/9300000252901895/" },
+      { "naam": "MediaMarkt", "prijs": "€ 15,99", "link": "https://www.mediamarkt.be/nl/product/_zootropolis-2-blu-ray-2219993.html" }
     ]
   },
   {
@@ -573,7 +682,10 @@
     "beschrijving": "Klassiek behendigheidsspel waarbij spelers om de beurt hun toeristen op de wankele Toren van Pisa moeten plaatsen zonder dat deze omvalt.",
     "afbeelding_url": "https://media.s-bol.com/npOyMYXYm7x5/2vgGDZK/1097x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/jumbo-pisa/1004004000017407/" }
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/jumbo-pisa/1004004000017407/" },
+      { "naam": "DreamLand", "prijs": "€ 19,99", "link": "https://www.dreamland.be/nl/producten/toren-van-pisa/00275675" },
+      { "naam": "Multibazar", "prijs": "€ 17,95", "link": "https://www.multibazar.be/nl/pisa-5625" },
+      { "naam": "Amazon.nl", "prijs": "€ 14,24", "link": "https://www.amazon.nl/Jumbo-Toren-van-Pisa-00108/dp/B00H7ZE75U" }
     ]
   },
   {
@@ -583,7 +695,14 @@
     "beschrijving": "Het bekende behendigheidsspel Dokter Bibber in een vernieuwde editie. Gebruik het pincet om de kwalen uit de patiënt te verwijderen zonder dat de hommer gaat branden of zoemen.",
     "afbeelding_url": "https://media.s-bol.com/vy2N937gk2nX/5yXMvoB/1200x1151.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/dokter-bibber-vernieuwde-editie-bordspel-gezelschapsspel/9300000196801525/" }
+      { "naam": "Bol.com", "prijs": "€ 19,99", "link": "https://www.bol.com/be/nl/p/dokter-bibber-vernieuwde-editie-bordspel-gezelschapsspel/9300000196801525/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 21,95", "link": "https://www.amazon.com.be/-/nl/Doctor-Maboul-elektronisch-bordspel-draagtas/dp/B0DXG669PN" },
+      { "naam": "Kruidvat", "prijs": "€ 17,99", "link": "https://www.kruidvat.be/nl/hasbro-games-dokter-bibber/p/6614305" },
+      { "naam": "DreamLand", "prijs": "€ 22,99", "link": "https://www.dreamland.be/nl/producten/dokter-bibber-nl/02258850" },
+      { "naam": "Verthus", "prijs": "€ 24,95", "link": "https://verthus.be/producten/dokter-bibber-classic-spel/" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 21,95", "link": "https://www.dekinderplaneet.be/nl/spel-dokter-bibber-1020118" },
+      { "naam": "MediaMarkt", "prijs": "€ 31,99", "link": "https://www.mediamarkt.be/nl/product/_dr-bibber-nl-2202389.html" },
+      { "naam": "Euro Shop", "prijs": "€ 22,99", "link": "https://www.euroshop.be/nl/13356483-hasbro-classic-operation-refresh-actiespel-vanaf-6-jaar" }
     ]
   },
   {
@@ -615,7 +734,13 @@
     "beschrijving": "Het klassieke raadspel Wie is het? waarin spelers door sluwe ja-en-nee-vragen te stellen proberen te ontdekken welk geheim personage de tegenstander gekozen heeft.",
     "afbeelding_url": "https://media.s-bol.com/m9zzVO1mBw6E/QW50G3q/1200x1172.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 17,00", "link": "https://www.bol.com/be/nl/p/wie-is-het-kinderspel/9300000151792673/" }
+      { "naam": "Bol.com", "prijs": "€ 17,00", "link": "https://www.bol.com/be/nl/p/wie-is-het-kinderspel/9300000151792673/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 17,00", "link": "https://www.amazon.com.be/-/nl/Hasbro-Gaming-raadspel-Klassiek-Nederlandse/dp/B0CHK176ZX" },
+      { "naam": "Amazon.nl", "prijs": "€ 15,99", "link": "https://www.amazon.nl/Hasbro-Gaming-Origineel-raadspel-Nederlandse/dp/B0CHK176ZX" },
+      { "naam": "Euro Shop", "prijs": "€ 17,99", "link": "https://www.euroshop.be/nl/speelgoed/spellen/denkspellen/13356332-hasbro-wie-is-het-vanaf-6-jaar" },
+      { "naam": "MediaMarkt", "prijs": "€ 24,99", "link": "https://www.mediamarkt.be/nl/product/_wie-is-het-nl-2202382.html" },
+      { "naam": "Fnac.be", "prijs": "€ 24,99", "link": "https://www.nl.fnac.be/WIE-IS-HET-NEW-VERSION/a20612166" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 29,95", "link": "https://www.standaardboekhandel.be/p/wie-is-het-nl-5010996188700" }
     ]
   },
   {
@@ -637,7 +762,11 @@
     "beschrijving": "Creatief PAW Patrol prikblok voor kinderen, inclusief vrolijke kleurplaten, prikpen en viltmatje om de leukste figuren uit te prikken.",
     "afbeelding_url": "https://media.s-bol.com/J2Pm47mXPNY2/vEMJLg/550x669.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 11,95", "link": "https://www.bol.com/be/nl/p/paw-patrol-prikblok/9200000062266209/" }
+      { "naam": "Bol.com", "prijs": "€ 11,95", "link": "https://www.bol.com/be/nl/p/paw-patrol-prikblok/9200000062266209/" },
+      { "naam": "Amazon.com.be", "prijs": "€ 11,95", "link": "https://www.amazon.com.be/-/nl/Paw-Patrol-Prikblok-blauw-perforatieblok/dp/9044746898/" },
+      { "naam": "SupraBazar", "prijs": "€ 10,99", "link": "https://www.suprabazar.be/prikblok-paw-patrol-23140130" },
+      { "naam": "DreamLand", "prijs": "€ 11,95", "link": "https://www.dreamland.be/nl/producten/paw-patrol-prikblok/01207491" },
+      { "naam": "Standaard Boekhandel", "prijs": "€ 11,95", "link": "https://www.standaardboekhandel.be/p/paw-patrol-prikblok-blauw-paw-patrol-bloc-a-perforer-bleu-9789044746891" }
     ]
   },
   {
@@ -647,7 +776,8 @@
     "beschrijving": "Educatief en interactief speelgoed waarmee peuters van 2 tot 4 jaar hun eerste 100 woorden leren in het Nederlands en Engels.",
     "afbeelding_url": "https://media.s-bol.com/qv8oDwPjBEp3/86O18ml/1053x1200.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/clementoni-education-mijn-eerste-100-woorden-interactief-woordjes-leren-educatief-speelgoed-peuter-nederlands-engels-2-4-jaar/9300000264837113/" }
+      { "naam": "Bol.com", "prijs": "€ 17,99", "link": "https://www.bol.com/be/nl/p/clementoni-education-mijn-eerste-100-woorden-interactief-woordjes-leren-educatief-speelgoed-peuter-nederlands-engels-2-4-jaar/9300000264837113/" },
+      { "naam": "De Kinder Planeet", "prijs": "€ 16,95", "link": "https://www.dekinderplaneet.be/nl/clementoni-mijn-eerste-100-woorden-educatief-taalspel-1078341" }
     ]
   },
   {
@@ -700,7 +830,8 @@
     "beschrijving": "Knutselpakket met 36 PAW Patrol knipvellen en een veilige kinderschaar. Leren knippen op verschillende niveaus, geschikt voor kinderen vanaf 3 jaar.",
     "afbeelding_url": "https://media.s-bol.com/BqPYvK6AwOxX/98zjJ0D/1200x929.jpg",
     "winkels": [
-      { "naam": "Bol.com", "prijs": "€ 12,99", "link": "https://www.bol.com/be/nl/p/ses-creative-paw-patrol-ik-leer-knippen-inclusief-veilige-kinderschaar-verschillende-niveaus-36-paw-patrol-knipvellen-knutselpakket-met-paw-patrol-made-in-holland-vanaf-3-jaar/9300000247175316/" }
+      { "naam": "Bol.com", "prijs": "€ 12,99", "link": "https://www.bol.com/be/nl/p/ses-creative-paw-patrol-ik-leer-knippen-inclusief-veilige-kinderschaar-verschillende-niveaus-36-paw-patrol-knipvellen-knutselpakket-met-paw-patrol-made-in-holland-vanaf-3-jaar/9300000247175316/" },
+      { "naam": "Verthus", "prijs": "€ 12,95", "link": "https://verthus.be/producten/ses-ik-leer-knippen-paw-patrol/" }
     ]
   },
   {
